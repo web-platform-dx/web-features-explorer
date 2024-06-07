@@ -8,13 +8,30 @@
         <span class="date">Released on {{ browser.releases[version].release_date }}</span>
       {% else %}
         <span class="version">❌</span>
-        {% if feature.implUrls[browser.id] and feature.implUrls[browser.id].length %}
-          <span class="bug">
+        <span class="bug">
+          {% if feature.implUrls[browser.id] and feature.implUrls[browser.id].length %}
             See
             {% for implUrl in feature.implUrls[browser.id] %}
               <a href="{{ implUrl }}">{{ implUrl | replace("https://", "") }}</a>
             {% endfor %}
-          </span>
+          {% else %}
+            <a href="https://www.google.com/search?q=implement {{ feature.name }}+site%3A{{ browser.bugTracker }}">Search for bugs</a>
+          {% endif %}
+        </span>
+        {% if not feature.implUrls[browser.id] or not feature.implUrls[browser.id].length %}
+          {% if browser.id === "safari" or browser.id === "safari_ios" %}
+            <span class="position">
+              <a href="https://github.com/WebKit/standards-positions/issues?q={{ feature.name }}">Search for standards position</a>
+            </span>
+          {% elif browser.id === "firefox" or browser.id === "firefox_android" %}
+            <span class="position">
+              <a href="https://github.com/mozilla/standards-positions/issues?q={{ feature.name }}">Search for standards position</a>
+            </span>
+          {% elif browser.id === "chrome" or browser.id === "chrome_android" or browser.id === "edge" %}
+            <span class="position">
+              <a href="https://chromestatus.com/features#{{ feature.name }}">Search for Chromestatus entry</a>
+            </span>
+          {% endif %}
         {% endif %}
       {% endif %}
     </li>

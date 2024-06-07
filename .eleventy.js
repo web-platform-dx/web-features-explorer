@@ -10,6 +10,16 @@ const BROWSERS = [
   "safari_ios",
 ];
 
+const BROWSER_BUG_TRACKERS = {
+  "chrome": "issues.chromium.org",
+  "chrome_android": "issues.chromium.org",
+  "edge": "issues.chromium.org",
+  "firefox": "bugzilla.mozilla.org",
+  "firefox_android": "bugzilla.mozilla.org",
+  "safari": "bugs.webkit.org",
+  "safari_ios": "bugs.webkit.org"
+};
+
 const MDN_URL_ROOT = "https://developer.mozilla.org/docs/web/";
 
 function processMdnPath(path, area) {
@@ -192,7 +202,8 @@ module.exports = function (eleventyConfig) {
       return {
         id: browser,
         name: bcd.browsers[browser].name,
-        releases: bcd.browsers[browser].releases
+        releases: bcd.browsers[browser].releases,
+        bugTracker: BROWSER_BUG_TRACKERS[browser]
       };
     });
   });
