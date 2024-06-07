@@ -1,0 +1,31 @@
+name: Generate site
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check-out the repository
+        uses: actions/checkout@v2
+
+      - name: Install dependency updates
+        run: |
+          npx npm-check-updates -u
+          npm install
+          npm update web-features
+
+      - name: Generate site
+        run: npm run build
+
+      - name: Commit dependency changes
+        run: |
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --local user.name "${{ github.actor }}"
+          git add .
+          git commit -m "Bump deps and update site" --allow-empty
+          git push origin main

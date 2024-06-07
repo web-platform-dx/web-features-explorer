@@ -1,0 +1,14 @@
+---
+title: Monthly updates
+layout: layout.njk
+---
+
+<h1>{{ title }}</h1>
+
+<ul class="posts">
+  {% for month in perMonth %}
+    <li>
+      <a href="{{ month[0] | slugify }}">{{ month[0] | slugify }} update</a>
+    </li>
+  {% endfor %}
+</ul>

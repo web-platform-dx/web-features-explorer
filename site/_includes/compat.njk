@@ -1,0 +1,22 @@
+<ul class="compat">
+  {% for browser in browsers %}
+    <li class="browser browser-{{ browser.id }}{% if feature.status.support[browser.id] %} supported{% endif %}">
+      <span class="name">{{ browser.name }}</span>
+      {%set version = feature.status.support[browser.id] %}
+      {% if version %}
+        <span class="version">{{ version }}</span>
+        <span class="date">Released on {{ browser.releases[version].release_date }}</span>
+      {% else %}
+        <span class="version">❌</span>
+        {% if feature.implUrls[browser.id] and feature.implUrls[browser.id].length %}
+          <span class="bug">
+            See
+            {% for implUrl in feature.implUrls[browser.id] %}
+              <a href="{{ implUrl }}">{{ implUrl | replace("https://", "") }}</a>
+            {% endfor %}
+          </span>
+        {% endif %}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

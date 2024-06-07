@@ -1,0 +1,15 @@
+---
+title: Features missing in just one engine
+layout: layout.njk
+---
+<h1>{{ title }}</h1>
+
+<p>These web features are not yet available, one browser engine has not implemented it yet.</p>
+
+<ul class="features">
+  {% for feature in missingOneBrowserFeatures %}
+    <li>
+      {% include "feature_short.njk" %}
+    </li>
+  {% endfor %}
+</ul>

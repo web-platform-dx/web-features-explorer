@@ -1,0 +1,16 @@
+---
+title: Widely available features
+layout: layout.njk
+---
+
+<h1>{{ title }}</h1>
+
+<p>These features have been supported across all core browsers for a while.</p>
+
+<ul class="features">
+  {% for feature in baselineFeatures %}
+    <li>
+      {% include "feature_short.njk" %}
+    </li>
+  {% endfor %}
+</ul>

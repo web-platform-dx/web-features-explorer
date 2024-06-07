@@ -1,0 +1,54 @@
+---
+layout: layout.njk
+pagination:
+  data: perMonth
+  size: 1
+  alias: month
+permalink: "monthly/{{ month[0] | slugify }}/"
+eleventyComputed:
+  title: "{{ month[0] }}"
+---
+
+<h1>{{ month[0] }} update</h1>
+
+<h2>Became widely available this month</h2>
+
+{% if month[1].high.length > 0 %}
+  <ul class="features">
+    {% for feature in month[1].high %}
+      <li>
+        {% include "feature_short.njk" %}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No features became widely available this month.</p>
+{% endif %}
+
+<h2>Just became available in all browsers this month</h2>
+
+{% if month[1].low.length > 0 %}
+  <ul class="features">
+    {% for feature in month[1].low %}
+      <li>
+        {% include "feature_short.njk" %}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No features became available this month.</p>
+{% endif %}
+
+{% for browser in browsers %}
+  {% if month[1][browser.id].length > 0 %}
+    <h2>Got implemented in {{ browser.name }} this month</h2>
+    
+    <ul class="features">
+      {% for feature in month[1][browser.id] %}
+        <li>
+          {% include "feature_short.njk" %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}

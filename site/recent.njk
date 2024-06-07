@@ -1,0 +1,15 @@
+---
+title: Newly available features
+layout: layout.njk
+---
+<h1>{{ title }}</h1>
+
+<p>These web features became supported in all core browsers recently.</p>
+
+<ul class="features">
+  {% for feature in recentBaselineFeatures %}
+    <li>
+      {% include "feature_short.njk" %}
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css">
+  </head>
+  <body>
+
+    <header><a href="/">web-features explorer</a></header>
+
+    <nav>
+      <ul>
+        <li><a href="/recent">Newly available</a></li>
+        <li><a href="/baseline">Widely available</a></li>
+        <li><a href="/nobaseline">Not yet available</a></li>
+        <li><a href="/missingone">Missing in just one engine</a></li>
+        <li><a href="/all">All features</a></li>
+        <li><a href="/monthly">Monthly updates</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <footer>
+      <p>Generated on {{ versions.date }} using <a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>{{ versions.webFeatures }}</code> and <a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>{{ versions.bcd }}</code></p>
+      <p>Source code: <a href="https://github.com/captainbrosset/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
+    </footer>
+
+  </body>
+</html>

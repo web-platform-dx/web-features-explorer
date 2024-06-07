@@ -1,0 +1,12 @@
+---
+layout: layout.njk
+pagination:
+  data: allFeatures
+  size: 1
+  alias: feature
+permalink: "features/{{ feature.id | slugify }}/"
+eleventyComputed:
+  title: "{{ feature.name }}"
+---
+
+{% include "feature_full.njk" %}

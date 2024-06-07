@@ -1,0 +1,10 @@
+{% if feature.spec.length %}
+  <div class="specs">
+    <h3>Specifications</h3>
+    <ul class="link-list">
+      {% for spec in feature.spec %}
+        <li class="link-list-item"><a href="{{ spec }}">{{ spec }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
