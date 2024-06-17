@@ -1,7 +1,8 @@
 <div id="{{ feature.id }}" class="feature short baseline-{{ feature.status.baseline }}">
-  {% include "baseline.njk" %}
-
-  <h2>{{ feature.name }}</h2>
+  <div class="header">
+    <h2>{{ feature.name }}</h2>
+    {% include "baseline.njk" %}
+  </div>
   <p>{{ feature.description_html | safe }}</p>
   <p><strong><a href="/features/{{ feature.id | slugify }}/">Learn more</a></strong></p>
 

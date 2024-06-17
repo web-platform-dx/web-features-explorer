@@ -9,6 +9,13 @@
   --browser-unsupported-bg: #f5d6d6;
   --text: black;
   --sub-text: #666;
+  --margin: 1rem;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --margin: 2rem;
+  }
 }
 
 html {
@@ -19,21 +26,21 @@ html {
 }
 
 body {
-  margin: 2rem;
+  margin: var(--margin);
 }
 
 header {
   font-size: 2rem;
   font-weight: bold;
-  margin-block-end: 2rem;
+  margin-block-end: var(--margin);
 }
 
 h1 {
-  margin: 2rem 0;
+  margin: var(--margin) 0;
 }
 
 .intro {
-  margin: 2rem 0;
+  margin: var(--margin) 0;
 }
 
 .intro dl {
@@ -63,9 +70,9 @@ h3 .subtext {
 }
 
 .feature {
-  padding: 2rem;
+  padding: var(--margin);
   border-radius: 0.5rem;
-  margin-block-start: 2rem;
+  margin-block-start: var(--margin);
 }
 
 .baseline-false {
@@ -80,6 +87,13 @@ h3 .subtext {
   background: var(--baseline-high-bg);
 }
 
+.feature .header {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .feature h2,
 .feature h1 {
   margin: 0;
@@ -87,7 +101,7 @@ h3 .subtext {
 }
 
 .feature > p {
-  margin: 2rem 0;
+  margin: var(--margin) 0;
 }
 
 .feature.short > p {
@@ -102,14 +116,12 @@ h3 .subtext {
   font-weight: bold;
   font-size: 0.75rem;
   border: 2px solid color-mix(in srgb, var(--bg) 90%, black);
-  width: max-content;
   padding-inline-start: 2rem;
   background-repeat: no-repeat;
   background-position: 0.25rem center;
   background-size: 1.5rem;
   background-image: url(./baseline-limited.svg);
-  float: right;
-  margin: 0 0 1rem 1rem;
+  margin-left: auto;
 }
 
 .feature.baseline-low .availability {
@@ -191,6 +203,7 @@ nav {
 
 nav ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: start;
   gap: 0.25rem;
 }
@@ -263,7 +276,7 @@ nav li {
 
 footer {
   border-block-start: 2px solid;
-  margin-block-start: 2rem;
+  margin-block-start: var(--margin);
   color: var(--sub-text);
   font-size: smaller;
 }
