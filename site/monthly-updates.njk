@@ -4,51 +4,64 @@ pagination:
   data: perMonth
   size: 1
   alias: month
-permalink: "monthly/{{ month[0] | slugify }}/"
+permalink: "monthly/{{ month.date | slugify }}/"
 eleventyComputed:
-  title: "{{ month[0] }}"
+  title: "{{ month.date }} web platform update"
 ---
 
-<h1>{{ month[0] }} update</h1>
+<h1>{{ month.date }} web platform update</h1>
 
-<h2>Became widely available this month</h2>
-
-{% if month[1].high.length > 0 %}
-  <ul class="features">
-    {% for feature in month[1].high %}
-      <li>
-        {% include "feature_short.njk" %}
-      </li>
-    {% endfor %}
-  </ul>
-{% else %}
-  <p>No features became widely available this month.</p>
-{% endif %}
-
-<h2>Just became available in all browsers this month</h2>
-
-{% if month[1].low.length > 0 %}
-  <ul class="features">
-    {% for feature in month[1].low %}
-      <li>
-        {% include "feature_short.njk" %}
-      </li>
-    {% endfor %}
-  </ul>
-{% else %}
-  <p>No features became available this month.</p>
-{% endif %}
-
-{% for browser in browsers %}
-  {% if month[1][browser.id].length > 0 %}
-    <h2>Got implemented in {{ browser.name }} this month</h2>
-    
-    <ul class="features">
-      {% for feature in month[1][browser.id] %}
-        <li>
-          {% include "feature_short.njk" %}
+<section class="month-update">
+  {% if month.features.high.length > 0 %}
+    <h2>
+      Now widely available on the web platform
+      <div class="baseline-high"><span class="availability">Widely available</span></div>
+    </h2>
+    <ul>
+      {% for feature in month.features.high %}
+        <li class="feature mini baseline-high">
+          <p>
+            <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
+            <strong><a href="/features/{{ feature.id | slugify }}/">Learn more.</a></strong>
+          </p>
         </li>
       {% endfor %}
     </ul>
   {% endif %}
-{% endfor %}
+
+  {% if month.features.low.length > 0 %}
+    <h2>
+      Newly available on the web platform
+      <div class="baseline-low"><span class="availability">Newly available</span></div>
+    </h2>
+    <ul>
+      {% for feature in month.features.low %}
+        <li class="feature mini baseline-low">
+          <p>
+            <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
+            <strong><a href="/features/{{ feature.id | slugify }}/">Learn more.</a></strong>
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% for browser in browsers %}
+    {% if month.features[browser.id].length > 0 %}
+      <h2>
+        Now available in {{ browser.name }}
+        <div class="baseline-false"><span class="availability">Limited availability</span></div>
+      </h2>
+      <ul>
+        {% for feature in month.features[browser.id] %}
+          <li class="feature mini baseline-false">
+            <p>
+              <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
+              <strong><a href="/features/{{ feature.id | slugify }}/">Learn more.</a></strong>
+            </p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+</section>

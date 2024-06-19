@@ -11,13 +11,13 @@ const BROWSERS = [
 ];
 
 const BROWSER_BUG_TRACKERS = {
-  "chrome": "issues.chromium.org",
-  "chrome_android": "issues.chromium.org",
-  "edge": "issues.chromium.org",
-  "firefox": "bugzilla.mozilla.org",
-  "firefox_android": "bugzilla.mozilla.org",
-  "safari": "bugs.webkit.org",
-  "safari_ios": "bugs.webkit.org"
+  chrome: "issues.chromium.org",
+  chrome_android: "issues.chromium.org",
+  edge: "issues.chromium.org",
+  firefox: "bugzilla.mozilla.org",
+  firefox_android: "bugzilla.mozilla.org",
+  safari: "bugs.webkit.org",
+  safari_ios: "bugs.webkit.org",
 };
 
 const MDN_URL_ROOT = "https://developer.mozilla.org/docs/web/";
@@ -33,15 +33,23 @@ function processMdnPath(path, area) {
     }
 
     if (path.startsWith("Element/")) {
-      const attribute = path.includes("#") ? path.substring(path.indexOf("#") + 1) : null;
+      const attribute = path.includes("#")
+        ? path.substring(path.indexOf("#") + 1)
+        : null;
       if (attribute) {
-        return `<${path.substring("Element/".length, path.indexOf("#"))} ${attribute}> attribute`;
+        return `<${path.substring(
+          "Element/".length,
+          path.indexOf("#")
+        )} ${attribute}> attribute`;
       } else {
         return `<${path.substring("Element/".length)}> element`;
       }
     }
 
-    if (path.toLowerCase().startsWith("attributes/") && path.split("/").length === 3) {
+    if (
+      path.toLowerCase().startsWith("attributes/") &&
+      path.split("/").length === 3
+    ) {
       const [_, attr, value] = path.split("/");
       return `${attr}="${value}" attribute`;
     }
@@ -79,7 +87,7 @@ function processMdnPath(path, area) {
     if (path.toLowerCase().startsWith("reference/operators/")) {
       return `${path.substring("reference/operators/".length)} operator`;
     }
-     
+
     if (path.toLowerCase().startsWith("reference/statements/")) {
       return `${path.substring("reference/statements/".length)} statement`;
     }
@@ -93,7 +101,7 @@ function processMdnUrl(url) {
   const area = path.split("/")[0].toLowerCase();
   path = path.substring(area.length + 1);
   const title = processMdnPath(path, area);
-  return { title, url, area }
+  return { title, url, area };
 }
 
 // Add more data to a feature's object, based on what our templates need.
@@ -108,16 +116,18 @@ function augmentFeatureData(id, feature, bcd) {
     feature.spec = [feature.spec];
   }
 
-  const bcdKeysData = (feature.compat_features || []).map(key => {
-    // Find the BCD entry for this key.
-    const keyParts = key.split(".");
-    let data = bcd;
-    for (const part of keyParts) {
-      data = data[part];
-    }
+  const bcdKeysData = (feature.compat_features || [])
+    .map((key) => {
+      // Find the BCD entry for this key.
+      const keyParts = key.split(".");
+      let data = bcd;
+      for (const part of keyParts) {
+        data = data[part];
+      }
 
-    return data && data.__compat ? { key, compat: data.__compat } : null;
-  }).filter(data => !!data);
+      return data && data.__compat ? { key, compat: data.__compat } : null;
+    })
+    .filter((data) => !!data);
 
   // Add MDN doc links, if any.
   const mdnUrls = {};
@@ -138,7 +148,7 @@ function augmentFeatureData(id, feature, bcd) {
 
   // Add the BCD data to the feature.
   feature.bcdData = bcdKeysData;
-  
+
   // Add impl_url links, if any, per browser.
   const browserImplUrls = Object.values(BROWSERS).reduce((acc, browser) => {
     acc[browser] = [];
@@ -149,7 +159,9 @@ function augmentFeatureData(id, feature, bcd) {
     for (const browser of BROWSERS) {
       const browserSupport = compat.support[browser];
       if (!browserSupport.version_added && browserSupport.impl_url) {
-        browserImplUrls[browser] = [...new Set([...browserImplUrls[browser], browserSupport.impl_url])];
+        browserImplUrls[browser] = [
+          ...new Set([...browserImplUrls[browser], browserSupport.impl_url]),
+        ];
       }
     }
   }
@@ -181,16 +193,19 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/assets");
 
   eleventyConfig.addGlobalData("versions", async () => {
-    const { default: webFeaturesPackageJson } = await import("./node_modules/web-features/package.json", {
-      assert: { type: "json" },
-    });
+    const { default: webFeaturesPackageJson } = await import(
+      "./node_modules/web-features/package.json",
+      {
+        assert: { type: "json" },
+      }
+    );
 
     const { bcd } = await getDeps();
 
     return {
-      "date": (new Date()).toLocaleDateString(),
-      "webFeatures": webFeaturesPackageJson.version,
-      "bcd": bcd.__meta.version
+      date: new Date().toLocaleDateString(),
+      webFeatures: webFeaturesPackageJson.version,
+      bcd: bcd.__meta.version,
     };
   });
 
@@ -198,12 +213,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("browsers", async () => {
     const { bcd } = await getDeps();
 
-    return BROWSERS.map(browser => {
+    return BROWSERS.map((browser) => {
       return {
         id: browser,
         name: bcd.browsers[browser].name,
         releases: bcd.browsers[browser].releases,
-        bugTracker: BROWSER_BUG_TRACKERS[browser]
+        bugTracker: BROWSER_BUG_TRACKERS[browser],
       };
     });
   });
@@ -213,51 +228,91 @@ module.exports = function (eleventyConfig) {
 
     const monthly = new Map();
 
+    const ensureMonthEntry = (month) => {
+      if (!monthly.has(month)) {
+        const obj = { high: [], low: [] };
+        for (const browser of BROWSERS) {
+          obj[browser] = [];
+        }
+
+        monthly.set(month, obj);
+      }
+    };
+
+    const getBaselineHighMonth = (feature) => {
+      return (
+        feature.status.baseline_high_date &&
+        feature.status.baseline_high_date.substring(0, 7)
+      );
+    };
+
+    const getBaselineLowMonth = (feature) => {
+      return (
+        feature.status.baseline_low_date &&
+        feature.status.baseline_low_date.substring(0, 7)
+      );
+    };
+
+    const getBrowserSupportMonth = (feature, browser) => {
+      const versionSupported = feature.status.support[browser];
+      const releaseData = bcd.browsers[browser].releases;
+
+      if (!versionSupported || !releaseData[versionSupported]) {
+        return null;
+      }
+
+      return releaseData[versionSupported].release_date.substring(0, 7);
+    };
+
     for (const id in features) {
       const feature = features[id];
       augmentFeatureData(id, feature, bcd);
 
-      if (feature.status.baseline === "high") {
-        // If this is a baseline high feature.
-        const yearMonth = feature.status.baseline_high_date.substring(0, 7);
-        if (!monthly.has(yearMonth)) {
-          monthly.set(yearMonth, {});
-        }
-        if (!monthly.get(yearMonth).high) {
-          monthly.get(yearMonth).high = [];
-        }
-        monthly.get(yearMonth).high.push(feature);
-      } else if (feature.status.baseline === "low") {
-        // If this is a baseline low feature.
-        const yearMonth = feature.status.baseline_low_date.substring(0, 7);
-        if (!monthly.has(yearMonth)) {
-          monthly.set(yearMonth, {});
-        }
-        if (!monthly.get(yearMonth).low) {
-          monthly.get(yearMonth).low = [];
-        }
-        monthly.get(yearMonth).low.push(feature);
-      } else {
-        // This is not a baseline feature, check each supported browser's release dates.
-        for (const browser of BROWSERS) {
-          const version = feature.status.support[browser];
-          if (version) {
-            const browserReleaseYearMonth = bcd.browsers[browser].releases[version].release_date.substring(0, 7);
-            if (!monthly.has(browserReleaseYearMonth)) {
-              monthly.set(browserReleaseYearMonth, {});
-            }
-            if (!monthly.get(browserReleaseYearMonth)[browser]) {
-              monthly.get(browserReleaseYearMonth)[browser] = [];
-            }
-            monthly.get(browserReleaseYearMonth)[browser].push(feature);
+      const baselineHighMonth = getBaselineHighMonth(feature);
+      if (baselineHighMonth) {
+        ensureMonthEntry(baselineHighMonth);
+        monthly.get(baselineHighMonth).high.push(feature);
+      }
+
+      const baselineLowMonth = getBaselineLowMonth(feature);
+      if (baselineLowMonth) {
+        ensureMonthEntry(baselineLowMonth);
+        monthly.get(baselineLowMonth).low.push(feature);
+      }
+
+      for (const browser of BROWSERS) {
+        const browserSupportMonth = getBrowserSupportMonth(feature, browser);
+        if (browserSupportMonth) {
+          ensureMonthEntry(browserSupportMonth);
+          // Only record the feature if it hasn't already been recorded as baseline
+          // low or high for the same month.
+          const alreadyRecorded =
+            monthly
+              .get(browserSupportMonth)
+              .high.some((f) => f.id === feature.id) ||
+            monthly
+              .get(browserSupportMonth)
+              .low.some((f) => f.id === feature.id);
+          if (!alreadyRecorded) {
+            monthly.get(browserSupportMonth)[browser].push(feature);
           }
         }
       }
     }
 
-    return [...monthly].sort((a, b) => {
-      return (new Date(b[0])) - (new Date(a[0]));
-    });
+    return [...monthly]
+      .sort((a, b) => {
+        return new Date(b[0]) - new Date(a[0]);
+      })
+      .map((month) => {
+        return {
+          date: new Date(month[0]).toLocaleDateString("en-us", {
+            month: "long",
+            year: "numeric",
+          }),
+          features: month[1],
+        };
+      });
   });
 
   eleventyConfig.addGlobalData("allFeatures", async () => {
@@ -291,7 +346,10 @@ module.exports = function (eleventyConfig) {
 
     return baseline.sort((a, b) => {
       // Sort by baseline_high_date, descending, so the most recent is first.
-      return new Date(b.status.baseline_high_date) - new Date(a.status.baseline_high_date);
+      return (
+        new Date(b.status.baseline_high_date) -
+        new Date(a.status.baseline_high_date)
+      );
     });
   });
 
@@ -330,7 +388,10 @@ module.exports = function (eleventyConfig) {
 
     return recentBaseline.sort((a, b) => {
       // Sort by baseline_low_date, descending, so the most recent is first.
-      return new Date(b.status.baseline_low_date) - new Date(a.status.baseline_low_date);
+      return (
+        new Date(b.status.baseline_low_date) -
+        new Date(a.status.baseline_low_date)
+      );
     });
   });
 
