@@ -1,13 +1,17 @@
 # web-features explorer
 
-A website to visualize the data that's maintained in the [web-platform-dx/web-features](https://github.com/web-platform-dx/web-features/) repository.
+A website to visualize the web platform data that's maintained in the [web-platform-dx/web-features](https://github.com/web-platform-dx/web-features/) repository in interesting ways, including a monthly release note.
 
-Open the website: https://web-platform-dx.github.io/web-features-explorer/
+The website: https://web-platform-dx.github.io/web-features-explorer/
 
 ## Goal
 
 * To visualize the web-features data.
-* To provide a way to explore the data in a more user-friendly way.
+* To provide a way to explore the data in user-friendly ways, such as:
+  * By [baseline-low features](https://web-platform-dx.github.io/web-features-explorer/recent/) (newly available on the web platform).
+  * By [baseline-high features](https://web-platform-dx.github.io/web-features-explorer/baseline/) (widely available on the web platform).
+  * By [monthly release notes](https://web-platform-dx.github.io/web-features-explorer/monthly/).
+  * Or, by features that are [not yet available](https://web-platform-dx.github.io/web-features-explorer/nobaseline/) on the web platform.
 * To test various use cases that consumers of this data have.
 * To detect issues in the data.
 
@@ -45,8 +49,10 @@ To re-generate the website, after updating the data:
 
 The website is deployed to production using [GitHub Pages](https://pages.github.com/).
 
-The static HTML pages are generated into the `docs` directory, which is the directory that GitHub Pages uses by default to serve the website.
+The static HTML pages are generated on the [gh-pages branch](https://github.com/web-platform-dx/web-features-explorer/tree/gh-pages).
 
 ### Automatic updates
 
-The website is automatically updated every day by using a GitHub Actions script found in `.github/workflows/generate-site.yaml`. This action updates the dependencies, runs the build script, and pushes the changes to the `main` branch, which then triggers the deployment to GitHub Pages.
+The website is automatically updated on every push to the main branch by using a GitHub Actions script found in `.github/workflows/generate-site.yaml`.
+
+The dependencies are also automatically updated every day by using the GitHub Actions script in `.github/workflows/bump-deps.yaml`.
