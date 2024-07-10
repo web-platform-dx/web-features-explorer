@@ -1,0 +1,34 @@
+---
+title: Groups
+layout: layout.njk
+---
+
+{% macro groupMacro(id, group, allGroups) %}
+  <li class="group" id="{{ id }}">
+    <p><strong>{{ group.name }}</strong></p>
+    <ul class="children-groups">
+      {% for id2, group2 in allGroups %}
+        {% if group2.parent === id %}
+          {{ groupMacro(id2, group2, allGroups) }}
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <ul class="features">
+      {% for feature in allFeatures %}
+        {% if feature.group.includes(id) %}
+          <li>{{ feature.name }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </li>
+{% endmacro %}
+
+<h1>{{ title }}</h1>
+
+<ul class="groups">
+  {% for id, group in perGroup %}
+    {% if group.parent == null %}
+      {{ groupMacro(id, group, perGroup) }}
+    {% endif %}
+  {% endfor %}
+</ul>

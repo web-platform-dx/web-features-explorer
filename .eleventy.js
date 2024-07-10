@@ -109,6 +109,13 @@ function augmentFeatureData(id, feature, bcd) {
   // Add the id.
   feature.id = id;
 
+  // Make groups always an array.
+  if (!feature.group) {
+    feature.group = [];
+  } else if (!Array.isArray(feature.group)) {
+    feature.group = [feature.group];
+  }
+
   // Make the spec always an array.
   if (!feature.spec) {
     feature.spec = [];
@@ -123,7 +130,9 @@ function augmentFeatureData(id, feature, bcd) {
       let data = bcd;
       for (const part of keyParts) {
         if (!data || !data[part]) {
-          console.warn(`No BCD data for ${key}. Check if the web-features and browser-compat-data dependencies are in sync.`);
+          console.warn(
+            `No BCD data for ${key}. Check if the web-features and browser-compat-data dependencies are in sync.`
+          );
           return null;
         }
         data = data[part];
@@ -174,12 +183,14 @@ function augmentFeatureData(id, feature, bcd) {
 }
 
 let features = null;
+let groups = null;
 let bcd = null;
 
 async function getDeps() {
   if (!features) {
     const module = await import("web-features");
     features = module.features;
+    groups = module.groups;
   }
 
   if (!bcd) {
@@ -189,7 +200,7 @@ async function getDeps() {
     bcd = json.default;
   }
 
-  return { features, bcd };
+  return { features, groups, bcd };
 }
 
 module.exports = function (eleventyConfig) {
@@ -225,6 +236,11 @@ module.exports = function (eleventyConfig) {
         bugTracker: BROWSER_BUG_TRACKERS[browser],
       };
     });
+  });
+
+  eleventyConfig.addGlobalData("perGroup", async () => {
+    const { groups } = await getDeps();
+    return groups;
   });
 
   eleventyConfig.addGlobalData("perMonth", async () => {
