@@ -35,7 +35,7 @@ The website consists of static HTML pages and uses a build script to generate th
 
 The template files, from which the static HTML pages get generated, use the [11ty](https://www.11ty.dev/) static website generator. The template files are found in the `site` directory.
 
-The result of the build script is found in the `docs` directory, which is the directory that GitHub Pages uses to serve the website (see [Deployement](#deployment)).
+The result of the build script is found in the `docs` directory, which is the directory that GitHub Pages uses to serve the website (see [Deployment](#deployment)).
 
 To re-generate the website, after updating the data:
 
