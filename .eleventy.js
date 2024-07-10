@@ -122,6 +122,10 @@ function augmentFeatureData(id, feature, bcd) {
       const keyParts = key.split(".");
       let data = bcd;
       for (const part of keyParts) {
+        if (!data || !data[part]) {
+          console.warn(`No BCD data for ${key}. Check if the web-features and browser-compat-data dependencies are in sync.`);
+          return null;
+        }
         data = data[part];
       }
 
@@ -175,7 +179,7 @@ let bcd = null;
 async function getDeps() {
   if (!features) {
     const module = await import("web-features");
-    features = module.default;
+    features = module.features;
   }
 
   if (!bcd) {
