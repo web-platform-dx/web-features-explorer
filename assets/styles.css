@@ -33,9 +33,14 @@ body {
 }
 
 header {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-block-end: var(--margin);
+}
+
+header a {
+  text-decoration: none;
+  color: var(--text);
 }
 
 h1 {
@@ -229,6 +234,14 @@ nav li {
   border: 2px solid;
   border-block-end-width: 0;
 }
+
+nav li.monthly {
+  background-image: linear-gradient(to top right, var(--baseline-high-label-bg), var(--baseline-low-label-bg), var(--baseline-limited-label-bg));
+}
+
+nav li.recent {background: var(--baseline-low-label-bg);}
+nav li.baseline {background: var(--baseline-high-label-bg);}
+nav li.nobaseline {background: var(--baseline-limited-label-bg);}
 
 .mdn-docs {
   display: flex;
