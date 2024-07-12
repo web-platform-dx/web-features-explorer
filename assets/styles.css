@@ -312,12 +312,23 @@ nav li {
   background: none;
 }
 
+.groups li {
+  padding: .25rem;
+}
+
 .groups li li {
   margin-inline-start: 2rem;
 }
 
-.groups .group {
-  border-inline-start: 1px solid;
+.groups summary {
+  cursor: pointer;
+}
+
+.groups details[open] {
+  background-image: linear-gradient(to right, black 1px, transparent 0);
+  background-position: .3rem 1rem;
+  background-size: 100% calc(100% - 1rem);
+  background-repeat: no-repeat;
 }
 
 footer {
