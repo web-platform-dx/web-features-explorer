@@ -5,21 +5,25 @@ layout: layout.njk
 
 {% macro groupMacro(id, group, allGroups) %}
   <li class="group" id="{{ id }}">
-    <p><strong>{{ group.name }}</strong></p>
-    <ul class="children-groups">
-      {% for id2, group2 in allGroups %}
-        {% if group2.parent === id %}
-          {{ groupMacro(id2, group2, allGroups) }}
-        {% endif %}
-      {% endfor %}
-    </ul>
-    <ul class="features">
-      {% for feature in allFeatures %}
-        {% if feature.group.includes(id) %}
-          <li>{{ feature.name }}</li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+    <details>
+      <summary>{{ group.name }}</summary>
+      <ul class="children-groups">
+        {% for id2, group2 in allGroups %}
+          {% if group2.parent === id %}
+            {{ groupMacro(id2, group2, allGroups) }}
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <ul class="features">
+        {% for feature in allFeatures %}
+          {% if feature.group.includes(id) %}
+            <li>
+              <a href="/features/{{ feature.id | slugify }}/">{{ feature.name }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </details>
   </li>
 {% endmacro %}
 
@@ -29,6 +33,15 @@ layout: layout.njk
   {% for id, group in perGroup %}
     {% if group.parent == null %}
       {{ groupMacro(id, group, perGroup) }}
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<h2>Ungrouped features</h2>
+<ul class="features">
+  {% for feature in allFeatures %}
+    {% if feature.group.length === 0 %}
+      <li>{{ feature.name }}</li>
     {% endif %}
   {% endfor %}
 </ul>
