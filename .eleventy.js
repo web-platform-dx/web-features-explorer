@@ -250,7 +250,7 @@ module.exports = function (eleventyConfig) {
 
     const ensureMonthEntry = (month) => {
       if (!monthly.has(month)) {
-        const obj = { high: [], low: [] };
+        const obj = { high: [], low: [], all: new Set() };
         for (const browser of BROWSERS) {
           obj[browser] = [];
         }
@@ -292,12 +292,14 @@ module.exports = function (eleventyConfig) {
       if (baselineHighMonth) {
         ensureMonthEntry(baselineHighMonth);
         monthly.get(baselineHighMonth).high.push(feature);
+        monthly.get(baselineHighMonth).all.add(feature);
       }
 
       const baselineLowMonth = getBaselineLowMonth(feature);
       if (baselineLowMonth) {
         ensureMonthEntry(baselineLowMonth);
         monthly.get(baselineLowMonth).low.push(feature);
+        monthly.get(baselineLowMonth).all.add(feature);
       }
 
       for (const browser of BROWSERS) {
@@ -315,6 +317,7 @@ module.exports = function (eleventyConfig) {
               .low.some((f) => f.id === feature.id);
           if (!alreadyRecorded) {
             monthly.get(browserSupportMonth)[browser].push(feature);
+            monthly.get(browserSupportMonth).all.add(feature);
           }
         }
       }
@@ -330,6 +333,7 @@ module.exports = function (eleventyConfig) {
             month: "long",
             year: "numeric",
           }),
+          all: [...month[1].all],
           features: month[1],
         };
       });
