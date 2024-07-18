@@ -301,18 +301,39 @@ nav li.nobaseline {background: var(--baseline-limited-label-bg);}
 
 .monthly-update-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  gap: var(--margin);
+  column-gap: var(--margin);
+  grid-template-columns: max-content 1fr;
 }
 
 .monthly-update-list .month-entry {
-  padding: 0 calc(var(--margin) / 2);
-  border-radius: 0.5rem;
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: subgrid;
+  padding: calc(var(--margin) / 2) 0;
+}
+
+.monthly-update-list .month-entry:nth-child(even) {
   background: var(--background-alt);
 }
 
-.monthly-update-list .month-entry h2 {
-  margin: 1rem 0;
+.monthly-update-list .month-entry:not(:last-child) {
+  border-block-end: 2px solid;
+}
+
+.monthly-update-list .month-entry h2,
+.monthly-update-list .month-entry p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .monthly-update-list {
+    display: block;
+  }
+
+  .monthly-update-list .month-entry p {
+    margin-block-start: calc(var(--margin) / 2);
+  }
 }
 
 .month-update h2 {
