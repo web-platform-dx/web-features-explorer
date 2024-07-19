@@ -207,6 +207,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPassthroughCopy("site/assets");
 
+  eleventyConfig.addShortcode(
+    "browserVersionRelease",
+    function (browser, version) {
+      const isBeforeThan = version.startsWith("≤");
+      const cleanVersion = isBeforeThan ? version.substring(1) : version;
+      const date = browser.releases[cleanVersion].release_date;
+      return isBeforeThan ? `Released before ${date}` : `Released on ${date}`;
+    }
+  );
+
   eleventyConfig.addGlobalData("versions", async () => {
     const { default: webFeaturesPackageJson } = await import(
       "./node_modules/web-features/package.json",
