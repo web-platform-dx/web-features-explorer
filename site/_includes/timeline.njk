@@ -1,0 +1,110 @@
+<div class="feature-timeline" id="{{ feature.id }}-timeline">
+</div>
+<script type="module" defer>
+  const featureTimelineContainer = document.getElementById("{{ feature.id }}-timeline");
+
+  const featureData = [
+    {% if feature.status.baseline === "low" %}
+      {
+        "event": "low",
+        "date": new Date("{{ feature.status.baseline_low_date }}"),
+        "datestring": "{{ feature.status.baseline_low_date }}"
+      },
+    {% endif %}
+    {% if feature.status.baseline === "high" %}
+      {
+        "event": "high",
+        "date": new Date("{{ feature.status.baseline_high_date }}"),
+        "datestring": "{{ feature.status.baseline_high_date }}"
+      },
+    {% endif %}
+    {% for browser in browsers %}
+      {% set version = feature.status.support[browser.id] %}
+      {% if version %}
+        {
+          "event": "{{ browser.id }}",
+          "date": new Date("{{ browser.releases[version].release_date }}"),
+          "datestring": "{{ browser.releases[version].release_date }}"
+        },
+      {% endif %}
+    {% endfor %}
+  ];
+
+  function getFeatureTimeline(timelineStart, timelineEnd) {
+    let data = [...featureData];
+
+    data.push({
+      "event": "start",
+      "date": new Date(timelineStart),
+      "datestring": timelineStart
+    });
+
+    data.push({
+      "event": "end",
+      "date": new Date(timelineEnd),
+      "datestring": timelineEnd
+    });
+
+    // Add year start events between start and end.
+    const startYear = new Date(timelineStart).getFullYear() + 1;
+    const endYear = new Date(timelineEnd).getFullYear();
+
+    for (let year = startYear; year <= endYear; year++) {
+      data.push({
+        "event": "year",
+        "date": new Date(year, 0, 1),
+        "datestring": year
+      });
+    }
+
+    data = data.sort((a, b) => a.date - b.date);
+
+    // Calculate the total time span.
+    const oneDay = 1000 * 60 * 60 * 24;
+    const firstDate = data[0].date;
+    const lastDate = data[data.length - 1].date;
+    const totalDays = (lastDate - firstDate) / oneDay;
+
+    // Calculate the position of each event.
+    return data.map(event => {
+      const days = (event.date - firstDate) / oneDay;
+      event.position = days / totalDays * 100;
+      return event;
+    });
+  }
+
+  function renderTimeline(timelineStart, timelineEnd) {
+    getFeatureTimeline(timelineStart, timelineEnd).forEach(event => {
+      if (event.event === "start" || event.event === "end") {
+        return;
+      }
+
+      const div = document.createElement("div");
+
+      div.classList.add("event", event.event);
+      if (event.event !== "year") {
+        div.dataset.event = event.event;
+        div.dataset.date = new Date(event.date).toLocaleDateString("en-US", { month: "long", year: "numeric" });
+      } else {
+        div.dataset.date = event.datestring;
+      }
+
+      div.style.left = event.position + "%";
+
+      featureTimelineContainer.appendChild(div);
+    });
+  }
+
+  // Render the initial timeline with, by default, a time span of
+  // 6 months before the first impl, and 6 months after the last event.
+  const [start, ...rest] = featureData.sort((a, b) => a.date - b.date);
+  const end = rest.splice(-1)[0];
+
+  const startDate = new Date(start.date);
+  startDate.setMonth(startDate.getMonth() - 6);
+
+  const endDate = new Date(end.date);
+  endDate.setMonth(endDate.getMonth() + 6);
+  
+  renderTimeline(startDate.toISOString().split("T")[0], endDate.toISOString().split("T")[0]);
+</script>

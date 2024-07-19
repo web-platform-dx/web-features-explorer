@@ -371,3 +371,67 @@ footer {
   color: var(--sub-text);
   font-size: smaller;
 }
+
+.feature-timeline {
+  width: 100%;
+  height: 2px;
+  background: black;
+  position: relative;
+  margin: 7rem 0;
+}
+
+.feature-timeline .event {
+  position: absolute;
+  top: -1rem;
+  bottom: -1rem;
+  width: 2px;
+  background: black;
+}
+
+.feature-timeline .event::before {
+  content: attr(data-event);
+  position: absolute;
+  bottom: 0;
+  transform: rotate(90deg) translateY(.5rem);
+  transform-origin: bottom left;
+}
+
+.feature-timeline .event::after {
+  content: attr(data-date);
+  position: absolute;
+  width: 10rem;
+  top: 0;
+  transform: rotate(-90deg) translateY(-.75rem);
+  transform-origin: top left;
+}
+
+.feature-timeline .event.year {
+  background: transparent;
+}
+
+.feature-timeline .event.year::after {
+	transform: translate(-1.2rem, .25rem);
+	font-size: .8rem;
+	font-weight: bold;
+	background: white;
+	width: unset;
+	padding: .25rem;
+	border-radius: .25rem;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.feature-timeline .event.low::before,
+.feature-timeline .event.high::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(./baseline-high.svg);
+  background-repeat: no-repeat;
+  transform: translate(-.75rem, 1.5rem);
+  background-position: center;
+}
+
+.feature-timeline .event.low::before {
+  background-image: url(./baseline-low.svg);
+}
