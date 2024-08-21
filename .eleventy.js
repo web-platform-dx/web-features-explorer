@@ -207,6 +207,24 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPassthroughCopy("site/assets");
 
+  eleventyConfig.addShortcode(
+    "browserVersionRelease",
+    function (browser, version) {
+      const isBeforeThan = version.startsWith("≤");
+      const cleanVersion = isBeforeThan ? version.substring(1) : version;
+      const date = browser.releases[cleanVersion].release_date;
+      return isBeforeThan ? `Released before ${date}` : `Released on ${date}`;
+    }
+  );
+
+  eleventyConfig.addShortcode("baselineDate", function (dateStr) {
+    const isBefore = dateStr.startsWith("≤");
+    if (isBefore) {
+      return `before ${dateStr.substring(1)}`;
+    }
+    return dateStr;
+  });
+
   eleventyConfig.addGlobalData("versions", async () => {
     const { default: webFeaturesPackageJson } = await import(
       "./node_modules/web-features/package.json",
@@ -259,18 +277,24 @@ module.exports = function (eleventyConfig) {
       }
     };
 
+    const getMonth = (dateStr) => {
+      if (!dateStr) {
+        return null;
+      }
+
+      if (dateStr.startsWith("≤")) {
+        dateStr = dateStr.substring(1);
+      }
+
+      return dateStr.substring(0, 7);
+    }
+
     const getBaselineHighMonth = (feature) => {
-      return (
-        feature.status.baseline_high_date &&
-        feature.status.baseline_high_date.substring(0, 7)
-      );
+      return getMonth(feature.status.baseline_high_date);
     };
 
     const getBaselineLowMonth = (feature) => {
-      return (
-        feature.status.baseline_low_date &&
-        feature.status.baseline_low_date.substring(0, 7)
-      );
+      return getMonth(feature.status.baseline_low_date);
     };
 
     const getBrowserSupportMonth = (feature, browser) => {
@@ -281,7 +305,7 @@ module.exports = function (eleventyConfig) {
         return null;
       }
 
-      return releaseData[versionSupported].release_date.substring(0, 7);
+      return getMonth(releaseData[versionSupported].release_date);
     };
 
     for (const id in features) {
