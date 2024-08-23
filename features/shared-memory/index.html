@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Web features explorer - SharedArrayBuffer and Atomics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
+  </head>
+  <body>
+
+    <header><a href="/web-features-explorer/">Web features explorer</a></header>
+
+    <nav>
+      <ul>
+        <li class="monthly"><a href="/web-features-explorer/release-notes">Release notes</a></li>
+        <li class="recent"><a href="/web-features-explorer/recent">New</a></li>
+        <li class="baseline"><a href="/web-features-explorer/baseline">Baseline</a></li>
+        <li class="nobaseline"><a href="/web-features-explorer/nobaseline">Limited</a></li>
+        <li><a href="/web-features-explorer/all">All</a></li>
+        <li><a href="/web-features-explorer/groups">Groups</a></li>
+        <!-- <li><a href="/missingone">Missing in just one engine</a></li> -->
+      </ul>
+    </nav>
+
+    <main>
+      
+<div id="shared-memory" class="feature baseline-high">
+  <div class="header">
+    <h1>SharedArrayBuffer and Atomics</h1>
+    <div class="availability">
+  
+  
+  Widely available since 2024-06-13
+</div>
+  </div>
+  <p>The <code>SharedArrayBuffer</code> object represents bytes shared between multiple workers and the main thread. The <code>Atomics</code> object safely accesses <code>SharedArrayBuffer</code> data to make sure predictable values are read and written and that operations are not interrupted.</p>
+  
+  <h3>Compatibility <span class="subtext">(<a href="https://caniuse.com/sharedarraybuffer">view on caniuse.com</a>)</span></h3>
+  <ul class="compat">
+  
+    <li class="browser browser-chrome supported">
+      <span class="name">Chrome</span>
+      
+      
+        <span class="version">68</span>
+        <span class="date">Released on 2018-07-24</span>
+      
+    </li>
+  
+    <li class="browser browser-chrome_android supported">
+      <span class="name">Chrome Android</span>
+      
+      
+        <span class="version">89</span>
+        <span class="date">Released on 2021-03-02</span>
+      
+    </li>
+  
+    <li class="browser browser-edge supported">
+      <span class="name">Edge</span>
+      
+      
+        <span class="version">79</span>
+        <span class="date">Released on 2020-01-15</span>
+      
+    </li>
+  
+    <li class="browser browser-firefox supported">
+      <span class="name">Firefox</span>
+      
+      
+        <span class="version">79</span>
+        <span class="date">Released on 2020-07-28</span>
+      
+    </li>
+  
+    <li class="browser browser-firefox_android supported">
+      <span class="name">Firefox for Android</span>
+      
+      
+        <span class="version">79</span>
+        <span class="date">Released on 2020-07-28</span>
+      
+    </li>
+  
+    <li class="browser browser-safari supported">
+      <span class="name">Safari</span>
+      
+      
+        <span class="version">15.2</span>
+        <span class="date">Released on 2021-12-13</span>
+      
+    </li>
+  
+    <li class="browser browser-safari_ios supported">
+      <span class="name">Safari on iOS</span>
+      
+      
+        <span class="version">15.2</span>
+        <span class="date">Released on 2021-12-13</span>
+      
+    </li>
+  
+</ul>
+  
+  
+  <div class="mdn-docs">
+    <h3>MDN docs</h3>
+    
+      <ul class="mdn-docs-area link-list" data-area="javascript">
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics">Atomics global object</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/add">Atomics.add</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/and">Atomics.and</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange">Atomics.compareExchange</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/exchange">Atomics.exchange</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree">Atomics.isLockFree</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/load">Atomics.load</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/notify">Atomics.notify</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/or">Atomics.or</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/store">Atomics.store</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/sub">Atomics.sub</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait">Atomics.wait</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/xor">Atomics.xor</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer">SharedArrayBuffer global object</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Symbol.species">SharedArrayBuffer.Symbol.species</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer">SharedArrayBuffer.SharedArrayBuffer</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength">SharedArrayBuffer.byteLength</a></li>
+        
+          <li class="link-list-item"><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice">SharedArrayBuffer.slice</a></li>
+        
+      </ul>
+    
+  </div>
+
+
+  
+  <div class="specs">
+    <h3>Specifications</h3>
+    <ul class="link-list">
+      
+        <li class="link-list-item"><a href="https://tc39.es/ecma262/multipage/structured-data.html#sec-sharedarraybuffer-objects">https://tc39.es/ecma262/multipage/structured-data.html#sec-sharedarraybuffer-objects</a></li>
+      
+        <li class="link-list-item"><a href="https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics-object">https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics-object</a></li>
+      
+    </ul>
+  </div>
+
+
+  <h3>BCD data</h3>
+  <ul class="resources">
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Atomics.json">javascript.builtins.Atomics</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Atomics.json">javascript.builtins.Atomics.add</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Atomics.json">javascript.builtins.Atomics.and</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Atomics.json">javascript.builtins.Atomics.compareExchange</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Atomics.json">javascript.builtins.Atomics.exchange</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Atomics.json">javascript.builtins.Atomics.isLockFree</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Atomics.json">javascript.builtins.Atomics.load</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Atomics.json">javascript.builtins.Atomics.notify</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Atomics.json">javascript.builtins.Atomics.or</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Atomics.json">javascript.builtins.Atomics.store</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Atomics.json">javascript.builtins.Atomics.sub</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Atomics.json">javascript.builtins.Atomics.wait</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Atomics.json">javascript.builtins.Atomics.xor</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/DataView.json">javascript.builtins.DataView.DataView.sharedarraybuffer_support</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/SharedArrayBuffer.json">javascript.builtins.SharedArrayBuffer</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/SharedArrayBuffer.json">javascript.builtins.SharedArrayBuffer.@@species</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/SharedArrayBuffer.json">javascript.builtins.SharedArrayBuffer.SharedArrayBuffer</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/SharedArrayBuffer.json">javascript.builtins.SharedArrayBuffer.byteLength</a></li>
+    
+      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/SharedArrayBuffer.json">javascript.builtins.SharedArrayBuffer.slice</a></li>
+    
+  </ul>
+</div>
+    </main>
+
+    <footer>
+      <p>Generated on 8/23/2024 using <a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>1.1.0-dev-20240822130516-ce877b6</code> and <a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>5.5.47</code></p>
+      <p>Source code: <a href="https://github.com/web-platform-dx/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
+    </footer>
+
+  </body>
+</html>
