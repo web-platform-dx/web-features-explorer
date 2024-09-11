@@ -113,10 +113,16 @@ function augmentFeatureData(id, feature, bcd) {
     feature.spec = [feature.spec];
   }
 
+  // Collect the first part of each BCD key in this feature (e.g. css, html, api, etc.)
+  // The first part is used to display tags on feature cards
+  const bcdTags = [];
+
   const bcdKeysData = (feature.compat_features || [])
     .map((key) => {
       // Find the BCD entry for this key.
       const keyParts = key.split(".");
+      bcdTags.push(keyParts[0] === "javascript" ? "js" : keyParts[0]);
+      
       let data = bcd;
       for (const part of keyParts) {
         if (!data || !data[part]) {
@@ -151,6 +157,7 @@ function augmentFeatureData(id, feature, bcd) {
 
   // Add the BCD data to the feature.
   feature.bcdData = bcdKeysData;
+  feature.bcdTags = [...new Set(bcdTags)];
 
   // Add impl_url links, if any, per browser.
   const browserImplUrls = Object.keys(browsers).reduce((acc, browserId) => {

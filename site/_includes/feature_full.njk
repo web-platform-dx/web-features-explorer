@@ -3,6 +3,7 @@
     <h1>{{ feature.name }}</h1>
     {% include "baseline.njk" %}
   </div>
+  {% include "tags.njk" %}
   <p>{{ feature.description_html | safe }}</p>
   
   <h3>Compatibility{% if feature.caniuse %} <span class="subtext">(<a href="https://caniuse.com/{{ feature.caniuse }}">view on caniuse.com</a>)</span>{% endif %}</h3>
