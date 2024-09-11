@@ -398,3 +398,33 @@ footer {
   color: var(--sub-text);
   font-size: smaller;
 }
+
+#timeline { 
+  overflow-x: auto;
+  overflow-y: auto;
+  height: calc(100vh - 16rem);
+  display: grid;
+  grid-auto-columns: 7rem;
+  font-size: .6rem;
+  gap: 1px;
+  background: var(--text);
+}
+
+#timeline .timeline-year {
+	grid-row: 1;
+	display: grid;
+	grid-auto-rows: 1rem;
+	width: 6.5rem;
+	background: var(--background);
+	padding: 0 .25rem;
+}
+#timeline .timeline-year h2 {
+  font-size: inherit;
+  margin: 0;
+}
+
+#timeline .timeline-feature {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
