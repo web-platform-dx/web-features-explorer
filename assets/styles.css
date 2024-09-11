@@ -151,6 +151,33 @@ h3 .subtext {
   background-image: url(./baseline-high.svg);
 }
 
+.tags {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: calc(var(--margin) / 2) 0;
+}
+
+.tags .tag {
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  background: var(--background);
+  border: 1px solid var(--text);
+}
+
+.tags .tag:has(.sub-tag) {
+  display: inline-flex;
+  /* FIXME: This is bad for accessibility. Change the order in which sub-tags are generated 
+     in tags.njk instead. */
+  flex-direction: row-reverse;
+  gap: .25rem;
+}
+
+.tags .tag:has(.sub-tag) .sub-tag:not(:last-child)::before {
+  content: ">";
+  margin-inline-end: .25rem;
+}
+
 .compat {
   display: flex;
   flex-wrap: wrap;
