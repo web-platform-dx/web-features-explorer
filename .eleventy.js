@@ -1,4 +1,5 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const feedPlugin = require("@11ty/eleventy-plugin-rss");
 
 const BROWSER_BUG_TRACKERS = {
   chrome: "issues.chromium.org",
@@ -122,7 +123,7 @@ function augmentFeatureData(id, feature, bcd) {
       // Find the BCD entry for this key.
       const keyParts = key.split(".");
       bcdTags.push(keyParts[0] === "javascript" ? "js" : keyParts[0]);
-      
+
       let data = bcd;
       for (const part of keyParts) {
         if (!data || !data[part]) {
@@ -204,7 +205,6 @@ async function getDeps() {
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPassthroughCopy("site/assets");
-
   eleventyConfig.addShortcode(
     "browserVersionRelease",
     function (browser, version) {
@@ -354,6 +354,7 @@ module.exports = function (eleventyConfig) {
             month: "long",
             year: "numeric",
           }),
+          absoluteDate: new Date(month[0]),
           all: [...month[1].all],
           features: month[1],
         };
@@ -475,6 +476,10 @@ module.exports = function (eleventyConfig) {
 
     return missingOne;
   });
+
+  // RSS Feed Plugin
+  eleventyConfig.addPlugin(feedPlugin);
+  eleventyConfig.addLiquidFilter("dateToRfc3339", feedPlugin.dateToRfc3339);
 
   return {
     dir: {
