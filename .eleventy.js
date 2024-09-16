@@ -344,17 +344,24 @@ module.exports = function (eleventyConfig) {
       }
     }
 
+    const now = new Date();
     return [...monthly]
       .sort((a, b) => {
         return new Date(b[0]) - new Date(a[0]);
       })
       .map((month) => {
+        const absoluteDate = new Date(month[0]);
+        const isCurrentMonth = absoluteDate.getMonth() === now.getMonth() && absoluteDate.getFullYear() === now.getFullYear();
         return {
           date: new Date(month[0]).toLocaleDateString("en-us", {
             month: "long",
             year: "numeric",
           }),
-          absoluteDate: new Date(month[0]),
+          absoluteDate: absoluteDate,
+          // current month is not stable because it is still updating
+          // RSS feed should not include the current month
+          // https://github.com/web-platform-dx/web-features-explorer/pull/23
+          isStableMonth: !isCurrentMonth,
           all: [...month[1].all],
           features: month[1],
         };

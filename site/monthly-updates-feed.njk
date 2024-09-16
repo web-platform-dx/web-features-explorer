@@ -25,46 +25,21 @@
     <name>{{ metadata.author.name }}</name>
   </author>
   {%- for month in perMonth %}
-  {%- set absoluteMonthUrl = metadata.url + "release-notes/" + month.date | slugify + "/" %}
-  <entry>
-    <title>{{ month.date }} web platform update</title>
-    <link href="{{ absoluteMonthUrl }}"/>
-    <updated>{{ month.absoluteDate | dateToRfc3339 }}</updated>
-    <id>{{ absoluteMonthUrl }}</id>
-    <content xml:lang="{{ metadata.language }}" type="html"><![CDATA[
-      <h1>{{ month.date }} web platform update</h1>
-      <section class="month-update">
-        {% if month.features.high.length > 0 %}
-          <h2>Now widely available on the web platform</h2>
-          <ul>
-            {% for feature in month.features.high %}
-              <li>
-                <p>
-                    <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
-                    <strong><a href="{{ metadata.url + 'features/' + feature.id | slugify }}">Learn more.</a></strong>
-                </p>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-        {% if month.features.low.length > 0 %}
-          <h2>Newly available on the web platform</h2>
-          <ul>
-            {% for feature in month.features.low %}
-              <li>
-                <p>
-                    <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
-                    <strong><a href="{{ metadata.url + 'features/' + feature.id | slugify }}">Learn more.</a></strong>
-                </p>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-        {% for browser in browsers %}
-          {% if month.features[browser.id].length > 0 %}
-            <h2>Now available in {{ browser.name }}</h2>
+  {# current month is not stable, skip it #}
+  {%- if month.isStableMonth %}
+    {%- set absoluteMonthUrl = metadata.url + "release-notes/" + month.date | slugify + "/" %}
+    <entry>
+      <title>{{ month.date }} web platform update</title>
+      <link href="{{ absoluteMonthUrl }}"/>
+      <updated>{{ month.absoluteDate | dateToRfc3339 }}</updated>
+      <id>{{ absoluteMonthUrl }}</id>
+      <content xml:lang="{{ metadata.language }}" type="html"><![CDATA[
+        <h1>{{ month.date }} web platform update</h1>
+        <section class="month-update">
+          {% if month.features.high.length > 0 %}
+            <h2>Now widely available on the web platform</h2>
             <ul>
-              {% for feature in month.features[browser.id] %}
+              {% for feature in month.features.high %}
                 <li>
                   <p>
                       <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
@@ -74,9 +49,37 @@
               {% endfor %}
             </ul>
           {% endif %}
-        {% endfor %}
-      </section>
-    ]]></content>
-  </entry>
+          {% if month.features.low.length > 0 %}
+            <h2>Newly available on the web platform</h2>
+            <ul>
+              {% for feature in month.features.low %}
+                <li>
+                  <p>
+                      <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
+                      <strong><a href="{{ metadata.url + 'features/' + feature.id | slugify }}">Learn more.</a></strong>
+                  </p>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% for browser in browsers %}
+            {% if month.features[browser.id].length > 0 %}
+              <h2>Now available in {{ browser.name }}</h2>
+              <ul>
+                {% for feature in month.features[browser.id] %}
+                  <li>
+                    <p>
+                        <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
+                        <strong><a href="{{ metadata.url + 'features/' + feature.id | slugify }}">Learn more.</a></strong>
+                    </p>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          {% endfor %}
+        </section>
+      ]]></content>
+    </entry>
+    {%- endif %}
   {%- endfor %}
 </feed>
