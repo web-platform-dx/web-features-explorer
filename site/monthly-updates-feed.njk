@@ -1,0 +1,85 @@
+---json
+{
+  "permalink": "/release-notes.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "Web Platform Monthly Updates",
+    "subtitle": "Monthly updates on the web platform features.",
+    "language": "en",
+    "url": "https://web-platform-dx.github.io/web-features-explorer/",
+    "author": {
+      "name": "Web Platform Team"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.subtitle }}</subtitle>
+  <link href="https://web-platform-dx.github.io/web-features-explorer/release-notes.xml" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.perMonth | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+  </author>
+  {%- for month in perMonth %}
+  {# current month is not stable, skip it #}
+  {%- if month.isStableMonth %}
+    {%- set absoluteMonthUrl = metadata.url + "release-notes/" + month.date | slugify + "/" %}
+    <entry>
+      <title>{{ month.date }} web platform update</title>
+      <link href="{{ absoluteMonthUrl }}"/>
+      <updated>{{ month.absoluteDate | dateToRfc3339 }}</updated>
+      <id>{{ absoluteMonthUrl }}</id>
+      <content xml:lang="{{ metadata.language }}" type="html"><![CDATA[
+        <h1>{{ month.date }} web platform update</h1>
+        <section class="month-update">
+          {% if month.features.high.length > 0 %}
+            <h2>Now widely available on the web platform</h2>
+            <ul>
+              {% for feature in month.features.high %}
+                <li>
+                  <p>
+                      <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
+                      <strong><a href="{{ metadata.url + 'features/' + feature.id | slugify }}">Learn more.</a></strong>
+                  </p>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% if month.features.low.length > 0 %}
+            <h2>Newly available on the web platform</h2>
+            <ul>
+              {% for feature in month.features.low %}
+                <li>
+                  <p>
+                      <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
+                      <strong><a href="{{ metadata.url + 'features/' + feature.id | slugify }}">Learn more.</a></strong>
+                  </p>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% for browser in browsers %}
+            {% if month.features[browser.id].length > 0 %}
+              <h2>Now available in {{ browser.name }}</h2>
+              <ul>
+                {% for feature in month.features[browser.id] %}
+                  <li>
+                    <p>
+                        <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
+                        <strong><a href="{{ metadata.url + 'features/' + feature.id | slugify }}">Learn more.</a></strong>
+                    </p>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          {% endfor %}
+        </section>
+      ]]></content>
+    </entry>
+    {%- endif %}
+  {%- endfor %}
+</feed>
