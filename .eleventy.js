@@ -1,5 +1,7 @@
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
-const feedPlugin = require("@11ty/eleventy-plugin-rss");
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import feedPlugin from "@11ty/eleventy-plugin-rss";
+import { browsers, features, groups } from "web-features";
+import bcd from '@mdn/browser-compat-data' assert { type: 'json' };
 
 const BROWSER_BUG_TRACKERS = {
   chrome: "issues.chromium.org",
@@ -180,29 +182,7 @@ function augmentFeatureData(id, feature, bcd) {
   feature.implUrls = browserImplUrls;
 }
 
-let features = null;
-let groups = null;
-let bcd = null;
-
-async function getDeps() {
-  if (!features) {
-    const module = await import("web-features");
-    features = module.features;
-    groups = module.groups;
-    browsers = module.browsers;
-  }
-
-  if (!bcd) {
-    const json = await import("@mdn/browser-compat-data", {
-      assert: { type: "json" },
-    });
-    bcd = json.default;
-  }
-
-  return { features, groups, browsers, bcd };
-}
-
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPassthroughCopy("site/assets");
   eleventyConfig.addShortcode(
@@ -231,8 +211,6 @@ module.exports = function (eleventyConfig) {
       }
     );
 
-    const { bcd } = await getDeps();
-
     return {
       date: new Date().toLocaleDateString(),
       webFeatures: webFeaturesPackageJson.version,
@@ -240,9 +218,7 @@ module.exports = function (eleventyConfig) {
     };
   });
 
-  eleventyConfig.addGlobalData("browsers", async () => {
-    const { browsers } = await getDeps();
-
+  eleventyConfig.addGlobalData("browsers", () => {
     return Object.keys(browsers).map(browserId => {
       return {
         id: browserId,
@@ -253,14 +229,11 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  eleventyConfig.addGlobalData("perGroup", async () => {
-    const { groups } = await getDeps();
+  eleventyConfig.addGlobalData("perGroup", () => {
     return groups;
   });
 
-  eleventyConfig.addGlobalData("perMonth", async () => {
-    const { features, browsers, bcd } = await getDeps();
-
+  eleventyConfig.addGlobalData("perMonth", () => {
     const monthly = new Map();
 
     const ensureMonthEntry = (month) => {
@@ -368,9 +341,7 @@ module.exports = function (eleventyConfig) {
       });
   });
 
-  eleventyConfig.addGlobalData("allFeatures", async () => {
-    const { features, bcd } = await getDeps();
-
+  eleventyConfig.addGlobalData("allFeatures", () => {
     const all = [];
 
     for (const id in features) {
@@ -382,9 +353,7 @@ module.exports = function (eleventyConfig) {
     return all;
   });
 
-  eleventyConfig.addGlobalData("baselineFeatures", async () => {
-    const { features, bcd } = await getDeps();
-
+  eleventyConfig.addGlobalData("baselineFeatures", () => {
     const baseline = [];
 
     for (const id in features) {
@@ -406,9 +375,7 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  eleventyConfig.addGlobalData("nonBaselineFeatures", async () => {
-    const { features, bcd } = await getDeps();
-
+  eleventyConfig.addGlobalData("nonBaselineFeatures", () => {
     const nonBaseline = [];
 
     for (const id in features) {
@@ -424,9 +391,7 @@ module.exports = function (eleventyConfig) {
     return nonBaseline;
   });
 
-  eleventyConfig.addGlobalData("recentBaselineFeatures", async () => {
-    const { features, bcd } = await getDeps();
-
+  eleventyConfig.addGlobalData("recentBaselineFeatures", () => {
     const recentBaseline = [];
 
     for (const id in features) {
@@ -448,9 +413,7 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  eleventyConfig.addGlobalData("missingOneBrowserFeatures", async () => {
-    const { features, bcd } = await getDeps();
-
+  eleventyConfig.addGlobalData("missingOneBrowserFeatures", () => {
     const missingOne = [];
 
     for (const id in features) {
