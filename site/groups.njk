@@ -43,7 +43,7 @@ layout: layout.njk
 <ul class="features">
   {% for feature in allFeatures %}
     {% if feature.group.length === 0 %}
-      <li>{{ feature.name }}</li>
+      <li><a href="/features/{{ feature.id | slugify }}/">{{ feature.name }}</a></li>
     {% endif %}
   {% endfor %}
 </ul>

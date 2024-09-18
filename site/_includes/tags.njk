@@ -1,0 +1,24 @@
+{% macro groupMacro(groupId, allGroups) %}
+  <span class="sub-tag">{{ allGroups[groupId].name }}</span>
+
+  {% if allGroups[groupId].parent %}
+    {{ groupMacro(allGroups[groupId].parent, allGroups) }}
+  {% endif %}
+{% endmacro %}
+
+<div class="tags">
+  {% if feature.bcdTags.length %}
+    Tags:
+    {% for tag in feature.bcdTags %}
+      <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  {% endif %}
+  {% if feature.group.length %}
+    Groups:
+    {% for group in feature.group %}
+      {% if group.parent == null %}
+        <span class="tag">{{ groupMacro(group, perGroup) }}</span>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</div>

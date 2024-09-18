@@ -1,14 +1,7 @@
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
-
-const BROWSERS = [
-  "chrome",
-  "chrome_android",
-  "edge",
-  "firefox",
-  "firefox_android",
-  "safari",
-  "safari_ios",
-];
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import feedPlugin from "@11ty/eleventy-plugin-rss";
+import { browsers, features, groups } from "web-features";
+import bcd from '@mdn/browser-compat-data' assert { type: 'json' };
 
 const BROWSER_BUG_TRACKERS = {
   chrome: "issues.chromium.org",
@@ -123,10 +116,16 @@ function augmentFeatureData(id, feature, bcd) {
     feature.spec = [feature.spec];
   }
 
+  // Collect the first part of each BCD key in this feature (e.g. css, html, api, etc.)
+  // The first part is used to display tags on feature cards
+  const bcdTags = [];
+
   const bcdKeysData = (feature.compat_features || [])
     .map((key) => {
       // Find the BCD entry for this key.
       const keyParts = key.split(".");
+      bcdTags.push(keyParts[0] === "javascript" ? "js" : keyParts[0]);
+
       let data = bcd;
       for (const part of keyParts) {
         if (!data || !data[part]) {
@@ -161,19 +160,20 @@ function augmentFeatureData(id, feature, bcd) {
 
   // Add the BCD data to the feature.
   feature.bcdData = bcdKeysData;
+  feature.bcdTags = [...new Set(bcdTags)];
 
   // Add impl_url links, if any, per browser.
-  const browserImplUrls = Object.values(BROWSERS).reduce((acc, browser) => {
-    acc[browser] = [];
+  const browserImplUrls = Object.keys(browsers).reduce((acc, browserId) => {
+    acc[browserId] = [];
     return acc;
   }, {});
 
   for (const { compat } of bcdKeysData) {
-    for (const browser of BROWSERS) {
-      const browserSupport = compat.support[browser];
+    for (const browserId in browsers) {
+      const browserSupport = compat.support[browserId];
       if (!browserSupport.version_added && browserSupport.impl_url) {
-        browserImplUrls[browser] = [
-          ...new Set([...browserImplUrls[browser], browserSupport.impl_url]),
+        browserImplUrls[browserId] = [
+          ...new Set([...browserImplUrls[browserId], browserSupport.impl_url]),
         ];
       }
     }
@@ -182,37 +182,15 @@ function augmentFeatureData(id, feature, bcd) {
   feature.implUrls = browserImplUrls;
 }
 
-let features = null;
-let groups = null;
-let bcd = null;
-
-async function getDeps() {
-  if (!features) {
-    const module = await import("web-features");
-    features = module.features;
-    groups = module.groups;
-  }
-
-  if (!bcd) {
-    const json = await import("@mdn/browser-compat-data", {
-      assert: { type: "json" },
-    });
-    bcd = json.default;
-  }
-
-  return { features, groups, bcd };
-}
-
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPassthroughCopy("site/assets");
-
   eleventyConfig.addShortcode(
     "browserVersionRelease",
     function (browser, version) {
       const isBeforeThan = version.startsWith("≤");
       const cleanVersion = isBeforeThan ? version.substring(1) : version;
-      const date = browser.releases[cleanVersion].release_date;
+      const date = browser.releases.find(release => release.version === cleanVersion).date;
       return isBeforeThan ? `Released before ${date}` : `Released on ${date}`;
     }
   );
@@ -233,8 +211,6 @@ module.exports = function (eleventyConfig) {
       }
     );
 
-    const { bcd } = await getDeps();
-
     return {
       date: new Date().toLocaleDateString(),
       webFeatures: webFeaturesPackageJson.version,
@@ -242,35 +218,29 @@ module.exports = function (eleventyConfig) {
     };
   });
 
-  // FIXME: Ideally, web-features would have this data.
-  eleventyConfig.addGlobalData("browsers", async () => {
-    const { bcd } = await getDeps();
-
-    return BROWSERS.map((browser) => {
+  eleventyConfig.addGlobalData("browsers", () => {
+    return Object.keys(browsers).map(browserId => {
       return {
-        id: browser,
-        name: bcd.browsers[browser].name,
-        releases: bcd.browsers[browser].releases,
-        bugTracker: BROWSER_BUG_TRACKERS[browser],
+        id: browserId,
+        name: browsers[browserId].name,
+        releases: browsers[browserId].releases,
+        bugTracker: BROWSER_BUG_TRACKERS[browserId],
       };
     });
   });
 
-  eleventyConfig.addGlobalData("perGroup", async () => {
-    const { groups } = await getDeps();
+  eleventyConfig.addGlobalData("perGroup", () => {
     return groups;
   });
 
-  eleventyConfig.addGlobalData("perMonth", async () => {
-    const { features, bcd } = await getDeps();
-
+  eleventyConfig.addGlobalData("perMonth", () => {
     const monthly = new Map();
 
     const ensureMonthEntry = (month) => {
       if (!monthly.has(month)) {
         const obj = { high: [], low: [], all: new Set() };
-        for (const browser of BROWSERS) {
-          obj[browser] = [];
+        for (const browserId in browsers) {
+          obj[browserId] = [];
         }
 
         monthly.set(month, obj);
@@ -297,9 +267,9 @@ module.exports = function (eleventyConfig) {
       return getMonth(feature.status.baseline_low_date);
     };
 
-    const getBrowserSupportMonth = (feature, browser) => {
-      const versionSupported = feature.status.support[browser];
-      const releaseData = bcd.browsers[browser].releases;
+    const getBrowserSupportMonth = (feature, browserId) => {
+      const versionSupported = feature.status.support[browserId];
+      const releaseData = browsers[browserId].releases;
 
       if (!versionSupported || !releaseData[versionSupported]) {
         return null;
@@ -326,8 +296,8 @@ module.exports = function (eleventyConfig) {
         monthly.get(baselineLowMonth).all.add(feature);
       }
 
-      for (const browser of BROWSERS) {
-        const browserSupportMonth = getBrowserSupportMonth(feature, browser);
+      for (const browserId in browsers) {
+        const browserSupportMonth = getBrowserSupportMonth(feature, browserId);
         if (browserSupportMonth) {
           ensureMonthEntry(browserSupportMonth);
           // Only record the feature if it hasn't already been recorded as baseline
@@ -347,25 +317,31 @@ module.exports = function (eleventyConfig) {
       }
     }
 
+    const now = new Date();
     return [...monthly]
       .sort((a, b) => {
         return new Date(b[0]) - new Date(a[0]);
       })
       .map((month) => {
+        const absoluteDate = new Date(month[0]);
+        const isCurrentMonth = absoluteDate.getMonth() === now.getMonth() && absoluteDate.getFullYear() === now.getFullYear();
         return {
           date: new Date(month[0]).toLocaleDateString("en-us", {
             month: "long",
             year: "numeric",
           }),
+          absoluteDate: absoluteDate,
+          // current month is not stable because it is still updating
+          // RSS feed should not include the current month
+          // https://github.com/web-platform-dx/web-features-explorer/pull/23
+          isStableMonth: !isCurrentMonth,
           all: [...month[1].all],
           features: month[1],
         };
       });
   });
 
-  eleventyConfig.addGlobalData("allFeatures", async () => {
-    const { features, bcd } = await getDeps();
-
+  eleventyConfig.addGlobalData("allFeatures", () => {
     const all = [];
 
     for (const id in features) {
@@ -377,9 +353,7 @@ module.exports = function (eleventyConfig) {
     return all;
   });
 
-  eleventyConfig.addGlobalData("baselineFeatures", async () => {
-    const { features, bcd } = await getDeps();
-
+  eleventyConfig.addGlobalData("baselineFeatures", () => {
     const baseline = [];
 
     for (const id in features) {
@@ -401,9 +375,7 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  eleventyConfig.addGlobalData("nonBaselineFeatures", async () => {
-    const { features, bcd } = await getDeps();
-
+  eleventyConfig.addGlobalData("nonBaselineFeatures", () => {
     const nonBaseline = [];
 
     for (const id in features) {
@@ -419,9 +391,7 @@ module.exports = function (eleventyConfig) {
     return nonBaseline;
   });
 
-  eleventyConfig.addGlobalData("recentBaselineFeatures", async () => {
-    const { features, bcd } = await getDeps();
-
+  eleventyConfig.addGlobalData("recentBaselineFeatures", () => {
     const recentBaseline = [];
 
     for (const id in features) {
@@ -443,9 +413,7 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  eleventyConfig.addGlobalData("missingOneBrowserFeatures", async () => {
-    const { features, bcd } = await getDeps();
-
+  eleventyConfig.addGlobalData("missingOneBrowserFeatures", () => {
     const missingOne = [];
 
     for (const id in features) {
@@ -456,7 +424,7 @@ module.exports = function (eleventyConfig) {
       if (!feature.status.baseline) {
         // And, out of those, only those that are missing support in just one browser (engine).
         const noSupport = [];
-        for (const browserId of BROWSERS) {
+        for (const browserId in browsers) {
           if (!feature.status.support[browserId]) {
             noSupport.push(browserId);
           }
@@ -478,6 +446,10 @@ module.exports = function (eleventyConfig) {
 
     return missingOne;
   });
+
+  // RSS Feed Plugin
+  eleventyConfig.addPlugin(feedPlugin);
+  eleventyConfig.addLiquidFilter("dateToRfc3339", feedPlugin.dateToRfc3339);
 
   return {
     dir: {
