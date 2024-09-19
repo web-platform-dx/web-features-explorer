@@ -4,7 +4,7 @@
   <subtitle>Monthly updates on the web platform features.</subtitle>
   <link href="https://web-platform-dx.github.io/web-features-explorer/release-notes.xml" rel="self"/>
   <link href="https://web-platform-dx.github.io/web-features-explorer/"/>
-  <updated>2024-09-18T13:29:41Z</updated>
+  <updated>2024-09-19T00:42:51Z</updated>
   <id>https://web-platform-dx.github.io/web-features-explorer/</id>
   <author>
     <name>Web Platform Team</name>
@@ -350,6 +350,13 @@
               
                 <li>
                   <p>
+                      <strong>Logical properties</strong>: CSS logical properties control borders, size, margin, and padding with directions and dimensions relative to the writing mode. For example, in a left to right, top to bottom writing mode, <code>block-end</code> refers to the bottom. Also known as flow relative.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/logical-properties">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
                       <strong>Referrer policy</strong>: The <code>Referrer-Policy</code> HTTP header and <code>referrerpolicy</code> HTML attributes control whether requests have the <code>Referer</code> header and what information the header contains.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/referrer-policy">Learn more.</a></strong>
                   </p>
@@ -659,6 +666,13 @@
               
                 <li>
                   <p>
+                      <strong>scripting media query</strong>: The <code>scripting</code> CSS media query sets styles based on whether scripting such as JavaScript is available. Values are <code>enabled</code> if scripting is available, <code>initial-only</code> if scripting is only available on page load (for example, printed content), or <code>none</code>.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/scripting">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
                       <strong>Storage access</strong>: The <code>document.requestStorageAccess()</code> method allows content in iframes to request storing and reading cookies and other site data, while the <code>document.hasStorageAccess()</code> method checks if such access is granted.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/storage-access">Learn more.</a></strong>
                   </p>
@@ -906,7 +920,7 @@
               
                 <li>
                   <p>
-                      <strong>Hyphenation</strong>: The <code>hyphens</code> CSS property controls when long words are broken by line wrapping. Although called <code>hyphens</code>, the property applies to word-splitting behavior across languages, such as customary spelling changes or the use of other characters to mark an intraword line break.
+                      <strong>Hyphenation</strong>: The <code>hyphens</code> CSS property controls when long words are broken by line wrapping. Although called <code>hyphens</code>, the property applies to word-splitting behavior across languages, such as customary spelling changes or the use of other characters. Support for non-English languages varies signficantly.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/hyphens">Learn more.</a></strong>
                   </p>
                 </li>
@@ -927,8 +941,22 @@
               
                 <li>
                   <p>
+                      <strong>Overflow media queries</strong>: The <code>overflow-block</code> and <code>overflow-inline</code> CSS media queries set styles based on the way a device displays content that's larger than the viewport or page area. For example, a laptop lets users scroll to reveal content, while a printer displays overflowing content on additional pages.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/overflow">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
                       <strong>Subgrid</strong>: The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/subgrid">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>Update frequency media query</strong>: The <code>update</code> CSS media query sets styles based on whether and how fast the user's device can modify display after it has been rendered. For example, you can avoid animations on devices that aren't fast enough to display them smoothly.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/update">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -970,13 +998,6 @@
                   <p>
                       <strong>dirname</strong>: The <code>dirname</code> attribute of <code>&#x3C;textarea></code> and <code>&#x3C;input></code> HTML elements includes the field's writing direction as form data on submission.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/dirname">Learn more.</a></strong>
-                  </p>
-                </li>
-              
-                <li>
-                  <p>
-                      <strong>Motion path</strong>: The <code>offset</code> CSS property animates an element along a defined motion path.
-                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/motion-path">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -1405,7 +1426,7 @@
               
                 <li>
                   <p>
-                      <strong>Media query range syntax</strong>: The range syntax of CSS media queries allows you to use mathematical comparison operators such as <code>&#x3C;</code>, <code>></code>, <code>&#x3C;=</code>, and <code>>=</code> to define a range of values for a media feature. For example, <code>(400px &#x3C; width &#x3C; 1000px)</code> returns true if the viewport width is between 400px and 1000px.
+                      <strong>Media query range syntax</strong>: The range syntax of CSS media queries allows you to use mathematical comparison operators such as <code>&#x3C;</code>, <code>></code>, <code>&#x3C;=</code>, and <code>>=</code> to define a range of values for a media query. For example, <code>(400px &#x3C; width &#x3C; 1000px)</code> returns true if the viewport width is between 400px and 1000px.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/media-query-range-syntax">Learn more.</a></strong>
                   </p>
                 </li>
@@ -1544,6 +1565,13 @@
                   <p>
                       <strong>:autofill</strong>: The <code>:autofill</code> pseudo-class matches <code>&#x3C;input></code> elements that have been filled in automatically by the browser.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/autofill">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>color-gamut media query</strong>: The <code>color-gamut</code> media query sets styles based on the colors a device can display.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/color-gamut">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -1848,6 +1876,13 @@
               
                 <li>
                   <p>
+                      <strong>Motion path</strong>: The <code>offset</code> CSS property animates an element along a defined motion path.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/motion-path">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
                       <strong>overflow</strong>: The <code>overflow</code> CSS property sets the behavior for when content doesn't fit in an element.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/overflow-shorthand">Learn more.</a></strong>
                   </p>
@@ -2069,8 +2104,15 @@
               
                 <li>
                   <p>
-                      <strong>prefers-color-scheme</strong>: The <code>prefers-color-scheme</code> CSS media query detects the requested color scheme, light or dark.
+                      <strong>prefers-color-scheme media query</strong>: The <code>prefers-color-scheme</code> CSS media query sets styles based on the requested color scheme, light or dark.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/prefers-color-scheme">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>prefers-reduced-motion media query</strong>: The <code>prefers-reduced-motion</code> CSS media query sets styles based on whether the user prefers to minimize the amount of non-essential animations on the device, such as scrolling, panning, zooming, and strobing.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/prefers-reduced-motion">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -2188,6 +2230,54 @@
                   <p>
                       <strong>Streams</strong>: The streams API creates, composes, and consumes continuously generated data.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/streams">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+            </ul>
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </section>
+      ]]></content>
+    </entry>
+  
+    <entry>
+      <title>May 2022 web platform update</title>
+      <link href="https://web-platform-dx.github.io/web-features-explorer/release-notes/may-2022/"/>
+      <updated>2022-05-01T00:00:00Z</updated>
+      <id>https://web-platform-dx.github.io/web-features-explorer/release-notes/may-2022/</id>
+      <content xml:lang="en" type="html"><![CDATA[
+        <h1>May 2022 web platform update</h1>
+        <section class="month-update">
+          
+          
+            <h2>Newly available on the web platform</h2>
+            <ul>
+              
+                <li>
+                  <p>
+                      <strong>dynamic-range media query</strong>: The <code>dynamic-range</code> CSS media query sets styles based on whether a device can display at least <code>standard</code> range colors or at least <code>high</code> range colors. Non-visual devices will match neither.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/dynamic-range">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>prefers-contrast media query</strong>: The <code>prefers-contrast</code> CSS media query sets styles based on whether the user prefers more or less contrast, the difference between foreground and background colors.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/prefers-contrast">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -2587,6 +2677,13 @@
               
                 <li>
                   <p>
+                      <strong>Logical properties</strong>: CSS logical properties control borders, size, margin, and padding with directions and dimensions relative to the writing mode. For example, in a left to right, top to bottom writing mode, <code>block-end</code> refers to the bottom. Also known as flow relative.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/logical-properties">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
                       <strong>Referrer policy</strong>: The <code>Referrer-Policy</code> HTTP header and <code>referrerpolicy</code> HTML attributes control whether requests have the <code>Referer</code> header and what information the header contains.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/referrer-policy">Learn more.</a></strong>
                   </p>
@@ -2691,6 +2788,13 @@
                   <p>
                       <strong>Constraint validation API</strong>: Methods that validate form controls before submission, such as <code>checkValidity()</code>, <code>reportValidity()</code> and <code>setCustomValidity()</code>.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/constraint-validation">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>Interaction media queries</strong>: The <code>pointer</code>, <code>any-pointer</code>, <code>hover</code>, and <code>any-hover</code> CSS media queries set styles based on the presence of pointing devices and their ability to hover over elements. For example, most smartphones match the <code>(hover: none) and (pointer: coarse)</code> media query.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/interaction">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -3437,8 +3541,15 @@
               
                 <li>
                   <p>
-                      <strong>prefers-color-scheme</strong>: The <code>prefers-color-scheme</code> CSS media query detects the requested color scheme, light or dark.
+                      <strong>prefers-color-scheme media query</strong>: The <code>prefers-color-scheme</code> CSS media query sets styles based on the requested color scheme, light or dark.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/prefers-color-scheme">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>prefers-reduced-motion media query</strong>: The <code>prefers-reduced-motion</code> CSS media query sets styles based on whether the user prefers to minimize the amount of non-essential animations on the device, such as scrolling, panning, zooming, and strobing.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/prefers-reduced-motion">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -3912,6 +4023,13 @@
                   <p>
                       <strong>Constraint validation API</strong>: Methods that validate form controls before submission, such as <code>checkValidity()</code>, <code>reportValidity()</code> and <code>setCustomValidity()</code>.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/constraint-validation">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>Interaction media queries</strong>: The <code>pointer</code>, <code>any-pointer</code>, <code>hover</code>, and <code>any-hover</code> CSS media queries set styles based on the presence of pointing devices and their ability to hover over elements. For example, most smartphones match the <code>(hover: none) and (pointer: coarse)</code> media query.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/interaction">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -4623,6 +4741,13 @@
                   <p>
                       <strong>&lt;mark&gt;</strong>: The <code>&#x3C;mark></code> element represents text which is marked or highlighted for reference or notation purposes.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/mark">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>Media queries</strong>: The <code>@media</code> CSS rule conditionally applies styles based on the output device type, its capabilities, and the user's preferences. Media queries are composed of an optional media type such as <code>screen</code> or <code>print</code>, and one or more mandatory media features, such as <code>prefers-reduced-animations</code>.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/media-queries">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -5986,6 +6111,13 @@
                   <p>
                       <strong>&lt;mark&gt;</strong>: The <code>&#x3C;mark></code> element represents text which is marked or highlighted for reference or notation purposes.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/mark">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>Media queries</strong>: The <code>@media</code> CSS rule conditionally applies styles based on the output device type, its capabilities, and the user's preferences. Media queries are composed of an optional media type such as <code>screen</code> or <code>print</code>, and one or more mandatory media features, such as <code>prefers-reduced-animations</code>.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/media-queries">Learn more.</a></strong>
                   </p>
                 </li>
               
