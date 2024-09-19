@@ -2,6 +2,7 @@ import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import feedPlugin from "@11ty/eleventy-plugin-rss";
 import { browsers, features, groups } from "web-features";
 import bcd from '@mdn/browser-compat-data' assert { type: 'json' };
+import specs from "browser-specs" assert { type: 'json' };
 
 const BROWSER_BUG_TRACKERS = {
   chrome: "issues.chromium.org",
@@ -97,8 +98,7 @@ function processMdnUrl(url) {
   return { title, url, area };
 }
 
-// Add more data to a feature's object, based on what our templates need.
-function augmentFeatureData(id, feature, bcd) {
+function augmentFeatureData(id, feature) {
   // Add the id.
   feature.id = id;
 
@@ -115,6 +115,13 @@ function augmentFeatureData(id, feature, bcd) {
   } else if (!Array.isArray(feature.spec)) {
     feature.spec = [feature.spec];
   }
+
+  // Add spec data.
+  feature.spec = feature.spec.map((spec) => {
+    // Look for the spec URL in the browser-specs data.
+    const specData = specs.find((specData) => specData.url === spec);
+    return specData || { url: spec };
+  });
 
   // Collect the first part of each BCD key in this feature (e.g. css, html, api, etc.)
   // The first part is used to display tags on feature cards
@@ -180,6 +187,12 @@ function augmentFeatureData(id, feature, bcd) {
   }
 
   feature.implUrls = browserImplUrls;
+}
+
+// Massage the web-features data so it's more directly useful in our 11ty templates.
+for (const id in features) {
+  const feature = features[id];
+  augmentFeatureData(id, feature);
 }
 
 export default function (eleventyConfig) {
@@ -280,7 +293,6 @@ export default function (eleventyConfig) {
 
     for (const id in features) {
       const feature = features[id];
-      augmentFeatureData(id, feature, bcd);
 
       const baselineHighMonth = getBaselineHighMonth(feature);
       if (baselineHighMonth) {
@@ -346,7 +358,6 @@ export default function (eleventyConfig) {
 
     for (const id in features) {
       const feature = features[id];
-      augmentFeatureData(id, feature, bcd);
       all.push(feature);
     }
 
@@ -361,7 +372,6 @@ export default function (eleventyConfig) {
 
       // Baseline features only.
       if (feature.status.baseline === "high") {
-        augmentFeatureData(id, feature, bcd);
         baseline.push(feature);
       }
     }
@@ -383,7 +393,6 @@ export default function (eleventyConfig) {
 
       // Non-baseline features only.
       if (!feature.status.baseline) {
-        augmentFeatureData(id, feature, bcd);
         nonBaseline.push(feature);
       }
     }
@@ -396,7 +405,6 @@ export default function (eleventyConfig) {
 
     for (const id in features) {
       const feature = features[id];
-      augmentFeatureData(id, feature, bcd);
 
       // Only baseline low.
       if (feature.status.baseline === "low") {
@@ -418,7 +426,6 @@ export default function (eleventyConfig) {
 
     for (const id in features) {
       const feature = features[id];
-      augmentFeatureData(id, feature, bcd);
 
       // Only non-baseline features.
       if (!feature.status.baseline) {

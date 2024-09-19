@@ -3,7 +3,19 @@
     <h3>Specifications</h3>
     <ul class="link-list">
       {% for spec in feature.spec %}
-        <li class="link-list-item"><a href="{{ spec }}">{{ spec }}</a></li>
+
+        <li class="link-list-item">
+          {% if spec.title %}
+            <a href="{{ spec.url }}">
+              {{ spec.title }} ({{spec.organization}})
+            </a>.
+            From the <a href="{{ spec.groups[0].url }}">{{ spec.groups[0].name }}</a>
+          {% else %}
+            <a href="{{ spec.url }}">
+              {{ spec.url }}
+            </a>
+          {% endif %}
+        </li>
       {% endfor %}
     </ul>
   </div>
