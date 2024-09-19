@@ -6,14 +6,10 @@
 
         <li class="link-list-item">
           {% if spec.title %}
-            <a href="{{ spec.url }}">
-              {{ spec.title }} ({{spec.organization}})
-            </a>.
+            <a href="{{ spec.url }}">{{ spec.title }} ({{spec.organization}})</a>.
             From the <a href="{{ spec.groups[0].url }}">{{ spec.groups[0].name }}</a>
           {% else %}
-            <a href="{{ spec.url }}">
-              {{ spec.url }}
-            </a>
+            <a href="{{ spec.url }}">{{ spec.url }}</a>
           {% endif %}
         </li>
       {% endfor %}
