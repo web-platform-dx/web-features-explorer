@@ -170,12 +170,12 @@ h3 .subtext {
   /* FIXME: This is bad for accessibility. Change the order in which sub-tags are generated 
      in tags.njk instead. */
   flex-direction: row-reverse;
-  gap: .25rem;
+  gap: 0.25rem;
 }
 
 .tags .tag:has(.sub-tag) .sub-tag:not(:last-child)::before {
   content: ">";
-  margin-inline-end: .25rem;
+  margin-inline-end: 0.25rem;
 }
 
 .compat {
@@ -185,18 +185,18 @@ h3 .subtext {
 }
 
 .compat .browser {
-	--bg: var(--browser-unsupported-bg);
-	padding: 1.25rem 0.55rem 0.25rem 0.5rem;
-	border-radius: 0.25rem;
-	border: 2px solid color-mix(in srgb, var(--bg) 90%, black);
-	background-color: var(--bg);
-	background-position: center .25rem;
-	background-repeat: no-repeat;
-	background-size: 1rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-width: 4rem;
+  --bg: var(--browser-unsupported-bg);
+  padding: 1.25rem 0.55rem 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 2px solid color-mix(in srgb, var(--bg) 90%, black);
+  background-color: var(--bg);
+  background-position: center 0.25rem;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 4rem;
 }
 
 .compat .browser.supported {
@@ -263,12 +263,23 @@ nav li {
 }
 
 nav li.monthly {
-  background-image: linear-gradient(to top right, var(--baseline-high-label-bg), var(--baseline-low-label-bg), var(--baseline-limited-label-bg));
+  background-image: linear-gradient(
+    to top right,
+    var(--baseline-high-label-bg),
+    var(--baseline-low-label-bg),
+    var(--baseline-limited-label-bg)
+  );
 }
 
-nav li.recent {background: var(--baseline-low-label-bg);}
-nav li.baseline {background: var(--baseline-high-label-bg);}
-nav li.nobaseline {background: var(--baseline-limited-label-bg);}
+nav li.recent {
+  background: var(--baseline-low-label-bg);
+}
+nav li.baseline {
+  background: var(--baseline-high-label-bg);
+}
+nav li.nobaseline {
+  background: var(--baseline-limited-label-bg);
+}
 
 .mdn-docs {
   display: flex;
@@ -287,15 +298,15 @@ nav li.nobaseline {background: var(--baseline-limited-label-bg);}
 }
 
 .mdn-docs-area::before {
-	content: attr(data-area);
-	text-transform: uppercase;
-	font-size: small;
-	padding: .25rem;
-	background: #fff5;
-	border: 2px solid #0003;
-	position: absolute;
-	inset: 0 0 auto auto;
-	border-width: 0 0 2px 2px;
+  content: attr(data-area);
+  text-transform: uppercase;
+  font-size: small;
+  padding: 0.25rem;
+  background: #fff5;
+  border: 2px solid #0003;
+  position: absolute;
+  inset: 0 0 auto auto;
+  border-width: 0 0 2px 2px;
 }
 
 .mdn-docs h4 {
@@ -365,7 +376,7 @@ nav li.nobaseline {background: var(--baseline-limited-label-bg);}
 
 .month-update h2 {
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   justify-content: space-between;
 }
 
@@ -374,7 +385,7 @@ nav li.nobaseline {background: var(--baseline-limited-label-bg);}
 }
 
 .groups li {
-  padding: .25rem;
+  padding: 0.25rem;
 }
 
 .groups li li {
@@ -387,7 +398,7 @@ nav li.nobaseline {background: var(--baseline-limited-label-bg);}
 
 .groups details[open] {
   background-image: linear-gradient(to right, black 1px, transparent 0);
-  background-position: .3rem 1rem;
+  background-position: 0.3rem 1rem;
   background-size: 100% calc(100% - 1rem);
   background-repeat: no-repeat;
 }
@@ -399,24 +410,88 @@ footer {
   font-size: smaller;
 }
 
-#timeline { 
+.feature-timeline {
+  width: 100%;
+  height: 2px;
+  background: black;
+  position: relative;
+  margin: 7rem 0;
+}
+
+.feature-timeline .event {
+  position: absolute;
+  top: -1rem;
+  bottom: -1rem;
+  width: 2px;
+  background: black;
+}
+
+.feature-timeline .event::before {
+  content: attr(data-event);
+  position: absolute;
+  bottom: 0;
+  transform: rotate(90deg) translateY(0.5rem);
+  transform-origin: bottom left;
+}
+
+.feature-timeline .event::after {
+  content: attr(data-date);
+  position: absolute;
+  width: 10rem;
+  top: 0;
+  transform: rotate(-90deg) translateY(-0.75rem);
+  transform-origin: top left;
+}
+
+.feature-timeline .event.year {
+  background: transparent;
+}
+
+.feature-timeline .event.year::after {
+  transform: translate(-1.2rem, 0.25rem);
+  font-size: 0.8rem;
+  font-weight: bold;
+  background: white;
+  width: unset;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.feature-timeline .event.low::before,
+.feature-timeline .event.high::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(./baseline-high.svg);
+  background-repeat: no-repeat;
+  transform: translate(-0.75rem, 1.5rem);
+  background-position: center;
+}
+
+.feature-timeline .event.low::before {
+  background-image: url(./baseline-low.svg);
+}
+
+#timeline {
   overflow-x: auto;
   overflow-y: auto;
   height: calc(100vh - 16rem);
   display: grid;
   grid-auto-columns: 7rem;
-  font-size: .6rem;
+  font-size: 0.6rem;
   gap: 1px;
   background: var(--text);
 }
 
 #timeline .timeline-year {
-	grid-row: 1;
-	display: grid;
-	grid-auto-rows: 1rem;
-	width: 6.5rem;
-	background: var(--background);
-	padding: 0 .25rem;
+  grid-row: 1;
+  display: grid;
+  grid-auto-rows: 1rem;
+  width: 6.5rem;
+  background: var(--background);
+  padding: 0 0.25rem;
 }
 #timeline .timeline-year h2 {
   font-size: inherit;
