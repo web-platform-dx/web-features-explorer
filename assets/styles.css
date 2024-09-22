@@ -29,13 +29,14 @@ html {
 }
 
 body {
-  margin: var(--margin);
+  margin: var(--margin) 0;
 }
 
 header {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-block-end: var(--margin);
+  padding: 0 var(--margin);
 }
 
 header a {
@@ -141,18 +142,18 @@ h3 .subtext {
   background-repeat: no-repeat;
   background-position: 0.25rem center;
   background-size: 1.5rem;
-  background-image: url(./baseline-limited.svg);
+  background-image: url(https://web-platform-dx.github.io/web-features/assets/img/baseline-limited-icon.svg);
   margin-left: auto;
 }
 
 .baseline-low .availability {
   --bg: var(--baseline-low-label-bg);
-  background-image: url(./baseline-low.svg);
+  background-image: url(https://web-platform-dx.github.io/web-features/assets/img/baseline-newly-icon.svg);
 }
 
 .baseline-high .availability {
   --bg: var(--baseline-high-label-bg);
-  background-image: url(./baseline-high.svg);
+  background-image: url(https://web-platform-dx.github.io/web-features/assets/img/baseline-widely-icon.svg);
 }
 
 .tags {
@@ -246,7 +247,7 @@ h3 .subtext {
 
 nav {
   border-block-end: 2px solid;
-  padding-inline-start: 1rem;
+  padding: 0 var(--margin);
 }
 
 nav ul {
@@ -273,6 +274,10 @@ nav li.monthly {
 nav li.baseline-low {background: var(--baseline-low-label-bg);}
 nav li.baseline-high {background: var(--baseline-high-label-bg);}
 nav li.nobaseline {background: var(--baseline-limited-label-bg);}
+
+main {
+  padding: 0 1rem;
+}
 
 .link-list {
   background: #fff5;
@@ -363,6 +368,7 @@ footer {
   margin-block-start: var(--margin);
   color: var(--sub-text);
   font-size: smaller;
+  padding: 0 var(--margin);
 }
 
 #timeline { 
