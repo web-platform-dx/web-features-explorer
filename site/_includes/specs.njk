@@ -1,9 +1,9 @@
 {% if feature.spec.length %}
   <div class="specs">
     <h3>Specifications</h3>
-    <ul class="link-list">
+    <ul>
       {% for spec in feature.spec %}
-        <li class="link-list-item">
+        <li>
           {% if spec.title %}
             <a href="{{ spec.url }}">{{ spec.title }}{% if spec.fragment %} (#{{ spec.fragment }}){% endif %}</a>,
             from <a href="{{ spec.groups[0].url }}">{{ spec.groups[0].name }}</a> ({{spec.organization}}).
