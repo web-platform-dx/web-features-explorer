@@ -1,8 +1,10 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import feedPlugin from "@11ty/eleventy-plugin-rss";
 import { browsers, features, groups } from "web-features";
-import bcd from '@mdn/browser-compat-data' assert { type: 'json' };
-import specs from "browser-specs" assert { type: 'json' };
+import bcd from "@mdn/browser-compat-data" assert { type: "json" };
+import specs from "browser-specs" assert { type: "json" };
+import mdnInventory from "@ddbeck/mdn-content-inventory";
+import mdnDocsOverrides from "./mdnDocsOverrides.json" assert { type: "json" };
 
 const BROWSER_BUG_TRACKERS = {
   chrome: "issues.chromium.org",
@@ -14,89 +16,7 @@ const BROWSER_BUG_TRACKERS = {
   safari_ios: "bugs.webkit.org",
 };
 
-const MDN_URL_ROOT = "https://developer.mozilla.org/docs/web/";
-
-function processMdnPath(path, area) {
-  if (area === "api") {
-    return path.replace(/\//g, ".");
-  }
-
-  if (area === "html") {
-    if (path.startsWith("Global_attributes/")) {
-      return path.substring("Global_attributes/".length) + " global attribute";
-    }
-
-    if (path.startsWith("Element/")) {
-      const attribute = path.includes("#")
-        ? path.substring(path.indexOf("#") + 1)
-        : null;
-      if (attribute) {
-        return `<${path.substring(
-          "Element/".length,
-          path.indexOf("#")
-        )} ${attribute}> attribute`;
-      } else {
-        return `<${path.substring("Element/".length)}> element`;
-      }
-    }
-
-    if (
-      path.toLowerCase().startsWith("attributes/") &&
-      path.split("/").length === 3
-    ) {
-      const [_, attr, value] = path.split("/");
-      return `${attr}="${value}" attribute`;
-    }
-  }
-
-  if (area === "css") {
-    if (path.startsWith("color_value/")) {
-      return `${path.substring("color_value/".length)} color value`;
-    } else if (path.startsWith("gradient/")) {
-      return `${path.substring("gradient/".length)}() gradient function`;
-    } else if (path.startsWith("::")) {
-      return `${path} pseudo-element`;
-    } else if (path.startsWith(":")) {
-      return `${path} pseudo-class`;
-    } else if (path.startsWith("transform-function/")) {
-      return `${path.substring("transform-function/".length)}() function`;
-    } else if (path.includes("#")) {
-      const [property, value] = path.split("#");
-      return `${property}: ${value}; declaration`;
-    } else {
-      return `${path} property`;
-    }
-  }
-
-  if (area === "javascript") {
-    if (path.toLowerCase().startsWith("reference/global_objects/")) {
-      const object = path.substring("reference/global_objects/".length);
-      if (object.includes("/")) {
-        return object.replace(/\//g, ".");
-      } else {
-        return `${object} global object`;
-      }
-    }
-
-    if (path.toLowerCase().startsWith("reference/operators/")) {
-      return `${path.substring("reference/operators/".length)} operator`;
-    }
-
-    if (path.toLowerCase().startsWith("reference/statements/")) {
-      return `${path.substring("reference/statements/".length)} statement`;
-    }
-  }
-
-  return path;
-}
-
-function processMdnUrl(url) {
-  let path = url.substring(MDN_URL_ROOT.length);
-  const area = path.split("/")[0].toLowerCase();
-  path = path.substring(area.length + 1);
-  const title = processMdnPath(path, area);
-  return { title, url, area };
-}
+const MDN_URL_ROOT = "https://developer.mozilla.org/docs/";
 
 function augmentFeatureData(id, feature) {
   // Add the id.
@@ -120,9 +40,11 @@ function augmentFeatureData(id, feature) {
   feature.spec = feature.spec.map((spec) => {
     // Look for the spec URL in the browser-specs data.
     const specData = specs.find((specData) => {
-      return specData.url === spec ||
-             spec.startsWith(specData.url) ||
-             (specData.nightly && spec.startsWith(specData.nightly.url));
+      return (
+        specData.url === spec ||
+        spec.startsWith(specData.url) ||
+        (specData.nightly && spec.startsWith(specData.nightly.url))
+      );
     });
     return { ...specData, url: spec } || { url: spec };
   });
@@ -153,21 +75,37 @@ function augmentFeatureData(id, feature) {
     .filter((data) => !!data);
 
   // Add MDN doc links, if any.
-  const mdnUrls = {};
-  let hasMdnUrls = false;
-  for (const { compat } of bcdKeysData) {
-    if (compat.mdn_url) {
-      const urlData = processMdnUrl(compat.mdn_url);
-      if (!mdnUrls[urlData.area]) {
-        mdnUrls[urlData.area] = [];
+  const mdnUrls = [];
+
+  if (mdnDocsOverrides[id] && mdnDocsOverrides[id].length) {
+    // If the feature has a doc override, use that.
+    for (const slug of mdnDocsOverrides[id]) {
+      const mdnArticleData = mdnInventory.inventory.find((item) => {
+        return item.frontmatter.slug === slug;
+      });
+      if (mdnArticleData) {
+        mdnUrls.push({
+          title: mdnArticleData.frontmatter.title,
+          url: MDN_URL_ROOT + mdnArticleData.frontmatter.slug,
+        });
       }
-      hasMdnUrls = true;
-      mdnUrls[urlData.area].push(urlData);
+    }
+  } else {
+    // Otherwise, compute a list of MDN docs based on BCD keys.
+    for (const { key } of bcdKeysData) {
+      const mdnArticleData = mdnInventory.inventory.find((item) => {
+        return item.frontmatter["browser-compat"] === key;
+      });
+      if (mdnArticleData) {
+        mdnUrls.push({
+          title: mdnArticleData.frontmatter.title,
+          url: MDN_URL_ROOT + mdnArticleData.frontmatter.slug,
+        });
+      }
     }
   }
 
   feature.mdnUrls = mdnUrls;
-  feature.hasMdnUrls = hasMdnUrls;
 
   // Add the BCD data to the feature.
   feature.bcdData = bcdKeysData;
@@ -207,7 +145,9 @@ export default function (eleventyConfig) {
     function (browser, version) {
       const isBeforeThan = version.startsWith("≤");
       const cleanVersion = isBeforeThan ? version.substring(1) : version;
-      const date = browser.releases.find(release => release.version === cleanVersion).date;
+      const date = browser.releases.find(
+        (release) => release.version === cleanVersion
+      ).date;
       return isBeforeThan ? `Released before ${date}` : `Released on ${date}`;
     }
   );
@@ -236,7 +176,7 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addGlobalData("browsers", () => {
-    return Object.keys(browsers).map(browserId => {
+    return Object.keys(browsers).map((browserId) => {
       return {
         id: browserId,
         name: browsers[browserId].name,
@@ -274,7 +214,7 @@ export default function (eleventyConfig) {
       }
 
       return dateStr.substring(0, 7);
-    }
+    };
 
     const getBaselineHighMonth = (feature) => {
       return getMonth(feature.status.baseline_high_date);
@@ -340,7 +280,9 @@ export default function (eleventyConfig) {
       })
       .map((month) => {
         const absoluteDate = new Date(month[0]);
-        const isCurrentMonth = absoluteDate.getMonth() === now.getMonth() && absoluteDate.getFullYear() === now.getFullYear();
+        const isCurrentMonth =
+          absoluteDate.getMonth() === now.getMonth() &&
+          absoluteDate.getFullYear() === now.getFullYear();
         return {
           date: new Date(month[0]).toLocaleDateString("en-us", {
             month: "long",
@@ -469,4 +411,4 @@ export default function (eleventyConfig) {
     },
     pathPrefix: "/web-features-explorer/",
   };
-};
+}

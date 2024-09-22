@@ -1,12 +1,12 @@
-{% if feature.hasMdnUrls %}
+{% if feature.mdnUrls.length > 0 %}
   <div class="mdn-docs">
     <h3>MDN docs</h3>
-    {% for area, urls in feature.mdnUrls %}
-      <ul class="mdn-docs-area link-list" data-area="{{ area }}">
-        {% for url in urls %}
-          <li class="link-list-item"><a href="{{ url.url }}">{{ url.title }}</a></li>
-        {% endfor %}
-      </ul>
-    {% endfor %}
+    <ul class="link-list">
+      {% for url in feature.mdnUrls %}
+        <li class="link-list-item">
+          <a href="{{ url.url }}">{{ url.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 {% endif %}
