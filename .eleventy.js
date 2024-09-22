@@ -38,6 +38,7 @@ function augmentFeatureData(id, feature) {
 
   // Add spec data from browser-specs, when possible.
   feature.spec = feature.spec.map((spec) => {
+    const fragment = spec.includes("#") ? spec.split("#")[1] : null;
     // Look for the spec URL in the browser-specs data.
     const specData = specs.find((specData) => {
       return (
@@ -46,7 +47,7 @@ function augmentFeatureData(id, feature) {
         (specData.nightly && spec.startsWith(specData.nightly.url))
       );
     });
-    return { ...specData, url: spec } || { url: spec };
+    return specData ? { ...specData, url: spec, fragment } : { url: spec };
   });
 
   // Collect the first part of each BCD key in this feature (e.g. css, html, api, etc.)

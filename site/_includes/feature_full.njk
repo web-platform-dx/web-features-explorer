@@ -4,19 +4,19 @@
     {% include "baseline.njk" %}
   </div>
   {% include "tags.njk" %}
-  <p>{{ feature.description_html | safe }}</p>
+
+  <p>
+    {{ feature.description_html | safe }}
+    {% if feature.mdnUrls.length > 0 %}
+      To learn more, see
+      {% for url in feature.mdnUrls %}
+        <a href="{{ url.url }}">{{ url.title }}</a>{% if loop.last %}.{% else %}, {% endif %}
+      {% endfor %}
+    {% endif %}
+  </p>
   
   <h3>Compatibility{% if feature.caniuse %} <span class="subtext">(<a href="https://caniuse.com/{{ feature.caniuse }}">view on caniuse.com</a>)</span>{% endif %}</h3>
   {% include "compat.njk" %}
-  
-  {% include "mdn_docs.njk" %}
 
   {% include "specs.njk" %}
-
-  <h3>BCD data</h3>
-  <ul class="resources">
-    {% for bcd in feature.bcdData %}
-      <li><a href="https://github.com/mdn/browser-compat-data/blob/main/{{ bcd.compat.source_file }}">{{ bcd.key }}</a></li>
-    {% endfor %}
-  </ul>
 </div>
