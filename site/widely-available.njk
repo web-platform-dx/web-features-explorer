@@ -1,0 +1,15 @@
+---
+title: Widely available
+layout: layout.njk
+---
+<h1><img src="https://web-platform-dx.github.io/web-features/assets/img/baseline-widely-word.svg" alt="{{ title }}"></h1>
+
+<p>These features have been supported across all browsers for at least 30 months, making them <strong>Baseline widely available</strong>. To learn more, see <a href="https://web-platform-dx.github.io/web-features/">Baseline</a>.</p>
+
+<ul class="features">
+  {% for feature in baselineFeatures %}
+    <li>
+      {% include "feature_short.njk" %}
+    </li>
+  {% endfor %}
+</ul>
