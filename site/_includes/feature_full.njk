@@ -10,7 +10,7 @@
     {% if feature.mdnUrls.length > 0 %}
       To learn more, see
       {% for url in feature.mdnUrls %}
-        <a href="{{ url.url }}">{{ url.title }}</a>{% if loop.last %}.{% else %}, {% endif %}
+        <a href="{{ url.url }}">{{ url.title }}</a>{% if loop.last %} at MDN.{% else %}, {% endif %}
       {% endfor %}
     {% endif %}
   </p>

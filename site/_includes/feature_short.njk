@@ -1,6 +1,6 @@
 <div id="{{ feature.id }}" class="feature short baseline-{{ feature.status.baseline }}">
   <div class="header">
-    <h2>{{ feature.name }}</h2>
+    <h2><a href="/features/{{ feature.id | slugify }}/">{{ feature.name }}</a></h2>
     {% include "baseline.njk" %}
   </div>
   {% include "tags.njk" %}
