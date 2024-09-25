@@ -93,7 +93,7 @@ function augmentFeatureData(id, feature) {
     }
   } else {
     // Otherwise, compute a list of MDN docs based on BCD keys.
-    for (const { key } of bcdKeysData) {
+    for (const { key, mdn_url } of bcdKeysData) {
       const mdnArticleData = mdnInventory.inventory.find((item) => {
         return item.frontmatter["browser-compat"] === key;
       });
@@ -101,6 +101,11 @@ function augmentFeatureData(id, feature) {
         mdnUrls.push({
           title: mdnArticleData.frontmatter.title,
           url: MDN_URL_ROOT + mdnArticleData.frontmatter.slug,
+        });
+      } else if (mdn_url) {
+        mdnUrls.push({
+          url: mdn_url,
+          title: mdn_url
         });
       }
     }
