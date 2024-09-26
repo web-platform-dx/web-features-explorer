@@ -4,7 +4,7 @@
   <subtitle>Monthly updates on the web platform features.</subtitle>
   <link href="https://web-platform-dx.github.io/web-features-explorer/release-notes.xml" rel="self"/>
   <link href="https://web-platform-dx.github.io/web-features-explorer/"/>
-  <updated>2024-09-25T13:53:47Z</updated>
+  <updated>2024-09-26T00:43:45Z</updated>
   <id>https://web-platform-dx.github.io/web-features-explorer/</id>
   <author>
     <name>Web Platform Team</name>
@@ -297,6 +297,18 @@
         <h1>April 2024 web platform update</h1>
         <section class="month-update">
           
+            <h2>Now widely available on the web platform</h2>
+            <ul>
+              
+                <li>
+                  <p>
+                      <strong>image-rendering</strong>: The <code>image-rendering</code> CSS property sets how images are scaled, retaining smoothness for photos, or hard edges for pixel art and QR codes.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/image-rendering">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+            </ul>
+          
           
             <h2>Newly available on the web platform</h2>
             <ul>
@@ -352,6 +364,13 @@
                   <p>
                       <strong>aspect-ratio</strong>: The <code>aspect-ratio</code> CSS property controls the width-to-height ratio of elements. For <code>&#x3C;img></code> and <code>&#x3C;video></code> elements, the <code>width</code> and <code>height</code> attributes used together with <code>height: auto</code> control the aspect ratio while the image/video is loading.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/aspect-ratio">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>BigInt64Array</strong>: The <code>BigInt64Array</code> and <code>BigUint64Array</code> typed arrays represent 64-bit integers, signed and unsigned respectively.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/bigint64array">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -1685,6 +1704,13 @@
                   </p>
                 </li>
               
+                <li>
+                  <p>
+                      <strong>revert</strong>: The <code>revert</code> CSS keyword resets any property to its previous default, provided by either the user or browser stylesheets. For example, setting <code>display: revert</code> on a <code>&#x3C;div></code> will likely result in <code>display: block</code>, the browser default style. This is often confused with <code>initial</code>.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/revert-value">Learn more.</a></strong>
+                  </p>
+                </li>
+              
             </ul>
           
           
@@ -1816,6 +1842,18 @@
       <content xml:lang="en" type="html"><![CDATA[
         <h1>October 2022 web platform update</h1>
         <section class="month-update">
+          
+            <h2>Now widely available on the web platform</h2>
+            <ul>
+              
+                <li>
+                  <p>
+                      <strong>image-orientation</strong>: The <code>image-orientation</code> CSS property corrects the rotation of an image using the image's metadata, such as EXIF.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/image-orientation">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+            </ul>
           
           
             <h2>Newly available on the web platform</h2>
@@ -1973,7 +2011,7 @@
               
                 <li>
                   <p>
-                      <strong>Individual transform properties</strong>: The <code>translate</code>, <code>rotate</code>, and <code>scale</code> CSS properties apply simple transformations independently, as opposed to applying multiple transformations with the <code>transform</code> CSS property.
+                      <strong>Individual transform properties</strong>: The <code>translate</code>, <code>rotate</code>, and <code>scale</code> CSS properties apply single transformations independently, as opposed to applying multiple transformations with the <code>transform</code> CSS property.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/individual-transforms">Learn more.</a></strong>
                   </p>
                 </li>
@@ -2013,6 +2051,13 @@
               
                 <li>
                   <p>
+                      <strong>all</strong>: The <code>all</code> CSS property is a shorthand for all CSS properties, except for <code>direction</code> and <code>unicode-bidi</code>. It accepts only the keywords for explicit defaulting (such as <code>initial</code> and <code>inherit</code>), since they are the only values supported on all CSS properties.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/all">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
                       <strong>Array flat() and flatMap()</strong>: The <code>flat()</code> and <code>flatMap()</code> methods for arrays creates a new array such that each nested array item is concatenated into it.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/array-flat">Learn more.</a></strong>
                   </p>
@@ -2034,8 +2079,22 @@
               
                 <li>
                   <p>
+                      <strong>background-blend-mode</strong>: The <code>background-blend-mode</code> CSS property blends an element's background image and background color using blend modes like <code>multiply</code>, <code>difference</code>, or <code>color</code>.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/background-blend-mode">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
                       <strong>&lt;bdi&gt;</strong>: The <code>&#x3C;bdi></code> element isolates text that may have a different text direction from its surrounding text. This prevents the browser's bidirectional text algorithm from affecting or being affected by the direction of the surrounding text.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/bdi">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>captureStream() for &lt;canvas&gt;</strong>: The <code>captureStream()</code> method for <code>&#x3C;canvas></code> elements returns a <code>MediaStream</code> which includes a <code>CanvasCaptureMediaStreamTrack</code> representing real-time video of the canvas image. You can use this to record the canvas, or send it elsewhere, such as another canvas or WebRTC connection.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/capture-stream-canvas">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -2139,8 +2198,22 @@
               
                 <li>
                   <p>
+                      <strong>isolation</strong>: The <code>isolation</code> CSS property creates a new stacking context, which impacts <code>z-index</code> ordering and blend modes.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/isolation">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
                       <strong>mask-type</strong>: The <code>mask-type</code> CSS property on an SVG <code>&#x3C;mask></code> element sets whether the mask is a <code>luminance</code> or <code>alpha</code> mask.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/mask-type">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>mix-blend-mode</strong>: The <code>mix-blend-mode</code> CSS property blends an element's content with its background or parent elements using blend modes like <code>multiply</code>, <code>difference</code>, or <code>color</code>.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/mix-blend-mode">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -2686,6 +2759,47 @@
     </entry>
   
     <entry>
+      <title>October 2021 web platform update</title>
+      <link href="https://web-platform-dx.github.io/web-features-explorer/release-notes/october-2021/"/>
+      <updated>2021-10-01T00:00:00Z</updated>
+      <id>https://web-platform-dx.github.io/web-features-explorer/release-notes/october-2021/</id>
+      <content xml:lang="en" type="html"><![CDATA[
+        <h1>October 2021 web platform update</h1>
+        <section class="month-update">
+          
+          
+            <h2>Newly available on the web platform</h2>
+            <ul>
+              
+                <li>
+                  <p>
+                      <strong>image-rendering</strong>: The <code>image-rendering</code> CSS property sets how images are scaled, retaining smoothness for photos, or hard edges for pixel art and QR codes.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/image-rendering">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+            </ul>
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </section>
+      ]]></content>
+    </entry>
+  
+    <entry>
       <title>September 2021 web platform update</title>
       <link href="https://web-platform-dx.github.io/web-features-explorer/release-notes/september-2021/"/>
       <updated>2021-09-01T00:00:00Z</updated>
@@ -2728,6 +2842,13 @@
                   <p>
                       <strong>aspect-ratio</strong>: The <code>aspect-ratio</code> CSS property controls the width-to-height ratio of elements. For <code>&#x3C;img></code> and <code>&#x3C;video></code> elements, the <code>width</code> and <code>height</code> attributes used together with <code>height: auto</code> control the aspect ratio while the image/video is loading.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/aspect-ratio">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>BigInt64Array</strong>: The <code>BigInt64Array</code> and <code>BigUint64Array</code> typed arrays represent 64-bit integers, signed and unsigned respectively.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/bigint64array">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -3320,6 +3441,13 @@
                   </p>
                 </li>
               
+                <li>
+                  <p>
+                      <strong>revert</strong>: The <code>revert</code> CSS keyword resets any property to its previous default, provided by either the user or browser stylesheets. For example, setting <code>display: revert</code> on a <code>&#x3C;div></code> will likely result in <code>display: block</code>, the browser default style. This is often confused with <code>initial</code>.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/revert-value">Learn more.</a></strong>
+                  </p>
+                </li>
+              
             </ul>
           
           
@@ -3376,6 +3504,18 @@
               
             </ul>
           
+          
+            <h2>Newly available on the web platform</h2>
+            <ul>
+              
+                <li>
+                  <p>
+                      <strong>image-orientation</strong>: The <code>image-orientation</code> CSS property corrects the rotation of an image using the image's metadata, such as EXIF.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/image-orientation">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+            </ul>
           
           
             
@@ -3492,6 +3632,13 @@
               
                 <li>
                   <p>
+                      <strong>all</strong>: The <code>all</code> CSS property is a shorthand for all CSS properties, except for <code>direction</code> and <code>unicode-bidi</code>. It accepts only the keywords for explicit defaulting (such as <code>initial</code> and <code>inherit</code>), since they are the only values supported on all CSS properties.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/all">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
                       <strong>Array flat() and flatMap()</strong>: The <code>flat()</code> and <code>flatMap()</code> methods for arrays creates a new array such that each nested array item is concatenated into it.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/array-flat">Learn more.</a></strong>
                   </p>
@@ -3513,8 +3660,22 @@
               
                 <li>
                   <p>
+                      <strong>background-blend-mode</strong>: The <code>background-blend-mode</code> CSS property blends an element's background image and background color using blend modes like <code>multiply</code>, <code>difference</code>, or <code>color</code>.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/background-blend-mode">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
                       <strong>&lt;bdi&gt;</strong>: The <code>&#x3C;bdi></code> element isolates text that may have a different text direction from its surrounding text. This prevents the browser's bidirectional text algorithm from affecting or being affected by the direction of the surrounding text.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/bdi">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>captureStream() for &lt;canvas&gt;</strong>: The <code>captureStream()</code> method for <code>&#x3C;canvas></code> elements returns a <code>MediaStream</code> which includes a <code>CanvasCaptureMediaStreamTrack</code> representing real-time video of the canvas image. You can use this to record the canvas, or send it elsewhere, such as another canvas or WebRTC connection.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/capture-stream-canvas">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -3618,8 +3779,22 @@
               
                 <li>
                   <p>
+                      <strong>isolation</strong>: The <code>isolation</code> CSS property creates a new stacking context, which impacts <code>z-index</code> ordering and blend modes.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/isolation">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
                       <strong>mask-type</strong>: The <code>mask-type</code> CSS property on an SVG <code>&#x3C;mask></code> element sets whether the mask is a <code>luminance</code> or <code>alpha</code> mask.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/mask-type">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>mix-blend-mode</strong>: The <code>mix-blend-mode</code> CSS property blends an element's content with its background or parent elements using blend modes like <code>multiply</code>, <code>difference</code>, or <code>color</code>.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/mix-blend-mode">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -4233,6 +4408,13 @@
                   </p>
                 </li>
               
+                <li>
+                  <p>
+                      <strong>unset</strong>: The <code>unset</code> keyword resets any CSS property, removing any values previously set by the author, user, or browser. Inherited properties (like <code>color</code>) reset to the parent element's computed value. Non-inherited properties (like <code>display</code>) reset to the specified initial value (<code>inline</code>).
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/unset-value">Learn more.</a></strong>
+                  </p>
+                </li>
+              
             </ul>
           
           
@@ -4285,6 +4467,13 @@
           
             <h2>Now widely available on the web platform</h2>
             <ul>
+              
+                <li>
+                  <p>
+                      <strong>initial</strong>: The <code>initial</code> keyword resets any CSS property to its initial value as defined by the specification. For example, the <code>initial</code> value of the <code>display</code> property is <code>inline</code>, regardless of the element being styled. Not to be confused with <code>revert</code>, which resets to the user or browser default style.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/initial-value">Learn more.</a></strong>
+                  </p>
+                </li>
               
                 <li>
                   <p>
@@ -4832,6 +5021,13 @@
                   <p>
                       <strong>@import</strong>: The <code>@import</code> CSS at-rule loads styles from another stylesheet.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/import">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>inherit</strong>: The <code>inherit</code> keyword resets any CSS property to the computed value of that property from the parent element.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/inherit-value">Learn more.</a></strong>
                   </p>
                 </li>
               
@@ -5704,6 +5900,13 @@
                   </p>
                 </li>
               
+                <li>
+                  <p>
+                      <strong>unset</strong>: The <code>unset</code> keyword resets any CSS property, removing any values previously set by the author, user, or browser. Inherited properties (like <code>color</code>) reset to the parent element's computed value. Non-inherited properties (like <code>display</code>) reset to the specified initial value (<code>inline</code>).
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/unset-value">Learn more.</a></strong>
+                  </p>
+                </li>
+              
             </ul>
           
           
@@ -5737,6 +5940,13 @@
           
             <h2>Newly available on the web platform</h2>
             <ul>
+              
+                <li>
+                  <p>
+                      <strong>initial</strong>: The <code>initial</code> keyword resets any CSS property to its initial value as defined by the specification. For example, the <code>initial</code> value of the <code>display</code> property is <code>inline</code>, regardless of the element being styled. Not to be confused with <code>revert</code>, which resets to the user or browser default style.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/initial-value">Learn more.</a></strong>
+                  </p>
+                </li>
               
                 <li>
                   <p>
@@ -6265,6 +6475,13 @@
                   <p>
                       <strong>@import</strong>: The <code>@import</code> CSS at-rule loads styles from another stylesheet.
                       <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/import">Learn more.</a></strong>
+                  </p>
+                </li>
+              
+                <li>
+                  <p>
+                      <strong>inherit</strong>: The <code>inherit</code> keyword resets any CSS property to the computed value of that property from the parent element.
+                      <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/inherit-value">Learn more.</a></strong>
                   </p>
                 </li>
               
