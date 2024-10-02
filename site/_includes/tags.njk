@@ -1,11 +1,3 @@
-{% macro groupMacro(groupId, allGroups) %}
-  <span class="sub-tag">{{ allGroups[groupId].name }}</span>
-
-  {% if allGroups[groupId].parent %}
-    {{ groupMacro(allGroups[groupId].parent, allGroups) }}
-  {% endif %}
-{% endmacro %}
-
 <div class="tags">
   {% if feature.bcdTags.length %}
     Tags:
@@ -13,12 +5,14 @@
       <span class="tag">{{ tag }}</span>
     {% endfor %}
   {% endif %}
-  {% if feature.group.length %}
+  {% if feature.groupPaths.length %}
     Groups:
-    {% for group in feature.group %}
-      {% if group.parent == null %}
-        <span class="tag">{{ groupMacro(group, perGroup) }}</span>
-      {% endif %}
+    {% for path in feature.groupPaths %}
+      <span class="tag">
+        {% for part in path %}
+          {{ part }} {% if not loop.last %} &gt; {% endif %}
+        {% endfor  %}
+      </span>
     {% endfor %}
   {% endif %}
 </div>

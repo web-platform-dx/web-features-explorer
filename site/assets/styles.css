@@ -180,19 +180,6 @@ h3 .subtext {
   border: 1px solid var(--text);
 }
 
-.tags .tag:has(.sub-tag) {
-  display: inline-flex;
-  /* FIXME: This is bad for accessibility. Change the order in which sub-tags are generated 
-     in tags.njk instead. */
-  flex-direction: row-reverse;
-  gap: .25rem;
-}
-
-.tags .tag:has(.sub-tag) .sub-tag:not(:last-child)::before {
-  content: ">";
-  margin-inline-end: .25rem;
-}
-
 .compat {
   display: flex;
   flex-wrap: wrap;

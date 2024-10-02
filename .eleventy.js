@@ -18,15 +18,42 @@ const BROWSER_BUG_TRACKERS = {
 
 const MDN_URL_ROOT = "https://developer.mozilla.org/docs/";
 
+function findParentGroupId(group) {
+  if (!group.parent) {
+    return null;
+  }
+
+  return group.parent;
+}
+
 function augmentFeatureData(id, feature) {
   // Add the id.
   feature.id = id;
 
   // Make groups always an array.
-  if (!feature.group) {
-    feature.group = [];
-  } else if (!Array.isArray(feature.group)) {
-    feature.group = [feature.group];
+  feature.groups = []
+  if (feature.group && !Array.isArray(feature.group)) {
+    feature.groups = [feature.group];
+  } else if (feature.group) {
+    feature.groups = feature.group;
+  }
+
+  // Create group paths. The groups that a feature belongs to might be
+  // nested in parent groups.
+  feature.groupPaths = [];
+  for (const groupId of feature.groups) {
+    const path = [groups[groupId].name];
+    let currentGroupId = groupId;
+
+    while (true) {
+      const parentId = findParentGroupId(groups[currentGroupId]);
+      if (!parentId) {
+        break;
+      }
+      path.unshift(groups[parentId].name);
+      currentGroupId = parentId;
+    }
+    feature.groupPaths.push(path);
   }
 
   // Make the spec always an array.
@@ -50,15 +77,14 @@ function augmentFeatureData(id, feature) {
     return specData ? { ...specData, url: spec, fragment } : { url: spec };
   });
 
-  // Collect the first part of each BCD key in this feature (e.g. css, html, api, etc.)
-  // The first part is used to display tags on feature cards
+  // Get the first part of each BCD key in the feature (e.g. css, javascript, html, api, ...)
+  // to use as tags.
   const bcdTags = [];
 
   const bcdKeysData = (feature.compat_features || [])
     .map((key) => {
       // Find the BCD entry for this key.
       const keyParts = key.split(".");
-      bcdTags.push(keyParts[0] === "javascript" ? "js" : keyParts[0]);
 
       let data = bcd;
       for (const part of keyParts) {
@@ -70,6 +96,8 @@ function augmentFeatureData(id, feature) {
         }
         data = data[part];
       }
+
+      bcdTags.push(keyParts[0]);
 
       return data && data.__compat ? { key, compat: data.__compat } : null;
     })
