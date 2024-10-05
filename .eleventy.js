@@ -408,28 +408,63 @@ export default function (eleventyConfig) {
       const feature = features[id];
 
       // Only non-baseline features.
-      if (!feature.status.baseline) {
-        // And, out of those, only those that are missing support in just one browser (engine).
-        const noSupport = [];
-        for (const browserId in browsers) {
-          if (!feature.status.support[browserId]) {
-            noSupport.push(browserId);
-          }
-        }
+      if (feature.status.baseline) { continue; }
 
-        if (noSupport.length === 1) {
+      // And, out of those, only those that are missing support in just one browser (engine).
+      const noSupport = [];
+      for (const browserId in browsers) {
+        if (!feature.status.support[browserId]) {
+          noSupport.push(browserId);
+        }
+      }
+
+      if (noSupport.length === 1) {
+        missingOne.push(feature);
+      }
+
+      if (noSupport.length === 2) {
+        // If one of the two values is a substring of the other, then these are the same engine.
+        const [first, second] = noSupport;
+        if (first.includes(second) || second.includes(first)) {
           missingOne.push(feature);
         }
+      }
+      feature.blockedOn = noSupport[0];
+      feature.blockedOnName = browsers[noSupport[0]].name;
+    }
 
-        if (noSupport.length === 2) {
-          // If one of the two values is a substring of the other, then these are the same engine.
-          const [first, second] = noSupport;
-          if (first.includes(second) || second.includes(first)) {
-            missingOne.push(feature);
+    missingOne.forEach((feature) => {
+      let mostRecent = null;
+      const support = feature.status.support;
+      for(const browserId in support) {
+        const versionSupported = support[browserId];
+        // Grab release date string from BCD as it has a more complete list of
+        // browser releases than the web features data.
+        const releaseDateStr =
+            bcd.browsers[browserId]?.releases[versionSupported]?.release_date;
+        if (!releaseDateStr) { continue; } // Some are missing
+        let releaseDate = new Date(releaseDateStr);
+        if (!mostRecent) {
+          mostRecent = releaseDate;
+        } else {
+          if (releaseDate > mostRecent) {
+            mostRecent = releaseDate;
           }
         }
       }
-    }
+      const today = new Date();
+      const formatter = new Intl.DateTimeFormat("en", {
+        year: "numeric",
+        month: "long"
+      });
+      const monthDiff = (older, newer) => {
+        return ((newer.getFullYear() - older.getFullYear()) * 12) +
+                (newer.getMonth() - older.getMonth());
+      };
+      feature.monthsBlocked = monthDiff(mostRecent, today);
+      feature.blockedSince = formatter.format(mostRecent);
+      feature.blockedRange = formatter.formatRange(mostRecent, today);
+    });
 
     return missingOne;
   });
