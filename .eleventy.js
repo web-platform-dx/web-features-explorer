@@ -109,13 +109,16 @@ function augmentFeatureData(id, feature) {
   if (mdnDocsOverrides[id] && mdnDocsOverrides[id].length) {
     // If the feature has a doc override, use that.
     for (const slug of mdnDocsOverrides[id]) {
+      const slugParts = slug.split("#");
+      const hasAnchor = slugParts.length > 1;
+
       const mdnArticleData = mdnInventory.inventory.find((item) => {
-        return item.frontmatter.slug === slug;
+        return item.frontmatter.slug === (hasAnchor ? slugParts[0] : slug);
       });
       if (mdnArticleData) {
         mdnUrls.push({
           title: mdnArticleData.frontmatter.title,
-          url: MDN_URL_ROOT + mdnArticleData.frontmatter.slug,
+          url: MDN_URL_ROOT + mdnArticleData.frontmatter.slug + (hasAnchor ? `#${slugParts[1]}` : ""),
         });
       }
     }
