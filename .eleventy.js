@@ -31,7 +31,7 @@ function augmentFeatureData(id, feature) {
   feature.id = id;
 
   // Make groups always an array.
-  feature.groups = []
+  feature.groups = [];
   if (feature.group && !Array.isArray(feature.group)) {
     feature.groups = [feature.group];
   } else if (feature.group) {
@@ -133,7 +133,7 @@ function augmentFeatureData(id, feature) {
       } else if (mdn_url) {
         mdnUrls.push({
           url: mdn_url,
-          title: mdn_url
+          title: mdn_url,
         });
       }
     }
@@ -408,7 +408,9 @@ export default function (eleventyConfig) {
       const feature = features[id];
 
       // Only non-baseline features.
-      if (feature.status.baseline) { continue; }
+      if (feature.status.baseline) {
+        continue;
+      }
 
       // And, out of those, only those that are missing support in just one browser (engine).
       const noSupport = [];
@@ -419,6 +421,7 @@ export default function (eleventyConfig) {
       }
 
       if (noSupport.length === 1) {
+        feature.blockedOn = browsers[noSupport[0]].name;
         missingOne.push(feature);
       }
 
@@ -426,24 +429,31 @@ export default function (eleventyConfig) {
         // If one of the two values is a substring of the other, then these are the same engine.
         const [first, second] = noSupport;
         if (first.includes(second) || second.includes(first)) {
+          feature.blockedOn = browsers[noSupport[0]].name;
           missingOne.push(feature);
         }
       }
-      feature.blockedOn = noSupport[0];
-      feature.blockedOnName = browsers[noSupport[0]].name;
     }
 
+    // Go over the features we found and add some information about the last browser
+    // that doesn't yet support the feature.
     missingOne.forEach((feature) => {
       let mostRecent = null;
+
       const support = feature.status.support;
-      for(const browserId in support) {
+      for (const browserId in support) {
         const versionSupported = support[browserId];
         // Grab release date string from BCD as it has a more complete list of
         // browser releases than the web features data.
         const releaseDateStr =
-            bcd.browsers[browserId]?.releases[versionSupported]?.release_date;
-        if (!releaseDateStr) { continue; } // Some are missing
-        let releaseDate = new Date(releaseDateStr);
+          bcd.browsers[browserId]?.releases[versionSupported]?.release_date;
+
+        // Some are missing
+        if (!releaseDateStr) {
+          continue;
+        }
+
+        const releaseDate = new Date(releaseDateStr);
         if (!mostRecent) {
           mostRecent = releaseDate;
         } else {
@@ -455,15 +465,17 @@ export default function (eleventyConfig) {
       const today = new Date();
       const formatter = new Intl.DateTimeFormat("en", {
         year: "numeric",
-        month: "long"
+        month: "long",
       });
       const monthDiff = (older, newer) => {
-        return ((newer.getFullYear() - older.getFullYear()) * 12) +
-                (newer.getMonth() - older.getMonth());
+        return (
+          (newer.getFullYear() - older.getFullYear()) * 12 +
+          (newer.getMonth() - older.getMonth())
+        );
       };
+
       feature.monthsBlocked = monthDiff(mostRecent, today);
       feature.blockedSince = formatter.format(mostRecent);
-      feature.blockedRange = formatter.formatRange(mostRecent, today);
     });
 
     return missingOne;

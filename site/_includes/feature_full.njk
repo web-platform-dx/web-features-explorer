@@ -18,5 +18,9 @@
   <h3>Compatibility{% if feature.caniuse %} <span class="subtext">(<a href="https://caniuse.com/{{ feature.caniuse }}">view on caniuse.com</a>)</span>{% endif %}</h3>
   {% include "compat.njk" %}
 
+  {%- if feature.blockedOn %}
+    <p>Baseline availability blocked since {{ feature.blockedSince }} by {{ feature.blockedOn }} ({{ feature.monthsBlocked }} months)</p>
+  {%- endif %}
+
   {% include "specs.njk" %}
 </div>
