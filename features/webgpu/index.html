@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Web features explorer - WebGPU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
+    <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
+  </head>
+  <body>
+
+    <header><a href="/web-features-explorer/">Web features explorer</a></header>
+
+    <nav>
+      <ul>
+        <li class="monthly"><a href="/web-features-explorer/release-notes">Release notes</a></li>
+        <li class="baseline-low"><a href="/web-features-explorer/newly-available">Newly available</a></li>
+        <li class="baseline-high"><a href="/web-features-explorer/widely-available">Widely available</a></li>
+        <li class="nobaseline"><a href="/web-features-explorer/limited-availability">Limited availability</a></li>
+        <li class="nobaseline"><a href="/web-features-explorer/one-missing-engine">One missing engine</a></li>
+        <li><a href="/web-features-explorer/all">All</a></li>
+        <li><a href="/web-features-explorer/groups">Groups</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      
+<div id="webgpu" class="feature baseline-false">
+  <div class="header">
+    <h1>WebGPU</h1>
+    <div class="availability">
+  Limited availability
+  
+  
+</div>
+  </div>
+  <div class="tags">
+  
+    Tags:
+    
+      <span class="tag">api</span>
+    
+  
+  
+</div>
+
+
+  <p>
+    The <code>navigator.gpu</code> API performs operations such as rendering and computation on dedicated graphics hardware (also known as a Graphics Processing Unit).
+    
+      To learn more, see
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPU">GPU</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPU/getPreferredCanvasFormat">GPU: getPreferredCanvasFormat() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPU/requestAdapter">GPU: requestAdapter() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPU/wgslLanguageFeatures">GPU: wgslLanguageFeatures property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUAdapter">GPUAdapter</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUAdapter/features">GPUAdapter: features property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUAdapter/isFallbackAdapter">GPUAdapter: isFallbackAdapter property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUAdapter/limits">GPUAdapter: limits property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUAdapter/requestDevice">GPUAdapter: requestDevice() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUAdapterInfo">GPUAdapterInfo</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUAdapterInfo/architecture">GPUAdapterInfo: architecture property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUAdapterInfo/description">GPUAdapterInfo: description property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUAdapterInfo/device">GPUAdapterInfo: device property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUAdapterInfo/vendor">GPUAdapterInfo: vendor property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUBindGroup">GPUBindGroup</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUBindGroup/label">GPUBindGroup: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUBindGroupLayout">GPUBindGroupLayout</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUBindGroupLayout/label">GPUBindGroupLayout: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUBuffer">GPUBuffer</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUBuffer/destroy">GPUBuffer: destroy() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUBuffer/getMappedRange">GPUBuffer: getMappedRange() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUBuffer/label">GPUBuffer: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUBuffer/mapAsync">GPUBuffer: mapAsync() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUBuffer/mapState">GPUBuffer: mapState property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUBuffer/size">GPUBuffer: size property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUBuffer/unmap">GPUBuffer: unmap() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUBuffer/usage">GPUBuffer: usage property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCanvasContext">GPUCanvasContext</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCanvasContext/canvas">GPUCanvasContext: canvas property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCanvasContext/configure">GPUCanvasContext: configure() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCanvasContext/getConfiguration">GPUCanvasContext: getConfiguration() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCanvasContext/getCurrentTexture">GPUCanvasContext: getCurrentTexture() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCanvasContext/unconfigure">GPUCanvasContext: unconfigure() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandBuffer">GPUCommandBuffer</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandBuffer/label">GPUCommandBuffer: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder">GPUCommandEncoder</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder/beginComputePass">GPUCommandEncoder: beginComputePass() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder/beginRenderPass">GPUCommandEncoder: beginRenderPass() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder/clearBuffer">GPUCommandEncoder: clearBuffer() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder/copyBufferToBuffer">GPUCommandEncoder: copyBufferToBuffer() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder/copyBufferToTexture">GPUCommandEncoder: copyBufferToTexture() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder/copyTextureToBuffer">GPUCommandEncoder: copyTextureToBuffer() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder/copyTextureToTexture">GPUCommandEncoder: copyTextureToTexture() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder/finish">GPUCommandEncoder: finish() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder/insertDebugMarker">GPUCommandEncoder: insertDebugMarker() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder/label">GPUCommandEncoder: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder/popDebugGroup">GPUCommandEncoder: popDebugGroup() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder/pushDebugGroup">GPUCommandEncoder: pushDebugGroup() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCommandEncoder/resolveQuerySet">GPUCommandEncoder: resolveQuerySet() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCompilationInfo">GPUCompilationInfo</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCompilationInfo/messages">GPUCompilationInfo: messages property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCompilationMessage">GPUCompilationMessage</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCompilationMessage/length">GPUCompilationMessage: length property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCompilationMessage/lineNum">GPUCompilationMessage: lineNum property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCompilationMessage/linePos">GPUCompilationMessage: linePos property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCompilationMessage/message">GPUCompilationMessage: message property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCompilationMessage/offset">GPUCompilationMessage: offset property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUCompilationMessage/type">GPUCompilationMessage: type property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUComputePassEncoder">GPUComputePassEncoder</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUComputePassEncoder/dispatchWorkgroups">GPUComputePassEncoder: dispatchWorkgroups() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUComputePassEncoder/dispatchWorkgroupsIndirect">GPUComputePassEncoder: dispatchWorkgroupsIndirect() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUComputePassEncoder/end">GPUComputePassEncoder: end() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUComputePassEncoder/insertDebugMarker">GPUComputePassEncoder: insertDebugMarker() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUComputePassEncoder/label">GPUComputePassEncoder: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUComputePassEncoder/popDebugGroup">GPUComputePassEncoder: popDebugGroup() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUComputePassEncoder/pushDebugGroup">GPUComputePassEncoder: pushDebugGroup() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUComputePassEncoder/setBindGroup">GPUComputePassEncoder: setBindGroup() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUComputePassEncoder/setPipeline">GPUComputePassEncoder: setPipeline() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUComputePipeline">GPUComputePipeline</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUComputePipeline/getBindGroupLayout">GPUComputePipeline: getBindGroupLayout() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUComputePipeline/label">GPUComputePipeline: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice">GPUDevice</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/createBindGroup">GPUDevice: createBindGroup() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/createBindGroupLayout">GPUDevice: createBindGroupLayout() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/createBuffer">GPUDevice: createBuffer() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/createCommandEncoder">GPUDevice: createCommandEncoder() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/createComputePipeline">GPUDevice: createComputePipeline() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/createComputePipelineAsync">GPUDevice: createComputePipelineAsync() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/createPipelineLayout">GPUDevice: createPipelineLayout() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/createQuerySet">GPUDevice: createQuerySet() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/createRenderBundleEncoder">GPUDevice: createRenderBundleEncoder() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/createRenderPipeline">GPUDevice: createRenderPipeline() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/createRenderPipelineAsync">GPUDevice: createRenderPipelineAsync() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/createSampler">GPUDevice: createSampler() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/createShaderModule">GPUDevice: createShaderModule() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/createTexture">GPUDevice: createTexture() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/destroy">GPUDevice: destroy() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/features">GPUDevice: features property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/importExternalTexture">GPUDevice: importExternalTexture() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/label">GPUDevice: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/limits">GPUDevice: limits property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/lost">GPUDevice: lost property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/popErrorScope">GPUDevice: popErrorScope() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/pushErrorScope">GPUDevice: pushErrorScope() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/queue">GPUDevice: queue property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDevice/uncapturederror_event">GPUDevice: uncapturederror event</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDeviceLostInfo">GPUDeviceLostInfo</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDeviceLostInfo/message">GPUDeviceLostInfo: message property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUDeviceLostInfo/reason">GPUDeviceLostInfo: reason property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUError">GPUError</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUError/message">GPUError: message property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUExternalTexture">GPUExternalTexture</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUExternalTexture/label">GPUExternalTexture: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUInternalError">GPUInternalError</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUInternalError/GPUInternalError">GPUInternalError: GPUInternalError() constructor</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUOutOfMemoryError">GPUOutOfMemoryError</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUOutOfMemoryError/GPUOutOfMemoryError">GPUOutOfMemoryError: GPUOutOfMemoryError() constructor</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUPipelineError">GPUPipelineError</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUPipelineError/GPUPipelineError">GPUPipelineError: GPUPipelineError() constructor</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUPipelineError/reason">GPUPipelineError: reason property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUPipelineLayout">GPUPipelineLayout</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUPipelineLayout/label">GPUPipelineLayout: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUQuerySet">GPUQuerySet</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUQuerySet/count">GPUQuerySet: count property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUQuerySet/destroy">GPUQuerySet: destroy() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUQuerySet/label">GPUQuerySet: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUQuerySet/type">GPUQuerySet: type property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUQueue">GPUQueue</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUQueue/copyExternalImageToTexture">GPUQueue: copyExternalImageToTexture() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUQueue/label">GPUQueue: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUQueue/onSubmittedWorkDone">GPUQueue: onSubmittedWorkDone() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUQueue/submit">GPUQueue: submit() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUQueue/writeBuffer">GPUQueue: writeBuffer() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUQueue/writeTexture">GPUQueue: writeTexture() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundle">GPURenderBundle</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundle/label">GPURenderBundle: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder">GPURenderBundleEncoder</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder/draw">GPURenderBundleEncoder: draw() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder/drawIndexed">GPURenderBundleEncoder: drawIndexed() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder/drawIndexedIndirect">GPURenderBundleEncoder: drawIndexedIndirect() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder/drawIndirect">GPURenderBundleEncoder: drawIndirect() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder/finish">GPURenderBundleEncoder: finish() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder/insertDebugMarker">GPURenderBundleEncoder: insertDebugMarker() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder/label">GPURenderBundleEncoder: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder/popDebugGroup">GPURenderBundleEncoder: popDebugGroup() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder/pushDebugGroup">GPURenderBundleEncoder: pushDebugGroup() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder/setBindGroup">GPURenderBundleEncoder: setBindGroup() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder/setIndexBuffer">GPURenderBundleEncoder: setIndexBuffer() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder/setPipeline">GPURenderBundleEncoder: setPipeline() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder/setVertexBuffer">GPURenderBundleEncoder: setVertexBuffer() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder">GPURenderPassEncoder</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/beginOcclusionQuery">GPURenderPassEncoder: beginOcclusionQuery() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/draw">GPURenderPassEncoder: draw() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/drawIndexed">GPURenderPassEncoder: drawIndexed() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/drawIndexedIndirect">GPURenderPassEncoder: drawIndexedIndirect() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/drawIndirect">GPURenderPassEncoder: drawIndirect() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/end">GPURenderPassEncoder: end() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/endOcclusionQuery">GPURenderPassEncoder: endOcclusionQuery() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/executeBundles">GPURenderPassEncoder: executeBundles() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/insertDebugMarker">GPURenderPassEncoder: insertDebugMarker() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/label">GPURenderPassEncoder: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/popDebugGroup">GPURenderPassEncoder: popDebugGroup() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/pushDebugGroup">GPURenderPassEncoder: pushDebugGroup() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/setBindGroup">GPURenderPassEncoder: setBindGroup() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/setBlendConstant">GPURenderPassEncoder: setBlendConstant() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/setIndexBuffer">GPURenderPassEncoder: setIndexBuffer() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/setPipeline">GPURenderPassEncoder: setPipeline() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/setScissorRect">GPURenderPassEncoder: setScissorRect() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/setStencilReference">GPURenderPassEncoder: setStencilReference() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/setVertexBuffer">GPURenderPassEncoder: setVertexBuffer() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/setViewport">GPURenderPassEncoder: setViewport() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPipeline">GPURenderPipeline</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPipeline/getBindGroupLayout">GPURenderPipeline: getBindGroupLayout() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPURenderPipeline/label">GPURenderPipeline: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUSampler">GPUSampler</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUSampler/label">GPUSampler: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUShaderModule">GPUShaderModule</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUShaderModule/getCompilationInfo">GPUShaderModule: getCompilationInfo() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUShaderModule/label">GPUShaderModule: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUSupportedFeatures">GPUSupportedFeatures</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUSupportedLimits">GPUSupportedLimits</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUTexture">GPUTexture</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUTexture/createView">GPUTexture: createView() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUTexture/depthOrArrayLayers">GPUTexture: depthOrArrayLayers property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUTexture/destroy">GPUTexture: destroy() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUTexture/dimension">GPUTexture: dimension property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUTexture/format">GPUTexture: format property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUTexture/height">GPUTexture: height property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUTexture/label">GPUTexture: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUTexture/mipLevelCount">GPUTexture: mipLevelCount property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUTexture/sampleCount">GPUTexture: sampleCount property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUTexture/usage">GPUTexture: usage property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUTexture/width">GPUTexture: width property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUTextureView">GPUTextureView</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUTextureView/label">GPUTextureView: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUUncapturedErrorEvent">GPUUncapturedErrorEvent</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUUncapturedErrorEvent/GPUUncapturedErrorEvent">GPUUncapturedErrorEvent: GPUUncapturedErrorEvent() constructor</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUUncapturedErrorEvent/error">GPUUncapturedErrorEvent: error property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUValidationError">GPUValidationError</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/GPUValidationError/GPUValidationError">GPUValidationError: GPUValidationError() constructor</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/Navigator/gpu">Navigator: gpu property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/WGSLLanguageFeatures">WGSLLanguageFeatures</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/WorkerNavigator/gpu">WorkerNavigator: gpu property</a> at MDN.
+      
+    
+  </p>
+  
+  <h3>Compatibility <span class="subtext">(<a href="https://caniuse.com/webgpu">view on caniuse.com</a>)</span></h3>
+  <ul class="compat">
+  
+    <li class="browser browser-chrome supported">
+      <span class="name">Chrome</span>
+      
+      
+        <span class="version">113</span>
+        <span class="date">Released on 2023-05-02</span>
+      
+    </li>
+  
+    <li class="browser browser-chrome_android">
+      <span class="name">Chrome Android</span>
+      
+      
+        <span class="version">❌</span>
+        <span class="bug">
+          
+            <a href="https://www.google.com/search?q=implement WebGPU+site%3Aissues.chromium.org">Search for bugs</a>
+          
+        </span>
+        
+          
+            <span class="position">
+              <a href="https://chromestatus.com/features#WebGPU">Search for Chromestatus entry</a>
+            </span>
+          
+        
+      
+    </li>
+  
+    <li class="browser browser-edge supported">
+      <span class="name">Edge</span>
+      
+      
+        <span class="version">113</span>
+        <span class="date">Released on 2023-05-05</span>
+      
+    </li>
+  
+    <li class="browser browser-firefox">
+      <span class="name">Firefox</span>
+      
+      
+        <span class="version">❌</span>
+        <span class="bug">
+          
+            <a href="https://www.google.com/search?q=implement WebGPU+site%3Abugzilla.mozilla.org">Search for bugs</a>
+          
+        </span>
+        
+          
+            <span class="position">
+              <a href="https://github.com/mozilla/standards-positions/issues?q=WebGPU">Search for standards position</a>
+            </span>
+          
+        
+      
+    </li>
+  
+    <li class="browser browser-firefox_android">
+      <span class="name">Firefox for Android</span>
+      
+      
+        <span class="version">❌</span>
+        <span class="bug">
+          
+            <a href="https://www.google.com/search?q=implement WebGPU+site%3Abugzilla.mozilla.org">Search for bugs</a>
+          
+        </span>
+        
+          
+            <span class="position">
+              <a href="https://github.com/mozilla/standards-positions/issues?q=WebGPU">Search for standards position</a>
+            </span>
+          
+        
+      
+    </li>
+  
+    <li class="browser browser-safari">
+      <span class="name">Safari</span>
+      
+      
+        <span class="version">❌</span>
+        <span class="bug">
+          
+            <a href="https://www.google.com/search?q=implement WebGPU+site%3Abugs.webkit.org">Search for bugs</a>
+          
+        </span>
+        
+          
+            <span class="position">
+              <a href="https://github.com/WebKit/standards-positions/issues?q=WebGPU">Search for standards position</a>
+            </span>
+          
+        
+      
+    </li>
+  
+    <li class="browser browser-safari_ios">
+      <span class="name">Safari on iOS</span>
+      
+      
+        <span class="version">❌</span>
+        <span class="bug">
+          
+            <a href="https://www.google.com/search?q=implement WebGPU+site%3Abugs.webkit.org">Search for bugs</a>
+          
+        </span>
+        
+          
+            <span class="position">
+              <a href="https://github.com/WebKit/standards-positions/issues?q=WebGPU">Search for standards position</a>
+            </span>
+          
+        
+      
+    </li>
+  
+</ul>
+
+  
+  <div class="specs">
+    <h3>Specifications</h3>
+    <ul>
+      
+        <li>
+          
+            <a href="https://gpuweb.github.io/gpuweb/">WebGPU</a>,
+            from <a href="https://www.w3.org/groups/wg/gpu/">GPU for the Web Working Group</a> (W3C).
+          
+        </li>
+      
+    </ul>
+  </div>
+
+</div>
+    </main>
+
+    <footer>
+      <p>Generated on 10/22/2024 using <a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>2.0.0-dev-20241021155953-8fadd8f</code> and <a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>5.6.8</code></p>
+      <p>Source code: <a href="https://github.com/web-platform-dx/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
+    </footer>
+
+  </body>
+</html>
