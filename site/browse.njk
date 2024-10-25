@@ -1,0 +1,42 @@
+---js
+const title = "Browse features";
+const layout = "layout.njk"
+
+function isGroup(item) {
+  return !Array.isArray(item);
+}
+---
+
+{% macro recurse(parent) %}
+  <ul class="group">
+    {% for id, item in parent %}
+      <li>
+        <details>
+          <summary>{{ id }}</summary>
+          {% if isGroup(item) %}
+            {{ recurse(item) }}
+          {% else %}
+            <ul class="features">
+              {% for featureId in item %}
+                <li>
+                  <span class="name">
+                    <a href="/features/{{ features[featureId].id | slugify }}/">
+                      {{ features[featureId].name }}
+                    </a>
+                  </span>
+                  <span class="description">
+                    {{ features[featureId].description }}
+                  </span>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </details>
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+<h1>{{ title }}</h1>
+
+{{ recurse(featureCatalog) }}

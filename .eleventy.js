@@ -1,5 +1,6 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import feedPlugin from "@11ty/eleventy-plugin-rss";
+import YAML from 'yaml';
 import { browsers, features, groups } from "web-features";
 import bcd from "@mdn/browser-compat-data" assert { type: "json" };
 import specs from "browser-specs" assert { type: "json" };
@@ -176,7 +177,13 @@ for (const id in features) {
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
   eleventyConfig.addPassthroughCopy("site/assets");
+  
+  eleventyConfig.addDataExtension("yml,yaml", (contents, filePath) => {
+    return YAML.parse(contents);
+	});
+  
   eleventyConfig.addShortcode(
     "browserVersionRelease",
     function (browser, version) {
@@ -335,6 +342,11 @@ export default function (eleventyConfig) {
         };
       });
   });
+
+  eleventyConfig.addGlobalData("features", () => {
+    return features;
+  });
+
 
   eleventyConfig.addGlobalData("allFeatures", () => {
     const all = [];
