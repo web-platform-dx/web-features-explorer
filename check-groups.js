@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import { features } from "web-features";
 
-const FILE = 'groups.yml';
+const FILE = 'site/_data/featureCatalog.yml';
 
 async function main() {
   const content = await fs.readFile(FILE, 'utf8');
