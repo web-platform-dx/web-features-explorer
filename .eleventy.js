@@ -2,10 +2,10 @@ import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import feedPlugin from "@11ty/eleventy-plugin-rss";
 import YAML from 'yaml';
 import { browsers, features, groups } from "web-features";
-import bcd from "@mdn/browser-compat-data" assert { type: "json" };
-import specs from "browser-specs" assert { type: "json" };
+import bcd from "@mdn/browser-compat-data" with { type: "json" };
+import specs from "browser-specs" with { type: "json" };
 import mdnInventory from "@ddbeck/mdn-content-inventory";
-import mdnDocsOverrides from "./mdnDocsOverrides.json" assert { type: "json" };
+import mdnDocsOverrides from "./mdnDocsOverrides.json" with { type: "json" };
 
 const BROWSER_BUG_TRACKERS = {
   chrome: "issues.chromium.org",
@@ -208,7 +208,7 @@ export default function (eleventyConfig) {
     const { default: webFeaturesPackageJson } = await import(
       "./node_modules/web-features/package.json",
       {
-        assert: { type: "json" },
+        with: { type: "json" },
       }
     );
 
