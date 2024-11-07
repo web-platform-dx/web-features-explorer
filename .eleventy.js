@@ -234,6 +234,40 @@ export default function (eleventyConfig) {
     return groups;
   });
 
+  eleventyConfig.addGlobalData("latest", () => {
+    const maxLowFeatures = 5;
+    const lowFeatures = [];
+    const maxHighFeatures = 5;
+    const highFeatures = [];
+
+    for (const id in features) {
+      const feature = features[id];
+
+      if (feature.status.baseline === "low") {
+        lowFeatures.push(feature);
+      }
+
+      if (feature.status.baseline === "high") {
+        highFeatures.push(feature);
+      }
+    }
+
+    return {
+      latestBaselineLow: lowFeatures.sort((a, b) => {
+        return (
+          new Date(b.status.baseline_low_date) -
+          new Date(a.status.baseline_low_date)
+        );
+      }).slice(0, maxLowFeatures),
+      latestBaselineHigh: highFeatures.sort((a, b) => {
+        return (
+          new Date(b.status.baseline_high_date) -
+          new Date(a.status.baseline_high_date)
+        );
+      }).slice(0, maxHighFeatures)
+    };
+  });
+
   eleventyConfig.addGlobalData("perMonth", () => {
     const monthly = new Map();
 

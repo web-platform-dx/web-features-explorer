@@ -3,8 +3,36 @@ title: Home
 layout: layout.njk
 ---
 
-<h1>{{ title }}</h1>
+<section class="intro">
+  <h1>Discover web platform features and stay up-to-date with changes</h1>
+  <p class="subtitle">Find information about APIs and features of the web platform. The data displayed here comes from the <a href="https://github.com/web-platform-dx/web-features">web-features</a> repository; an open-source project that's maintained by the <a href="https://www.w3.org/community/webdx/">W3C WebDX Community Group</a>, and which aims at providing a common list of features and their definitions to improve understanding of what web developers get and want from the web.</p>
+</section>
 
-<p>This website provides information about features of the web platform.</p>
-<p>The data displayed on this site comes from the <a href="https://github.com/web-platform-dx/web-features">web-features</a> repository; a new open-source project that's maintained by the <a href="https://www.w3.org/community/webdx/">W3C WebDX Community Group</a>, and which aims at providing a common list of features and their definitions to improve understanding of what web developers get and want from the web.</p>
-<p>In particular, the web-features open-source project maintains data which powers <a href="https://web-platform-dx.github.io/web-features/">Baseline</a>.</p>
+<section class="latest">
+  <h2>Latest updates</h2>
+
+  <h3>Now newly available</h3>
+  <ul>
+    {% for feature in latest.latestBaselineLow %}
+      <li class="feature mini baseline-low">
+        <p>
+          <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
+          <strong><a href="/features/{{ feature.id | slugify }}/">Learn more.</a></strong>
+        </p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h3>Now widely available</h3>
+  <ul>
+    {% for feature in latest.latestBaselineHigh %}
+      <li class="feature mini baseline-high">
+        <p>
+          <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
+          <strong><a href="/features/{{ feature.id | slugify }}/">Learn more.</a></strong>
+        </p>
+      </li>
+    {% endfor %}
+  </ul>
+
+</section>
