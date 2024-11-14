@@ -165,8 +165,10 @@ Style content:
     - where
   Generate style-only content:
     - content
+    - attr-contents
     - before-after
     - alt-text-generated-content
+    - details-content
   Define colors:
     - color-mix
     - color-scheme
@@ -257,6 +259,7 @@ Style content:
       - display-list-item
       - display-ruby
       - display-table
+      - display-contents
       - content-visibility
     Apply effects:
       - masks
@@ -324,11 +327,14 @@ Style content:
       - caret-color
       - user-select
       - text-overflow
+      - custom-ellipses
       - hyphenate-character
       - hyphenate-limit-chars
       - hyphens
       - quotes
       - highlight
+      - rhythmic-sizing
+      - text-shadow
     Ruby:
       - ruby-align
       - ruby-overhang
@@ -424,6 +430,7 @@ Style content:
     - rlh
     - viewport-unit-variants
     - viewport-units
+    - calc-size
   Calculate styling values:
     - abs-sign
     - round-mod-rem
@@ -431,6 +438,7 @@ Style content:
     - trig-functions
     - calc
     - calc-constants
+    - attr
   Adapt to the device:
     - media-queries
     - media-query-range-syntax
@@ -512,6 +520,42 @@ Handle media:
     - canvas-2d-desynchronized
     - webgl-desynchronized
     - webgl2-desynchronized
+    - webgl-color-buffer-float
+    - webgl-compressed-texture-astc
+    - webgl-compressed-texture-etc
+    - webgl-compressed-texture-etc1
+    - webgl-compressed-texture-pvrtc
+    - webgl-compressed-texture-s3tc
+    - webgl-compressed-texture-s3tc-srgb
+    - webgl-debug-renderer-info
+    - webgl-debug-shaders
+    - webgl-depth-texture
+    - webgl-draw-buffers
+    - webgl-lose-context
+    - webgl-multi-draw
+    - webgl-sab
+    - angle-instanced-arrays
+    - oes-element-index-uint
+    - oes-fbo-render-mipmap
+    - oes-standard-derivatives
+    - oes-texture-float
+    - oes-texture-float-linear
+    - oes-texture-half-float
+    - oes-texture-half-float-linear
+    - oes-vertex-array-object
+    - ext-blend-minmax
+    - ext-color-buffer-float
+    - ext-color-buffer-half-float
+    - ext-disjoint-timer-query
+    - ext-float-blend
+    - ext-frag-depth
+    - ext-shader-texture-lod
+    - ext-srgb
+    - ext-texture-compression-bptc
+    - ext-texture-compression-rgtc
+    - ext-texture-filter-anisotropic
+    - ext-texture-norm16
+    - ovr-multiview2
 Run client-side logic:
   Write JavaScript code:
     Write code:
@@ -614,6 +658,8 @@ Run client-side logic:
       - weak-references
       - functions
       - base64encodedecode
+  Manipulate the DOM:
+    - dom
   Store data:
     - storage-access
     - storage-buckets
@@ -655,6 +701,22 @@ Run client-side logic:
     - serializable-errors
     - web-locks
     - transferable-arraybuffer
+  Run native code:
+    - wasm
+    - wasm-bigint
+    - wasm-bulk-memory
+    - wasm-exception-handling
+    - wasm-extended-constant-expressions
+    - wasm-garbage-collection
+    - wasm-multi-memory
+    - wasm-multi-value
+    - wasm-mutable-globals
+    - wasm-non-trapping-float-to-int
+    - wasm-reference-types
+    - wasm-sign-extension-operators
+    - wasm-simd-relaxed
+    - wasm-tail-call-optimization
+    - wasm-threads
   Other:
     - compression-streams
     - webauthn
