@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Web features explorer - WebRTC statistics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
+    <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
+  </head>
+  <body>
+
+    <header><a href="/web-features-explorer/">Web features explorer</a></header>
+
+    <nav>
+      <ul>
+        <li class="monthly"><a href="/web-features-explorer/release-notes">Release notes</a></li>
+        <li class="baseline-low"><a href="/web-features-explorer/newly-available">Newly available</a></li>
+        <li class="baseline-high"><a href="/web-features-explorer/widely-available">Widely available</a></li>
+        <li class="nobaseline"><a href="/web-features-explorer/limited-availability">Limited availability</a></li>
+        <li class="nobaseline"><a href="/web-features-explorer/one-missing-engine">One missing engine</a></li>
+        <li><a href="/web-features-explorer/all">All</a></li>
+        <li><a href="/web-features-explorer/groups">Groups</a></li>
+        <li><a href="/web-features-explorer/browse">Browse features</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      
+<div id="webrtc-stats" class="feature baseline-high">
+  <div class="header">
+    <h1>WebRTC statistics</h1>
+    <div class="availability">
+  
+  
+  Widely available
+</div>
+  </div>
+  <div class="tags">
+  
+    Tags:
+    
+      <span class="tag">api</span>
+    
+  
+  
+    Groups:
+    
+      <span class="tag">
+        
+          WebRTC 
+        
+      </span>
+    
+  
+</div>
+
+
+  <p>
+    The <code>RTCPeerConnection.getStats()</code>, <code>RTCRtpSender.getStats()</code>, and <code>RTCRtpReceiver.getStats()</code> methods return detailed information about the status, performance, network, and media for a given WebRTC connection.
+    
+      To learn more, see
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/getStats">RTCPeerConnection: getStats() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRtpReceiver/getStats">RTCRtpReceiver: getStats() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRtpSender/getStats">RTCRtpSender: getStats() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCStatsReport">RTCStatsReport</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCStatsReport/Symbol.iterator">RTCStatsReport: [Symbol.iterator]() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCStatsReport/entries">RTCStatsReport: entries() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCStatsReport/forEach">RTCStatsReport: forEach() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCStatsReport/get">RTCStatsReport: get() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCStatsReport/has">RTCStatsReport: has() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCStatsReport/keys">RTCStatsReport: keys() method</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCStatsReport/size">RTCStatsReport: size property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats">RTCIceCandidatePairStats</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/availableOutgoingBitrate">RTCIceCandidatePairStats: availableOutgoingBitrate property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/bytesDiscardedOnSend">RTCIceCandidatePairStats: bytesDiscardedOnSend property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/bytesReceived">RTCIceCandidatePairStats: bytesReceived property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/bytesSent">RTCIceCandidatePairStats: bytesSent property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/consentRequestsSent">RTCIceCandidatePairStats: consentRequestsSent property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/currentRoundTripTime">RTCIceCandidatePairStats: currentRoundTripTime property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/id">RTCIceCandidatePairStats: id property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/lastPacketReceivedTimestamp">RTCIceCandidatePairStats: lastPacketReceivedTimestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/lastPacketSentTimestamp">RTCIceCandidateStats: lastPacketSentTimestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/localCandidateId">RTCIceCandidateStats: localCandidateId property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/nominated">RTCIceCandidatePairStats: nominated property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/packetsDiscardedOnSend">RTCIceCandidatePairStats: packetsDiscardedOnSend property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/packetsReceived">RTCIceCandidatePairStats: packetsReceived property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/packetsSent">RTCIceCandidatePairStats: packetsSent property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/remoteCandidateId">RTCIceCandidatePairStats: remoteCandidateId property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/requestsReceived">RTCIceCandidatePairStats: requestsReceived property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/requestsSent">RTCIceCandidatePairStats: requestsSent property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/responsesReceived">RTCIceCandidatePairStats: responsesReceived property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/responsesSent">RTCIceCandidatePairStats: responsesSent property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/state">RTCIceCandidatePairStats: state property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/timestamp">RTCIceCandidatePairStats: timestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/totalRoundTripTime">RTCIceCandidatePairStats: totalRoundTripTime property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/transportId">RTCIceCandidatePairStats: transportId property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidatePairStats/type">RTCIceCandidatePairStats: type property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCertificateStats">RTCCertificateStats</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCertificateStats/base64Certificate">RTCCertificateStats: base64Certificate property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCertificateStats/fingerprint">RTCCertificateStats: fingerprint property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCertificateStats/fingerprintAlgorithm">RTCCertificateStats: fingerprintAlgorithm property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCertificateStats/id">RTCCertificateStats: id property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCertificateStats/timestamp">RTCCertificateStats: timestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCertificateStats/type">RTCCertificateStats: type property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCodecStats">RTCCodecStats</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCodecStats/channels">RTCCodecStats: channels property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCodecStats/clockRate">RTCCodecStats: clockRate property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCodecStats/id">RTCCodecStats: id property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCodecStats/mimeType">RTCCodecStats: mimeType property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCodecStats/payloadType">RTCCodecStats: payloadType property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCodecStats/sdpFmtpLine">RTCCodecStats: sdpFmtpLine property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCodecStats/timestamp">RTCCodecStats: timestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCodecStats/transportId">RTCCodecStats: transportId property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCCodecStats/type">RTCCodecStats: type property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCDataChannelStats">RTCDataChannelStats</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCDataChannelStats/bytesReceived">RTCDataChannelStats: bytesReceived property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCDataChannelStats/bytesSent">RTCDataChannelStats: bytesSent property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCDataChannelStats/dataChannelIdentifier">RTCDataChannelStats: dataChannelIdentifier property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCDataChannelStats/id">RTCDataChannelStats: id property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCDataChannelStats/label">RTCDataChannelStats: label property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCDataChannelStats/messagesReceived">RTCDataChannelStats: messagesReceived property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCDataChannelStats/messagesSent">RTCDataChannelStats: messagesSent property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCDataChannelStats/protocol">RTCDataChannelStats: protocol property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCDataChannelStats/state">RTCDataChannelStats: state property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCDataChannelStats/timestamp">RTCDataChannelStats: timestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCDataChannelStats/type">RTCDataChannelStats: type property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCInboundRtpStreamStats">RTCInboundRtpStreamStats</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCInboundRtpStreamStats/bytesReceived">RTCInboundRtpStreamStats: bytesReceived property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCInboundRtpStreamStats/fecPacketsDiscarded">RTCInboundRtpStreamStats: fecPacketsDiscarded property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCInboundRtpStreamStats/fecPacketsReceived">RTCInboundRtpStreamStats: fecPacketsReceived property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCInboundRtpStreamStats/framesDecoded">RTCInboundRtpStreamStats: framesDecoded property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCInboundRtpStreamStats/id">RTCInboundRtpStreamStats: id property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp">RTCInboundRtpStreamStats: lastPacketReceivedTimestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCInboundRtpStreamStats/nackCount">RTCInboundRtpStreamStats: nackCount property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCInboundRtpStreamStats/qpSum">RTCInboundRtpStreamStats: qpSum property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCInboundRtpStreamStats/remoteId">RTCInboundRtpStreamStats: remoteId property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCInboundRtpStreamStats/timestamp">RTCInboundRtpStreamStats: timestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCInboundRtpStreamStats/type">RTCInboundRtpStreamStats: type property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidateStats">RTCIceCandidateStats</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidateStats/address">RTCIceCandidateStats: address property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidateStats/candidateType">RTCIceCandidateStats: candidateType property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidateStats/id">RTCIceCandidateStats: id property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidateStats/port">RTCIceCandidateStats: port property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidateStats/priority">RTCIceCandidateStats: priority property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidateStats/protocol">RTCIceCandidateStats: protocol property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidateStats/timestamp">RTCIceCandidateStats: timestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidateStats/transportId">RTCIceCandidateStats: transportId property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCIceCandidateStats/type">RTCIceCandidateStats: type property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCAudioSourceStats">RTCAudioSourceStats</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCAudioSourceStats/audioLevel">RTCAudioSourceStats: audioLevel property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCVideoSourceStats/frames">RTCVideoSourceStats: frames property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCVideoSourceStats/framesPerSecond">RTCVideoSourceStats: framesPerSecond property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCVideoSourceStats/height">RTCVideoSourceStats: height property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCAudioSourceStats/id">RTCAudioSourceStats: id property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCAudioSourceStats/kind">RTCAudioSourceStats: kind property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCAudioSourceStats/timestamp">RTCAudioSourceStats: timestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCAudioSourceStats/totalAudioEnergy">RTCAudioSourceStats: totalAudioEnergy property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCAudioSourceStats/totalSamplesDuration">RTCAudioSourceStats: totalSamplesDuration property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCAudioSourceStats/trackIdentifier">RTCAudioSourceStats: trackIdentifier property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCAudioSourceStats/type">RTCAudioSourceStats: type property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCVideoSourceStats/width">RTCVideoSourceStats: width property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCOutboundRtpStreamStats">RTCOutboundRtpStreamStats</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCOutboundRtpStreamStats/framesEncoded">RTCOutboundRtpStreamStats: framesEncoded property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCOutboundRtpStreamStats/id">RTCOutboundRtpStreamStats: id property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCOutboundRtpStreamStats/nackCount">RTCOutboundRtpStreamStats: nackCount property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCOutboundRtpStreamStats/qpSum">RTCOutboundRtpStreamStats: qpSum property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCOutboundRtpStreamStats/qualityLimitationReason">RTCOutboundRtpStreamStats: qualityLimitationReason property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCOutboundRtpStreamStats/remoteId">RTCOutboundRtpStreamStats: remoteId property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCOutboundRtpStreamStats/timestamp">RTCOutboundRtpStreamStats: timestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCOutboundRtpStreamStats/type">RTCOutboundRtpStreamStats: type property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCPeerConnectionStats">RTCPeerConnectionStats</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCPeerConnectionStats/dataChannelsClosed">RTCPeerConnectionStats: dataChannelsClosed property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCPeerConnectionStats/dataChannelsOpened">RTCPeerConnectionStats: dataChannelsOpened property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCPeerConnectionStats/id">RTCPeerConnectionStats: id property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCPeerConnectionStats/timestamp">RTCPeerConnectionStats: timestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCPeerConnectionStats/type">RTCPeerConnectionStats: type property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats">RTCRemoteInboundRtpStreamStats</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/codecId">RTCRemoteInboundRtpStreamStats: codecId property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/fractionLost">RTCRemoteInboundRtpStreamStats: fractionLost property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/id">RTCRemoteInboundRtpStreamStats: id property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/jitter">RTCRemoteInboundRtpStreamStats: jitter property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/kind">RTCRemoteInboundRtpStreamStats: kind property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/localId">RTCRemoteInboundRtpStreamStats: localId property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/packetsLost">RTCRemoteInboundRtpStreamStats: packetsLost property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/packetsReceived">RTCRemoteInboundRtpStreamStats: packetsReceived property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/roundTripTime">RTCRemoteInboundRtpStreamStats: roundTripTime property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/roundTripTimeMeasurements">RTCRemoteInboundRtpStreamStats: roundTripTimeMeasurements property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc">RTCRemoteInboundRtpStreamStats: ssrc property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/timestamp">RTCRemoteInboundRtpStreamStats: timestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/totalRoundTripTime">RTCRemoteInboundRtpStreamStats: totalRoundTripTime property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/transportId">RTCRemoteInboundRtpStreamStats: transportId property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteInboundRtpStreamStats/type">RTCRemoteInboundRtpStreamStats: type property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteOutboundRtpStreamStats">RTCRemoteOutboundRtpStreamStats</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteOutboundRtpStreamStats/codecId">RTCRemoteOutboundRtpStreamStats: codecId property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteOutboundRtpStreamStats/id">RTCRemoteOutboundRtpStreamStats: id property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteOutboundRtpStreamStats/kind">RTCRemoteOutboundRtpStreamStats: kind property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteOutboundRtpStreamStats/localId">RTCRemoteOutboundRtpStreamStats: localId property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteOutboundRtpStreamStats/remoteTimestamp">RTCRemoteOutboundRtpStreamStats: remoteTimestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteOutboundRtpStreamStats/roundTripTimeMeasurements">RTCRemoteOutboundRtpStreamStats: roundTripTimeMeasurements property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteOutboundRtpStreamStats/ssrc">RTCRemoteOutboundRtpStreamStats: ssrc property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteOutboundRtpStreamStats/timestamp">RTCRemoteOutboundRtpStreamStats: timestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteOutboundRtpStreamStats/totalRoundTripTime">RTCRemoteOutboundRtpStreamStats: totalRoundTripTime property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteOutboundRtpStreamStats/transportId">RTCRemoteOutboundRtpStreamStats: transportId property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCRemoteOutboundRtpStreamStats/type">RTCRemoteOutboundRtpStreamStats: type property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCTransportStats">RTCTransportStats</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCTransportStats/id">RTCTransportStats: id property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCTransportStats/timestamp">RTCTransportStats: timestamp property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCTransportStats/type">RTCTransportStats: type property</a>, 
+      
+        <a href="https://developer.mozilla.org/docs/Web/API/RTCStatsReport/values">RTCStatsReport: values() method</a> at MDN.
+      
+    
+  </p>
+  
+  <h3>Compatibility</h3>
+  <ul class="compat">
+  
+    <li class="browser browser-chrome supported">
+      <span class="name">Chrome</span>
+      
+      
+        <span class="version">58</span>
+        <span class="date">Released on 2017-04-19</span>
+      
+    </li>
+  
+    <li class="browser browser-chrome_android supported">
+      <span class="name">Chrome Android</span>
+      
+      
+        <span class="version">58</span>
+        <span class="date">Released on 2017-04-25</span>
+      
+    </li>
+  
+    <li class="browser browser-edge supported">
+      <span class="name">Edge</span>
+      
+      
+        <span class="version">79</span>
+        <span class="date">Released on 2020-01-15</span>
+      
+    </li>
+  
+    <li class="browser browser-firefox supported">
+      <span class="name">Firefox</span>
+      
+      
+        <span class="version">44</span>
+        <span class="date">Released on 2016-01-26</span>
+      
+    </li>
+  
+    <li class="browser browser-firefox_android supported">
+      <span class="name">Firefox for Android</span>
+      
+      
+        <span class="version">44</span>
+        <span class="date">Released on 2016-01-26</span>
+      
+    </li>
+  
+    <li class="browser browser-safari supported">
+      <span class="name">Safari</span>
+      
+      
+        <span class="version">11</span>
+        <span class="date">Released on 2017-09-19</span>
+      
+    </li>
+  
+    <li class="browser browser-safari_ios supported">
+      <span class="name">Safari on iOS</span>
+      
+      
+        <span class="version">11</span>
+        <span class="date">Released on 2017-09-19</span>
+      
+    </li>
+  
+</ul>
+
+  
+  <div class="specs">
+    <h3>Specifications</h3>
+    <ul>
+      
+        <li>
+          
+            <a href="https://w3c.github.io/webrtc-stats/">Identifiers for WebRTC&#39;s Statistics API</a>,
+            from <a href="https://www.w3.org/groups/wg/webrtc/">Web Real-Time Communications Working Group</a> (W3C).
+          
+        </li>
+      
+    </ul>
+  </div>
+
+</div>
+    </main>
+
+    <footer>
+      <p>Generated on 11/20/2024 using <a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>2.6.1-dev-20241119201504-9ef503f</code> and <a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>5.6.17</code></p>
+      <p>Source code: <a href="https://github.com/web-platform-dx/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
+    </footer>
+
+  </body>
+</html>
