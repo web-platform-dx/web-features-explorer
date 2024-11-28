@@ -6,6 +6,7 @@ import bcd from "@mdn/browser-compat-data" with { type: "json" };
 import specs from "browser-specs" with { type: "json" };
 import mdnInventory from "@ddbeck/mdn-content-inventory";
 import mdnDocsOverrides from "./mdnDocsOverrides.json" with { type: "json" };
+import standardPositions from "./standard-positions.json" with { type: "json" };
 
 const BROWSER_BUG_TRACKERS = {
   chrome: "issues.chromium.org",
@@ -144,6 +145,9 @@ function augmentFeatureData(id, feature) {
   }
 
   feature.mdnUrls = mdnUrls;
+
+  // Add standard positions.
+  feature.standardPositions = standardPositions[id];
 
   // Add the BCD data to the feature.
   feature.bcdData = bcdKeysData;

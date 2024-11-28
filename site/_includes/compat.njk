@@ -21,11 +21,19 @@
         {% if not feature.implUrls[browser.id] or not feature.implUrls[browser.id].length %}
           {% if browser.id === "safari" or browser.id === "safari_ios" %}
             <span class="position">
-              <a href="https://github.com/WebKit/standards-positions/issues?q={{ feature.name }}">Search for standards position</a>
+              {% if feature.standardPositions.webkit and feature.standardPositions.webkit.url %}
+                <a href="{{ feature.standardPositions.webkit.url }}">See Safari's position</a>
+              {% else %}
+                <a href="https://github.com/WebKit/standards-positions/issues?q={{ feature.name }}">Search for Safari's position</a>
+              {% endif %}
             </span>
           {% elif browser.id === "firefox" or browser.id === "firefox_android" %}
             <span class="position">
-              <a href="https://github.com/mozilla/standards-positions/issues?q={{ feature.name }}">Search for standards position</a>
+              {% if feature.standardPositions.mozilla and feature.standardPositions.mozilla.url %}
+                <a href="{{ feature.standardPositions.mozilla.url }}">See Mozilla's position</a>
+              {% else %}
+                <a href="https://github.com/mozilla/standards-positions/issues?q={{ feature.name }}">Search for Mozilla's position</a>
+              {% endif %}
             </span>
           {% elif browser.id === "chrome" or browser.id === "chrome_android" or browser.id === "edge" %}
             <span class="position">
