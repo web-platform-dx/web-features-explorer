@@ -186,6 +186,10 @@ h3 .subtext {
   gap: 0.25rem;
 }
 
+.compat-full {
+  display: block;
+}
+
 .compat .browser {
   --bg: var(--browser-unsupported-bg);
   padding: 1.25rem 0.55rem 0.25rem 0.5rem;
@@ -199,6 +203,16 @@ h3 .subtext {
   flex-direction: column;
   align-items: center;
   min-width: 4rem;
+}
+
+.compat-full .browser {
+  padding: .5rem .5rem .5rem 3rem;
+  border: none;
+  background-position: -.5rem center;
+  background-size: 3rem;
+  background-blend-mode: overlay;
+  margin: .125rem 0;
+  display: block;
 }
 
 .compat .browser.supported {
@@ -231,16 +245,18 @@ h3 .subtext {
 .compat .browser .date,
 .compat .browser .bug,
 .compat .browser .position {
-  font-style: italic;
   font-size: 0.75rem;
 }
 
 .compat .position {
-  color: black;
-  font-weight: bold;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  margin: 0.25rem 0 0 0;
+	color: black;
+	font-weight: bold;
+	padding: 0.25rem;
+	border-radius: 0.25rem;
+	margin: 0.25rem 0 0 0;
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+	line-height: 2;
 }
 
 .compat .position-oppose,
