@@ -8,16 +8,14 @@
         <span class="date">{% browserVersionRelease browser, version %}</span>
       {% else %}
         <span class="version">❌</span>
-        <span class="bug">
-          {% if feature.implUrls[browser.id] and feature.implUrls[browser.id].length %}
+        {% if feature.implUrls[browser.id] and feature.implUrls[browser.id].length %}
+          <span class="bug">
             See
             {% for implUrl in feature.implUrls[browser.id] %}
               <a href="{{ implUrl }}">{{ implUrl | replace("https://", "") }}</a>
             {% endfor %}
-          {% else %}
-            <a href="https://www.google.com/search?q=implement {{ feature.name }}+site%3A{{ browser.bugTracker }}">Search for bugs</a>
-          {% endif %}
-        </span>
+          </span>
+        {% endif %}
         {% if not feature.implUrls[browser.id] or not feature.implUrls[browser.id].length %}
           {% if browser.id === "safari" or browser.id === "safari_ios" %}
             {% set position = feature.standardPositions.webkit %}

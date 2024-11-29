@@ -235,6 +235,25 @@ h3 .subtext {
   font-size: 0.75rem;
 }
 
+.compat .position {
+  color: black;
+  font-weight: bold;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin: 0.25rem 0 0 0;
+  background: color-mix(in srgb, var(--bg) 90%, black);
+}
+
+.compat .position-oppose,
+.compat .position-negative {
+  --bg: var(--browser-unsupported-bg);
+}
+
+.compat .position-support,
+.compat .position-positive {
+  --bg: var(--browser-supported-bg);
+}
+
 .feature .resources,
 .feature .resources li {
   list-style: disc;
