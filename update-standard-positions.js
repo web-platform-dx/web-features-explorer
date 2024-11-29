@@ -73,8 +73,9 @@ async function main() {
         console.log(
           `Updating position for ${company} in feature ${featureId}...`
         );
-        const position = await getPosition(positions[featureId][company].url);
-        positions[featureId][company].position = position;
+        const data = await getPosition(positions[featureId][company].url);
+        positions[featureId][company].position = data.position;
+        positions[featureId][company].concerns = data.concerns;
       }
     }
   }
