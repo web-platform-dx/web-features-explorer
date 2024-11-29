@@ -16,14 +16,12 @@
             {% endfor %}
           </span>
         {% endif %}
-        {% if not feature.implUrls[browser.id] or not feature.implUrls[browser.id].length %}
-          {% if browser.id === "safari" or browser.id === "safari_ios" %}
-            {% set position = feature.standardPositions.webkit %}
-            {% include "position.njk" %}
-          {% elif browser.id === "firefox" or browser.id === "firefox_android" %}
-            {% set position = feature.standardPositions.mozilla %}
-            {% include "position.njk" %}
-          {% endif %}
+        {% if browser.id === "safari" or browser.id === "safari_ios" %}
+          {% set position = feature.standardPositions.webkit %}
+          {% include "position.njk" %}
+        {% elif browser.id === "firefox" or browser.id === "firefox_android" %}
+          {% set position = feature.standardPositions.mozilla %}
+          {% include "position.njk" %}
         {% endif %}
       {% endif %}
     </li>
