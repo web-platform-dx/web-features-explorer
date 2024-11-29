@@ -1,11 +1,11 @@
 {% if position and position.url %}
   <span class="position{% if position.position %} position-{{ position.position }}{% endif %}">
+    <a href="{{ position.url }}">Vendor position</a>
     {% if position.position %}
-      <span>Position: {{ position.position }}</span>
+      <span>: {{ position.position }}</span>
     {% endif %}
     {% if position.concerns.length > 0 %}
-      <span>Concerns: {{ position.concerns | join(", ") }}</span>
+      <span>(concerns: {{ position.concerns | join(", ") }})</span>
     {% endif %}
-    <a href="{{ position.url }}">Vendor position</a>
   </span>
 {% endif %}
