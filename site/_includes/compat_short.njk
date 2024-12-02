@@ -3,7 +3,12 @@
     <li class="browser browser-{{ browser.id }}{% if feature.status.support[browser.id] %} supported{% endif %}">
       <span class="name">{{ browser.name }}</span>
       {% set version = feature.status.support[browser.id] %}
-      <span class="version">{% if version %}{{ version }}{% else %}❌{% endif %}</span>
+      {% if version %}
+        <span class="version">{{ version }}</span>
+        <span class="date">{% browserVersionRelease browser, version %}</span>
+      {% else %}
+        <span class="version">❌</span>
+      {% endif %}
     </li>
   {% endfor %}
 </ul>
