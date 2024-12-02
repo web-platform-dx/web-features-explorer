@@ -413,7 +413,7 @@ export default function (eleventyConfig) {
       const feature = features[id];
 
       // Baseline features only.
-      if (feature.status.widelyAvailable === "high") {
+      if (feature.status.baseline === "high") {
         widelyAvailable.push(feature);
       }
     }
