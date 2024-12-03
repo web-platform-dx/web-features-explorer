@@ -179,6 +179,19 @@ for (const id in features) {
   augmentFeatureData(id, feature);
 }
 
+function getBrowserVersionReleaseDate(browser, version) {
+  const isBeforeThan = version.startsWith("≤");
+  const cleanVersion = isBeforeThan ? version.substring(1) : version;
+  const date = browser.releases.find(
+    (release) => release.version === cleanVersion
+  ).date;
+
+  return {
+    isBeforeThan,
+    date
+  };
+}
+
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
@@ -191,11 +204,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addShortcode(
     "browserVersionRelease",
     function (browser, version) {
-      const isBeforeThan = version.startsWith("≤");
-      const cleanVersion = isBeforeThan ? version.substring(1) : version;
-      const date = browser.releases.find(
-        (release) => release.version === cleanVersion
-      ).date;
+      const { isBeforeThan, date } = getBrowserVersionReleaseDate(browser, version);
       return isBeforeThan ? `Released before ${date}` : `Released on ${date}`;
     }
   );
@@ -397,19 +406,19 @@ export default function (eleventyConfig) {
     return all;
   });
 
-  eleventyConfig.addGlobalData("baselineFeatures", () => {
-    const baseline = [];
+  eleventyConfig.addGlobalData("widelyAvailableFeatures", () => {
+    const widelyAvailable = [];
 
     for (const id in features) {
       const feature = features[id];
 
       // Baseline features only.
       if (feature.status.baseline === "high") {
-        baseline.push(feature);
+        widelyAvailable.push(feature);
       }
     }
 
-    return baseline.sort((a, b) => {
+    return widelyAvailable.sort((a, b) => {
       // Sort by baseline_high_date, descending, so the most recent is first.
       return (
         new Date(b.status.baseline_high_date) -
@@ -418,34 +427,56 @@ export default function (eleventyConfig) {
     });
   });
 
-  eleventyConfig.addGlobalData("nonBaselineFeatures", () => {
-    const nonBaseline = [];
+  eleventyConfig.addGlobalData("limitedAvailabilityFeatures", () => {
+    const limitedAvailability = [];
 
     for (const id in features) {
       const feature = features[id];
 
       // Non-baseline features only.
       if (!feature.status.baseline) {
-        nonBaseline.push(feature);
+        limitedAvailability.push(feature);
       }
     }
 
-    return nonBaseline;
+    // Sort the features by date, with the most recently updated 
+    // feature first, irrespective of which browser it was updated for.
+    return limitedAvailability.sort((a, b) => {
+      let maxADate = 0;
+      let maxBDate = 0;
+
+      // Get all of the browser release dates for the compared features
+      // and get the most recent.
+      for (const browserId in browsers) {
+        const aVersion = a.status.support[browserId];
+        if (aVersion) {
+          const date = new Date(getBrowserVersionReleaseDate(browsers[browserId], aVersion).date);
+          maxADate = Math.max(maxADate, date.getTime());
+        }
+        const bVersion = b.status.support[browserId];
+        if (bVersion) {
+          const date = new Date(getBrowserVersionReleaseDate(browsers[browserId], bVersion).date);
+          maxBDate = Math.max(maxBDate, date.getTime());
+        }
+      }
+
+      return maxBDate - maxADate;
+    });
   });
 
-  eleventyConfig.addGlobalData("recentBaselineFeatures", () => {
-    const recentBaseline = [];
+  eleventyConfig.addGlobalData("newlyAvailableFeatures", () => {
+    const newlyAvailable = [];
 
     for (const id in features) {
       const feature = features[id];
 
       // Only baseline low.
       if (feature.status.baseline === "low") {
-        recentBaseline.push(feature);
+        newlyAvailable.push(feature);
       }
     }
 
-    return recentBaseline.sort((a, b) => {
+    return newlyAvailable.sort((a, b) => {
       // Sort by baseline_low_date, descending, so the most recent is first.
       return (
         new Date(b.status.baseline_low_date) -
@@ -531,7 +562,12 @@ export default function (eleventyConfig) {
       feature.blockedSince = formatter.format(mostRecent);
     });
 
-    return missingOne;
+    // Sort the features by monthsBlocked, with the most recently
+    // updated feature first. Most recently updated means the
+    // shortest blocked time.
+    return missingOne.sort((a, b) => {
+      return a.monthsBlocked - b.monthsBlocked;
+    });
   });
 
   // RSS Feed Plugin
