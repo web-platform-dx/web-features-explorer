@@ -9,15 +9,15 @@ layout: layout.njk
   {% for month in perMonth %}
     <li class="month-entry">
       <h2><a href="{{ month.date | slugify }}">{{ month.date }}</a></h2>
-      <p>
+      <ul>
         {% for feature in month.all %}
           {% if loop.index0 < 10 %}
-            {{ feature.name }}{% if not loop.last %}, {% endif %}
+            <li>{{ feature.name }}</li>
           {% elseif loop.index0 == 10 %}
-            and more ...
+            <li>and more ...</li>
           {% endif %}
         {% endfor %}
-      </p>
+      </ul>
     </li>
   {% endfor %}
 </ul>
