@@ -331,39 +331,23 @@ main {
 
 .monthly-update-list {
   display: grid;
-  column-gap: var(--margin);
-  grid-template-columns: max-content 1fr;
+  gap: var(--margin);
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
 }
 
 .monthly-update-list .month-entry {
-  grid-column: span 2;
-  display: grid;
-  grid-template-columns: subgrid;
-  padding: calc(var(--margin) / 2) 0;
-}
-
-.monthly-update-list .month-entry:nth-child(even) {
+  padding: calc(var(--margin) / 2);
   background: var(--background-alt);
+  border-radius: .5rem;
 }
 
-.monthly-update-list .month-entry:not(:last-child) {
-  border-block-end: 2px solid;
+.monthly-update-list .month-entry h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
 }
 
-.monthly-update-list .month-entry h2,
-.monthly-update-list .month-entry p {
-  font-size: 1rem;
-  margin: 0;
-}
-
-@media (max-width: 500px) {
-  .monthly-update-list {
-    display: block;
-  }
-
-  .monthly-update-list .month-entry p {
-    margin-block-start: calc(var(--margin) / 2);
-  }
+.monthly-update-list .month-entry li {
+  padding: .125rem 0;
 }
 
 .month-update h2 {
