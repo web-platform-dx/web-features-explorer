@@ -16,13 +16,7 @@
             {% endfor %}
           </span>
         {% endif %}
-        {% if browser.id === "safari" or browser.id === "safari_ios" %}
-          {% set position = feature.standardPositions.webkit %}
-          {% include "position.njk" %}
-        {% elif browser.id === "firefox" or browser.id === "firefox_android" %}
-          {% set position = feature.standardPositions.mozilla %}
-          {% include "position.njk" %}
-        {% endif %}
+        {% include "position_per_browser.njk" %}
       {% endif %}
     </li>
   {% endfor %}
