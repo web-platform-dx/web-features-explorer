@@ -7,13 +7,9 @@
 
   <p>
     {{ feature.description_html | safe }}
-    {% if feature.mdnUrls.length > 0 %}
-      <br><br>To learn more, see
-      {% for url in feature.mdnUrls %}
-        <a href="{{ url.url }}">{{ url.title }}</a>{% if loop.last %} at MDN.{% else %}, {% endif %}
-      {% endfor %}
-    {% endif %}
   </p>
+
+  {% include "docs.njk" %}
   
   <h3>Browser support{% if feature.caniuse %} <span class="subtext">(<a href="https://caniuse.com/{{ feature.caniuse }}">view on caniuse.com</a>)</span>{% endif %}</h3>
   {% include "compat_full.njk" %}

@@ -120,6 +120,7 @@ function augmentFeatureData(id, feature) {
       if (mdnArticleData) {
         mdnUrls.push({
           title: mdnArticleData.frontmatter.title,
+          anchor: hasAnchor ? slugParts[1] : null,
           url: MDN_URL_ROOT + mdnArticleData.frontmatter.slug + (hasAnchor ? `#${slugParts[1]}` : ""),
         });
       }
