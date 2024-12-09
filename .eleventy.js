@@ -407,6 +407,22 @@ export default function (eleventyConfig) {
     return all;
   });
 
+  eleventyConfig.addGlobalData("allFeaturesAsJSON", () => {
+    const all = [];
+
+    for (const id in features) {
+      const feature = features[id];
+      all.push({
+        description_html: feature.description_html,
+        id: feature.id,
+        name: feature.name,
+        status: feature.status,
+      });
+    }
+
+    return JSON.stringify(all);
+  });
+
   eleventyConfig.addGlobalData("widelyAvailableFeatures", () => {
     const widelyAvailable = [];
 

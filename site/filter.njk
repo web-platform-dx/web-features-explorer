@@ -1,0 +1,84 @@
+---
+title: Client-side filtering features
+layout: layout.njk
+---
+
+<h1>{{ title }}</h1>
+
+<label>
+  Pick a browser
+  <select id="browser">
+    <option selected>Choose</option>
+    {% for browser in browsers %}
+      <option value="{{ browser.id }}">{{ browser.name }}</option>
+    {% endfor %}
+  </select>
+</label>
+
+<label>
+  Pick a browser release
+    {% for browser in browsers %}
+      <select id="{{ browser.id }}_releases" class="release" style="display: none;">
+        <option selected>Choose</option>
+        {% for release in browser.releases | reverse %}
+          <option value="{{ release.version }}">{{ release.version }}</option>
+        {% endfor %}
+      </select>
+    {% endfor %}
+</label>
+
+<ul id="features"></ul>
+
+<script>
+const allFeatures = {{ allFeaturesAsJSON | safe }};
+const browserPicker = document.getElementById('browser');
+const featuresList = document.getElementById('features');
+
+function refreshList() {
+  featuresList.innerHTML = '';
+
+  const browser = browserPicker.value;
+  if (!browser) {
+    return;
+  }
+
+  const releasePicker = document.getElementById(`${browser}_releases`);
+  if (!releasePicker.value) {
+    return;
+  }
+
+  const release = releasePicker.value + "";
+
+  allFeatures.filter(feature => {
+    return feature.status.support[browser] && feature.status.support[browser] === release;
+  }).forEach(feature => {
+    const a = document.createElement('a');
+    a.href = `../features/${feature.id}/`;
+    a.textContent = feature.name;
+
+    const li = document.createElement('li');
+    li.appendChild(a);
+
+    featuresList.appendChild(li);
+  });
+}
+
+browserPicker.addEventListener('change', () => {
+  const selectedBrowser = browserPicker.value;
+  const releases = document.querySelectorAll('.release');
+  releases.forEach(release => {
+    if (release.id === `${selectedBrowser}_releases`) {
+      release.style.display = 'block';
+    } else {
+      release.style.display = 'none';
+    }
+  });
+  refreshList();
+});
+
+document.querySelectorAll('.release').forEach(release => {
+  release.addEventListener('change', () => {
+    refreshList();
+  });
+});
+</script>
