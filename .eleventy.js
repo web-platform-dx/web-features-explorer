@@ -543,7 +543,11 @@ export default function (eleventyConfig) {
 
       const support = feature.status.support;
       for (const browserId in support) {
-        const versionSupported = support[browserId];
+        let versionSupported = support[browserId];
+        if (versionSupported.startsWith("≤")) {
+          versionSupported = versionSupported.substring(1);
+        }
+
         // Grab release date string from BCD as it has a more complete list of
         // browser releases than the web features data.
         const releaseDateStr =
