@@ -14,6 +14,8 @@
   <h3>Browser support{% if feature.caniuse %} <span class="subtext">(<a href="https://caniuse.com/{{ feature.caniuse }}">view on caniuse.com</a>)</span>{% endif %}</h3>
   {% include "compat_full.njk" %}
 
+  {% include "origin_trials.njk" %}
+
   {%- if feature.blockedOn %}
     <p>Baseline availability blocked since {{ feature.blockedSince }} by {{ feature.blockedOn }} ({{ feature.monthsBlocked }} months)</p>
   {%- endif %}

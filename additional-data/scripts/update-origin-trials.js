@@ -59,9 +59,8 @@ function findChromeOTForFeature(featureId, chromeOTs) {
     // Later, it would be great if chromestatus entries had a mapping to web-feature IDs.
     if (specs.some(spec => spec === ot.spec)) {
       return {
-        displayName: ot.display_name,
-        otName: ot.origin_trial_feature_name,
-        id: ot.id,
+        browser: "Chrome",
+        name: ot.display_name,
         start: ot.start_milestone,
         end: ot.end_milestone,
         feedbackUrl: ot.feedback_url,
@@ -73,25 +72,21 @@ function findChromeOTForFeature(featureId, chromeOTs) {
 }
 
 async function main() {
-  // First, add any missing feature ID to the trials object.
+  // Reset the trials data.
+  // This makes sure we have the latest features, and that old and new trials are
+  // removed and added.
   for (const id in features) {
-    if (!trials[id]) {
-      trials[id] = {
-        chrome: {},
-        edge: {},
-        firefox: {}
-      };
-    }
+    trials[id] = [];
   }
 
   const chromeOTs = await getChromeOTs();
 
-  for (const id in trials) {
-    const chromeOT = findChromeOTForFeature(id, chromeOTs);
+  for (const featureId in trials) {
+    // We only support Chrome for now.
+    const chromeOT = findChromeOTForFeature(featureId, chromeOTs);
     if (chromeOT) {
-      trials[id].chrome = chromeOT;
-    } else {
-      trials[id].chrome = {};
+      console.log(`Adding Chrome Origin Trial for feature ${featureId}: ${chromeOT.name}`);
+      trials[featureId].push(chromeOT);
     }
   }
 
