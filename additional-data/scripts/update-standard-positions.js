@@ -2,8 +2,9 @@
 // found in the GitHub issues of the vendors that have a URL in the standard-positions.json file.
 // It can take a while to run.
 // This script is not run automatically yet. Run it manually when you want to update the positions.
-// This script does not detect new standard position URLs for features. You first need to add the URLs in
-// the standard-positions.json file before running this script.
+// Always check the new position URLs added by the script (for mozilla only for now) to make sure they are correct.
+// This script attempts to detect new standard position URLs for features, only for Mozilla for now.
+// For webkit, you first need to add the URLs in the standard-positions.json file before running this script.
 
 import { features } from "web-features";
 import playwright from "playwright";
