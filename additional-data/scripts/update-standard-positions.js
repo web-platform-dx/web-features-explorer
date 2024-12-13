@@ -12,7 +12,35 @@ import positions from "../standard-positions.json" assert { type: "json" };
 
 const OUTPUT_FILE = "../standard-positions.json";
 
-async function getPosition(url) {
+const MOZILLA_DATA_FILE = "https://raw.githubusercontent.com/mozilla/standards-positions/refs/heads/gh-pages/merged-data.json";
+let mozillaData = null;
+async function getMozillaData() {
+  if (!mozillaData) {
+    const response = await fetch(MOZILLA_DATA_FILE);
+    mozillaData = await response.json();
+  }
+
+  return mozillaData;
+}
+
+// For Mozilla, we can use the consolidated data file.
+async function getMozillaPosition(url) {
+  const data = await getMozillaData();
+ 
+  const issueId = url.split("/").pop();
+  const issue = data[issueId];
+  if (!issue) {
+    return { position: "", concerns: [] };
+  }
+
+  return {
+    position: issue.position || "",
+    concerns: issue.concerns,
+  };
+}
+
+// For webkit, we need to scrape the position and concerns from the GitHub issue.
+async function getWebkitPosition(url) {
   const scrapingBrowser = await playwright.chromium.launch({ headless: true });
   const context = await scrapingBrowser.newContext();
   const page = await context.newPage();
@@ -57,6 +85,15 @@ async function getPosition(url) {
     );
 }
 
+async function getPosition(company, url) {
+  switch (company) {
+    case "webkit":
+      return await getWebkitPosition(url);
+    case "mozilla":
+      return await getMozillaPosition(url);
+  }
+}
+
 async function main() {
   // First, add any missing feature ID to the positions object.
   for (const id in features) {
@@ -68,14 +105,41 @@ async function main() {
     }
   }
 
-  // Update the positions and concerns for the features that have vendor URLs.
+  // Second, for Mozilla only, attempt to find new vendor URLs,
+  // by matching on spec URLs.
+  const data = await getMozillaData();
+  for (const issueId in data) {
+    const issue = data[issueId];
+    if (!issue.position) {
+      continue;
+    }
+
+    // Go over our features, and try to find a match,
+    // by comparing spec urls.
+    for (const featureId in features) {
+      // Skip the features for which we already have the URL.
+      if (positions[featureId].mozilla.url) {
+        continue;
+      }
+      const feature = features[featureId];
+      const featureSpecs = Array.isArray(feature.spec) ? feature.spec : [feature.spec];
+      if (featureSpecs.some((spec) => spec === issue.url)) {
+        positions[featureId].mozilla.url = `https://github.com/mozilla/standards-positions/issues/${issueId}`;
+      }
+    }
+  }
+
+  // Finally, update the positions and concerns for the features that have vendor URLs.
   for (const featureId in positions) {
     for (const company in positions[featureId]) {
       if (positions[featureId][company].url) {
         console.log(
           `Updating position for ${company} in feature ${featureId}...`
         );
-        const data = await getPosition(positions[featureId][company].url);
+        const data = await getPosition(
+          company,
+          positions[featureId][company].url
+        );
         positions[featureId][company].position = data.position;
         positions[featureId][company].concerns = data.concerns;
       }
