@@ -8,7 +8,7 @@
 import { features } from "web-features";
 import playwright from "playwright";
 import fs from "fs/promises";
-import positions from "./standard-positions.json" assert { type: "json" };
+import positions from "../standard-positions.json" assert { type: "json" };
 
 const OUTPUT_FILE = "../standard-positions.json";
 
