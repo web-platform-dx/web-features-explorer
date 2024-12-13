@@ -13,7 +13,8 @@ import positions from "../standard-positions.json" assert { type: "json" };
 
 const OUTPUT_FILE = "../standard-positions.json";
 
-const MOZILLA_DATA_FILE = "https://raw.githubusercontent.com/mozilla/standards-positions/refs/heads/gh-pages/merged-data.json";
+const MOZILLA_DATA_FILE =
+  "https://raw.githubusercontent.com/mozilla/standards-positions/refs/heads/gh-pages/merged-data.json";
 let mozillaData = null;
 async function getMozillaData() {
   if (!mozillaData) {
@@ -24,10 +25,9 @@ async function getMozillaData() {
   return mozillaData;
 }
 
-// For Mozilla, we can use the consolidated data file.
 async function getMozillaPosition(url) {
   const data = await getMozillaData();
- 
+
   const issueId = url.split("/").pop();
   const issue = data[issueId];
   if (!issue) {
@@ -40,50 +40,31 @@ async function getMozillaPosition(url) {
   };
 }
 
-// For webkit, we need to scrape the position and concerns from the GitHub issue.
+const WEBKIT_DATA_FILE =
+  "https://raw.githubusercontent.com/WebKit/standards-positions/main/summary.json";
+let webkitData = null;
+async function getWebkitData() {
+  if (!webkitData) {
+    const response = await fetch(WEBKIT_DATA_FILE);
+    webkitData = await response.json();
+  }
+
+  return webkitData;
+}
+
 async function getWebkitPosition(url) {
-  const scrapingBrowser = await playwright.chromium.launch({ headless: true });
-  const context = await scrapingBrowser.newContext();
-  const page = await context.newPage();
+  const data = await getWebkitData();
 
-  // Go to the page.
-  await page.goto(url);
+  for (const position of data) {
+    if (position.id === url) {
+      return {
+        position: position.position || "",
+        concerns: position.concerns || [],
+      };
+    }
+  }
 
-  // Wait for the page to be completely loaded.
-  // In particular, wait for the list of labels in the sidebar.
-  await page.waitForSelector(
-    ".Layout-sidebar .discussion-sidebar-heading:has-text('Labels')"
-  );
-
-  // Get the list of labels in the sidebar.
-  const labelEls = await page
-    .locator(".js-issue-labels a span")
-    .allTextContents();
-
-  await scrapingBrowser.close();
-
-  return labelEls
-    .map((t) => t.toLowerCase().trim())
-    .filter((t) => t.startsWith("position:") || t.startsWith("concerns:"))
-    .map((t) => {
-      if (t.startsWith("position:")) {
-        return { position: t.substring("position:".length).trim() };
-      }
-      if (t.startsWith("concerns:")) {
-        return { concern: t.substring("concerns:".length).trim() };
-      }
-    })
-    .reduce(
-      (acc, curr) => {
-        if (curr.position) {
-          acc.position = curr.position;
-        } else {
-          acc.concerns.push(curr.concern);
-        }
-        return acc;
-      },
-      { position: "", concerns: [] }
-    );
+  return { position: "", concerns: [] };
 }
 
 async function getPosition(company, url) {
@@ -92,6 +73,64 @@ async function getPosition(company, url) {
       return await getWebkitPosition(url);
     case "mozilla":
       return await getMozillaPosition(url);
+  }
+}
+
+function doesFeatureHaveSpec(feature, url) {
+  const featureSpecs = Array.isArray(feature.spec)
+    ? feature.spec
+    : [feature.spec];
+  return featureSpecs.some((spec) => spec === url);
+}
+
+async function findNewMozillaURLs() {
+  // Attempt to find new vendor URLs, by matching on spec URLs.
+  const mozData = await getMozillaData();
+
+  for (const issueId in mozData) {
+    const issue = mozData[issueId];
+    if (!issue.position) {
+      continue;
+    }
+
+    // Go over our features, and try to find a match,
+    // by comparing spec urls.
+    for (const featureId in features) {
+      // Skip the features for which we already have the URL.
+      if (positions[featureId].mozilla.url) {
+        continue;
+      }
+      const matches = doesFeatureHaveSpec(features[featureId], issue.url);
+      if (matches) {
+        positions[
+          featureId
+        ].mozilla.url = `https://github.com/mozilla/standards-positions/issues/${issueId}`;
+      }
+    }
+  }
+}
+
+async function findNewWebkitURLs() {
+  // Attempt to find new vendor URLs, by matching on spec URLs.
+  const webkitData = await getWebkitData();
+
+  for (const issue of webkitData) {
+    if (!issue.position) {
+      continue;
+    }
+
+    // Go over our features, and try to find a match,
+    // by comparing spec urls.
+    for (const featureId in features) {
+      // Skip the features for which we already have the URL.
+      if (positions[featureId].webkit.url) {
+        continue;
+      }
+      const matches = doesFeatureHaveSpec(features[featureId], issue.url);
+      if (matches) {
+        positions[featureId].webkit.url = issue.id;
+      }
+    }
   }
 }
 
@@ -106,29 +145,10 @@ async function main() {
     }
   }
 
-  // Second, for Mozilla only, attempt to find new vendor URLs,
-  // by matching on spec URLs.
-  const data = await getMozillaData();
-  for (const issueId in data) {
-    const issue = data[issueId];
-    if (!issue.position) {
-      continue;
-    }
-
-    // Go over our features, and try to find a match,
-    // by comparing spec urls.
-    for (const featureId in features) {
-      // Skip the features for which we already have the URL.
-      if (positions[featureId].mozilla.url) {
-        continue;
-      }
-      const feature = features[featureId];
-      const featureSpecs = Array.isArray(feature.spec) ? feature.spec : [feature.spec];
-      if (featureSpecs.some((spec) => spec === issue.url)) {
-        positions[featureId].mozilla.url = `https://github.com/mozilla/standards-positions/issues/${issueId}`;
-      }
-    }
-  }
+  // Try to add new mozilla vendor position urls to web-features.
+  await findNewMozillaURLs();
+  // Do the same for webkit.
+  await findNewWebkitURLs();
 
   // Finally, update the positions and concerns for the features that have vendor URLs.
   for (const featureId in positions) {
