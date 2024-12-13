@@ -1,9 +1,15 @@
+// Run this script to add new feature IDs into the mdn-docs.json file.
+// This script is not run automatically yet. Run it manually when you want
+// to make sure the mdn-docs.json file contains the full list of features.
+// This script does not map features to MDN URLs on its own. Mapping MDN URLs
+// is done manually.
+
 import { features } from "web-features";
 import bcd from "@mdn/browser-compat-data" assert { type: "json" };
 import * as fs from "fs/promises";
-import mdnDocsOverrides from "./mdnDocsOverrides.json" assert { type: "json" };
+import mdnDocsOverrides from "../mdn-docs.json" assert { type: "json" };
 
-const FILE = "mdnDocsOverrides.json";
+const FILE = "../mdn-docs.json";
 
 function getFeaturesMdnUrls() {
   const output = {};

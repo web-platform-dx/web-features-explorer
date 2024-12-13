@@ -2,13 +2,15 @@
 // found in the GitHub issues of the vendors that have a URL in the standard-positions.json file.
 // It can take a while to run.
 // This script is not run automatically yet. Run it manually when you want to update the positions.
+// This script does not detect new standard position URLs for features. You first need to add the URLs in
+// the standard-positions.json file before running this script.
 
 import { features } from "web-features";
 import playwright from "playwright";
 import fs from "fs/promises";
 import positions from "./standard-positions.json" assert { type: "json" };
 
-const OUTPUT_FILE = "./standard-positions.json";
+const OUTPUT_FILE = "../standard-positions.json";
 
 async function getPosition(url) {
   const scrapingBrowser = await playwright.chromium.launch({ headless: true });

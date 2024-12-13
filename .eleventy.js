@@ -5,8 +5,8 @@ import { browsers, features, groups } from "web-features";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
 import specs from "browser-specs" with { type: "json" };
 import mdnInventory from "@ddbeck/mdn-content-inventory";
-import mdnDocsOverrides from "./mdnDocsOverrides.json" with { type: "json" };
-import standardPositions from "./standard-positions.json" with { type: "json" };
+import mdnDocsOverrides from "./additional-data/mdn-docs.json" with { type: "json" };
+import standardPositions from "./additional-data/standard-positions.json" with { type: "json" };
 
 const BROWSER_BUG_TRACKERS = {
   chrome: "issues.chromium.org",
