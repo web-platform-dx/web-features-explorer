@@ -312,23 +312,23 @@ export default function (eleventyConfig) {
       return dateStr.substring(0, 7);
     };
 
-    const getBaselineHighMonth = (feature) => {
-      return getMonth(feature.status.baseline_high_date);
-    };
-
-    const getBaselineLowMonth = (feature) => {
-      return getMonth(feature.status.baseline_low_date);
-    };
+    const getBaselineHighMonth = (feature) => getMonth(feature.status.baseline_high_date);
+    const getBaselineLowMonth = (feature) => getMonth(feature.status.baseline_low_date);
 
     const getBrowserSupportMonth = (feature, browserId) => {
       const versionSupported = feature.status.support[browserId];
       const releaseData = browsers[browserId].releases;
 
-      if (!versionSupported || !releaseData[versionSupported]) {
+      if (!versionSupported) {
         return null;
       }
 
-      return getMonth(releaseData[versionSupported].release_date);
+      const release = releaseData.find(r => r.version === versionSupported);
+      if (!release) {
+        return null;
+      }
+
+      return getMonth(release.date);
     };
 
     for (const id in features) {
@@ -362,7 +362,7 @@ export default function (eleventyConfig) {
               .get(browserSupportMonth)
               .low.some((f) => f.id === feature.id);
           if (!alreadyRecorded) {
-            monthly.get(browserSupportMonth)[browser].push(feature);
+            monthly.get(browserSupportMonth)[browserId].push(feature);
             monthly.get(browserSupportMonth).all.add(feature);
           }
         }
@@ -384,7 +384,7 @@ export default function (eleventyConfig) {
             month: "long",
             year: "numeric",
           }),
-          absoluteDate: absoluteDate,
+          absoluteDate,
           // current month is not stable because it is still updating
           // RSS feed should not include the current month
           // https://github.com/web-platform-dx/web-features-explorer/pull/23
