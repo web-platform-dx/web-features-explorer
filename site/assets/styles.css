@@ -353,8 +353,13 @@ main {
 .month-update ul {
   padding: calc(var(--margin) / 2);
   border-radius: 0.5rem;
-  display: grid;
-  gap: calc(var(--margin) / 2);
+  column-gap: calc(var(--margin) / 2);
+  column-width: 20rem;
+}
+
+.month-update li {
+  break-inside: avoid;
+  margin-block-end: 1rem;
 }
 
 .groups li {
