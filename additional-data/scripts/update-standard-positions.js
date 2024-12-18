@@ -101,10 +101,12 @@ async function findNewMozillaURLs() {
         continue;
       }
       const matches = doesFeatureHaveSpec(features[featureId], issue.url);
-      if (matches) {
+      const issueUrl = `https://github.com/mozilla/standards-positions/issues/${issueId}`;
+      const isWrongIssue = positions[featureId].mozilla.not && positions[featureId].mozilla.not.includes(issueUrl);
+      if (matches && !isWrongIssue) {
         positions[
           featureId
-        ].mozilla.url = `https://github.com/mozilla/standards-positions/issues/${issueId}`;
+        ].mozilla.url = issueUrl;
       }
     }
   }
@@ -127,7 +129,8 @@ async function findNewWebkitURLs() {
         continue;
       }
       const matches = doesFeatureHaveSpec(features[featureId], issue.url);
-      if (matches) {
+      const isWrongIssue = positions[featureId].webkit.not && positions[featureId].webkit.not.includes(issue.id);
+      if (matches && !isWrongIssue) {
         positions[featureId].webkit.url = issue.id;
       }
     }
