@@ -1,21 +1,41 @@
 // This script updates the standard-positions.json file with the positions and concerns
 // found in the GitHub issues of the vendors that have a URL in the standard-positions.json file.
-// It can take a while to run.
+
+// The standard-positions.json file is structured as follows.
+//
+// Top-level keys are web-features IDs, and their values are objects with two keys: "mozilla" and "webkit":
+// {
+//    "<feature-id>": {
+//      "mozilla": {}
+//      "webkit": {}
+//   }
+// }
+//
+// Each mozilla and webkit object can be one of the following:
+// - An empty object, which means that the feature has no vendor URL yet.
+// - An object like { "url": "<url>", "position": "<position>", "concerns": [] }, which
+//   means that the feature has a vendor URL, and the position and concerns might be known.
+// - Optionally, the object can contain a "not" key with an array of issue URLs that should be ignored.
+//   This is useful because we match the feature with the vendor issue by comparing the spec URLs, and
+//   vendor issues might sometimes be about subparts of a spec that's relevant to another feature.
+
 // This script is not run automatically yet. Run it manually when you want to update the positions.
 // Always check the new position URLs added by the script (for mozilla only for now) to make sure they are correct.
-// This script attempts to detect new standard position URLs for features, only for Mozilla for now.
-// For webkit, you first need to add the URLs in the standard-positions.json file before running this script.
+// Add "not" entries if any of the URLs are not relevant to a feature.
 
 import { features } from "web-features";
-import playwright from "playwright";
 import fs from "fs/promises";
 import positions from "../standard-positions.json" assert { type: "json" };
 
 const OUTPUT_FILE = "../standard-positions.json";
-
 const MOZILLA_DATA_FILE =
   "https://raw.githubusercontent.com/mozilla/standards-positions/refs/heads/gh-pages/merged-data.json";
+const WEBKIT_DATA_FILE =
+  "https://raw.githubusercontent.com/WebKit/standards-positions/main/summary.json";
+
 let mozillaData = null;
+let webkitData = null;
+
 async function getMozillaData() {
   if (!mozillaData) {
     const response = await fetch(MOZILLA_DATA_FILE);
@@ -40,9 +60,6 @@ async function getMozillaPosition(url) {
   };
 }
 
-const WEBKIT_DATA_FILE =
-  "https://raw.githubusercontent.com/WebKit/standards-positions/main/summary.json";
-let webkitData = null;
 async function getWebkitData() {
   if (!webkitData) {
     const response = await fetch(WEBKIT_DATA_FILE);
@@ -102,11 +119,11 @@ async function findNewMozillaURLs() {
       }
       const matches = doesFeatureHaveSpec(features[featureId], issue.url);
       const issueUrl = `https://github.com/mozilla/standards-positions/issues/${issueId}`;
-      const isWrongIssue = positions[featureId].mozilla.not && positions[featureId].mozilla.not.includes(issueUrl);
+      const isWrongIssue =
+        positions[featureId].mozilla.not &&
+        positions[featureId].mozilla.not.includes(issueUrl);
       if (matches && !isWrongIssue) {
-        positions[
-          featureId
-        ].mozilla.url = issueUrl;
+        positions[featureId].mozilla.url = issueUrl;
       }
     }
   }
@@ -129,7 +146,9 @@ async function findNewWebkitURLs() {
         continue;
       }
       const matches = doesFeatureHaveSpec(features[featureId], issue.url);
-      const isWrongIssue = positions[featureId].webkit.not && positions[featureId].webkit.not.includes(issue.id);
+      const isWrongIssue =
+        positions[featureId].webkit.not &&
+        positions[featureId].webkit.not.includes(issue.id);
       if (matches && !isWrongIssue) {
         positions[featureId].webkit.url = issue.id;
       }
