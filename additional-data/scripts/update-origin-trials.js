@@ -1,7 +1,28 @@
 // This script updates the origin-trials.json file with the latest Chrome Origin Trials data.
-// For now, only Chrome is supported.
-// The script fetches the latest Chrome Origin Trials data from chromestatus.com and updates the origin-trials.json file.
-// It maps OTs to features based on the spec URL.
+
+// The format of the origin-trials.json file is the following: top-level keys are web-features IDs,
+// their values are arrays.
+// {
+//   "<feature-id>": []
+// }
+// The array for a feature is empty if there aren't any known origin trials for the feature.
+// Each known feature origin trial is an object as follows:
+// {
+//   "browser": "<name of the browser>",
+//   "name": "<name of the origin trial>",
+//   "start": "<start milestone>",
+//   "end": "<end milestone>",
+//   "feedbackUrl": "<URL for feedback>",
+//   "registrationUrl": "<URL for registration>"
+// }
+
+// For Chrome, the script fetches the latest Chrome Origin Trials data by using the chromestatus.com
+// API, and updates the origin-trials.json file by mapping spec URLs between the features and the
+// OT.
+
+// Other browsers are not supported yet.
+// For Edge, see https://developer.microsoft.com/en-us/microsoft-edge/origin-trials/trials
+// For Firefox, see https://wiki.mozilla.org/Origin_Trials
 
 import { features } from "web-features";
 import fs from "fs/promises";
