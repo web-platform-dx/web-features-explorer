@@ -16,29 +16,34 @@
 
 @media (min-width: 600px) {
   :root {
-    --margin: 2rem;
+    --margin: 2.3rem;
   }
 }
 
 html {
-  font-size: 1rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: .9rem;
+  font-family: Verdana, sans-serif;
   color: var(--text);
   background: var(--background);
+  line-height: 1.5;
 }
 
 body {
-  margin: var(--margin) 0;
+  margin: 0;
 }
 
 header {
-  font-size: 1.5rem;
-  margin-block-end: var(--margin);
-  padding: 0 var(--margin);
+  padding: var(--margin);
+  text-align: center;
+  background: var(--baseline-high-bg);
+  border-block-end: 1px solid var(--baseline-high-label-bg);
 }
 
-header a {
+header > a {
+  display: inline-block;
+  font-size: 1.7rem;
+  margin-block-end: var(--margin);
+
   text-decoration: none;
   color: var(--text);
   padding-inline-start: 3rem;
@@ -46,11 +51,22 @@ header a {
   background-repeat: no-repeat;
   background-size: 2rem;
   background-position: 0 center;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  header > a {
+    padding-inline-start: 0;
+    padding-block-start: 2.5rem;
+    background-position: center 0;
+    font-size: 1.5rem;
+  }
 }
 
 h1 {
   margin: var(--margin) 0;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: normal;
 }
 
 h1 img {
@@ -94,6 +110,12 @@ code {
   border-radius: 0.125rem;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
+/* Feature box */
+
 .feature {
   padding: var(--margin);
   border-radius: 0.5rem;
@@ -117,17 +139,29 @@ code {
   background: var(--baseline-high-bg);
 }
 
+.feature.baseline-false {
+  background: linear-gradient(to bottom, var(--baseline-limited-bg), var(--background));
+}
+
+.feature.baseline-low {
+  background: linear-gradient(to bottom, var(--baseline-low-bg), var(--background));
+}
+
+.feature.baseline-high {
+  background: linear-gradient(to bottom, var(--baseline-high-bg), var(--background));
+}
+
 .feature .header {
   display: flex;
   gap: 0.5rem;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .feature h2,
 .feature h1 {
   margin: 0;
-  font-size: 1.2rem;
 }
 
 .feature > p {
@@ -284,50 +318,55 @@ code {
   margin-inline-start: 0.5rem;
 }
 
+/* Feature page */
+
+.feature-page .feature {
+  background: none;
+  padding: 0;
+}
+
+/* Nav */
+
 nav {
-  border-block-end: 2px solid;
   padding: 0 var(--margin);
 }
 
 nav ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
-  gap: 0.25rem;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 nav a {
   display: block;
   padding: 0.5rem;
+  color: var(--text);
 }
 
 nav li {
-  border: 2px solid;
-  translate: 0 2px;
-}
-
-nav li.monthly {
+  border-radius: .25rem;
   background-image: linear-gradient(
     to top right,
     var(--baseline-high-label-bg),
     var(--baseline-low-label-bg),
     var(--baseline-limited-label-bg)
   );
-}
-
-nav li.baseline-low {
-  background: var(--baseline-low-label-bg);
-}
-nav li.baseline-high {
-  background: var(--baseline-high-label-bg);
-}
-nav li.nobaseline {
-  background: var(--baseline-limited-label-bg);
+  filter: saturate(2);
+  box-shadow: 0 0 .5rem 0 #fff;
 }
 
 main {
   padding: 0 var(--margin);
 }
+
+/* Home page */
+
+.home > p {
+  margin: var(--margin) 0;
+}
+
+/* List of all release notes */
 
 .monthly-update-list {
   display: grid;
@@ -350,17 +389,122 @@ main {
   padding: 0.125rem 0;
 }
 
-.month-update ul {
-  padding: calc(var(--margin) / 2);
-  border-radius: 0.5rem;
+/* Individual month release note */
+
+.release-notes:not(.home) {
+  display: grid;
+  column-gap: var(--margin);
+  grid-template-columns: 1fr 13rem;
+}
+
+.release-notes h1 {
+  grid-column: span 2;
+}
+
+.release-notes section {
+  padding: var(--margin);
+  border-radius: .5rem;
+  margin-block-end: var(--margin);
+}
+
+.release-notes .baseline-low {
+  background: linear-gradient(to bottom, var(--baseline-low-bg), var(--background));
+}
+
+.release-notes .baseline-high {
+  background: linear-gradient(to bottom, var(--baseline-high-bg), var(--background));
+}
+
+.release-notes .baseline-false {
+  background: linear-gradient(to bottom, var(--baseline-limited-bg), var(--background));
+}
+
+.release-notes h2 {
+  margin-block-start: 0;
+  font-size: 1.2rem;
+}
+
+.release-notes section h2 {
+  padding-inline-start: 3rem;
+  background-repeat: no-repeat;
+  background-size: 1.7rem;
+  background-position: 0 center;
+}
+
+.release-notes .baseline-low h2 {
+  background-image: url(https://web-platform-dx.github.io/web-features/assets/img/baseline-newly-icon.svg);
+}
+
+.release-notes .baseline-high h2 {
+  background-image: url(https://web-platform-dx.github.io/web-features/assets/img/baseline-widely-icon.svg);
+}
+
+.release-notes .safari h2,
+.release-notes .safari_ios h2 {
+  background-image: url(./safari.svg);
+}
+
+.release-notes .firefox h2,
+.release-notes .firefox_android h2 {
+  background-image: url(./firefox.svg);
+}
+
+.release-notes .chrome h2,
+.release-notes .chrome_android h2 {
+  background-image: url(./chrome.svg);
+}
+
+.release-notes .edge h2 {
+  background-image: url(./edge.svg);
+}
+
+.release-notes section ul {
   column-gap: calc(var(--margin) / 2);
   column-width: 20rem;
 }
 
-.month-update li {
+.release-notes section li {
   break-inside: avoid;
-  margin-block-end: 1rem;
+  margin: 0 0 var(--margin) 1rem;
+  list-style: disc;
 }
+
+.release-notes aside {
+  background: var(--background-alt);
+  padding: calc(var(--margin) / 2);
+  border-radius: .5rem;
+  place-self: start stretch;
+}
+
+.release-notes aside ul {
+  line-height: 2;
+}
+
+@media (max-width: 750px) {
+  .release-notes {
+    display: block;
+  }
+  
+  .release-notes aside {
+    padding: var(--margin);
+  }
+}
+
+/* Feature list pages */
+
+.explore-features .views {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem .5rem;
+  margin: var(--margin) 0;
+}
+
+.explore-features .views a {
+  padding: .5rem;
+  border-radius: .25rem;
+}
+
+/* Groups */
 
 .groups li {
   padding: 0.25rem;
@@ -381,13 +525,7 @@ main {
   background-repeat: no-repeat;
 }
 
-footer {
-  border-block-start: 2px solid;
-  margin-block-start: var(--margin);
-  color: var(--sub-text);
-  font-size: smaller;
-  padding: 0 var(--margin);
-}
+/* Timeline concept */
 
 #timeline {
   overflow-x: auto;
@@ -408,6 +546,7 @@ footer {
   background: var(--background);
   padding: 0 0.25rem;
 }
+
 #timeline .timeline-year h2 {
   font-size: inherit;
   margin: 0;

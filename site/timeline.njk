@@ -3,69 +3,71 @@ title: Web features timeline
 layout: layout.njk
 ---
 
-<p>This page lists web platform features by years when they reached Baseline Newly Available status.
+<main>
+  <p>This page lists web platform features by years when they reached Baseline Newly Available status.
 
-<div id="timeline"></div>
+  <div id="timeline"></div>
 
-<script>
-const baselineLowDateFeatures = [
-  {% for feature in allFeatures %}
-    {% if feature.status.baseline_low_date %}
-      {
-        feature: "{{ feature.id }}",
-        name: "{{ feature.name }}",
-        baseline_low_date: "{{ feature.status.baseline_low_date }}"
-      },
-    {% endif %}
-  {% endfor %}
-];
+  <script>
+  const baselineLowDateFeatures = [
+    {% for feature in allFeatures %}
+      {% if feature.status.baseline_low_date %}
+        {
+          feature: "{{ feature.id }}",
+          name: "{{ feature.name }}",
+          baseline_low_date: "{{ feature.status.baseline_low_date }}"
+        },
+      {% endif %}
+    {% endfor %}
+  ];
 
-const perYear = new Map();
+  const perYear = new Map();
 
-baselineLowDateFeatures.forEach(feature => {
-  const year = feature.baseline_low_date.split('-')[0];
+  baselineLowDateFeatures.forEach(feature => {
+    const year = feature.baseline_low_date.split('-')[0];
 
-  if (year.startsWith("≤")) {
-    // For now we ignore the ≤ dates, because we don't know where to put them.
-    return;
+    if (year.startsWith("≤")) {
+      // For now we ignore the ≤ dates, because we don't know where to put them.
+      return;
+    }
+
+    if (year === "2015") {
+      // Ignore the first baseline year ever, because a ton of features will be there
+      // just because that's the first year we have in the data.
+      return;
+    }
+
+    if (!perYear.has(year)) {
+      perYear.set(year, []);
+    }
+    perYear.get(year).push(feature);
+  });
+
+  function createYear(year, features) {
+    const yearDiv = document.createElement('div');
+    yearDiv.classList.add('timeline-year');
+
+    const yearHeader = document.createElement('h2');
+    yearHeader.textContent = year;
+    yearDiv.appendChild(yearHeader);
+
+    for (const feature of features) {
+      const featureDiv = document.createElement('div');
+      featureDiv.classList.add('timeline-feature');
+      featureDiv.textContent = feature.name;
+      yearDiv.appendChild(featureDiv);
+    }
+
+    return yearDiv;
   }
 
-  if (year === "2015") {
-    // Ignore the first baseline year ever, because a ton of features will be there
-    // just because that's the first year we have in the data.
-    return;
-  }
+  const timelineContainer = document.getElementById('timeline');
 
-  if (!perYear.has(year)) {
-    perYear.set(year, []);
-  }
-  perYear.get(year).push(feature);
-});
+  [...perYear.entries()].sort((a, b) => a[0] - b[0]).forEach(([year, features]) => {
+    const div = createYear(year, features);
+    timelineContainer.appendChild(div);
+  });
 
-function createYear(year, features) {
-  const yearDiv = document.createElement('div');
-  yearDiv.classList.add('timeline-year');
-
-  const yearHeader = document.createElement('h2');
-  yearHeader.textContent = year;
-  yearDiv.appendChild(yearHeader);
-
-  for (const feature of features) {
-    const featureDiv = document.createElement('div');
-    featureDiv.classList.add('timeline-feature');
-    featureDiv.textContent = feature.name;
-    yearDiv.appendChild(featureDiv);
-  }
-
-  return yearDiv;
-}
-
-const timelineContainer = document.getElementById('timeline');
-
-[...perYear.entries()].sort((a, b) => a[0] - b[0]).forEach(([year, features]) => {
-  const div = createYear(year, features);
-  timelineContainer.appendChild(div);
-});
-
-console.log(perYear);
-</script>
+  console.log(perYear);
+  </script>
+</main>

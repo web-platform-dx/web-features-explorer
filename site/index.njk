@@ -3,36 +3,31 @@ title: Home
 layout: layout.njk
 ---
 
-<section class="intro">
-  <h1>Discover web platform features and stay up-to-date with changes</h1>
-  <p class="subtitle">Find information about APIs and features of the web platform. The data displayed here comes from the <a href="https://github.com/web-platform-dx/web-features">web-features</a> repository; an open-source project that's maintained by the <a href="https://www.w3.org/community/webdx/">W3C WebDX Community Group</a>, and which aims at providing a common list of features and their definitions to improve understanding of what web developers get and want from the web.</p>
-</section>
+<main class="home release-notes">
+  <h1>Stay up-to-date with the web platform</h1>
+  <p>Use the Web platform features explorer to discover new features and APIs and stay up-to-date with changes.</h1>
 
-<section class="latest">
-  <h2>Latest updates</h2>
+  <section class="baseline-low">
+    <h2>Newly available across browsers</h2>
+    <ul>
+      {% for feature in latest.latestBaselineLow %}
+        <li>
+          <strong><a href="/features/{{ feature.id | slugify }}/">{{ feature.name }}</a></strong>:
+          {{ feature.description_html | safe }}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 
-  <h3>Now newly available</h3>
-  <ul>
-    {% for feature in latest.latestBaselineLow %}
-      <li class="feature mini baseline-low">
-        <p>
-          <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
-          <strong><a href="/features/{{ feature.id | slugify }}/">Learn more.</a></strong>
-        </p>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <h3>Now widely available</h3>
-  <ul>
-    {% for feature in latest.latestBaselineHigh %}
-      <li class="feature mini baseline-high">
-        <p>
-          <strong>{{ feature.name }}</strong>: {{ feature.description_html | safe }}
-          <strong><a href="/features/{{ feature.id | slugify }}/">Learn more.</a></strong>
-        </p>
-      </li>
-    {% endfor %}
-  </ul>
-
-</section>
+  <section class="baseline-high">
+    <h2>Now widely available across browsers</h2>
+    <ul>
+      {% for feature in latest.latestBaselineHigh %}
+        <li>
+          <strong><a href="/features/{{ feature.id | slugify }}/">{{ feature.name }}</a></strong>:
+          {{ feature.description_html | safe }}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</main>

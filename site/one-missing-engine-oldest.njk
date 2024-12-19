@@ -2,15 +2,20 @@
 title: Features missing in just one browser engine (oldest first)
 layout: layout.njk
 ---
-<h1>{{ title }}</h1>
 
-<p>The following features are missing from just one browser engine.<br>
-This view shows the features that have been blocked for the longest time first. To see the most recently updated features first, see <strong><a href="/one-missing-engine/">Features missing in just one browser engine</a></strong>.</p>
+<main class="explore-features">
+  {% include "feature_list_views.njk" %}
 
-<ul class="features">
-  {% for feature in missingOneBrowserFeatures | reverse %}
-    <li>
-      {% include "feature_short.njk" %}
-    </li>
-  {% endfor %}
-</ul>
+  <h1>{{ title }}</h1>
+
+  <p>The following features are missing from just one browser engine.<br>
+  This view shows the features that have been blocked for the longest time first. To see the most recently updated features first, see <strong><a href="/one-missing-engine/">Features missing in just one browser engine</a></strong>.</p>
+
+  <ul class="features">
+    {% for feature in missingOneBrowserFeatures | reverse %}
+      <li>
+        {% include "feature_short.njk" %}
+      </li>
+    {% endfor %}
+  </ul>
+</main>

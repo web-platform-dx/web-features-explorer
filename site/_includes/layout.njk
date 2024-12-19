@@ -1,5 +1,5 @@
 ---
-siteTitle: Web features explorer
+siteTitle: Web platform features explorer
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -12,29 +12,19 @@ siteTitle: Web features explorer
   </head>
   <body>
 
-    <header><a href="/">{{ siteTitle }}</a></header>
+    <header>
+      <a href="/">{{ siteTitle }}</a>
 
-    <nav>
-      <ul>
-        <li class="monthly"><a href="/release-notes">Release notes</a></li>
-        <li class="baseline-low"><a href="/newly-available">Newly available</a></li>
-        <li class="baseline-high"><a href="/widely-available">Widely available</a></li>
-        <li class="nobaseline"><a href="/limited-availability">Limited availability</a></li>
-        <li class="nobaseline"><a href="/one-missing-engine">One missing engine</a></li>
-        <li><a href="/all">All</a></li>
-        <li><a href="/groups">Groups</a></li>
-        <li><a href="/browse">Browse features</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href="/release-notes/{{ perMonth[0].date | slugify }}">Release notes</a></li>
+          <li><a href="/features">Explore all features</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main>
-      {{ content | safe }}
-    </main>
-
-    <footer>
-      <p>Generated on {{ versions.date }} using <a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>{{ versions.webFeatures }}</code> and <a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>{{ versions.bcd }}</code></p>
-      <p>Source code: <a href="https://github.com/web-platform-dx/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
-    </footer>
+    {{ content | safe }}
 
   </body>
 </html>

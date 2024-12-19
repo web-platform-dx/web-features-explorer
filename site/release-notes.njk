@@ -1,23 +1,25 @@
 ---
-title: Web platform release notes
+title: All release notes
 layout: layout.njk
 ---
 
-<h1>{{ title }}</h1>
+<main>
+  <h1>{{ title }}</h1>
 
-<ul class="monthly-update-list">
-  {% for month in perMonth %}
-    <li class="month-entry">
-      <h2><a href="{{ month.date | slugify }}">{{ month.date }}</a></h2>
-      <ul>
-        {% for feature in month.all %}
-          {% if loop.index0 < 10 %}
-            <li>{{ feature.name }}</li>
-          {% elseif loop.index0 == 10 %}
-            <li>and more ...</li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </li>
-  {% endfor %}
-</ul>
+  <ul class="monthly-update-list">
+    {% for month in perMonth %}
+      <li class="month-entry">
+        <h2><a href="{{ month.date | slugify }}">{{ month.date }}</a></h2>
+        <ul>
+          {% for feature in month.all %}
+            {% if loop.index0 < 10 %}
+              <li>{{ feature.name }}</li>
+            {% elseif loop.index0 == 10 %}
+              <li>and more ...</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+</main>

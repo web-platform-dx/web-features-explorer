@@ -27,23 +27,25 @@ layout: layout.njk
   </li>
 {% endmacro %}
 
-<h1>{{ title }}</h1>
+<main>
+  <h1>{{ title }}</h1>
 
-<p><strong>Work in progress</strong>. This page displays groups of features in a tree structure. Groups have not yet been finalized, expect frequent changes.</p>
+  <p><strong>Work in progress</strong>. This page displays groups of features in a tree structure. Groups have not yet been finalized, expect frequent changes.</p>
 
-<ul class="groups">
-  {% for id, group in perGroup %}
-    {% if group.parent == null %}
-      {{ groupMacro(id, group, perGroup) }}
-    {% endif %}
-  {% endfor %}
-</ul>
+  <ul class="groups">
+    {% for id, group in perGroup %}
+      {% if group.parent == null %}
+        {{ groupMacro(id, group, perGroup) }}
+      {% endif %}
+    {% endfor %}
+  </ul>
 
-<h2>Ungrouped features</h2>
-<ul class="features">
-  {% for feature in allFeatures %}
-    {% if feature.groups.length === 0 %}
-      <li><a href="/features/{{ feature.id | slugify }}/">{{ feature.name }}</a></li>
-    {% endif %}
-  {% endfor %}
-</ul>
+  <h2>Ungrouped features</h2>
+  <ul class="features">
+    {% for feature in allFeatures %}
+      {% if feature.groups.length === 0 %}
+        <li><a href="/features/{{ feature.id | slugify }}/">{{ feature.name }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</main>
