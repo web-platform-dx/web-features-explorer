@@ -2,373 +2,832 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Web features explorer - September 2024 web platform update</title>
+    <title>Web platform features explorer - September 2024 release notes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
   </head>
   <body>
 
-    <header><a href="/web-features-explorer/">Web features explorer</a></header>
+    <header>
+      <a href="/web-features-explorer/">Web platform features explorer</a>
 
-    <nav>
-      <ul>
-        <li class="monthly"><a href="/web-features-explorer/release-notes">Release notes</a></li>
-        <li class="baseline-low"><a href="/web-features-explorer/newly-available">Newly available</a></li>
-        <li class="baseline-high"><a href="/web-features-explorer/widely-available">Widely available</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/limited-availability">Limited availability</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/one-missing-engine">One missing engine</a></li>
-        <li><a href="/web-features-explorer/all">All</a></li>
-        <li><a href="/web-features-explorer/groups">Groups</a></li>
-        <li><a href="/web-features-explorer/browse">Browse features</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href="/web-features-explorer/release-notes/december-2024">Release notes</a></li>
+          <li><a href="/web-features-explorer/features">Explore all features</a></li>
+          <li><a href="/web-features-explorer/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main>
-      
-<h1>September 2024 web platform update</h1>
+    
+<main class="release-notes">
+  <h1>📃 September 2024 release notes</h1>
 
-<section class="month-update">
-  
-    <h2>Newly available</h2>
-    <p>The following features are newly available:</p>
-    <ul class="baseline-low">
+  <div>
+    
+      <section class="baseline-low">
+        <h2>Newly available</h2>
+        <p>The following features are newly available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/backdrop-filter/">backdrop-filter</a></strong>:
+              The <code>backdrop-filter</code> CSS property applies graphical effects such as blurring or color shifting to the area behind an element.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/canvas-2d-willreadfrequently/">willReadFrequently</a></strong>:
+              The optional <code>willReadFrequently</code> parameter of a canvas's <code>getContext()</code> method permits the browser to optimize for frequent <code>getImageData()</code> calls by avoiding hardware acceleration. Also known as multiple readback.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/content-visibility/">content-visibility</a></strong>:
+              The <code>content-visibility</code> CSS property delays rendering an element, including layout and painting, until it is needed.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/cookie-enabled/">cookieEnabled</a></strong>:
+              The <code>navigator.cookieEnabled</code> property returns a Boolean value for whether the browser accepts or ignores attempts to write cookie data.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/details-name/">Mutually exclusive &lt;details&gt; elements</a></strong>:
+              Multiple <code>&#x3C;details></code> elements which use the same <code>name</code> attribute are mutually exclusive. When one member of the group is opened, all other members are closed.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/http3/">HTTP/3</a></strong>:
+              HTTP/3 is a major revision of the HTTP network protocol, providing improved performance and efficiency by using QUIC as the underlying transport protocol.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/relative-color/">Relative colors</a></strong>:
+              The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/wasm-typed-fun-refs/">Typed function references (WebAssembly)</a></strong>:
+              A typed function reference can be called directly.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
+      <section class="baseline-high">
+        <h2>Widely available</h2>
+        <p>The following features are now widely available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/appearance/">appearance</a></strong>:
+              The <code>appearance</code> CSS property controls the appearance of form controls. Using <code>appearance: none</code> disables any default native appearance and allows the elements to be styled with CSS.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/array-at/">Array at()</a></strong>:
+              The <code>at()</code> method of arrays and typed arrays returns the item at an index, including negative indices for getting items relative to the end of an array. Also known as the relative indexing method.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/backdrop/">::backdrop</a></strong>:
+              The <code>::backdrop</code> CSS pseudo-element is a box underneath an element in the top layer, such as a <code>&#x3C;dialog></code>. It can be used to create obscuring effects distinguishing a modal element from the elements underneath.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/background-attachment/">background-attachment</a></strong>:
+              The <code>background-attachment</code> CSS property sets whether an element's background image or gradient moves as the element scrolls.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/broadcast-channel/">BroadcastChannel</a></strong>:
+              The <code>BroadcastChannel</code> API allows you to send messages between same-origin browsing contexts, such as between the same page loaded in multiple tabs.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/cascade-layers/">Cascade layers</a></strong>:
+              The <code>@layer</code> CSS at-rule avoids specificity conflicts by providing priority levels for different groups of CSS rules, such as low-priority styles like resets, and high-priority styles like UI components.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/contain/">contain</a></strong>:
+              The <code>contain</code> CSS property sets limits to the scope of styles, layout, and paint rendering for speed and efficiency. The <code>none</code> keyword value disables containment, <code>strict</code> is equivalent to <code>contain: size layout style paint</code>, and <code>content</code> is equivalent to <code>contain: layout style paint</code>.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/contain-layout/">Layout containment</a></strong>:
+              The <code>contain: layout</code> CSS declaration isolates the inside of an element such that it cannot affect the layout of the rest of the page or be affected by the rest of the page. This permits the browser to avoid slower layout calculations.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/contain-paint/">Paint containment</a></strong>:
+              The <code>contain: paint</code> CSS declaration prevents an element's descendants from being drawn outside the boundaries of the containing element, with any overflow clipped. This permits the browser to avoid slower painting calculations.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/contain-size/">Size containment</a></strong>:
+              The <code>contain: size</code> CSS declaration sets an element's dimensions exclusively by its <code>height</code> and <code>width</code> properties, ignoring its contents and descendants. This permits the browser to avoid slower layout calculations.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/dialog/">&lt;dialog&gt;</a></strong>:
+              The <code>&#x3C;dialog></code> HTML element represents a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/focus-visible/">:focus-visible</a></strong>:
+              The <code>:focus-visible</code> CSS pseudo-class selects elements that match the <code>:focus</code> pseudo-class and meets the browser's criteria for visually emphasizing focused elements.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/hardware-concurrency/">hardwareConcurrency</a></strong>:
+              The <code>navigator.hardwareConcurrency</code> read-only property returns the number of logical processors available to run threads on the user's computer.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/scroll-behavior/">scroll-behavior</a></strong>:
+              The <code>scroll-behavior</code> CSS property controls whether scrolling is smooth or snaps, for scroll actions not performed by the user such as those triggered by navigation.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/string-at/">String at()</a></strong>:
+              The <code>at()</code> method of strings returns the character (one UTF-16 code unit) at an index, including negative indices for getting the character relative to the end of the string. Also known as the relative indexing method.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/structured-clone/">structuredClone()</a></strong>:
+              The <code>structuredClone()</code> global method creates a deep copy of an object. Values that cannot be cloned can instead be transferred, making the original value no longer usable.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/text-combine-upright/">text-combine-upright</a></strong>:
+              The <code>text-combine-upright</code> CSS property displays multiple characters in the space of a single character in vertical text. This is used in East Asian documents to display Latin-based strings such as components of a date or letters of an initialism.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/text-emphasis/">text-emphasis</a></strong>:
+              The <code>text-emphasis</code> CSS property sets position and style for text emphasis marks, especially for East Asian languages.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/transforms3d/">3D transforms</a></strong>:
+              The <code>transform</code> CSS property and its 3D transform functions allow rotations and other transforms in three dimensions, including perspective transforms.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/web-locks/">Locks</a></strong>:
+              The <code>navigator.locks</code> API coordinates work with shared resources through mutually exclusive ownership of a resource's name. Also known as web locks.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/backdrop-filter/">backdrop-filter</a></strong>:
-          The <code>backdrop-filter</code> CSS property applies graphical effects such as blurring or color shifting to the area behind an element.
-        </li>
+        <section class="baseline-false chrome">
+          <h2>New in Chrome</h2>
+          <p>The following features are now available in Chrome:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/calc-size/">calc-size()</a></strong>:
+                The <code>calc-size()</code> CSS function computes mathematical expressions that include <code>height</code> and <code>width</code> keyword values, for example <code>calc-size(fit-content, size / 2)</code>. Not to be confused with the <code>calc()</code> CSS function, which cannot use keyword values.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/interpolate-size/">interpolate-size</a></strong>:
+                The <code>interpolate-size</code> CSS property sets whether animations and transitions interpolate between a numeric value and a keyword value, such as from a fixed length to <code>auto</code> or <code>fit-content</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/intl-duration-format/">Intl.DurationFormat</a></strong>:
+                The <code>Intl.DurationFormat</code> API creates a locale-aware formatter that turns an object representing a duration (such as days, hours, and minutes) into a string.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scheduler/">Scheduler API</a></strong>:
+                The <code>scheduler</code> API provides a way to prioritize all tasks belonging to an application.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scroll-snap-events/">Scroll snap events</a></strong>:
+                The <code>scrollsnapchanging</code> and <code>scrollsnapchange</code> events fire when a scroll gesture changes the selected scroll snap target.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/virtual-pressure-sources/">Virtual pressure sources</a></strong>:
+                The <code>CreateVirtualPressureSource</code> WebDriver command creates artificial sources of compute pressure for testing without the need real device sources of compute pressure.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/canvas-2d-willreadfrequently/">willReadFrequently</a></strong>:
-          The optional <code>willReadFrequently</code> parameter of a canvas's <code>getContext()</code> method permits the browser to optimize for frequent <code>getImageData()</code> calls by avoiding hardware acceleration. Also known as multiple readback.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/content-visibility/">content-visibility</a></strong>:
-          The <code>content-visibility</code> CSS property delays rendering an element, including layout and painting, until it is needed.
-        </li>
+        <section class="baseline-false chrome_android">
+          <h2>New in Chrome Android</h2>
+          <p>The following features are now available in Chrome Android:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/calc-size/">calc-size()</a></strong>:
+                The <code>calc-size()</code> CSS function computes mathematical expressions that include <code>height</code> and <code>width</code> keyword values, for example <code>calc-size(fit-content, size / 2)</code>. Not to be confused with the <code>calc()</code> CSS function, which cannot use keyword values.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/interpolate-size/">interpolate-size</a></strong>:
+                The <code>interpolate-size</code> CSS property sets whether animations and transitions interpolate between a numeric value and a keyword value, such as from a fixed length to <code>auto</code> or <code>fit-content</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/intl-duration-format/">Intl.DurationFormat</a></strong>:
+                The <code>Intl.DurationFormat</code> API creates a locale-aware formatter that turns an object representing a duration (such as days, hours, and minutes) into a string.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scheduler/">Scheduler API</a></strong>:
+                The <code>scheduler</code> API provides a way to prioritize all tasks belonging to an application.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scroll-snap-events/">Scroll snap events</a></strong>:
+                The <code>scrollsnapchanging</code> and <code>scrollsnapchange</code> events fire when a scroll gesture changes the selected scroll snap target.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/virtual-pressure-sources/">Virtual pressure sources</a></strong>:
+                The <code>CreateVirtualPressureSource</code> WebDriver command creates artificial sources of compute pressure for testing without the need real device sources of compute pressure.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/cookie-enabled/">cookieEnabled</a></strong>:
-          The <code>navigator.cookieEnabled</code> property returns a Boolean value for whether the browser accepts or ignores attempts to write cookie data.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/details-name/">Mutually exclusive &lt;details&gt; elements</a></strong>:
-          Multiple <code>&#x3C;details></code> elements which use the same <code>name</code> attribute are mutually exclusive. When one member of the group is opened, all other members are closed.
-        </li>
+        <section class="baseline-false edge">
+          <h2>New in Edge</h2>
+          <p>The following features are now available in Edge:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/calc-size/">calc-size()</a></strong>:
+                The <code>calc-size()</code> CSS function computes mathematical expressions that include <code>height</code> and <code>width</code> keyword values, for example <code>calc-size(fit-content, size / 2)</code>. Not to be confused with the <code>calc()</code> CSS function, which cannot use keyword values.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/interpolate-size/">interpolate-size</a></strong>:
+                The <code>interpolate-size</code> CSS property sets whether animations and transitions interpolate between a numeric value and a keyword value, such as from a fixed length to <code>auto</code> or <code>fit-content</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/intl-duration-format/">Intl.DurationFormat</a></strong>:
+                The <code>Intl.DurationFormat</code> API creates a locale-aware formatter that turns an object representing a duration (such as days, hours, and minutes) into a string.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scheduler/">Scheduler API</a></strong>:
+                The <code>scheduler</code> API provides a way to prioritize all tasks belonging to an application.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scroll-snap-events/">Scroll snap events</a></strong>:
+                The <code>scrollsnapchanging</code> and <code>scrollsnapchange</code> events fire when a scroll gesture changes the selected scroll snap target.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/virtual-pressure-sources/">Virtual pressure sources</a></strong>:
+                The <code>CreateVirtualPressureSource</code> WebDriver command creates artificial sources of compute pressure for testing without the need real device sources of compute pressure.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/http3/">HTTP/3</a></strong>:
-          HTTP/3 is a major revision of the HTTP network protocol, providing improved performance and efficiency by using QUIC as the underlying transport protocol.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/relative-color/">Relative colors</a></strong>:
-          The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).
-        </li>
+        <section class="baseline-false firefox">
+          <h2>New in Firefox</h2>
+          <p>The following features are now available in Firefox:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webcodecs/">WebCodecs</a></strong>:
+                The WebCodecs API provides low-level access to individual video frames and chunks of audio samples, for full control over the way media is processed.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/wasm-typed-fun-refs/">Typed function references (WebAssembly)</a></strong>:
-          A typed function reference can be called directly.
-        </li>
+    
+      
+    
+      
+        <section class="baseline-false safari">
+          <h2>New in Safari</h2>
+          <p>The following features are now available in Safari:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/container-style-queries/">Container style queries</a></strong>:
+                Container style queries with the <code>@container</code> at-rule apply styles to an element based on the values of custom properties of its container.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/display-animation/">display animation</a></strong>:
+                You can animate elements between <code>display: none</code> and any other <code>display</code> value or animate between <code>content-visibility: hidden</code> and any other <code>content-visibility</code> value. This also applies to transitions.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/writingsuggestions/">writingsuggestions</a></strong>:
+                The <code>writingsuggestions</code> HTML attribute turns on or off a browser's writing suggestions. Writing suggestions vary by browser. For example, if turned on then a browser might show inline text completions accepted by pressing Tab.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+      
+        <section class="baseline-false safari_ios">
+          <h2>New in Safari on iOS</h2>
+          <p>The following features are now available in Safari on iOS:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/container-style-queries/">Container style queries</a></strong>:
+                Container style queries with the <code>@container</code> at-rule apply styles to an element based on the values of custom properties of its container.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/display-animation/">display animation</a></strong>:
+                You can animate elements between <code>display: none</code> and any other <code>display</code> value or animate between <code>content-visibility: hidden</code> and any other <code>content-visibility</code> value. This also applies to transitions.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/writingsuggestions/">writingsuggestions</a></strong>:
+                The <code>writingsuggestions</code> HTML attribute turns on or off a browser's writing suggestions. Writing suggestions vary by browser. For example, if turned on then a browser might show inline text completions accepted by pressing Tab.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+  </div>
+
+  <aside>
+    <h2>Other release notes</h2>
+    <ul>
+      
+        
+          <li class="month-entry">
+            <a href="../december-2024">December 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2024">November 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2024">October 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2024">September 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2024">August 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2024">July 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2024">June 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2024">May 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../april-2024">April 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../march-2024">March 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../february-2024">February 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../january-2024">January 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../december-2023">December 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2023">November 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2023">October 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2023">September 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2023">August 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2023">July 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2023">June 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2023">May 2023</a>
+          </li>
+        
+      
+        
+          <li><a href="../">See all</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
     </ul>
-  
+  </aside>
+</main>
 
-  
-    <h2>Widely available</h2>
-    <p>The following features are now widely available:</p>
-    <ul class="baseline-high">
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/appearance/">appearance</a></strong>:
-          The <code>appearance</code> CSS property controls the appearance of form controls. Using <code>appearance: none</code> disables any default native appearance and allows the elements to be styled with CSS.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/array-at/">Array at()</a></strong>:
-          The <code>at()</code> method of arrays and typed arrays returns the item at an index, including negative indices for getting items relative to the end of an array. Also known as the relative indexing method.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/backdrop/">::backdrop</a></strong>:
-          The <code>::backdrop</code> CSS pseudo-element is a box underneath an element in the top layer, such as a <code>&#x3C;dialog></code>. It can be used to create obscuring effects distinguishing a modal element from the elements underneath.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/background-attachment/">background-attachment</a></strong>:
-          The <code>background-attachment</code> CSS property sets whether an element's background image or gradient moves as the element scrolls.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/broadcast-channel/">BroadcastChannel</a></strong>:
-          The <code>BroadcastChannel</code> API allows you to send messages between same-origin browsing contexts, such as between the same page loaded in multiple tabs.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/cascade-layers/">Cascade layers</a></strong>:
-          The <code>@layer</code> CSS at-rule avoids specificity conflicts by providing priority levels for different groups of CSS rules, such as low-priority styles like resets, and high-priority styles like UI components.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/contain/">contain</a></strong>:
-          The <code>contain</code> CSS property sets limits to the scope of styles, layout, and paint rendering for speed and efficiency. The <code>none</code> keyword value disables containment, <code>strict</code> is equivalent to <code>contain: size layout style paint</code>, and <code>content</code> is equivalent to <code>contain: layout style paint</code>.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/contain-layout/">Layout containment</a></strong>:
-          The <code>contain: layout</code> CSS declaration isolates the inside of an element such that it cannot affect the layout of the rest of the page or be affected by the rest of the page. This permits the browser to avoid slower layout calculations.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/contain-paint/">Paint containment</a></strong>:
-          The <code>contain: paint</code> CSS declaration prevents an element's descendants from being drawn outside the boundaries of the containing element, with any overflow clipped. This permits the browser to avoid slower painting calculations.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/contain-size/">Size containment</a></strong>:
-          The <code>contain: size</code> CSS declaration sets an element's dimensions exclusively by its <code>height</code> and <code>width</code> properties, ignoring its contents and descendants. This permits the browser to avoid slower layout calculations.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/dialog/">&lt;dialog&gt;</a></strong>:
-          The <code>&#x3C;dialog></code> HTML element represents a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/focus-visible/">:focus-visible</a></strong>:
-          The <code>:focus-visible</code> CSS pseudo-class selects elements that match the <code>:focus</code> pseudo-class and meets the browser's criteria for visually emphasizing focused elements.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/hardware-concurrency/">hardwareConcurrency</a></strong>:
-          The <code>navigator.hardwareConcurrency</code> read-only property returns the number of logical processors available to run threads on the user's computer.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/scroll-behavior/">scroll-behavior</a></strong>:
-          The <code>scroll-behavior</code> CSS property controls whether scrolling is smooth or snaps, for scroll actions not performed by the user such as those triggered by navigation.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/string-at/">String at()</a></strong>:
-          The <code>at()</code> method of strings returns the character (one UTF-16 code unit) at an index, including negative indices for getting the character relative to the end of the string. Also known as the relative indexing method.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/structured-clone/">structuredClone()</a></strong>:
-          The <code>structuredClone()</code> global method creates a deep copy of an object. Values that cannot be cloned can instead be transferred, making the original value no longer usable.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/text-combine-upright/">text-combine-upright</a></strong>:
-          The <code>text-combine-upright</code> CSS property displays multiple characters in the space of a single character in vertical text. This is used in East Asian documents to display Latin-based strings such as components of a date or letters of an initialism.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/text-emphasis/">text-emphasis</a></strong>:
-          The <code>text-emphasis</code> CSS property sets position and style for text emphasis marks, especially for East Asian languages.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/transforms3d/">3D transforms</a></strong>:
-          The <code>transform</code> CSS property and its 3D transform functions allow rotations and other transforms in three dimensions, including perspective transforms.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/web-locks/">Locks</a></strong>:
-          The <code>navigator.locks</code> API coordinates work with shared resources through mutually exclusive ownership of a resource's name. Also known as web locks.
-        </li>
-      
-    </ul>
-  
-
-  
-    
-      <h2>New in Chrome</h2>
-      <p>The following features are now available in Chrome:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/calc-size/">calc-size()</a></strong>:
-            The <code>calc-size()</code> CSS function computes mathematical expressions that include <code>height</code> and <code>width</code> keyword values, for example <code>calc-size(fit-content, size / 2)</code>. Not to be confused with the <code>calc()</code> CSS function, which cannot use keyword values.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/interpolate-size/">interpolate-size</a></strong>:
-            The <code>interpolate-size</code> CSS property sets whether animations and transitions interpolate between a numeric value and a keyword value, such as from a fixed length to <code>auto</code> or <code>fit-content</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/intl-duration-format/">Intl.DurationFormat</a></strong>:
-            The <code>Intl.DurationFormat</code> API creates a locale-aware formatter that turns an object representing a duration (such as days, hours, and minutes) into a string.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scheduler/">Scheduler API</a></strong>:
-            The <code>scheduler</code> API provides a way to prioritize all tasks belonging to an application.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scroll-snap-events/">Scroll snap events</a></strong>:
-            The <code>scrollsnapchanging</code> and <code>scrollsnapchange</code> events fire when a scroll gesture changes the selected scroll snap target.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/virtual-pressure-sources/">Virtual pressure sources</a></strong>:
-            The <code>CreateVirtualPressureSource</code> WebDriver command creates artificial sources of compute pressure for testing without the need real device sources of compute pressure.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Chrome Android</h2>
-      <p>The following features are now available in Chrome Android:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/calc-size/">calc-size()</a></strong>:
-            The <code>calc-size()</code> CSS function computes mathematical expressions that include <code>height</code> and <code>width</code> keyword values, for example <code>calc-size(fit-content, size / 2)</code>. Not to be confused with the <code>calc()</code> CSS function, which cannot use keyword values.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/interpolate-size/">interpolate-size</a></strong>:
-            The <code>interpolate-size</code> CSS property sets whether animations and transitions interpolate between a numeric value and a keyword value, such as from a fixed length to <code>auto</code> or <code>fit-content</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/intl-duration-format/">Intl.DurationFormat</a></strong>:
-            The <code>Intl.DurationFormat</code> API creates a locale-aware formatter that turns an object representing a duration (such as days, hours, and minutes) into a string.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scheduler/">Scheduler API</a></strong>:
-            The <code>scheduler</code> API provides a way to prioritize all tasks belonging to an application.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scroll-snap-events/">Scroll snap events</a></strong>:
-            The <code>scrollsnapchanging</code> and <code>scrollsnapchange</code> events fire when a scroll gesture changes the selected scroll snap target.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/virtual-pressure-sources/">Virtual pressure sources</a></strong>:
-            The <code>CreateVirtualPressureSource</code> WebDriver command creates artificial sources of compute pressure for testing without the need real device sources of compute pressure.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Edge</h2>
-      <p>The following features are now available in Edge:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/calc-size/">calc-size()</a></strong>:
-            The <code>calc-size()</code> CSS function computes mathematical expressions that include <code>height</code> and <code>width</code> keyword values, for example <code>calc-size(fit-content, size / 2)</code>. Not to be confused with the <code>calc()</code> CSS function, which cannot use keyword values.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/interpolate-size/">interpolate-size</a></strong>:
-            The <code>interpolate-size</code> CSS property sets whether animations and transitions interpolate between a numeric value and a keyword value, such as from a fixed length to <code>auto</code> or <code>fit-content</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/intl-duration-format/">Intl.DurationFormat</a></strong>:
-            The <code>Intl.DurationFormat</code> API creates a locale-aware formatter that turns an object representing a duration (such as days, hours, and minutes) into a string.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scheduler/">Scheduler API</a></strong>:
-            The <code>scheduler</code> API provides a way to prioritize all tasks belonging to an application.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scroll-snap-events/">Scroll snap events</a></strong>:
-            The <code>scrollsnapchanging</code> and <code>scrollsnapchange</code> events fire when a scroll gesture changes the selected scroll snap target.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/virtual-pressure-sources/">Virtual pressure sources</a></strong>:
-            The <code>CreateVirtualPressureSource</code> WebDriver command creates artificial sources of compute pressure for testing without the need real device sources of compute pressure.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Firefox</h2>
-      <p>The following features are now available in Firefox:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webcodecs/">WebCodecs</a></strong>:
-            The WebCodecs API provides low-level access to individual video frames and chunks of audio samples, for full control over the way media is processed.
-          </li>
-        
-      </ul>
-    
-  
-    
-  
-    
-      <h2>New in Safari</h2>
-      <p>The following features are now available in Safari:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/container-style-queries/">Container style queries</a></strong>:
-            Container style queries with the <code>@container</code> at-rule apply styles to an element based on the values of custom properties of its container.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/display-animation/">display animation</a></strong>:
-            You can animate elements between <code>display: none</code> and any other <code>display</code> value or animate between <code>content-visibility: hidden</code> and any other <code>content-visibility</code> value. This also applies to transitions.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/writingsuggestions/">writingsuggestions</a></strong>:
-            The <code>writingsuggestions</code> HTML attribute turns on or off a browser's writing suggestions. Writing suggestions vary by browser. For example, if turned on then a browser might show inline text completions accepted by pressing Tab.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Safari on iOS</h2>
-      <p>The following features are now available in Safari on iOS:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/container-style-queries/">Container style queries</a></strong>:
-            Container style queries with the <code>@container</code> at-rule apply styles to an element based on the values of custom properties of its container.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/display-animation/">display animation</a></strong>:
-            You can animate elements between <code>display: none</code> and any other <code>display</code> value or animate between <code>content-visibility: hidden</code> and any other <code>content-visibility</code> value. This also applies to transitions.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/writingsuggestions/">writingsuggestions</a></strong>:
-            The <code>writingsuggestions</code> HTML attribute turns on or off a browser's writing suggestions. Writing suggestions vary by browser. For example, if turned on then a browser might show inline text completions accepted by pressing Tab.
-          </li>
-        
-      </ul>
-    
-  
-</section>
-
-    </main>
-
-    <footer>
-      <p>Generated on 12/19/2024 using <a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>2.14.0-dev-20241218204140-fd96a8a</code> and <a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>5.6.25</code></p>
-      <p>Source code: <a href="https://github.com/web-platform-dx/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
-    </footer>
 
   </body>
 </html>

@@ -2,418 +2,877 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Web features explorer - September 2023 web platform update</title>
+    <title>Web platform features explorer - September 2023 release notes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
   </head>
   <body>
 
-    <header><a href="/web-features-explorer/">Web features explorer</a></header>
+    <header>
+      <a href="/web-features-explorer/">Web platform features explorer</a>
 
-    <nav>
-      <ul>
-        <li class="monthly"><a href="/web-features-explorer/release-notes">Release notes</a></li>
-        <li class="baseline-low"><a href="/web-features-explorer/newly-available">Newly available</a></li>
-        <li class="baseline-high"><a href="/web-features-explorer/widely-available">Widely available</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/limited-availability">Limited availability</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/one-missing-engine">One missing engine</a></li>
-        <li><a href="/web-features-explorer/all">All</a></li>
-        <li><a href="/web-features-explorer/groups">Groups</a></li>
-        <li><a href="/web-features-explorer/browse">Browse features</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href="/web-features-explorer/release-notes/december-2024">Release notes</a></li>
+          <li><a href="/web-features-explorer/features">Explore all features</a></li>
+          <li><a href="/web-features-explorer/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main>
-      
-<h1>September 2023 web platform update</h1>
+    
+<main class="release-notes">
+  <h1>📃 September 2023 release notes</h1>
 
-<section class="month-update">
-  
-    <h2>Newly available</h2>
-    <p>The following features are newly available:</p>
-    <ul class="baseline-low">
+  <div>
+    
+      <section class="baseline-low">
+        <h2>Newly available</h2>
+        <p>The following features are newly available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/clear-site-data/">Clearing site data</a></strong>:
+              The <code>Clear-Site-Data</code> header deletes browsing data (such as cookies, storage, or cache) associated with the requesting website.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/contain-intrinsic-size/">contain-intrinsic-size</a></strong>:
+              The <code>contain-intrinsic-size</code> CSS property sets the intrinsic size of an element. When using size containment, the browser will lay out the element as if it had a single child of this size.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/counter-style/">@counter-style</a></strong>:
+              The <code>@counter-style</code> CSS at-rule sets custom counter styles for list items. For example, you can use a sequence of specific symbols instead of numbers for an ordered list.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/device-orientation-events/">Device orientation events</a></strong>:
+              The <code>DeviceMotion</code> and <code>DeviceOrientation</code> events report the movement and orientation of the browser's device in physical space. Note that coordinates can differ noticeably between platforms and devices.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/hyphenate-character/">Hyphenate character</a></strong>:
+              The <code>hyphenate-character</code> CSS property sets the character or string to use at the end of a line before a line break.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/hyphens/">Hyphenation</a></strong>:
+              The <code>hyphens</code> CSS property controls when long words are broken by line wrapping. Although called <code>hyphens</code>, the property applies to word-splitting behavior across languages, such as customary spelling changes or the use of other characters. Support for non-English languages varies significantly.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/image-set/">image-set()</a></strong>:
+              The <code>image-set()</code> CSS function provides a set of images at different resolutions or pixel densities, which the browser can pick from, depending on the device capabilities.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/modulepreload/">&lt;link rel=&quot;modulepreload&quot;&gt;</a></strong>:
+              The <code>rel="modulepreload"</code> attribute for the <code>&#x3C;link></code> HTML element indicates that a module script should be fetched, parsed, and compiled preemptively, and stored for later execution.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/overflow/">Overflow media queries</a></strong>:
+              The <code>overflow-block</code> and <code>overflow-inline</code> CSS media queries set styles based on the way a device displays content that's larger than the viewport or page area. For example, a laptop lets users scroll to reveal content, while a printer displays overflowing content on additional pages.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/storage-manager/">Storage manager</a></strong>:
+              The <code>navigator.storage</code> API provides information about the availability and persistence of the data that a site stores on the device, by using APIs such as the Cache API or the IndexedDB API.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/subgrid/">Subgrid</a></strong>:
+              The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/update/">Update frequency media query</a></strong>:
+              The <code>update</code> CSS media query sets styles based on whether and how fast the user's device can modify display after it has been rendered. For example, you can avoid animations on devices that aren't fast enough to display them smoothly.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
+
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/clear-site-data/">Clearing site data</a></strong>:
-          The <code>Clear-Site-Data</code> header deletes browsing data (such as cookies, storage, or cache) associated with the requesting website.
-        </li>
+        <section class="baseline-false chrome">
+          <h2>New in Chrome</h2>
+          <p>The following features are now available in Chrome:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/array-group/">Array grouping</a></strong>:
+                The <code>Object.groupBy()</code> and <code>Map.groupBy()</code> static methods group values of arrays and iterables based on a function that returns a key for each value.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/display-animation/">display animation</a></strong>:
+                You can animate elements between <code>display: none</code> and any other <code>display</code> value or animate between <code>content-visibility: hidden</code> and any other <code>content-visibility</code> value. This also applies to transitions.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/overlay/">overlay</a></strong>:
+                The <code>overlay</code> CSS property, used as an <code>allow-discrete</code> CSS transition, prevents a top layer element, such as a popover or a <code>&#x3C;dialog></code>, from being removed from the top layer before it has finished animating. You can't set the value of the <code>overlay</code> property; only use it as transition property.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/starting-style/">@starting-style</a></strong>:
+                The <code>@starting-style</code> CSS at-rule sets the starting values for properties that are transitioning when the target element's style is first updated.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-pretty/">text-wrap: pretty</a></strong>:
+                The <code>text-wrap: pretty</code> CSS declaration prioritizes better layout over speed when text is broken into multiple lines.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/transition-behavior/">transition-behavior</a></strong>:
+                The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/contain-intrinsic-size/">contain-intrinsic-size</a></strong>:
-          The <code>contain-intrinsic-size</code> CSS property sets the intrinsic size of an element. When using size containment, the browser will lay out the element as if it had a single child of this size.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/counter-style/">@counter-style</a></strong>:
-          The <code>@counter-style</code> CSS at-rule sets custom counter styles for list items. For example, you can use a sequence of specific symbols instead of numbers for an ordered list.
-        </li>
+        <section class="baseline-false chrome_android">
+          <h2>New in Chrome Android</h2>
+          <p>The following features are now available in Chrome Android:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/array-group/">Array grouping</a></strong>:
+                The <code>Object.groupBy()</code> and <code>Map.groupBy()</code> static methods group values of arrays and iterables based on a function that returns a key for each value.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/display-animation/">display animation</a></strong>:
+                You can animate elements between <code>display: none</code> and any other <code>display</code> value or animate between <code>content-visibility: hidden</code> and any other <code>content-visibility</code> value. This also applies to transitions.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/overlay/">overlay</a></strong>:
+                The <code>overlay</code> CSS property, used as an <code>allow-discrete</code> CSS transition, prevents a top layer element, such as a popover or a <code>&#x3C;dialog></code>, from being removed from the top layer before it has finished animating. You can't set the value of the <code>overlay</code> property; only use it as transition property.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/starting-style/">@starting-style</a></strong>:
+                The <code>@starting-style</code> CSS at-rule sets the starting values for properties that are transitioning when the target element's style is first updated.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-pretty/">text-wrap: pretty</a></strong>:
+                The <code>text-wrap: pretty</code> CSS declaration prioritizes better layout over speed when text is broken into multiple lines.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/transition-behavior/">transition-behavior</a></strong>:
+                The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/device-orientation-events/">Device orientation events</a></strong>:
-          The <code>DeviceMotion</code> and <code>DeviceOrientation</code> events report the movement and orientation of the browser's device in physical space. Note that coordinates can differ noticeably between platforms and devices.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/hyphenate-character/">Hyphenate character</a></strong>:
-          The <code>hyphenate-character</code> CSS property sets the character or string to use at the end of a line before a line break.
-        </li>
+        <section class="baseline-false edge">
+          <h2>New in Edge</h2>
+          <p>The following features are now available in Edge:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/array-group/">Array grouping</a></strong>:
+                The <code>Object.groupBy()</code> and <code>Map.groupBy()</code> static methods group values of arrays and iterables based on a function that returns a key for each value.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/display-animation/">display animation</a></strong>:
+                You can animate elements between <code>display: none</code> and any other <code>display</code> value or animate between <code>content-visibility: hidden</code> and any other <code>content-visibility</code> value. This also applies to transitions.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/overlay/">overlay</a></strong>:
+                The <code>overlay</code> CSS property, used as an <code>allow-discrete</code> CSS transition, prevents a top layer element, such as a popover or a <code>&#x3C;dialog></code>, from being removed from the top layer before it has finished animating. You can't set the value of the <code>overlay</code> property; only use it as transition property.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/starting-style/">@starting-style</a></strong>:
+                The <code>@starting-style</code> CSS at-rule sets the starting values for properties that are transitioning when the target element's style is first updated.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-pretty/">text-wrap: pretty</a></strong>:
+                The <code>text-wrap: pretty</code> CSS declaration prioritizes better layout over speed when text is broken into multiple lines.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/transition-behavior/">transition-behavior</a></strong>:
+                The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/hyphens/">Hyphenation</a></strong>:
-          The <code>hyphens</code> CSS property controls when long words are broken by line wrapping. Although called <code>hyphens</code>, the property applies to word-splitting behavior across languages, such as customary spelling changes or the use of other characters. Support for non-English languages varies significantly.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/image-set/">image-set()</a></strong>:
-          The <code>image-set()</code> CSS function provides a set of images at different resolutions or pixel densities, which the browser can pick from, depending on the device capabilities.
-        </li>
+        <section class="baseline-false firefox">
+          <h2>New in Firefox</h2>
+          <p>The following features are now available in Firefox:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/abs-sign/">abs() and sign()</a></strong>:
+                The <code>abs()</code> and <code>sign()</code> CSS functions compute the absolute value or the sign of the input.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/exp-functions/">pow(), sqrt(), hypot(), log(), and exp()</a></strong>:
+                The <code>pow()</code>, <code>sqrt()</code>, <code>hypot()</code>, <code>log()</code>, and <code>exp()</code> CSS functions compute various exponential functions.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/font-size-adjust/">font-size-adjust</a></strong>:
+                The <code>font-size-adjust</code> CSS property preserves apparent text size, regardless of the font used, by scaling fonts to the same size with respect to a specific metric, such as x-height. This can help make fallback fonts look the same size.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/font-synthesis-position/">font-synthesis-position</a></strong>:
+                The <code>font-synthesis-position</code> CSS property sets whether or not the browser should synthesize subscript and superscript typefaces when they're missing from the font.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/round-mod-rem/">round(), mod(), and rem()</a></strong>:
+                The <code>round()</code>, <code>mod()</code>, and <code>rem()</code> CSS functions compute rounded values and the remainder after division.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/search/">&lt;search&gt;</a></strong>:
+                The <code>&#x3C;search></code> HTML element is a container that represents the parts of the web page with search functionality.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/modulepreload/">&lt;link rel=&quot;modulepreload&quot;&gt;</a></strong>:
-          The <code>rel="modulepreload"</code> attribute for the <code>&#x3C;link></code> HTML element indicates that a module script should be fetched, parsed, and compiled preemptively, and stored for later execution.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/overflow/">Overflow media queries</a></strong>:
-          The <code>overflow-block</code> and <code>overflow-inline</code> CSS media queries set styles based on the way a device displays content that's larger than the viewport or page area. For example, a laptop lets users scroll to reveal content, while a printer displays overflowing content on additional pages.
-        </li>
+        <section class="baseline-false firefox_android">
+          <h2>New in Firefox for Android</h2>
+          <p>The following features are now available in Firefox for Android:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/abs-sign/">abs() and sign()</a></strong>:
+                The <code>abs()</code> and <code>sign()</code> CSS functions compute the absolute value or the sign of the input.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/exp-functions/">pow(), sqrt(), hypot(), log(), and exp()</a></strong>:
+                The <code>pow()</code>, <code>sqrt()</code>, <code>hypot()</code>, <code>log()</code>, and <code>exp()</code> CSS functions compute various exponential functions.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/font-size-adjust/">font-size-adjust</a></strong>:
+                The <code>font-size-adjust</code> CSS property preserves apparent text size, regardless of the font used, by scaling fonts to the same size with respect to a specific metric, such as x-height. This can help make fallback fonts look the same size.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/font-synthesis-position/">font-synthesis-position</a></strong>:
+                The <code>font-synthesis-position</code> CSS property sets whether or not the browser should synthesize subscript and superscript typefaces when they're missing from the font.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/round-mod-rem/">round(), mod(), and rem()</a></strong>:
+                The <code>round()</code>, <code>mod()</code>, and <code>rem()</code> CSS functions compute rounded values and the remainder after division.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/search/">&lt;search&gt;</a></strong>:
+                The <code>&#x3C;search></code> HTML element is a container that represents the parts of the web page with search functionality.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/storage-manager/">Storage manager</a></strong>:
-          The <code>navigator.storage</code> API provides information about the availability and persistence of the data that a site stores on the device, by using APIs such as the Cache API or the IndexedDB API.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/subgrid/">Subgrid</a></strong>:
-          The <code>subgrid</code> value for the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties allows a grid item to inherit the grid definition of its parent grid container.
-        </li>
+        <section class="baseline-false safari">
+          <h2>New in Safari</h2>
+          <p>The following features are now available in Safari:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/badging/">Badging</a></strong>:
+                The <code>navigator.setAppBadge()</code> method allows installed web applications to display an application badge, typically a dot or number shown alongside the application's icon on the device's home screen or application dock.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/composed-ranges/">Selection composed ranges</a></strong>:
+                The <code>window.getSelection().getComposedRanges()</code> method returns ranges that represent the current user selection, even if the selection spans across shadow tree boundaries.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/font-size-adjust/">font-size-adjust</a></strong>:
+                The <code>font-size-adjust</code> CSS property preserves apparent text size, regardless of the font used, by scaling fonts to the same size with respect to a specific metric, such as x-height. This can help make fallback fonts look the same size.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/intl-locale-info/">Intl.Locale info</a></strong>:
+                The getter methods of the <code>Intl.Locale</code> API provide supplemental information about a Unicode locale, such as the locale's calendar (for example, the first day in a week or the weekend start day), writing direction, 12- or 24-hour cycles, and numbering system.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/jpegxl/">JPEG XL</a></strong>:
+                The JPEG XL image format is a raster graphics file format that supports animation, alpha transparency, and lossy as well as lossless compression.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/managed-media-source/">Managed media source</a></strong>:
+                The <code>ManagedMediaSource</code> API is a <code>MediaSource</code> where the browser manages the memory of source buffers and may evict data if needed.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/manifest/">Web app manifest</a></strong>:
+                A web app manifest file provides metadata about the site. The browser can use the metadata to install the site as a standalone application on the user's device. The metadata usually includes the app's name, icon, description, and ways in which the app wishes to integrate with the device.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/popover/">Popover</a></strong>:
+                The <code>popover</code> HTML attribute creates an overlay to display content on top of other page content. Popovers can be shown declaratively using HTML, or using the <code>showPopover()</code> method.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scripting/">scripting media query</a></strong>:
+                The <code>scripting</code> CSS media query sets styles based on whether scripting such as JavaScript is available. Values are <code>enabled</code> if scripting is available, <code>initial-only</code> if scripting is only available on page load (for example, printed content), or <code>none</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/search/">&lt;search&gt;</a></strong>:
+                The <code>&#x3C;search></code> HTML element is a container that represents the parts of the web page with search functionality.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/set-methods/">Set methods</a></strong>:
+                The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/url-canparse/">URL.canParse()</a></strong>:
+                The <code>URL.canParse()</code> static method checks whether a URL can be parsed into a valid <code>URL</code> object. It's an alternative to calling <code>new URL()</code> in a <code>try … catch</code> statement.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/update/">Update frequency media query</a></strong>:
-          The <code>update</code> CSS media query sets styles based on whether and how fast the user's device can modify display after it has been rendered. For example, you can avoid animations on devices that aren't fast enough to display them smoothly.
-        </li>
+    
+      
+        <section class="baseline-false safari_ios">
+          <h2>New in Safari on iOS</h2>
+          <p>The following features are now available in Safari on iOS:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/composed-ranges/">Selection composed ranges</a></strong>:
+                The <code>window.getSelection().getComposedRanges()</code> method returns ranges that represent the current user selection, even if the selection spans across shadow tree boundaries.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/font-size-adjust/">font-size-adjust</a></strong>:
+                The <code>font-size-adjust</code> CSS property preserves apparent text size, regardless of the font used, by scaling fonts to the same size with respect to a specific metric, such as x-height. This can help make fallback fonts look the same size.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/intl-locale-info/">Intl.Locale info</a></strong>:
+                The getter methods of the <code>Intl.Locale</code> API provide supplemental information about a Unicode locale, such as the locale's calendar (for example, the first day in a week or the weekend start day), writing direction, 12- or 24-hour cycles, and numbering system.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/jpegxl/">JPEG XL</a></strong>:
+                The JPEG XL image format is a raster graphics file format that supports animation, alpha transparency, and lossy as well as lossless compression.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scripting/">scripting media query</a></strong>:
+                The <code>scripting</code> CSS media query sets styles based on whether scripting such as JavaScript is available. Values are <code>enabled</code> if scripting is available, <code>initial-only</code> if scripting is only available on page load (for example, printed content), or <code>none</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/search/">&lt;search&gt;</a></strong>:
+                The <code>&#x3C;search></code> HTML element is a container that represents the parts of the web page with search functionality.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/set-methods/">Set methods</a></strong>:
+                The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/url-canparse/">URL.canParse()</a></strong>:
+                The <code>URL.canParse()</code> static method checks whether a URL can be parsed into a valid <code>URL</code> object. It's an alternative to calling <code>new URL()</code> in a <code>try … catch</code> statement.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+  </div>
+
+  <aside>
+    <h2>Other release notes</h2>
+    <ul>
+      
+        
+          <li class="month-entry">
+            <a href="../december-2024">December 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2024">November 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2024">October 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2024">September 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2024">August 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2024">July 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2024">June 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2024">May 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../april-2024">April 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../march-2024">March 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../february-2024">February 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../january-2024">January 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../december-2023">December 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2023">November 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2023">October 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2023">September 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2023">August 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2023">July 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2023">June 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2023">May 2023</a>
+          </li>
+        
+      
+        
+          <li><a href="../">See all</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
     </ul>
-  
+  </aside>
+</main>
 
-  
-
-  
-    
-      <h2>New in Chrome</h2>
-      <p>The following features are now available in Chrome:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/array-group/">Array grouping</a></strong>:
-            The <code>Object.groupBy()</code> and <code>Map.groupBy()</code> static methods group values of arrays and iterables based on a function that returns a key for each value.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/display-animation/">display animation</a></strong>:
-            You can animate elements between <code>display: none</code> and any other <code>display</code> value or animate between <code>content-visibility: hidden</code> and any other <code>content-visibility</code> value. This also applies to transitions.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/overlay/">overlay</a></strong>:
-            The <code>overlay</code> CSS property, used as an <code>allow-discrete</code> CSS transition, prevents a top layer element, such as a popover or a <code>&#x3C;dialog></code>, from being removed from the top layer before it has finished animating. You can't set the value of the <code>overlay</code> property; only use it as transition property.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/starting-style/">@starting-style</a></strong>:
-            The <code>@starting-style</code> CSS at-rule sets the starting values for properties that are transitioning when the target element's style is first updated.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-wrap-pretty/">text-wrap: pretty</a></strong>:
-            The <code>text-wrap: pretty</code> CSS declaration prioritizes better layout over speed when text is broken into multiple lines.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/transition-behavior/">transition-behavior</a></strong>:
-            The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Chrome Android</h2>
-      <p>The following features are now available in Chrome Android:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/array-group/">Array grouping</a></strong>:
-            The <code>Object.groupBy()</code> and <code>Map.groupBy()</code> static methods group values of arrays and iterables based on a function that returns a key for each value.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/display-animation/">display animation</a></strong>:
-            You can animate elements between <code>display: none</code> and any other <code>display</code> value or animate between <code>content-visibility: hidden</code> and any other <code>content-visibility</code> value. This also applies to transitions.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/overlay/">overlay</a></strong>:
-            The <code>overlay</code> CSS property, used as an <code>allow-discrete</code> CSS transition, prevents a top layer element, such as a popover or a <code>&#x3C;dialog></code>, from being removed from the top layer before it has finished animating. You can't set the value of the <code>overlay</code> property; only use it as transition property.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/starting-style/">@starting-style</a></strong>:
-            The <code>@starting-style</code> CSS at-rule sets the starting values for properties that are transitioning when the target element's style is first updated.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-wrap-pretty/">text-wrap: pretty</a></strong>:
-            The <code>text-wrap: pretty</code> CSS declaration prioritizes better layout over speed when text is broken into multiple lines.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/transition-behavior/">transition-behavior</a></strong>:
-            The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Edge</h2>
-      <p>The following features are now available in Edge:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/array-group/">Array grouping</a></strong>:
-            The <code>Object.groupBy()</code> and <code>Map.groupBy()</code> static methods group values of arrays and iterables based on a function that returns a key for each value.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/display-animation/">display animation</a></strong>:
-            You can animate elements between <code>display: none</code> and any other <code>display</code> value or animate between <code>content-visibility: hidden</code> and any other <code>content-visibility</code> value. This also applies to transitions.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/overlay/">overlay</a></strong>:
-            The <code>overlay</code> CSS property, used as an <code>allow-discrete</code> CSS transition, prevents a top layer element, such as a popover or a <code>&#x3C;dialog></code>, from being removed from the top layer before it has finished animating. You can't set the value of the <code>overlay</code> property; only use it as transition property.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/starting-style/">@starting-style</a></strong>:
-            The <code>@starting-style</code> CSS at-rule sets the starting values for properties that are transitioning when the target element's style is first updated.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-wrap-pretty/">text-wrap: pretty</a></strong>:
-            The <code>text-wrap: pretty</code> CSS declaration prioritizes better layout over speed when text is broken into multiple lines.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/transition-behavior/">transition-behavior</a></strong>:
-            The <code>transition-behavior: allow-discrete</code> CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Firefox</h2>
-      <p>The following features are now available in Firefox:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/abs-sign/">abs() and sign()</a></strong>:
-            The <code>abs()</code> and <code>sign()</code> CSS functions compute the absolute value or the sign of the input.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/exp-functions/">pow(), sqrt(), hypot(), log(), and exp()</a></strong>:
-            The <code>pow()</code>, <code>sqrt()</code>, <code>hypot()</code>, <code>log()</code>, and <code>exp()</code> CSS functions compute various exponential functions.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/font-size-adjust/">font-size-adjust</a></strong>:
-            The <code>font-size-adjust</code> CSS property preserves apparent text size, regardless of the font used, by scaling fonts to the same size with respect to a specific metric, such as x-height. This can help make fallback fonts look the same size.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/font-synthesis-position/">font-synthesis-position</a></strong>:
-            The <code>font-synthesis-position</code> CSS property sets whether or not the browser should synthesize subscript and superscript typefaces when they're missing from the font.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/round-mod-rem/">round(), mod(), and rem()</a></strong>:
-            The <code>round()</code>, <code>mod()</code>, and <code>rem()</code> CSS functions compute rounded values and the remainder after division.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/search/">&lt;search&gt;</a></strong>:
-            The <code>&#x3C;search></code> HTML element is a container that represents the parts of the web page with search functionality.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Firefox for Android</h2>
-      <p>The following features are now available in Firefox for Android:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/abs-sign/">abs() and sign()</a></strong>:
-            The <code>abs()</code> and <code>sign()</code> CSS functions compute the absolute value or the sign of the input.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/exp-functions/">pow(), sqrt(), hypot(), log(), and exp()</a></strong>:
-            The <code>pow()</code>, <code>sqrt()</code>, <code>hypot()</code>, <code>log()</code>, and <code>exp()</code> CSS functions compute various exponential functions.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/font-size-adjust/">font-size-adjust</a></strong>:
-            The <code>font-size-adjust</code> CSS property preserves apparent text size, regardless of the font used, by scaling fonts to the same size with respect to a specific metric, such as x-height. This can help make fallback fonts look the same size.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/font-synthesis-position/">font-synthesis-position</a></strong>:
-            The <code>font-synthesis-position</code> CSS property sets whether or not the browser should synthesize subscript and superscript typefaces when they're missing from the font.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/round-mod-rem/">round(), mod(), and rem()</a></strong>:
-            The <code>round()</code>, <code>mod()</code>, and <code>rem()</code> CSS functions compute rounded values and the remainder after division.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/search/">&lt;search&gt;</a></strong>:
-            The <code>&#x3C;search></code> HTML element is a container that represents the parts of the web page with search functionality.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Safari</h2>
-      <p>The following features are now available in Safari:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/badging/">Badging</a></strong>:
-            The <code>navigator.setAppBadge()</code> method allows installed web applications to display an application badge, typically a dot or number shown alongside the application's icon on the device's home screen or application dock.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/composed-ranges/">Selection composed ranges</a></strong>:
-            The <code>window.getSelection().getComposedRanges()</code> method returns ranges that represent the current user selection, even if the selection spans across shadow tree boundaries.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/font-size-adjust/">font-size-adjust</a></strong>:
-            The <code>font-size-adjust</code> CSS property preserves apparent text size, regardless of the font used, by scaling fonts to the same size with respect to a specific metric, such as x-height. This can help make fallback fonts look the same size.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/intl-locale-info/">Intl.Locale info</a></strong>:
-            The getter methods of the <code>Intl.Locale</code> API provide supplemental information about a Unicode locale, such as the locale's calendar (for example, the first day in a week or the weekend start day), writing direction, 12- or 24-hour cycles, and numbering system.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/jpegxl/">JPEG XL</a></strong>:
-            The JPEG XL image format is a raster graphics file format that supports animation, alpha transparency, and lossy as well as lossless compression.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/managed-media-source/">Managed media source</a></strong>:
-            The <code>ManagedMediaSource</code> API is a <code>MediaSource</code> where the browser manages the memory of source buffers and may evict data if needed.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/manifest/">Web app manifest</a></strong>:
-            A web app manifest file provides metadata about the site. The browser can use the metadata to install the site as a standalone application on the user's device. The metadata usually includes the app's name, icon, description, and ways in which the app wishes to integrate with the device.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/popover/">Popover</a></strong>:
-            The <code>popover</code> HTML attribute creates an overlay to display content on top of other page content. Popovers can be shown declaratively using HTML, or using the <code>showPopover()</code> method.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scripting/">scripting media query</a></strong>:
-            The <code>scripting</code> CSS media query sets styles based on whether scripting such as JavaScript is available. Values are <code>enabled</code> if scripting is available, <code>initial-only</code> if scripting is only available on page load (for example, printed content), or <code>none</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/search/">&lt;search&gt;</a></strong>:
-            The <code>&#x3C;search></code> HTML element is a container that represents the parts of the web page with search functionality.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/set-methods/">Set methods</a></strong>:
-            The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/url-canparse/">URL.canParse()</a></strong>:
-            The <code>URL.canParse()</code> static method checks whether a URL can be parsed into a valid <code>URL</code> object. It's an alternative to calling <code>new URL()</code> in a <code>try … catch</code> statement.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Safari on iOS</h2>
-      <p>The following features are now available in Safari on iOS:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/composed-ranges/">Selection composed ranges</a></strong>:
-            The <code>window.getSelection().getComposedRanges()</code> method returns ranges that represent the current user selection, even if the selection spans across shadow tree boundaries.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/font-size-adjust/">font-size-adjust</a></strong>:
-            The <code>font-size-adjust</code> CSS property preserves apparent text size, regardless of the font used, by scaling fonts to the same size with respect to a specific metric, such as x-height. This can help make fallback fonts look the same size.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/intl-locale-info/">Intl.Locale info</a></strong>:
-            The getter methods of the <code>Intl.Locale</code> API provide supplemental information about a Unicode locale, such as the locale's calendar (for example, the first day in a week or the weekend start day), writing direction, 12- or 24-hour cycles, and numbering system.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/jpegxl/">JPEG XL</a></strong>:
-            The JPEG XL image format is a raster graphics file format that supports animation, alpha transparency, and lossy as well as lossless compression.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scripting/">scripting media query</a></strong>:
-            The <code>scripting</code> CSS media query sets styles based on whether scripting such as JavaScript is available. Values are <code>enabled</code> if scripting is available, <code>initial-only</code> if scripting is only available on page load (for example, printed content), or <code>none</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/search/">&lt;search&gt;</a></strong>:
-            The <code>&#x3C;search></code> HTML element is a container that represents the parts of the web page with search functionality.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/set-methods/">Set methods</a></strong>:
-            The <code>difference()</code>, <code>intersection()</code>, <code>isDisjointFrom()</code>, <code>isSubsetOf()</code>, <code>isSupersetOf()</code>, <code>symmetricDifference()</code>, and <code>union()</code> methods of the JavaScript <code>Set</code> object performs operations between two sets.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/url-canparse/">URL.canParse()</a></strong>:
-            The <code>URL.canParse()</code> static method checks whether a URL can be parsed into a valid <code>URL</code> object. It's an alternative to calling <code>new URL()</code> in a <code>try … catch</code> statement.
-          </li>
-        
-      </ul>
-    
-  
-</section>
-
-    </main>
-
-    <footer>
-      <p>Generated on 12/19/2024 using <a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>2.14.0-dev-20241218204140-fd96a8a</code> and <a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>5.6.25</code></p>
-      <p>Source code: <a href="https://github.com/web-platform-dx/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
-    </footer>
 
   </body>
 </html>

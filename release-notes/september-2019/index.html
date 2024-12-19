@@ -2,392 +2,849 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Web features explorer - September 2019 web platform update</title>
+    <title>Web platform features explorer - September 2019 release notes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
   </head>
   <body>
 
-    <header><a href="/web-features-explorer/">Web features explorer</a></header>
+    <header>
+      <a href="/web-features-explorer/">Web platform features explorer</a>
 
-    <nav>
-      <ul>
-        <li class="monthly"><a href="/web-features-explorer/release-notes">Release notes</a></li>
-        <li class="baseline-low"><a href="/web-features-explorer/newly-available">Newly available</a></li>
-        <li class="baseline-high"><a href="/web-features-explorer/widely-available">Widely available</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/limited-availability">Limited availability</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/one-missing-engine">One missing engine</a></li>
-        <li><a href="/web-features-explorer/all">All</a></li>
-        <li><a href="/web-features-explorer/groups">Groups</a></li>
-        <li><a href="/web-features-explorer/browse">Browse features</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href="/web-features-explorer/release-notes/december-2024">Release notes</a></li>
+          <li><a href="/web-features-explorer/features">Explore all features</a></li>
+          <li><a href="/web-features-explorer/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main>
-      
-<h1>September 2019 web platform update</h1>
+    
+<main class="release-notes">
+  <h1>📃 September 2019 release notes</h1>
 
-<section class="month-update">
-  
-    <h2>Newly available</h2>
-    <p>The following features are newly available:</p>
-    <ul class="baseline-low">
+  <div>
+    
+      <section class="baseline-low">
+        <h2>Newly available</h2>
+        <p>The following features are newly available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/download/">download</a></strong>:
+              The <code>download</code> attribute for <code>&#x3C;a></code> elements loads the target URL as a file to be saved, instead of navigating to it. An optional attribute value sets a default file name.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/intl-plural-rules/">Intl.PluralRules</a></strong>:
+              The <code>Intl.PluralRules</code> API creates a locale-aware object that tells you which of the language's pluralization rules apply based on a given number.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/print-events/">Print events</a></strong>:
+              An alternative to <code>@media print</code> queries, the <code>beforeprint</code> and <code>afterprint</code> events allow you to change the page for printing and and restore the page after printing.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/sticky-positioning/">Sticky positioning</a></strong>:
+              The <code>position: sticky</code> CSS declaration positions an element in the normal flow until it crosses a specified threshold, at which points it becomes fixed (stuck) at that position.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/touch-action/">touch-action</a></strong>:
+              The <code>touch-action</code> CSS property sets whether an element on a touch screen can be panned or pinched to zoom.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
+      <section class="baseline-high">
+        <h2>Widely available</h2>
+        <p>The following features are now widely available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/clipboard-events/">Clipboard events</a></strong>:
+              The <code>"copy"</code>, <code>"cut"</code>, and <code>"paste"</code> events fire on elements when the user starts an action with the clipboard.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/column-fill/">column-fill</a></strong>:
+              The <code>column-fill</code> CSS property sets the distribution of content across columns in a multi-column layout.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/exponentiation/">Exponentiation operator</a></strong>:
+              The exponentiation (<code>**</code>) operator returns the result of raising the first operand to the power of the second operand.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/fetch/">Fetch</a></strong>:
+              The <code>fetch()</code> method makes asynchronous HTTP requests.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/gamepad/">Gamepad</a></strong>:
+              The <code>navigator.getGamepads()</code> API accesses and responds to signals from game controllers.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/input-range/">&lt;input type=&quot;range&quot;&gt;</a></strong>:
+              The <code>&#x3C;input type="range"></code> element represents a slider for choosing an inexact value between a minimum and maximum value.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/multi-column/">Multi-column layout</a></strong>:
+              Multi-column layout flows an element's content across one or more columns in a single row, without affecting the <code>display</code> property of its children.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/selection-api/">Selection</a></strong>:
+              The Selection API controls and modifies user text selections within the page.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/srcset/">srcset and sizes</a></strong>:
+              The <code>srcset</code> and <code>sizes</code> attributes for <code>&#x3C;img></code> elements set a list of possible sources for the image and a corresponding list of size conditions for choosing a source, to show a responsive image that fits the size of the display.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/writing-mode/">writing-mode</a></strong>:
+              The <code>writing-mode</code> CSS property sets whether text is laid out horizontally or vertically, and left to right, or right to left.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/download/">download</a></strong>:
-          The <code>download</code> attribute for <code>&#x3C;a></code> elements loads the target URL as a file to be saved, instead of navigating to it. An optional attribute value sets a default file name.
-        </li>
+        <section class="baseline-false chrome">
+          <h2>New in Chrome</h2>
+          <p>The following features are now available in Chrome:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/alt-text-generated-content/">Alt text for generated content</a></strong>:
+                The <code>/</code> notation in <code>content</code> CSS property values adds alternative text to generated content. For example, the <code>content: url('upvote-icon.svg') / 'Upvote'</code> declaration adds accessible 'Upvote' text to the SVG icon. Also known as alternate text.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/element-timing/">Element timing</a></strong>:
+                The <code>element</code> performance entry and the <code>PerformanceElementTiming</code> API measures the time to render elements that have the <code>elementtiming</code> attribute.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/enterkeyhint/">Enterkeyhint</a></strong>:
+                The <code>enterkeyhint</code> global HTML attribute sets the label for a virtual keyboard's Enter key. For example, <code>enterkeyhint="search"</code> may label the key with a magnifying glass icon.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/form-associated-custom-elements/">Form-associated custom elements</a></strong>:
+                Custom elements may act like built-in form elements, via the the <code>attachInternals()</code> method of <code>HTMLElement</code> and the <code>ElementInternals</code> API.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/largest-contentful-paint/">Largest contentful paint (LCP)</a></strong>:
+                The <code>largest-contentful-paint</code> performance entry and the <code>LargestContentfulPaint</code> API measures  the time it takes for the largest image or text to appear. Largest contentful paint (LCP) is a common metric for perceived loading times.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/loading-lazy/">Lazy-loading images and iframes</a></strong>:
+                The <code>loading="lazy"</code> attribute for <code>&#x3C;img></code> and <code>&#x3C;iframe></code> elements blocks loading the external resource until the user scrolls to that element's part of the page.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/serializable-errors/">Serializable errors</a></strong>:
+                The <code>DOMException</code>, <code>Error</code>, <code>EvalError</code>, <code>RangeError</code>, <code>ReferenceError</code>, <code>SyntaxError</code>, <code>TypeError</code>, and <code>URIError</code> objects are serializable. You can call <code>structuredClone()</code> on an error object or pass it to a worker using <code>postMessage()</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/steps-easing/">steps() easing</a></strong>:
+                The <code>steps()</code> CSS easing function divides an animation or transition into equidistant intervals, jumping from value to value. The <code>step-start</code> and <code>step-end</code> keyword values are presets with a single interval.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/intl-plural-rules/">Intl.PluralRules</a></strong>:
-          The <code>Intl.PluralRules</code> API creates a locale-aware object that tells you which of the language's pluralization rules apply based on a given number.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/print-events/">Print events</a></strong>:
-          An alternative to <code>@media print</code> queries, the <code>beforeprint</code> and <code>afterprint</code> events allow you to change the page for printing and and restore the page after printing.
-        </li>
+        <section class="baseline-false chrome_android">
+          <h2>New in Chrome Android</h2>
+          <p>The following features are now available in Chrome Android:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/alt-text-generated-content/">Alt text for generated content</a></strong>:
+                The <code>/</code> notation in <code>content</code> CSS property values adds alternative text to generated content. For example, the <code>content: url('upvote-icon.svg') / 'Upvote'</code> declaration adds accessible 'Upvote' text to the SVG icon. Also known as alternate text.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/element-timing/">Element timing</a></strong>:
+                The <code>element</code> performance entry and the <code>PerformanceElementTiming</code> API measures the time to render elements that have the <code>elementtiming</code> attribute.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/enterkeyhint/">Enterkeyhint</a></strong>:
+                The <code>enterkeyhint</code> global HTML attribute sets the label for a virtual keyboard's Enter key. For example, <code>enterkeyhint="search"</code> may label the key with a magnifying glass icon.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/form-associated-custom-elements/">Form-associated custom elements</a></strong>:
+                Custom elements may act like built-in form elements, via the the <code>attachInternals()</code> method of <code>HTMLElement</code> and the <code>ElementInternals</code> API.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/largest-contentful-paint/">Largest contentful paint (LCP)</a></strong>:
+                The <code>largest-contentful-paint</code> performance entry and the <code>LargestContentfulPaint</code> API measures  the time it takes for the largest image or text to appear. Largest contentful paint (LCP) is a common metric for perceived loading times.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/loading-lazy/">Lazy-loading images and iframes</a></strong>:
+                The <code>loading="lazy"</code> attribute for <code>&#x3C;img></code> and <code>&#x3C;iframe></code> elements blocks loading the external resource until the user scrolls to that element's part of the page.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/serializable-errors/">Serializable errors</a></strong>:
+                The <code>DOMException</code>, <code>Error</code>, <code>EvalError</code>, <code>RangeError</code>, <code>ReferenceError</code>, <code>SyntaxError</code>, <code>TypeError</code>, and <code>URIError</code> objects are serializable. You can call <code>structuredClone()</code> on an error object or pass it to a worker using <code>postMessage()</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/steps-easing/">steps() easing</a></strong>:
+                The <code>steps()</code> CSS easing function divides an animation or transition into equidistant intervals, jumping from value to value. The <code>step-start</code> and <code>step-end</code> keyword values are presets with a single interval.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/sticky-positioning/">Sticky positioning</a></strong>:
-          The <code>position: sticky</code> CSS declaration positions an element in the normal flow until it crosses a specified threshold, at which points it becomes fixed (stuck) at that position.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/touch-action/">touch-action</a></strong>:
-          The <code>touch-action</code> CSS property sets whether an element on a touch screen can be panned or pinched to zoom.
-        </li>
+    
+      
+        <section class="baseline-false firefox">
+          <h2>New in Firefox</h2>
+          <p>The following features are now available in Firefox:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/contain/">contain</a></strong>:
+                The <code>contain</code> CSS property sets limits to the scope of styles, layout, and paint rendering for speed and efficiency. The <code>none</code> keyword value disables containment, <code>strict</code> is equivalent to <code>contain: size layout style paint</code>, and <code>content</code> is equivalent to <code>contain: layout style paint</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/contain-layout/">Layout containment</a></strong>:
+                The <code>contain: layout</code> CSS declaration isolates the inside of an element such that it cannot affect the layout of the rest of the page or be affected by the rest of the page. This permits the browser to avoid slower layout calculations.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/contain-paint/">Paint containment</a></strong>:
+                The <code>contain: paint</code> CSS declaration prevents an element's descendants from being drawn outside the boundaries of the containing element, with any overflow clipped. This permits the browser to avoid slower painting calculations.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/contain-size/">Size containment</a></strong>:
+                The <code>contain: size</code> CSS declaration sets an element's dimensions exclusively by its <code>height</code> and <code>width</code> properties, ignoring its contents and descendants. This permits the browser to avoid slower layout calculations.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/resize-observer/">Resize observer</a></strong>:
+                The <code>ResizeObserver</code> API observes and reacts to changes in the size of DOM elements.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/user-select/">user-select</a></strong>:
+                The <code>user-select</code> CSS property controls which elements can be selected by the user.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+      
+    
+      
+        <section class="baseline-false safari">
+          <h2>New in Safari</h2>
+          <p>The following features are now available in Safari:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/color-scheme/">color-scheme</a></strong>:
+                The <code>color-scheme</code> CSS property sets which color schemes (light or dark) an element uses and may prevent automatic dark mode adjustments by the browser.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/credential-management/">Credential management</a></strong>:
+                The <code>navigator.credentials</code> API provides generic storage for authentication credentials. Other credential APIs represent specific kinds of credentials, such as password or public key credentials, that the credential management API stores.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/display-flow-root/">display: flow-root</a></strong>:
+                The <code>display: flow-root</code> CSS declaration sets an element as the root element of a new flow layout for its children, preventing margin collapse with sibling elements.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/numeric-seperators/">Numeric separators</a></strong>:
+                To improve readability for numeric literals, underscores (<code>_</code>) can be used as separators. For example, <code>1_050.95</code> is equivalent to <code>1050.95</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/pointer-events-api/">Pointer Events</a></strong>:
+                Pointer events, such as <code>pointerdown</code>, and the <code>PointerEvent</code> API, represent general pointing inputs, from a wide range of devices, such as a mouse, pen or stylus, or touch with one or more fingers. Not to be confused with the <code>pointer-events</code> CSS property.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/promise-allsettled/">Promise.allSettled()</a></strong>:
+                The <code>Promise.allSettled()</code> static method waits for an array of promises to settle (resolve or reject).
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/screen-capture/">Screen capture</a></strong>:
+                The <code>navigator.mediaDevices.getDisplayMedia()</code> method asks the user to choose a screen or portion of a screen (such as a window) to capture as a media stream.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/string-matchall/">String matchAll()</a></strong>:
+                The <code>matchAll()</code> method of strings matches a string against a regular expression and returns an iterator of all results, including capturing groups.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/visual-viewport/">Visual viewport API</a></strong>:
+                The <code>visualViewport</code> API provides a way to query and modify the user-visible viewport of a web page.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webauthn/">Web authentication</a></strong>:
+                The web authentication API allows you to create public key-based credentials and use them for authentication, such as when signing in. Also known as WebAuthn.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+      
+        <section class="baseline-false safari_ios">
+          <h2>New in Safari on iOS</h2>
+          <p>The following features are now available in Safari on iOS:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/clip-path/">clip-path</a></strong>:
+                The <code>clip-path</code> CSS property and SVG attribute set the visible area of an element. Everything outside the area will be hidden.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/color-scheme/">color-scheme</a></strong>:
+                The <code>color-scheme</code> CSS property sets which color schemes (light or dark) an element uses and may prevent automatic dark mode adjustments by the browser.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/credential-management/">Credential management</a></strong>:
+                The <code>navigator.credentials</code> API provides generic storage for authentication credentials. Other credential APIs represent specific kinds of credentials, such as password or public key credentials, that the credential management API stores.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/display-flow-root/">display: flow-root</a></strong>:
+                The <code>display: flow-root</code> CSS declaration sets an element as the root element of a new flow layout for its children, preventing margin collapse with sibling elements.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/numeric-seperators/">Numeric separators</a></strong>:
+                To improve readability for numeric literals, underscores (<code>_</code>) can be used as separators. For example, <code>1_050.95</code> is equivalent to <code>1050.95</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/pointer-events-api/">Pointer Events</a></strong>:
+                Pointer events, such as <code>pointerdown</code>, and the <code>PointerEvent</code> API, represent general pointing inputs, from a wide range of devices, such as a mouse, pen or stylus, or touch with one or more fingers. Not to be confused with the <code>pointer-events</code> CSS property.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/prefers-color-scheme/">prefers-color-scheme media query</a></strong>:
+                The <code>prefers-color-scheme</code> CSS media query sets styles based on the requested color scheme, light or dark.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/promise-allsettled/">Promise.allSettled()</a></strong>:
+                The <code>Promise.allSettled()</code> static method waits for an array of promises to settle (resolve or reject).
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/string-matchall/">String matchAll()</a></strong>:
+                The <code>matchAll()</code> method of strings matches a string against a regular expression and returns an iterator of all results, including capturing groups.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/visual-viewport/">Visual viewport API</a></strong>:
+                The <code>visualViewport</code> API provides a way to query and modify the user-visible viewport of a web page.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webauthn/">Web authentication</a></strong>:
+                The web authentication API allows you to create public key-based credentials and use them for authentication, such as when signing in. Also known as WebAuthn.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+  </div>
+
+  <aside>
+    <h2>Other release notes</h2>
+    <ul>
+      
+        
+          <li class="month-entry">
+            <a href="../december-2024">December 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2024">November 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2024">October 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2024">September 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2024">August 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2024">July 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2024">June 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2024">May 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../april-2024">April 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../march-2024">March 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../february-2024">February 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../january-2024">January 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../december-2023">December 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2023">November 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2023">October 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2023">September 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2023">August 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2023">July 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2023">June 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2023">May 2023</a>
+          </li>
+        
+      
+        
+          <li><a href="../">See all</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
     </ul>
-  
+  </aside>
+</main>
 
-  
-    <h2>Widely available</h2>
-    <p>The following features are now widely available:</p>
-    <ul class="baseline-high">
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/clipboard-events/">Clipboard events</a></strong>:
-          The <code>"copy"</code>, <code>"cut"</code>, and <code>"paste"</code> events fire on elements when the user starts an action with the clipboard.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/column-fill/">column-fill</a></strong>:
-          The <code>column-fill</code> CSS property sets the distribution of content across columns in a multi-column layout.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/exponentiation/">Exponentiation operator</a></strong>:
-          The exponentiation (<code>**</code>) operator returns the result of raising the first operand to the power of the second operand.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/fetch/">Fetch</a></strong>:
-          The <code>fetch()</code> method makes asynchronous HTTP requests.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/gamepad/">Gamepad</a></strong>:
-          The <code>navigator.getGamepads()</code> API accesses and responds to signals from game controllers.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/input-range/">&lt;input type=&quot;range&quot;&gt;</a></strong>:
-          The <code>&#x3C;input type="range"></code> element represents a slider for choosing an inexact value between a minimum and maximum value.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/multi-column/">Multi-column layout</a></strong>:
-          Multi-column layout flows an element's content across one or more columns in a single row, without affecting the <code>display</code> property of its children.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/selection-api/">Selection</a></strong>:
-          The Selection API controls and modifies user text selections within the page.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/srcset/">srcset and sizes</a></strong>:
-          The <code>srcset</code> and <code>sizes</code> attributes for <code>&#x3C;img></code> elements set a list of possible sources for the image and a corresponding list of size conditions for choosing a source, to show a responsive image that fits the size of the display.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/writing-mode/">writing-mode</a></strong>:
-          The <code>writing-mode</code> CSS property sets whether text is laid out horizontally or vertically, and left to right, or right to left.
-        </li>
-      
-    </ul>
-  
-
-  
-    
-      <h2>New in Chrome</h2>
-      <p>The following features are now available in Chrome:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/alt-text-generated-content/">Alt text for generated content</a></strong>:
-            The <code>/</code> notation in <code>content</code> CSS property values adds alternative text to generated content. For example, the <code>content: url('upvote-icon.svg') / 'Upvote'</code> declaration adds accessible 'Upvote' text to the SVG icon. Also known as alternate text.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/element-timing/">Element timing</a></strong>:
-            The <code>element</code> performance entry and the <code>PerformanceElementTiming</code> API measures the time to render elements that have the <code>elementtiming</code> attribute.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/enterkeyhint/">Enterkeyhint</a></strong>:
-            The <code>enterkeyhint</code> global HTML attribute sets the label for a virtual keyboard's Enter key. For example, <code>enterkeyhint="search"</code> may label the key with a magnifying glass icon.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/form-associated-custom-elements/">Form-associated custom elements</a></strong>:
-            Custom elements may act like built-in form elements, via the the <code>attachInternals()</code> method of <code>HTMLElement</code> and the <code>ElementInternals</code> API.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/largest-contentful-paint/">Largest contentful paint (LCP)</a></strong>:
-            The <code>largest-contentful-paint</code> performance entry and the <code>LargestContentfulPaint</code> API measures  the time it takes for the largest image or text to appear. Largest contentful paint (LCP) is a common metric for perceived loading times.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/loading-lazy/">Lazy-loading images and iframes</a></strong>:
-            The <code>loading="lazy"</code> attribute for <code>&#x3C;img></code> and <code>&#x3C;iframe></code> elements blocks loading the external resource until the user scrolls to that element's part of the page.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/serializable-errors/">Serializable errors</a></strong>:
-            The <code>DOMException</code>, <code>Error</code>, <code>EvalError</code>, <code>RangeError</code>, <code>ReferenceError</code>, <code>SyntaxError</code>, <code>TypeError</code>, and <code>URIError</code> objects are serializable. You can call <code>structuredClone()</code> on an error object or pass it to a worker using <code>postMessage()</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/steps-easing/">steps() easing</a></strong>:
-            The <code>steps()</code> CSS easing function divides an animation or transition into equidistant intervals, jumping from value to value. The <code>step-start</code> and <code>step-end</code> keyword values are presets with a single interval.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Chrome Android</h2>
-      <p>The following features are now available in Chrome Android:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/alt-text-generated-content/">Alt text for generated content</a></strong>:
-            The <code>/</code> notation in <code>content</code> CSS property values adds alternative text to generated content. For example, the <code>content: url('upvote-icon.svg') / 'Upvote'</code> declaration adds accessible 'Upvote' text to the SVG icon. Also known as alternate text.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/element-timing/">Element timing</a></strong>:
-            The <code>element</code> performance entry and the <code>PerformanceElementTiming</code> API measures the time to render elements that have the <code>elementtiming</code> attribute.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/enterkeyhint/">Enterkeyhint</a></strong>:
-            The <code>enterkeyhint</code> global HTML attribute sets the label for a virtual keyboard's Enter key. For example, <code>enterkeyhint="search"</code> may label the key with a magnifying glass icon.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/form-associated-custom-elements/">Form-associated custom elements</a></strong>:
-            Custom elements may act like built-in form elements, via the the <code>attachInternals()</code> method of <code>HTMLElement</code> and the <code>ElementInternals</code> API.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/largest-contentful-paint/">Largest contentful paint (LCP)</a></strong>:
-            The <code>largest-contentful-paint</code> performance entry and the <code>LargestContentfulPaint</code> API measures  the time it takes for the largest image or text to appear. Largest contentful paint (LCP) is a common metric for perceived loading times.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/loading-lazy/">Lazy-loading images and iframes</a></strong>:
-            The <code>loading="lazy"</code> attribute for <code>&#x3C;img></code> and <code>&#x3C;iframe></code> elements blocks loading the external resource until the user scrolls to that element's part of the page.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/serializable-errors/">Serializable errors</a></strong>:
-            The <code>DOMException</code>, <code>Error</code>, <code>EvalError</code>, <code>RangeError</code>, <code>ReferenceError</code>, <code>SyntaxError</code>, <code>TypeError</code>, and <code>URIError</code> objects are serializable. You can call <code>structuredClone()</code> on an error object or pass it to a worker using <code>postMessage()</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/steps-easing/">steps() easing</a></strong>:
-            The <code>steps()</code> CSS easing function divides an animation or transition into equidistant intervals, jumping from value to value. The <code>step-start</code> and <code>step-end</code> keyword values are presets with a single interval.
-          </li>
-        
-      </ul>
-    
-  
-    
-  
-    
-      <h2>New in Firefox</h2>
-      <p>The following features are now available in Firefox:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/contain/">contain</a></strong>:
-            The <code>contain</code> CSS property sets limits to the scope of styles, layout, and paint rendering for speed and efficiency. The <code>none</code> keyword value disables containment, <code>strict</code> is equivalent to <code>contain: size layout style paint</code>, and <code>content</code> is equivalent to <code>contain: layout style paint</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/contain-layout/">Layout containment</a></strong>:
-            The <code>contain: layout</code> CSS declaration isolates the inside of an element such that it cannot affect the layout of the rest of the page or be affected by the rest of the page. This permits the browser to avoid slower layout calculations.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/contain-paint/">Paint containment</a></strong>:
-            The <code>contain: paint</code> CSS declaration prevents an element's descendants from being drawn outside the boundaries of the containing element, with any overflow clipped. This permits the browser to avoid slower painting calculations.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/contain-size/">Size containment</a></strong>:
-            The <code>contain: size</code> CSS declaration sets an element's dimensions exclusively by its <code>height</code> and <code>width</code> properties, ignoring its contents and descendants. This permits the browser to avoid slower layout calculations.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/resize-observer/">Resize observer</a></strong>:
-            The <code>ResizeObserver</code> API observes and reacts to changes in the size of DOM elements.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/user-select/">user-select</a></strong>:
-            The <code>user-select</code> CSS property controls which elements can be selected by the user.
-          </li>
-        
-      </ul>
-    
-  
-    
-  
-    
-      <h2>New in Safari</h2>
-      <p>The following features are now available in Safari:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/color-scheme/">color-scheme</a></strong>:
-            The <code>color-scheme</code> CSS property sets which color schemes (light or dark) an element uses and may prevent automatic dark mode adjustments by the browser.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/credential-management/">Credential management</a></strong>:
-            The <code>navigator.credentials</code> API provides generic storage for authentication credentials. Other credential APIs represent specific kinds of credentials, such as password or public key credentials, that the credential management API stores.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/display-flow-root/">display: flow-root</a></strong>:
-            The <code>display: flow-root</code> CSS declaration sets an element as the root element of a new flow layout for its children, preventing margin collapse with sibling elements.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/numeric-seperators/">Numeric separators</a></strong>:
-            To improve readability for numeric literals, underscores (<code>_</code>) can be used as separators. For example, <code>1_050.95</code> is equivalent to <code>1050.95</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/pointer-events-api/">Pointer Events</a></strong>:
-            Pointer events, such as <code>pointerdown</code>, and the <code>PointerEvent</code> API, represent general pointing inputs, from a wide range of devices, such as a mouse, pen or stylus, or touch with one or more fingers. Not to be confused with the <code>pointer-events</code> CSS property.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/promise-allsettled/">Promise.allSettled()</a></strong>:
-            The <code>Promise.allSettled()</code> static method waits for an array of promises to settle (resolve or reject).
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/screen-capture/">Screen capture</a></strong>:
-            The <code>navigator.mediaDevices.getDisplayMedia()</code> method asks the user to choose a screen or portion of a screen (such as a window) to capture as a media stream.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/string-matchall/">String matchAll()</a></strong>:
-            The <code>matchAll()</code> method of strings matches a string against a regular expression and returns an iterator of all results, including capturing groups.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/visual-viewport/">Visual viewport API</a></strong>:
-            The <code>visualViewport</code> API provides a way to query and modify the user-visible viewport of a web page.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webauthn/">Web authentication</a></strong>:
-            The web authentication API allows you to create public key-based credentials and use them for authentication, such as when signing in. Also known as WebAuthn.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Safari on iOS</h2>
-      <p>The following features are now available in Safari on iOS:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/clip-path/">clip-path</a></strong>:
-            The <code>clip-path</code> CSS property and SVG attribute set the visible area of an element. Everything outside the area will be hidden.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/color-scheme/">color-scheme</a></strong>:
-            The <code>color-scheme</code> CSS property sets which color schemes (light or dark) an element uses and may prevent automatic dark mode adjustments by the browser.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/credential-management/">Credential management</a></strong>:
-            The <code>navigator.credentials</code> API provides generic storage for authentication credentials. Other credential APIs represent specific kinds of credentials, such as password or public key credentials, that the credential management API stores.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/display-flow-root/">display: flow-root</a></strong>:
-            The <code>display: flow-root</code> CSS declaration sets an element as the root element of a new flow layout for its children, preventing margin collapse with sibling elements.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/numeric-seperators/">Numeric separators</a></strong>:
-            To improve readability for numeric literals, underscores (<code>_</code>) can be used as separators. For example, <code>1_050.95</code> is equivalent to <code>1050.95</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/pointer-events-api/">Pointer Events</a></strong>:
-            Pointer events, such as <code>pointerdown</code>, and the <code>PointerEvent</code> API, represent general pointing inputs, from a wide range of devices, such as a mouse, pen or stylus, or touch with one or more fingers. Not to be confused with the <code>pointer-events</code> CSS property.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/prefers-color-scheme/">prefers-color-scheme media query</a></strong>:
-            The <code>prefers-color-scheme</code> CSS media query sets styles based on the requested color scheme, light or dark.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/promise-allsettled/">Promise.allSettled()</a></strong>:
-            The <code>Promise.allSettled()</code> static method waits for an array of promises to settle (resolve or reject).
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/string-matchall/">String matchAll()</a></strong>:
-            The <code>matchAll()</code> method of strings matches a string against a regular expression and returns an iterator of all results, including capturing groups.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/visual-viewport/">Visual viewport API</a></strong>:
-            The <code>visualViewport</code> API provides a way to query and modify the user-visible viewport of a web page.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webauthn/">Web authentication</a></strong>:
-            The web authentication API allows you to create public key-based credentials and use them for authentication, such as when signing in. Also known as WebAuthn.
-          </li>
-        
-      </ul>
-    
-  
-</section>
-
-    </main>
-
-    <footer>
-      <p>Generated on 12/19/2024 using <a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>2.14.0-dev-20241218204140-fd96a8a</code> and <a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>5.6.25</code></p>
-      <p>Source code: <a href="https://github.com/web-platform-dx/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
-    </footer>
 
   </body>
 </html>

@@ -2,232 +2,689 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Web features explorer - October 2024 web platform update</title>
+    <title>Web platform features explorer - October 2024 release notes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
   </head>
   <body>
 
-    <header><a href="/web-features-explorer/">Web features explorer</a></header>
+    <header>
+      <a href="/web-features-explorer/">Web platform features explorer</a>
 
-    <nav>
-      <ul>
-        <li class="monthly"><a href="/web-features-explorer/release-notes">Release notes</a></li>
-        <li class="baseline-low"><a href="/web-features-explorer/newly-available">Newly available</a></li>
-        <li class="baseline-high"><a href="/web-features-explorer/widely-available">Widely available</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/limited-availability">Limited availability</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/one-missing-engine">One missing engine</a></li>
-        <li><a href="/web-features-explorer/all">All</a></li>
-        <li><a href="/web-features-explorer/groups">Groups</a></li>
-        <li><a href="/web-features-explorer/browse">Browse features</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href="/web-features-explorer/release-notes/december-2024">Release notes</a></li>
+          <li><a href="/web-features-explorer/features">Explore all features</a></li>
+          <li><a href="/web-features-explorer/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main>
-      
-<h1>October 2024 web platform update</h1>
+    
+<main class="release-notes">
+  <h1>📃 October 2024 release notes</h1>
 
-<section class="month-update">
-  
-    <h2>Newly available</h2>
-    <p>The following features are newly available:</p>
-    <ul class="baseline-low">
+  <div>
+    
+      <section class="baseline-low">
+        <h2>Newly available</h2>
+        <p>The following features are newly available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/request-video-frame-callback/">requestVideoFrameCallback()</a></strong>:
+              The <code>requestVideoFrameCallback()</code> method for <code>&#x3C;video></code> schedules a function that runs with the next video frame. It is similar to <code>requestAnimationFrame()</code>, but for video.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/scroll-to-text-fragment/">Scroll to text fragment</a></strong>:
+              Text fragments are URL fragments on the form <code>#:~:text=snippet</code> and link to a snippet of text within a page. The browser may scroll, highlight, or otherwise bring that text to the reader's attention.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/text-wrap-mode/">text-wrap-mode</a></strong>:
+              The <code>text-wrap-mode</code> CSS property sets whether lines may wrap with the values <code>wrap</code> and <code>nowrap</code>. It is a longhand property for both <code>white-space</code> and <code>text-wrap</code>.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/text-wrap-stable/">text-wrap: stable</a></strong>:
+              The <code>text-wrap: stable</code> CSS declaration wraps text using the default algorithm, but does not change wrapping on earlier lines while the text is being edited.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/webgl-color-management/">Color management for WebGL</a></strong>:
+              The <code>drawingBufferColorSpace</code> and <code>unpackColorSpace</code> properties of <code>WebGLRenderingContext</code> sets the color representation for the buffer and imported textures, such as <code>"srgb"</code> or <code>"display-p3"</code>.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/webgl2-color-management/">Color management for WebGL2</a></strong>:
+              The <code>drawingBufferColorSpace</code> and <code>unpackColorSpace</code> properties of <code>WebGL2RenderingContext</code> sets the color representation for the buffer and imported textures, such as <code>"srgb"</code> or <code>"display-p3"</code>.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
+      <section class="baseline-high">
+        <h2>Widely available</h2>
+        <p>The following features are now widely available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/hwb/">HWB</a></strong>:
+              The <code>hwb()</code> CSS function picks colors using hue, whiteness, and blackness channels.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/request-video-frame-callback/">requestVideoFrameCallback()</a></strong>:
-          The <code>requestVideoFrameCallback()</code> method for <code>&#x3C;video></code> schedules a function that runs with the next video frame. It is similar to <code>requestAnimationFrame()</code>, but for video.
-        </li>
+        <section class="baseline-false chrome">
+          <h2>New in Chrome</h2>
+          <p>The following features are now available in Chrome:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/box-decoration-break/">box-decoration-break</a></strong>:
+                The <code>box-decoration-break</code> CSS property sets whether box decorations, such as borders or backgrounds, of an element divided across a page, column, or region wraps each fragment or splits across the break.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/document-picture-in-picture/">Document picture-in-picture</a></strong>:
+                The document picture-in-picture API creates an always-on-top window from arbitrary HTML content.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/intl-locale-info/">Intl.Locale info</a></strong>:
+                The getter methods of the <code>Intl.Locale</code> API provide supplemental information about a Unicode locale, such as the locale's calendar (for example, the first day in a week or the weekend start day), writing direction, 12- or 24-hour cycles, and numbering system.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-style/">text-wrap-style</a></strong>:
+                The <code>text-wrap-style</code> CSS property sets how lines break in text that overflows the container. It can also be set with the <code>text-wrap</code> shorthand.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/wasm-string-builtins/">String builtins (WebAssembly)</a></strong>:
+                The WebAssembly builtin string functions mirror a subset of the JavaScript <code>String</code> API and adapt it to be efficiently callable without JavaScript glue code.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/scroll-to-text-fragment/">Scroll to text fragment</a></strong>:
-          Text fragments are URL fragments on the form <code>#:~:text=snippet</code> and link to a snippet of text within a page. The browser may scroll, highlight, or otherwise bring that text to the reader's attention.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/text-wrap-mode/">text-wrap-mode</a></strong>:
-          The <code>text-wrap-mode</code> CSS property sets whether lines may wrap with the values <code>wrap</code> and <code>nowrap</code>. It is a longhand property for both <code>white-space</code> and <code>text-wrap</code>.
-        </li>
+        <section class="baseline-false chrome_android">
+          <h2>New in Chrome Android</h2>
+          <p>The following features are now available in Chrome Android:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/box-decoration-break/">box-decoration-break</a></strong>:
+                The <code>box-decoration-break</code> CSS property sets whether box decorations, such as borders or backgrounds, of an element divided across a page, column, or region wraps each fragment or splits across the break.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/intl-locale-info/">Intl.Locale info</a></strong>:
+                The getter methods of the <code>Intl.Locale</code> API provide supplemental information about a Unicode locale, such as the locale's calendar (for example, the first day in a week or the weekend start day), writing direction, 12- or 24-hour cycles, and numbering system.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-style/">text-wrap-style</a></strong>:
+                The <code>text-wrap-style</code> CSS property sets how lines break in text that overflows the container. It can also be set with the <code>text-wrap</code> shorthand.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/text-wrap-stable/">text-wrap: stable</a></strong>:
-          The <code>text-wrap: stable</code> CSS declaration wraps text using the default algorithm, but does not change wrapping on earlier lines while the text is being edited.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/webgl-color-management/">Color management for WebGL</a></strong>:
-          The <code>drawingBufferColorSpace</code> and <code>unpackColorSpace</code> properties of <code>WebGLRenderingContext</code> sets the color representation for the buffer and imported textures, such as <code>"srgb"</code> or <code>"display-p3"</code>.
-        </li>
+        <section class="baseline-false edge">
+          <h2>New in Edge</h2>
+          <p>The following features are now available in Edge:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/box-decoration-break/">box-decoration-break</a></strong>:
+                The <code>box-decoration-break</code> CSS property sets whether box decorations, such as borders or backgrounds, of an element divided across a page, column, or region wraps each fragment or splits across the break.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/document-picture-in-picture/">Document picture-in-picture</a></strong>:
+                The document picture-in-picture API creates an always-on-top window from arbitrary HTML content.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/intl-locale-info/">Intl.Locale info</a></strong>:
+                The getter methods of the <code>Intl.Locale</code> API provide supplemental information about a Unicode locale, such as the locale's calendar (for example, the first day in a week or the weekend start day), writing direction, 12- or 24-hour cycles, and numbering system.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-style/">text-wrap-style</a></strong>:
+                The <code>text-wrap-style</code> CSS property sets how lines break in text that overflows the container. It can also be set with the <code>text-wrap</code> shorthand.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/wasm-string-builtins/">String builtins (WebAssembly)</a></strong>:
+                The WebAssembly builtin string functions mirror a subset of the JavaScript <code>String</code> API and adapt it to be efficiently callable without JavaScript glue code.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/webgl2-color-management/">Color management for WebGL2</a></strong>:
-          The <code>drawingBufferColorSpace</code> and <code>unpackColorSpace</code> properties of <code>WebGL2RenderingContext</code> sets the color representation for the buffer and imported textures, such as <code>"srgb"</code> or <code>"display-p3"</code>.
-        </li>
+    
+      
+        <section class="baseline-false firefox">
+          <h2>New in Firefox</h2>
+          <p>The following features are now available in Firefox:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/iterator-methods/">Iterator methods</a></strong>:
+                The <code>Iterator</code> object is an abstract base for objects that implement the iterator protocol. It provides methods common to built-in iterators, such as <code>filter()</code>, <code>find()</code>, <code>map()</code>, and <code>reduce()</code>. You can also use the static method <code>Iterator.from()</code> to convert an existing iterable into an <code>Iterator</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/target-text/">::target-text</a></strong>:
+                The <code>::target-text</code> pseudo-element allows you to style text highlighted by a URL text fragment such as <code>#:~:text=snippet</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/wasm-exnref-exceptions/">Exception references with exnref (WebAssembly)</a></strong>:
+                When caught, an exception is reified into an exception reference, a value of the new type <code>exnref</code>.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+      
+        <section class="baseline-false firefox_android">
+          <h2>New in Firefox for Android</h2>
+          <p>The following features are now available in Firefox for Android:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/iterator-methods/">Iterator methods</a></strong>:
+                The <code>Iterator</code> object is an abstract base for objects that implement the iterator protocol. It provides methods common to built-in iterators, such as <code>filter()</code>, <code>find()</code>, <code>map()</code>, and <code>reduce()</code>. You can also use the static method <code>Iterator.from()</code> to convert an existing iterable into an <code>Iterator</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/target-text/">::target-text</a></strong>:
+                The <code>::target-text</code> pseudo-element allows you to style text highlighted by a URL text fragment such as <code>#:~:text=snippet</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/wasm-exnref-exceptions/">Exception references with exnref (WebAssembly)</a></strong>:
+                When caught, an exception is reified into an exception reference, a value of the new type <code>exnref</code>.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+      
+    
+      
+    
+  </div>
+
+  <aside>
+    <h2>Other release notes</h2>
+    <ul>
+      
+        
+          <li class="month-entry">
+            <a href="../december-2024">December 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2024">November 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2024">October 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2024">September 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2024">August 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2024">July 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2024">June 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2024">May 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../april-2024">April 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../march-2024">March 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../february-2024">February 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../january-2024">January 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../december-2023">December 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2023">November 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2023">October 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2023">September 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2023">August 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2023">July 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2023">June 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2023">May 2023</a>
+          </li>
+        
+      
+        
+          <li><a href="../">See all</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
     </ul>
-  
+  </aside>
+</main>
 
-  
-    <h2>Widely available</h2>
-    <p>The following features are now widely available:</p>
-    <ul class="baseline-high">
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/hwb/">HWB</a></strong>:
-          The <code>hwb()</code> CSS function picks colors using hue, whiteness, and blackness channels.
-        </li>
-      
-    </ul>
-  
-
-  
-    
-      <h2>New in Chrome</h2>
-      <p>The following features are now available in Chrome:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/box-decoration-break/">box-decoration-break</a></strong>:
-            The <code>box-decoration-break</code> CSS property sets whether box decorations, such as borders or backgrounds, of an element divided across a page, column, or region wraps each fragment or splits across the break.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/document-picture-in-picture/">Document picture-in-picture</a></strong>:
-            The document picture-in-picture API creates an always-on-top window from arbitrary HTML content.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/intl-locale-info/">Intl.Locale info</a></strong>:
-            The getter methods of the <code>Intl.Locale</code> API provide supplemental information about a Unicode locale, such as the locale's calendar (for example, the first day in a week or the weekend start day), writing direction, 12- or 24-hour cycles, and numbering system.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-wrap-style/">text-wrap-style</a></strong>:
-            The <code>text-wrap-style</code> CSS property sets how lines break in text that overflows the container. It can also be set with the <code>text-wrap</code> shorthand.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/wasm-string-builtins/">String builtins (WebAssembly)</a></strong>:
-            The WebAssembly builtin string functions mirror a subset of the JavaScript <code>String</code> API and adapt it to be efficiently callable without JavaScript glue code.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Chrome Android</h2>
-      <p>The following features are now available in Chrome Android:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/box-decoration-break/">box-decoration-break</a></strong>:
-            The <code>box-decoration-break</code> CSS property sets whether box decorations, such as borders or backgrounds, of an element divided across a page, column, or region wraps each fragment or splits across the break.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/intl-locale-info/">Intl.Locale info</a></strong>:
-            The getter methods of the <code>Intl.Locale</code> API provide supplemental information about a Unicode locale, such as the locale's calendar (for example, the first day in a week or the weekend start day), writing direction, 12- or 24-hour cycles, and numbering system.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-wrap-style/">text-wrap-style</a></strong>:
-            The <code>text-wrap-style</code> CSS property sets how lines break in text that overflows the container. It can also be set with the <code>text-wrap</code> shorthand.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Edge</h2>
-      <p>The following features are now available in Edge:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/box-decoration-break/">box-decoration-break</a></strong>:
-            The <code>box-decoration-break</code> CSS property sets whether box decorations, such as borders or backgrounds, of an element divided across a page, column, or region wraps each fragment or splits across the break.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/document-picture-in-picture/">Document picture-in-picture</a></strong>:
-            The document picture-in-picture API creates an always-on-top window from arbitrary HTML content.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/intl-locale-info/">Intl.Locale info</a></strong>:
-            The getter methods of the <code>Intl.Locale</code> API provide supplemental information about a Unicode locale, such as the locale's calendar (for example, the first day in a week or the weekend start day), writing direction, 12- or 24-hour cycles, and numbering system.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-wrap-style/">text-wrap-style</a></strong>:
-            The <code>text-wrap-style</code> CSS property sets how lines break in text that overflows the container. It can also be set with the <code>text-wrap</code> shorthand.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/wasm-string-builtins/">String builtins (WebAssembly)</a></strong>:
-            The WebAssembly builtin string functions mirror a subset of the JavaScript <code>String</code> API and adapt it to be efficiently callable without JavaScript glue code.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Firefox</h2>
-      <p>The following features are now available in Firefox:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/iterator-methods/">Iterator methods</a></strong>:
-            The <code>Iterator</code> object is an abstract base for objects that implement the iterator protocol. It provides methods common to built-in iterators, such as <code>filter()</code>, <code>find()</code>, <code>map()</code>, and <code>reduce()</code>. You can also use the static method <code>Iterator.from()</code> to convert an existing iterable into an <code>Iterator</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/target-text/">::target-text</a></strong>:
-            The <code>::target-text</code> pseudo-element allows you to style text highlighted by a URL text fragment such as <code>#:~:text=snippet</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/wasm-exnref-exceptions/">Exception references with exnref (WebAssembly)</a></strong>:
-            When caught, an exception is reified into an exception reference, a value of the new type <code>exnref</code>.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Firefox for Android</h2>
-      <p>The following features are now available in Firefox for Android:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/iterator-methods/">Iterator methods</a></strong>:
-            The <code>Iterator</code> object is an abstract base for objects that implement the iterator protocol. It provides methods common to built-in iterators, such as <code>filter()</code>, <code>find()</code>, <code>map()</code>, and <code>reduce()</code>. You can also use the static method <code>Iterator.from()</code> to convert an existing iterable into an <code>Iterator</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/target-text/">::target-text</a></strong>:
-            The <code>::target-text</code> pseudo-element allows you to style text highlighted by a URL text fragment such as <code>#:~:text=snippet</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/wasm-exnref-exceptions/">Exception references with exnref (WebAssembly)</a></strong>:
-            When caught, an exception is reified into an exception reference, a value of the new type <code>exnref</code>.
-          </li>
-        
-      </ul>
-    
-  
-    
-  
-    
-  
-</section>
-
-    </main>
-
-    <footer>
-      <p>Generated on 12/19/2024 using <a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>2.14.0-dev-20241218204140-fd96a8a</code> and <a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>5.6.25</code></p>
-      <p>Source code: <a href="https://github.com/web-platform-dx/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
-    </footer>
 
   </body>
 </html>

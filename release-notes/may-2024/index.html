@@ -2,299 +2,760 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Web features explorer - May 2024 web platform update</title>
+    <title>Web platform features explorer - May 2024 release notes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
   </head>
   <body>
 
-    <header><a href="/web-features-explorer/">Web features explorer</a></header>
+    <header>
+      <a href="/web-features-explorer/">Web platform features explorer</a>
 
-    <nav>
-      <ul>
-        <li class="monthly"><a href="/web-features-explorer/release-notes">Release notes</a></li>
-        <li class="baseline-low"><a href="/web-features-explorer/newly-available">Newly available</a></li>
-        <li class="baseline-high"><a href="/web-features-explorer/widely-available">Widely available</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/limited-availability">Limited availability</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/one-missing-engine">One missing engine</a></li>
-        <li><a href="/web-features-explorer/all">All</a></li>
-        <li><a href="/web-features-explorer/groups">Groups</a></li>
-        <li><a href="/web-features-explorer/browse">Browse features</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href="/web-features-explorer/release-notes/december-2024">Release notes</a></li>
+          <li><a href="/web-features-explorer/features">Explore all features</a></li>
+          <li><a href="/web-features-explorer/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main>
-      
-<h1>May 2024 web platform update</h1>
+    
+<main class="release-notes">
+  <h1>📃 May 2024 release notes</h1>
 
-<section class="month-update">
-  
-    <h2>Newly available</h2>
-    <p>The following features are newly available:</p>
-    <ul class="baseline-low">
+  <div>
+    
+      <section class="baseline-low">
+        <h2>Newly available</h2>
+        <p>The following features are newly available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/light-dark/">light-dark()</a></strong>:
+              The <code>light-dark()</code> CSS function accepts two colors and uses one depending on the current color scheme.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/round-mod-rem/">round(), mod(), and rem()</a></strong>:
+              The <code>round()</code>, <code>mod()</code>, and <code>rem()</code> CSS functions compute rounded values and the remainder after division.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/state/">:state()</a></strong>:
+              The <code>:state()</code> CSS pseudo-class matches custom elements based on their custom state, set through the <code>ElementInternals.states</code> API.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/text-wrap-balance/">text-wrap: balance</a></strong>:
+              The <code>text-wrap: balance</code> CSS declaration balances the length of each line when text is broken into multiple lines. Also known as headline balancing.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/zoom/">zoom</a></strong>:
+              The <code>zoom</code> CSS property scales the size of an element. Unlike the <code>transform</code> property, a zoomed element affects page layout.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
+      <section class="baseline-high">
+        <h2>Widely available</h2>
+        <p>The following features are now widely available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/enterkeyhint/">Enterkeyhint</a></strong>:
+              The <code>enterkeyhint</code> global HTML attribute sets the label for a virtual keyboard's Enter key. For example, <code>enterkeyhint="search"</code> may label the key with a magnifying glass icon.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/fit-content/">fit-content</a></strong>:
+              The <code>fit-content</code> CSS keyword expands a box as needed to fit its contents until the maximum size is reached, preserving the content's preferred aspect ratio.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/wasm-reference-types/">Reference types (WebAssembly)</a></strong>:
+              The <code>externref</code> type can be both a value type and a table element type, while <code>funcref</code> can be a value type.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/light-dark/">light-dark()</a></strong>:
-          The <code>light-dark()</code> CSS function accepts two colors and uses one depending on the current color scheme.
-        </li>
+        <section class="baseline-false chrome">
+          <h2>New in Chrome</h2>
+          <p>The following features are now available in Chrome:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/active-view-transition/">Active view transition</a></strong>:
+                The <code>:active-view-transition</code> CSS pseudo-class matches the root element when a view transition is active. The <code>:active-view-transition-type()</code> CSS pseudo-class matches only when the active view transition was started with the specified type.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/anchor-positioning/">Anchor positioning</a></strong>:
+                Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/attribution-reporting/">Attribution reporting</a></strong>:
+                The Attribution Reporting API measures when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/bfcache-blocking-reasons/">Back/forward cache blocking reasons</a></strong>:
+                The <code>notRestoredReasons</code> property of a <code>PerformanceNavigationTiming</code> object explains why the current document was blocked from using the back/forward cache (also known as the bfcache) on navigation.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/compute-pressure/">CPU compute pressure</a></strong>:
+                The <code>PressureObserver</code> API monitors CPU load, allowing you to adjust workloads in response to available computing resources. Also known as the Compute Pressure API.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/non-cookie-storage-access/">Non-cookie storage access</a></strong>:
+                Non-cookie storage access extends the <code>requestStorageAccess()</code> API to let content in cross-site iframes request access to first-party data beyond cookies.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/relative-color/">Relative colors</a></strong>:
+                The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/view-transition-class/">view-transition-class</a></strong>:
+                The <code>view-transition-class</code> CSS property sets a name that can be used to apply styles to multiple named view transition pseudo-elements.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/round-mod-rem/">round(), mod(), and rem()</a></strong>:
-          The <code>round()</code>, <code>mod()</code>, and <code>rem()</code> CSS functions compute rounded values and the remainder after division.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/state/">:state()</a></strong>:
-          The <code>:state()</code> CSS pseudo-class matches custom elements based on their custom state, set through the <code>ElementInternals.states</code> API.
-        </li>
+        <section class="baseline-false chrome_android">
+          <h2>New in Chrome Android</h2>
+          <p>The following features are now available in Chrome Android:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/active-view-transition/">Active view transition</a></strong>:
+                The <code>:active-view-transition</code> CSS pseudo-class matches the root element when a view transition is active. The <code>:active-view-transition-type()</code> CSS pseudo-class matches only when the active view transition was started with the specified type.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/anchor-positioning/">Anchor positioning</a></strong>:
+                Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/attribution-reporting/">Attribution reporting</a></strong>:
+                The Attribution Reporting API measures when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/bfcache-blocking-reasons/">Back/forward cache blocking reasons</a></strong>:
+                The <code>notRestoredReasons</code> property of a <code>PerformanceNavigationTiming</code> object explains why the current document was blocked from using the back/forward cache (also known as the bfcache) on navigation.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/relative-color/">Relative colors</a></strong>:
+                The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/view-transition-class/">view-transition-class</a></strong>:
+                The <code>view-transition-class</code> CSS property sets a name that can be used to apply styles to multiple named view transition pseudo-elements.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/text-wrap-balance/">text-wrap: balance</a></strong>:
-          The <code>text-wrap: balance</code> CSS declaration balances the length of each line when text is broken into multiple lines. Also known as headline balancing.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/zoom/">zoom</a></strong>:
-          The <code>zoom</code> CSS property scales the size of an element. Unlike the <code>transform</code> property, a zoomed element affects page layout.
-        </li>
+        <section class="baseline-false edge">
+          <h2>New in Edge</h2>
+          <p>The following features are now available in Edge:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/active-view-transition/">Active view transition</a></strong>:
+                The <code>:active-view-transition</code> CSS pseudo-class matches the root element when a view transition is active. The <code>:active-view-transition-type()</code> CSS pseudo-class matches only when the active view transition was started with the specified type.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/anchor-positioning/">Anchor positioning</a></strong>:
+                Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/attribution-reporting/">Attribution reporting</a></strong>:
+                The Attribution Reporting API measures when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/bfcache-blocking-reasons/">Back/forward cache blocking reasons</a></strong>:
+                The <code>notRestoredReasons</code> property of a <code>PerformanceNavigationTiming</code> object explains why the current document was blocked from using the back/forward cache (also known as the bfcache) on navigation.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/compute-pressure/">CPU compute pressure</a></strong>:
+                The <code>PressureObserver</code> API monitors CPU load, allowing you to adjust workloads in response to available computing resources. Also known as the Compute Pressure API.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/relative-color/">Relative colors</a></strong>:
+                The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/view-transition-class/">view-transition-class</a></strong>:
+                The <code>view-transition-class</code> CSS property sets a name that can be used to apply styles to multiple named view transition pseudo-elements.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+      
+        <section class="baseline-false firefox">
+          <h2>New in Firefox</h2>
+          <p>The following features are now available in Firefox:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/screen-wake-lock/">Screen wake lock</a></strong>:
+                The <code>navigator.wakeLock.request("screen")</code> API prevents the device's screen from dimming or being turned off.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/zstd/">Zstandard compression</a></strong>:
+                Zstandard or <code>zstd</code> is fast lossless compression algorithm. When used as a content encoding, it is often faster and offers better compression than brotli.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+      
+        <section class="baseline-false firefox_android">
+          <h2>New in Firefox for Android</h2>
+          <p>The following features are now available in Firefox for Android:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/screen-wake-lock/">Screen wake lock</a></strong>:
+                The <code>navigator.wakeLock.request("screen")</code> API prevents the device's screen from dimming or being turned off.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/zstd/">Zstandard compression</a></strong>:
+                Zstandard or <code>zstd</code> is fast lossless compression algorithm. When used as a content encoding, it is often faster and offers better compression than brotli.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+      
+        <section class="baseline-false safari">
+          <h2>New in Safari</h2>
+          <p>The following features are now available in Safari:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/starting-style/">@starting-style</a></strong>:
+                The <code>@starting-style</code> CSS at-rule sets the starting values for properties that are transitioning when the target element's style is first updated.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-stable/">text-wrap: stable</a></strong>:
+                The <code>text-wrap: stable</code> CSS declaration wraps text using the default algorithm, but does not change wrapping on earlier lines while the text is being edited.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+      
+        <section class="baseline-false safari_ios">
+          <h2>New in Safari on iOS</h2>
+          <p>The following features are now available in Safari on iOS:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/starting-style/">@starting-style</a></strong>:
+                The <code>@starting-style</code> CSS at-rule sets the starting values for properties that are transitioning when the target element's style is first updated.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-stable/">text-wrap: stable</a></strong>:
+                The <code>text-wrap: stable</code> CSS declaration wraps text using the default algorithm, but does not change wrapping on earlier lines while the text is being edited.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+  </div>
+
+  <aside>
+    <h2>Other release notes</h2>
+    <ul>
+      
+        
+          <li class="month-entry">
+            <a href="../december-2024">December 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2024">November 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2024">October 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2024">September 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2024">August 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2024">July 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2024">June 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2024">May 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../april-2024">April 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../march-2024">March 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../february-2024">February 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../january-2024">January 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../december-2023">December 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2023">November 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2023">October 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2023">September 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2023">August 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2023">July 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2023">June 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2023">May 2023</a>
+          </li>
+        
+      
+        
+          <li><a href="../">See all</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
     </ul>
-  
+  </aside>
+</main>
 
-  
-    <h2>Widely available</h2>
-    <p>The following features are now widely available:</p>
-    <ul class="baseline-high">
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/enterkeyhint/">Enterkeyhint</a></strong>:
-          The <code>enterkeyhint</code> global HTML attribute sets the label for a virtual keyboard's Enter key. For example, <code>enterkeyhint="search"</code> may label the key with a magnifying glass icon.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/fit-content/">fit-content</a></strong>:
-          The <code>fit-content</code> CSS keyword expands a box as needed to fit its contents until the maximum size is reached, preserving the content's preferred aspect ratio.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/wasm-reference-types/">Reference types (WebAssembly)</a></strong>:
-          The <code>externref</code> type can be both a value type and a table element type, while <code>funcref</code> can be a value type.
-        </li>
-      
-    </ul>
-  
-
-  
-    
-      <h2>New in Chrome</h2>
-      <p>The following features are now available in Chrome:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/active-view-transition/">Active view transition</a></strong>:
-            The <code>:active-view-transition</code> CSS pseudo-class matches the root element when a view transition is active. The <code>:active-view-transition-type()</code> CSS pseudo-class matches only when the active view transition was started with the specified type.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/anchor-positioning/">Anchor positioning</a></strong>:
-            Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/attribution-reporting/">Attribution reporting</a></strong>:
-            The Attribution Reporting API measures when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/bfcache-blocking-reasons/">Back/forward cache blocking reasons</a></strong>:
-            The <code>notRestoredReasons</code> property of a <code>PerformanceNavigationTiming</code> object explains why the current document was blocked from using the back/forward cache (also known as the bfcache) on navigation.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/compute-pressure/">CPU compute pressure</a></strong>:
-            The <code>PressureObserver</code> API monitors CPU load, allowing you to adjust workloads in response to available computing resources. Also known as the Compute Pressure API.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/non-cookie-storage-access/">Non-cookie storage access</a></strong>:
-            Non-cookie storage access extends the <code>requestStorageAccess()</code> API to let content in cross-site iframes request access to first-party data beyond cookies.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/relative-color/">Relative colors</a></strong>:
-            The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/view-transition-class/">view-transition-class</a></strong>:
-            The <code>view-transition-class</code> CSS property sets a name that can be used to apply styles to multiple named view transition pseudo-elements.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Chrome Android</h2>
-      <p>The following features are now available in Chrome Android:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/active-view-transition/">Active view transition</a></strong>:
-            The <code>:active-view-transition</code> CSS pseudo-class matches the root element when a view transition is active. The <code>:active-view-transition-type()</code> CSS pseudo-class matches only when the active view transition was started with the specified type.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/anchor-positioning/">Anchor positioning</a></strong>:
-            Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/attribution-reporting/">Attribution reporting</a></strong>:
-            The Attribution Reporting API measures when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/bfcache-blocking-reasons/">Back/forward cache blocking reasons</a></strong>:
-            The <code>notRestoredReasons</code> property of a <code>PerformanceNavigationTiming</code> object explains why the current document was blocked from using the back/forward cache (also known as the bfcache) on navigation.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/relative-color/">Relative colors</a></strong>:
-            The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/view-transition-class/">view-transition-class</a></strong>:
-            The <code>view-transition-class</code> CSS property sets a name that can be used to apply styles to multiple named view transition pseudo-elements.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Edge</h2>
-      <p>The following features are now available in Edge:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/active-view-transition/">Active view transition</a></strong>:
-            The <code>:active-view-transition</code> CSS pseudo-class matches the root element when a view transition is active. The <code>:active-view-transition-type()</code> CSS pseudo-class matches only when the active view transition was started with the specified type.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/anchor-positioning/">Anchor positioning</a></strong>:
-            Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/attribution-reporting/">Attribution reporting</a></strong>:
-            The Attribution Reporting API measures when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/bfcache-blocking-reasons/">Back/forward cache blocking reasons</a></strong>:
-            The <code>notRestoredReasons</code> property of a <code>PerformanceNavigationTiming</code> object explains why the current document was blocked from using the back/forward cache (also known as the bfcache) on navigation.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/compute-pressure/">CPU compute pressure</a></strong>:
-            The <code>PressureObserver</code> API monitors CPU load, allowing you to adjust workloads in response to available computing resources. Also known as the Compute Pressure API.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/relative-color/">Relative colors</a></strong>:
-            The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/view-transition-class/">view-transition-class</a></strong>:
-            The <code>view-transition-class</code> CSS property sets a name that can be used to apply styles to multiple named view transition pseudo-elements.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Firefox</h2>
-      <p>The following features are now available in Firefox:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/screen-wake-lock/">Screen wake lock</a></strong>:
-            The <code>navigator.wakeLock.request("screen")</code> API prevents the device's screen from dimming or being turned off.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/zstd/">Zstandard compression</a></strong>:
-            Zstandard or <code>zstd</code> is fast lossless compression algorithm. When used as a content encoding, it is often faster and offers better compression than brotli.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Firefox for Android</h2>
-      <p>The following features are now available in Firefox for Android:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/screen-wake-lock/">Screen wake lock</a></strong>:
-            The <code>navigator.wakeLock.request("screen")</code> API prevents the device's screen from dimming or being turned off.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/zstd/">Zstandard compression</a></strong>:
-            Zstandard or <code>zstd</code> is fast lossless compression algorithm. When used as a content encoding, it is often faster and offers better compression than brotli.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Safari</h2>
-      <p>The following features are now available in Safari:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/starting-style/">@starting-style</a></strong>:
-            The <code>@starting-style</code> CSS at-rule sets the starting values for properties that are transitioning when the target element's style is first updated.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-wrap-stable/">text-wrap: stable</a></strong>:
-            The <code>text-wrap: stable</code> CSS declaration wraps text using the default algorithm, but does not change wrapping on earlier lines while the text is being edited.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Safari on iOS</h2>
-      <p>The following features are now available in Safari on iOS:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/starting-style/">@starting-style</a></strong>:
-            The <code>@starting-style</code> CSS at-rule sets the starting values for properties that are transitioning when the target element's style is first updated.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-wrap-stable/">text-wrap: stable</a></strong>:
-            The <code>text-wrap: stable</code> CSS declaration wraps text using the default algorithm, but does not change wrapping on earlier lines while the text is being edited.
-          </li>
-        
-      </ul>
-    
-  
-</section>
-
-    </main>
-
-    <footer>
-      <p>Generated on 12/19/2024 using <a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>2.14.0-dev-20241218204140-fd96a8a</code> and <a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>5.6.25</code></p>
-      <p>Source code: <a href="https://github.com/web-platform-dx/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
-    </footer>
 
   </body>
 </html>

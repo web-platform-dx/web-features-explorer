@@ -2,494 +2,955 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Web features explorer - September 2021 web platform update</title>
+    <title>Web platform features explorer - September 2021 release notes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
   </head>
   <body>
 
-    <header><a href="/web-features-explorer/">Web features explorer</a></header>
+    <header>
+      <a href="/web-features-explorer/">Web platform features explorer</a>
 
-    <nav>
-      <ul>
-        <li class="monthly"><a href="/web-features-explorer/release-notes">Release notes</a></li>
-        <li class="baseline-low"><a href="/web-features-explorer/newly-available">Newly available</a></li>
-        <li class="baseline-high"><a href="/web-features-explorer/widely-available">Widely available</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/limited-availability">Limited availability</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/one-missing-engine">One missing engine</a></li>
-        <li><a href="/web-features-explorer/all">All</a></li>
-        <li><a href="/web-features-explorer/groups">Groups</a></li>
-        <li><a href="/web-features-explorer/browse">Browse features</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href="/web-features-explorer/release-notes/december-2024">Release notes</a></li>
+          <li><a href="/web-features-explorer/features">Explore all features</a></li>
+          <li><a href="/web-features-explorer/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main>
-      
-<h1>September 2021 web platform update</h1>
+    
+<main class="release-notes">
+  <h1>📃 September 2021 release notes</h1>
 
-<section class="month-update">
-  
-    <h2>Newly available</h2>
-    <p>The following features are newly available:</p>
-    <ul class="baseline-low">
+  <div>
+    
+      <section class="baseline-low">
+        <h2>Newly available</h2>
+        <p>The following features are newly available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/aspect-ratio/">aspect-ratio</a></strong>:
+              The <code>aspect-ratio</code> CSS property controls the width-to-height ratio of elements. For <code>&#x3C;img></code> and <code>&#x3C;video></code> elements, the <code>width</code> and <code>height</code> attributes used together with <code>height: auto</code> control the aspect ratio while the image/video is loading.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/bigint64array/">BigInt64Array</a></strong>:
+              The <code>BigInt64Array</code> and <code>BigUint64Array</code> typed arrays represent 64-bit integers, signed and unsigned respectively.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/error-cause/">Error cause</a></strong>:
+              The <code>cause</code> property of errors records the specific original cause of the error, particularly for errors that have been re-thrown.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/ext-color-buffer-float/">EXT_color_buffer_float WebGL extension</a></strong>:
+              The <code>EXT_color_buffer_float</code> extension for WebGL 2.0 contexts adds color-renderable floating point formats to <code>renderbufferStorage()</code>.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/font-family-system/">System font</a></strong>:
+              The <code>font-family: system-ui</code> CSS declaration uses the operating system default font for text.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/indexeddb/">IndexedDB</a></strong>:
+              The IndexedDB API is a local storage transactional object database.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/logical-properties/">Logical properties</a></strong>:
+              CSS logical properties control borders, size, margin, and padding with directions and dimensions relative to the writing mode. For example, in a left to right, top to bottom writing mode, <code>block-end</code> refers to the bottom. Also known as flow relative.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/referrer-policy/">Referrer policy</a></strong>:
+              The <code>Referrer-Policy</code> HTTP header and <code>referrerpolicy</code> HTML attributes control whether requests have the <code>Referer</code> header and what information the header contains.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/top-level-await/">Top-level await</a></strong>:
+              The <code>await</code> keyword, when used at the top level of a module (outside of an async function), delays parent module execution until after a promise fulfills.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/webauthn/">Web authentication</a></strong>:
+              The web authentication API allows you to create public key-based credentials and use them for authentication, such as when signing in. Also known as WebAuthn.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/webgl-color-buffer-float/">WEBGL_color_buffer_float WebGL extension</a></strong>:
+              The <code>WEBGL_color_buffer_float</code> extension for WebGL 1.0 contexts adds the 32-bit floating-point type <code>RGBA32F</code> as a color-renderable format.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/webgl2/">WebGL2</a></strong>:
+              The <code>WebGL2RenderingContext</code> API is the <code>"webgl2"</code> rendering context for the <code>&#x3C;canvas></code> element. It represents a space for drawing two- and three-dimensional graphics and animations. It corresponds to OpenGL ES 3.0.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
+      <section class="baseline-high">
+        <h2>Widely available</h2>
+        <p>The following features are now widely available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/abortable-fetch/">Abortable fetch</a></strong>:
+              If you construct a fetch request with an <code>AbortSignal</code>, you can cancel the request.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/aborting/">AbortController and AbortSignal</a></strong>:
+              The <code>AbortController</code> and <code>AbortSignal</code> APIs allow you to cancel an ongoing operation, such as a <code>fetch()</code> request.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/intersection-observer/">Intersection observer</a></strong>:
+              The Intersection Observer API asynchronously observes changes in the intersection of a target element with an ancestor element or with a top-level document's viewport.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/aspect-ratio/">aspect-ratio</a></strong>:
-          The <code>aspect-ratio</code> CSS property controls the width-to-height ratio of elements. For <code>&#x3C;img></code> and <code>&#x3C;video></code> elements, the <code>width</code> and <code>height</code> attributes used together with <code>height: auto</code> control the aspect ratio while the image/video is loading.
-        </li>
+        <section class="baseline-false chrome">
+          <h2>New in Chrome</h2>
+          <p>The following features are now available in Chrome:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/idle-detection/">Idle detection</a></strong>:
+                The <code>IdleDetector</code> API is used to notify a webpage of the user's idle, active, and locked state.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/ink/">Ink</a></strong>:
+                The <code>navigator.ink</code> API uses the system compositor to draw to a <code>&#x3C;canvas></code> element ahead of pointer events, reducing the delay between moving a stylus or cursor and a pen stroke appearing on screen.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/outline/">outline</a></strong>:
+                The <code>outline</code> CSS shorthand sets the color, style, and width of a line around an element, outside of the border.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/pdf-viewer/">pdfViewerEnabled</a></strong>:
+                The <code>navigator.pdfViewerEnabled</code> read-only property returns a Boolean for whether the browser navigates to and shows a PDF in the browser window or downloads the PDF.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/profiler/">Profiler</a></strong>:
+                The <code>Profiler</code> API records data about the execution of a page, which you can send to a server for later analysis. Also known as self-profiling.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scrollbar-gutter/">scrollbar-gutter</a></strong>:
+                The <code>scrollbar-gutter</code> CSS property reserves space for the scrollbar, preventing unwanted layout changes as the scrollbar appears and disappears.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/virtual-keyboard/">Virtual keyboard</a></strong>:
+                The <code>navigator.virtualKeyboard</code> API inspects and controls on-screen virtual keyboards. You can use it to programmatically hide or show a virtual keyboard or respond to the keyboard disappearing or appearing.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webcodecs/">WebCodecs</a></strong>:
+                The WebCodecs API provides low-level access to individual video frames and chunks of audio samples, for full control over the way media is processed.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/bigint64array/">BigInt64Array</a></strong>:
-          The <code>BigInt64Array</code> and <code>BigUint64Array</code> typed arrays represent 64-bit integers, signed and unsigned respectively.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/error-cause/">Error cause</a></strong>:
-          The <code>cause</code> property of errors records the specific original cause of the error, particularly for errors that have been re-thrown.
-        </li>
+        <section class="baseline-false chrome_android">
+          <h2>New in Chrome Android</h2>
+          <p>The following features are now available in Chrome Android:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/idle-detection/">Idle detection</a></strong>:
+                The <code>IdleDetector</code> API is used to notify a webpage of the user's idle, active, and locked state.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/ink/">Ink</a></strong>:
+                The <code>navigator.ink</code> API uses the system compositor to draw to a <code>&#x3C;canvas></code> element ahead of pointer events, reducing the delay between moving a stylus or cursor and a pen stroke appearing on screen.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/outline/">outline</a></strong>:
+                The <code>outline</code> CSS shorthand sets the color, style, and width of a line around an element, outside of the border.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/pdf-viewer/">pdfViewerEnabled</a></strong>:
+                The <code>navigator.pdfViewerEnabled</code> read-only property returns a Boolean for whether the browser navigates to and shows a PDF in the browser window or downloads the PDF.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/profiler/">Profiler</a></strong>:
+                The <code>Profiler</code> API records data about the execution of a page, which you can send to a server for later analysis. Also known as self-profiling.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scrollbar-gutter/">scrollbar-gutter</a></strong>:
+                The <code>scrollbar-gutter</code> CSS property reserves space for the scrollbar, preventing unwanted layout changes as the scrollbar appears and disappears.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/virtual-keyboard/">Virtual keyboard</a></strong>:
+                The <code>navigator.virtualKeyboard</code> API inspects and controls on-screen virtual keyboards. You can use it to programmatically hide or show a virtual keyboard or respond to the keyboard disappearing or appearing.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webcodecs/">WebCodecs</a></strong>:
+                The WebCodecs API provides low-level access to individual video frames and chunks of audio samples, for full control over the way media is processed.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/ext-color-buffer-float/">EXT_color_buffer_float WebGL extension</a></strong>:
-          The <code>EXT_color_buffer_float</code> extension for WebGL 2.0 contexts adds color-renderable floating point formats to <code>renderbufferStorage()</code>.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/font-family-system/">System font</a></strong>:
-          The <code>font-family: system-ui</code> CSS declaration uses the operating system default font for text.
-        </li>
+        <section class="baseline-false edge">
+          <h2>New in Edge</h2>
+          <p>The following features are now available in Edge:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/accent-color/">accent-color</a></strong>:
+                The <code>accent-color</code> CSS property sets a color for checkboxes, radio buttons, and other form controls.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/ext-texture-compression-bptc/">EXT_texture_compression_bptc WebGL extension</a></strong>:
+                The <code>EXT_texture_compression_bptc</code> extension for WebGL 1.0 and 2.0 contexts adds the BPTC compressed texture formats to <code>compressedTexImage2D()</code> and <code>compressedTexSubImage2D()</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/ext-texture-compression-rgtc/">EXT_texture_compression_rgtc WebGL extension</a></strong>:
+                The <code>EXT_texture_compression_rgtc</code> extension for WebGL 1.0 and 2.0 contexts adds RGTC compressed texture formats. RGTC is a block-based texture compression format suited for unsigned and signed red and red-green textures. Also known as Red-Green Texture Compression.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/ink/">Ink</a></strong>:
+                The <code>navigator.ink</code> API uses the system compositor to draw to a <code>&#x3C;canvas></code> element ahead of pointer events, reducing the delay between moving a stylus or cursor and a pen stroke appearing on screen.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/outline/">outline</a></strong>:
+                The <code>outline</code> CSS shorthand sets the color, style, and width of a line around an element, outside of the border.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/pdf-viewer/">pdfViewerEnabled</a></strong>:
+                The <code>navigator.pdfViewerEnabled</code> read-only property returns a Boolean for whether the browser navigates to and shows a PDF in the browser window or downloads the PDF.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/profiler/">Profiler</a></strong>:
+                The <code>Profiler</code> API records data about the execution of a page, which you can send to a server for later analysis. Also known as self-profiling.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scrollbar-gutter/">scrollbar-gutter</a></strong>:
+                The <code>scrollbar-gutter</code> CSS property reserves space for the scrollbar, preventing unwanted layout changes as the scrollbar appears and disappears.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/share/">navigator.share()</a></strong>:
+                The <code>navigator.share()</code> method invokes the device's native sharing mechanism and passes text, links, files, and other content to share targets.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/virtual-keyboard/">Virtual keyboard</a></strong>:
+                The <code>navigator.virtualKeyboard</code> API inspects and controls on-screen virtual keyboards. You can use it to programmatically hide or show a virtual keyboard or respond to the keyboard disappearing or appearing.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/web-otp/">WebOTP</a></strong>:
+                The <code>OTPCredential</code> API represents a one-time-password (OTP).
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webcodecs/">WebCodecs</a></strong>:
+                The WebCodecs API provides low-level access to individual video frames and chunks of audio samples, for full control over the way media is processed.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/indexeddb/">IndexedDB</a></strong>:
-          The IndexedDB API is a local storage transactional object database.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/logical-properties/">Logical properties</a></strong>:
-          CSS logical properties control borders, size, margin, and padding with directions and dimensions relative to the writing mode. For example, in a left to right, top to bottom writing mode, <code>block-end</code> refers to the bottom. Also known as flow relative.
-        </li>
+        <section class="baseline-false firefox">
+          <h2>New in Firefox</h2>
+          <p>The following features are now available in Firefox:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/accent-color/">accent-color</a></strong>:
+                The <code>accent-color</code> CSS property sets a color for checkboxes, radio buttons, and other form controls.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/slot-assign/">Imperative slot assignment</a></strong>:
+                The <code>assign()</code> method for <code>&#x3C;slot></code> elements assigns nodes to the slot, as an alternative to using the <code>slot</code> and <code>name</code> HTML attributes. The nodes must be children of a shadow host and the shadow root must be created with the <code>slotAssignment</code> set to "manual". Also known as manual slot assignment.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/referrer-policy/">Referrer policy</a></strong>:
-          The <code>Referrer-Policy</code> HTTP header and <code>referrerpolicy</code> HTML attributes control whether requests have the <code>Referer</code> header and what information the header contains.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/top-level-await/">Top-level await</a></strong>:
-          The <code>await</code> keyword, when used at the top level of a module (outside of an async function), delays parent module execution until after a promise fulfills.
-        </li>
+        <section class="baseline-false firefox_android">
+          <h2>New in Firefox for Android</h2>
+          <p>The following features are now available in Firefox for Android:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/accent-color/">accent-color</a></strong>:
+                The <code>accent-color</code> CSS property sets a color for checkboxes, radio buttons, and other form controls.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/slot-assign/">Imperative slot assignment</a></strong>:
+                The <code>assign()</code> method for <code>&#x3C;slot></code> elements assigns nodes to the slot, as an alternative to using the <code>slot</code> and <code>name</code> HTML attributes. The nodes must be children of a shadow host and the shadow root must be created with the <code>slotAssignment</code> set to "manual". Also known as manual slot assignment.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/webauthn/">Web authentication</a></strong>:
-          The web authentication API allows you to create public key-based credentials and use them for authentication, such as when signing in. Also known as WebAuthn.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/webgl-color-buffer-float/">WEBGL_color_buffer_float WebGL extension</a></strong>:
-          The <code>WEBGL_color_buffer_float</code> extension for WebGL 1.0 contexts adds the 32-bit floating-point type <code>RGBA32F</code> as a color-renderable format.
-        </li>
+        <section class="baseline-false safari">
+          <h2>New in Safari</h2>
+          <p>The following features are now available in Safari:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/autofill/">:autofill</a></strong>:
+                The <code>:autofill</code> pseudo-class matches <code>&#x3C;input></code> elements that have been filled in automatically by the browser.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/canvas-2d-desynchronized/">Desynchronized 2D canvas</a></strong>:
+                The optional <code>desynchronized</code> parameter of a canvas's <code>getContext()</code> method permits the browser to draw a 2D canvas independently of the event loop. This can reduce drawing latency.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/color-function/">color()</a></strong>:
+                The <code>color()</code> function picks a color from a given color space. Wide gamut color spaces like <code>display-p3</code> allow showing more vibrant and saturated colors than the standard <code>srgb</code> color space.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/hwb/">HWB</a></strong>:
+                The <code>hwb()</code> CSS function picks colors using hue, whiteness, and blackness channels.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/js-modules-service-workers/">JavaScript modules in service workers</a></strong>:
+                The <code>navigator.serviceWorker.register()</code> method accepts <code>{ type: "module" }</code> to load scripts that use <code>import</code> and <code>export</code>. Also known as ECMAScript modules or ESM in service workers.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/js-modules-workers/">JavaScript modules in workers</a></strong>:
+                The <code>Worker()</code> constructor accepts <code>{ type: "module" }</code> to load scripts that use <code>import</code> and <code>export</code>. Also known as ECMAScript modules or ESM in workers.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/lab/">Lab and LCH</a></strong>:
+                The CIE Lab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is. LCH is a variant of Lab with polar coordinates. These color spaces can be used with the CSS <code>color()</code>, <code>lab()</code>, and <code>lch()</code> functions. Also known as CIELAB and CIELCH.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/media-session/">Media session</a></strong>:
+                The <code>navigator.mediaSession</code> API integrates with platform UI for media playback. It can be used to set metadata such as title and artwork, and to handle user actions like playing, pausing, or seeking.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/meta-theme-color/">&lt;meta name=&quot;theme-color&quot;&gt;</a></strong>:
+                The <code>name="theme-color"</code> attribute for the <code>&#x3C;meta></code> HTML element sets the preferred color to customize the display of the page or the surrounding browser user interface.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/navigation-timing/">Navigation timing</a></strong>:
+                The <code>navigation</code> performance entry and the <code>PerformanceNavigationTiming</code> API measures navigation events, such as loading time or the number of redirects.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-indent-each-line/">text-indent: each-line</a></strong>:
+                The <code>text-indent: each-line</code> CSS declaration indents text after forced breaks as well as to the first line of a block.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-indent-hanging/">text-indent: hanging</a></strong>:
+                The <code>text-indent: hanging</code> CSS declaration indents all lines except the first.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/two-value-display/">Two-value display property</a></strong>:
+                The <code>display</code> CSS property accepts multiple keyword values, such as <code>inline flex</code> or <code>block flow</code>, to explicitly set an element's inner and outer layout mode. Also known as 2-value, multi-keyword, or multiple value syntax.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webgl-multi-draw/">WEBGL_multi_draw WebGL extension</a></strong>:
+                The <code>WEBGL_multi_draw</code> extension for WebGL 1.0 and 2.0 contexts renders more than one primitive with a single function call.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/webgl2/">WebGL2</a></strong>:
-          The <code>WebGL2RenderingContext</code> API is the <code>"webgl2"</code> rendering context for the <code>&#x3C;canvas></code> element. It represents a space for drawing two- and three-dimensional graphics and animations. It corresponds to OpenGL ES 3.0.
-        </li>
+    
+      
+        <section class="baseline-false safari_ios">
+          <h2>New in Safari on iOS</h2>
+          <p>The following features are now available in Safari on iOS:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/autofill/">:autofill</a></strong>:
+                The <code>:autofill</code> pseudo-class matches <code>&#x3C;input></code> elements that have been filled in automatically by the browser.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/canvas-2d-desynchronized/">Desynchronized 2D canvas</a></strong>:
+                The optional <code>desynchronized</code> parameter of a canvas's <code>getContext()</code> method permits the browser to draw a 2D canvas independently of the event loop. This can reduce drawing latency.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/color-function/">color()</a></strong>:
+                The <code>color()</code> function picks a color from a given color space. Wide gamut color spaces like <code>display-p3</code> allow showing more vibrant and saturated colors than the standard <code>srgb</code> color space.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/ext-frag-depth/">EXT_frag_depth WebGL extension</a></strong>:
+                The <code>EXT_frag_depth</code> extension for WebGL 1.0 and 2.0 contexts adds setting the depth value of a fragment from within the fragment shader.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/hwb/">HWB</a></strong>:
+                The <code>hwb()</code> CSS function picks colors using hue, whiteness, and blackness channels.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/js-modules-service-workers/">JavaScript modules in service workers</a></strong>:
+                The <code>navigator.serviceWorker.register()</code> method accepts <code>{ type: "module" }</code> to load scripts that use <code>import</code> and <code>export</code>. Also known as ECMAScript modules or ESM in service workers.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/js-modules-workers/">JavaScript modules in workers</a></strong>:
+                The <code>Worker()</code> constructor accepts <code>{ type: "module" }</code> to load scripts that use <code>import</code> and <code>export</code>. Also known as ECMAScript modules or ESM in workers.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/lab/">Lab and LCH</a></strong>:
+                The CIE Lab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is. LCH is a variant of Lab with polar coordinates. These color spaces can be used with the CSS <code>color()</code>, <code>lab()</code>, and <code>lch()</code> functions. Also known as CIELAB and CIELCH.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/media-session/">Media session</a></strong>:
+                The <code>navigator.mediaSession</code> API integrates with platform UI for media playback. It can be used to set metadata such as title and artwork, and to handle user actions like playing, pausing, or seeking.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/meta-theme-color/">&lt;meta name=&quot;theme-color&quot;&gt;</a></strong>:
+                The <code>name="theme-color"</code> attribute for the <code>&#x3C;meta></code> HTML element sets the preferred color to customize the display of the page or the surrounding browser user interface.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-indent-each-line/">text-indent: each-line</a></strong>:
+                The <code>text-indent: each-line</code> CSS declaration indents text after forced breaks as well as to the first line of a block.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-indent-hanging/">text-indent: hanging</a></strong>:
+                The <code>text-indent: hanging</code> CSS declaration indents all lines except the first.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/two-value-display/">Two-value display property</a></strong>:
+                The <code>display</code> CSS property accepts multiple keyword values, such as <code>inline flex</code> or <code>block flow</code>, to explicitly set an element's inner and outer layout mode. Also known as 2-value, multi-keyword, or multiple value syntax.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webgl-draw-buffers/">WEBGL_draw_buffers WebGL extension</a></strong>:
+                The <code>WEBGL_draw_buffers</code> extension for WebGL 1.0 contexts enables a fragment shader to write to several textures, which is useful for deferred shading, for example.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webgl-multi-draw/">WEBGL_multi_draw WebGL extension</a></strong>:
+                The <code>WEBGL_multi_draw</code> extension for WebGL 1.0 and 2.0 contexts renders more than one primitive with a single function call.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+  </div>
+
+  <aside>
+    <h2>Other release notes</h2>
+    <ul>
+      
+        
+          <li class="month-entry">
+            <a href="../december-2024">December 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2024">November 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2024">October 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2024">September 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2024">August 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2024">July 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2024">June 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2024">May 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../april-2024">April 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../march-2024">March 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../february-2024">February 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../january-2024">January 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../december-2023">December 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2023">November 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2023">October 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2023">September 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2023">August 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2023">July 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2023">June 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2023">May 2023</a>
+          </li>
+        
+      
+        
+          <li><a href="../">See all</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
     </ul>
-  
+  </aside>
+</main>
 
-  
-    <h2>Widely available</h2>
-    <p>The following features are now widely available:</p>
-    <ul class="baseline-high">
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/abortable-fetch/">Abortable fetch</a></strong>:
-          If you construct a fetch request with an <code>AbortSignal</code>, you can cancel the request.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/aborting/">AbortController and AbortSignal</a></strong>:
-          The <code>AbortController</code> and <code>AbortSignal</code> APIs allow you to cancel an ongoing operation, such as a <code>fetch()</code> request.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/intersection-observer/">Intersection observer</a></strong>:
-          The Intersection Observer API asynchronously observes changes in the intersection of a target element with an ancestor element or with a top-level document's viewport.
-        </li>
-      
-    </ul>
-  
-
-  
-    
-      <h2>New in Chrome</h2>
-      <p>The following features are now available in Chrome:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/idle-detection/">Idle detection</a></strong>:
-            The <code>IdleDetector</code> API is used to notify a webpage of the user's idle, active, and locked state.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/ink/">Ink</a></strong>:
-            The <code>navigator.ink</code> API uses the system compositor to draw to a <code>&#x3C;canvas></code> element ahead of pointer events, reducing the delay between moving a stylus or cursor and a pen stroke appearing on screen.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/outline/">outline</a></strong>:
-            The <code>outline</code> CSS shorthand sets the color, style, and width of a line around an element, outside of the border.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/pdf-viewer/">pdfViewerEnabled</a></strong>:
-            The <code>navigator.pdfViewerEnabled</code> read-only property returns a Boolean for whether the browser navigates to and shows a PDF in the browser window or downloads the PDF.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/profiler/">Profiler</a></strong>:
-            The <code>Profiler</code> API records data about the execution of a page, which you can send to a server for later analysis. Also known as self-profiling.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scrollbar-gutter/">scrollbar-gutter</a></strong>:
-            The <code>scrollbar-gutter</code> CSS property reserves space for the scrollbar, preventing unwanted layout changes as the scrollbar appears and disappears.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/virtual-keyboard/">Virtual keyboard</a></strong>:
-            The <code>navigator.virtualKeyboard</code> API inspects and controls on-screen virtual keyboards. You can use it to programmatically hide or show a virtual keyboard or respond to the keyboard disappearing or appearing.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webcodecs/">WebCodecs</a></strong>:
-            The WebCodecs API provides low-level access to individual video frames and chunks of audio samples, for full control over the way media is processed.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Chrome Android</h2>
-      <p>The following features are now available in Chrome Android:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/idle-detection/">Idle detection</a></strong>:
-            The <code>IdleDetector</code> API is used to notify a webpage of the user's idle, active, and locked state.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/ink/">Ink</a></strong>:
-            The <code>navigator.ink</code> API uses the system compositor to draw to a <code>&#x3C;canvas></code> element ahead of pointer events, reducing the delay between moving a stylus or cursor and a pen stroke appearing on screen.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/outline/">outline</a></strong>:
-            The <code>outline</code> CSS shorthand sets the color, style, and width of a line around an element, outside of the border.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/pdf-viewer/">pdfViewerEnabled</a></strong>:
-            The <code>navigator.pdfViewerEnabled</code> read-only property returns a Boolean for whether the browser navigates to and shows a PDF in the browser window or downloads the PDF.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/profiler/">Profiler</a></strong>:
-            The <code>Profiler</code> API records data about the execution of a page, which you can send to a server for later analysis. Also known as self-profiling.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scrollbar-gutter/">scrollbar-gutter</a></strong>:
-            The <code>scrollbar-gutter</code> CSS property reserves space for the scrollbar, preventing unwanted layout changes as the scrollbar appears and disappears.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/virtual-keyboard/">Virtual keyboard</a></strong>:
-            The <code>navigator.virtualKeyboard</code> API inspects and controls on-screen virtual keyboards. You can use it to programmatically hide or show a virtual keyboard or respond to the keyboard disappearing or appearing.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webcodecs/">WebCodecs</a></strong>:
-            The WebCodecs API provides low-level access to individual video frames and chunks of audio samples, for full control over the way media is processed.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Edge</h2>
-      <p>The following features are now available in Edge:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/accent-color/">accent-color</a></strong>:
-            The <code>accent-color</code> CSS property sets a color for checkboxes, radio buttons, and other form controls.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/ext-texture-compression-bptc/">EXT_texture_compression_bptc WebGL extension</a></strong>:
-            The <code>EXT_texture_compression_bptc</code> extension for WebGL 1.0 and 2.0 contexts adds the BPTC compressed texture formats to <code>compressedTexImage2D()</code> and <code>compressedTexSubImage2D()</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/ext-texture-compression-rgtc/">EXT_texture_compression_rgtc WebGL extension</a></strong>:
-            The <code>EXT_texture_compression_rgtc</code> extension for WebGL 1.0 and 2.0 contexts adds RGTC compressed texture formats. RGTC is a block-based texture compression format suited for unsigned and signed red and red-green textures. Also known as Red-Green Texture Compression.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/ink/">Ink</a></strong>:
-            The <code>navigator.ink</code> API uses the system compositor to draw to a <code>&#x3C;canvas></code> element ahead of pointer events, reducing the delay between moving a stylus or cursor and a pen stroke appearing on screen.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/outline/">outline</a></strong>:
-            The <code>outline</code> CSS shorthand sets the color, style, and width of a line around an element, outside of the border.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/pdf-viewer/">pdfViewerEnabled</a></strong>:
-            The <code>navigator.pdfViewerEnabled</code> read-only property returns a Boolean for whether the browser navigates to and shows a PDF in the browser window or downloads the PDF.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/profiler/">Profiler</a></strong>:
-            The <code>Profiler</code> API records data about the execution of a page, which you can send to a server for later analysis. Also known as self-profiling.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scrollbar-gutter/">scrollbar-gutter</a></strong>:
-            The <code>scrollbar-gutter</code> CSS property reserves space for the scrollbar, preventing unwanted layout changes as the scrollbar appears and disappears.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/share/">navigator.share()</a></strong>:
-            The <code>navigator.share()</code> method invokes the device's native sharing mechanism and passes text, links, files, and other content to share targets.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/virtual-keyboard/">Virtual keyboard</a></strong>:
-            The <code>navigator.virtualKeyboard</code> API inspects and controls on-screen virtual keyboards. You can use it to programmatically hide or show a virtual keyboard or respond to the keyboard disappearing or appearing.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/web-otp/">WebOTP</a></strong>:
-            The <code>OTPCredential</code> API represents a one-time-password (OTP).
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webcodecs/">WebCodecs</a></strong>:
-            The WebCodecs API provides low-level access to individual video frames and chunks of audio samples, for full control over the way media is processed.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Firefox</h2>
-      <p>The following features are now available in Firefox:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/accent-color/">accent-color</a></strong>:
-            The <code>accent-color</code> CSS property sets a color for checkboxes, radio buttons, and other form controls.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/slot-assign/">Imperative slot assignment</a></strong>:
-            The <code>assign()</code> method for <code>&#x3C;slot></code> elements assigns nodes to the slot, as an alternative to using the <code>slot</code> and <code>name</code> HTML attributes. The nodes must be children of a shadow host and the shadow root must be created with the <code>slotAssignment</code> set to "manual". Also known as manual slot assignment.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Firefox for Android</h2>
-      <p>The following features are now available in Firefox for Android:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/accent-color/">accent-color</a></strong>:
-            The <code>accent-color</code> CSS property sets a color for checkboxes, radio buttons, and other form controls.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/slot-assign/">Imperative slot assignment</a></strong>:
-            The <code>assign()</code> method for <code>&#x3C;slot></code> elements assigns nodes to the slot, as an alternative to using the <code>slot</code> and <code>name</code> HTML attributes. The nodes must be children of a shadow host and the shadow root must be created with the <code>slotAssignment</code> set to "manual". Also known as manual slot assignment.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Safari</h2>
-      <p>The following features are now available in Safari:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/autofill/">:autofill</a></strong>:
-            The <code>:autofill</code> pseudo-class matches <code>&#x3C;input></code> elements that have been filled in automatically by the browser.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/canvas-2d-desynchronized/">Desynchronized 2D canvas</a></strong>:
-            The optional <code>desynchronized</code> parameter of a canvas's <code>getContext()</code> method permits the browser to draw a 2D canvas independently of the event loop. This can reduce drawing latency.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/color-function/">color()</a></strong>:
-            The <code>color()</code> function picks a color from a given color space. Wide gamut color spaces like <code>display-p3</code> allow showing more vibrant and saturated colors than the standard <code>srgb</code> color space.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/hwb/">HWB</a></strong>:
-            The <code>hwb()</code> CSS function picks colors using hue, whiteness, and blackness channels.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/js-modules-service-workers/">JavaScript modules in service workers</a></strong>:
-            The <code>navigator.serviceWorker.register()</code> method accepts <code>{ type: "module" }</code> to load scripts that use <code>import</code> and <code>export</code>. Also known as ECMAScript modules or ESM in service workers.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/js-modules-workers/">JavaScript modules in workers</a></strong>:
-            The <code>Worker()</code> constructor accepts <code>{ type: "module" }</code> to load scripts that use <code>import</code> and <code>export</code>. Also known as ECMAScript modules or ESM in workers.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/lab/">Lab and LCH</a></strong>:
-            The CIE Lab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is. LCH is a variant of Lab with polar coordinates. These color spaces can be used with the CSS <code>color()</code>, <code>lab()</code>, and <code>lch()</code> functions. Also known as CIELAB and CIELCH.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/media-session/">Media session</a></strong>:
-            The <code>navigator.mediaSession</code> API integrates with platform UI for media playback. It can be used to set metadata such as title and artwork, and to handle user actions like playing, pausing, or seeking.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/meta-theme-color/">&lt;meta name=&quot;theme-color&quot;&gt;</a></strong>:
-            The <code>name="theme-color"</code> attribute for the <code>&#x3C;meta></code> HTML element sets the preferred color to customize the display of the page or the surrounding browser user interface.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/navigation-timing/">Navigation timing</a></strong>:
-            The <code>navigation</code> performance entry and the <code>PerformanceNavigationTiming</code> API measures navigation events, such as loading time or the number of redirects.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-indent-each-line/">text-indent: each-line</a></strong>:
-            The <code>text-indent: each-line</code> CSS declaration indents text after forced breaks as well as to the first line of a block.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-indent-hanging/">text-indent: hanging</a></strong>:
-            The <code>text-indent: hanging</code> CSS declaration indents all lines except the first.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/two-value-display/">Two-value display property</a></strong>:
-            The <code>display</code> CSS property accepts multiple keyword values, such as <code>inline flex</code> or <code>block flow</code>, to explicitly set an element's inner and outer layout mode. Also known as 2-value, multi-keyword, or multiple value syntax.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webgl-multi-draw/">WEBGL_multi_draw WebGL extension</a></strong>:
-            The <code>WEBGL_multi_draw</code> extension for WebGL 1.0 and 2.0 contexts renders more than one primitive with a single function call.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Safari on iOS</h2>
-      <p>The following features are now available in Safari on iOS:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/autofill/">:autofill</a></strong>:
-            The <code>:autofill</code> pseudo-class matches <code>&#x3C;input></code> elements that have been filled in automatically by the browser.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/canvas-2d-desynchronized/">Desynchronized 2D canvas</a></strong>:
-            The optional <code>desynchronized</code> parameter of a canvas's <code>getContext()</code> method permits the browser to draw a 2D canvas independently of the event loop. This can reduce drawing latency.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/color-function/">color()</a></strong>:
-            The <code>color()</code> function picks a color from a given color space. Wide gamut color spaces like <code>display-p3</code> allow showing more vibrant and saturated colors than the standard <code>srgb</code> color space.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/ext-frag-depth/">EXT_frag_depth WebGL extension</a></strong>:
-            The <code>EXT_frag_depth</code> extension for WebGL 1.0 and 2.0 contexts adds setting the depth value of a fragment from within the fragment shader.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/hwb/">HWB</a></strong>:
-            The <code>hwb()</code> CSS function picks colors using hue, whiteness, and blackness channels.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/js-modules-service-workers/">JavaScript modules in service workers</a></strong>:
-            The <code>navigator.serviceWorker.register()</code> method accepts <code>{ type: "module" }</code> to load scripts that use <code>import</code> and <code>export</code>. Also known as ECMAScript modules or ESM in service workers.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/js-modules-workers/">JavaScript modules in workers</a></strong>:
-            The <code>Worker()</code> constructor accepts <code>{ type: "module" }</code> to load scripts that use <code>import</code> and <code>export</code>. Also known as ECMAScript modules or ESM in workers.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/lab/">Lab and LCH</a></strong>:
-            The CIE Lab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is. LCH is a variant of Lab with polar coordinates. These color spaces can be used with the CSS <code>color()</code>, <code>lab()</code>, and <code>lch()</code> functions. Also known as CIELAB and CIELCH.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/media-session/">Media session</a></strong>:
-            The <code>navigator.mediaSession</code> API integrates with platform UI for media playback. It can be used to set metadata such as title and artwork, and to handle user actions like playing, pausing, or seeking.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/meta-theme-color/">&lt;meta name=&quot;theme-color&quot;&gt;</a></strong>:
-            The <code>name="theme-color"</code> attribute for the <code>&#x3C;meta></code> HTML element sets the preferred color to customize the display of the page or the surrounding browser user interface.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-indent-each-line/">text-indent: each-line</a></strong>:
-            The <code>text-indent: each-line</code> CSS declaration indents text after forced breaks as well as to the first line of a block.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-indent-hanging/">text-indent: hanging</a></strong>:
-            The <code>text-indent: hanging</code> CSS declaration indents all lines except the first.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/two-value-display/">Two-value display property</a></strong>:
-            The <code>display</code> CSS property accepts multiple keyword values, such as <code>inline flex</code> or <code>block flow</code>, to explicitly set an element's inner and outer layout mode. Also known as 2-value, multi-keyword, or multiple value syntax.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webgl-draw-buffers/">WEBGL_draw_buffers WebGL extension</a></strong>:
-            The <code>WEBGL_draw_buffers</code> extension for WebGL 1.0 contexts enables a fragment shader to write to several textures, which is useful for deferred shading, for example.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webgl-multi-draw/">WEBGL_multi_draw WebGL extension</a></strong>:
-            The <code>WEBGL_multi_draw</code> extension for WebGL 1.0 and 2.0 contexts renders more than one primitive with a single function call.
-          </li>
-        
-      </ul>
-    
-  
-</section>
-
-    </main>
-
-    <footer>
-      <p>Generated on 12/19/2024 using <a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>2.14.0-dev-20241218204140-fd96a8a</code> and <a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>5.6.25</code></p>
-      <p>Source code: <a href="https://github.com/web-platform-dx/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
-    </footer>
 
   </body>
 </html>

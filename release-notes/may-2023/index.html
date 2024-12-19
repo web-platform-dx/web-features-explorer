@@ -2,359 +2,820 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Web features explorer - May 2023 web platform update</title>
+    <title>Web platform features explorer - May 2023 release notes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
   </head>
   <body>
 
-    <header><a href="/web-features-explorer/">Web features explorer</a></header>
+    <header>
+      <a href="/web-features-explorer/">Web platform features explorer</a>
 
-    <nav>
-      <ul>
-        <li class="monthly"><a href="/web-features-explorer/release-notes">Release notes</a></li>
-        <li class="baseline-low"><a href="/web-features-explorer/newly-available">Newly available</a></li>
-        <li class="baseline-high"><a href="/web-features-explorer/widely-available">Widely available</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/limited-availability">Limited availability</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/one-missing-engine">One missing engine</a></li>
-        <li><a href="/web-features-explorer/all">All</a></li>
-        <li><a href="/web-features-explorer/groups">Groups</a></li>
-        <li><a href="/web-features-explorer/browse">Browse features</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href="/web-features-explorer/release-notes/december-2024">Release notes</a></li>
+          <li><a href="/web-features-explorer/features">Explore all features</a></li>
+          <li><a href="/web-features-explorer/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main>
-      
-<h1>May 2023 web platform update</h1>
+    
+<main class="release-notes">
+  <h1>📃 May 2023 release notes</h1>
 
-<section class="month-update">
-  
-    <h2>Newly available</h2>
-    <p>The following features are newly available:</p>
-    <ul class="baseline-low">
+  <div>
+    
+      <section class="baseline-low">
+        <h2>Newly available</h2>
+        <p>The following features are newly available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/color-function/">color()</a></strong>:
+              The <code>color()</code> function picks a color from a given color space. Wide gamut color spaces like <code>display-p3</code> allow showing more vibrant and saturated colors than the standard <code>srgb</code> color space.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/color-mix/">color-mix()</a></strong>:
+              The <code>color-mix()</code> function mixes two colors in a given color space and by a given amount. Commonly, lighter or darker variations of a color are created by mixing with white or black.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/compression-streams/">Compression streams</a></strong>:
+              The <code>CompressionStream</code> and <code>DecompressionStream</code> interfaces compress and decompress data using the gzip or deflate formats.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/lab/">Lab and LCH</a></strong>:
+              The CIE Lab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is. LCH is a variant of Lab with polar coordinates. These color spaces can be used with the CSS <code>color()</code>, <code>lab()</code>, and <code>lch()</code> functions. Also known as CIELAB and CIELCH.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/nth-child-of/">:nth-child() of &lt;selector&gt;</a></strong>:
+              The <code>of</code> syntax for the <code>:nth-child()</code> and <code>:nth-last-child()</code> CSS functional pseudo-classes match elements by the relative position of elements, counted from the first or last sibling matching a selector list.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/oklab/">Oklab and Oklch</a></strong>:
+              The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. Oklch is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>color()</code>, <code>oklab()</code>, and <code>oklch()</code> functions.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/webrtc-sctp/">WebRTC SCTP information</a></strong>:
+              The <code>sctp</code> object on <code>RTCPeerConnection</code> represents the negotiated SCTP transport. SCTP (Stream Control Transmission Protocol) is the protocol that <code>RTCDataChannel</code> uses.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
+      <section class="baseline-high">
+        <h2>Widely available</h2>
+        <p>The following features are now widely available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/conic-gradients/">Conic gradients</a></strong>:
+              The <code>conic-gradient()</code> and <code>repeating-conic-gradient()</code> CSS functions create backgrounds that progress between two or more colors around a center point.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/text-underline-position/">Text underline position</a></strong>:
+              The <code>text-underline-position</code> and <code>text-underline-offset</code> CSS properties set the position and distance from initial position of text underlines on text with <code>text-decoration: underline</code>.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/color-function/">color()</a></strong>:
-          The <code>color()</code> function picks a color from a given color space. Wide gamut color spaces like <code>display-p3</code> allow showing more vibrant and saturated colors than the standard <code>srgb</code> color space.
-        </li>
+        <section class="baseline-false chrome">
+          <h2>New in Chrome</h2>
+          <p>The following features are now available in Chrome:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/image-set/">image-set()</a></strong>:
+                The <code>image-set()</code> CSS function provides a set of images at different resolutions or pixel densities, which the browser can pick from, depending on the device capabilities.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/json-raw/">JSON source text access</a></strong>:
+                To serialize and parse JSON in a lossless way, <code>JSON.stringify()</code> handles <code>rawJSON</code> values and <code>JSON.parse()</code>'s reviver callback takes a source context parameter.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/linear-easing/">linear() easing</a></strong>:
+                The <code>linear()</code> easing function for animations and transitions interpolates linearly between the control points, and can be used to approximate complex easing functions, such as a bounce effect.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/overflow/">Overflow media queries</a></strong>:
+                The <code>overflow-block</code> and <code>overflow-inline</code> CSS media queries set styles based on the way a device displays content that's larger than the viewport or page area. For example, a laptop lets users scroll to reveal content, while a printer displays overflowing content on additional pages.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/partitioned-cookies/">Partitioned cookies</a></strong>:
+                Partitioned cookies allow you to opt a cookie into partitioned storage, with a separate cookie jar per top-level site. Also known as Cookies Having Independent Partitioned State or CHIPS.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scrollend/">scrollend</a></strong>:
+                The <code>scrollend</code> event fires when an element or document has finished scrolling.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap/">text-wrap</a></strong>:
+                The <code>text-wrap</code> CSS property sets how lines break in text that overflows the container. It is a shorthand for <code>text-wrap-style</code> and <code>text-wrap-mode</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-balance/">text-wrap: balance</a></strong>:
+                The <code>text-wrap: balance</code> CSS declaration balances the length of each line when text is broken into multiple lines. Also known as headline balancing.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-nowrap/">text-wrap: nowrap</a></strong>:
+                The <code>text-wrap: nowrap</code> CSS declaration prevents text breaking into multiple lines. Text that doesn't fit overflows instead.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/transferable-arraybuffer/">Transferable ArrayBuffer</a></strong>:
+                The <code>transfer()</code> and <code>transferToFixedLength()</code> methods of <code>ArrayBuffer</code> move a buffer from one context to another (for example, to a worker).
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/update/">Update frequency media query</a></strong>:
+                The <code>update</code> CSS media query sets styles based on whether and how fast the user's device can modify display after it has been rendered. For example, you can avoid animations on devices that aren't fast enough to display them smoothly.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/wasm-extended-constant-expressions/">Extended constant expressions (WebAssembly)</a></strong>:
+                The <code>i32.add</code>, <code>i32.sub</code>, <code>i32.mul</code>, <code>i64.add</code>, <code>i64.sub</code>, and <code>i64.mul</code> operations extend constant expressions to include arithmetic.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/wasm-simd-relaxed/">Relaxed-width SIMD (WebAssembly)</a></strong>:
+                Relaxed SIMD (Single Instruction Multiple Data) introduces local non-determinism, where the results of the instructions may vary based on hardware support.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webgpu/">WebGPU</a></strong>:
+                The <code>navigator.gpu</code> API performs operations such as rendering and computation on dedicated graphics hardware (also known as a Graphics Processing Unit).
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/white-space-collapse/">white-space-collapse</a></strong>:
+                The <code>white-space-collapse</code> CSS property sets whether new line characters are shown as line breaks, and whether multiple consecutive spaces are all displayed or combined.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/color-mix/">color-mix()</a></strong>:
-          The <code>color-mix()</code> function mixes two colors in a given color space and by a given amount. Commonly, lighter or darker variations of a color are created by mixing with white or black.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/compression-streams/">Compression streams</a></strong>:
-          The <code>CompressionStream</code> and <code>DecompressionStream</code> interfaces compress and decompress data using the gzip or deflate formats.
-        </li>
+        <section class="baseline-false chrome_android">
+          <h2>New in Chrome Android</h2>
+          <p>The following features are now available in Chrome Android:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/image-set/">image-set()</a></strong>:
+                The <code>image-set()</code> CSS function provides a set of images at different resolutions or pixel densities, which the browser can pick from, depending on the device capabilities.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/json-raw/">JSON source text access</a></strong>:
+                To serialize and parse JSON in a lossless way, <code>JSON.stringify()</code> handles <code>rawJSON</code> values and <code>JSON.parse()</code>'s reviver callback takes a source context parameter.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/linear-easing/">linear() easing</a></strong>:
+                The <code>linear()</code> easing function for animations and transitions interpolates linearly between the control points, and can be used to approximate complex easing functions, such as a bounce effect.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/overflow/">Overflow media queries</a></strong>:
+                The <code>overflow-block</code> and <code>overflow-inline</code> CSS media queries set styles based on the way a device displays content that's larger than the viewport or page area. For example, a laptop lets users scroll to reveal content, while a printer displays overflowing content on additional pages.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/partitioned-cookies/">Partitioned cookies</a></strong>:
+                Partitioned cookies allow you to opt a cookie into partitioned storage, with a separate cookie jar per top-level site. Also known as Cookies Having Independent Partitioned State or CHIPS.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scrollend/">scrollend</a></strong>:
+                The <code>scrollend</code> event fires when an element or document has finished scrolling.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap/">text-wrap</a></strong>:
+                The <code>text-wrap</code> CSS property sets how lines break in text that overflows the container. It is a shorthand for <code>text-wrap-style</code> and <code>text-wrap-mode</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-balance/">text-wrap: balance</a></strong>:
+                The <code>text-wrap: balance</code> CSS declaration balances the length of each line when text is broken into multiple lines. Also known as headline balancing.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-nowrap/">text-wrap: nowrap</a></strong>:
+                The <code>text-wrap: nowrap</code> CSS declaration prevents text breaking into multiple lines. Text that doesn't fit overflows instead.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/transferable-arraybuffer/">Transferable ArrayBuffer</a></strong>:
+                The <code>transfer()</code> and <code>transferToFixedLength()</code> methods of <code>ArrayBuffer</code> move a buffer from one context to another (for example, to a worker).
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/update/">Update frequency media query</a></strong>:
+                The <code>update</code> CSS media query sets styles based on whether and how fast the user's device can modify display after it has been rendered. For example, you can avoid animations on devices that aren't fast enough to display them smoothly.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/wasm-extended-constant-expressions/">Extended constant expressions (WebAssembly)</a></strong>:
+                The <code>i32.add</code>, <code>i32.sub</code>, <code>i32.mul</code>, <code>i64.add</code>, <code>i64.sub</code>, and <code>i64.mul</code> operations extend constant expressions to include arithmetic.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/wasm-simd-relaxed/">Relaxed-width SIMD (WebAssembly)</a></strong>:
+                Relaxed SIMD (Single Instruction Multiple Data) introduces local non-determinism, where the results of the instructions may vary based on hardware support.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/white-space-collapse/">white-space-collapse</a></strong>:
+                The <code>white-space-collapse</code> CSS property sets whether new line characters are shown as line breaks, and whether multiple consecutive spaces are all displayed or combined.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/lab/">Lab and LCH</a></strong>:
-          The CIE Lab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is. LCH is a variant of Lab with polar coordinates. These color spaces can be used with the CSS <code>color()</code>, <code>lab()</code>, and <code>lch()</code> functions. Also known as CIELAB and CIELCH.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/nth-child-of/">:nth-child() of &lt;selector&gt;</a></strong>:
-          The <code>of</code> syntax for the <code>:nth-child()</code> and <code>:nth-last-child()</code> CSS functional pseudo-classes match elements by the relative position of elements, counted from the first or last sibling matching a selector list.
-        </li>
+        <section class="baseline-false edge">
+          <h2>New in Edge</h2>
+          <p>The following features are now available in Edge:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/image-set/">image-set()</a></strong>:
+                The <code>image-set()</code> CSS function provides a set of images at different resolutions or pixel densities, which the browser can pick from, depending on the device capabilities.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/linear-easing/">linear() easing</a></strong>:
+                The <code>linear()</code> easing function for animations and transitions interpolates linearly between the control points, and can be used to approximate complex easing functions, such as a bounce effect.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/overflow/">Overflow media queries</a></strong>:
+                The <code>overflow-block</code> and <code>overflow-inline</code> CSS media queries set styles based on the way a device displays content that's larger than the viewport or page area. For example, a laptop lets users scroll to reveal content, while a printer displays overflowing content on additional pages.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/update/">Update frequency media query</a></strong>:
+                The <code>update</code> CSS media query sets styles based on whether and how fast the user's device can modify display after it has been rendered. For example, you can avoid animations on devices that aren't fast enough to display them smoothly.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webgpu/">WebGPU</a></strong>:
+                The <code>navigator.gpu</code> API performs operations such as rendering and computation on dedicated graphics hardware (also known as a Graphics Processing Unit).
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/oklab/">Oklab and Oklch</a></strong>:
-          The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. Oklch is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>color()</code>, <code>oklab()</code>, and <code>oklch()</code> functions.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/webrtc-sctp/">WebRTC SCTP information</a></strong>:
-          The <code>sctp</code> object on <code>RTCPeerConnection</code> represents the negotiated SCTP transport. SCTP (Stream Control Transmission Protocol) is the protocol that <code>RTCDataChannel</code> uses.
-        </li>
+        <section class="baseline-false firefox">
+          <h2>New in Firefox</h2>
+          <p>The following features are now available in Firefox:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/canvas-reset/">Canvas reset()</a></strong>:
+                The <code>reset()</code> method clears a canvas to its initial state.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scripting/">scripting media query</a></strong>:
+                The <code>scripting</code> CSS media query sets styles based on whether scripting such as JavaScript is available. Values are <code>enabled</code> if scripting is available, <code>initial-only</code> if scripting is only available on page load (for example, printed content), or <code>none</code>.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+      
+        <section class="baseline-false firefox_android">
+          <h2>New in Firefox for Android</h2>
+          <p>The following features are now available in Firefox for Android:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/canvas-reset/">Canvas reset()</a></strong>:
+                The <code>reset()</code> method clears a canvas to its initial state.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scripting/">scripting media query</a></strong>:
+                The <code>scripting</code> CSS media query sets styles based on whether scripting such as JavaScript is available. Values are <code>enabled</code> if scripting is available, <code>initial-only</code> if scripting is only available on page load (for example, printed content), or <code>none</code>.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+      
+        <section class="baseline-false safari">
+          <h2>New in Safari</h2>
+          <p>The following features are now available in Safari:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/user-pseudos/">:user-valid and :user-invalid</a></strong>:
+                The <code>:user-valid</code> and <code>:user-invalid</code> pseudo-classes match form controls that have been marked as valid or invalid based on their validation constraints.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+      
+        <section class="baseline-false safari_ios">
+          <h2>New in Safari on iOS</h2>
+          <p>The following features are now available in Safari on iOS:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/user-pseudos/">:user-valid and :user-invalid</a></strong>:
+                The <code>:user-valid</code> and <code>:user-invalid</code> pseudo-classes match form controls that have been marked as valid or invalid based on their validation constraints.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+  </div>
+
+  <aside>
+    <h2>Other release notes</h2>
+    <ul>
+      
+        
+          <li class="month-entry">
+            <a href="../december-2024">December 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2024">November 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2024">October 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2024">September 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2024">August 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2024">July 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2024">June 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2024">May 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../april-2024">April 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../march-2024">March 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../february-2024">February 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../january-2024">January 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../december-2023">December 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2023">November 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2023">October 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2023">September 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2023">August 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2023">July 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2023">June 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2023">May 2023</a>
+          </li>
+        
+      
+        
+          <li><a href="../">See all</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
     </ul>
-  
+  </aside>
+</main>
 
-  
-    <h2>Widely available</h2>
-    <p>The following features are now widely available:</p>
-    <ul class="baseline-high">
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/conic-gradients/">Conic gradients</a></strong>:
-          The <code>conic-gradient()</code> and <code>repeating-conic-gradient()</code> CSS functions create backgrounds that progress between two or more colors around a center point.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/text-underline-position/">Text underline position</a></strong>:
-          The <code>text-underline-position</code> and <code>text-underline-offset</code> CSS properties set the position and distance from initial position of text underlines on text with <code>text-decoration: underline</code>.
-        </li>
-      
-    </ul>
-  
-
-  
-    
-      <h2>New in Chrome</h2>
-      <p>The following features are now available in Chrome:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/image-set/">image-set()</a></strong>:
-            The <code>image-set()</code> CSS function provides a set of images at different resolutions or pixel densities, which the browser can pick from, depending on the device capabilities.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/json-raw/">JSON source text access</a></strong>:
-            To serialize and parse JSON in a lossless way, <code>JSON.stringify()</code> handles <code>rawJSON</code> values and <code>JSON.parse()</code>'s reviver callback takes a source context parameter.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/linear-easing/">linear() easing</a></strong>:
-            The <code>linear()</code> easing function for animations and transitions interpolates linearly between the control points, and can be used to approximate complex easing functions, such as a bounce effect.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/overflow/">Overflow media queries</a></strong>:
-            The <code>overflow-block</code> and <code>overflow-inline</code> CSS media queries set styles based on the way a device displays content that's larger than the viewport or page area. For example, a laptop lets users scroll to reveal content, while a printer displays overflowing content on additional pages.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/partitioned-cookies/">Partitioned cookies</a></strong>:
-            Partitioned cookies allow you to opt a cookie into partitioned storage, with a separate cookie jar per top-level site. Also known as Cookies Having Independent Partitioned State or CHIPS.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scrollend/">scrollend</a></strong>:
-            The <code>scrollend</code> event fires when an element or document has finished scrolling.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-wrap/">text-wrap</a></strong>:
-            The <code>text-wrap</code> CSS property sets how lines break in text that overflows the container. It is a shorthand for <code>text-wrap-style</code> and <code>text-wrap-mode</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-wrap-balance/">text-wrap: balance</a></strong>:
-            The <code>text-wrap: balance</code> CSS declaration balances the length of each line when text is broken into multiple lines. Also known as headline balancing.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-wrap-nowrap/">text-wrap: nowrap</a></strong>:
-            The <code>text-wrap: nowrap</code> CSS declaration prevents text breaking into multiple lines. Text that doesn't fit overflows instead.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/transferable-arraybuffer/">Transferable ArrayBuffer</a></strong>:
-            The <code>transfer()</code> and <code>transferToFixedLength()</code> methods of <code>ArrayBuffer</code> move a buffer from one context to another (for example, to a worker).
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/update/">Update frequency media query</a></strong>:
-            The <code>update</code> CSS media query sets styles based on whether and how fast the user's device can modify display after it has been rendered. For example, you can avoid animations on devices that aren't fast enough to display them smoothly.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/wasm-extended-constant-expressions/">Extended constant expressions (WebAssembly)</a></strong>:
-            The <code>i32.add</code>, <code>i32.sub</code>, <code>i32.mul</code>, <code>i64.add</code>, <code>i64.sub</code>, and <code>i64.mul</code> operations extend constant expressions to include arithmetic.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/wasm-simd-relaxed/">Relaxed-width SIMD (WebAssembly)</a></strong>:
-            Relaxed SIMD (Single Instruction Multiple Data) introduces local non-determinism, where the results of the instructions may vary based on hardware support.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webgpu/">WebGPU</a></strong>:
-            The <code>navigator.gpu</code> API performs operations such as rendering and computation on dedicated graphics hardware (also known as a Graphics Processing Unit).
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/white-space-collapse/">white-space-collapse</a></strong>:
-            The <code>white-space-collapse</code> CSS property sets whether new line characters are shown as line breaks, and whether multiple consecutive spaces are all displayed or combined.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Chrome Android</h2>
-      <p>The following features are now available in Chrome Android:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/image-set/">image-set()</a></strong>:
-            The <code>image-set()</code> CSS function provides a set of images at different resolutions or pixel densities, which the browser can pick from, depending on the device capabilities.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/json-raw/">JSON source text access</a></strong>:
-            To serialize and parse JSON in a lossless way, <code>JSON.stringify()</code> handles <code>rawJSON</code> values and <code>JSON.parse()</code>'s reviver callback takes a source context parameter.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/linear-easing/">linear() easing</a></strong>:
-            The <code>linear()</code> easing function for animations and transitions interpolates linearly between the control points, and can be used to approximate complex easing functions, such as a bounce effect.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/overflow/">Overflow media queries</a></strong>:
-            The <code>overflow-block</code> and <code>overflow-inline</code> CSS media queries set styles based on the way a device displays content that's larger than the viewport or page area. For example, a laptop lets users scroll to reveal content, while a printer displays overflowing content on additional pages.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/partitioned-cookies/">Partitioned cookies</a></strong>:
-            Partitioned cookies allow you to opt a cookie into partitioned storage, with a separate cookie jar per top-level site. Also known as Cookies Having Independent Partitioned State or CHIPS.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scrollend/">scrollend</a></strong>:
-            The <code>scrollend</code> event fires when an element or document has finished scrolling.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-wrap/">text-wrap</a></strong>:
-            The <code>text-wrap</code> CSS property sets how lines break in text that overflows the container. It is a shorthand for <code>text-wrap-style</code> and <code>text-wrap-mode</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-wrap-balance/">text-wrap: balance</a></strong>:
-            The <code>text-wrap: balance</code> CSS declaration balances the length of each line when text is broken into multiple lines. Also known as headline balancing.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/text-wrap-nowrap/">text-wrap: nowrap</a></strong>:
-            The <code>text-wrap: nowrap</code> CSS declaration prevents text breaking into multiple lines. Text that doesn't fit overflows instead.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/transferable-arraybuffer/">Transferable ArrayBuffer</a></strong>:
-            The <code>transfer()</code> and <code>transferToFixedLength()</code> methods of <code>ArrayBuffer</code> move a buffer from one context to another (for example, to a worker).
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/update/">Update frequency media query</a></strong>:
-            The <code>update</code> CSS media query sets styles based on whether and how fast the user's device can modify display after it has been rendered. For example, you can avoid animations on devices that aren't fast enough to display them smoothly.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/wasm-extended-constant-expressions/">Extended constant expressions (WebAssembly)</a></strong>:
-            The <code>i32.add</code>, <code>i32.sub</code>, <code>i32.mul</code>, <code>i64.add</code>, <code>i64.sub</code>, and <code>i64.mul</code> operations extend constant expressions to include arithmetic.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/wasm-simd-relaxed/">Relaxed-width SIMD (WebAssembly)</a></strong>:
-            Relaxed SIMD (Single Instruction Multiple Data) introduces local non-determinism, where the results of the instructions may vary based on hardware support.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/white-space-collapse/">white-space-collapse</a></strong>:
-            The <code>white-space-collapse</code> CSS property sets whether new line characters are shown as line breaks, and whether multiple consecutive spaces are all displayed or combined.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Edge</h2>
-      <p>The following features are now available in Edge:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/image-set/">image-set()</a></strong>:
-            The <code>image-set()</code> CSS function provides a set of images at different resolutions or pixel densities, which the browser can pick from, depending on the device capabilities.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/linear-easing/">linear() easing</a></strong>:
-            The <code>linear()</code> easing function for animations and transitions interpolates linearly between the control points, and can be used to approximate complex easing functions, such as a bounce effect.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/overflow/">Overflow media queries</a></strong>:
-            The <code>overflow-block</code> and <code>overflow-inline</code> CSS media queries set styles based on the way a device displays content that's larger than the viewport or page area. For example, a laptop lets users scroll to reveal content, while a printer displays overflowing content on additional pages.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/update/">Update frequency media query</a></strong>:
-            The <code>update</code> CSS media query sets styles based on whether and how fast the user's device can modify display after it has been rendered. For example, you can avoid animations on devices that aren't fast enough to display them smoothly.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webgpu/">WebGPU</a></strong>:
-            The <code>navigator.gpu</code> API performs operations such as rendering and computation on dedicated graphics hardware (also known as a Graphics Processing Unit).
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Firefox</h2>
-      <p>The following features are now available in Firefox:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/canvas-reset/">Canvas reset()</a></strong>:
-            The <code>reset()</code> method clears a canvas to its initial state.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scripting/">scripting media query</a></strong>:
-            The <code>scripting</code> CSS media query sets styles based on whether scripting such as JavaScript is available. Values are <code>enabled</code> if scripting is available, <code>initial-only</code> if scripting is only available on page load (for example, printed content), or <code>none</code>.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Firefox for Android</h2>
-      <p>The following features are now available in Firefox for Android:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/canvas-reset/">Canvas reset()</a></strong>:
-            The <code>reset()</code> method clears a canvas to its initial state.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/scripting/">scripting media query</a></strong>:
-            The <code>scripting</code> CSS media query sets styles based on whether scripting such as JavaScript is available. Values are <code>enabled</code> if scripting is available, <code>initial-only</code> if scripting is only available on page load (for example, printed content), or <code>none</code>.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Safari</h2>
-      <p>The following features are now available in Safari:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/user-pseudos/">:user-valid and :user-invalid</a></strong>:
-            The <code>:user-valid</code> and <code>:user-invalid</code> pseudo-classes match form controls that have been marked as valid or invalid based on their validation constraints.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Safari on iOS</h2>
-      <p>The following features are now available in Safari on iOS:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/user-pseudos/">:user-valid and :user-invalid</a></strong>:
-            The <code>:user-valid</code> and <code>:user-invalid</code> pseudo-classes match form controls that have been marked as valid or invalid based on their validation constraints.
-          </li>
-        
-      </ul>
-    
-  
-</section>
-
-    </main>
-
-    <footer>
-      <p>Generated on 12/19/2024 using <a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>2.14.0-dev-20241218204140-fd96a8a</code> and <a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>5.6.25</code></p>
-      <p>Source code: <a href="https://github.com/web-platform-dx/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
-    </footer>
 
   </body>
 </html>

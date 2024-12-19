@@ -2,304 +2,755 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Web features explorer - March 2020 web platform update</title>
+    <title>Web platform features explorer - March 2020 release notes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
   </head>
   <body>
 
-    <header><a href="/web-features-explorer/">Web features explorer</a></header>
+    <header>
+      <a href="/web-features-explorer/">Web platform features explorer</a>
 
-    <nav>
-      <ul>
-        <li class="monthly"><a href="/web-features-explorer/release-notes">Release notes</a></li>
-        <li class="baseline-low"><a href="/web-features-explorer/newly-available">Newly available</a></li>
-        <li class="baseline-high"><a href="/web-features-explorer/widely-available">Widely available</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/limited-availability">Limited availability</a></li>
-        <li class="nobaseline"><a href="/web-features-explorer/one-missing-engine">One missing engine</a></li>
-        <li><a href="/web-features-explorer/all">All</a></li>
-        <li><a href="/web-features-explorer/groups">Groups</a></li>
-        <li><a href="/web-features-explorer/browse">Browse features</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href="/web-features-explorer/release-notes/december-2024">Release notes</a></li>
+          <li><a href="/web-features-explorer/features">Explore all features</a></li>
+          <li><a href="/web-features-explorer/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main>
-      
-<h1>March 2020 web platform update</h1>
+    
+<main class="release-notes">
+  <h1>📃 March 2020 release notes</h1>
 
-<section class="month-update">
-  
-    <h2>Newly available</h2>
-    <p>The following features are newly available:</p>
-    <ul class="baseline-low">
+  <div>
+    
+      <section class="baseline-low">
+        <h2>Newly available</h2>
+        <p>The following features are newly available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/display-table/">display: table</a></strong>:
+              The <code>display: table</code> CSS declaration renders an element with the box layout of a <code>&#x3C;table></code> HTML element. Child elements may use equivalents to <code>&#x3C;table></code> internal elements such as <code>display: table-row</code> for <code>&#x3C;tr></code>.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/dominant-baseline/">dominant-baseline</a></strong>:
+              The <code>dominant-baseline</code> CSS property sets the specific baseline used to align an elements's text and inline-level contents.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/font-optical-sizing/">font-optical-sizing</a></strong>:
+              The <code>font-optical-sizing</code> CSS property sets whether text rendering is optimized for viewing at different sizes.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/hashbang-comments/">Hashbang comments</a></strong>:
+              The <code>#!</code> comment at the absolute start of a script or module is treated as a normal comment and is ignored by the JavaScript engine.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/opacity-svg/">Opacity (SVG)</a></strong>:
+              The <code>fill-opacity</code>, and <code>stroke-opacity</code> SVG attributes and CSS properties control the transparency of a stroke or fill of an SVG element.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/q-unit/">Q unit</a></strong>:
+              The <code>Q</code> CSS length unit is an absolute length anchored to the physical measurement of quarter-millimeters. <code>1Q</code> is equivalent to 1/40 of 1 centimeter.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/wasm-mutable-globals/">Import and export of mutable globals (WebAssembly)</a></strong>:
+              Mutable global variables are importable and exportable.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/web-animations/">Web animations</a></strong>:
+              The <code>animate()</code> method of <code>Element</code> objects programmatically animates elements over time and can synchronize the animations of multiple elements.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
+      <section class="baseline-high">
+        <h2>Widely available</h2>
+        <p>The following features are now widely available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/brotli/">Brotli compression</a></strong>:
+              Brotli is a lossless data compression algorithm. When used as a content encoding, it often provides better compression than gzip.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/font-stretch/">font-stretch</a></strong>:
+              The <code>font-stretch</code> CSS property selects a font face from a font family based on width, either by a keyword such as <code>condensed</code> or a percentage.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/intl/">Intl</a></strong>:
+              The <code>Intl</code> API provides language sensitive string comparison, number formatting, date and time formatting, and more.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/media-capture/">Media capture</a></strong>:
+              The <code>navigator.mediaDevices.getUserMedia()</code> API requests access to devices that produce audio or video streams, such as microphones or video cameras.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/resource-timing/">Resource timing (initial support)</a></strong>:
+              <code>PerformanceResourceTiming</code> entries report when network events happen while loading a resource, such as when connections start and end. You can use this information to measure loading times.
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/display-table/">display: table</a></strong>:
-          The <code>display: table</code> CSS declaration renders an element with the box layout of a <code>&#x3C;table></code> HTML element. Child elements may use equivalents to <code>&#x3C;table></code> internal elements such as <code>display: table-row</code> for <code>&#x3C;tr></code>.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/dominant-baseline/">dominant-baseline</a></strong>:
-          The <code>dominant-baseline</code> CSS property sets the specific baseline used to align an elements's text and inline-level contents.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/font-optical-sizing/">font-optical-sizing</a></strong>:
-          The <code>font-optical-sizing</code> CSS property sets whether text rendering is optimized for viewing at different sizes.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/hashbang-comments/">Hashbang comments</a></strong>:
-          The <code>#!</code> comment at the absolute start of a script or module is treated as a normal comment and is ignored by the JavaScript engine.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/opacity-svg/">Opacity (SVG)</a></strong>:
-          The <code>fill-opacity</code>, and <code>stroke-opacity</code> SVG attributes and CSS properties control the transparency of a stroke or fill of an SVG element.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/q-unit/">Q unit</a></strong>:
-          The <code>Q</code> CSS length unit is an absolute length anchored to the physical measurement of quarter-millimeters. <code>1Q</code> is equivalent to 1/40 of 1 centimeter.
-        </li>
+        <section class="baseline-false safari">
+          <h2>New in Safari</h2>
+          <p>The following features are now available in Safari:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/async-clipboard/">Async clipboard</a></strong>:
+                The <code>navigator.clipboard</code> API asynchronously reads and writes to the system clipboard.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/clip-path/">clip-path</a></strong>:
+                The <code>clip-path</code> CSS property and SVG attribute set the visible area of an element. Everything outside the area will be hidden.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/clip-path-boxes/">Clip path boxes</a></strong>:
+                The <code>fill-box</code>, <code>stroke-box</code>, and <code>view-box</code> values for <code>clip-path</code> set an edge of the element's box to use as the clipping shape.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/dynamic-range/">dynamic-range media query</a></strong>:
+                The <code>dynamic-range</code> CSS media query sets styles based on whether a device can display at least <code>standard</code> range colors or at least <code>high</code> range colors. Non-visual devices will match neither.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/enterkeyhint/">Enterkeyhint</a></strong>:
+                The <code>enterkeyhint</code> global HTML attribute sets the label for a virtual keyboard's Enter key. For example, <code>enterkeyhint="search"</code> may label the key with a magnifying glass icon.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/image-orientation/">image-orientation</a></strong>:
+                The <code>image-orientation</code> CSS property corrects the rotation of an image using the image's metadata, such as EXIF.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/min-max-clamp/">min(), max(), and clamp()</a></strong>:
+                The <code>min()</code> and <code>max()</code> CSS functions return the minimum or maximum of the arguments, while <code>clamp()</code> clamps a value to a given range.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/picture-in-picture/">Picture-in-picture (video)</a></strong>:
+                The picture-in-picture API allow websites to create a floating, always-on-top video window. Also known as PiP or pop-out video.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/remote-playback/">Remote playback</a></strong>:
+                The Remote Playback API initiates and controls playback of media on connected remote devices, such as smart TVs with AirPlay or Chromecast capabilities.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/resize-observer/">Resize observer</a></strong>:
+                The <code>ResizeObserver</code> API observes and reacts to changes in the size of DOM elements.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/shadow-parts/">Shadow parts</a></strong>:
+                The <code>part</code> and <code>exportparts</code> HTML attributes expose elements of a shadow DOM as named parts, which can be selected by the <code>::part()</code> CSS pseudo-element for styling.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/string-replaceall/">String replaceAll()</a></strong>:
+                The <code>replaceAll()</code> method of strings returns a new string where all matches of a pattern (a string or regular expression) have been substituted with a replacement string.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/tab-size/">tab-size</a></strong>:
+                The <code>tab-size</code> CSS property sets the width of the tab character.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/transform-box/">transform-box</a></strong>:
+                The <code>transform-box</code> CSS property sets the position and dimensions of the reference box relative to which an element's transformations are calculated.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webgl-compressed-texture-etc/">WEBGL_compressed_texture_etc WebGL extension</a></strong>:
+                The <code>WEBGL_compressed_texture_etc</code> extension for WebGL 1.0 and 2.0 contexts adds many ETC2 and EAC compressed texture formats to <code>compressedTexImage2D()</code> and <code>compressedTexSubImage2D()</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webgl-compressed-texture-etc1/">WEBGL_compressed_texture_etc1 WebGL extension</a></strong>:
+                The <code>WEBGL_compressed_texture_etc1</code> extension for WebGL 1.0 and 2.0 contexts adds the ETC1 compressed texture format to <code>compressedTexImage2D()</code> and <code>compressedTexSubImage2D()</code>.
+              </li>
+            
+          </ul>
+        </section>
       
-        <li>
-          <strong><a href="/web-features-explorer/features/wasm-mutable-globals/">Import and export of mutable globals (WebAssembly)</a></strong>:
-          Mutable global variables are importable and exportable.
-        </li>
+    
       
-        <li>
-          <strong><a href="/web-features-explorer/features/web-animations/">Web animations</a></strong>:
-          The <code>animate()</code> method of <code>Element</code> objects programmatically animates elements over time and can synchronize the animations of multiple elements.
-        </li>
+        <section class="baseline-false safari_ios">
+          <h2>New in Safari on iOS</h2>
+          <p>The following features are now available in Safari on iOS:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/async-clipboard/">Async clipboard</a></strong>:
+                The <code>navigator.clipboard</code> API asynchronously reads and writes to the system clipboard.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/clip-path-boxes/">Clip path boxes</a></strong>:
+                The <code>fill-box</code>, <code>stroke-box</code>, and <code>view-box</code> values for <code>clip-path</code> set an edge of the element's box to use as the clipping shape.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/dynamic-range/">dynamic-range media query</a></strong>:
+                The <code>dynamic-range</code> CSS media query sets styles based on whether a device can display at least <code>standard</code> range colors or at least <code>high</code> range colors. Non-visual devices will match neither.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/enterkeyhint/">Enterkeyhint</a></strong>:
+                The <code>enterkeyhint</code> global HTML attribute sets the label for a virtual keyboard's Enter key. For example, <code>enterkeyhint="search"</code> may label the key with a magnifying glass icon.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/image-orientation/">image-orientation</a></strong>:
+                The <code>image-orientation</code> CSS property corrects the rotation of an image using the image's metadata, such as EXIF.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/min-max-clamp/">min(), max(), and clamp()</a></strong>:
+                The <code>min()</code> and <code>max()</code> CSS functions return the minimum or maximum of the arguments, while <code>clamp()</code> clamps a value to a given range.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/picture-in-picture/">Picture-in-picture (video)</a></strong>:
+                The picture-in-picture API allow websites to create a floating, always-on-top video window. Also known as PiP or pop-out video.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/remote-playback/">Remote playback</a></strong>:
+                The Remote Playback API initiates and controls playback of media on connected remote devices, such as smart TVs with AirPlay or Chromecast capabilities.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/resize-observer/">Resize observer</a></strong>:
+                The <code>ResizeObserver</code> API observes and reacts to changes in the size of DOM elements.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/shadow-parts/">Shadow parts</a></strong>:
+                The <code>part</code> and <code>exportparts</code> HTML attributes expose elements of a shadow DOM as named parts, which can be selected by the <code>::part()</code> CSS pseudo-element for styling.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/string-replaceall/">String replaceAll()</a></strong>:
+                The <code>replaceAll()</code> method of strings returns a new string where all matches of a pattern (a string or regular expression) have been substituted with a replacement string.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/tab-size/">tab-size</a></strong>:
+                The <code>tab-size</code> CSS property sets the width of the tab character.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/transform-box/">transform-box</a></strong>:
+                The <code>transform-box</code> CSS property sets the position and dimensions of the reference box relative to which an element's transformations are calculated.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webgl-compressed-texture-etc/">WEBGL_compressed_texture_etc WebGL extension</a></strong>:
+                The <code>WEBGL_compressed_texture_etc</code> extension for WebGL 1.0 and 2.0 contexts adds many ETC2 and EAC compressed texture formats to <code>compressedTexImage2D()</code> and <code>compressedTexSubImage2D()</code>.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webgl-compressed-texture-etc1/">WEBGL_compressed_texture_etc1 WebGL extension</a></strong>:
+                The <code>WEBGL_compressed_texture_etc1</code> extension for WebGL 1.0 and 2.0 contexts adds the ETC1 compressed texture format to <code>compressedTexImage2D()</code> and <code>compressedTexSubImage2D()</code>.
+              </li>
+            
+          </ul>
+        </section>
+      
+    
+  </div>
+
+  <aside>
+    <h2>Other release notes</h2>
+    <ul>
+      
+        
+          <li class="month-entry">
+            <a href="../december-2024">December 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2024">November 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2024">October 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2024">September 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2024">August 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2024">July 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2024">June 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2024">May 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../april-2024">April 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../march-2024">March 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../february-2024">February 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../january-2024">January 2024</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../december-2023">December 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../november-2023">November 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../october-2023">October 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../september-2023">September 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../august-2023">August 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../july-2023">July 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../june-2023">June 2023</a>
+          </li>
+        
+      
+        
+          <li class="month-entry">
+            <a href="../may-2023">May 2023</a>
+          </li>
+        
+      
+        
+          <li><a href="../">See all</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
     </ul>
-  
+  </aside>
+</main>
 
-  
-    <h2>Widely available</h2>
-    <p>The following features are now widely available:</p>
-    <ul class="baseline-high">
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/brotli/">Brotli compression</a></strong>:
-          Brotli is a lossless data compression algorithm. When used as a content encoding, it often provides better compression than gzip.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/font-stretch/">font-stretch</a></strong>:
-          The <code>font-stretch</code> CSS property selects a font face from a font family based on width, either by a keyword such as <code>condensed</code> or a percentage.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/intl/">Intl</a></strong>:
-          The <code>Intl</code> API provides language sensitive string comparison, number formatting, date and time formatting, and more.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/media-capture/">Media capture</a></strong>:
-          The <code>navigator.mediaDevices.getUserMedia()</code> API requests access to devices that produce audio or video streams, such as microphones or video cameras.
-        </li>
-      
-        <li>
-          <strong><a href="/web-features-explorer/features/resource-timing/">Resource timing (initial support)</a></strong>:
-          <code>PerformanceResourceTiming</code> entries report when network events happen while loading a resource, such as when connections start and end. You can use this information to measure loading times.
-        </li>
-      
-    </ul>
-  
-
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <h2>New in Safari</h2>
-      <p>The following features are now available in Safari:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/async-clipboard/">Async clipboard</a></strong>:
-            The <code>navigator.clipboard</code> API asynchronously reads and writes to the system clipboard.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/clip-path/">clip-path</a></strong>:
-            The <code>clip-path</code> CSS property and SVG attribute set the visible area of an element. Everything outside the area will be hidden.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/clip-path-boxes/">Clip path boxes</a></strong>:
-            The <code>fill-box</code>, <code>stroke-box</code>, and <code>view-box</code> values for <code>clip-path</code> set an edge of the element's box to use as the clipping shape.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/dynamic-range/">dynamic-range media query</a></strong>:
-            The <code>dynamic-range</code> CSS media query sets styles based on whether a device can display at least <code>standard</code> range colors or at least <code>high</code> range colors. Non-visual devices will match neither.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/enterkeyhint/">Enterkeyhint</a></strong>:
-            The <code>enterkeyhint</code> global HTML attribute sets the label for a virtual keyboard's Enter key. For example, <code>enterkeyhint="search"</code> may label the key with a magnifying glass icon.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/image-orientation/">image-orientation</a></strong>:
-            The <code>image-orientation</code> CSS property corrects the rotation of an image using the image's metadata, such as EXIF.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/min-max-clamp/">min(), max(), and clamp()</a></strong>:
-            The <code>min()</code> and <code>max()</code> CSS functions return the minimum or maximum of the arguments, while <code>clamp()</code> clamps a value to a given range.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/picture-in-picture/">Picture-in-picture (video)</a></strong>:
-            The picture-in-picture API allow websites to create a floating, always-on-top video window. Also known as PiP or pop-out video.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/remote-playback/">Remote playback</a></strong>:
-            The Remote Playback API initiates and controls playback of media on connected remote devices, such as smart TVs with AirPlay or Chromecast capabilities.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/resize-observer/">Resize observer</a></strong>:
-            The <code>ResizeObserver</code> API observes and reacts to changes in the size of DOM elements.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/shadow-parts/">Shadow parts</a></strong>:
-            The <code>part</code> and <code>exportparts</code> HTML attributes expose elements of a shadow DOM as named parts, which can be selected by the <code>::part()</code> CSS pseudo-element for styling.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/string-replaceall/">String replaceAll()</a></strong>:
-            The <code>replaceAll()</code> method of strings returns a new string where all matches of a pattern (a string or regular expression) have been substituted with a replacement string.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/tab-size/">tab-size</a></strong>:
-            The <code>tab-size</code> CSS property sets the width of the tab character.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/transform-box/">transform-box</a></strong>:
-            The <code>transform-box</code> CSS property sets the position and dimensions of the reference box relative to which an element's transformations are calculated.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webgl-compressed-texture-etc/">WEBGL_compressed_texture_etc WebGL extension</a></strong>:
-            The <code>WEBGL_compressed_texture_etc</code> extension for WebGL 1.0 and 2.0 contexts adds many ETC2 and EAC compressed texture formats to <code>compressedTexImage2D()</code> and <code>compressedTexSubImage2D()</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webgl-compressed-texture-etc1/">WEBGL_compressed_texture_etc1 WebGL extension</a></strong>:
-            The <code>WEBGL_compressed_texture_etc1</code> extension for WebGL 1.0 and 2.0 contexts adds the ETC1 compressed texture format to <code>compressedTexImage2D()</code> and <code>compressedTexSubImage2D()</code>.
-          </li>
-        
-      </ul>
-    
-  
-    
-      <h2>New in Safari on iOS</h2>
-      <p>The following features are now available in Safari on iOS:</p>
-      <ul class="baseline-false">
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/async-clipboard/">Async clipboard</a></strong>:
-            The <code>navigator.clipboard</code> API asynchronously reads and writes to the system clipboard.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/clip-path-boxes/">Clip path boxes</a></strong>:
-            The <code>fill-box</code>, <code>stroke-box</code>, and <code>view-box</code> values for <code>clip-path</code> set an edge of the element's box to use as the clipping shape.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/dynamic-range/">dynamic-range media query</a></strong>:
-            The <code>dynamic-range</code> CSS media query sets styles based on whether a device can display at least <code>standard</code> range colors or at least <code>high</code> range colors. Non-visual devices will match neither.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/enterkeyhint/">Enterkeyhint</a></strong>:
-            The <code>enterkeyhint</code> global HTML attribute sets the label for a virtual keyboard's Enter key. For example, <code>enterkeyhint="search"</code> may label the key with a magnifying glass icon.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/image-orientation/">image-orientation</a></strong>:
-            The <code>image-orientation</code> CSS property corrects the rotation of an image using the image's metadata, such as EXIF.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/min-max-clamp/">min(), max(), and clamp()</a></strong>:
-            The <code>min()</code> and <code>max()</code> CSS functions return the minimum or maximum of the arguments, while <code>clamp()</code> clamps a value to a given range.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/picture-in-picture/">Picture-in-picture (video)</a></strong>:
-            The picture-in-picture API allow websites to create a floating, always-on-top video window. Also known as PiP or pop-out video.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/remote-playback/">Remote playback</a></strong>:
-            The Remote Playback API initiates and controls playback of media on connected remote devices, such as smart TVs with AirPlay or Chromecast capabilities.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/resize-observer/">Resize observer</a></strong>:
-            The <code>ResizeObserver</code> API observes and reacts to changes in the size of DOM elements.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/shadow-parts/">Shadow parts</a></strong>:
-            The <code>part</code> and <code>exportparts</code> HTML attributes expose elements of a shadow DOM as named parts, which can be selected by the <code>::part()</code> CSS pseudo-element for styling.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/string-replaceall/">String replaceAll()</a></strong>:
-            The <code>replaceAll()</code> method of strings returns a new string where all matches of a pattern (a string or regular expression) have been substituted with a replacement string.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/tab-size/">tab-size</a></strong>:
-            The <code>tab-size</code> CSS property sets the width of the tab character.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/transform-box/">transform-box</a></strong>:
-            The <code>transform-box</code> CSS property sets the position and dimensions of the reference box relative to which an element's transformations are calculated.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webgl-compressed-texture-etc/">WEBGL_compressed_texture_etc WebGL extension</a></strong>:
-            The <code>WEBGL_compressed_texture_etc</code> extension for WebGL 1.0 and 2.0 contexts adds many ETC2 and EAC compressed texture formats to <code>compressedTexImage2D()</code> and <code>compressedTexSubImage2D()</code>.
-          </li>
-        
-          <li>
-            <strong><a href="/web-features-explorer/features/webgl-compressed-texture-etc1/">WEBGL_compressed_texture_etc1 WebGL extension</a></strong>:
-            The <code>WEBGL_compressed_texture_etc1</code> extension for WebGL 1.0 and 2.0 contexts adds the ETC1 compressed texture format to <code>compressedTexImage2D()</code> and <code>compressedTexSubImage2D()</code>.
-          </li>
-        
-      </ul>
-    
-  
-</section>
-
-    </main>
-
-    <footer>
-      <p>Generated on 12/19/2024 using <a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>2.14.0-dev-20241218204140-fd96a8a</code> and <a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>5.6.25</code></p>
-      <p>Source code: <a href="https://github.com/web-platform-dx/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
-    </footer>
 
   </body>
 </html>
