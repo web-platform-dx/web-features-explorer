@@ -38,6 +38,9 @@ jobs:
       - name: Generate site
         run: npm run build
 
+      - name: Generate pagefind index
+        run: npm run pagefind
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
