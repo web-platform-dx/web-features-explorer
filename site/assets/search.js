@@ -16,7 +16,7 @@ addEventListener("DOMContentLoaded", () => {
     "focus",
     () => {
       // Use dynamic import to load /pagefind/pagefind.js
-      import("/pagefind/pagefind.js").then((pagefind) => {
+      import("/web-features-explorer/pagefind/pagefind.js").then((pagefind) => {
         pagefind.init();
 
         searchInput.addEventListener("input", debounce(async (event) => {
