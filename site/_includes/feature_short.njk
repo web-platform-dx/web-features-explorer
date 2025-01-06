@@ -1,4 +1,4 @@
-<div id="{{ feature.id }}" class="feature short baseline-{{ feature.status.baseline }}">
+<div id="{{ feature.id }}" class="feature short baseline-{{ feature.status.baseline }}{% if feature.discouraged %} discouraged{% endif %}">
   <div class="header">
     <h2><a href="/features/{{ feature.id | slugify }}/">{{ feature.name }}</a></h2>
     {% include "baseline.njk" %}

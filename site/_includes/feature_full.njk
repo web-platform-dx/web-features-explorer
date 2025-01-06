@@ -1,9 +1,11 @@
-<div id="{{ feature.id }}" class="feature baseline-{{ feature.status.baseline }}">
+<div id="{{ feature.id }}" class="feature baseline-{{ feature.status.baseline }}{% if feature.discouraged %} discouraged{% endif %}">
   <div class="header">
     <h1>{{ feature.name }}</h1>
     {% include "baseline.njk" %}
   </div>
   {% include "tags.njk" %}
+
+  {% include "discouraged.njk" %}
 
   <p data-pagefind-body>
     {{ feature.description_html | safe }}

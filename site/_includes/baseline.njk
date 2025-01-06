@@ -1,5 +1,9 @@
 <div class="availability">
-  {% if not feature.status.baseline %}Limited availability{% endif %}
-  {% if feature.status.baseline === "low" %}Newly available since {% baselineDate feature.status.baseline_low_date %}{% endif %}
-  {% if feature.status.baseline === "high" %}Widely available since {% baselineDate feature.status.baseline_high_date %}{% endif %}
+  {% if feature.discouraged %}
+    Discouraged
+  {% else %}
+    {% if not feature.status.baseline %}Limited availability{% endif %}
+    {% if feature.status.baseline === "low" %}Newly available since {% baselineDate feature.status.baseline_low_date %}{% endif %}
+    {% if feature.status.baseline === "high" %}Widely available since {% baselineDate feature.status.baseline_high_date %}{% endif %}
+  {% endif %}
 </div>

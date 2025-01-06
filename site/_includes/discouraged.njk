@@ -1,0 +1,21 @@
+{% if feature.discouraged %}
+  <div class="discouraged-info">
+    <p>
+      This feature is discouraged.
+      {% if feature.discouraged.alternatives %}
+        Consider using
+          {% for alternative in feature.discouraged.alternatives %}
+            <a href="/features/{{ alternative }}">{{ features[alternative].name }}</a>
+            {% if not loop.last %}, {% endif %}
+          {% endfor %}
+        instead.
+      {% endif %}
+      For the rationale, see:
+    </p>
+    <ul>
+      {% for rationale in feature.discouraged.according_to %}
+        <li><a href="{{ rationale }}">{{ rationale }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
