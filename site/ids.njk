@@ -1,0 +1,36 @@
+---
+title: Feature IDs and BCD keys
+layout: layout.njk
+---
+
+<main>
+  <h1>{{ title }}</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>BCD keys</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for feature in allFeatures %}
+        <tr class="baseline-{{ feature.status.baseline }}">
+          <td>{{ feature.id }}</td>
+          <td>{{ feature.name }}</td>
+          <td>{{ feature.description }}</td>
+          <td>
+            <ul>
+              {% for key in feature.compat_features %}
+                <li>{{ key }}</li>
+              {% endfor %}
+            </ul>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</main>
