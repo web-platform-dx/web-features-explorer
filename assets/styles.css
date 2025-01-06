@@ -21,7 +21,7 @@
 }
 
 html {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-family: Verdana, sans-serif;
   color: var(--text);
   background: var(--background);
@@ -140,15 +140,35 @@ a:hover {
 }
 
 .feature.baseline-false {
-  background: linear-gradient(to bottom, var(--baseline-limited-bg), var(--background));
+  background: linear-gradient(
+    to bottom,
+    var(--baseline-limited-bg),
+    var(--background)
+  );
 }
 
 .feature.baseline-low {
-  background: linear-gradient(to bottom, var(--baseline-low-bg), var(--background));
+  background: linear-gradient(
+    to bottom,
+    var(--baseline-low-bg),
+    var(--background)
+  );
 }
 
 .feature.baseline-high {
-  background: linear-gradient(to bottom, var(--baseline-high-bg), var(--background));
+  background: linear-gradient(
+    to bottom,
+    var(--baseline-high-bg),
+    var(--background)
+  );
+}
+
+.feature.discouraged {
+  background: linear-gradient(
+    to bottom,
+    var(--browser-unsupported-bg),
+    var(--background)
+  );
 }
 
 .feature .header {
@@ -196,6 +216,11 @@ a:hover {
   background-size: 1.5rem;
   background-image: url(https://web-platform-dx.github.io/web-features/assets/img/baseline-limited-icon.svg);
   margin-left: auto;
+}
+
+.discouraged .availability {
+  background-image: none;
+  padding-inline-start: 0.25rem;
 }
 
 .baseline-low .availability {
@@ -330,7 +355,7 @@ a:hover {
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: .5rem;
+  gap: 0.5rem;
   justify-content: center;
 }
 
@@ -348,7 +373,7 @@ nav a {
 }
 
 nav li {
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   background-image: linear-gradient(
     to top right,
     var(--baseline-high-label-bg),
@@ -356,7 +381,7 @@ nav li {
     var(--baseline-limited-label-bg)
   );
   filter: saturate(2);
-  box-shadow: 0 0 .5rem 0 #fff;
+  box-shadow: 0 0 0.5rem 0 #fff;
 }
 
 /* Search box */
@@ -371,13 +396,13 @@ header search input {
   width: 9rem;
   /* Prevent iOS from zooming on the field when focus */
   font-size: 16px;
-  padding: .25rem;
+  padding: 0.25rem;
   margin: 0;
   height: 100%;
   box-sizing: border-box;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   border: 2px solid var(--browser-supported-bg);
-  box-shadow: 0 0 .5rem 0 white;
+  box-shadow: 0 0 0.5rem 0 white;
 }
 
 header output ul {
@@ -392,7 +417,7 @@ header output a {
   display: block;
   background: var(--background-alt);
   padding: calc(var(--margin) / 2);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: var(--text);
   text-decoration: none;
 }
@@ -459,20 +484,32 @@ main {
 
 .release-notes section {
   padding: var(--margin);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   margin-block-end: var(--margin);
 }
 
 .release-notes .baseline-low {
-  background: linear-gradient(to bottom, var(--baseline-low-bg), var(--background));
+  background: linear-gradient(
+    to bottom,
+    var(--baseline-low-bg),
+    var(--background)
+  );
 }
 
 .release-notes .baseline-high {
-  background: linear-gradient(to bottom, var(--baseline-high-bg), var(--background));
+  background: linear-gradient(
+    to bottom,
+    var(--baseline-high-bg),
+    var(--background)
+  );
 }
 
 .release-notes .baseline-false {
-  background: linear-gradient(to bottom, var(--baseline-limited-bg), var(--background));
+  background: linear-gradient(
+    to bottom,
+    var(--baseline-limited-bg),
+    var(--background)
+  );
 }
 
 .release-notes h2 {
@@ -528,7 +565,7 @@ main {
 .release-notes aside {
   background: var(--background-alt);
   padding: calc(var(--margin) / 2);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   place-self: start stretch;
 }
 
@@ -540,7 +577,7 @@ main {
   .release-notes:not(.home) {
     display: block;
   }
-  
+
   .release-notes:not(.home) aside {
     padding: var(--margin);
   }
@@ -551,13 +588,13 @@ main {
 .explore-features .views {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem .5rem;
+  gap: 1.2rem 0.5rem;
   margin: var(--margin) 0;
 }
 
 .explore-features .views a {
-  padding: .5rem;
-  border-radius: .25rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 /* Groups */
@@ -640,17 +677,27 @@ main {
 table {
   border-collapse: collapse;
   border: 1px solid var(--text);
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
-th, td {
+th,
+td {
   border: 1px solid var(--text);
   padding: calc(var(--margin) / 4);
 }
 
-table ul, table li {
+table ul,
+table li {
   display: inline;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+/* Discouraged banner */
+
+.discouraged-info {
+  background: var(--browser-unsupported-bg);
+  padding: calc(var(--margin) / 2);
+  border-radius: 0.25rem;
 }
