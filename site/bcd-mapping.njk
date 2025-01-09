@@ -1,0 +1,18 @@
+---
+title: BCD key mapping
+layout: layout.njk
+---
+
+<main>
+  <h1>{{ title }}</h1>
+
+  <p>The web-features project has {{ bcdMapping.mapped.length }} BCD keys mapped, out of {{ bcdMapping.all.length }} total BCD keys ({{ bcdMapping.percentage }}% complete).</p>
+
+  <h2>Unmapped BCD keys</h2>
+
+  <ul>
+    {% for key in bcdMapping.unmapped %}
+      <li>{{ key }}</li>
+    {% endfor %}
+  </ul>
+</main>

@@ -21,6 +21,30 @@ const BROWSER_BUG_TRACKERS = {
 
 const MDN_URL_ROOT = "https://developer.mozilla.org/docs/";
 
+function getAllBCDKeys() {
+  function walk(root, acc, keyPrefix = "") {
+    for (const key in root) {
+      if (!keyPrefix && (key === "__meta" || key === "browsers" || key === "webextensions")) {
+        continue;
+      }
+
+      if (key === "__compat") {
+        acc.push(keyPrefix);
+      }
+
+      if (key !== "__compat" && typeof root[key] === "object") {
+        const bcdKey = keyPrefix ? `${keyPrefix}.${key}` : key;
+        walk(root[key], acc, bcdKey);
+      }
+    }
+  }
+
+  const keys = [];
+  walk(bcd, keys);
+
+  return keys;
+}
+
 function findParentGroupId(group) {
   if (!group.parent) {
     return null;
@@ -504,6 +528,32 @@ export default function (eleventyConfig) {
         new Date(a.status.baseline_low_date)
       );
     });
+  });
+
+  eleventyConfig.addGlobalData("bcdMapping", () => {
+    const mapped = [];
+    for (const id in features) {
+      const feature = features[id];
+      if (feature.compat_features && feature.compat_features.length) {
+        mapped.push(...feature.compat_features);
+      }
+    }
+    
+    const unmapped = [];
+    getAllBCDKeys().forEach(key => {
+      if (!mapped.includes(key)) {
+        unmapped.push(key);
+      }
+    });
+    
+    const all = [...mapped, ...unmapped];
+
+    return {
+      all,
+      mapped,
+      unmapped,
+      percentage: ((mapped.length / all.length) * 100).toFixed(0),
+    };
   });
 
   eleventyConfig.addGlobalData("missingOneBrowserFeatures", () => {
