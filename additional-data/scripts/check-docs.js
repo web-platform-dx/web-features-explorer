@@ -8,8 +8,9 @@ import { features } from "web-features";
 import bcd from "@mdn/browser-compat-data" assert { type: "json" };
 import * as fs from "fs/promises";
 import mdnDocsOverrides from "../mdn-docs.json" assert { type: "json" };
+import path from "path";
 
-const FILE = "../mdn-docs.json";
+const FILE = path.join(import.meta.dirname, "../mdn-docs.json");
 
 function getFeaturesMdnUrls() {
   const output = {};
@@ -62,9 +63,9 @@ async function main() {
     // No override found, let's see if we have a single MDN URL for this feature.
     if (featuresMdnUrls[id] && featuresMdnUrls[id].length === 1) {
       // Yes, let's add it to the data.
-      // console.log(`Adding single MDN URL for ${id}: ${featuresMdnUrls[id][0]}`);
       mdnDocsOverrides[id] = [featuresMdnUrls[id][0]];
     } else {
+      // Otherwise, add the feature ID to the data with an empty array.
       mdnDocsOverrides[id] = [];
     }
 
@@ -83,7 +84,7 @@ async function main() {
     .forEach(function (key) {
       orderedDocOverrides[key] = mdnDocsOverrides[key];
     });
-  
+
   // Write the JSON file back to disk.
   const str = JSON.stringify(orderedDocOverrides, null, 2);
   await fs.writeFile(FILE, str);

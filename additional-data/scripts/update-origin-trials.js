@@ -27,8 +27,9 @@
 import { features } from "web-features";
 import fs from "fs/promises";
 import trials from "../origin-trials.json" assert { type: "json" };
+import path from "path";
 
-const OUTPUT_FILE = "../origin-trials.json";
+const OUTPUT_FILE = path.join(import.meta.dirname, "../origin-trials.json");
 
 async function getChromeAPIData(url) {
   const response = await fetch(url);

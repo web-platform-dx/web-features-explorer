@@ -26,8 +26,9 @@
 import { features } from "web-features";
 import fs from "fs/promises";
 import positions from "../standard-positions.json" assert { type: "json" };
+import path from "path";
 
-const OUTPUT_FILE = "../standard-positions.json";
+const OUTPUT_FILE = path.join(import.meta.dirname, "../standard-positions.json");
 const MOZILLA_DATA_FILE =
   "https://raw.githubusercontent.com/mozilla/standards-positions/refs/heads/gh-pages/merged-data.json";
 const WEBKIT_DATA_FILE =
