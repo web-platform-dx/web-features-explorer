@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Web platform features explorer - CSS import attributes</title>
+    <title>Web platform features explorer - Import assertions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
@@ -30,14 +30,12 @@
 
     
 <main class="feature-page">
-  <div id="css-modules" class="feature baseline-false">
+  <div id="import-assertions" class="feature baseline-false discouraged">
   <div class="header">
-    <h1>CSS import attributes</h1>
+    <h1>Import assertions</h1>
     <div class="availability">
   
-    Limited availability
-    
-    
+    Discouraged
   
 </div>
   </div>
@@ -53,53 +51,66 @@
 
 
   
+  <div class="discouraged-info">
+    <p>
+      This feature is discouraged.
+      
+        Consider using
+          
+            <a href="/web-features-explorer/features/css-modules">CSS import attributes</a>
+            , 
+          
+            <a href="/web-features-explorer/features/json-modules">JSON import attributes</a>
+            
+          
+        instead.
+      
+      For the rationale, see:
+    </p>
+    <ul>
+      
+        <li><a href="https://github.com/tc39/proposal-import-attributes/pull/131">https://github.com/tc39/proposal-import-attributes/pull/131</a></li>
+      
+    </ul>
+  </div>
+
 
   <p data-pagefind-body="">
-    Module `import … with { type: "css" } statements load CSS modules as constructable stylesheets. Also known as CSS module scripts.
+    Module <code>import … assert { type: "json" }</code> and <code>import … assert { type: "css" }</code> JavaScript statements load JSON and CSS data.
   </p>
 
   
-  <h3>Learning resources on MDN</h3>
-  <ul data-pagefind-body="">
-    
-      <li>
-        <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import">
-          
-            import
-          
-        </a>
-      </li>
-    
-  </ul>
-
   
   <h3>Browser support</h3>
   <ul class="compat compat-full">
   
-    <li class="browser browser-chrome supported">
+    <li class="browser browser-chrome">
       <span class="name">Chrome</span>
       
       
-        <span class="version">123</span>
-        <span class="date">Released on 2024-03-19</span>
+        <span class="version">❌</span>
+        
+        
       
     </li>
   
-    <li class="browser browser-chrome_android supported">
+    <li class="browser browser-chrome_android">
       <span class="name">Chrome Android</span>
       
       
-        <span class="version">123</span>
-        <span class="date">Released on 2024-03-19</span>
+        <span class="version">❌</span>
+        
+        
       
     </li>
   
-    <li class="browser browser-edge supported">
+    <li class="browser browser-edge">
       <span class="name">Edge</span>
       
       
-        <span class="version">123</span>
-        <span class="date">Released on 2024-03-22</span>
+        <span class="version">❌</span>
+        
+        
       
     </li>
   
@@ -109,17 +120,16 @@
       
         <span class="version">❌</span>
         
+          <span class="bug">
+            See
+            
+              <a href="https://bugzil.la/1720570">bugzil.la/1720570</a>
+            
+          </span>
+        
         
   
   
-  <span class="position position-positive">
-    <a href="https://github.com/mozilla/standards-positions/issues/541">Vendor position</a>
-    
-      <span>: positive</span>
-    
-    
-  </span>
-
 
 
       
@@ -131,17 +141,16 @@
       
         <span class="version">❌</span>
         
+          <span class="bug">
+            See
+            
+              <a href="https://bugzil.la/1720570">bugzil.la/1720570</a>
+            
+          </span>
+        
         
   
   
-  <span class="position position-positive">
-    <a href="https://github.com/mozilla/standards-positions/issues/541">Vendor position</a>
-    
-      <span>: positive</span>
-    
-    
-  </span>
-
 
 
       
@@ -153,17 +162,16 @@
       
         <span class="version">❌</span>
         
+          <span class="bug">
+            See
+            
+              <a href="https://webkit.org/b/227967">webkit.org/b/227967</a>
+            
+          </span>
+        
         
   
   
-  <span class="position position-support">
-    <a href="https://github.com/WebKit/standards-positions/issues/77">Vendor position</a>
-    
-      <span>: support</span>
-    
-    
-  </span>
-
 
 
       
@@ -175,17 +183,16 @@
       
         <span class="version">❌</span>
         
+          <span class="bug">
+            See
+            
+              <a href="https://webkit.org/b/227967">webkit.org/b/227967</a>
+            
+          </span>
+        
         
   
   
-  <span class="position position-support">
-    <a href="https://github.com/WebKit/standards-positions/issues/77">Vendor position</a>
-    
-      <span>: support</span>
-    
-    
-  </span>
-
 
 
       
@@ -202,8 +209,7 @@
       
         <li>
           
-            <a href="https://html.spec.whatwg.org/multipage/webappapis.html#css-module-script">HTML Standard (#css-module-script)</a>,
-            from <a href="https://html.spec.whatwg.org/multipage/">HTML Workstream</a> (WHATWG).
+            <a href="https://github.com/tc39/proposal-import-attributes/tree/abca60286360b47f9a6be25a28f489c2cb157beb">https://github.com/tc39/proposal-import-attributes/tree/abca60286360b47f9a6be25a28f489c2cb157beb</a>
           
         </li>
       
@@ -212,9 +218,9 @@
 
 
   <p class="edit-link">
-    <a href="https://github.com/web-platform-dx/web-features/edit/main/features/css-modules.yml">Edit this feature</a>
+    <a href="https://github.com/web-platform-dx/web-features/edit/main/features/import-assertions.yml">Edit this feature</a>
     -
-    <a href="https://github.com/web-platform-dx/web-features/issues/new?title=[css-modules] Issue title&body=Please describe the issue here...">Report an issue about this feature</a>
+    <a href="https://github.com/web-platform-dx/web-features/issues/new?title=[import-assertions] Issue title&body=Please describe the issue here...">Report an issue about this feature</a>
   </p>
 </div>
 </main>
