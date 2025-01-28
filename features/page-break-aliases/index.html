@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Web platform features explorer - Barcode detector</title>
+    <title>Web platform features explorer - Page break aliases</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
@@ -30,14 +30,12 @@
 
     
 <main class="feature-page">
-  <div id="barcode" class="feature baseline-false">
+  <div id="page-break-aliases" class="feature baseline-false discouraged">
   <div class="header">
-    <h1>Barcode detector</h1>
+    <h1>Page break aliases</h1>
     <div class="availability">
   
-    Limited availability
-    
-    
+    Discouraged
   
 </div>
   </div>
@@ -45,17 +43,48 @@
   
     Tags:
     
-      <span class="tag">api</span>
+      <span class="tag">css</span>
     
   
+  
+    Groups:
+    
+      <span class="tag">
+        
+          CSS  &gt; 
+        
+          Layout 
+        
+      </span>
+    
   
 </div>
 
 
   
+  <div class="discouraged-info">
+    <p>
+      This feature is discouraged.
+      
+        Consider using
+          
+            <a href="/web-features-explorer/features/page-breaks">Page breaks</a>
+            
+          
+        instead.
+      
+      For the rationale, see:
+    </p>
+    <ul>
+      
+        <li><a href="https://drafts.csswg.org/css-break-4/#page-break-properties">https://drafts.csswg.org/css-break-4/#page-break-properties</a></li>
+      
+    </ul>
+  </div>
+
 
   <p data-pagefind-body="">
-    The <code>BarcodeDetector</code> API recognizes various barcode formats in images.
+    The <code>page-break-before</code>, <code>page-break-inside</code>, and <code>page-break-after</code> CSS properties are aliases to the <code>break-before</code>, <code>break-inside</code>, and <code>break-after</code> properties.
   </p>
 
   
@@ -63,33 +92,25 @@
   <ul data-pagefind-body="">
     
       <li>
-        <a href="https://developer.mozilla.org/docs/Web/API/BarcodeDetector">
+        <a href="https://developer.mozilla.org/docs/Web/CSS/page-break-after">
           
-            BarcodeDetector
-          
-        </a>
-      </li>
-    
-      <li>
-        <a href="https://developer.mozilla.org/docs/Web/API/BarcodeDetector/BarcodeDetector">
-          
-            BarcodeDetector: BarcodeDetector() constructor
+            page-break-after
           
         </a>
       </li>
     
       <li>
-        <a href="https://developer.mozilla.org/docs/Web/API/BarcodeDetector/detect">
+        <a href="https://developer.mozilla.org/docs/Web/CSS/page-break-before">
           
-            BarcodeDetector: detect() method
+            page-break-before
           
         </a>
       </li>
     
       <li>
-        <a href="https://developer.mozilla.org/docs/Web/API/BarcodeDetector/getSupportedFormats_static">
+        <a href="https://developer.mozilla.org/docs/Web/CSS/page-break-inside">
           
-            BarcodeDetector: getSupportedFormats() static method
+            page-break-inside
           
         </a>
       </li>
@@ -100,13 +121,12 @@
   <h3>Browser support</h3>
   <ul class="compat compat-full">
   
-    <li class="browser browser-chrome">
+    <li class="browser browser-chrome supported">
       <span class="name">Chrome</span>
       
       
-        <span class="version">❌</span>
-        
-        
+        <span class="version">1</span>
+        <span class="date">Released on 2008-12-11</span>
       
     </li>
   
@@ -114,18 +134,17 @@
       <span class="name">Chrome Android</span>
       
       
-        <span class="version">83</span>
-        <span class="date">Released on 2020-05-19</span>
+        <span class="version">18</span>
+        <span class="date">Released on 2012-06-27</span>
       
     </li>
   
-    <li class="browser browser-edge">
+    <li class="browser browser-edge supported">
       <span class="name">Edge</span>
       
       
-        <span class="version">❌</span>
-        
-        
+        <span class="version">12</span>
+        <span class="date">Released on 2015-07-29</span>
       
     </li>
   
@@ -138,7 +157,7 @@
           <span class="bug">
             See
             
-              <a href="https://bugzil.la/1553738">bugzil.la/1553738</a>
+              <a href="https://bugzil.la/775617">bugzil.la/775617</a>
             
           </span>
         
@@ -159,7 +178,7 @@
           <span class="bug">
             See
             
-              <a href="https://bugzil.la/1553738">bugzil.la/1553738</a>
+              <a href="https://bugzil.la/775617">bugzil.la/775617</a>
             
           </span>
         
@@ -177,6 +196,13 @@
       
         <span class="version">❌</span>
         
+          <span class="bug">
+            See
+            
+              <a href="https://webkit.org/b/34155">webkit.org/b/34155</a>
+            
+          </span>
+        
         
   
   
@@ -190,6 +216,13 @@
       
       
         <span class="version">❌</span>
+        
+          <span class="bug">
+            See
+            
+              <a href="https://webkit.org/b/34155">webkit.org/b/34155</a>
+            
+          </span>
         
         
   
@@ -210,8 +243,8 @@
       
         <li>
           
-            <a href="https://wicg.github.io/shape-detection-api/#barcode-detection-api">Accelerated Shape Detection in Images (#barcode-detection-api)</a>,
-            from <a href="https://www.w3.org/community/wicg/">Web Platform Incubator Community Group</a> (W3C).
+            <a href="https://drafts.csswg.org/css-break-4/#page-break-properties">CSS Fragmentation Module Level 4 (#page-break-properties)</a>,
+            from <a href="https://www.w3.org/Style/CSS/">Cascading Style Sheets (CSS) Working Group</a> (W3C).
           
         </li>
       
@@ -220,9 +253,9 @@
 
 
   <p class="edit-link">
-    <a href="https://github.com/web-platform-dx/web-features/edit/main/features/barcode.yml">Edit this feature</a>
+    <a href="https://github.com/web-platform-dx/web-features/edit/main/features/page-break-aliases.yml">Edit this feature</a>
     -
-    <a href="https://github.com/web-platform-dx/web-features/issues/new?title=[barcode] Issue title&body=Please describe the issue here...">Report an issue about this feature</a>
+    <a href="https://github.com/web-platform-dx/web-features/issues/new?title=[page-break-aliases] Issue title&body=Please describe the issue here...">Report an issue about this feature</a>
   </p>
 </div>
 </main>
