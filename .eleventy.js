@@ -266,7 +266,11 @@ export default function (eleventyConfig) {
       return {
         id: browserId,
         name: browsers[browserId].name,
-        releases: browsers[browserId].releases,
+        releases: browsers[browserId].releases.map(release => {
+          // Add the status of the release from BCD (current, retired, beta, nightly).
+          release.status = bcd.browsers[browserId].releases[release.version].status;
+          return release;
+        }),
         bugTracker: BROWSER_BUG_TRACKERS[browserId],
       };
     });

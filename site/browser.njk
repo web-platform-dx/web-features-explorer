@@ -1,0 +1,29 @@
+---
+layout: layout.njk
+pagination:
+  data: browsers
+  size: 1
+  alias: browser
+permalink: "browsers/{{ browser.id | slugify }}/"
+---
+
+<main class="explore-features">
+  {% include "feature_list_views.njk" %}
+
+  {% for release in browser.releases %}
+    {% if release.status == "current" %}
+      <h1>New features in {{ browser.name }} {{ release.version }} (released on {{ release.date }})</h1>
+
+      <ul class="features">
+        {% for feature in allFeatures %}
+          {% if feature.status.support[browser.id] and feature.status.support[browser.id] == release.version %}
+            <li>
+              {% include "feature_short.njk" %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+
+</main>
