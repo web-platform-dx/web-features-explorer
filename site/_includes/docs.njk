@@ -1,5 +1,6 @@
+<h3>Learning resources on MDN</h3>
+
 {% if feature.mdnUrls.length > 0 %}
-  <h3>Learning resources on MDN</h3>
   <ul data-pagefind-body>
     {% for url in feature.mdnUrls %}
       <li>
@@ -13,4 +14,7 @@
       </li>
     {% endfor %}
   </ul>
+{% else %}
+  <strong>No MDN documentation link found.</strong>
+  You can <a href="https://developer.mozilla.org/search?q={{ feature.name }}">search for the feature on MDN</a>. If you believe that MDN has no documentation about this feature, you can <a href="https://github.com/mdn/mdn/issues/new?template=content-or-feature-suggestion.yml">open an issue on MDN's GitHub repository</a>.
 {% endif %}
