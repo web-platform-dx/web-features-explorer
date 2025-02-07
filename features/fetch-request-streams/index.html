@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Web platform features explorer - Contenteditable</title>
+    <title>Web platform features explorer - Fetch request streams</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
@@ -30,14 +30,14 @@
 
     
 <main class="feature-page">
-  <div id="contenteditable" class="feature baseline-high">
+  <div id="fetch-request-streams" class="feature baseline-false">
   <div class="header">
-    <h1>Contenteditable</h1>
+    <h1>Fetch request streams</h1>
     <div class="availability">
   
+    Limited availability
     
     
-    Widely available since 2018-01-29
   
 </div>
   </div>
@@ -47,8 +47,6 @@
     
       <span class="tag">api</span>
     
-      <span class="tag">html</span>
-    
   
   
 </div>
@@ -57,7 +55,7 @@
   
 
   <p data-pagefind-body="">
-    The <code>contenteditable</code> global HTML attribute allows the user to edit the content of an element, such as inserting or deleting text.
+    A <code>fetch()</code> request streams data to the server when a request's <code>body</code> property is a <code>ReadableStream</code> object.
   </p>
 
   <h3>Learning resources on MDN</h3>
@@ -66,9 +64,9 @@
   <ul data-pagefind-body="">
     
       <li>
-        <a href="https://developer.mozilla.org/docs/Web/HTML/Global_attributes/contenteditable">
+        <a href="https://developer.mozilla.org/docs/Web/API/Request/body">
           
-            contenteditable
+            Request: body property
           
         </a>
       </li>
@@ -76,15 +74,15 @@
   </ul>
 
   
-  <h3>Browser support <span class="subtext">(<a href="https://caniuse.com/contenteditable">view on caniuse.com</a>)</span></h3>
+  <h3>Browser support</h3>
   <ul class="compat compat-full">
   
     <li class="browser browser-chrome supported">
       <span class="name">Chrome</span>
       
       
-        <span class="version">1</span>
-        <span class="date">Released on 2008-12-11</span>
+        <span class="version">105</span>
+        <span class="date">Released on 2022-09-02</span>
       
     </li>
   
@@ -92,8 +90,8 @@
       <span class="name">Chrome Android</span>
       
       
-        <span class="version">18</span>
-        <span class="date">Released on 2012-06-27</span>
+        <span class="version">105</span>
+        <span class="date">Released on 2022-09-02</span>
       
     </li>
   
@@ -101,26 +99,50 @@
       <span class="name">Edge</span>
       
       
-        <span class="version">12</span>
-        <span class="date">Released on 2015-07-29</span>
+        <span class="version">105</span>
+        <span class="date">Released on 2022-09-01</span>
       
     </li>
   
-    <li class="browser browser-firefox supported">
+    <li class="browser browser-firefox">
       <span class="name">Firefox</span>
       
       
-        <span class="version">4</span>
-        <span class="date">Released on 2011-03-22</span>
+        <span class="version">❌</span>
+        
+          <span class="bug">
+            See
+            
+              <a href="https://bugzil.la/1387483">bugzil.la/1387483</a>
+            
+          </span>
+        
+        
+  
+  
+
+
       
     </li>
   
-    <li class="browser browser-firefox_android supported">
+    <li class="browser browser-firefox_android">
       <span class="name">Firefox for Android</span>
       
       
-        <span class="version">4</span>
-        <span class="date">Released on 2011-03-29</span>
+        <span class="version">❌</span>
+        
+          <span class="bug">
+            See
+            
+              <a href="https://bugzil.la/1387483">bugzil.la/1387483</a>
+            
+          </span>
+        
+        
+  
+  
+
+
       
     </li>
   
@@ -128,8 +150,8 @@
       <span class="name">Safari</span>
       
       
-        <span class="version">≤4</span>
-        <span class="date">Released before 2009-06-08</span>
+        <span class="version">11.1</span>
+        <span class="date">Released on 2018-04-12</span>
       
     </li>
   
@@ -137,14 +159,15 @@
       <span class="name">Safari on iOS</span>
       
       
-        <span class="version">≤3.2</span>
-        <span class="date">Released before 2010-04-03</span>
+        <span class="version">11.3</span>
+        <span class="date">Released on 2018-03-29</span>
       
     </li>
   
 </ul>
 
   
+    <p>Baseline availability blocked since September 2022 by Firefox (29 months)</p>
 
   
   <div class="specs" data-pagefind-body="">
@@ -153,8 +176,8 @@
       
         <li>
           
-            <a href="https://html.spec.whatwg.org/multipage/interaction.html#contenteditable">HTML (#contenteditable)</a>,
-            from <a href="https://html.spec.whatwg.org/multipage/">HTML Workstream</a> (WHATWG).
+            <a href="https://fetch.spec.whatwg.org/#concept-body-stream">Fetch (#concept-body-stream)</a>,
+            from <a href="https://fetch.spec.whatwg.org/">Fetch Workstream</a> (WHATWG).
           
         </li>
       
@@ -163,13 +186,13 @@
 
 
   <p class="edit-link">
-    <a href="https://wpt.fyi/results/?q=feature%3Acontenteditable">View web-platform-tests results for this feature</a>
+    <a href="https://wpt.fyi/results/?q=feature%3Afetch-request-streams">View web-platform-tests results for this feature</a>
     -
-    <a href="https://github.com/web-platform-dx/web-features/blob/main/features/contenteditable.yml">View the feature source file</a>
+    <a href="https://github.com/web-platform-dx/web-features/blob/main/features/fetch-request-streams.yml">View the feature source file</a>
     -
-    <a href="https://github.com/web-platform-dx/web-features/edit/main/features/contenteditable.yml">Edit the feature</a>
+    <a href="https://github.com/web-platform-dx/web-features/edit/main/features/fetch-request-streams.yml">Edit the feature</a>
     -
-    <a href="https://github.com/web-platform-dx/web-features/issues/new?title=[contenteditable] Issue title&body=Please describe the issue here...">Report an issue about this feature</a>
+    <a href="https://github.com/web-platform-dx/web-features/issues/new?title=[fetch-request-streams] Issue title&body=Please describe the issue here...">Report an issue about this feature</a>
   </p>
 </div>
 </main>
