@@ -63,8 +63,8 @@ Mark up content:
     - input-button
     - input-checkbox
     - input-color
-    - input-date
-    - input-email
+    - input-date-time
+    - input-email-tel-url
     - input-file
     - input-hidden
     - input-image
@@ -88,6 +88,7 @@ Mark up content:
     - datalist
   Mark up lists:
     - list-elements
+    - description-list
   Mark up tabular data:
     - table
   Mark up mathematical expressions:
@@ -211,6 +212,8 @@ Style content:
     - colrv1
     - forced-colors
     - light-dark
+    - color-contrast
+    - contrast-color
   Style elements:
     Set dimensions:
       - width-height
@@ -405,6 +408,7 @@ Style content:
       - font-variant-position
       - font-variation-settings
       - font-weight
+      - font-family-ui
   Style scrolling:
     - scroll-snap
     - scroll-behavior
@@ -594,6 +598,11 @@ Run client-side logic:
   Write JavaScript code:
     Write code:
       - javascript
+      - let-const
+      - nullish-coalescing
+      - globalthis
+      - exponentiation
+      - error-cause
     Organize code:
       - script
       - js-modules
@@ -694,6 +703,8 @@ Run client-side logic:
       - base64encodedecode
   Manipulate the DOM:
     - dom
+    - mutation-events
+    - mutationobserver
   Store data:
     - storage-access
     - storage-buckets
@@ -728,7 +739,16 @@ Run client-side logic:
     - permissions
     - touch-events
     - virtual-keyboard
+    - wheel-events
+    - change-event
+    - events
+    - focus-events
+    - keyboard-events
+    - pointer-events
+    - pointer-events-api
+    - resize-observer
   Run multi-threaded code:
+    - service-workers
     - broadcast-channel
     - postmessage
     - channel-messaging
@@ -777,6 +797,7 @@ Integrate with the system:
     - app-shortcuts
     - share
     - virtual-keyboard
+    - badging
   Access hardware:
     Sensors:
       - orientation-sensor
@@ -788,6 +809,7 @@ Integrate with the system:
       - device-orientation-events
       - accelerometer
       - device-posture
+      - magnetometer
     Chips and peripherals:
       - web-bluetooth
       - webgpu
@@ -802,6 +824,10 @@ Integrate with the system:
       - ink
       - hardware-concurrency
       - vibration
+      - gamepad
+      - gamepad-haptics
+      - gamepad-touch
+      - gamepad-vr
     XR:
       - webxr-device
       - webxr-ar
@@ -825,8 +851,10 @@ Integrate with the system:
     - clipboard-unsanitized-formats
     - clipboard-svg
   Install site as app:
+    - beforeinstallprompt
     - manifest
     - window-controls-overlay
+    - service-workers
 Create UI components:
   Mark up components:
     - slot

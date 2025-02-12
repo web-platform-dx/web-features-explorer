@@ -12,7 +12,7 @@ async function main() {
       // It's a feature.
       const idToCheck = line.trim().substring(2);
       if (!features[idToCheck]) {
-        console.warn(`Feature was ${idToCheck} was not found.`);
+        console.warn(`Feature ${idToCheck} was not found.`);
       }
     }
   });
