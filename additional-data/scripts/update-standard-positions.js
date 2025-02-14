@@ -25,7 +25,7 @@
 
 import { features } from "web-features";
 import fs from "fs/promises";
-import positions from "../standard-positions.json" assert { type: "json" };
+import positions from "../standard-positions.json" with { type: "json" };
 import path from "path";
 
 const OUTPUT_FILE = path.join(import.meta.dirname, "../standard-positions.json");

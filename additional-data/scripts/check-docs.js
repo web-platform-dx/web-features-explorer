@@ -5,9 +5,9 @@
 // is done manually.
 
 import { features } from "web-features";
-import bcd from "@mdn/browser-compat-data" assert { type: "json" };
+import bcd from "@mdn/browser-compat-data" with { type: "json" };
 import * as fs from "fs/promises";
-import mdnDocsOverrides from "../mdn-docs.json" assert { type: "json" };
+import mdnDocsOverrides from "../mdn-docs.json" with { type: "json" };
 import path from "path";
 
 const FILE = path.join(import.meta.dirname, "../mdn-docs.json");
