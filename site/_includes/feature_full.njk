@@ -1,6 +1,6 @@
 <div id="{{ feature.id }}" class="feature baseline-{{ feature.status.baseline }}{% if feature.discouraged %} discouraged{% endif %}">
   <div class="header">
-    <h1>{{ feature.name }}</h1>
+    <h1>{% prettyFeatureName feature.name %}</h1>
     {% include "baseline.njk" %}
   </div>
   {% include "tags.njk" %}

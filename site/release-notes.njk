@@ -13,7 +13,7 @@ layout: layout.njk
         <ul>
           {% for feature in month.all %}
             {% if loop.index0 < 10 %}
-              <li>{{ feature.name }}</li>
+              <li>{% prettyFeatureName feature.name %}</li>
             {% elseif loop.index0 == 10 %}
               <li>and more ...</li>
             {% endif %}

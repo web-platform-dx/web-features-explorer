@@ -20,7 +20,7 @@ eleventyComputed:
         <ul>
           {% for feature in month.features.low %}
             <li>
-              <strong><a href="/features/{{ feature.id | slugify }}/">{{ feature.name }}</a></strong>:
+              <strong><a href="/features/{{ feature.id | slugify }}/">{% prettyFeatureName feature.name %}</a></strong>:
               {{ feature.description_html | safe }}
             </li>
           {% endfor %}
@@ -35,7 +35,7 @@ eleventyComputed:
         <ul>
           {% for feature in month.features.high %}
             <li>
-              <strong><a href="/features/{{ feature.id | slugify }}/">{{ feature.name }}</a></strong>:
+              <strong><a href="/features/{{ feature.id | slugify }}/">{% prettyFeatureName feature.name %}</a></strong>:
               {{ feature.description_html | safe }}
             </li>
           {% endfor %}
@@ -51,7 +51,7 @@ eleventyComputed:
           <ul>
             {% for feature in month.features[browser.id] %}
               <li>
-                <strong><a href="/features/{{ feature.id | slugify }}/">{{ feature.name }}</a></strong>:
+                <strong><a href="/features/{{ feature.id | slugify }}/">{% prettyFeatureName feature.name %}</a></strong>:
                 {{ feature.description_html | safe }}
               </li>
             {% endfor %}

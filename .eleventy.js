@@ -225,11 +225,11 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
   eleventyConfig.addPassthroughCopy("site/assets");
-  
+
   eleventyConfig.addDataExtension("yml,yaml", (contents, filePath) => {
     return YAML.parse(contents);
-	});
-  
+  });
+
   eleventyConfig.addShortcode(
     "browserVersionRelease",
     function (browser, version) {
@@ -237,6 +237,13 @@ export default function (eleventyConfig) {
       return isBeforeThan ? `Released before ${date}` : `Released on ${date}`;
     }
   );
+
+  eleventyConfig.addShortcode("prettyFeatureName", function (name) {
+    if (name.startsWith("`") && name.endsWith("`")) {
+      return `<code>${name.substring(1, name.length - 1)}</code>`;
+    }
+    return name;
+  });
 
   eleventyConfig.addShortcode("baselineDate", function (dateStr) {
     const isBefore = dateStr.startsWith("≤");
@@ -542,14 +549,14 @@ export default function (eleventyConfig) {
         mapped.push(...feature.compat_features);
       }
     }
-    
+
     const unmapped = [];
     getAllBCDKeys().forEach(key => {
       if (!mapped.includes(key)) {
         unmapped.push(key);
       }
     });
-    
+
     const all = [...mapped, ...unmapped];
 
     return {

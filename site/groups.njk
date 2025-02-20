@@ -18,7 +18,7 @@ layout: layout.njk
         {% for feature in allFeatures %}
           {% if feature.groups.includes(id) %}
             <li>
-              <a href="/features/{{ feature.id | slugify }}/">{{ feature.name }}</a>
+              <a href="/features/{{ feature.id | slugify }}/">{% prettyFeatureName feature.name %}</a>
             </li>
           {% endif %}
         {% endfor %}
@@ -44,7 +44,7 @@ layout: layout.njk
   <ul class="features">
     {% for feature in allFeatures %}
       {% if feature.groups.length === 0 %}
-        <li><a href="/features/{{ feature.id | slugify }}/">{{ feature.name }}</a></li>
+        <li><a href="/features/{{ feature.id | slugify }}/">{% prettyFeatureName feature.name %}</a></li>
       {% endif %}
     {% endfor %}
   </ul>

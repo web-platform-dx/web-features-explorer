@@ -14,7 +14,7 @@ layout: layout.njk
       {% if feature.status.baseline_low_date %}
         {
           feature: "{{ feature.id }}",
-          name: "{{ feature.name }}",
+          name: "{% prettyFeatureName feature.name %}",
           baseline_low_date: "{{ feature.status.baseline_low_date }}"
         },
       {% endif %}
