@@ -1,0 +1,22 @@
+---
+title: Discouraged features
+layout: layout.njk
+---
+
+<main class="explore-features">
+  {% include "feature_list_views.njk" %}
+
+  <h1>{{ title }}</h1>
+
+  <p>Using the following features is discouraged, even if they're still implemented in browsers, because standards bodies and/or browser implementers have agreed that they should not be used.</p>
+
+  <ul class="features">
+    {% for feature in allFeatures %}
+      {% if feature.discouraged %}
+        <li>
+          {% include "feature_short.njk" %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</main>
