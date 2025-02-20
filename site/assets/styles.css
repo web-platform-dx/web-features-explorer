@@ -647,19 +647,37 @@ main {
   white-space: nowrap;
 }
 
+/* Browse page */
+
+.feature-browser summary {
+  cursor: pointer;
+  background: white;
+  position: relative;
+  inset-inline: -0.2rem;
+}
+
+.feature-browser summary:hover {
+  text-decoration: underline;
+}
+
 .feature-browser ul ul {
-  padding-inline-start: calc(2 * var(--margin));
+  padding-inline-start: calc(var(--margin) / 2);
 }
 
 .feature-browser .features li {
-  list-style-type: circle;
-  padding: 0.5rem 0;
+  padding: .5rem;
+  background: #eee;
+  margin: .5rem 0;
+  border-radius: .5rem;
 }
 
 .feature-browser .name {
-  padding: 0.25rem;
-  background: #eee;
-  border-radius: 0.25rem;
+  display: block;
+}
+
+.feature-browser .group {
+  background-image: linear-gradient(to right, black 1px, transparent 0);
+  background-position: 0 0;
 }
 
 .edit-link {

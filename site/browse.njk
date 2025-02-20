@@ -1,5 +1,5 @@
 ---js
-const title = "Browse features";
+const title = "Browse web platform features";
 const layout = "layout.njk"
 
 function isGroup(item) {
@@ -18,16 +18,18 @@ function isGroup(item) {
           {% else %}
             <ul class="features">
               {% for featureId in item %}
-                <li>
-                  <span class="name">
-                    <a href="/features/{{ features[featureId].id | slugify }}/">
-                      {{ features[featureId].name }}
-                    </a>
-                  </span>
-                  <span class="description">
-                    {{ features[featureId].description }}
-                  </span>
-                </li>
+                {% if not features[featureId].discouraged %}
+                  <li>
+                    <span class="name">
+                      <a href="/features/{{ features[featureId].id | slugify }}/">
+                        {% prettyFeatureName features[featureId].name %}
+                      </a>
+                    </span>
+                    <span class="description">
+                      {{ features[featureId].description }}
+                    </span>
+                  </li>
+                {% endif %}
               {% endfor %}
             </ul>
           {% endif %}
@@ -39,6 +41,8 @@ function isGroup(item) {
 
 <main>
   <h1>{{ title }}</h1>
+
+  <p>Browse the entire list of available web platform features hierarchically below.</p>
 
   <div class="feature-browser">
     {{ recurse(featureCatalog) }}
