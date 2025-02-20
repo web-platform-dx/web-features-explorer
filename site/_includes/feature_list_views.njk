@@ -8,6 +8,15 @@
   <li><a href="/discouraged" class="discouraged-info">Discouraged</a></li>
   <li>Latest browser releases:</li>
   {% for browser in browsers %}
-    <li><a href="/browsers/{{ browser.id | slugify }}/">{{ browser.name }}</a></li>
+    <li>
+      <a href="/browsers/{{ browser.id | slugify }}/">
+        {{ browser.name }}
+        {% for release in browser.releases %}
+          {% if release.status == "current" %}
+            {{ release.version }}
+          {% endif %}
+        {% endfor %}
+      </a>
+    </li>
   {% endfor %}
 </ul>
