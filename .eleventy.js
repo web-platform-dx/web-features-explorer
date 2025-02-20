@@ -242,7 +242,8 @@ export default function (eleventyConfig) {
     if (name.startsWith("`") && name.endsWith("`")) {
       return `<code>${name.substring(1, name.length - 1)}</code>`;
     }
-    return name;
+
+    return name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
   });
 
   eleventyConfig.addShortcode("baselineDate", function (dateStr) {
