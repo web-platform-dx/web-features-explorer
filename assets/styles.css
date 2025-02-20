@@ -39,7 +39,7 @@ header {
   border-block-end: 1px solid var(--baseline-high-label-bg);
 }
 
-header > a {
+header>a {
   display: inline-block;
   font-size: 1.7rem;
   margin-block-end: var(--margin);
@@ -55,7 +55,7 @@ header > a {
 }
 
 @media (max-width: 600px) {
-  header > a {
+  header>a {
     padding-inline-start: 0;
     padding-block-start: 2.5rem;
     background-position: center 0;
@@ -140,35 +140,27 @@ a:hover {
 }
 
 .feature.baseline-false {
-  background: linear-gradient(
-    to bottom,
-    var(--baseline-limited-bg),
-    var(--background)
-  );
+  background: linear-gradient(to bottom,
+      var(--baseline-limited-bg),
+      var(--background));
 }
 
 .feature.baseline-low {
-  background: linear-gradient(
-    to bottom,
-    var(--baseline-low-bg),
-    var(--background)
-  );
+  background: linear-gradient(to bottom,
+      var(--baseline-low-bg),
+      var(--background));
 }
 
 .feature.baseline-high {
-  background: linear-gradient(
-    to bottom,
-    var(--baseline-high-bg),
-    var(--background)
-  );
+  background: linear-gradient(to bottom,
+      var(--baseline-high-bg),
+      var(--background));
 }
 
 .feature.discouraged {
-  background: linear-gradient(
-    to bottom,
-    var(--browser-unsupported-bg),
-    var(--background)
-  );
+  background: linear-gradient(to bottom,
+      var(--browser-unsupported-bg),
+      var(--background));
 }
 
 .feature .header {
@@ -184,16 +176,16 @@ a:hover {
   margin: 0;
 }
 
-.feature > p {
+.feature>p {
   margin: var(--margin) 0;
   line-height: 1.6;
 }
 
-.feature.mini > p {
+.feature.mini>p {
   margin: 0;
 }
 
-.feature.short > p {
+.feature.short>p {
   margin: 1rem 0;
 }
 
@@ -374,12 +366,10 @@ nav a {
 
 nav li {
   border-radius: 0.25rem;
-  background-image: linear-gradient(
-    to top right,
-    var(--baseline-high-label-bg),
-    var(--baseline-low-label-bg),
-    var(--baseline-limited-label-bg)
-  );
+  background-image: linear-gradient(to top right,
+      var(--baseline-high-label-bg),
+      var(--baseline-low-label-bg),
+      var(--baseline-limited-label-bg));
   filter: saturate(2);
   box-shadow: 0 0 0.5rem 0 #fff;
 }
@@ -443,7 +433,7 @@ main {
 
 /* Home page */
 
-.home > p {
+.home>p {
   margin: var(--margin) 0;
 }
 
@@ -489,27 +479,21 @@ main {
 }
 
 .release-notes .baseline-low {
-  background: linear-gradient(
-    to bottom,
-    var(--baseline-low-bg),
-    var(--background)
-  );
+  background: linear-gradient(to bottom,
+      var(--baseline-low-bg),
+      var(--background));
 }
 
 .release-notes .baseline-high {
-  background: linear-gradient(
-    to bottom,
-    var(--baseline-high-bg),
-    var(--background)
-  );
+  background: linear-gradient(to bottom,
+      var(--baseline-high-bg),
+      var(--background));
 }
 
 .release-notes .baseline-false {
-  background: linear-gradient(
-    to bottom,
-    var(--baseline-limited-bg),
-    var(--background)
-  );
+  background: linear-gradient(to bottom,
+      var(--baseline-limited-bg),
+      var(--background));
 }
 
 .release-notes h2 {
@@ -589,12 +573,16 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem 0.5rem;
-  margin: var(--margin) 0;
+  margin: 0 calc(var(--margin) * -1) var(--margin);
+  padding: var(--margin);
+  background: var(--baseline-limited-bg);
+  border-block-end: 1px solid var(--baseline-limited-label-bg);
 }
 
 .explore-features .views a {
   padding: 0.5rem;
   border-radius: 0.25rem;
+  border: 1px solid #0002;
 }
 
 /* Groups */
