@@ -1794,6 +1794,8 @@
               
                 <li>api.ReadableStream.@@asyncIterator</li>
               
+                <li>api.ReadableStream.values</li>
+              
             </ul>
           </td>
         </tr>
@@ -21926,6 +21928,66 @@
         </tr>
       
         <tr class="baseline-false">
+          <td>readable-byte-streams</td>
+          <td>Readable byte streams</td>
+          <td>A ReadableStream constructed with { type: &quot;bytes&quot; } reads bytes from a stream without making extra copies, improving efficiency for streams of large chunks. Also known as BYOB or bring your own buffer.</td>
+          <td>
+            <ul>
+              
+                <li>api.ReadableByteStreamController</li>
+              
+                <li>api.ReadableByteStreamController.byobRequest</li>
+              
+                <li>api.ReadableByteStreamController.close</li>
+              
+                <li>api.ReadableByteStreamController.desiredSize</li>
+              
+                <li>api.ReadableByteStreamController.enqueue</li>
+              
+                <li>api.ReadableByteStreamController.error</li>
+              
+                <li>api.ReadableStreamBYOBReader</li>
+              
+                <li>api.ReadableStreamBYOBReader.ReadableStreamBYOBReader</li>
+              
+                <li>api.ReadableStreamBYOBReader.cancel</li>
+              
+                <li>api.ReadableStreamBYOBReader.closed</li>
+              
+                <li>api.ReadableStreamBYOBReader.read</li>
+              
+                <li>api.ReadableStreamBYOBReader.read.options_min_parameter</li>
+              
+                <li>api.ReadableStreamBYOBReader.releaseLock</li>
+              
+                <li>api.ReadableStreamBYOBReader.releaseLock.reject_pending_read_request</li>
+              
+                <li>api.ReadableStreamBYOBRequest</li>
+              
+                <li>api.ReadableStreamBYOBRequest.respond</li>
+              
+                <li>api.ReadableStreamBYOBRequest.respondWithNewView</li>
+              
+                <li>api.ReadableStreamBYOBRequest.view</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
+          <td>readablestream-from</td>
+          <td>ReadableStream.from()</td>
+          <td>The ReadableStream.from() static method converts an iterable or async iterable object, such as an array or async generator function, into a readable stream.</td>
+          <td>
+            <ul>
+              
+                <li>api.ReadableStream.from_static</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
           <td>reading-flow</td>
           <td>reading-flow</td>
           <td>The reading-flow CSS property sets the order in which flex or grid elements are rendered to speech or reached via focus navigation.</td>
@@ -25768,7 +25830,7 @@
           </td>
         </tr>
       
-        <tr class="baseline-false">
+        <tr class="baseline-high">
           <td>streams</td>
           <td>Streams</td>
           <td>The streams API creates, composes, and consumes continuously generated data.</td>
@@ -25791,25 +25853,11 @@
               
                 <li>api.CountQueuingStrategy.size</li>
               
-                <li>api.ReadableByteStreamController</li>
-              
-                <li>api.ReadableByteStreamController.byobRequest</li>
-              
-                <li>api.ReadableByteStreamController.close</li>
-              
-                <li>api.ReadableByteStreamController.desiredSize</li>
-              
-                <li>api.ReadableByteStreamController.enqueue</li>
-              
-                <li>api.ReadableByteStreamController.error</li>
-              
                 <li>api.ReadableStream</li>
               
                 <li>api.ReadableStream.ReadableStream</li>
               
                 <li>api.ReadableStream.cancel</li>
-              
-                <li>api.ReadableStream.from_static</li>
               
                 <li>api.ReadableStream.getReader</li>
               
@@ -25820,34 +25868,6 @@
                 <li>api.ReadableStream.pipeTo</li>
               
                 <li>api.ReadableStream.tee</li>
-              
-                <li>api.ReadableStream.transferable</li>
-              
-                <li>api.ReadableStream.values</li>
-              
-                <li>api.ReadableStreamBYOBReader</li>
-              
-                <li>api.ReadableStreamBYOBReader.ReadableStreamBYOBReader</li>
-              
-                <li>api.ReadableStreamBYOBReader.cancel</li>
-              
-                <li>api.ReadableStreamBYOBReader.closed</li>
-              
-                <li>api.ReadableStreamBYOBReader.read</li>
-              
-                <li>api.ReadableStreamBYOBReader.read.options_min_parameter</li>
-              
-                <li>api.ReadableStreamBYOBReader.releaseLock</li>
-              
-                <li>api.ReadableStreamBYOBReader.releaseLock.reject_pending_read_request</li>
-              
-                <li>api.ReadableStreamBYOBRequest</li>
-              
-                <li>api.ReadableStreamBYOBRequest.respond</li>
-              
-                <li>api.ReadableStreamBYOBRequest.respondWithNewView</li>
-              
-                <li>api.ReadableStreamBYOBRequest.view</li>
               
                 <li>api.ReadableStreamDefaultController</li>
               
@@ -25887,8 +25907,6 @@
               
                 <li>api.TransformStream.readable</li>
               
-                <li>api.TransformStream.transferable</li>
-              
                 <li>api.TransformStream.writable</li>
               
                 <li>api.TransformStreamDefaultController</li>
@@ -25912,8 +25930,6 @@
                 <li>api.WritableStream.getWriter</li>
               
                 <li>api.WritableStream.locked</li>
-              
-                <li>api.WritableStream.transferable</li>
               
                 <li>api.WritableStreamDefaultController</li>
               
@@ -30393,6 +30409,23 @@
           </td>
         </tr>
       
+        <tr class="baseline-false">
+          <td>transferable-streams</td>
+          <td>Transferable streams</td>
+          <td>Streams are transferable objects, which can be moved between contexts such as windows and workers.</td>
+          <td>
+            <ul>
+              
+                <li>api.ReadableStream.transferable</li>
+              
+                <li>api.TransformStream.transferable</li>
+              
+                <li>api.WritableStream.transferable</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
         <tr class="baseline-low">
           <td>transform-box</td>
           <td>transform-box</td>
@@ -30535,6 +30568,19 @@
                 <li>css.types.transform-function.translate3d</li>
               
                 <li>css.types.transform-function.translateZ</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
+          <td>transformstream-transformer-cancel</td>
+          <td>TransformStream transformer cancel() method</td>
+          <td>The cancel() method of a TransformStream transformer cleans up resources when the readable side cancels or the writable side aborts.</td>
+          <td>
+            <ul>
+              
+                <li>api.TransformStream.TransformStream.transformer_cancel</li>
               
             </ul>
           </td>
