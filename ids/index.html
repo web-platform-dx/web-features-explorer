@@ -14,7 +14,7 @@
 
       <nav>
         <ul>
-          <li><a href="/web-features-explorer/release-notes/february-2025">Release notes</a></li>
+          <li><a href="/web-features-explorer/release-notes/march-2025">Release notes</a></li>
           <li><a href="/web-features-explorer/features">Explore all features</a></li>
           <li><a href="/web-features-explorer/about">About</a></li>
         </ul>
@@ -1023,6 +1023,31 @@
                 <li>api.LaunchParams.files</li>
               
                 <li>html.manifest.file_handlers</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
+          <td>app-launch-handler</td>
+          <td>Launch handler</td>
+          <td>The launch_handler web app manifest member, with the client_mode property, configure how web app launches behave when an instance of the app is already open. For example, you can choose to focus the existing app instance instead of launching a new one.</td>
+          <td>
+            <ul>
+              
+                <li>api.LaunchParams</li>
+              
+                <li>api.LaunchParams.targetURL</li>
+              
+                <li>api.LaunchQueue</li>
+              
+                <li>api.LaunchQueue.setConsumer</li>
+              
+                <li>api.Window.launchQueue</li>
+              
+                <li>html.manifest.launch_handler</li>
+              
+                <li>html.manifest.launch_handler.client_mode</li>
               
             </ul>
           </td>
@@ -2089,6 +2114,12 @@
                 <li>api.AudioWorkletProcessor.port</li>
               
                 <li>api.BaseAudioContext.audioWorklet</li>
+              
+                <li>api.Worklet</li>
+              
+                <li>api.Worklet.addModule</li>
+              
+                <li>api.WorkletGlobalScope</li>
               
             </ul>
           </td>
@@ -5119,7 +5150,7 @@
           </td>
         </tr>
       
-        <tr class="baseline-false">
+        <tr class="baseline-low">
           <td>contenteditable-plaintextonly</td>
           <td>contenteditable="plaintext-only"</td>
           <td>The contenteditable=&quot;plaintext-only&quot; global HTML attribute allows the user to edit the content of an element, but prevents rich-text formatting.</td>
@@ -6436,7 +6467,7 @@
               
                 <li>css.properties.custom-property</li>
               
-                <li>css.properties.custom-property.var</li>
+                <li>css.types.var</li>
               
             </ul>
           </td>
@@ -6701,6 +6732,79 @@
                 <li>html.elements.template.shadowrootmode</li>
               
                 <li>html.elements.template.shadowrootserializable</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-high">
+          <td>dedicated-workers</td>
+          <td>Dedicated workers</td>
+          <td>The Worker() constructor runs a script in its own thread, which can send and receive messages with the script that created it. Also known as web workers.</td>
+          <td>
+            <ul>
+              
+                <li>api.DedicatedWorkerGlobalScope</li>
+              
+                <li>api.DedicatedWorkerGlobalScope.close</li>
+              
+                <li>api.DedicatedWorkerGlobalScope.name</li>
+              
+                <li>api.Worker</li>
+              
+                <li>api.Worker.Worker</li>
+              
+                <li>api.Worker.Worker.mime_checks</li>
+              
+                <li>api.Worker.Worker.options_name_parameter</li>
+              
+                <li>api.Worker.error_event</li>
+              
+                <li>api.Worker.terminate</li>
+              
+                <li>api.Worker.worker_support</li>
+              
+                <li>api.WorkerGlobalScope</li>
+              
+                <li>api.WorkerGlobalScope.error_event</li>
+              
+                <li>api.WorkerGlobalScope.importScripts</li>
+              
+                <li>api.WorkerGlobalScope.importScripts.mime_checks</li>
+              
+                <li>api.WorkerGlobalScope.location</li>
+              
+                <li>api.WorkerGlobalScope.navigator</li>
+              
+                <li>api.WorkerGlobalScope.rejectionhandled_event</li>
+              
+                <li>api.WorkerGlobalScope.self</li>
+              
+                <li>api.WorkerGlobalScope.unhandledrejection_event</li>
+              
+                <li>api.WorkerLocation</li>
+              
+                <li>api.WorkerLocation.hash</li>
+              
+                <li>api.WorkerLocation.host</li>
+              
+                <li>api.WorkerLocation.hostname</li>
+              
+                <li>api.WorkerLocation.href</li>
+              
+                <li>api.WorkerLocation.origin</li>
+              
+                <li>api.WorkerLocation.pathname</li>
+              
+                <li>api.WorkerLocation.port</li>
+              
+                <li>api.WorkerLocation.protocol</li>
+              
+                <li>api.WorkerLocation.search</li>
+              
+                <li>api.WorkerLocation.toString</li>
+              
+                <li>api.WorkerNavigator</li>
               
             </ul>
           </td>
@@ -13433,6 +13537,8 @@
               
                 <li>html.global_attributes.inert</li>
               
+                <li>html.global_attributes.inert.ignores_find_in_page</li>
+              
             </ul>
           </td>
         </tr>
@@ -14322,7 +14428,7 @@
           </td>
         </tr>
       
-        <tr class="baseline-false">
+        <tr class="baseline-low">
           <td>intl-duration-format</td>
           <td>Intl.DurationFormat</td>
           <td>The Intl.DurationFormat API creates a locale-aware formatter that turns an object representing a duration (such as days, hours, and minutes) into a string.</td>
@@ -14911,6 +15017,8 @@
           <td>JavaScript modules allow code to be organized into reusable units. Modules use import to load other modules and export to declare what is available to import from other modules. In HTML, modules are loaded with &lt;script type=&quot;module&quot;&gt;.</td>
           <td>
             <ul>
+              
+                <li>api.Worklet.ecmascript_modules</li>
               
                 <li>html.elements.script.nomodule</li>
               
@@ -17493,6 +17601,8 @@
               
                 <li>api.Window.messageerror_event</li>
               
+                <li>api.Worker.messageerror_event</li>
+              
             </ul>
           </td>
         </tr>
@@ -17726,7 +17836,7 @@
           </td>
         </tr>
       
-        <tr class="baseline-low">
+        <tr class="baseline-high">
           <td>modal</td>
           <td>:modal</td>
           <td>The :modal pseudo-class selects elements that put other elements into a non-interactive state, such as a fullscreen element or a &lt;dialog&gt; element used with showModal().</td>
@@ -23070,15 +23180,15 @@
           <td>
             <ul>
               
-                <li>css.properties.custom-property.env</li>
+                <li>css.types.env</li>
               
-                <li>css.properties.custom-property.env.safe-area-inset-bottom</li>
+                <li>css.types.env.safe-area-inset-bottom</li>
               
-                <li>css.properties.custom-property.env.safe-area-inset-left</li>
+                <li>css.types.env.safe-area-inset-left</li>
               
-                <li>css.properties.custom-property.env.safe-area-inset-right</li>
+                <li>css.types.env.safe-area-inset-right</li>
               
-                <li>css.properties.custom-property.env.safe-area-inset-top</li>
+                <li>css.types.env.safe-area-inset-top</li>
               
             </ul>
           </td>
@@ -24911,6 +25021,37 @@
         </tr>
       
         <tr class="baseline-false">
+          <td>shared-workers</td>
+          <td>Shared worker</td>
+          <td>The SharedWorker() constructor runs a script in its own thread, which can send and receive messages with other scripts running at the same origin.</td>
+          <td>
+            <ul>
+              
+                <li>api.SharedWorker</li>
+              
+                <li>api.SharedWorker.SharedWorker</li>
+              
+                <li>api.SharedWorker.SharedWorker.mime_checks</li>
+              
+                <li>api.SharedWorker.SharedWorker.options_name_parameter</li>
+              
+                <li>api.SharedWorker.error_event</li>
+              
+                <li>api.SharedWorker.port</li>
+              
+                <li>api.SharedWorkerGlobalScope</li>
+              
+                <li>api.SharedWorkerGlobalScope.close</li>
+              
+                <li>api.SharedWorkerGlobalScope.connect_event</li>
+              
+                <li>api.SharedWorkerGlobalScope.name</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
           <td>show-picker-input</td>
           <td>showPicker() for &lt;input&gt;</td>
           <td>The showPicker() method for &lt;input&gt; elements shows the user interface for picking a value. For example, for &lt;input type=&quot;date&quot;&gt; it shows the interface for picking a date.</td>
@@ -25358,24 +25499,6 @@
           <td>
             <ul>
               
-                <li>api.SpeechGrammar</li>
-              
-                <li>api.SpeechGrammar.src</li>
-              
-                <li>api.SpeechGrammar.weight</li>
-              
-                <li>api.SpeechGrammarList</li>
-              
-                <li>api.SpeechGrammarList.SpeechGrammarList</li>
-              
-                <li>api.SpeechGrammarList.addFromString</li>
-              
-                <li>api.SpeechGrammarList.addFromURI</li>
-              
-                <li>api.SpeechGrammarList.item</li>
-              
-                <li>api.SpeechGrammarList.length</li>
-              
                 <li>api.SpeechRecognition</li>
               
                 <li>api.SpeechRecognition.SpeechRecognition</li>
@@ -25391,8 +25514,6 @@
                 <li>api.SpeechRecognition.end_event</li>
               
                 <li>api.SpeechRecognition.error_event</li>
-              
-                <li>api.SpeechRecognition.grammars</li>
               
                 <li>api.SpeechRecognition.interimResults</li>
               
@@ -25453,6 +25574,37 @@
                 <li>api.SpeechRecognitionResultList.item</li>
               
                 <li>api.SpeechRecognitionResultList.length</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
+          <td>speech-recognition-grammar</td>
+          <td>Speech recognition grammar</td>
+          <td>The SpeechRecognition.grammars property of the Web Speech API represents a set of words or patterns of words that the recognition service should recognize, used for when the recognition service&#39;s accuracy is low. This feature has been removed due to advancements in speech recognition.</td>
+          <td>
+            <ul>
+              
+                <li>api.SpeechGrammar</li>
+              
+                <li>api.SpeechGrammar.src</li>
+              
+                <li>api.SpeechGrammar.weight</li>
+              
+                <li>api.SpeechGrammarList</li>
+              
+                <li>api.SpeechGrammarList.SpeechGrammarList</li>
+              
+                <li>api.SpeechGrammarList.addFromString</li>
+              
+                <li>api.SpeechGrammarList.addFromURI</li>
+              
+                <li>api.SpeechGrammarList.item</li>
+              
+                <li>api.SpeechGrammarList.length</li>
+              
+                <li>api.SpeechRecognition.grammars</li>
               
             </ul>
           </td>
@@ -31770,11 +31922,11 @@
           <td>
             <ul>
               
-                <li>webdriver.commands.CreateVirtualPressureSource</li>
+                <li>webdriver.classic.CreateVirtualPressureSource</li>
               
-                <li>webdriver.commands.DeleteVirtualPressureSource</li>
+                <li>webdriver.classic.DeleteVirtualPressureSource</li>
               
-                <li>webdriver.commands.UpdateVirtualPressureSource</li>
+                <li>webdriver.classic.UpdateVirtualPressureSource</li>
               
             </ul>
           </td>
@@ -31787,13 +31939,13 @@
           <td>
             <ul>
               
-                <li>webdriver.commands.CreateVirtualSensor</li>
+                <li>webdriver.classic.CreateVirtualSensor</li>
               
-                <li>webdriver.commands.DeleteVirtualSensor</li>
+                <li>webdriver.classic.DeleteVirtualSensor</li>
               
-                <li>webdriver.commands.GetVirtualSensorInformation</li>
+                <li>webdriver.classic.GetVirtualSensorInformation</li>
               
-                <li>webdriver.commands.UpdateVirtualSensorReading</li>
+                <li>webdriver.classic.UpdateVirtualSensorReading</li>
               
             </ul>
           </td>
@@ -33683,115 +33835,115 @@
               
                 <li>api.Navigator.webdriver</li>
               
-                <li>webdriver.commands.AcceptAlert</li>
+                <li>webdriver.classic.AcceptAlert</li>
               
-                <li>webdriver.commands.AddCookie</li>
+                <li>webdriver.classic.AddCookie</li>
               
-                <li>webdriver.commands.Back</li>
+                <li>webdriver.classic.Back</li>
               
-                <li>webdriver.commands.CloseWindow</li>
+                <li>webdriver.classic.CloseWindow</li>
               
-                <li>webdriver.commands.DeleteAllCookies</li>
+                <li>webdriver.classic.DeleteAllCookies</li>
               
-                <li>webdriver.commands.DeleteCookie</li>
+                <li>webdriver.classic.DeleteCookie</li>
               
-                <li>webdriver.commands.DeleteSession</li>
+                <li>webdriver.classic.DeleteSession</li>
               
-                <li>webdriver.commands.DismissAlert</li>
+                <li>webdriver.classic.DismissAlert</li>
               
-                <li>webdriver.commands.ElementClear</li>
+                <li>webdriver.classic.ElementClear</li>
               
-                <li>webdriver.commands.ElementClick</li>
+                <li>webdriver.classic.ElementClick</li>
               
-                <li>webdriver.commands.ElementSendKeys</li>
+                <li>webdriver.classic.ElementSendKeys</li>
               
-                <li>webdriver.commands.ExecuteAsyncScript</li>
+                <li>webdriver.classic.ExecuteAsyncScript</li>
               
-                <li>webdriver.commands.ExecuteScript</li>
+                <li>webdriver.classic.ExecuteScript</li>
               
-                <li>webdriver.commands.FindElement</li>
+                <li>webdriver.classic.FindElement</li>
               
-                <li>webdriver.commands.FindElementFromElement</li>
+                <li>webdriver.classic.FindElementFromElement</li>
               
-                <li>webdriver.commands.FindElements</li>
+                <li>webdriver.classic.FindElements</li>
               
-                <li>webdriver.commands.FindElementsFromElement</li>
+                <li>webdriver.classic.FindElementsFromElement</li>
               
-                <li>webdriver.commands.Forward</li>
+                <li>webdriver.classic.Forward</li>
               
-                <li>webdriver.commands.FullscreenWindow</li>
+                <li>webdriver.classic.FullscreenWindow</li>
               
-                <li>webdriver.commands.GetActiveElement</li>
+                <li>webdriver.classic.GetActiveElement</li>
               
-                <li>webdriver.commands.GetAlertText</li>
+                <li>webdriver.classic.GetAlertText</li>
               
-                <li>webdriver.commands.GetAllCookies</li>
+                <li>webdriver.classic.GetAllCookies</li>
               
-                <li>webdriver.commands.GetCurrentURL</li>
+                <li>webdriver.classic.GetCurrentURL</li>
               
-                <li>webdriver.commands.GetElementAttribute</li>
+                <li>webdriver.classic.GetElementAttribute</li>
               
-                <li>webdriver.commands.GetElementCSSValue</li>
+                <li>webdriver.classic.GetElementCSSValue</li>
               
-                <li>webdriver.commands.GetElementProperty</li>
+                <li>webdriver.classic.GetElementProperty</li>
               
-                <li>webdriver.commands.GetElementRect</li>
+                <li>webdriver.classic.GetElementRect</li>
               
-                <li>webdriver.commands.GetElementTagName</li>
+                <li>webdriver.classic.GetElementTagName</li>
               
-                <li>webdriver.commands.GetElementText</li>
+                <li>webdriver.classic.GetElementText</li>
               
-                <li>webdriver.commands.GetNamedCookie</li>
+                <li>webdriver.classic.GetNamedCookie</li>
               
-                <li>webdriver.commands.GetPageSource</li>
+                <li>webdriver.classic.GetPageSource</li>
               
-                <li>webdriver.commands.GetTimeouts</li>
+                <li>webdriver.classic.GetTimeouts</li>
               
-                <li>webdriver.commands.GetTitle</li>
+                <li>webdriver.classic.GetTitle</li>
               
-                <li>webdriver.commands.GetWindowHandle</li>
+                <li>webdriver.classic.GetWindowHandle</li>
               
-                <li>webdriver.commands.GetWindowHandles</li>
+                <li>webdriver.classic.GetWindowHandles</li>
               
-                <li>webdriver.commands.GetWindowRect</li>
+                <li>webdriver.classic.GetWindowRect</li>
               
-                <li>webdriver.commands.IsElementEnabled</li>
+                <li>webdriver.classic.IsElementEnabled</li>
               
-                <li>webdriver.commands.IsElementSelected</li>
+                <li>webdriver.classic.IsElementSelected</li>
               
-                <li>webdriver.commands.MaximizeWindow</li>
+                <li>webdriver.classic.MaximizeWindow</li>
               
-                <li>webdriver.commands.MinimizeWindow</li>
+                <li>webdriver.classic.MinimizeWindow</li>
               
-                <li>webdriver.commands.NavigateTo</li>
+                <li>webdriver.classic.NavigateTo</li>
               
-                <li>webdriver.commands.NewSession</li>
+                <li>webdriver.classic.NewSession</li>
               
-                <li>webdriver.commands.NewWindow</li>
+                <li>webdriver.classic.NewWindow</li>
               
-                <li>webdriver.commands.PerformActions</li>
+                <li>webdriver.classic.PerformActions</li>
               
-                <li>webdriver.commands.Refresh</li>
+                <li>webdriver.classic.Refresh</li>
               
-                <li>webdriver.commands.ReleaseActions</li>
+                <li>webdriver.classic.ReleaseActions</li>
               
-                <li>webdriver.commands.SendAlertText</li>
+                <li>webdriver.classic.SendAlertText</li>
               
-                <li>webdriver.commands.SetTimeouts</li>
+                <li>webdriver.classic.SetTimeouts</li>
               
-                <li>webdriver.commands.SetWindowRect</li>
+                <li>webdriver.classic.SetWindowRect</li>
               
-                <li>webdriver.commands.Status</li>
+                <li>webdriver.classic.Status</li>
               
-                <li>webdriver.commands.SwitchToFrame</li>
+                <li>webdriver.classic.SwitchToFrame</li>
               
-                <li>webdriver.commands.SwitchToParentFrame</li>
+                <li>webdriver.classic.SwitchToParentFrame</li>
               
-                <li>webdriver.commands.SwitchToWindow</li>
+                <li>webdriver.classic.SwitchToWindow</li>
               
-                <li>webdriver.commands.TakeElementScreenshot</li>
+                <li>webdriver.classic.TakeElementScreenshot</li>
               
-                <li>webdriver.commands.TakeScreenshot</li>
+                <li>webdriver.classic.TakeScreenshot</li>
               
             </ul>
           </td>
@@ -35508,8 +35660,6 @@
               
                 <li>api.GPUSupportedLimits.maxDynamicUniformBuffersPerPipelineLayout</li>
               
-                <li>api.GPUSupportedLimits.maxInterStageShaderComponents</li>
-              
                 <li>api.GPUSupportedLimits.maxInterStageShaderVariables</li>
               
                 <li>api.GPUSupportedLimits.maxSampledTexturesPerShaderStage</li>
@@ -35549,6 +35699,8 @@
                 <li>api.GPUTexture.createView</li>
               
                 <li>api.GPUTexture.createView.texture_rgb10a2uint</li>
+              
+                <li>api.GPUTexture.createView.usage</li>
               
                 <li>api.GPUTexture.depthOrArrayLayers</li>
               
@@ -35905,8 +36057,6 @@
                 <li>api.MLGraphBuilder.where</li>
               
                 <li>api.MLOperand</li>
-              
-                <li>api.MLOperand.MLNumber</li>
               
                 <li>api.Navigator.ml</li>
               
@@ -38535,13 +38685,13 @@
               
                 <li>api.WindowControlsOverlayGeometryChangeEvent.visible</li>
               
-                <li>css.properties.custom-property.env.titlebar-area-height</li>
+                <li>css.types.env.titlebar-area-height</li>
               
-                <li>css.properties.custom-property.env.titlebar-area-width</li>
+                <li>css.types.env.titlebar-area-width</li>
               
-                <li>css.properties.custom-property.env.titlebar-area-x</li>
+                <li>css.types.env.titlebar-area-x</li>
               
-                <li>css.properties.custom-property.env.titlebar-area-y</li>
+                <li>css.types.env.titlebar-area-y</li>
               
                 <li>html.manifest.display_override.window-controls-overlay</li>
               
