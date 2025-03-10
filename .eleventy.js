@@ -246,6 +246,10 @@ export default function (eleventyConfig) {
     return name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
   });
 
+  eleventyConfig.addShortcode("escapeJSON", function (name) {
+    return name.replace(/"/g, "\\\"");
+  });
+
   eleventyConfig.addShortcode("baselineDate", function (dateStr) {
     const isBefore = dateStr.startsWith("≤");
     if (isBefore) {
