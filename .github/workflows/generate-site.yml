@@ -26,6 +26,9 @@ jobs:
           npm install
           npm update web-features
 
+      - name: Update timeline stats
+        run: node additional-data/scripts/update-standard-positions.js
+
       - name: Commit dependency changes
         if: ${{ github.event_name != 'push' }}
         run: |
