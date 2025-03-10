@@ -225,6 +225,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
   eleventyConfig.addPassthroughCopy("site/assets");
+  eleventyConfig.addPassthroughCopy("additional-data/timeline-number.json");
+  eleventyConfig.addPassthroughCopy("additional-data/timeline-durations.json");
 
   eleventyConfig.addDataExtension("yml,yaml", (contents, filePath) => {
     return YAML.parse(contents);
