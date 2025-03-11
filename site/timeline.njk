@@ -4,6 +4,7 @@ layout: layout.njk
 ---
 
 <main>
+  <link rel="stylesheet" type="text/css" href="/assets/apexcharts.css">
   <h1>Timeline</h1>
 
   <p>This page visualizes the evolution of web platform features over time.</p>
@@ -25,7 +26,7 @@ layout: layout.njk
 
     <div id="timeline-number"></div>
 
-    <p>The underlying data is available in a <a href="/additional-data/timeline-number.json"><code>timeline-number.json</code></a> JSON file.</p>
+    <p>The underlying data is available in a <a href="/assets/timeline-number.json"><code>timeline-number.json</code></a> JSON file.</p>
 
     <p><b>Note</b>: Features that have not shipped anywhere are not associated with any date in web-features and do not appear in the chart. As of January 2025, ~30 features (out of 1000+ features) are in that category.</p>
 
@@ -42,7 +43,7 @@ layout: layout.njk
 
     <div id="timeline-durations"></div>
 
-    <p>The underlying data is available in a <a href="/additional-data/timeline-durations.json"><code>timeline-durations.json</code></a> JSON file.</p>
+    <p>The underlying data is available in a <a href="/assets/timeline-durations.json"><code>timeline-durations.json</code></a> JSON file.</p>
 
     <p><b>Note</b>: ~50 features in web-features have support dates that start with <code>≤</code> to indicate that support started before these dates (all of these dates are before mid-2020). This nuance is dropped to compute statistics. This makes features appear later than they should when looking at the evolution of the number of web features, and reduces the duration from first implementation to newly available. Impact should remain minimal.</p>
 
@@ -122,7 +123,7 @@ layout: layout.njk
   <script>
     async function renderCharts() {
       // Retrieve timeline stats
-      const timelineResponse = await fetch("../additional-data/timeline-number.json");
+      const timelineResponse = await fetch("../assets/timeline-number.json");
       const timeline = await timelineResponse.json();
 
       // Render first timeline chart
@@ -273,7 +274,7 @@ layout: layout.njk
       );
       chartPercent.render();
 
-      const durationsResponse = await fetch("../additional-data/timeline-durations.json");
+      const durationsResponse = await fetch("../assets/timeline-durations.json");
       const durations = await durationsResponse.json();
       const durationsOptions = {
         chart: {

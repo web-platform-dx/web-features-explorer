@@ -14,8 +14,9 @@ import { features, browsers } from "web-features";
 import fs from "node:fs/promises";
 import path from "node:path";
 
-const OUTPUT_TIMELINE = path.join(import.meta.dirname, "..", "timeline-number.json");
-const OUTPUT_DURATIONS = path.join(import.meta.dirname, "..", "timeline-durations.json");
+const OUTPUT_TIMELINE = path.join(import.meta.dirname, "site", "assets", "timeline-number.json");
+const OUTPUT_DURATIONS = path.join(import.meta.dirname, "site", "assets", "timeline-durations.json");
+const FIRST_NEWLY_AVAILABLE_YEAR = "2015";
 
 async function main() {
   // Convert features to an array and pretend all dates are exact 
@@ -132,7 +133,7 @@ async function main() {
   // and thus when "newly available" starts to mean something.
   let durations = compileDurations(simplifiedFeatures, years);
   durations = durations
-    .filter(y => y.year > "2015")
+    .filter(y => y.year > FIRST_NEWLY_AVAILABLE_YEAR)
     .filter(y => y.first2low.length > 0)
     .map(y => Object.assign({
       year: y.year,
