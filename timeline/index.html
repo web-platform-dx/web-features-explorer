@@ -30,9 +30,58 @@
 
     
 <main>
-  <p>This page lists web platform features by years when they reached Baseline Newly Available status.
+  <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/apexcharts.css">
+  <h1>Timeline</h1>
 
-  </p><div id="timeline"></div>
+  <p>This page visualizes the evolution of web platform features over time.</p>
+
+  <section>
+    <h2>Number of web features</h2>
+    <p>The following chart plots the number of web features over time per Baseline type. Keep in mind that support data in web-features only covers browsers in the core browser set (Chrome, Edge, Firefox, Safari). For example, the graph contains no information about feature support in Internet Explorer (started in 1995).</p>
+
+    <p>Several dates are highlighted in the chart to ease reading:</p>
+    <ul>
+      <li><b>23 June 2003</b>: First version of Safari and first date in the graph.</li>
+      <li><b>9 November 2004</b>: First version of Firefox.</li>
+      <li><b>11 December 2009</b>: First version of Chrome.</li>
+      <li><b>29 July 2015</b>: First version of Edge (actual version number is 12). By definition, there can be no Baseline Newly Available features <i>before</i> that date.</li>
+      <li><b>29 January 2018</b>: 30 months later. Also by definition, there can be no Baseline Widely Available features <i>before</i> that date.</li>
+      <li><b>15 January 2020</b>: Edge switches to Chromium, creating a surge of Baseline Newly Available features.</li>
+      <li><b>15 July 2022</b>: 30 months later, a corresponding surge of Baseline Widely Available features appears.</li>
+    </ul>
+
+    <div id="timeline-number"></div>
+
+    <p>The underlying data is available in a <a href="/web-features-explorer/assets/timeline-number.json"><code>timeline-number.json</code></a> JSON file.</p>
+
+    <p><b>Note</b>: Features that have not shipped anywhere are not associated with any date in web-features and do not appear in the chart. As of January 2025, ~30 features (out of 1000+ features) are in that category.</p>
+
+    <p>Replacing the values with percentages yields the following chart. It shows the evolution of the distribution of features between Baseline Widely Available, Baseline Newly Available, and features available somewhere. how interoperability progresses over time and how the web platform grows. The graph starts on 29 January 2018, when first Baseline Widely Available features appear.</p>
+
+    <div id="timeline-percent"></div>
+  </section>
+
+  <section>
+    <h2>Duration from first implementation to Baseline Newly Available</h2>
+    <p>The following chart shows the evolution of the duration needed for a feature to go from first implementation available to Baseline Newly Available, from year to year.</p>
+
+    <p>The chart is a box plot. For each year, it showcases the first quartile, the median and the last quartile (the <i>box</i>), along with the minimum and maximum durations (the <i>whiskers</i>).</p>
+
+    <div id="timeline-durations"></div>
+
+    <p>The underlying data is available in a <a href="/web-features-explorer/assets/timeline-durations.json"><code>timeline-durations.json</code></a> JSON file.</p>
+
+    <p><b>Note</b>: ~50 features in web-features have support dates that start with <code>≤</code> to indicate that support started before these dates (all of these dates are before mid-2020). This nuance is dropped to compute statistics. This makes features appear later than they should when looking at the evolution of the number of web features, and reduces the duration from first implementation to newly available. Impact should remain minimal.</p>
+
+    <p><b>Note</b>: What about going from first implementation to Baseline Widely Available? Given the current definition of widely available, this would yield the same chart with additional ~910 days (30 months) to the durations.</p>
+  </section>
+
+  <section>
+    <h2>Web platform features per year</h2>
+    <p>The following table lists web platform features by years when they reached Baseline Newly Available status.
+
+    </p><div id="timeline"></div>
+  </section>
 
   <script>
   const baselineLowDateFeatures = [
@@ -6267,6 +6316,203 @@
   });
 
   console.log(perYear);
+  </script>
+  <script src="/web-features-explorer/assets/apexcharts.js"></script>
+  <script>
+    async function renderCharts() {
+      // Retrieve timeline stats
+      const timelineResponse = await fetch("../assets/timeline-number.json");
+      const timeline = await timelineResponse.json();
+
+      // Render first timeline chart
+      const timelineOptions = {
+        chart: {
+          type: "area",
+          stacked: true,
+          width: "80%",
+          height: 350
+        },
+        dataLabels: {
+          enabled: false
+        },
+        colors: ["#1EA446", "#1B6CF3", "#F09409"],
+        fill: {
+          type: "gradient",
+          gradient: {
+            opacityFrom: 0.6,
+            opacityTo: 0.8,
+          }
+        },
+        xaxis: {
+          type: "datetime",
+          categories: timeline.map(t => t.date)
+        },
+        yaxis: {
+          title: {
+            text: "Number of features"
+          }
+        },
+        series: [
+          {
+            name: "Widely available",
+            data: timeline.map(t => t.high)
+          },
+          {
+            name: "Newly available",
+            data: timeline.map(t => t.low)
+          },
+          {
+            name: "Implemented somewhere",
+            data: timeline.map(t => t.first)
+          }
+        ],
+        annotations: {
+          xaxis: [
+            {
+              x: new Date("2003-06-23").getTime(),
+              borderColor: "#775DD0",
+              label: {
+                style: {
+                  color: "#fff",
+                  background: "#775DD0"
+                },
+                text: "Safari v1"
+              }
+            },
+            {
+              x: new Date("2004-11-09").getTime(),
+              borderColor: "#775DD0",
+              label: {
+                style: {
+                  color: "#fff",
+                  background: "#775DD0"
+                },
+                text: "Firefox v1"
+              }
+            },
+            {
+              x: new Date("2008-12-11").getTime(),
+              borderColor: "#775DD0",
+              label: {
+                style: {
+                  color: "#fff",
+                  background: "#775DD0"
+                },
+                text: "Chrome v1"
+              }
+            },
+            {
+              x: new Date("2015-07-29").getTime(),
+              borderColor: "#775DD0",
+              label: {
+                style: {
+                  color: "#fff",
+                  background: "#775DD0"
+                },
+                text: "Edge v12"
+              }
+            },
+            {
+              x: new Date("2018-01-29").getTime(),
+              borderColor: "#775DD0"
+            },
+            {
+              x: new Date("2020-01-15").getTime(),
+              borderColor: "#775DD0",
+              label: {
+                style: {
+                  color: "#fff",
+                  background: "#775DD0"
+                },
+                text: "Edge > Chromium"
+              }
+            },
+            {
+              x: new Date("2022-07-15").getTime(),
+              borderColor: "#775DD0"
+            }
+          ]
+        }
+      };
+      const chartTimeline = new ApexCharts(
+        document.querySelector("#timeline-number"),
+        timelineOptions
+      );
+      chartTimeline.render();
+
+      // Percentage chart is the same chart, except values are percentages
+      // ... and there's no point starting before 2018-01-29 when first
+      // widely available features start to appear
+      timelineOptions.yaxis = {
+        min: 0,
+        max: 100,
+        title: {
+          text: "Percentage (%)"
+        }
+      },
+      timelineOptions.xaxis.categories = [];
+      timelineOptions.series[0].data = [];
+      timelineOptions.series[1].data = [];
+      timelineOptions.series[2].data = [];
+      for (const t of timeline) {
+        if (t.date < "2018-01-29") {
+          continue;
+        }
+        timelineOptions.xaxis.categories.push(t.date);
+        const total = t.first + t.low + t.high;
+        const high = Math.round(t.high / total * 100);
+        const low = Math.round(t.low / total * 100);
+        timelineOptions.series[0].data.push(high);
+        timelineOptions.series[1].data.push(low);
+        timelineOptions.series[2].data.push(100 - high - low);
+      }
+      const chartPercent = new ApexCharts(
+        document.querySelector("#timeline-percent"),
+        timelineOptions
+      );
+      chartPercent.render();
+
+      const durationsResponse = await fetch("../assets/timeline-durations.json");
+      const durations = await durationsResponse.json();
+      const durationsOptions = {
+        chart: {
+          type: "boxPlot",
+          width: "80%",
+          height: 350
+        },
+        dataLabels: {
+          enabled: false
+        },
+        plotOptions: {
+          boxPlot: {
+            colors: {
+              upper: '#1EA446',
+              lower: '#F09409'
+            }
+          }
+        },
+        yaxis: {
+          title: {
+            text: "Duration (days)"
+          }
+        },
+        series: [
+          {
+            data: durations.map(d => Object.assign({
+              x: d.year,
+              y: [d.min, d.q1, d.median, d.q3, d.max]
+            }))
+          }
+        ]
+      };
+      const chartDurations = new ApexCharts(
+        document.querySelector("#timeline-durations"),
+        durationsOptions
+      );
+      chartDurations.render();
+    }
+
+    renderCharts();
   </script>
 </main>
 
