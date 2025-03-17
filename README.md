@@ -56,8 +56,6 @@ To run the website on a local development server:
 
 1. Modify a source file, wait for the build to run automatically, and for the changes to appear in the browser.
 
-The result of the build script is found in the `docs` directory, which is the directory that GitHub Pages uses to serve the website (see [Deployment](#deployment)).
-
 ## Production environment
 
 The website is deployed to production using [GitHub Pages](https://pages.github.com/). The static HTML pages are generated in the [gh-pages branch](https://github.com/web-platform-dx/web-features-explorer/tree/gh-pages) on a regular basis by the GitHub Actions script found in `.github/workflows/generate-site.yaml`.
