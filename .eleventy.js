@@ -93,6 +93,10 @@ function augmentFeatureData(id, feature) {
 
   // Add spec data from browser-specs, when possible.
   feature.spec = feature.spec.map((spec) => {
+    if (!spec) {
+      return null;
+    }
+
     const fragment = spec.includes("#") ? spec.split("#")[1] : null;
     // Look for the spec URL in the browser-specs data.
     const specData = specs.find((specData) => {
@@ -103,7 +107,7 @@ function augmentFeatureData(id, feature) {
       );
     });
     return specData ? { ...specData, url: spec, fragment } : { url: spec };
-  });
+  }).filter((spec) => !!spec);
 
   // Get the first part of each BCD key in the feature (e.g. css, javascript, html, api, ...)
   // to use as tags.
@@ -500,8 +504,8 @@ export default function (eleventyConfig) {
     for (const id in features) {
       const feature = features[id];
 
-      // Non-baseline features only.
-      if (!feature.status.baseline) {
+      // Non-baseline features only that are also not discouraged.
+      if (!feature.status.baseline && !feature.discouraged) {
         limitedAvailability.push(feature);
       }
     }
@@ -562,9 +566,12 @@ export default function (eleventyConfig) {
     }
 
     const unmapped = [];
+    let lastKeyContext = null;
     getAllBCDKeys().forEach(({ key, status }) => {
       if (!mapped.includes(key)) {
-        unmapped.push({ key, status });
+        const keyContent = key.split(".").slice(0, 2).join(".");
+        unmapped.push({ key, status, isNewGroup: keyContent !== lastKeyContext });
+        lastKeyContext = keyContent;
       }
     });
 
@@ -572,7 +579,7 @@ export default function (eleventyConfig) {
       totalKeys: mapped.length + unmapped.length,
       totalMapped: mapped.length,
       unmapped,
-      percentage: ((mapped.length / mapped.length + unmapped.length) * 100).toFixed(0),
+      percentage: ((mapped.length / (mapped.length + unmapped.length)) * 100).toFixed(0),
     };
   });
 

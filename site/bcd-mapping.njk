@@ -3,6 +3,29 @@ title: BCD key mapping
 layout: layout.njk
 ---
 
+<style>
+.bcd-keys {
+  column-width: 20rem;
+  column-gap: 2rem;
+  column-rule: 1px solid #ccc;
+}
+
+.bcd-keys li {
+  word-break: break-all;
+  padding: .25rem 0;
+}
+
+.bcd-keys .deprecated::after {
+  content: "⚠️ deprecated";
+  display: block;
+  font-size: .8rem;
+  color: red;
+}
+
+.bcd-keys .group-start {
+  border-block-start: 2px solid #ccc;
+}
+</style>
 <main>
   <h1>{{ title }}</h1>
 
@@ -10,9 +33,9 @@ layout: layout.njk
 
   <h2>Unmapped BCD keys</h2>
 
-  <ul>
+  <ul class="bcd-keys">
     {% for unmapped in bcdMapping.unmapped %}
-      <li>{{ unmapped.key }}{% if unmapped.status.deprecated %} [DEPRECATED]{% endif %}</li>
+      <li class="{% if unmapped.status.deprecated %}deprecated {% endif %}{% if unmapped.isNewGroup %}group-start{% endif %}">{{ unmapped.key }}</li>
     {% endfor %}
   </ul>
 </main>
