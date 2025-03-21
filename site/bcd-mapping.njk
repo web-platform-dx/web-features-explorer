@@ -6,13 +6,13 @@ layout: layout.njk
 <main>
   <h1>{{ title }}</h1>
 
-  <p>The web-features project has {{ bcdMapping.mapped.length }} BCD keys mapped, out of {{ bcdMapping.all.length }} total BCD keys ({{ bcdMapping.percentage }}% complete).</p>
+  <p>The web-features project has {{ bcdMapping.totalMapped }} BCD keys mapped, out of {{ bcdMapping.totalKeys }} total BCD keys ({{ bcdMapping.percentage }}% complete).</p>
 
   <h2>Unmapped BCD keys</h2>
 
   <ul>
-    {% for key in bcdMapping.unmapped %}
-      <li>{{ key }}</li>
+    {% for unmapped in bcdMapping.unmapped %}
+      <li>{{ unmapped.key }}{% if unmapped.status.deprecated %} [DEPRECATED]{% endif %}</li>
     {% endfor %}
   </ul>
 </main>

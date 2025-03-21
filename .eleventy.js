@@ -30,7 +30,7 @@ function getAllBCDKeys() {
       }
 
       if (key === "__compat") {
-        acc.push(keyPrefix);
+        acc.push({ key: keyPrefix, status: root[key].status });
       }
 
       if (key !== "__compat" && typeof root[key] === "object") {
@@ -562,19 +562,17 @@ export default function (eleventyConfig) {
     }
 
     const unmapped = [];
-    getAllBCDKeys().forEach(key => {
+    getAllBCDKeys().forEach(({ key, status }) => {
       if (!mapped.includes(key)) {
-        unmapped.push(key);
+        unmapped.push({ key, status });
       }
     });
 
-    const all = [...mapped, ...unmapped];
-
     return {
-      all,
-      mapped,
+      totalKeys: mapped.length + unmapped.length,
+      totalMapped: mapped.length,
       unmapped,
-      percentage: ((mapped.length / all.length) * 100).toFixed(0),
+      percentage: ((mapped.length / mapped.length + unmapped.length) * 100).toFixed(0),
     };
   });
 
