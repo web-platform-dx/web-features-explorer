@@ -4,11 +4,12 @@
   <subtitle>Monthly updates on the web platform features.</subtitle>
   <link href="https://web-platform-dx.github.io/web-features-explorer/release-notes.xml" rel="self"/>
   <link href="https://web-platform-dx.github.io/web-features-explorer/"/>
-  <updated>2025-04-03T00:49:42Z</updated>
+  <updated>2025-04-03T12:25:26Z</updated>
   <id>https://web-platform-dx.github.io/web-features-explorer/</id>
   <author>
     <name>WebDX Community Group</name>
   </author>
+  
   
     <entry>
       <title>March 2025 web platform update</title>
@@ -25,6 +26,11 @@
             <ul>
               
                 <li>
+                  <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/clipboard-supports">ClipboardItem.supports()</a></strong>:
+                  The <code>ClipboardItem.supports()</code> static method checks if the browser supports writing data types such as "image/svg+xml" or other custom formats to the system clipboard.
+                </li>
+              
+                <li>
                   <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/contenteditable-plaintextonly">contenteditable="plaintext-only"</a></strong>:
                   The <code>contenteditable="plaintext-only"</code> global HTML attribute allows the user to edit the content of an element, but prevents rich-text formatting.
                 </li>
@@ -32,6 +38,11 @@
                 <li>
                   <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/intl-duration-format">Intl.DurationFormat</a></strong>:
                   The <code>Intl.DurationFormat</code> API creates a locale-aware formatter that turns an object representing a duration (such as days, hours, and minutes) into a string.
+                </li>
+              
+                <li>
+                  <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/screen-wake-lock">Screen wake lock</a></strong>:
+                  The <code>navigator.wakeLock.request("screen")</code> API prevents the device's screen from dimming or being turned off.
                 </li>
               
             </ul>
@@ -252,7 +263,79 @@
             
           
             
+              <h2>New in Safari</h2>
+              <p>The following features are now available in Safari:</p>
+              <ul>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/atomics-pause">Atomics.pause()</a></strong>:
+                    The <code>Atomics.pause()</code> static method gives a hint to the CPU that the code calling the method is in a short-duration wait for shared memory, known as spinning or a spinlock.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/details-content">::details-content</a></strong>:
+                    The <code>::details-content</code> pseudo-element selects the expandable content of a <code>&#x3C;details></code> element, excluding the <code>&#x3C;summary></code>.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/font-width">font-width</a></strong>:
+                    The <code>font-width</code> CSS property selects a font face from a font family based on width, either by a keyword such as <code>condensed</code> or a percentage.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/partitioned-cookies">Partitioned cookies</a></strong>:
+                    Partitioned cookies allow you to opt a cookie into partitioned storage, with a separate cookie jar per top-level site. Also known as Cookies Having Independent Partitioned State or CHIPS.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/requestclose">dialog.requestClose()</a></strong>:
+                    The <code>requestClose()</code> method of a <code>&#x3C;dialog></code> HTML element closes the dialog, firing a <code>cancel</code> event first, which listeners can use to prevent the dialog from closing. This differs from the <code>close()</code> method, which only fires the non-cancelable <code>close</code> event.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/text-autospace">text-autospace</a></strong>:
+                    The <code>text-autospace</code> CSS property sets whether and how to insert spaces in inter-script text (such as when mixing Latin and Chinese characters) and around punctuation.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/wasm-exnref-exceptions">Exception references with exnref (WebAssembly)</a></strong>:
+                    When caught, an exception is reified into an exception reference, a value of the new type <code>exnref</code>.
+                  </li>
+                
+              </ul>
+            
           
+            
+              <h2>New in Safari on iOS</h2>
+              <p>The following features are now available in Safari on iOS:</p>
+              <ul>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/atomics-pause">Atomics.pause()</a></strong>:
+                    The <code>Atomics.pause()</code> static method gives a hint to the CPU that the code calling the method is in a short-duration wait for shared memory, known as spinning or a spinlock.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/details-content">::details-content</a></strong>:
+                    The <code>::details-content</code> pseudo-element selects the expandable content of a <code>&#x3C;details></code> element, excluding the <code>&#x3C;summary></code>.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/partitioned-cookies">Partitioned cookies</a></strong>:
+                    Partitioned cookies allow you to opt a cookie into partitioned storage, with a separate cookie jar per top-level site. Also known as Cookies Having Independent Partitioned State or CHIPS.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/requestclose">dialog.requestClose()</a></strong>:
+                    The <code>requestClose()</code> method of a <code>&#x3C;dialog></code> HTML element closes the dialog, firing a <code>cancel</code> event first, which listeners can use to prevent the dialog from closing. This differs from the <code>close()</code> method, which only fires the non-cancelable <code>close</code> event.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/wasm-exnref-exceptions">Exception references with exnref (WebAssembly)</a></strong>:
+                    When caught, an exception is reified into an exception reference, a value of the new type <code>exnref</code>.
+                  </li>
+                
+              </ul>
             
           
         </section>
@@ -1037,6 +1120,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/compression-dictionary-transport">Compression Dictionary Transport</a></strong>:
+                    Compression Dictionary Transport is a mechanism for using designated HTTP responses as an external dictionary for future HTTP responses for compression schemes that support using external dictionaries (e.g., Brotli and Zstandard)
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/document-picture-in-picture">Document picture-in-picture</a></strong>:
                     The document picture-in-picture API creates an always-on-top window from arbitrary HTML content.
                   </li>
@@ -1070,6 +1158,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/compression-dictionary-transport">Compression Dictionary Transport</a></strong>:
+                    Compression Dictionary Transport is a mechanism for using designated HTTP responses as an external dictionary for future HTTP responses for compression schemes that support using external dictionaries (e.g., Brotli and Zstandard)
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/intl-locale-info">Intl.Locale info</a></strong>:
                     The getter methods of the <code>Intl.Locale</code> API provide supplemental information about a Unicode locale, such as the locale's calendar (for example, the first day in a week or the weekend start day), writing direction, 12- or 24-hour cycles, and numbering system.
                   </li>
@@ -1095,6 +1188,11 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/box-decoration-break">box-decoration-break</a></strong>:
                     The <code>box-decoration-break</code> CSS property sets whether box decorations, such as borders or backgrounds, of an element divided across a page, column, or region wraps each fragment or splits across the break.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/compression-dictionary-transport">Compression Dictionary Transport</a></strong>:
+                    Compression Dictionary Transport is a mechanism for using designated HTTP responses as an external dictionary for future HTTP responses for compression schemes that support using external dictionaries (e.g., Brotli and Zstandard)
                   </li>
                 
                   <li>
@@ -7209,16 +7307,6 @@
             <ul>
               
                 <li>
-                  <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/display-table">display: table</a></strong>:
-                  The <code>display: table</code> CSS declaration renders an element with the box layout of a <code>&#x3C;table></code> HTML element. Child elements may use equivalents to <code>&#x3C;table></code> internal elements such as <code>display: table-row</code> for <code>&#x3C;tr></code>.
-                </li>
-              
-                <li>
-                  <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/dominant-baseline">dominant-baseline</a></strong>:
-                  The <code>dominant-baseline</code> CSS property sets the specific baseline used to align an elements's text and inline-level contents.
-                </li>
-              
-                <li>
                   <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/font-optical-sizing">font-optical-sizing</a></strong>:
                   The <code>font-optical-sizing</code> CSS property sets whether text rendering is optimized for viewing at different sizes.
                 </li>
@@ -7894,6 +7982,11 @@
                 <li>
                   <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/dom-geometry">DOM Geometry</a></strong>:
                   The <code>DOMMatrix</code>, <code>DOMPoint</code>, <code>DOMQuad</code> and <code>DOMRect</code> interfaces offer a way to represent points, rectangles, quadrilaterals and transformation matrices within JavaScript. They can be used in transformations in CSS, <code>&#x3C;canvas></code>, and SVG.
+                </li>
+              
+                <li>
+                  <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/dominant-baseline">dominant-baseline</a></strong>:
+                  The <code>dominant-baseline</code> CSS property sets the specific baseline used to align an elements's text and inline-level contents.
                 </li>
               
                 <li>
@@ -13651,16 +13744,6 @@
             <ul>
               
                 <li>
-                  <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/display-table">display: table</a></strong>:
-                  The <code>display: table</code> CSS declaration renders an element with the box layout of a <code>&#x3C;table></code> HTML element. Child elements may use equivalents to <code>&#x3C;table></code> internal elements such as <code>display: table-row</code> for <code>&#x3C;tr></code>.
-                </li>
-              
-                <li>
-                  <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/dominant-baseline">dominant-baseline</a></strong>:
-                  The <code>dominant-baseline</code> CSS property sets the specific baseline used to align an elements's text and inline-level contents.
-                </li>
-              
-                <li>
                   <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/font-optical-sizing">font-optical-sizing</a></strong>:
                   The <code>font-optical-sizing</code> CSS property sets whether text rendering is optimized for viewing at different sizes.
                 </li>
@@ -14219,6 +14302,11 @@
                 </li>
               
                 <li>
+                  <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/dominant-baseline">dominant-baseline</a></strong>:
+                  The <code>dominant-baseline</code> CSS property sets the specific baseline used to align an elements's text and inline-level contents.
+                </li>
+              
+                <li>
                   <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/element-from-point">document.elementFromPoint() and document.elementsFromPoint()</a></strong>:
                   The <code>document.elementFromPoint()</code> and <code>document.elementsFromPoint()</code> methods find the top-most element at a given point in the viewport, or all elements at a given point in the viewport, respectively.
                 </li>
@@ -14514,6 +14602,11 @@
               <ul>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/alignment-baseline">alignment-baseline</a></strong>:
+                    The <code>alignment-baseline</code> CSS property sets which baseline of an element is aligned with the corresponding baseline of its parent.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/alt-text-generated-content">Alt text for generated content</a></strong>:
                     The <code>/</code> notation in <code>content</code> CSS property values adds alternative text to generated content. For example, the <code>content: url('upvote-icon.svg') / 'Upvote'</code> declaration adds accessible 'Upvote' text to the SVG icon. Also known as alternate text.
                   </li>
@@ -14554,6 +14647,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/baseline-shift">baseline-shift</a></strong>:
+                    The <code>baseline-shift</code> CSS property sets the position of an element relative to its dominant baseline.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/battery">Battery status</a></strong>:
                     The <code>navigator.getBattery()</code> API obtains information about the device's battery, including charge level and status. Also known as the Battery API.
                   </li>
@@ -14579,6 +14677,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/canvas-2d-alpha">2D canvas opacity</a></strong>:
+                    The optional <code>alpha</code> parameter of a 2D canvas's <code>getContext()</code> method sets whether the canvas has an alpha transparency channel. If set to <code>false</code>, then this permits the browser to optimize compositing for an opaque canvas.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/canvas-2d-desynchronized">Desynchronized 2D canvas</a></strong>:
                     The optional <code>desynchronized</code> parameter of a canvas's <code>getContext()</code> method permits the browser to draw a 2D canvas independently of the event loop. This can reduce drawing latency.
                   </li>
@@ -14586,6 +14689,11 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/capture-stream-audio-video">captureStream() for &lt;audio&gt; and &lt;video&gt;</a></strong>:
                     The <code>captureStream()</code> method for <code>&#x3C;audio></code> and <code>&#x3C;video></code> elements returns a <code>MediaStream</code> for the media element's content. You can use this to record media or send it elsewhere, such as a canvas or WebRTC connection.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/clip">clip</a></strong>:
+                    The <code>clip</code> CSS property sets the visible area of an absolutely positioned element.
                   </li>
                 
                   <li>
@@ -15348,6 +15456,11 @@
                 <li>
                   <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/custom-properties">Custom properties</a></strong>:
                   Custom properties are CSS properties prefixed with <code>--</code> that set values you can reuse with the <code>var()</code> function. For example, you can set a <code>--key-color</code> property to reuse as <code>border-color: var(--key-color)</code>. Also known as CSS variables.
+                </li>
+              
+                <li>
+                  <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/display-table">display: table</a></strong>:
+                  The <code>display: table</code> CSS declaration renders an element with the box layout of a <code>&#x3C;table></code> HTML element. Child elements may use equivalents to <code>&#x3C;table></code> internal elements such as <code>display: table-row</code> for <code>&#x3C;tr></code>.
                 </li>
               
                 <li>
@@ -21365,6 +21478,11 @@
                 </li>
               
                 <li>
+                  <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/display-table">display: table</a></strong>:
+                  The <code>display: table</code> CSS declaration renders an element with the box layout of a <code>&#x3C;table></code> HTML element. Child elements may use equivalents to <code>&#x3C;table></code> internal elements such as <code>display: table-row</code> for <code>&#x3C;tr></code>.
+                </li>
+              
+                <li>
                   <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/font-feature-settings">font-feature-settings</a></strong>:
                   The <code>font-feature-settings</code> CSS property sets low-level OpenType feature tags for a font. When possible, use <code>font-variant</code> instead.
                 </li>
@@ -26493,6 +26611,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/contenteditable-plaintextonly">contenteditable="plaintext-only"</a></strong>:
+                    The <code>contenteditable="plaintext-only"</code> global HTML attribute allows the user to edit the content of an element, but prevents rich-text formatting.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/cookie-enabled">cookieEnabled</a></strong>:
                     The <code>navigator.cookieEnabled</code> property is a boolean for whether the browser accepts or ignores attempts to write cookie data.
                   </li>
@@ -26765,6 +26888,11 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/symbol">Symbol</a></strong>:
                     A <code>Symbol</code> value is a unique, non-enumerable primitive value used for encapsulation or information hiding. For example, a symbol can be a key of an object that can never collide with any other key.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/table-discouraged">Table styling</a></strong>:
+                    Attributes and properties of table elements, such as <code>align</code>, <code>vAlign</code>, <code>noWrap</code>, <code>bgcolor</code>, or <code>char</code> set various visual presentation properties of the table and its sections and cells. These are obsolete, and some of them have no effect. Use CSS instead.
                   </li>
                 
                   <li>
@@ -31802,6 +31930,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/alignment-baseline">alignment-baseline</a></strong>:
+                    The <code>alignment-baseline</code> CSS property sets which baseline of an element is aligned with the corresponding baseline of its parent.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/arguments-callee">arguments.callee</a></strong>:
                     The <code>callee</code> property of the <code>arguments</code> variable in a non-strict function body's local scope is the function that <code>arguments</code> belongs to.
                   </li>
@@ -31884,6 +32017,11 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/base">&lt;base&gt;</a></strong>:
                     The <code>&#x3C;base></code> element sets the base URL (the URL that relative URLs are relative to) for all relative URLs in the document.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/baseline-shift">baseline-shift</a></strong>:
+                    The <code>baseline-shift</code> CSS property sets the position of an element relative to its dominant baseline.
                   </li>
                 
                   <li>
@@ -31974,6 +32112,11 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/cite">&lt;cite&gt;</a></strong>:
                     The <code>&#x3C;cite></code> element represents the title of a quoted, referenced, or mentioned creative work, such as a film or book.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/clip">clip</a></strong>:
+                    The <code>clip</code> CSS property sets the visible area of an absolutely positioned element.
                   </li>
                 
                   <li>
@@ -32112,6 +32255,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/display-table">display: table</a></strong>:
+                    The <code>display: table</code> CSS declaration renders an element with the box layout of a <code>&#x3C;table></code> HTML element. Child elements may use equivalents to <code>&#x3C;table></code> internal elements such as <code>display: table-row</code> for <code>&#x3C;tr></code>.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/div">&lt;div&gt;</a></strong>:
                     The <code>&#x3C;div></code> HTML element is the generic container for content.
                   </li>
@@ -32119,6 +32267,11 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/dom">DOM</a></strong>:
                     The DOM (Document Object Model) API represents HTML and XML documents as trees of nodes. You can use the API to inspect and modify the structure and content of a document.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/dominant-baseline">dominant-baseline</a></strong>:
+                    The <code>dominant-baseline</code> CSS property sets the specific baseline used to align an elements's text and inline-level contents.
                   </li>
                 
                   <li>
@@ -32912,6 +33065,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/table-discouraged">Table styling</a></strong>:
+                    Attributes and properties of table elements, such as <code>align</code>, <code>vAlign</code>, <code>noWrap</code>, <code>bgcolor</code>, or <code>char</code> set various visual presentation properties of the table and its sections and cells. These are obsolete, and some of them have no effect. Use CSS instead.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/target">:target</a></strong>:
                     The <code>:target</code> CSS pseudo-class matches the element with an ID matching the URL fragment.
                   </li>
@@ -33590,6 +33748,11 @@
               <ul>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/alignment-baseline">alignment-baseline</a></strong>:
+                    The <code>alignment-baseline</code> CSS property sets which baseline of an element is aligned with the corresponding baseline of its parent.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/array-isarray">Array.isArray()</a></strong>:
                     The <code>Array.isArray()</code> static method checks whether a value is an array.
                   </li>
@@ -33964,6 +34127,11 @@
               <h2>New in Safari</h2>
               <p>The following features are now available in Safari:</p>
               <ul>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/alignment-baseline">alignment-baseline</a></strong>:
+                    The <code>alignment-baseline</code> CSS property sets which baseline of an element is aligned with the corresponding baseline of its parent.
+                  </li>
                 
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/background-clip">background-clip</a></strong>:
@@ -34584,6 +34752,11 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/cite">&lt;cite&gt;</a></strong>:
                     The <code>&#x3C;cite></code> element represents the title of a quoted, referenced, or mentioned creative work, such as a film or book.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/clip">clip</a></strong>:
+                    The <code>clip</code> CSS property sets the visible area of an absolutely positioned element.
                   </li>
                 
                   <li>
@@ -36261,6 +36434,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/baseline-shift">baseline-shift</a></strong>:
+                    The <code>baseline-shift</code> CSS property sets the position of an element relative to its dominant baseline.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/before-after">::before and ::after</a></strong>:
                     The <code>::before</code> and <code>::after</code> CSS pseudo-elements select inline boxes preceding and following an element. They are often used with the <code>content</code> property to generate cosmetic content.
                   </li>
@@ -36273,6 +36451,11 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/currentcolor">currentColor</a></strong>:
                     The <code>currentColor</code> CSS value allows you to reuse an element's computed text color for other properties.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/dominant-baseline">dominant-baseline</a></strong>:
+                    The <code>dominant-baseline</code> CSS property sets the specific baseline used to align an elements's text and inline-level contents.
                   </li>
                 
                   <li>
@@ -36670,6 +36853,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/baseline-shift">baseline-shift</a></strong>:
+                    The <code>baseline-shift</code> CSS property sets the position of an element relative to its dominant baseline.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/before-after">::before and ::after</a></strong>:
                     The <code>::before</code> and <code>::after</code> CSS pseudo-elements select inline boxes preceding and following an element. They are often used with the <code>content</code> property to generate cosmetic content.
                   </li>
@@ -36692,6 +36880,11 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/dedicated-workers">Dedicated workers</a></strong>:
                     The <code>Worker()</code> constructor runs a script in its own thread, which can send and receive messages with the script that created it. Also known as web workers.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/dominant-baseline">dominant-baseline</a></strong>:
+                    The <code>dominant-baseline</code> CSS property sets the specific baseline used to align an elements's text and inline-level contents.
                   </li>
                 
                   <li>
@@ -36947,6 +37140,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/alignment-baseline">alignment-baseline</a></strong>:
+                    The <code>alignment-baseline</code> CSS property sets which baseline of an element is aligned with the corresponding baseline of its parent.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/arguments-callee">arguments.callee</a></strong>:
                     The <code>callee</code> property of the <code>arguments</code> variable in a non-strict function body's local scope is the function that <code>arguments</code> belongs to.
                   </li>
@@ -37002,6 +37200,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/baseline-shift">baseline-shift</a></strong>:
+                    The <code>baseline-shift</code> CSS property sets the position of an element relative to its dominant baseline.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/before-after">::before and ::after</a></strong>:
                     The <code>::before</code> and <code>::after</code> CSS pseudo-elements select inline boxes preceding and following an element. They are often used with the <code>content</code> property to generate cosmetic content.
                   </li>
@@ -37054,6 +37257,11 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/cite">&lt;cite&gt;</a></strong>:
                     The <code>&#x3C;cite></code> element represents the title of a quoted, referenced, or mentioned creative work, such as a film or book.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/clip">clip</a></strong>:
+                    The <code>clip</code> CSS property sets the visible area of an absolutely positioned element.
                   </li>
                 
                   <li>
@@ -37142,6 +37350,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/display-table">display: table</a></strong>:
+                    The <code>display: table</code> CSS declaration renders an element with the box layout of a <code>&#x3C;table></code> HTML element. Child elements may use equivalents to <code>&#x3C;table></code> internal elements such as <code>display: table-row</code> for <code>&#x3C;tr></code>.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/div">&lt;div&gt;</a></strong>:
                     The <code>&#x3C;div></code> HTML element is the generic container for content.
                   </li>
@@ -37149,6 +37362,11 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/dom">DOM</a></strong>:
                     The DOM (Document Object Model) API represents HTML and XML documents as trees of nodes. You can use the API to inspect and modify the structure and content of a document.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/dominant-baseline">dominant-baseline</a></strong>:
+                    The <code>dominant-baseline</code> CSS property sets the specific baseline used to align an elements's text and inline-level contents.
                   </li>
                 
                   <li>
@@ -37689,6 +37907,11 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/table">Tables</a></strong>:
                     The <code>&#x3C;table></code> HTML element, with several related elements, represents tabular data in rows and columns of cells.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/table-discouraged">Table styling</a></strong>:
+                    Attributes and properties of table elements, such as <code>align</code>, <code>vAlign</code>, <code>noWrap</code>, <code>bgcolor</code>, or <code>char</code> set various visual presentation properties of the table and its sections and cells. These are obsolete, and some of them have no effect. Use CSS instead.
                   </li>
                 
                   <li>
@@ -38509,6 +38732,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/clip">clip</a></strong>:
+                    The <code>clip</code> CSS property sets the visible area of an absolutely positioned element.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/color">Color</a></strong>:
                     The <code>color</code> CSS property sets the primary foreground color of an element, which is used for text, the default border color, and text decorations.
                   </li>
@@ -39194,6 +39422,11 @@
                   </li>
                 
                   <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/opacity-svg">Opacity (SVG)</a></strong>:
+                    The <code>fill-opacity</code>, and <code>stroke-opacity</code> SVG attributes and CSS properties control the transparency of a stroke or fill of an SVG element.
+                  </li>
+                
+                  <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/outlines">Outlines</a></strong>:
                     The <code>outline-color</code>, <code>outline-style</code>, and <code>outline-width</code> and <code>outline-offset</code> CSS properties style a line around an element, outside of the border.
                   </li>
@@ -39268,6 +39501,11 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/canvas-2d">2D canvas</a></strong>:
                     The <code>CanvasRenderingContext2D</code> API is the "2d" rendering context for the <code>&#x3C;canvas></code> element. It represents a flat, two-dimensional space for drawing graphics and animations.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/clip">clip</a></strong>:
+                    The <code>clip</code> CSS property sets the visible area of an absolutely positioned element.
                   </li>
                 
                   <li>
@@ -39457,6 +39695,11 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/cite">&lt;cite&gt;</a></strong>:
                     The <code>&#x3C;cite></code> element represents the title of a quoted, referenced, or mentioned creative work, such as a film or book.
+                  </li>
+                
+                  <li>
+                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/clip">clip</a></strong>:
+                    The <code>clip</code> CSS property sets the visible area of an absolutely positioned element.
                   </li>
                 
                   <li>
@@ -39887,11 +40130,6 @@
                   <li>
                     <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/opacity">opacity</a></strong>:
                     The <code>opacity</code> CSS property sets the transparency of an element.
-                  </li>
-                
-                  <li>
-                    <strong><a href="https://web-platform-dx.github.io/web-features-explorer/features/opacity-svg">Opacity (SVG)</a></strong>:
-                    The <code>fill-opacity</code>, and <code>stroke-opacity</code> SVG attributes and CSS properties control the transparency of a stroke or fill of an SVG element.
                   </li>
                 
                   <li>
