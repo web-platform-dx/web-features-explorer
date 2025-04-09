@@ -35,7 +35,7 @@ function getFeaturesMdnUrls() {
           data = data[part];
         }
 
-        let url = data.__compat.mdn_url;
+        let url = data?.__compat?.mdn_url;
         if (url) {
           url = url.replace("https://developer.mozilla.org/docs/", "");
           urls.push(url);
