@@ -9,6 +9,7 @@ import mdnDocsOverrides from "./additional-data/mdn-docs.json" with { type: "jso
 import standardPositions from "./additional-data/standard-positions.json" with { type: "json" };
 import originTrials from "./additional-data/origin-trials.json" with { type: "json" };
 import stateOfSurveys from "./additional-data/state-of-surveys.json" with { type: "json" };
+import useCounters from "./additional-data/use-counters.json" with { type: "json" };
 
 const BROWSER_BUG_TRACKERS = {
   chrome: "issues.chromium.org",
@@ -186,6 +187,9 @@ function augmentFeatureData(id, feature) {
   // Add state of surveys data.
   feature.stateOfSurveys = stateOfSurveys[id];
 
+  // Add use counter data.
+  feature.useCounters = useCounters[id];
+
   // Add the BCD data to the feature.
   feature.bcdData = bcdKeysData;
   feature.bcdTags = [...new Set(bcdTags)];
@@ -266,6 +270,10 @@ export default function (eleventyConfig) {
       return `before ${dateStr.substring(1)}`;
     }
     return dateStr;
+  });
+
+  eleventyConfig.addShortcode("useCounterPercentage", function (value) {
+    return `~${(value * 100).toFixed(3)}%`;
   });
 
   eleventyConfig.addGlobalData("versions", async () => {
