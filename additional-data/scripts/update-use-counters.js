@@ -20,11 +20,6 @@ const OUTPUT_FILE = path.join(import.meta.dirname, "../use-counters.json");
 // Some useCounter names do not follow the rule for dash-to-camelCase conversion.
 // Mapping them manually here.
 const UCNAME_TO_WFID_SPECIAL_CASES = {
-  "BarProp": "barprop",
-  "BeforeInstallPrompt": "beforeinstallprompt",
-  "BeforeUnload": "beforeunload",
-  "ErrorIsError": "is-error",
-  "FetchLater": "fetchlater",
   "Float16array": "float16array",
   "LaunchHandler": "app-launch-handler",
   "MoveBeforeAPI": "move-before"
