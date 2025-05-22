@@ -7,6 +7,7 @@ Structure content with HTML:
     - base
     - link
     - body
+    - lang-attr
   Create sections of content:
     - main
     - section
@@ -27,6 +28,7 @@ Structure content with HTML:
     - p
     - br
     - a
+    - download
     - em
     - strong
     - span
@@ -82,6 +84,7 @@ Structure content with HTML:
     - label
     - search
     - select
+    - customizable-select
     - textarea
     - output
     - datalist
@@ -90,6 +93,7 @@ Structure content with HTML:
     - description-list
   Mark up tabular data:
     - table
+    - table-discouraged
   Mark up mathematical expressions:
     - mathml
     - var
@@ -127,6 +131,7 @@ Position content:
   - column-breaks
   - column-fill
   - column-span
+  - column-pseudo
   - z-index
   - popover
   - widows-orphans
@@ -137,6 +142,8 @@ Position content:
   - reading-flow
   - visual-viewport
   - barprop
+  - vertical-align
+  - align-content-block
 Style content:
   Load CSS stylesheets:
     - style
@@ -189,6 +196,7 @@ Style content:
     - time-relative-selectors
     - case-sensitive-attributes
     - case-insensitive-attributes
+    - lang
   Generate style-only content:
     - content
     - attr-contents
@@ -213,6 +221,9 @@ Style content:
     - light-dark
     - color-contrast
     - contrast-color
+    - color
+    - color-adjust
+    - document-colors
   Style elements:
     Set dimensions:
       - width-height
@@ -260,6 +271,7 @@ Style content:
       - conic-gradients
       - gradient-interpolation
       - gradients
+      - single-color-gradients
       - element
       - paint
       - image-orientation
@@ -350,6 +362,7 @@ Style content:
       - text-wrap-nowrap
       - text-wrap-pretty
       - text-wrap-stable
+      - text-box
       - word-break
       - word-break-auto-phrase
       - word-spacing
@@ -369,6 +382,12 @@ Style content:
       - rhythmic-sizing
       - text-shadow
       - text-underline-position
+      - text-orientation
+      - text-stroke-fill
+      - text-underline-offset
+      - text-autospace
+      - text-combine-upright
+      - text-decoration-line-blink
     Ruby:
       - ruby-align
       - ruby-overhang
@@ -408,6 +427,7 @@ Style content:
       - font-variation-settings
       - font-weight
       - font-family-ui
+      - font-width
   Style scrolling:
     - scroll-snap
     - scroll-behavior
@@ -504,10 +524,12 @@ Handle media:
     - jpegxl
     - webp
     - svg
+    - svg-discouraged
     - preloading-responsive-images
     - loading-lazy
     - image-maps
     - createimagebitmap
+    - srcset
   Play audio and video:
     - audio
     - video
@@ -571,6 +593,7 @@ Handle media:
     - webgl-lose-context
     - webgl-multi-draw
     - webgl-sab
+    - khr-parallel-shader-compile
     - angle-instanced-arrays
     - oes-element-index-uint
     - oes-fbo-render-mipmap
@@ -602,6 +625,9 @@ Run client-side logic:
       - globalthis
       - exponentiation
       - error-cause
+      - with
+      - template-literals
+      - arguments-callee
     Organize code:
       - script
       - js-modules
@@ -663,6 +689,15 @@ Run client-side logic:
     Dates:
       - date
       - temporal
+    URLs:
+      - url
+      - url-canparse
+      - urlpattern
+    Regular expressions:
+      - regexp
+      - regexp-compile
+      - regexp-escape
+      - regexp-static-properties
     Internationalization:
       - intl
       - intl-display-names
@@ -677,7 +712,6 @@ Run client-side logic:
     Other built-ins:
       - navigator
       - number
-      - regexp
       - async-await
       - async-generators
       - async-iterators
@@ -704,6 +738,12 @@ Run client-side logic:
     - dom
     - mutation-events
     - mutationobserver
+    - move-before
+    - getboxquads
+    - gethtml
+    - dom-geometry
+    - document-write
+    - domparser
   Store data:
     - storage-access
     - storage-buckets
@@ -712,6 +752,7 @@ Run client-side logic:
     - localstorage
     - non-cookie-storage-access
     - dataset
+    - indexeddb
   Handle user input:
     - autofocus
     - inert
@@ -773,6 +814,13 @@ Run client-side logic:
     - wasm-simd-relaxed
     - wasm-tail-call-optimization
     - wasm-threads
+    - wasm-exnref-exceptions
+    - wasm-memory64
+    - wasm-string-builtins
+    - wasm-typed-fun-refs
+  Handle web payments:
+    - payment-handler
+    - payment-request
   Other:
     - compression-streams
     - webauthn
@@ -810,6 +858,7 @@ Integrate with the system:
       - accelerometer
       - device-posture
       - magnetometer
+      - ambient-light
     Chips and peripherals:
       - web-bluetooth
       - webgpu
@@ -828,6 +877,7 @@ Integrate with the system:
       - gamepad-haptics
       - gamepad-touch
       - gamepad-vr
+      - device-memory
     XR:
       - webxr-device
       - webxr-ar
@@ -855,6 +905,9 @@ Integrate with the system:
     - manifest
     - window-controls-overlay
     - service-workers
+    - app-launch-handler
+    - notifications-apps
+    - meta-application-title
 Create UI components:
   Mark up components:
     - slot
@@ -881,6 +934,8 @@ Communicate over the network:
     - fetch
     - fetch-metadata
     - fetch-priority
+    - fetchlater
+    - fetch-request-streams
     - abortable-fetch
     - xhr
     - font-loading
@@ -894,6 +949,11 @@ Communicate over the network:
     - import-maps
     - blocking-render
     - pdf-viewer
+    - download
+  Compress resources:
+    - compression-dictionary-transport
+    - brotli
+    - zstd
   Open communication channels:
     - websockets
     - webrtc
@@ -936,6 +996,7 @@ Measure performance:
   - layout-instability
   - page-visibility-state
   - long-animation-frames
+  - performancetiming
 Test:
   - webdriver
   - webdriver-bidi
