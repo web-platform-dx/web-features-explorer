@@ -55,6 +55,13 @@ function findParentGroupId(group) {
   return group.parent;
 }
 
+function stripLessThan(dateStr) {
+  if (dateStr.startsWith("≤")) {
+    return dateStr.substring(1);
+  }
+  return dateStr;
+}
+
 function augmentFeatureData(id, feature) {
   // Add the id.
   feature.id = id;
@@ -193,6 +200,14 @@ function augmentFeatureData(id, feature) {
   // Add the BCD data to the feature.
   feature.bcdData = bcdKeysData;
   feature.bcdTags = [...new Set(bcdTags)];
+
+  // Add the baseline low and high dates as JS objects too.
+  feature.baselineLowDateAsObject = feature.status.baseline
+    ? new Date(stripLessThan(feature.status.baseline_low_date))
+    : null;
+  feature.baselineHighDateAsObject = feature.status.baseline && feature.status.baseline === "high"
+    ? new Date(stripLessThan(feature.status.baseline_high_date))
+    : null;
 
   // Add impl_url links, if any, per browser.
   const browserImplUrls = Object.keys(browsers).reduce((acc, browserId) => {
@@ -363,11 +378,7 @@ export default function (eleventyConfig) {
         return null;
       }
 
-      if (dateStr.startsWith("≤")) {
-        dateStr = dateStr.substring(1);
-      }
-
-      return dateStr.substring(0, 7);
+      return stripLessThan(dateStr).substring(0, 7);
     };
 
     const getBaselineHighMonth = (feature) => getMonth(feature.status.baseline_high_date);

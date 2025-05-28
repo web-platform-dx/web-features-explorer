@@ -1,0 +1,40 @@
+---json
+{
+  "permalink": "/widely-available.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "Baseline Widely Available Features",
+    "subtitle": "Features of the web platform which became Baseline Widely Available.",
+    "language": "en",
+    "url": "https://web-platform-dx.github.io/web-features-explorer/",
+    "author": {
+      "name": "WebDX Community Group"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.subtitle }}</subtitle>
+  <link href="https://web-platform-dx.github.io/web-features-explorer/widely-available.xml" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ widelyAvailableFeatures[0].baselineHighDateAsObject | dateToRfc3339 }}</updated>
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+  </author>
+
+  {% for feature in widelyAvailableFeatures %}
+    <entry>
+      <title>{% prettyFeatureName feature.name %}</title>
+      <link href="{{ metadata.url + 'features/' + feature.id | slugify }}"/>
+      <updated>{{ feature.baselineHighDateAsObject | dateToRfc3339 }}</updated>
+      <id>{{ metadata.url + 'features/' + feature.id | slugify }}</id>
+      <content xml:lang="{{ metadata.language }}" type="html"><![CDATA[
+        <h1><a href="{{ metadata.url + 'features/' + feature.id | slugify }}">{% prettyFeatureName feature.name %}</a></h1>
+        <p>{{ feature.description_html | safe }}</p>
+      ]]></content>
+    </entry>
+  {% endfor %}
+</feed>
