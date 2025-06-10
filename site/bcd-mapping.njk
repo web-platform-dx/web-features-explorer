@@ -1,5 +1,5 @@
 ---
-title: BCD key mapping
+title: Mapping of the BCD keys in web-features
 layout: layout.njk
 ---
 
@@ -8,6 +8,7 @@ layout: layout.njk
   column-width: 20rem;
   column-gap: 2rem;
   column-rule: 1px solid #ccc;
+  margin-block-start: 1rem;
 }
 
 .bcd-keys li {
@@ -29,9 +30,15 @@ layout: layout.njk
 <main>
   <h1>{{ title }}</h1>
 
-  <p>The web-features project has {{ bcdMapping.totalMapped }} BCD keys mapped, out of {{ bcdMapping.totalKeys }} total BCD keys ({{ bcdMapping.percentage }}% complete).</p>
+  <ul>
+    <li>All BCD keys: {{ bcdMapping.totalKeys }}</li>
+    <li>Keys mapped in web-features: {{ bcdMapping.totalMapped }}</li>
+    <li>Percentage mapped: {{ bcdMapping.percentage }}%</li>
+  </ul>
 
   <h2>Unmapped BCD keys</h2>
+
+  <button id="toggle-deprecated">Toggle deprecated</button>
 
   <ul class="bcd-keys">
     {% for unmapped in bcdMapping.unmapped %}
@@ -39,3 +46,11 @@ layout: layout.njk
     {% endfor %}
   </ul>
 </main>
+
+<script>
+document.getElementById('toggle-deprecated').addEventListener('click', function() {
+  document.querySelectorAll('.bcd-keys .deprecated').forEach(item => {
+    item.style.display = item.style.display === 'none' ? 'block' : 'none';
+  });
+});
+</script>
