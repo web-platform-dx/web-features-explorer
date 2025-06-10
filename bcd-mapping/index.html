@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Web platform features explorer - BCD key mapping</title>
+    <title>Web platform features explorer - Mapping of the BCD keys in web-features</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
@@ -34,6 +34,7 @@
   column-width: 20rem;
   column-gap: 2rem;
   column-rule: 1px solid #ccc;
+  margin-block-start: 1rem;
 }
 
 .bcd-keys li {
@@ -53,11 +54,17 @@
 }
 </style>
 <main>
-  <h1>BCD key mapping</h1>
+  <h1>Mapping of the BCD keys in web-features</h1>
 
-  <p>The web-features project has 13887 BCD keys mapped, out of 15292 total BCD keys (91% complete).</p>
+  <ul>
+    <li>All BCD keys: 15292</li>
+    <li>Keys mapped in web-features: 13887</li>
+    <li>Percentage mapped: 91%</li>
+  </ul>
 
   <h2>Unmapped BCD keys</h2>
+
+  <button id="toggle-deprecated">Toggle deprecated</button>
 
   <ul class="bcd-keys">
     
@@ -2873,6 +2880,14 @@
     
   </ul>
 </main>
+
+<script>
+document.getElementById('toggle-deprecated').addEventListener('click', function() {
+  document.querySelectorAll('.bcd-keys .deprecated').forEach(item => {
+    item.style.display = item.style.display === 'none' ? 'block' : 'none';
+  });
+});
+</script>
 
     
     <script src="/web-features-explorer/assets/search.js" defer=""></script>
