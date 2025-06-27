@@ -10,6 +10,8 @@ import standardPositions from "./additional-data/standard-positions.json" with {
 import originTrials from "./additional-data/origin-trials.json" with { type: "json" };
 import stateOfSurveys from "./additional-data/state-of-surveys.json" with { type: "json" };
 import useCounters from "./additional-data/use-counters.json" with { type: "json" };
+import interop from "./additional-data/interop.json" with { type: "json" };
+import wpt from "./additional-data/wpt.json" with { type: "json" };
 
 const BROWSER_BUG_TRACKERS = {
   chrome: "issues.chromium.org",
@@ -196,6 +198,23 @@ function augmentFeatureData(id, feature) {
 
   // Add use counter data.
   feature.useCounters = useCounters[id];
+
+  // Add interop data.
+  feature.interop = [];
+  for (const interopYear in interop) {
+    for (const interopLabel in interop[interopYear]) {
+      const interopFeatures = interop[interopYear][interopLabel];
+      if (interopFeatures.includes(id)) {
+        feature.interop.push({
+          year: interopYear,
+          label: interopLabel,
+        });
+      }
+    }
+  }
+
+  // Add WPT data, if any.
+  feature.wpt = wpt.includes(id);
 
   // Add the BCD data to the feature.
   feature.bcdData = bcdKeysData;

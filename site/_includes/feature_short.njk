@@ -3,7 +3,7 @@
     <h2><a href="/features/{{ feature.id | slugify }}/">{% prettyFeatureName feature.name %}</a></h2>
     {% include "baseline.njk" %}
   </div>
-  {% include "tags.njk" %}
+
   <p>{{ feature.description_html | safe }}</p>
 
   {%- if feature.blockedOn %}

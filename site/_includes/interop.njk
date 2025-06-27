@@ -1,0 +1,12 @@
+{% if feature.interop.length %}
+  <div class="interop feature-box">
+    <h3>Interop</h3>
+    <ul>
+      {% for iteration in feature.interop %}
+        <li>
+          Included in <a href="https://wpt.fyi/interop-{{ iteration.year }}?feature={{ iteration.label }}">Interop {{ iteration.year }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
