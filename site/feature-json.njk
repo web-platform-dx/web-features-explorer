@@ -1,0 +1,8 @@
+---
+pagination:
+  data: allFeatures
+  size: 1
+  alias: feature
+permalink: "features/{{ feature.id | slugify }}.json"
+---
+{{ feature | stringify | safe }}

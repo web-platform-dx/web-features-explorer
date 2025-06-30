@@ -310,6 +310,10 @@ export default function (eleventyConfig) {
     return `~${(value * 100).toFixed(3)}%`;
   });
 
+  eleventyConfig.addFilter("stringify", (data) => {
+    return JSON.stringify(data, null, " ", 2)
+  })
+
   eleventyConfig.addGlobalData("versions", async () => {
     const { default: webFeaturesPackageJson } = await import(
       "./node_modules/web-features/package.json",
