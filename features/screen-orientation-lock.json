@@ -1,0 +1,276 @@
+{
+ "compat_features": [
+  "api.ScreenOrientation.lock",
+  "api.ScreenOrientation.unlock"
+ ],
+ "description": "The screen.orientation.lock() method prevents changes to the screen orientation, typically in fullscreen applications such as games. For example, while locked, rotating a phone to the side won't change the screen orientation from landscape to portrait.",
+ "description_html": "The <code>screen.orientation.lock()</code> method prevents changes to the screen orientation, typically in fullscreen applications such as games. For example, while locked, rotating a phone to the side won't change the screen orientation from landscape to portrait.",
+ "name": "Screen orientation lock",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/screen-orientation/#lock-method",
+   "seriesComposition": "full",
+   "shortname": "screen-orientation",
+   "series": {
+    "shortname": "screen-orientation",
+    "currentSpecification": "screen-orientation",
+    "title": "Screen Orientation",
+    "shortTitle": "Screen Orientation",
+    "releaseUrl": "https://www.w3.org/TR/screen-orientation/",
+    "nightlyUrl": "https://w3c.github.io/screen-orientation/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Applications Working Group",
+     "url": "https://www.w3.org/groups/wg/webapps/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/screen-orientation/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/screen-orientation/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/screen-orientation",
+    "sourcePath": "index.html",
+    "filename": "index.html"
+   },
+   "title": "Screen Orientation",
+   "source": "w3c",
+   "shortTitle": "Screen Orientation",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "screen-orientation"
+    ]
+   },
+   "fragment": "lock-method"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome_android": "38"
+  }
+ },
+ "id": "screen-orientation-lock",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "ScreenOrientation: lock() method",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/ScreenOrientation/lock"
+  },
+  {
+   "title": "ScreenOrientation: unlock() method",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/ScreenOrientation/unlock"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.ScreenOrientation.lock",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ScreenOrientation/lock",
+    "source_file": "api/ScreenOrientation.json",
+    "spec_url": "https://w3c.github.io/screen-orientation/#dom-screenorientation-lock",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Always throws <code>NotSupportedError</code>.",
+      "partial_implementation": true,
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "edge": {
+      "notes": "Always throws <code>NotSupportedError</code>.",
+      "partial_implementation": true,
+      "version_added": "79"
+     },
+     "firefox": [
+      {
+       "version_added": "preview"
+      },
+      {
+       "notes": "Always throws <code>NotSupportedError</code>.",
+       "partial_implementation": true,
+       "version_added": "43"
+      },
+      {
+       "flags": [
+        {
+         "name": "dom.screenorientation.allow-lock",
+         "type": "preference",
+         "value_to_set": "true"
+        }
+       ],
+       "version_added": "97"
+      }
+     ],
+     "firefox_android": [
+      {
+       "notes": "The API exists but returns <code>NS_ERROR_UNEXPECTED</code>.",
+       "partial_implementation": true,
+       "version_added": "79",
+       "version_last": "96",
+       "version_removed": "97"
+      },
+      {
+       "version_added": "43",
+       "version_last": "68",
+       "version_removed": "79"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Always throws <code>NotSupportedError</code>.",
+      "partial_implementation": true,
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:screen-orientation-lock"
+    ]
+   }
+  },
+  {
+   "key": "api.ScreenOrientation.unlock",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ScreenOrientation/unlock",
+    "source_file": "api/ScreenOrientation.json",
+    "spec_url": "https://w3c.github.io/screen-orientation/#dom-screenorientation-unlock",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Always throws <code>NotSupportedError</code>.",
+      "partial_implementation": true,
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "edge": {
+      "notes": "Always throws <code>NotSupportedError</code>.",
+      "partial_implementation": true,
+      "version_added": "79"
+     },
+     "firefox": {
+      "notes": "Always throws <code>NotSupportedError</code>.",
+      "partial_implementation": true,
+      "version_added": "43"
+     },
+     "firefox_android": [
+      {
+       "notes": "The API exists but returns <code>NS_ERROR_UNEXPECTED</code>.",
+       "partial_implementation": true,
+       "version_added": "79",
+       "version_last": "96",
+       "version_removed": "97"
+      },
+      {
+       "version_added": "43",
+       "version_last": "68",
+       "version_removed": "79"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Always throws <code>NotSupportedError</code>.",
+      "partial_implementation": true,
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:screen-orientation-lock"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

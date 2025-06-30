@@ -1,0 +1,669 @@
+{
+ "compat_features": [
+  "javascript.builtins.Intl.Segmenter",
+  "javascript.builtins.Intl.Segmenter.Segmenter",
+  "javascript.builtins.Intl.Segmenter.resolvedOptions",
+  "javascript.builtins.Intl.Segmenter.segment",
+  "javascript.builtins.Intl.Segmenter.supportedLocalesOf",
+  "javascript.builtins.Intl.Segments",
+  "javascript.builtins.Intl.Segments.@@iterator",
+  "javascript.builtins.Intl.Segments.containing"
+ ],
+ "description": "The Intl.Segmenter API creates a locale-aware text splitter that can separate a string into meaningful graphemes, words, or sentences.",
+ "description_html": "The <code>Intl.Segmenter</code> API creates a locale-aware text splitter that can separate a string into meaningful graphemes, words, or sentences.",
+ "group": "intl",
+ "name": "Intl.Segmenter",
+ "spec": [
+  {
+   "url": "https://tc39.es/ecma402/#segmenter-objects",
+   "seriesComposition": "full",
+   "shortname": "ecma-402",
+   "series": {
+    "shortname": "ecma-402",
+    "currentSpecification": "ecma-402",
+    "title": "ECMAScript® 2026 Internationalization API Specification",
+    "shortTitle": "ECMAScript® 2026 Internationalization API",
+    "nightlyUrl": "https://tc39.es/ecma402/"
+   },
+   "tests": {
+    "repository": "https://github.com/tc39/test262",
+    "testPaths": [
+     "test/intl402"
+    ]
+   },
+   "organization": "Ecma International",
+   "groups": [
+    {
+     "name": "TC39",
+     "url": "https://tc39.es/"
+    }
+   ],
+   "nightly": {
+    "url": "https://tc39.es/ecma402/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/tc39/ecma402",
+    "sourcePath": "spec/index.html",
+    "filename": "index.html"
+   },
+   "title": "ECMAScript® 2026 Internationalization API Specification",
+   "source": "spec",
+   "shortTitle": "ECMAScript® 2026 Internationalization API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": "segmenter-objects"
+  }
+ ],
+ "status": {
+  "baseline": "low",
+  "baseline_low_date": "2024-04-16",
+  "support": {
+   "chrome": "87",
+   "chrome_android": "87",
+   "edge": "87",
+   "firefox": "125",
+   "firefox_android": "125",
+   "safari": "14.1",
+   "safari_ios": "14.5"
+  }
+ },
+ "id": "intl-segmenter",
+ "groups": [
+  "intl"
+ ],
+ "groupPaths": [
+  [
+   "JavaScript",
+   "Internationalization"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Intl.Segmenter",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "stateOfSurveys": [
+  {
+   "name": "State of HTML 2024",
+   "link": "https://2024.stateofhtml.com/en-US/features/#all_features",
+   "question": "features",
+   "subQuestion": "all_features",
+   "path": "dataAPI.surveys.state_of_html.html2024.features.all_features.26.entity"
+  },
+  {
+   "name": "State of HTML 2024",
+   "link": "https://2024.stateofhtml.com/en-US/content/#content_features",
+   "question": "content",
+   "subQuestion": "content_features",
+   "path": "dataAPI.surveys.state_of_html.html2024.content.content_features.11.entity"
+  },
+  {
+   "name": "State of HTML 2023",
+   "link": "https://2023.stateofhtml.com/en-US/content/#i18n_features",
+   "question": "content",
+   "subQuestion": "i18n_features",
+   "path": "dataAPI.surveys.state_of_html.html2023.content.i18n_features.responses.currentEdition.buckets.10.entity"
+  }
+ ],
+ "useCounters": {
+  "percentageOfPageLoad": 0.01679231,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/129"
+ },
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "javascript.builtins.Intl.Segmenter",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter",
+    "source_file": "javascript/builtins/Intl/Segmenter.json",
+    "spec_url": "https://tc39.es/ecma402/#segmenter-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "deno": {
+      "version_added": "1.8"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "125"
+     },
+     "firefox_android": {
+      "version_added": "125"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "16.0.0"
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:intl-segmenter"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Intl.Segmenter.Segmenter",
+   "compat": {
+    "description": "<code>Segmenter()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter",
+    "source_file": "javascript/builtins/Intl/Segmenter.json",
+    "spec_url": "https://tc39.es/ecma402/#sec-intl-segmenter-constructor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "deno": {
+      "version_added": "1.8"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "125"
+     },
+     "firefox_android": {
+      "version_added": "125"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "16.0.0"
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:intl-segmenter"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Intl.Segmenter.resolvedOptions",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions",
+    "source_file": "javascript/builtins/Intl/Segmenter.json",
+    "spec_url": "https://tc39.es/ecma402/#sec-intl.segmenter.prototype.resolvedoptions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "deno": {
+      "version_added": "1.8"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "125"
+     },
+     "firefox_android": {
+      "version_added": "125"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "16.0.0"
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:intl-segmenter"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Intl.Segmenter.segment",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment",
+    "source_file": "javascript/builtins/Intl/Segmenter.json",
+    "spec_url": "https://tc39.es/ecma402/#sec-intl.segmenter.prototype.segment",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "deno": {
+      "version_added": "1.8"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "125"
+     },
+     "firefox_android": {
+      "version_added": "125"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "16.0.0"
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:intl-segmenter"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Intl.Segmenter.supportedLocalesOf",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf",
+    "source_file": "javascript/builtins/Intl/Segmenter.json",
+    "spec_url": "https://tc39.es/ecma402/#sec-intl.segmenter.supportedlocalesof",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "deno": {
+      "version_added": "1.8"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "125"
+     },
+     "firefox_android": {
+      "version_added": "125"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "16.0.0"
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:intl-segmenter"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Intl.Segments",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments",
+    "source_file": "javascript/builtins/Intl/Segments.json",
+    "spec_url": "https://tc39.es/ecma402/#sec-segments-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "deno": {
+      "version_added": "1.8"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "125"
+     },
+     "firefox_android": {
+      "version_added": "125"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "16.0.0"
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:intl-segmenter"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Intl.Segments.@@iterator",
+   "compat": {
+    "description": "[Symbol.iterator]",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator",
+    "source_file": "javascript/builtins/Intl/Segments.json",
+    "spec_url": "https://tc39.es/ecma402/#sec-%intlsegmentsprototype%-%symbol.iterator%",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "deno": {
+      "version_added": "1.8"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "125"
+     },
+     "firefox_android": {
+      "version_added": "125"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "16.0.0"
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:intl-segmenter"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Intl.Segments.containing",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing",
+    "source_file": "javascript/builtins/Intl/Segments.json",
+    "spec_url": "https://tc39.es/ecma402/#sec-%segmentsprototype%.containing",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "deno": {
+      "version_added": "1.8"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "125"
+     },
+     "firefox_android": {
+      "version_added": "125"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "16.0.0"
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:intl-segmenter"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "javascript"
+ ],
+ "baselineLowDateAsObject": "2024-04-16T00:00:00.000Z",
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

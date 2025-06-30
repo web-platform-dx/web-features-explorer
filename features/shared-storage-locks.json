@@ -1,0 +1,684 @@
+{
+ "compat_features": [
+  "api.SharedStorage.batchUpdate",
+  "api.SharedStorageAppendMethod",
+  "api.SharedStorageAppendMethod.SharedStorageAppendMethod",
+  "api.SharedStorageClearMethod",
+  "api.SharedStorageClearMethod.SharedStorageClearMethod",
+  "api.SharedStorageDeleteMethod",
+  "api.SharedStorageDeleteMethod.SharedStorageDeleteMethod",
+  "api.SharedStorageModifierMethod",
+  "api.SharedStorageSetMethod",
+  "api.SharedStorageSetMethod.SharedStorageSetMethod"
+ ],
+ "description": "The withLock option to set(), append(), delete(), clear(), and batchUpdate() methods of the sharedStorage API prevents duplicate reporting from cross-site race conditions.",
+ "description_html": "The <code>withLock</code> option to <code>set()</code>, <code>append()</code>, <code>delete()</code>, <code>clear()</code>, and <code>batchUpdate()</code> methods of the <code>sharedStorage</code> API prevents duplicate reporting from cross-site race conditions.",
+ "name": "Shared storage locks",
+ "spec": [
+  {
+   "url": "https://wicg.github.io/shared-storage/#web-locks-integration",
+   "seriesComposition": "full",
+   "shortname": "shared-storage",
+   "series": {
+    "shortname": "shared-storage",
+    "currentSpecification": "shared-storage",
+    "title": "Shared Storage API",
+    "shortTitle": "Shared Storage API",
+    "nightlyUrl": "https://wicg.github.io/shared-storage/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Platform Incubator Community Group",
+     "url": "https://www.w3.org/community/wicg/"
+    }
+   ],
+   "nightly": {
+    "url": "https://wicg.github.io/shared-storage/",
+    "status": "Draft Community Group Report",
+    "alternateUrls": [],
+    "repository": "https://github.com/WICG/shared-storage",
+    "sourcePath": "spec.bs",
+    "filename": "index.html"
+   },
+   "title": "Shared Storage API",
+   "source": "spec",
+   "shortTitle": "Shared Storage API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": "web-locks-integration"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "134",
+   "chrome_android": "134",
+   "edge": "134"
+  }
+ },
+ "id": "shared-storage-locks",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.SharedStorage.batchUpdate",
+   "compat": {
+    "source_file": "api/SharedStorage.json",
+    "spec_url": "https://wicg.github.io/shared-storage/#dom-sharedstorage-batchupdate",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "134"
+     },
+     "chrome_android": {
+      "version_added": "134"
+     },
+     "edge": {
+      "version_added": "134"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "119"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:shared-storage-locks"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedStorageAppendMethod",
+   "compat": {
+    "source_file": "api/SharedStorageAppendMethod.json",
+    "spec_url": "https://wicg.github.io/shared-storage/#sharedstorageappendmethod",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "134"
+     },
+     "chrome_android": {
+      "version_added": "134"
+     },
+     "edge": {
+      "version_added": "134"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "119"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:shared-storage-locks"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedStorageAppendMethod.SharedStorageAppendMethod",
+   "compat": {
+    "description": "<code>SharedStorageAppendMethod()</code> constructor",
+    "source_file": "api/SharedStorageAppendMethod.json",
+    "spec_url": "https://wicg.github.io/shared-storage/#dom-sharedstorageappendmethod-sharedstorageappendmethod",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "134"
+     },
+     "chrome_android": {
+      "version_added": "134"
+     },
+     "edge": {
+      "version_added": "134"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "119"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:shared-storage-locks"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedStorageClearMethod",
+   "compat": {
+    "source_file": "api/SharedStorageClearMethod.json",
+    "spec_url": "https://wicg.github.io/shared-storage/#sharedstorageclearmethod",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "134"
+     },
+     "chrome_android": {
+      "version_added": "134"
+     },
+     "edge": {
+      "version_added": "134"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "119"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:shared-storage-locks"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedStorageClearMethod.SharedStorageClearMethod",
+   "compat": {
+    "description": "<code>SharedStorageClearMethod()</code> constructor",
+    "source_file": "api/SharedStorageClearMethod.json",
+    "spec_url": "https://wicg.github.io/shared-storage/#dom-sharedstorageclearmethod-sharedstorageclearmethod",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "134"
+     },
+     "chrome_android": {
+      "version_added": "134"
+     },
+     "edge": {
+      "version_added": "134"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "119"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:shared-storage-locks"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedStorageDeleteMethod",
+   "compat": {
+    "source_file": "api/SharedStorageDeleteMethod.json",
+    "spec_url": "https://wicg.github.io/shared-storage/#sharedstoragedeletemethod",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "134"
+     },
+     "chrome_android": {
+      "version_added": "134"
+     },
+     "edge": {
+      "version_added": "134"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "119"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:shared-storage-locks"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedStorageDeleteMethod.SharedStorageDeleteMethod",
+   "compat": {
+    "description": "<code>SharedStorageDeleteMethod()</code> constructor",
+    "source_file": "api/SharedStorageDeleteMethod.json",
+    "spec_url": "https://wicg.github.io/shared-storage/#dom-sharedstoragedeletemethod-sharedstoragedeletemethod",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "134"
+     },
+     "chrome_android": {
+      "version_added": "134"
+     },
+     "edge": {
+      "version_added": "134"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "119"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:shared-storage-locks"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedStorageModifierMethod",
+   "compat": {
+    "source_file": "api/SharedStorageModifierMethod.json",
+    "spec_url": "https://wicg.github.io/shared-storage/#sharedstoragemodifiermethod",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "134"
+     },
+     "chrome_android": {
+      "version_added": "134"
+     },
+     "edge": {
+      "version_added": "134"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "119"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:shared-storage-locks"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedStorageSetMethod",
+   "compat": {
+    "source_file": "api/SharedStorageSetMethod.json",
+    "spec_url": "https://wicg.github.io/shared-storage/#sharedstoragesetmethod",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "134"
+     },
+     "chrome_android": {
+      "version_added": "134"
+     },
+     "edge": {
+      "version_added": "134"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "119"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:shared-storage-locks"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedStorageSetMethod.SharedStorageSetMethod",
+   "compat": {
+    "description": "<code>SharedStorageSetMethod()</code> constructor",
+    "source_file": "api/SharedStorageSetMethod.json",
+    "spec_url": "https://wicg.github.io/shared-storage/#dom-sharedstoragesetmethod-sharedstoragesetmethod",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "134"
+     },
+     "chrome_android": {
+      "version_added": "134"
+     },
+     "edge": {
+      "version_added": "134"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "119"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:shared-storage-locks"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

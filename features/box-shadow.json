@@ -1,0 +1,454 @@
+{
+ "caniuse": "css-boxshadow",
+ "compat_features": [
+  "css.properties.box-shadow",
+  "css.properties.box-shadow.inset",
+  "css.properties.box-shadow.multiple_shadows",
+  "css.properties.box-shadow.spread_radius"
+ ],
+ "description": "The box-shadow CSS property applies shadow effects around an element's frame. This can create drop shadow and inner shadow effects.",
+ "description_html": "The <code>box-shadow</code> CSS property applies shadow effects around an element's frame. This can create drop shadow and inner shadow effects.",
+ "group": "background",
+ "name": "box-shadow",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css-backgrounds-3/#box-shadow",
+   "seriesComposition": "full",
+   "shortname": "css-backgrounds-3",
+   "series": {
+    "shortname": "css-backgrounds",
+    "currentSpecification": "css-backgrounds-3",
+    "title": "CSS Backgrounds and Borders",
+    "shortTitle": "CSS Backgrounds",
+    "releaseUrl": "https://www.w3.org/TR/css-backgrounds/",
+    "nightlyUrl": "https://drafts.csswg.org/css-backgrounds/"
+   },
+   "seriesVersion": "3",
+   "shortTitle": "CSS Backgrounds 3",
+   "seriesNext": "css-backgrounds-4",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-backgrounds-3/",
+    "status": "Candidate Recommendation Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-backgrounds-3/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-backgrounds-3/",
+     "https://w3c.github.io/csswg-drafts/css-backgrounds/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-backgrounds-3/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Backgrounds and Borders Module Level 3",
+   "source": "w3c",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-backgrounds"
+    ]
+   },
+   "fragment": "box-shadow"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "10",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "4",
+   "firefox_android": "4",
+   "safari": "5.1",
+   "safari_ios": "5"
+  }
+ },
+ "id": "box-shadow",
+ "groups": [
+  "background"
+ ],
+ "groupPaths": [
+  [
+   "CSS",
+   "Background"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "box-shadow",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/box-shadow"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "css.properties.box-shadow",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/box-shadow",
+    "source_file": "css/properties/box-shadow.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds/#box-shadow",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "notes": "Shadows affect layout in this browser. For example, if you cast an outer shadow to a box with a <code>width</code> of <code>100%</code>, then you'll see a scrollbar.",
+       "version_added": "10"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "chrome_android": [
+      {
+       "notes": "Shadows affect layout in this browser. For example, if you cast an outer shadow to a box with a <code>width</code> of <code>100%</code>, then you'll see a scrollbar.",
+       "version_added": "18"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "notes": "Shadows affect layout in this browser. For example, if you cast an outer shadow to a box with a <code>width</code> of <code>100%</code>, then you'll see a scrollbar.",
+       "version_added": "4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "49"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "3.5",
+       "version_last": "12",
+       "version_removed": "13"
+      }
+     ],
+     "firefox_android": [
+      {
+       "notes": "Shadows affect layout in this browser. For example, if you cast an outer shadow to a box with a <code>width</code> of <code>100%</code>, then you'll see a scrollbar.",
+       "version_added": "4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "49"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "4",
+       "version_last": "10",
+       "version_removed": "14"
+      }
+     ],
+     "ie": {
+      "notes": [
+       "To use <code>box-shadow</code> in Internet Explorer 9 or later, you must set <a href=\"https://developer.mozilla.org/docs/Web/CSS/border-collapse\"><code>border-collapse</code></a> to <code>separate</code>.",
+       "Since version 5.5, Internet Explorer supports Microsoft's <a href=\"https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms532985(v=vs.85)\">DropShadow</a> and <a href=\"https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms533086(v=vs.85)\">Shadow Filter</a>. You can use this proprietary extension to cast a drop shadow (though the syntax and the effect are different from CSS3)"
+      ],
+      "version_added": "9"
+     },
+     "oculus": [
+      {
+       "notes": "Shadows affect layout in this browser. For example, if you cast an outer shadow to a box with a <code>width</code> of <code>100%</code>, then you'll see a scrollbar.",
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": {
+      "notes": "Shadows affect layout in this browser. For example, if you cast an outer shadow to a box with a <code>width</code> of <code>100%</code>, then you'll see a scrollbar.",
+      "version_added": "10.5"
+     },
+     "opera_android": [
+      {
+       "notes": "Shadows affect layout in this browser. For example, if you cast an outer shadow to a box with a <code>width</code> of <code>100%</code>, then you'll see a scrollbar.",
+       "version_added": "14"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "notes": "Shadows affect layout in this browser. For example, if you cast an outer shadow to a box with a <code>width</code> of <code>100%</code>, then you'll see a scrollbar.",
+       "version_added": "5.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3"
+      }
+     ],
+     "safari_ios": [
+      {
+       "notes": "Shadows affect layout in this browser. For example, if you cast an outer shadow to a box with a <code>width</code> of <code>100%</code>, then you'll see a scrollbar.",
+       "version_added": "5"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "notes": "Shadows affect layout in this browser. For example, if you cast an outer shadow to a box with a <code>width</code> of <code>100%</code>, then you'll see a scrollbar.",
+       "version_added": "1.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "notes": "Shadows affect layout in this browser. For example, if you cast an outer shadow to a box with a <code>width</code> of <code>100%</code>, then you'll see a scrollbar.",
+       "version_added": "4.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "notes": "Shadows affect layout in this browser. For example, if you cast an outer shadow to a box with a <code>width</code> of <code>100%</code>, then you'll see a scrollbar.",
+       "version_added": "5"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:box-shadow"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.box-shadow.inset",
+   "compat": {
+    "source_file": "css/properties/box-shadow.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "notes": "<code>inset</code> must be the last keyword in the declaration.",
+      "partial_implementation": true,
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10.5"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4.2"
+     }
+    },
+    "tags": [
+     "web-features:box-shadow"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.box-shadow.multiple_shadows",
+   "compat": {
+    "description": "Multiple shadows",
+    "source_file": "css/properties/box-shadow.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10.5"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:box-shadow"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.box-shadow.spread_radius",
+   "compat": {
+    "description": "Spread radius",
+    "source_file": "css/properties/box-shadow.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10.5"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4.2"
+     }
+    },
+    "tags": [
+     "web-features:box-shadow"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "css"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

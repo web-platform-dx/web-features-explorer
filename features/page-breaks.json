@@ -1,0 +1,2266 @@
+{
+ "compat_features": [
+  "css.properties.break-after",
+  "css.properties.break-after.always",
+  "css.properties.break-after.auto",
+  "css.properties.break-after.avoid",
+  "css.properties.break-after.avoid-page",
+  "css.properties.break-after.left",
+  "css.properties.break-after.page",
+  "css.properties.break-after.paged_context",
+  "css.properties.break-after.paged_context.avoid-page",
+  "css.properties.break-after.paged_context.page",
+  "css.properties.break-after.paged_context.recto",
+  "css.properties.break-after.recto",
+  "css.properties.break-after.right",
+  "css.properties.break-after.verso",
+  "css.properties.break-before",
+  "css.properties.break-before.always",
+  "css.properties.break-before.auto",
+  "css.properties.break-before.avoid",
+  "css.properties.break-before.avoid-page",
+  "css.properties.break-before.left",
+  "css.properties.break-before.page",
+  "css.properties.break-before.paged_context",
+  "css.properties.break-before.paged_context.page",
+  "css.properties.break-before.paged_context.recto",
+  "css.properties.break-before.recto",
+  "css.properties.break-before.right",
+  "css.properties.break-before.verso",
+  "css.properties.break-inside",
+  "css.properties.break-inside.auto",
+  "css.properties.break-inside.avoid",
+  "css.properties.break-inside.avoid-page",
+  "css.properties.break-inside.paged_context",
+  "css.properties.break-inside.paged_context.avoid-page"
+ ],
+ "description": "In printed page layouts, the break-after, break-before, break-inside CSS properties control where printed pages start and end. Also known as pagination or page breaking.",
+ "description_html": "In printed page layouts, the <code>break-after</code>, <code>break-before</code>, <code>break-inside</code> CSS properties control where printed pages start and end. Also known as pagination or page breaking.",
+ "group": "layout",
+ "name": "Page breaks",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css-break-4/#breaking-controls",
+   "seriesComposition": "full",
+   "shortname": "css-break-4",
+   "series": {
+    "shortname": "css-break",
+    "currentSpecification": "css-break-3",
+    "title": "CSS Fragmentation",
+    "shortTitle": "CSS Fragmentation",
+    "releaseUrl": "https://www.w3.org/TR/css-break/",
+    "nightlyUrl": "https://drafts.csswg.org/css-break/"
+   },
+   "seriesVersion": "4",
+   "seriesPrevious": "css-break-3",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-break-4/",
+    "status": "First Public Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-break-4/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-break-4/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-break-4/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Fragmentation Module Level 4",
+   "source": "w3c",
+   "shortTitle": "CSS Fragmentation 4",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-break"
+    ]
+   },
+   "fragment": "breaking-controls"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2021-07-29",
+  "baseline_low_date": "2019-01-29",
+  "support": {
+   "chrome": "50",
+   "chrome_android": "50",
+   "edge": "12",
+   "firefox": "65",
+   "firefox_android": "65",
+   "safari": "10",
+   "safari_ios": "10"
+  }
+ },
+ "id": "page-breaks",
+ "groups": [
+  "layout"
+ ],
+ "groupPaths": [
+  [
+   "CSS",
+   "Layout"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "break-after",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/break-after"
+  },
+  {
+   "title": "break-before",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/break-before"
+  },
+  {
+   "title": "break-inside",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/break-inside"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "css.properties.break-after",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/break-after",
+    "source_file": "css/properties/break-after.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css-break/#break-between",
+     "https://drafts.csswg.org/css-regions/#region-flow-break",
+     "https://drafts.csswg.org/css-multicol/#break-before-break-after-break-inside"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "37"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12",
+       "version_removed": "12.1"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "37"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12",
+       "version_removed": "12.1"
+      }
+     ],
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-after.always",
+   "compat": {
+    "source_file": "css/properties/break-after.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-after.auto",
+   "compat": {
+    "source_file": "css/properties/break-after.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-after.avoid",
+   "compat": {
+    "source_file": "css/properties/break-after.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/775617",
+      "notes": "The value is recognized, but has no effect. See <a href=\"https://bugzil.la/1972340\">bug 1972340</a>.",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/775617",
+      "notes": "The value is recognized, but has no effect. See <a href=\"https://bugzil.la/1972340\">bug 1972340</a>.",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/34155",
+      "notes": "The value is recognized, but has no effect. See <a href=\"https://webkit.org/b/294559\">bug 294559</a>.",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/34155",
+      "notes": "The value is recognized, but has no effect. See <a href=\"https://webkit.org/b/294559\">bug 294559</a>.",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/34155",
+      "notes": "The value is recognized, but has no effect. See <a href=\"https://webkit.org/b/294559\">bug 294559</a>.",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-after.avoid-page",
+   "compat": {
+    "source_file": "css/properties/break-after.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-after.left",
+   "compat": {
+    "source_file": "css/properties/break-after.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-after.page",
+   "compat": {
+    "source_file": "css/properties/break-after.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-after.paged_context",
+   "compat": {
+    "description": "Supported in Paged Media",
+    "source_file": "css/properties/break-after.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css-break/#break-between",
+     "https://drafts.csswg.org/css-regions/#region-flow-break",
+     "https://drafts.csswg.org/css-multicol/#break-before-break-after-break-inside"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "37"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12",
+       "version_removed": "12.1"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "37"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12",
+       "version_removed": "12.1"
+      }
+     ],
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-after.paged_context.avoid-page",
+   "compat": {
+    "source_file": "css/properties/break-after.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "11.1",
+      "version_last": "12",
+      "version_removed": "12.1"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-after.paged_context.page",
+   "compat": {
+    "source_file": "css/properties/break-after.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "11.1",
+      "version_last": "12",
+      "version_removed": "12.1"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-after.paged_context.recto",
+   "compat": {
+    "description": "<code>recto</code> and <code>verso</code>",
+    "source_file": "css/properties/break-after.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "edge": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "opera": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-after.recto",
+   "compat": {
+    "source_file": "css/properties/break-after.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-after.right",
+   "compat": {
+    "source_file": "css/properties/break-after.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-after.verso",
+   "compat": {
+    "source_file": "css/properties/break-after.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-before",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/break-before",
+    "source_file": "css/properties/break-before.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css-break/#break-between",
+     "https://drafts.csswg.org/css-regions/#region-flow-break",
+     "https://drafts.csswg.org/css-multicol/#break-before-break-after-break-inside"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "37"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12",
+       "version_removed": "12.1"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "37"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12",
+       "version_removed": "12.1"
+      }
+     ],
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-before.always",
+   "compat": {
+    "source_file": "css/properties/break-before.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-before.auto",
+   "compat": {
+    "source_file": "css/properties/break-before.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-before.avoid",
+   "compat": {
+    "source_file": "css/properties/break-before.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/775617",
+      "notes": "The value is recognized, but has no effect. See <a href=\"https://bugzil.la/1972340\">bug 1972340</a>.",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/775617",
+      "notes": "The value is recognized, but has no effect. See <a href=\"https://bugzil.la/1972340\">bug 1972340</a>.",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/34155",
+      "notes": "The value is recognized, but has no effect. See <a href=\"https://webkit.org/b/294559\">bug 294559</a>.",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/34155",
+      "notes": "The value is recognized, but has no effect. See <a href=\"https://webkit.org/b/294559\">bug 294559</a>.",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/34155",
+      "notes": "The value is recognized, but has no effect. See <a href=\"https://webkit.org/b/294559\">bug 294559</a>.",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-before.avoid-page",
+   "compat": {
+    "source_file": "css/properties/break-before.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-before.left",
+   "compat": {
+    "source_file": "css/properties/break-before.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-before.page",
+   "compat": {
+    "source_file": "css/properties/break-before.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-before.paged_context",
+   "compat": {
+    "description": "Supported in Paged Media",
+    "source_file": "css/properties/break-before.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css-break/#break-between",
+     "https://drafts.csswg.org/css-regions/#region-flow-break",
+     "https://drafts.csswg.org/css-multicol/#break-before-break-after-break-inside"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "37"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12",
+       "version_removed": "12.1"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "37"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12",
+       "version_removed": "12.1"
+      }
+     ],
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-before.paged_context.page",
+   "compat": {
+    "description": "<code>page</code> and <code>avoid-page</code>",
+    "source_file": "css/properties/break-before.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "11.1",
+      "version_last": "12",
+      "version_removed": "12.1"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-before.paged_context.recto",
+   "compat": {
+    "description": "<code>recto</code> and <code>verso</code>",
+    "source_file": "css/properties/break-before.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "edge": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "opera": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40438447",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-before.recto",
+   "compat": {
+    "source_file": "css/properties/break-before.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-before.right",
+   "compat": {
+    "source_file": "css/properties/break-before.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-before.verso",
+   "compat": {
+    "source_file": "css/properties/break-before.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-inside",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/break-inside",
+    "source_file": "css/properties/break-inside.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css-break/#break-within",
+     "https://drafts.csswg.org/css-regions/#region-flow-break",
+     "https://drafts.csswg.org/css-multicol/#break-before-break-after-break-inside"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "37"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12",
+       "version_removed": "12.1"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "37"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12",
+       "version_removed": "12.1"
+      }
+     ],
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-inside.auto",
+   "compat": {
+    "source_file": "css/properties/break-inside.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-inside.avoid",
+   "compat": {
+    "source_file": "css/properties/break-inside.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-inside.avoid-page",
+   "compat": {
+    "source_file": "css/properties/break-inside.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "92"
+     },
+     "firefox_android": {
+      "version_added": "92"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-inside.paged_context",
+   "compat": {
+    "description": "Supported in Paged Media",
+    "source_file": "css/properties/break-inside.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css-break/#break-within",
+     "https://drafts.csswg.org/css-regions/#region-flow-break",
+     "https://drafts.csswg.org/css-multicol/#break-before-break-after-break-inside"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "37"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12",
+       "version_removed": "12.1"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "37"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12",
+       "version_removed": "12.1"
+      }
+     ],
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.break-inside.paged_context.avoid-page",
+   "compat": {
+    "source_file": "css/properties/break-inside.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "92"
+     },
+     "firefox_android": {
+      "version_added": "92"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "38"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12",
+       "version_removed": "12.1"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "41"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12",
+       "version_removed": "12.1"
+      }
+     ],
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:page-breaks"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "css"
+ ],
+ "baselineLowDateAsObject": "2019-01-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2021-07-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [
+   "https://crbug.com/40438447"
+  ],
+  "chrome_android": [
+   "https://crbug.com/40438447"
+  ],
+  "edge": [
+   "https://crbug.com/40438447"
+  ],
+  "firefox": [
+   "https://bugzil.la/775617"
+  ],
+  "firefox_android": [
+   "https://bugzil.la/775617"
+  ],
+  "safari": [
+   "https://webkit.org/b/34155"
+  ],
+  "safari_ios": [
+   "https://webkit.org/b/34155"
+  ]
+ }
+}

@@ -1,0 +1,1137 @@
+{
+ "compat_features": [
+  "api.HTMLImageElement.fetchPriority",
+  "api.HTMLLinkElement.fetchPriority",
+  "api.HTMLScriptElement.fetchPriority",
+  "api.Request.Request.init_priority_parameter",
+  "api.fetch.init_priority_parameter",
+  "html.elements.img.fetchpriority",
+  "html.elements.link.fetchpriority",
+  "html.elements.script.fetchpriority",
+  "http.headers.Link.fetchpriority",
+  "svg.elements.feImage.fetchpriority",
+  "svg.elements.image.fetchpriority",
+  "svg.elements.script.fetchpriority"
+ ],
+ "description": "The fetch() priority option and the fetchpriority HTML attribute give hints to the browser about which requests to do before other requests of the same type.",
+ "description_html": "The <code>fetch()</code> <code>priority</code> option and the <code>fetchpriority</code> HTML attribute give hints to the browser about which requests to do before other requests of the same type.",
+ "name": "Fetch priority",
+ "spec": [
+  {
+   "url": "https://fetch.spec.whatwg.org/#request-priority",
+   "seriesComposition": "full",
+   "shortname": "fetch",
+   "series": {
+    "shortname": "fetch",
+    "currentSpecification": "fetch",
+    "title": "Fetch",
+    "shortTitle": "Fetch",
+    "nightlyUrl": "https://fetch.spec.whatwg.org/"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "Fetch Workstream",
+     "url": "https://fetch.spec.whatwg.org/"
+    }
+   ],
+   "nightly": {
+    "url": "https://fetch.spec.whatwg.org/",
+    "status": "Living Standard",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/fetch",
+    "sourcePath": "fetch.bs",
+    "filename": "index.html"
+   },
+   "title": "Fetch",
+   "source": "whatwg",
+   "shortTitle": "Fetch",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "cors",
+     "fetch"
+    ],
+    "excludePaths": [
+     "fetch/fetch-later",
+     "fetch/local-network-access",
+     "fetch/metadata",
+     "fetch/private-network-access"
+    ]
+   },
+   "fragment": "request-priority"
+  },
+  {
+   "url": "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#fetch-priority-attributes",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "fetch-priority-attributes"
+  }
+ ],
+ "status": {
+  "baseline": "low",
+  "baseline_low_date": "2024-10-29",
+  "support": {
+   "chrome": "103",
+   "chrome_android": "103",
+   "edge": "103",
+   "firefox": "132",
+   "firefox_android": "132",
+   "safari": "17.2",
+   "safari_ios": "17.2"
+  }
+ },
+ "id": "fetch-priority",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "<script>: The Script element",
+   "anchor": "fetchpriority",
+   "url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script#fetchpriority"
+  },
+  {
+   "title": "<link>: The External Resource Link element",
+   "anchor": "fetchpriority",
+   "url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#fetchpriority"
+  },
+  {
+   "title": "<img>: The Image Embed element",
+   "anchor": "fetchpriority",
+   "url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/img#fetchpriority"
+  },
+  {
+   "title": "Window: fetch() method",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Window/fetch"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "stateOfSurveys": [
+  {
+   "name": "State of HTML 2024",
+   "link": "https://2024.stateofhtml.com/en-US/features/#all_features",
+   "question": "features",
+   "subQuestion": "all_features",
+   "path": "dataAPI.surveys.state_of_html.html2024.features.all_features.19.entity"
+  },
+  {
+   "name": "State of HTML 2024",
+   "link": "https://2024.stateofhtml.com/en-US/content/#content_features",
+   "question": "content",
+   "subQuestion": "content_features",
+   "path": "dataAPI.surveys.state_of_html.html2024.content.content_features.4.entity"
+  },
+  {
+   "name": "State of HTML 2023",
+   "link": "https://2023.stateofhtml.com/en-US/features/#reading_list",
+   "question": "reading_list",
+   "subQuestion": "reading_list",
+   "path": "dataAPI.surveys.state_of_html.html2023.reading_list.reading_list.responses.currentEdition.buckets.14.entity"
+  },
+  {
+   "name": "State of HTML 2023",
+   "link": "https://2023.stateofhtml.com/en-US/features/#all_features",
+   "question": "features",
+   "subQuestion": "all_features",
+   "path": "dataAPI.surveys.state_of_html.html2023.features.all_features.16.entity"
+  },
+  {
+   "name": "State of HTML 2023",
+   "link": "https://2023.stateofhtml.com/en-US/content/#content_features",
+   "question": "content",
+   "subQuestion": "content_features",
+   "path": "dataAPI.surveys.state_of_html.html2023.content.content_features.4.entity"
+  }
+ ],
+ "useCounters": {
+  "percentageOfPageLoad": 0.28525022,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/268"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.HTMLImageElement.fetchPriority",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLImageElement/fetchPriority",
+    "source_file": "api/HTMLImageElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/embedded-content.html#dom-img-fetchpriority",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "102"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "101",
+       "version_last": "101",
+       "version_removed": "102"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "102"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "101",
+       "version_last": "101",
+       "version_removed": "102"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "102"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "101",
+       "version_last": "101",
+       "version_removed": "102"
+      }
+     ],
+     "firefox": {
+      "impl_url": "https://bugzil.la/1797715",
+      "version_added": "132"
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1797715",
+      "version_added": "132"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": [
+      {
+       "version_added": "88"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "87",
+       "version_last": "87",
+       "version_removed": "88"
+      }
+     ],
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "17.2"
+     },
+     "safari_ios": {
+      "version_added": "17.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": [
+      {
+       "version_added": "102"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "101",
+       "version_last": "101",
+       "version_removed": "102"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "17.2"
+     }
+    },
+    "tags": [
+     "web-features:fetch-priority"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLLinkElement.fetchPriority",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLLinkElement/fetchPriority",
+    "source_file": "api/HTMLLinkElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/semantics.html#dom-link-fetchpriority",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "102"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "101",
+       "version_last": "101",
+       "version_removed": "102"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "102"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "101",
+       "version_last": "101",
+       "version_removed": "102"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "102"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "101",
+       "version_last": "101",
+       "version_removed": "102"
+      }
+     ],
+     "firefox": {
+      "impl_url": "https://bugzil.la/1797715",
+      "version_added": "132"
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1797715",
+      "version_added": "132"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": [
+      {
+       "version_added": "88"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "87",
+       "version_last": "87",
+       "version_removed": "88"
+      }
+     ],
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "17.2"
+     },
+     "safari_ios": {
+      "version_added": "17.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": [
+      {
+       "version_added": "102"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "101",
+       "version_last": "101",
+       "version_removed": "102"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "17.2"
+     }
+    },
+    "tags": [
+     "web-features:fetch-priority"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLScriptElement.fetchPriority",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLScriptElement/fetchPriority",
+    "source_file": "api/HTMLScriptElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/scripting.html#dom-script-fetchpriority",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "102"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "101",
+       "version_last": "101",
+       "version_removed": "102"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "102"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "101",
+       "version_last": "101",
+       "version_removed": "102"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "102"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "101",
+       "version_last": "101",
+       "version_removed": "102"
+      }
+     ],
+     "firefox": {
+      "impl_url": "https://bugzil.la/1797715",
+      "version_added": "132"
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1797715",
+      "version_added": "132"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": [
+      {
+       "version_added": "88"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "87",
+       "version_last": "87",
+       "version_removed": "88"
+      }
+     ],
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "17.2"
+     },
+     "safari_ios": {
+      "version_added": "17.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": [
+      {
+       "version_added": "102"
+      },
+      {
+       "alternative_name": "fetchpriority",
+       "version_added": "101",
+       "version_last": "101",
+       "version_removed": "102"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "17.2"
+     }
+    },
+    "tags": [
+     "web-features:fetch-priority"
+    ]
+   }
+  },
+  {
+   "key": "api.Request.Request.init_priority_parameter",
+   "compat": {
+    "description": "<code>init.priority</code> parameter",
+    "source_file": "api/Request.json",
+    "spec_url": "https://fetch.spec.whatwg.org/#dom-requestinit-priority",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "132"
+     },
+     "firefox_android": {
+      "version_added": "132"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "17.2"
+     },
+     "safari_ios": {
+      "version_added": "17.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "17.2"
+     }
+    },
+    "tags": [
+     "web-features:fetch-priority"
+    ]
+   }
+  },
+  {
+   "key": "api.fetch.init_priority_parameter",
+   "compat": {
+    "description": "<code>init.priority</code> parameter",
+    "source_file": "api/_globals/fetch.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "132"
+     },
+     "firefox_android": {
+      "version_added": "132"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "17.2"
+     },
+     "safari_ios": {
+      "version_added": "17.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "17.2"
+     }
+    },
+    "tags": [
+     "web-features:fetch-priority"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.img.fetchpriority",
+   "compat": {
+    "source_file": "html/elements/img.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-fetchpriority",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1797715",
+      "version_added": "132"
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1797715",
+      "version_added": "132"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "17.2"
+     },
+     "safari_ios": {
+      "version_added": "17.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "17.2"
+     }
+    },
+    "tags": [
+     "web-features:fetch-priority"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.link.fetchpriority",
+   "compat": {
+    "source_file": "html/elements/link.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-fetchpriority",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "132"
+     },
+     "firefox_android": {
+      "version_added": "132"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "17.2"
+     },
+     "safari_ios": {
+      "version_added": "17.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "17.2"
+     }
+    },
+    "tags": [
+     "web-features:fetch-priority"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.script.fetchpriority",
+   "compat": {
+    "source_file": "html/elements/script.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/scripting.html#attr-script-fetchpriority",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1797715",
+      "version_added": "132"
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1797715",
+      "version_added": "132"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "17.2"
+     },
+     "safari_ios": {
+      "version_added": "17.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "17.2"
+     }
+    },
+    "tags": [
+     "web-features:fetch-priority"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Link.fetchpriority",
+   "compat": {
+    "source_file": "http/headers/Link.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-fetchpriority",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "103"
+     },
+     "chrome_android": {
+      "version_added": "103"
+     },
+     "edge": {
+      "version_added": "103"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1797715",
+      "version_added": "132"
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1797715",
+      "version_added": "132"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "23.0"
+     },
+     "opera": {
+      "version_added": "89"
+     },
+     "opera_android": {
+      "version_added": "71"
+     },
+     "safari": {
+      "version_added": "17.2"
+     },
+     "safari_ios": {
+      "version_added": "17.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": "103"
+     },
+     "webview_ios": {
+      "version_added": "17.2"
+     }
+    },
+    "tags": [
+     "web-features:fetch-priority"
+    ]
+   }
+  },
+  {
+   "key": "svg.elements.feImage.fetchpriority",
+   "compat": {
+    "source_file": "svg/elements/feImage.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fetch-priority"
+    ]
+   }
+  },
+  {
+   "key": "svg.elements.image.fetchpriority",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/fetchpriority",
+    "source_file": "svg/elements/image.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fetch-priority"
+    ]
+   }
+  },
+  {
+   "key": "svg.elements.script.fetchpriority",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/fetchpriority",
+    "source_file": "svg/elements/script.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fetch-priority"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "html",
+  "http",
+  "svg"
+ ],
+ "baselineLowDateAsObject": "2024-10-29T00:00:00.000Z",
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

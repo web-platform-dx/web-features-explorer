@@ -1,0 +1,707 @@
+{
+ "compat_features": [
+  "css.selectors.buffering",
+  "css.selectors.muted",
+  "css.selectors.paused",
+  "css.selectors.playing",
+  "css.selectors.seeking",
+  "css.selectors.stalled",
+  "css.selectors.volume-locked"
+ ],
+ "description": "The :playing, :paused, :seeking, :buffering, :stalled, :muted, and :volume-locked CSS pseudo-classes match <audio> and <video> elements based on their state.",
+ "description_html": "The <code>:playing</code>, <code>:paused</code>, <code>:seeking</code>, <code>:buffering</code>, <code>:stalled</code>, <code>:muted</code>, and <code>:volume-locked</code> CSS pseudo-classes match <code>&#x3C;audio></code> and <code>&#x3C;video></code> elements based on their state.",
+ "group": "media-elements",
+ "name": "Media element pseudo-classes",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/selectors-4/#resource-pseudos",
+   "seriesComposition": "full",
+   "shortname": "selectors-4",
+   "series": {
+    "shortname": "selectors",
+    "currentSpecification": "selectors-4",
+    "title": "Selectors",
+    "shortTitle": "Selectors",
+    "releaseUrl": "https://www.w3.org/TR/selectors/",
+    "nightlyUrl": "https://drafts.csswg.org/selectors/"
+   },
+   "seriesVersion": "4",
+   "seriesPrevious": "selectors-3",
+   "seriesNext": "selectors-5",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/selectors-4/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/selectors-4/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/selectors-4/",
+     "https://w3c.github.io/csswg-drafts/selectors/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "selectors-4/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "Selectors Level 4",
+   "source": "w3c",
+   "shortTitle": "Selectors 4",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/selectors"
+    ]
+   },
+   "fragment": "resource-pseudos"
+  },
+  {
+   "url": "https://html.spec.whatwg.org/multipage/semantics-other.html#pseudo-classes",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "pseudo-classes"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "safari": "15.4",
+   "safari_ios": "15.4"
+  }
+ },
+ "id": "media-pseudos",
+ "groups": [
+  "media-elements"
+ ],
+ "groupPaths": [
+  [
+   "HTML",
+   "Media elements"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": ":paused",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/:paused"
+  },
+  {
+   "title": ":playing",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/:playing"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "css.selectors.buffering",
+   "compat": {
+    "description": "<code>:buffering</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:buffering",
+    "source_file": "css/selectors/buffering.json",
+    "spec_url": [
+     "https://drafts.csswg.org/selectors/#selectordef-buffering",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html#selector-buffering"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:media-pseudos"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.muted",
+   "compat": {
+    "description": "<code>:muted</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:muted",
+    "source_file": "css/selectors/muted.json",
+    "spec_url": [
+     "https://drafts.csswg.org/selectors/#selectordef-muted",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html#selector-muted"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:media-pseudos"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.paused",
+   "compat": {
+    "description": "<code>:paused</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:paused",
+    "source_file": "css/selectors/paused.json",
+    "spec_url": [
+     "https://drafts.csswg.org/selectors/#selectordef-paused",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html#selector-paused"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "edge": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "opera": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:media-pseudos"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.playing",
+   "compat": {
+    "description": "<code>:playing</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:playing",
+    "source_file": "css/selectors/playing.json",
+    "spec_url": [
+     "https://drafts.csswg.org/selectors/#selectordef-playing",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html#selector-playing"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "edge": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "opera": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40748199",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:media-pseudos"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.seeking",
+   "compat": {
+    "description": "<code>:seeking</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:seeking",
+    "source_file": "css/selectors/seeking.json",
+    "spec_url": [
+     "https://drafts.csswg.org/selectors/#selectordef-seeking",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html#selector-seeking"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:media-pseudos"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.stalled",
+   "compat": {
+    "description": "<code>:stalled</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:stalled",
+    "source_file": "css/selectors/stalled.json",
+    "spec_url": [
+     "https://drafts.csswg.org/selectors/#selectordef-stalled",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html#selector-stalled"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:media-pseudos"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.volume-locked",
+   "compat": {
+    "description": "<code>:volume-locked</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:volume-locked",
+    "source_file": "css/selectors/volume-locked.json",
+    "spec_url": [
+     "https://drafts.csswg.org/selectors/#selectordef-volume-locked",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html#selector-volume-locked"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:media-pseudos"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "css"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [
+   "https://crbug.com/40748199"
+  ],
+  "chrome_android": [
+   "https://crbug.com/40748199"
+  ],
+  "edge": [
+   "https://crbug.com/40748199"
+  ],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

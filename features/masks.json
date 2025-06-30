@@ -1,0 +1,2532 @@
+{
+ "caniuse": "css-masks",
+ "compat_features": [
+  "css.properties.mask",
+  "css.properties.mask-clip",
+  "css.properties.mask-clip.border",
+  "css.properties.mask-clip.content",
+  "css.properties.mask-clip.padding",
+  "css.properties.mask-clip.text",
+  "css.properties.mask-composite",
+  "css.properties.mask-composite.add",
+  "css.properties.mask-composite.exclude",
+  "css.properties.mask-composite.intersect",
+  "css.properties.mask-composite.subtract",
+  "css.properties.mask-image",
+  "css.properties.mask-image.multiple_mask_images",
+  "css.properties.mask-image.svg_masks",
+  "css.properties.mask-mode",
+  "css.properties.mask-mode.alpha",
+  "css.properties.mask-mode.luminance",
+  "css.properties.mask-mode.match-source",
+  "css.properties.mask-origin",
+  "css.properties.mask-origin.border",
+  "css.properties.mask-origin.content",
+  "css.properties.mask-origin.fill-box",
+  "css.properties.mask-origin.padding",
+  "css.properties.mask-origin.stroke-box",
+  "css.properties.mask-origin.view-box",
+  "css.properties.mask-position",
+  "css.properties.mask-repeat",
+  "css.properties.mask-size"
+ ],
+ "description": "The mask CSS property (and several longhand properties) partially or completely hides an element according to the shape and depth of an image.",
+ "description_html": "The <code>mask</code> CSS property (and several longhand properties) partially or completely hides an element according to the shape and depth of an image.",
+ "group": "clipping-shapes-masking",
+ "name": "Masks",
+ "spec": [
+  {
+   "url": "https://drafts.fxtf.org/css-masking-1/#positioned-masks",
+   "seriesComposition": "full",
+   "shortname": "css-masking-1",
+   "series": {
+    "shortname": "css-masking",
+    "currentSpecification": "css-masking-1",
+    "title": "CSS Masking",
+    "shortTitle": "CSS Masking",
+    "releaseUrl": "https://www.w3.org/TR/css-masking/",
+    "nightlyUrl": "https://drafts.fxtf.org/css-masking/"
+   },
+   "seriesVersion": "1",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-masking-1/",
+    "status": "Candidate Recommendation Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.fxtf.org/css-masking-1/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/fxtf-drafts",
+    "sourcePath": "css-masking-1/Overview.bs",
+    "filename": "Overview.html"
+   },
+   "title": "CSS Masking Module Level 1",
+   "source": "w3c",
+   "shortTitle": "CSS Masking 1",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-masking"
+    ]
+   },
+   "fragment": "positioned-masks"
+  }
+ ],
+ "status": {
+  "baseline": "low",
+  "baseline_low_date": "2023-12-07",
+  "support": {
+   "chrome": "120",
+   "chrome_android": "120",
+   "edge": "120",
+   "firefox": "53",
+   "firefox_android": "53",
+   "safari": "15.4",
+   "safari_ios": "15.4"
+  }
+ },
+ "id": "masks",
+ "groups": [
+  "clipping-shapes-masking"
+ ],
+ "groupPaths": [
+  [
+   "Clipping, shapes and masking"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "mask",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/mask"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.30626682,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/101"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "css.properties.mask",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/mask",
+    "source_file": "css/properties/mask.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#the-mask",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "120"
+      },
+      {
+       "notes": "The prefixed property can be used with SVG and HTML with a slightly different syntax, which allows setting the non-standard <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-attachment\"><code>-webkit-mask-attachment</code></a> property.",
+       "prefix": "-webkit-",
+       "version_added": "1"
+      },
+      {
+       "notes": "While the property is recognized, values applied to it don't have any effect.",
+       "partial_implementation": true,
+       "version_added": "1",
+       "version_last": "119",
+       "version_removed": "120"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "notes": "The prefixed property can be used with SVG and HTML with a slightly different syntax, which allows setting the non-standard <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-attachment\"><code>-webkit-mask-attachment</code></a> property.",
+       "prefix": "-webkit-",
+       "version_added": "18"
+      },
+      {
+       "notes": "While the property is recognized, values applied to it don't have any effect.",
+       "partial_implementation": true,
+       "version_added": "18",
+       "version_last": "119",
+       "version_removed": "120"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "120"
+      },
+      {
+       "notes": "The prefixed property can be used with SVG and HTML with a slightly different syntax, which allows setting the non-standard <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-attachment\"><code>-webkit-mask-attachment</code></a> property.",
+       "prefix": "-webkit-",
+       "version_added": "79"
+      },
+      {
+       "notes": "While the property is recognized, values applied to it don't have any effect.",
+       "partial_implementation": true,
+       "version_added": "79",
+       "version_last": "119",
+       "version_removed": "120"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "53"
+      },
+      {
+       "notes": "Only supports <code>mask: url(file.svg#mask_id)</code> or <code>mask: url(#mask_id)</code>, where the URL is a reference to an SVG <code>&lt;mask&gt;</code> element.",
+       "partial_implementation": true,
+       "version_added": "2",
+       "version_last": "52",
+       "version_removed": "53"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "53"
+      },
+      {
+       "notes": "Only supports <code>mask: url(file.svg#mask_id)</code> or <code>mask: url(#mask_id)</code>, where the URL is a reference to an SVG <code>&lt;mask&gt;</code> element.",
+       "partial_implementation": true,
+       "version_added": "4",
+       "version_last": "52",
+       "version_removed": "53"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": [
+      {
+       "notes": "The prefixed property can be used with SVG and HTML with a slightly different syntax, which allows setting the non-standard <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-attachment\"><code>-webkit-mask-attachment</code></a> property.",
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      },
+      {
+       "notes": "While the property is recognized, values applied to it don't have any effect.",
+       "partial_implementation": true,
+       "version_added": "5.0",
+       "version_removed": false
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "106"
+      },
+      {
+       "notes": "The prefixed property can be used with SVG and HTML with a slightly different syntax, which allows setting the non-standard <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-attachment\"><code>-webkit-mask-attachment</code></a> property.",
+       "prefix": "-webkit-",
+       "version_added": "15"
+      },
+      {
+       "notes": "While the property is recognized, values applied to it don't have any effect.",
+       "partial_implementation": true,
+       "version_added": "15",
+       "version_last": "105",
+       "version_removed": "106"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "80"
+      },
+      {
+       "notes": "The prefixed property can be used with SVG and HTML with a slightly different syntax, which allows setting the non-standard <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-attachment\"><code>-webkit-mask-attachment</code></a> property.",
+       "prefix": "-webkit-",
+       "version_added": "14"
+      },
+      {
+       "notes": "While the property is recognized, values applied to it don't have any effect.",
+       "partial_implementation": true,
+       "version_added": "14",
+       "version_last": "79",
+       "version_removed": "80"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "notes": "The prefixed property can be used with SVG and HTML with a slightly different syntax, which allows setting the non-standard <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-attachment\"><code>-webkit-mask-attachment</code></a> property.",
+       "prefix": "-webkit-",
+       "version_added": "3.1"
+      },
+      {
+       "notes": "While the property is recognized, values applied to it don't have any effect.",
+       "partial_implementation": true,
+       "version_added": "3.1",
+       "version_last": "15.3",
+       "version_removed": "15.4"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "notes": "The prefixed property can be used with SVG and HTML with a slightly different syntax, which allows setting the non-standard <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-attachment\"><code>-webkit-mask-attachment</code></a> property.",
+       "prefix": "-webkit-",
+       "version_added": "2"
+      },
+      {
+       "notes": "While the property is recognized, values applied to it don't have any effect.",
+       "partial_implementation": true,
+       "version_added": "2",
+       "version_last": "15.3",
+       "version_removed": "15.4"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "25.0"
+      },
+      {
+       "notes": "The prefixed property can be used with SVG and HTML with a slightly different syntax, which allows setting the non-standard <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-attachment\"><code>-webkit-mask-attachment</code></a> property.",
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      },
+      {
+       "notes": "While the property is recognized, values applied to it don't have any effect.",
+       "partial_implementation": true,
+       "version_added": "1.0",
+       "version_last": "24.0",
+       "version_removed": "25.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "notes": "The prefixed property can be used with SVG and HTML with a slightly different syntax, which allows setting the non-standard <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-attachment\"><code>-webkit-mask-attachment</code></a> property.",
+       "prefix": "-webkit-",
+       "version_added": "2"
+      },
+      {
+       "notes": "While the property is recognized, values applied to it don't have any effect.",
+       "partial_implementation": true,
+       "version_added": "2",
+       "version_last": "119",
+       "version_removed": "120"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "notes": "The prefixed property can be used with SVG and HTML with a slightly different syntax, which allows setting the non-standard <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-attachment\"><code>-webkit-mask-attachment</code></a> property.",
+       "prefix": "-webkit-",
+       "version_added": "2"
+      },
+      {
+       "notes": "While the property is recognized, values applied to it don't have any effect.",
+       "partial_implementation": true,
+       "version_added": "2",
+       "version_last": "15.3",
+       "version_removed": "15.4"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-clip",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/mask-clip",
+    "source_file": "css/properties/mask-clip.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#the-mask-clip",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "79"
+      }
+     ],
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "prefix": "-webkit-",
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "106"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "80"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "25.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-clip.border",
+   "compat": {
+    "source_file": "css/properties/mask-clip.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "18"
+     },
+     "edge": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "15"
+     },
+     "opera_android": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "2"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-clip.content",
+   "compat": {
+    "source_file": "css/properties/mask-clip.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "18"
+     },
+     "edge": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "15"
+     },
+     "opera_android": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "2"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-clip.padding",
+   "compat": {
+    "source_file": "css/properties/mask-clip.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "18"
+     },
+     "edge": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "15"
+     },
+     "opera_android": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "2"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-clip.text",
+   "compat": {
+    "source_file": "css/properties/mask-clip.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "18"
+     },
+     "edge": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "15"
+     },
+     "opera_android": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "notes": "Only works when using <code>-webkit-mask-clip</code>.",
+      "partial_implementation": true,
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "2"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-composite",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/mask-composite",
+    "source_file": "css/properties/mask-composite.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#the-mask-composite",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "See also <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-composite\"><code>-webkit-mask-composite</code></a> for a similar non-standard property that uses different keywords.",
+      "version_added": "120"
+     },
+     "chrome_android": {
+      "notes": "See also <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-composite\"><code>-webkit-mask-composite</code></a> for a similar non-standard property that uses different keywords.",
+      "version_added": "120"
+     },
+     "edge": [
+      {
+       "notes": "See also <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-composite\"><code>-webkit-mask-composite</code></a> for a similar non-standard property that uses different keywords.",
+       "version_added": "120"
+      },
+      {
+       "version_added": "18",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "53"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "53"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "53"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "53"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "notes": "See also <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-composite\"><code>-webkit-mask-composite</code></a> for a similar non-standard property that uses different keywords.",
+      "version_added": "106"
+     },
+     "opera_android": {
+      "notes": "See also <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-composite\"><code>-webkit-mask-composite</code></a> for a similar non-standard property that uses different keywords.",
+      "version_added": "80"
+     },
+     "safari": {
+      "notes": "See also <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-composite\"><code>-webkit-mask-composite</code></a> for a similar non-standard property that uses different keywords.",
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "notes": "See also <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-composite\"><code>-webkit-mask-composite</code></a> for a similar non-standard property that uses different keywords.",
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "notes": "See also <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-composite\"><code>-webkit-mask-composite</code></a> for a similar non-standard property that uses different keywords.",
+      "version_added": "25.0"
+     },
+     "webview_android": {
+      "notes": "See also <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-composite\"><code>-webkit-mask-composite</code></a> for a similar non-standard property that uses different keywords.",
+      "version_added": "120"
+     },
+     "webview_ios": {
+      "notes": "See also <a href=\"https://developer.mozilla.org/docs/Web/CSS/-webkit-mask-composite\"><code>-webkit-mask-composite</code></a> for a similar non-standard property that uses different keywords.",
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-composite.add",
+   "compat": {
+    "source_file": "css/properties/mask-composite.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#valdef-mask-composite-add",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "120"
+     },
+     "chrome_android": {
+      "version_added": "120"
+     },
+     "edge": {
+      "version_added": "120"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "106"
+     },
+     "opera_android": {
+      "version_added": "80"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "25.0"
+     },
+     "webview_android": {
+      "version_added": "120"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-composite.exclude",
+   "compat": {
+    "source_file": "css/properties/mask-composite.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#valdef-mask-composite-exclude",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "120"
+     },
+     "chrome_android": {
+      "version_added": "120"
+     },
+     "edge": {
+      "version_added": "120"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "106"
+     },
+     "opera_android": {
+      "version_added": "80"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "25.0"
+     },
+     "webview_android": {
+      "version_added": "120"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-composite.intersect",
+   "compat": {
+    "source_file": "css/properties/mask-composite.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#valdef-mask-composite-intersect",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "120"
+     },
+     "chrome_android": {
+      "version_added": "120"
+     },
+     "edge": {
+      "version_added": "120"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "106"
+     },
+     "opera_android": {
+      "version_added": "80"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "25.0"
+     },
+     "webview_android": {
+      "version_added": "120"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-composite.subtract",
+   "compat": {
+    "source_file": "css/properties/mask-composite.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#valdef-mask-composite-subtract",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "120"
+     },
+     "chrome_android": {
+      "version_added": "120"
+     },
+     "edge": {
+      "version_added": "120"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "106"
+     },
+     "opera_android": {
+      "version_added": "80"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "25.0"
+     },
+     "webview_android": {
+      "version_added": "120"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-image",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/mask-image",
+    "source_file": "css/properties/mask-image.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#the-mask-image",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "120"
+      },
+      {
+       "notes": "From version 8, Chrome added support for gradient values. Initially, Chrome supported only <code>-webkit-</code> prefixed values for gradients (such as <code>-webkit-linear-gradient()</code>). Later, support for unprefixed values was added.",
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "notes": "From version 18, Chrome Android added support for gradient values. Initially, Chrome Android supported only <code>-webkit-</code> prefixed values for gradients (such as <code>-webkit-linear-gradient()</code>). Later, support for unprefixed values was added.",
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "79"
+      },
+      {
+       "version_added": "16",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "From version 5.0, Quest Browser added support for gradient values. Initially, Quest Browser supported only <code>-webkit-</code> prefixed values for gradients (such as <code>-webkit-linear-gradient()</code>). Later, support for unprefixed values was added.",
+      "prefix": "-webkit-",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "prefix": "-webkit-",
+      "version_added": "15"
+     },
+     "opera_android": [
+      {
+       "version_added": "80"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "notes": "Initially, Safari supported only <code>-webkit-</code> prefixed values for gradients (such as <code>-webkit-linear-gradient()</code>). Later, support for unprefixed values was added.",
+       "prefix": "-webkit-",
+       "version_added": "4"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "notes": "Initially, Safari on iOS supported only <code>-webkit-</code> prefixed values for gradients (such as <code>-webkit-linear-gradient()</code>). Later, support for unprefixed values was added.",
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "25.0"
+      },
+      {
+       "notes": "From version 1.0, Samsung Internet added support for gradient values. Initially, Samsung Internet supported only <code>-webkit-</code> prefixed values for gradients (such as <code>-webkit-linear-gradient()</code>). Later, support for unprefixed values was added.",
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "notes": "Initially, Android supported only <code>-webkit-</code> prefixed values for gradients (such as <code>-webkit-linear-gradient()</code>). Later, support for unprefixed values was added.",
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "notes": "Initially, WebView on iOS supported only <code>-webkit-</code> prefixed values for gradients (such as <code>-webkit-linear-gradient()</code>). Later, support for unprefixed values was added.",
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-image.multiple_mask_images",
+   "compat": {
+    "description": "Multiple mask images",
+    "source_file": "css/properties/mask-image.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-image.svg_masks",
+   "compat": {
+    "description": "SVG masks",
+    "source_file": "css/properties/mask-image.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "8"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-mode",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/mask-mode",
+    "source_file": "css/properties/mask-mode.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#the-mask-mode",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "120"
+     },
+     "chrome_android": {
+      "version_added": "120"
+     },
+     "edge": {
+      "version_added": "120"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "106"
+     },
+     "opera_android": {
+      "version_added": "80"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "25.0"
+     },
+     "webview_android": {
+      "version_added": "120"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-mode.alpha",
+   "compat": {
+    "source_file": "css/properties/mask-mode.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#valdef-mask-mode-alpha",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "120"
+     },
+     "chrome_android": {
+      "version_added": "120"
+     },
+     "edge": {
+      "version_added": "120"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "106"
+     },
+     "opera_android": {
+      "version_added": "80"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "25.0"
+     },
+     "webview_android": {
+      "version_added": "120"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-mode.luminance",
+   "compat": {
+    "source_file": "css/properties/mask-mode.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#valdef-mask-mode-luminance",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "120"
+     },
+     "chrome_android": {
+      "version_added": "120"
+     },
+     "edge": {
+      "version_added": "120"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "106"
+     },
+     "opera_android": {
+      "version_added": "80"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "25.0"
+     },
+     "webview_android": {
+      "version_added": "120"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-mode.match-source",
+   "compat": {
+    "source_file": "css/properties/mask-mode.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#valdef-mask-mode-match-source",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "120"
+     },
+     "chrome_android": {
+      "version_added": "120"
+     },
+     "edge": {
+      "version_added": "120"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "106"
+     },
+     "opera_android": {
+      "version_added": "80"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "25.0"
+     },
+     "webview_android": {
+      "version_added": "120"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-origin",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/mask-origin",
+    "source_file": "css/properties/mask-origin.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#the-mask-origin",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "79"
+      }
+     ],
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "prefix": "-webkit-",
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "106"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "80"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "25.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-origin.border",
+   "compat": {
+    "source_file": "css/properties/mask-origin.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "prefix": "-webkit-",
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "prefix": "-webkit-",
+      "version_added": "18"
+     },
+     "edge": {
+      "prefix": "-webkit-",
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "prefix": "-webkit-",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "prefix": "-webkit-",
+      "version_added": "15"
+     },
+     "opera_android": {
+      "prefix": "-webkit-",
+      "version_added": "14"
+     },
+     "safari": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ],
+     "samsunginternet_android": {
+      "prefix": "-webkit-",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "prefix": "-webkit-",
+      "version_added": "2"
+     },
+     "webview_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-origin.content",
+   "compat": {
+    "source_file": "css/properties/mask-origin.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "prefix": "-webkit-",
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "prefix": "-webkit-",
+      "version_added": "18"
+     },
+     "edge": {
+      "prefix": "-webkit-",
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "prefix": "-webkit-",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "prefix": "-webkit-",
+      "version_added": "15"
+     },
+     "opera_android": {
+      "prefix": "-webkit-",
+      "version_added": "14"
+     },
+     "safari": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ],
+     "samsunginternet_android": {
+      "prefix": "-webkit-",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "prefix": "-webkit-",
+      "version_added": "2"
+     },
+     "webview_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-origin.fill-box",
+   "compat": {
+    "source_file": "css/properties/mask-origin.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "120"
+     },
+     "chrome_android": {
+      "version_added": "120"
+     },
+     "edge": {
+      "version_added": "120"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "106"
+     },
+     "opera_android": {
+      "version_added": "80"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/137293",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/137293",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "25.0"
+     },
+     "webview_android": {
+      "version_added": "120"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/137293",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-origin.padding",
+   "compat": {
+    "source_file": "css/properties/mask-origin.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "prefix": "-webkit-",
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "prefix": "-webkit-",
+      "version_added": "18"
+     },
+     "edge": {
+      "prefix": "-webkit-",
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "prefix": "-webkit-",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "prefix": "-webkit-",
+      "version_added": "15"
+     },
+     "opera_android": {
+      "prefix": "-webkit-",
+      "version_added": "14"
+     },
+     "safari": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ],
+     "samsunginternet_android": {
+      "prefix": "-webkit-",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "prefix": "-webkit-",
+      "version_added": "2"
+     },
+     "webview_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-origin.stroke-box",
+   "compat": {
+    "source_file": "css/properties/mask-origin.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "120"
+     },
+     "chrome_android": {
+      "version_added": "120"
+     },
+     "edge": {
+      "version_added": "120"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "106"
+     },
+     "opera_android": {
+      "version_added": "80"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/137293",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/137293",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "25.0"
+     },
+     "webview_android": {
+      "version_added": "120"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/137293",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-origin.view-box",
+   "compat": {
+    "source_file": "css/properties/mask-origin.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "120"
+     },
+     "chrome_android": {
+      "version_added": "120"
+     },
+     "edge": {
+      "version_added": "120"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "106"
+     },
+     "opera_android": {
+      "version_added": "80"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/137293",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/137293",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "25.0"
+     },
+     "webview_android": {
+      "version_added": "120"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/137293",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-position",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/mask-position",
+    "source_file": "css/properties/mask-position.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#the-mask-position",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "79"
+      },
+      {
+       "version_added": "18",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "prefix": "-webkit-",
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "106"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "80"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.1"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "25.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-repeat",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/mask-repeat",
+    "source_file": "css/properties/mask-repeat.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#the-mask-repeat",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "79"
+      },
+      {
+       "version_added": "18",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "prefix": "-webkit-",
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "106"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "80"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.1"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "25.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.mask-size",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/mask-size",
+    "source_file": "css/properties/mask-size.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#the-mask-size",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "79"
+      },
+      {
+       "version_added": "18",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "prefix": "-webkit-",
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "106"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "80"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "25.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:masks"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "css"
+ ],
+ "baselineLowDateAsObject": "2023-12-07T00:00:00.000Z",
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [
+   "https://webkit.org/b/137293"
+  ],
+  "safari_ios": [
+   "https://webkit.org/b/137293"
+  ]
+ }
+}

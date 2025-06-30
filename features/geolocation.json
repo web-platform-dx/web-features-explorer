@@ -1,0 +1,2287 @@
+{
+ "caniuse": "geolocation",
+ "compat_features": [
+  "api.Geolocation",
+  "api.Geolocation.clearWatch",
+  "api.Geolocation.getCurrentPosition",
+  "api.Geolocation.secure_context_required",
+  "api.Geolocation.watchPosition",
+  "api.GeolocationCoordinates",
+  "api.GeolocationCoordinates.accuracy",
+  "api.GeolocationCoordinates.altitude",
+  "api.GeolocationCoordinates.altitudeAccuracy",
+  "api.GeolocationCoordinates.heading",
+  "api.GeolocationCoordinates.latitude",
+  "api.GeolocationCoordinates.longitude",
+  "api.GeolocationCoordinates.secure_context_required",
+  "api.GeolocationCoordinates.speed",
+  "api.GeolocationCoordinates.toJSON",
+  "api.GeolocationPosition",
+  "api.GeolocationPosition.coords",
+  "api.GeolocationPosition.secure_context_required",
+  "api.GeolocationPosition.timestamp",
+  "api.GeolocationPosition.toJSON",
+  "api.GeolocationPositionError",
+  "api.GeolocationPositionError.code",
+  "api.GeolocationPositionError.message",
+  "api.GeolocationPositionError.secure_context_required",
+  "api.Navigator.geolocation",
+  "api.Navigator.geolocation.secure_context_required",
+  "api.Permissions.permission_geolocation",
+  "html.elements.iframe.allow.geolocation",
+  "http.headers.Permissions-Policy.geolocation"
+ ],
+ "description": "The navigator.gelocation API requests the user's latitude, longitude, heading, and speed.",
+ "description_html": "The <code>navigator.gelocation</code> API requests the user's latitude, longitude, heading, and speed.",
+ "name": "Geolocation",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/geolocation/",
+   "seriesComposition": "full",
+   "shortname": "geolocation",
+   "series": {
+    "shortname": "geolocation",
+    "currentSpecification": "geolocation",
+    "title": "Geolocation",
+    "shortTitle": "Geolocation",
+    "releaseUrl": "https://www.w3.org/TR/geolocation/",
+    "nightlyUrl": "https://w3c.github.io/geolocation/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Devices and Sensors Working Group",
+     "url": "https://www.w3.org/das/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/geolocation/",
+    "status": "Recommendation",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/geolocation/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/geolocation",
+    "sourcePath": "index.html",
+    "filename": "index.html"
+   },
+   "title": "Geolocation",
+   "source": "w3c",
+   "shortTitle": "Geolocation",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "5",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "3.5",
+   "firefox_android": "4",
+   "safari": "5",
+   "safari_ios": "≤3"
+  }
+ },
+ "id": "geolocation",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Geolocation API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Geolocation_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/36",
+   "position": "negative",
+   "concerns": []
+  },
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/32",
+   "position": "oppose",
+   "concerns": [
+    "duplication"
+   ]
+  }
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Geolocation",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Geolocation",
+    "source_file": "api/Geolocation.json",
+    "spec_url": "https://w3c.github.io/geolocation/#geolocation_interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": "<a href=\"https://gpsd.gitlab.io/gpsd/index.html\">GPSD</a> (GPS daemon) support added in Firefox 3.6. WiFi-based location is provided by Google (<a href=\"https://support.mozilla.org/en-US/kb/does-firefox-share-my-location-websites\">privacy</a>) or a custom provider (<a href=\"https://wiki.mozilla.org/CloudServices/Location/Software\">MLS instructions</a>).",
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "≤3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "≤3"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.Geolocation.clearWatch",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Geolocation/clearWatch",
+    "source_file": "api/Geolocation.json",
+    "spec_url": "https://w3c.github.io/geolocation/#clearwatch-method",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "≤3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "≤3"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.Geolocation.getCurrentPosition",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Geolocation/getCurrentPosition",
+    "source_file": "api/Geolocation.json",
+    "spec_url": "https://w3c.github.io/geolocation/#getcurrentposition-method",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "≤3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "≤3"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.Geolocation.secure_context_required",
+   "compat": {
+    "description": "Secure context required",
+    "source_file": "api/Geolocation.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "55"
+     },
+     "firefox_android": {
+      "version_added": "55"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "notes": "Secure context is only required for applications targeting Android Nougat (7) and higher. See <a href=\"https://crbug.com/40465140\">bug 40465140</a>.",
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.Geolocation.watchPosition",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Geolocation/watchPosition",
+    "source_file": "api/Geolocation.json",
+    "spec_url": "https://w3c.github.io/geolocation/#watchposition-method",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "≤3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "≤3"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationCoordinates",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationCoordinates",
+    "source_file": "api/GeolocationCoordinates.json",
+    "spec_url": "https://w3c.github.io/geolocation/#coordinates_interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "Coordinates",
+       "version_added": "5",
+       "version_last": "77",
+       "version_removed": "78"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "Coordinates",
+       "version_added": "18",
+       "version_last": "77",
+       "version_removed": "78"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "Coordinates",
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "72"
+      },
+      {
+       "alternative_name": "Coordinates",
+       "version_added": "3.5",
+       "version_last": "70",
+       "version_removed": "71"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "Coordinates",
+       "version_added": "4",
+       "version_last": "68",
+       "version_removed": "79"
+      }
+     ],
+     "ie": {
+      "alternative_name": "Coordinates",
+      "version_added": "9"
+     },
+     "oculus": [
+      {
+       "version_added": "8.0"
+      },
+      {
+       "alternative_name": "Coordinates",
+       "version_added": "5.0",
+       "version_last": "7.1",
+       "version_removed": "8.0"
+      }
+     ],
+     "opera": [
+      {
+       "alternative_name": "Coordinates",
+       "version_added": "16"
+      },
+      {
+       "version_added": "10.6",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "11",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "13.1"
+      },
+      {
+       "alternative_name": "Coordinates",
+       "version_added": "5",
+       "version_last": "13",
+       "version_removed": "13.1"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "13.4"
+      },
+      {
+       "alternative_name": "Coordinates",
+       "version_added": "≤3",
+       "version_last": "13",
+       "version_removed": "13.4"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "12.0"
+      },
+      {
+       "alternative_name": "Coordinates",
+       "version_added": "1.0",
+       "version_last": "11.2",
+       "version_removed": "12.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "Coordinates",
+       "version_added": "4.4",
+       "version_last": "77",
+       "version_removed": "78"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "13.4"
+      },
+      {
+       "alternative_name": "Coordinates",
+       "version_added": "≤3",
+       "version_last": "13",
+       "version_removed": "13.4"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationCoordinates.accuracy",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationCoordinates/accuracy",
+    "source_file": "api/GeolocationCoordinates.json",
+    "spec_url": "https://w3c.github.io/geolocation/#latitude-longitude-and-accuracy-attributes",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "10.6",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "11",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "≤3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "≤3"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationCoordinates.altitude",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationCoordinates/altitude",
+    "source_file": "api/GeolocationCoordinates.json",
+    "spec_url": "https://w3c.github.io/geolocation/#altitude-and-altitudeaccuracy-attributes",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "10.6",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "11",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "≤3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "≤3"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationCoordinates.altitudeAccuracy",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationCoordinates/altitudeAccuracy",
+    "source_file": "api/GeolocationCoordinates.json",
+    "spec_url": "https://w3c.github.io/geolocation/#altitude-and-altitudeaccuracy-attributes",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "10.6",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "11",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "≤3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "≤3"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationCoordinates.heading",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationCoordinates/heading",
+    "source_file": "api/GeolocationCoordinates.json",
+    "spec_url": "https://w3c.github.io/geolocation/#heading-attribute",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "10.6",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "11",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "≤3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "≤3"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationCoordinates.latitude",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationCoordinates/latitude",
+    "source_file": "api/GeolocationCoordinates.json",
+    "spec_url": "https://w3c.github.io/geolocation/#latitude-longitude-and-accuracy-attributes",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "10.6",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "11",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "≤3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "≤3"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationCoordinates.longitude",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationCoordinates/longitude",
+    "source_file": "api/GeolocationCoordinates.json",
+    "spec_url": "https://w3c.github.io/geolocation/#latitude-longitude-and-accuracy-attributes",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "10.6",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "11",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "≤3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "≤3"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationCoordinates.secure_context_required",
+   "compat": {
+    "description": "Secure context required",
+    "source_file": "api/GeolocationCoordinates.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "47"
+     },
+     "chrome_android": {
+      "version_added": "47"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "55"
+     },
+     "firefox_android": {
+      "version_added": "55"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "34"
+     },
+     "opera_android": {
+      "version_added": "34"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "47"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationCoordinates.speed",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationCoordinates/speed",
+    "source_file": "api/GeolocationCoordinates.json",
+    "spec_url": "https://w3c.github.io/geolocation/#speed-attribute",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "10.6",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "11",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "≤3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "≤3"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationCoordinates.toJSON",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationCoordinates/toJSON",
+    "source_file": "api/GeolocationCoordinates.json",
+    "spec_url": "https://w3c.github.io/geolocation/#tojson-method-0",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "126"
+     },
+     "chrome_android": {
+      "version_added": "126"
+     },
+     "edge": {
+      "version_added": "126"
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "112"
+     },
+     "opera_android": {
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18"
+     },
+     "safari_ios": {
+      "version_added": "18"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "126"
+     },
+     "webview_ios": {
+      "version_added": "18"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationPosition",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationPosition",
+    "source_file": "api/GeolocationPosition.json",
+    "spec_url": "https://w3c.github.io/geolocation/#position_interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "Position",
+       "version_added": "5",
+       "version_last": "77",
+       "version_removed": "78"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "Position",
+       "version_added": "18",
+       "version_last": "77",
+       "version_removed": "78"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "Position",
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "72"
+      },
+      {
+       "alternative_name": "Position",
+       "version_added": "3.5",
+       "version_last": "70",
+       "version_removed": "71"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "Position",
+       "version_added": "4",
+       "version_last": "68",
+       "version_removed": "79"
+      }
+     ],
+     "ie": {
+      "alternative_name": "Position",
+      "version_added": "9"
+     },
+     "oculus": [
+      {
+       "version_added": "8.0"
+      },
+      {
+       "alternative_name": "Position",
+       "version_added": "5.0",
+       "version_last": "7.1",
+       "version_removed": "8.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "66"
+      },
+      {
+       "alternative_name": "Position",
+       "version_added": "15",
+       "version_last": "64",
+       "version_removed": "65"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "57"
+      },
+      {
+       "alternative_name": "Position",
+       "version_added": "14",
+       "version_last": "55",
+       "version_removed": "56"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "13.1"
+      },
+      {
+       "alternative_name": "Position",
+       "version_added": "5",
+       "version_last": "13",
+       "version_removed": "13.1"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "13.4"
+      },
+      {
+       "alternative_name": "Position",
+       "version_added": "≤3",
+       "version_last": "13",
+       "version_removed": "13.4"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "12.0"
+      },
+      {
+       "alternative_name": "Position",
+       "version_added": "1.0",
+       "version_last": "11.2",
+       "version_removed": "12.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "Position",
+       "version_added": "4.4",
+       "version_last": "77",
+       "version_removed": "78"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "13.4"
+      },
+      {
+       "alternative_name": "Position",
+       "version_added": "≤3",
+       "version_last": "13",
+       "version_removed": "13.4"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationPosition.coords",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationPosition/coords",
+    "source_file": "api/GeolocationPosition.json",
+    "spec_url": "https://w3c.github.io/geolocation/#coords-attribute",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "16"
+     },
+     "opera_android": {
+      "version_added": "16"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "≤3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "≤3"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationPosition.secure_context_required",
+   "compat": {
+    "description": "Secure context required",
+    "source_file": "api/GeolocationPosition.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "47"
+     },
+     "chrome_android": {
+      "version_added": "47"
+     },
+     "edge": {
+      "version_added": "≤18"
+     },
+     "firefox": {
+      "version_added": "55"
+     },
+     "firefox_android": {
+      "version_added": "55"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "34"
+     },
+     "opera_android": {
+      "version_added": "34"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "47"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationPosition.timestamp",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationPosition/timestamp",
+    "source_file": "api/GeolocationPosition.json",
+    "spec_url": "https://w3c.github.io/geolocation/#timestamp-attribute",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "16"
+     },
+     "opera_android": {
+      "version_added": "16"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "≤3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "≤3"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationPosition.toJSON",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationPosition/toJSON",
+    "source_file": "api/GeolocationPosition.json",
+    "spec_url": "https://w3c.github.io/geolocation/#tojson-method",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "126"
+     },
+     "chrome_android": {
+      "version_added": "126"
+     },
+     "edge": {
+      "version_added": "126"
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "112"
+     },
+     "opera_android": {
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18"
+     },
+     "safari_ios": {
+      "version_added": "18"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "126"
+     },
+     "webview_ios": {
+      "version_added": "18"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationPositionError",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationPositionError",
+    "source_file": "api/GeolocationPositionError.json",
+    "spec_url": "https://w3c.github.io/geolocation/#position_error_interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "PositionError",
+       "version_added": "5",
+       "version_last": "78",
+       "version_removed": "79"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "PositionError",
+       "version_added": "18",
+       "version_last": "78",
+       "version_removed": "79"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "PositionError",
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "72"
+      },
+      {
+       "alternative_name": "PositionError",
+       "version_added": "3.5",
+       "version_last": "70",
+       "version_removed": "71"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "PositionError",
+       "version_added": "4",
+       "version_last": "68",
+       "version_removed": "79"
+      }
+     ],
+     "ie": {
+      "alternative_name": "PositionError",
+      "version_added": "9"
+     },
+     "oculus": [
+      {
+       "version_added": "8.0"
+      },
+      {
+       "alternative_name": "PositionError",
+       "version_added": "5.0",
+       "version_last": "7.1",
+       "version_removed": "8.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "66"
+      },
+      {
+       "alternative_name": "PositionError",
+       "version_added": "15",
+       "version_last": "65",
+       "version_removed": "66"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "57"
+      },
+      {
+       "alternative_name": "PositionError",
+       "version_added": "14",
+       "version_last": "56",
+       "version_removed": "57"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "13.1"
+      },
+      {
+       "alternative_name": "PositionError",
+       "version_added": "5"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "13.4"
+      },
+      {
+       "alternative_name": "PositionError",
+       "version_added": "4.2"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "12.0"
+      },
+      {
+       "alternative_name": "PositionError",
+       "version_added": "1.0",
+       "version_last": "11.2",
+       "version_removed": "12.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "PositionError",
+       "version_added": "4.4",
+       "version_last": "78",
+       "version_removed": "79"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "13.4"
+      },
+      {
+       "alternative_name": "PositionError",
+       "version_added": "4.2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationPositionError.code",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationPositionError/code",
+    "source_file": "api/GeolocationPositionError.json",
+    "spec_url": "https://w3c.github.io/geolocation/#code-attribute",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "16"
+     },
+     "opera_android": {
+      "version_added": "16"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4.2"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationPositionError.message",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/GeolocationPositionError/message",
+    "source_file": "api/GeolocationPositionError.json",
+    "spec_url": "https://w3c.github.io/geolocation/#message-attribute",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "16"
+     },
+     "opera_android": {
+      "version_added": "16"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4.2"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.GeolocationPositionError.secure_context_required",
+   "compat": {
+    "description": "Secure context required",
+    "source_file": "api/GeolocationPositionError.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "47"
+     },
+     "chrome_android": {
+      "version_added": "47"
+     },
+     "edge": {
+      "version_added": "≤18"
+     },
+     "firefox": {
+      "version_added": "55"
+     },
+     "firefox_android": {
+      "version_added": "55"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "34"
+     },
+     "opera_android": {
+      "version_added": "34"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "47"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.Navigator.geolocation",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/geolocation",
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://w3c.github.io/geolocation/#dom-navigator-geolocation",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "≤3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "≤3"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.Navigator.geolocation.secure_context_required",
+   "compat": {
+    "description": "Secure context required",
+    "source_file": "api/Navigator.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "47"
+     },
+     "chrome_android": {
+      "version_added": "47"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "55"
+     },
+     "firefox_android": {
+      "version_added": "55"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "34"
+     },
+     "opera_android": {
+      "version_added": "34"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "47"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "api.Permissions.permission_geolocation",
+   "compat": {
+    "description": "<code>geolocation</code> permission",
+    "source_file": "api/Permissions.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "46"
+     },
+     "firefox_android": {
+      "version_added": "46"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.iframe.allow.geolocation",
+   "compat": {
+    "source_file": "html/elements/iframe.json",
+    "spec_url": "https://w3c.github.io/geolocation/#permissions-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "64"
+     },
+     "chrome_android": {
+      "version_added": "64"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "74"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "51"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "64"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Permissions-Policy.geolocation",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation",
+    "source_file": "http/headers/Permissions-Policy.json",
+    "spec_url": "https://w3c.github.io/geolocation/#permissions-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "88"
+     },
+     "chrome_android": {
+      "version_added": "88"
+     },
+     "edge": {
+      "version_added": "88"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "14.0"
+     },
+     "opera": {
+      "version_added": "74"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "88"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:geolocation"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "html",
+  "http"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

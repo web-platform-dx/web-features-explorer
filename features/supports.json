@@ -1,0 +1,575 @@
+{
+ "caniuse": "css-featurequeries",
+ "compat_features": [
+  "api.CSSImportRule.supportsText",
+  "api.CSSSupportsRule",
+  "css.at-rules.import.supports",
+  "css.at-rules.supports",
+  "css.at-rules.supports.font-format",
+  "css.at-rules.supports.font-tech",
+  "css.at-rules.supports.selector"
+ ],
+ "description": "The @supports at-rule applies styles based on a browser's support for CSS features, such as a CSS property and value. Also known as feature queries.",
+ "description_html": "The <code>@supports</code> at-rule applies styles based on a browser's support for CSS features, such as a CSS property and value. Also known as feature queries.",
+ "group": "css",
+ "name": "@supports",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css-conditional-3/#at-supports",
+   "seriesComposition": "full",
+   "shortname": "css-conditional-3",
+   "series": {
+    "shortname": "css-conditional",
+    "currentSpecification": "css-conditional-3",
+    "title": "CSS Conditional Rules",
+    "shortTitle": "CSS Conditional",
+    "releaseUrl": "https://www.w3.org/TR/css-conditional/",
+    "nightlyUrl": "https://drafts.csswg.org/css-conditional/"
+   },
+   "seriesVersion": "3",
+   "shortTitle": "CSS Conditional 3",
+   "seriesNext": "css-conditional-4",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-conditional-3/",
+    "status": "Candidate Recommendation Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-conditional-3/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-conditional-3/",
+     "https://w3c.github.io/csswg-drafts/css-conditional/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-conditional-3/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Conditional Rules Module Level 3",
+   "source": "w3c",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-conditional"
+    ]
+   },
+   "fragment": "at-supports"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-03-30",
+  "baseline_low_date": "2015-09-30",
+  "support": {
+   "chrome": "28",
+   "chrome_android": "28",
+   "edge": "12",
+   "firefox": "22",
+   "firefox_android": "22",
+   "safari": "9",
+   "safari_ios": "9"
+  }
+ },
+ "id": "supports",
+ "groups": [
+  "css"
+ ],
+ "groupPaths": [
+  [
+   "CSS"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "@supports",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/@supports"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "stateOfSurveys": [
+  {
+   "name": "State of CSS 2024",
+   "link": "https://2024.stateofcss.com/en-US/features/#all_features",
+   "question": "features",
+   "subQuestion": "all_features",
+   "path": "dataAPI.surveys.state_of_css.css2024.features.all_features.50.entity"
+  }
+ ],
+ "useCounters": {},
+ "interop": [
+  {
+   "year": "2023",
+   "label": "interop-2023-fonts"
+  }
+ ],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.CSSImportRule.supportsText",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSImportRule/supportsText",
+    "source_file": "api/CSSImportRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssimportrule-supportstext",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "121"
+     },
+     "chrome_android": {
+      "version_added": "121"
+     },
+     "edge": {
+      "version_added": "121"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "107"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": "17.5"
+     },
+     "safari_ios": {
+      "version_added": "17.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "25.0"
+     },
+     "webview_android": {
+      "version_added": "121"
+     },
+     "webview_ios": {
+      "version_added": "17.5"
+     }
+    },
+    "tags": [
+     "web-features:supports"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSSupportsRule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSSupportsRule",
+    "source_file": "api/CSSSupportsRule.json",
+    "spec_url": "https://drafts.csswg.org/css-conditional-3/#the-csssupportsrule-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "28"
+     },
+     "chrome_android": {
+      "version_added": "28"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "22"
+     },
+     "firefox_android": {
+      "version_added": "22"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12.1"
+     },
+     "opera_android": [
+      {
+       "version_added": "15"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:supports"
+    ]
+   }
+  },
+  {
+   "key": "css.at-rules.import.supports",
+   "compat": {
+    "description": "<code>supports()</code> as import condition",
+    "source_file": "css/at-rules/import.json",
+    "spec_url": "https://drafts.csswg.org/css-cascade-5/#typedef-import-conditions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "impl_url": "https://crbug.com/40244647",
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40244647",
+      "version_added": "122"
+     },
+     "edge": {
+      "impl_url": "https://crbug.com/40244647",
+      "version_added": "122"
+     },
+     "firefox": {
+      "version_added": "115"
+     },
+     "firefox_android": {
+      "version_added": "115"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "impl_url": "https://crbug.com/40244647",
+      "version_added": "108"
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40244647",
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": "17.5"
+     },
+     "safari_ios": {
+      "version_added": "17.5"
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40244647",
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40244647",
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": "17.5"
+     }
+    },
+    "tags": [
+     "web-features:supports"
+    ]
+   }
+  },
+  {
+   "key": "css.at-rules.supports",
+   "compat": {
+    "description": "<code>@supports</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/@supports",
+    "source_file": "css/at-rules/supports.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css-conditional-4/#at-supports-ext",
+     "https://drafts.csswg.org/css-conditional-3/#at-supports"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "28"
+     },
+     "chrome_android": {
+      "version_added": "28"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "22"
+     },
+     "firefox_android": {
+      "version_added": "22"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12.1"
+     },
+     "opera_android": {
+      "version_added": "12.1"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:supports"
+    ]
+   }
+  },
+  {
+   "key": "css.at-rules.supports.font-format",
+   "compat": {
+    "description": "<code>font-format()</code>",
+    "source_file": "css/at-rules/supports.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "108"
+     },
+     "chrome_android": {
+      "version_added": "108"
+     },
+     "edge": {
+      "version_added": "108"
+     },
+     "firefox": {
+      "version_added": "106"
+     },
+     "firefox_android": {
+      "version_added": "106"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "94"
+     },
+     "opera_android": {
+      "version_added": "73"
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "108"
+     },
+     "webview_ios": {
+      "version_added": "17"
+     }
+    },
+    "tags": [
+     "web-features:supports"
+    ]
+   }
+  },
+  {
+   "key": "css.at-rules.supports.font-tech",
+   "compat": {
+    "description": "<code>font-tech()</code>",
+    "source_file": "css/at-rules/supports.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "108"
+     },
+     "chrome_android": {
+      "version_added": "108"
+     },
+     "edge": {
+      "version_added": "108"
+     },
+     "firefox": {
+      "version_added": "106"
+     },
+     "firefox_android": {
+      "version_added": "106"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "94"
+     },
+     "opera_android": {
+      "version_added": "73"
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "108"
+     },
+     "webview_ios": {
+      "version_added": "17"
+     }
+    },
+    "tags": [
+     "web-features:supports"
+    ]
+   }
+  },
+  {
+   "key": "css.at-rules.supports.selector",
+   "compat": {
+    "description": "<code>selector()</code>",
+    "source_file": "css/at-rules/supports.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": "69"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40633900",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:supports"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "css"
+ ],
+ "baselineLowDateAsObject": "2015-09-30T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-03-30T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

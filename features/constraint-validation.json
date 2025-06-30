@@ -1,0 +1,3626 @@
+{
+ "caniuse": "constraint-validation",
+ "compat_features": [
+  "api.HTMLButtonElement.checkValidity",
+  "api.HTMLButtonElement.reportValidity",
+  "api.HTMLButtonElement.setCustomValidity",
+  "api.HTMLButtonElement.validationMessage",
+  "api.HTMLButtonElement.validity",
+  "api.HTMLButtonElement.willValidate",
+  "api.HTMLFieldSetElement.checkValidity",
+  "api.HTMLFieldSetElement.reportValidity",
+  "api.HTMLFieldSetElement.setCustomValidity",
+  "api.HTMLFieldSetElement.validationMessage",
+  "api.HTMLFieldSetElement.validity",
+  "api.HTMLFieldSetElement.willValidate",
+  "api.HTMLFormElement.checkValidity",
+  "api.HTMLFormElement.reportValidity",
+  "api.HTMLInputElement.checkValidity",
+  "api.HTMLInputElement.reportValidity",
+  "api.HTMLInputElement.setCustomValidity",
+  "api.HTMLInputElement.validationMessage",
+  "api.HTMLInputElement.validity",
+  "api.HTMLInputElement.willValidate",
+  "api.HTMLObjectElement.checkValidity",
+  "api.HTMLObjectElement.reportValidity",
+  "api.HTMLObjectElement.setCustomValidity",
+  "api.HTMLObjectElement.validationMessage",
+  "api.HTMLObjectElement.validity",
+  "api.HTMLObjectElement.willValidate",
+  "api.HTMLOutputElement.checkValidity",
+  "api.HTMLOutputElement.reportValidity",
+  "api.HTMLOutputElement.setCustomValidity",
+  "api.HTMLOutputElement.validationMessage",
+  "api.HTMLOutputElement.validity",
+  "api.HTMLOutputElement.willValidate",
+  "api.HTMLSelectElement.checkValidity",
+  "api.HTMLSelectElement.reportValidity",
+  "api.HTMLSelectElement.setCustomValidity",
+  "api.HTMLSelectElement.validationMessage",
+  "api.HTMLSelectElement.validity",
+  "api.HTMLSelectElement.willValidate",
+  "api.HTMLTextAreaElement.checkValidity",
+  "api.HTMLTextAreaElement.reportValidity",
+  "api.HTMLTextAreaElement.setCustomValidity",
+  "api.HTMLTextAreaElement.validationMessage",
+  "api.HTMLTextAreaElement.validity",
+  "api.HTMLTextAreaElement.willValidate",
+  "api.ValidityState",
+  "api.ValidityState.badInput",
+  "api.ValidityState.customError",
+  "api.ValidityState.patternMismatch",
+  "api.ValidityState.rangeOverflow",
+  "api.ValidityState.rangeUnderflow",
+  "api.ValidityState.stepMismatch",
+  "api.ValidityState.tooLong",
+  "api.ValidityState.tooShort",
+  "api.ValidityState.typeMismatch",
+  "api.ValidityState.valid",
+  "api.ValidityState.valueMissing"
+ ],
+ "description": "Methods that validate form controls before submission, such as checkValidity(), reportValidity() and setCustomValidity().",
+ "description_html": "Methods that validate form controls before submission, such as <code>checkValidity()</code>, <code>reportValidity()</code> and <code>setCustomValidity()</code>.",
+ "group": "forms",
+ "name": "Constraint validation API",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "the-constraint-validation-api"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2021-06-11",
+  "baseline_low_date": "2018-12-11",
+  "support": {
+   "chrome": "40",
+   "chrome_android": "40",
+   "edge": "18",
+   "firefox": "51",
+   "firefox_android": "64",
+   "safari": "10.1",
+   "safari_ios": "10.3"
+  }
+ },
+ "id": "constraint-validation",
+ "groups": [
+  "forms"
+ ],
+ "groupPaths": [
+  [
+   "HTML",
+   "Forms"
+  ]
+ ],
+ "mdnUrls": [],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.HTMLButtonElement.checkValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/checkValidity",
+    "source_file": "api/HTMLButtonElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-checkvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLButtonElement.reportValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/reportValidity",
+    "source_file": "api/HTMLButtonElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-reportvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "49"
+     },
+     "firefox_android": {
+      "version_added": "64"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLButtonElement.setCustomValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/setCustomValidity",
+    "source_file": "api/HTMLButtonElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-setcustomvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLButtonElement.validationMessage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/validationMessage",
+    "source_file": "api/HTMLButtonElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-validationmessage-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLButtonElement.validity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/validity",
+    "source_file": "api/HTMLButtonElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api:dom-cva-validity",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLButtonElement.willValidate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/willValidate",
+    "source_file": "api/HTMLButtonElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-willvalidate-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLFieldSetElement.checkValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLFieldSetElement/checkValidity",
+    "source_file": "api/HTMLFieldSetElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-checkvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLFieldSetElement.reportValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLFieldSetElement/reportValidity",
+    "source_file": "api/HTMLFieldSetElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-reportvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "49"
+     },
+     "firefox_android": {
+      "version_added": "64"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLFieldSetElement.setCustomValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLFieldSetElement/setCustomValidity",
+    "source_file": "api/HTMLFieldSetElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-setcustomvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLFieldSetElement.validationMessage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLFieldSetElement/validationMessage",
+    "source_file": "api/HTMLFieldSetElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-validationmessage-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLFieldSetElement.validity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLFieldSetElement/validity",
+    "source_file": "api/HTMLFieldSetElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api:dom-cva-validity",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLFieldSetElement.willValidate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLFieldSetElement/willValidate",
+    "source_file": "api/HTMLFieldSetElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-willvalidate-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLFormElement.checkValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLFormElement/checkValidity",
+    "source_file": "api/HTMLFormElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/forms.html#dom-form-checkvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLFormElement.reportValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLFormElement/reportValidity",
+    "source_file": "api/HTMLFormElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-reportvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "49"
+     },
+     "firefox_android": {
+      "version_added": "49"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLInputElement.checkValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLInputElement/checkValidity",
+    "source_file": "api/HTMLInputElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-checkvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLInputElement.reportValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLInputElement/reportValidity",
+    "source_file": "api/HTMLInputElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-reportvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "49"
+     },
+     "firefox_android": {
+      "version_added": "64"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLInputElement.setCustomValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLInputElement/setCustomValidity",
+    "source_file": "api/HTMLInputElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-setcustomvalidity",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLInputElement.validationMessage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLInputElement/validationMessage",
+    "source_file": "api/HTMLInputElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-validationmessage-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLInputElement.validity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLInputElement/validity",
+    "source_file": "api/HTMLInputElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api:dom-cva-validity",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLInputElement.willValidate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLInputElement/willValidate",
+    "source_file": "api/HTMLInputElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-willvalidate-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLObjectElement.checkValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLObjectElement/checkValidity",
+    "source_file": "api/HTMLObjectElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-checkvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "10"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLObjectElement.reportValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLObjectElement/reportValidity",
+    "source_file": "api/HTMLObjectElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-reportvalidity",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "49"
+     },
+     "firefox_android": {
+      "version_added": "49"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLObjectElement.setCustomValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLObjectElement/setCustomValidity",
+    "source_file": "api/HTMLObjectElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-setcustomvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "10"
+     },
+     "chrome_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLObjectElement.validationMessage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLObjectElement/validationMessage",
+    "source_file": "api/HTMLObjectElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-validationmessage-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "10"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLObjectElement.validity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLObjectElement/validity",
+    "source_file": "api/HTMLObjectElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-validity",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "10"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLObjectElement.willValidate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLObjectElement/willValidate",
+    "source_file": "api/HTMLObjectElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-willvalidate-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLOutputElement.checkValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLOutputElement/checkValidity",
+    "source_file": "api/HTMLOutputElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-checkvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "9"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLOutputElement.reportValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLOutputElement/reportValidity",
+    "source_file": "api/HTMLOutputElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-reportvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "49"
+     },
+     "firefox_android": {
+      "version_added": "49"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLOutputElement.setCustomValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLOutputElement/setCustomValidity",
+    "source_file": "api/HTMLOutputElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-setcustomvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "9"
+     },
+     "chrome_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLOutputElement.validationMessage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLOutputElement/validationMessage",
+    "source_file": "api/HTMLOutputElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-validationmessage-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "9"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLOutputElement.validity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLOutputElement/validity",
+    "source_file": "api/HTMLOutputElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api:dom-cva-validity",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "9"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLOutputElement.willValidate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLOutputElement/willValidate",
+    "source_file": "api/HTMLOutputElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-willvalidate-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "9"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLSelectElement.checkValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLSelectElement/checkValidity",
+    "source_file": "api/HTMLSelectElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-checkvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLSelectElement.reportValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLSelectElement/reportValidity",
+    "source_file": "api/HTMLSelectElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-reportvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "49"
+     },
+     "firefox_android": {
+      "version_added": "64"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLSelectElement.setCustomValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLSelectElement/setCustomValidity",
+    "source_file": "api/HTMLSelectElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-setcustomvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLSelectElement.validationMessage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLSelectElement/validationMessage",
+    "source_file": "api/HTMLSelectElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-validationmessage-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLSelectElement.validity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLSelectElement/validity",
+    "source_file": "api/HTMLSelectElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api:dom-cva-validity",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLSelectElement.willValidate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLSelectElement/willValidate",
+    "source_file": "api/HTMLSelectElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-willvalidate-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLTextAreaElement.checkValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLTextAreaElement/checkValidity",
+    "source_file": "api/HTMLTextAreaElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-checkvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLTextAreaElement.reportValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLTextAreaElement/reportValidity",
+    "source_file": "api/HTMLTextAreaElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-reportvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "49"
+     },
+     "firefox_android": {
+      "version_added": "64"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLTextAreaElement.setCustomValidity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLTextAreaElement/setCustomValidity",
+    "source_file": "api/HTMLTextAreaElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-setcustomvalidity-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "notes": "This method only updates the validation error popup, not the tooltip that appears when hovering the mouse over the element, see <a href=\"https://crbug.com/41380670\">bug 41380670</a>.",
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLTextAreaElement.validationMessage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLTextAreaElement/validationMessage",
+    "source_file": "api/HTMLTextAreaElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-validationmessage-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLTextAreaElement.validity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLTextAreaElement/validity",
+    "source_file": "api/HTMLTextAreaElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api:dom-cva-validity",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLTextAreaElement.willValidate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLTextAreaElement/willValidate",
+    "source_file": "api/HTMLTextAreaElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-cva-willvalidate-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.ValidityState",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ValidityState",
+    "source_file": "api/ValidityState.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api:validitystate-3",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12.1"
+     },
+     "opera_android": {
+      "version_added": "12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.ValidityState.badInput",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ValidityState/badInput",
+    "source_file": "api/ValidityState.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-validitystate-badinput-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "29"
+     },
+     "firefox_android": {
+      "version_added": "64"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.ValidityState.customError",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ValidityState/customError",
+    "source_file": "api/ValidityState.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-validitystate-customerror-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12.1"
+     },
+     "opera_android": {
+      "version_added": "12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.ValidityState.patternMismatch",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ValidityState/patternMismatch",
+    "source_file": "api/ValidityState.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-validitystate-patternmismatch",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12.1"
+     },
+     "opera_android": {
+      "version_added": "12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.ValidityState.rangeOverflow",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ValidityState/rangeOverflow",
+    "source_file": "api/ValidityState.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-validitystate-rangeoverflow",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12.1"
+     },
+     "opera_android": {
+      "version_added": "12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.ValidityState.rangeUnderflow",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ValidityState/rangeUnderflow",
+    "source_file": "api/ValidityState.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-validitystate-rangeunderflow",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12.1"
+     },
+     "opera_android": {
+      "version_added": "12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.ValidityState.stepMismatch",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ValidityState/stepMismatch",
+    "source_file": "api/ValidityState.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-validitystate-stepmismatch",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12.1"
+     },
+     "opera_android": {
+      "version_added": "12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.ValidityState.tooLong",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ValidityState/tooLong",
+    "source_file": "api/ValidityState.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-validitystate-toolong-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "notes": "Not supported in the unlikely case of the value being initially set too long, and then changed by the user to a still incorrect state. Per caniuse.com.",
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": "Not supported in the unlikely case of the value being initially set too long, and then changed by the user to a still incorrect state. Per caniuse.com.",
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "64"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12.1"
+     },
+     "opera_android": {
+      "version_added": "12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.ValidityState.tooShort",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ValidityState/tooShort",
+    "source_file": "api/ValidityState.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-validitystate-tooshort-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "51"
+     },
+     "firefox_android": {
+      "version_added": "64"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "67"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.ValidityState.typeMismatch",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ValidityState/typeMismatch",
+    "source_file": "api/ValidityState.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-validitystate-typemismatch",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12.1"
+     },
+     "opera_android": {
+      "version_added": "12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.ValidityState.valid",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ValidityState/valid",
+    "source_file": "api/ValidityState.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-validitystate-valid-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12.1"
+     },
+     "opera_android": {
+      "version_added": "12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  },
+  {
+   "key": "api.ValidityState.valueMissing",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ValidityState/valueMissing",
+    "source_file": "api/ValidityState.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-validitystate-valuemissing-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12.1"
+     },
+     "opera_android": {
+      "version_added": "12.1"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:constraint-validation"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2018-12-11T00:00:00.000Z",
+ "baselineHighDateAsObject": "2021-06-11T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

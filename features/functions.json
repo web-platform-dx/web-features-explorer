@@ -1,0 +1,2824 @@
+{
+ "compat_features": [
+  "javascript.builtins.Function",
+  "javascript.builtins.Function.@@hasInstance",
+  "javascript.builtins.Function.Function",
+  "javascript.builtins.Function.apply",
+  "javascript.builtins.Function.apply.generic_arrays_as_arguments",
+  "javascript.builtins.Function.bind",
+  "javascript.builtins.Function.call",
+  "javascript.builtins.Function.length",
+  "javascript.builtins.Function.length.configurable_true",
+  "javascript.builtins.Function.name",
+  "javascript.builtins.Function.name.configurable_true",
+  "javascript.builtins.Function.name.inferred_names",
+  "javascript.builtins.Function.toString",
+  "javascript.builtins.Function.toString.toString_revision",
+  "javascript.functions",
+  "javascript.functions.arguments",
+  "javascript.functions.arguments.@@iterator",
+  "javascript.functions.arguments.length",
+  "javascript.functions.arrow_functions",
+  "javascript.functions.arrow_functions.trailing_comma",
+  "javascript.functions.block_level_functions",
+  "javascript.functions.default_parameters",
+  "javascript.functions.default_parameters.destructured_parameter_with_default_value_assignment",
+  "javascript.functions.default_parameters.parameters_without_defaults_after_default_parameters",
+  "javascript.functions.get",
+  "javascript.functions.get.computed_property_names",
+  "javascript.functions.method_definitions",
+  "javascript.functions.method_definitions.async_methods",
+  "javascript.functions.method_definitions.generator_methods_not_constructable",
+  "javascript.functions.rest_parameters",
+  "javascript.functions.rest_parameters.destructuring",
+  "javascript.functions.set",
+  "javascript.functions.set.computed_property_names",
+  "javascript.grammar.trailing_commas.trailing_commas_in_functions",
+  "javascript.operators.function",
+  "javascript.operators.function.trailing_comma",
+  "javascript.statements.function",
+  "javascript.statements.function.trailing_comma_in_parameters"
+ ],
+ "description": "Functions are series of statements that can be called and return a value. The function keyword (as in function () { }) and arrow (=>) expression create functions. The JavaScript functions protocol includes default and rest parameters and binding to this.",
+ "description_html": "Functions are series of statements that can be called and return a value. The <code>function</code> keyword (as in <code>function () { }</code>) and arrow (<code>=></code>) expression create functions. The JavaScript functions protocol includes default and rest parameters and binding to <code>this</code>.",
+ "group": "javascript",
+ "name": "Functions",
+ "spec": [
+  {
+   "url": "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html#sec-ecmascript-language-functions-and-classes",
+   "seriesComposition": "full",
+   "shortname": "ecmascript",
+   "series": {
+    "shortname": "ecmascript",
+    "currentSpecification": "ecmascript",
+    "title": "ECMAScript® 2026 Language Specification",
+    "shortTitle": "ECMAScript",
+    "nightlyUrl": "https://tc39.es/ecma262/multipage/"
+   },
+   "shortTitle": "ECMAScript",
+   "tests": {
+    "repository": "https://github.com/tc39/test262",
+    "testPaths": [
+     "test"
+    ],
+    "excludePaths": [
+     "test/intl402"
+    ]
+   },
+   "organization": "Ecma International",
+   "groups": [
+    {
+     "name": "TC39",
+     "url": "https://tc39.es/"
+    }
+   ],
+   "nightly": {
+    "url": "https://tc39.es/ecma262/multipage/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/tc39/ecma262",
+    "sourcePath": "spec.html",
+    "pages": [
+     "https://tc39.es/ecma262/multipage/scope.html",
+     "https://tc39.es/ecma262/multipage/conformance.html",
+     "https://tc39.es/ecma262/multipage/normative-references.html",
+     "https://tc39.es/ecma262/multipage/overview.html",
+     "https://tc39.es/ecma262/multipage/notational-conventions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html",
+     "https://tc39.es/ecma262/multipage/abstract-operations.html",
+     "https://tc39.es/ecma262/multipage/syntax-directed-operations.html",
+     "https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html",
+     "https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-source-code.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html",
+     "https://tc39.es/ecma262/multipage/error-handling-and-language-extensions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-standard-built-in-objects.html",
+     "https://tc39.es/ecma262/multipage/global-object.html",
+     "https://tc39.es/ecma262/multipage/fundamental-objects.html",
+     "https://tc39.es/ecma262/multipage/numbers-and-dates.html",
+     "https://tc39.es/ecma262/multipage/text-processing.html",
+     "https://tc39.es/ecma262/multipage/indexed-collections.html",
+     "https://tc39.es/ecma262/multipage/keyed-collections.html",
+     "https://tc39.es/ecma262/multipage/structured-data.html",
+     "https://tc39.es/ecma262/multipage/managing-memory.html",
+     "https://tc39.es/ecma262/multipage/control-abstraction-objects.html",
+     "https://tc39.es/ecma262/multipage/reflection.html",
+     "https://tc39.es/ecma262/multipage/memory-model.html",
+     "https://tc39.es/ecma262/multipage/grammar-summary.html",
+     "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html",
+     "https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html",
+     "https://tc39.es/ecma262/multipage/host-layering-points.html",
+     "https://tc39.es/ecma262/multipage/corrections-and-clarifications-in-ecmascript-2015-with-possible-compatibility-impact.html",
+     "https://tc39.es/ecma262/multipage/additions-and-changes-that-introduce-incompatibilities-with-prior-editions.html",
+     "https://tc39.es/ecma262/multipage/bibliography.html",
+     "https://tc39.es/ecma262/multipage/colophon.html",
+     "https://tc39.es/ecma262/multipage/copyright-and-software-license.html"
+    ],
+    "filename": "index.html"
+   },
+   "title": "ECMAScript® 2026 Language Specification",
+   "source": "spec",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": "sec-ecmascript-language-functions-and-classes"
+  },
+  {
+   "url": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function-objects",
+   "seriesComposition": "full",
+   "shortname": "ecmascript",
+   "series": {
+    "shortname": "ecmascript",
+    "currentSpecification": "ecmascript",
+    "title": "ECMAScript® 2026 Language Specification",
+    "shortTitle": "ECMAScript",
+    "nightlyUrl": "https://tc39.es/ecma262/multipage/"
+   },
+   "shortTitle": "ECMAScript",
+   "tests": {
+    "repository": "https://github.com/tc39/test262",
+    "testPaths": [
+     "test"
+    ],
+    "excludePaths": [
+     "test/intl402"
+    ]
+   },
+   "organization": "Ecma International",
+   "groups": [
+    {
+     "name": "TC39",
+     "url": "https://tc39.es/"
+    }
+   ],
+   "nightly": {
+    "url": "https://tc39.es/ecma262/multipage/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/tc39/ecma262",
+    "sourcePath": "spec.html",
+    "pages": [
+     "https://tc39.es/ecma262/multipage/scope.html",
+     "https://tc39.es/ecma262/multipage/conformance.html",
+     "https://tc39.es/ecma262/multipage/normative-references.html",
+     "https://tc39.es/ecma262/multipage/overview.html",
+     "https://tc39.es/ecma262/multipage/notational-conventions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html",
+     "https://tc39.es/ecma262/multipage/abstract-operations.html",
+     "https://tc39.es/ecma262/multipage/syntax-directed-operations.html",
+     "https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html",
+     "https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-source-code.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html",
+     "https://tc39.es/ecma262/multipage/error-handling-and-language-extensions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-standard-built-in-objects.html",
+     "https://tc39.es/ecma262/multipage/global-object.html",
+     "https://tc39.es/ecma262/multipage/fundamental-objects.html",
+     "https://tc39.es/ecma262/multipage/numbers-and-dates.html",
+     "https://tc39.es/ecma262/multipage/text-processing.html",
+     "https://tc39.es/ecma262/multipage/indexed-collections.html",
+     "https://tc39.es/ecma262/multipage/keyed-collections.html",
+     "https://tc39.es/ecma262/multipage/structured-data.html",
+     "https://tc39.es/ecma262/multipage/managing-memory.html",
+     "https://tc39.es/ecma262/multipage/control-abstraction-objects.html",
+     "https://tc39.es/ecma262/multipage/reflection.html",
+     "https://tc39.es/ecma262/multipage/memory-model.html",
+     "https://tc39.es/ecma262/multipage/grammar-summary.html",
+     "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html",
+     "https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html",
+     "https://tc39.es/ecma262/multipage/host-layering-points.html",
+     "https://tc39.es/ecma262/multipage/corrections-and-clarifications-in-ecmascript-2015-with-possible-compatibility-impact.html",
+     "https://tc39.es/ecma262/multipage/additions-and-changes-that-introduce-incompatibilities-with-prior-editions.html",
+     "https://tc39.es/ecma262/multipage/bibliography.html",
+     "https://tc39.es/ecma262/multipage/colophon.html",
+     "https://tc39.es/ecma262/multipage/copyright-and-software-license.html"
+    ],
+    "filename": "index.html"
+   },
+   "title": "ECMAScript® 2026 Language Specification",
+   "source": "spec",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": "sec-function-objects"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "1",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "1",
+   "firefox_android": "4",
+   "safari": "1",
+   "safari_ios": "1"
+  }
+ },
+ "id": "functions",
+ "groups": [
+  "javascript"
+ ],
+ "groupPaths": [
+  [
+   "JavaScript"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Functions",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "javascript.builtins.Function",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "source_file": "javascript/builtins/Function.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Function.@@hasInstance",
+   "compat": {
+    "description": "[Symbol.hasInstance]",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance",
+    "source_file": "javascript/builtins/Function.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function.prototype-%symbol.hasinstance%",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "6.5.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Function.Function",
+   "compat": {
+    "description": "<code>Function()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/Function",
+    "source_file": "javascript/builtins/Function.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function-constructor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Function.apply",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/apply",
+    "source_file": "javascript/builtins/Function.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function.prototype.apply",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "5.5"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "4"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-3",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Function.apply.generic_arrays_as_arguments",
+   "compat": {
+    "description": "ES 5.1: generic array-like object as <code>arguments</code>",
+    "source_file": "javascript/builtins/Function.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "17"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "5"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-5",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Function.bind",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/bind",
+    "source_file": "javascript/builtins/Function.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function.prototype.bind",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "7"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "4"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "11.6"
+     },
+     "opera_android": {
+      "version_added": "12"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-5",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Function.call",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/call",
+    "source_file": "javascript/builtins/Function.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function.prototype.call",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "5.5"
+     },
+     "nodejs": {
+      "notes": "When calling this method, <code>thisArg</code> does not default to the global object.",
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "4"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-3",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Function.length",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/length",
+    "source_file": "javascript/builtins/Function.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function-instances-length",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Function.length.configurable_true",
+   "compat": {
+    "description": "Configurable: true",
+    "source_file": "javascript/builtins/Function.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "37"
+     },
+     "firefox_android": {
+      "version_added": "37"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "4.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Function.name",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/name",
+    "source_file": "javascript/builtins/Function.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function-instances-name",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "15"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10.5"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Function.name.configurable_true",
+   "compat": {
+    "description": "Configurable: true",
+    "source_file": "javascript/builtins/Function.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "4.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Function.name.inferred_names",
+   "compat": {
+    "description": "Inferred names on anonymous functions",
+    "source_file": "javascript/builtins/Function.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "notes": "Names for functions defined in a dictionary are properly assigned; however, anonymous functions defined on a var/let variable assignment have blank names.",
+       "partial_implementation": true,
+       "version_added": "14",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "6.5.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Function.toString",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/toString",
+    "source_file": "javascript/builtins/Function.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function.prototype.tostring",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "5"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Function.toString.toString_revision",
+   "compat": {
+    "description": "Implements <code>Function.prototype.toString</code> revision",
+    "source_file": "javascript/builtins/Function.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "54"
+     },
+     "firefox_android": {
+      "version_added": "54"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "17"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2019",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions",
+    "source_file": "javascript/functions.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html#sec-function-definitions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.arguments",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/arguments",
+    "source_file": "javascript/functions.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#sec-arguments-exotic-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.arguments.@@iterator",
+   "compat": {
+    "description": "[Symbol.iterator]",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator",
+    "source_file": "javascript/functions.json",
+    "spec_url": [
+     "https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#sec-createunmappedargumentsobject",
+     "https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#sec-createmappedargumentsobject"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "52"
+     },
+     "chrome_android": {
+      "version_added": "52"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "46"
+     },
+     "firefox_android": {
+      "version_added": "46"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "4.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "39"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "52"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.arguments.length",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/arguments/length",
+    "source_file": "javascript/functions.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#sec-arguments-exotic-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "4"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.arrow_functions",
+   "compat": {
+    "description": "Arrow functions",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions",
+    "source_file": "javascript/functions.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html#sec-arrow-function-definitions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "45"
+     },
+     "chrome_android": {
+      "version_added": "45"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": [
+       "The initial implementation of arrow functions in Firefox made them automatically strict. This has been changed as of Firefox 24. The use of <code>'use strict';</code> is now required.",
+       "Before Firefox 39, a line terminator (<code>\\n</code>) was incorrectly allowed after arrow function arguments. This has been fixed to conform to the ES2015 specification and code like <code>() \\n =&gt; {}</code> will now throw a <code>SyntaxError</code> in this and later versions."
+      ],
+      "version_added": "22"
+     },
+     "firefox_android": {
+      "notes": [
+       "The initial implementation of arrow functions in Firefox for Android made them automatically strict. This has been changed as of Firefox for Android 24. The use of <code>'use strict';</code> is now required.",
+       "Before Firefox for Android 39, a line terminator (<code>\\n</code>) was incorrectly allowed after arrow function arguments. This has been fixed to conform to the ES2015 specification and code like <code>() \\n =&gt; {}</code> will now throw a <code>SyntaxError</code> in this and later versions."
+      ],
+      "version_added": "22"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "4.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "32"
+     },
+     "opera_android": {
+      "version_added": "32"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "45"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.arrow_functions.trailing_comma",
+   "compat": {
+    "description": "Trailing comma in parameters",
+    "source_file": "javascript/functions.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "58"
+     },
+     "chrome_android": {
+      "version_added": "58"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "45"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "58"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.block_level_functions",
+   "compat": {
+    "description": "Block-level functions",
+    "source_file": "javascript/functions.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "46"
+     },
+     "firefox_android": {
+      "version_added": "46"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "nodejs": {
+      "version_added": "4.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "49"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.default_parameters",
+   "compat": {
+    "description": "Default parameters",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Default_parameters",
+    "source_file": "javascript/functions.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html#sec-function-definitions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "6.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "49"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.default_parameters.destructured_parameter_with_default_value_assignment",
+   "compat": {
+    "description": "Destructured parameter with default value assignment",
+    "source_file": "javascript/functions.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "6.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "49"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.default_parameters.parameters_without_defaults_after_default_parameters",
+   "compat": {
+    "description": "Parameters without defaults after default parameters",
+    "source_file": "javascript/functions.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "26"
+     },
+     "firefox_android": {
+      "version_added": "26"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "6.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "49"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.get",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/get",
+    "source_file": "javascript/functions.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html#sec-method-definitions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9.5"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-5",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.get.computed_property_names",
+   "compat": {
+    "description": "Computed property names",
+    "source_file": "javascript/functions.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "46"
+     },
+     "chrome_android": {
+      "version_added": "46"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "4.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "47"
+     },
+     "opera_android": {
+      "version_added": "33"
+     },
+     "safari": {
+      "version_added": "9.1"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "46"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.method_definitions",
+   "compat": {
+    "description": "Method definitions",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Method_definitions",
+    "source_file": "javascript/functions.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html#sec-method-definitions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "39"
+     },
+     "chrome_android": {
+      "version_added": "39"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "4.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "26"
+     },
+     "opera_android": {
+      "version_added": "26"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "39"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.method_definitions.async_methods",
+   "compat": {
+    "description": "Async methods",
+    "source_file": "javascript/functions.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "55"
+     },
+     "chrome_android": {
+      "version_added": "55"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "7.6.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "42"
+     },
+     "opera_android": {
+      "version_added": "42"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "55"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.method_definitions.generator_methods_not_constructable",
+   "compat": {
+    "description": "Generator methods are not constructable (ES2016)",
+    "source_file": "javascript/functions.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "43"
+     },
+     "firefox_android": {
+      "version_added": "43"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "6.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "9.1"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.rest_parameters",
+   "compat": {
+    "description": "Rest parameters",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/rest_parameters",
+    "source_file": "javascript/functions.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html#sec-function-definitions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "47"
+     },
+     "chrome_android": {
+      "version_added": "47"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "6.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "34"
+     },
+     "opera_android": {
+      "version_added": "34"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "47"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.rest_parameters.destructuring",
+   "compat": {
+    "description": "Destructuring rest parameters",
+    "source_file": "javascript/functions.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "6.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "49"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.set",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/set",
+    "source_file": "javascript/functions.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html#sec-method-definitions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9.5"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-5",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.functions.set.computed_property_names",
+   "compat": {
+    "description": "Computed property names",
+    "source_file": "javascript/functions.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "46"
+     },
+     "chrome_android": {
+      "version_added": "46"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "4.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "47"
+     },
+     "opera_android": {
+      "version_added": "33"
+     },
+     "safari": {
+      "version_added": "9.1"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "46"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.grammar.trailing_commas.trailing_commas_in_functions",
+   "compat": {
+    "description": "Trailing comma in function parameters",
+    "source_file": "javascript/grammar.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "58"
+     },
+     "chrome_android": {
+      "version_added": "58"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "45"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "58"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.operators.function",
+   "compat": {
+    "description": "<code>function</code> expression",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/function",
+    "source_file": "javascript/operators/function.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html#sec-function-definitions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.operators.function.trailing_comma",
+   "compat": {
+    "description": "Trailing comma in parameters",
+    "source_file": "javascript/operators/function.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "58"
+     },
+     "chrome_android": {
+      "version_added": "58"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "45"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "58"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.statements.function",
+   "compat": {
+    "description": "<code>function</code> statement",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function",
+    "source_file": "javascript/statements.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html#sec-function-definitions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:functions"
+    ]
+   }
+  },
+  {
+   "key": "javascript.statements.function.trailing_comma_in_parameters",
+   "compat": {
+    "description": "Trailing comma in parameters",
+    "source_file": "javascript/statements.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "58"
+     },
+     "chrome_android": {
+      "version_added": "58"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "45"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "58"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:functions"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "javascript"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

@@ -1,0 +1,1263 @@
+{
+ "compat_features": [
+  "api.PerformanceLongAnimationFrameTiming",
+  "api.PerformanceLongAnimationFrameTiming.blockingDuration",
+  "api.PerformanceLongAnimationFrameTiming.firstUIEventTimestamp",
+  "api.PerformanceLongAnimationFrameTiming.renderStart",
+  "api.PerformanceLongAnimationFrameTiming.scripts",
+  "api.PerformanceLongAnimationFrameTiming.styleAndLayoutStart",
+  "api.PerformanceLongAnimationFrameTiming.toJSON",
+  "api.PerformanceScriptTiming",
+  "api.PerformanceScriptTiming.executionStart",
+  "api.PerformanceScriptTiming.forcedStyleAndLayoutDuration",
+  "api.PerformanceScriptTiming.invoker",
+  "api.PerformanceScriptTiming.invokerType",
+  "api.PerformanceScriptTiming.pauseDuration",
+  "api.PerformanceScriptTiming.sourceCharPosition",
+  "api.PerformanceScriptTiming.sourceFunctionName",
+  "api.PerformanceScriptTiming.sourceURL",
+  "api.PerformanceScriptTiming.toJSON",
+  "api.PerformanceScriptTiming.window",
+  "api.PerformanceScriptTiming.windowAttribution"
+ ],
+ "description": "The long-animation-frame performance event type and the PerformanceLongAnimationFrameTiming API provide information about rendering updates that take longer than 50 milliseconds. Also known as LoAFs.",
+ "description_html": "The <code>long-animation-frame</code> performance event type and the <code>PerformanceLongAnimationFrameTiming</code> API provide information about rendering updates that take longer than 50 milliseconds. Also known as LoAFs.",
+ "group": "performance",
+ "name": "Long animation frames",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/long-animation-frames/",
+   "seriesComposition": "full",
+   "shortname": "long-animation-frames",
+   "series": {
+    "shortname": "long-animation-frames",
+    "currentSpecification": "long-animation-frames",
+    "title": "Long Animation Frames API",
+    "shortTitle": "Long Animation Frames API",
+    "nightlyUrl": "https://w3c.github.io/long-animation-frames/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Performance Working Group",
+     "url": "https://www.w3.org/groups/wg/webperf/"
+    }
+   ],
+   "nightly": {
+    "url": "https://w3c.github.io/long-animation-frames/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/long-animation-frames",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Long Animation Frames API",
+   "source": "spec",
+   "shortTitle": "Long Animation Frames API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "123",
+   "chrome_android": "123",
+   "edge": "123"
+  }
+ },
+ "id": "long-animation-frames",
+ "groups": [
+  "performance"
+ ],
+ "groupPaths": [
+  [
+   "Performance"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "PerformanceLongAnimationFrameTiming",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/PerformanceLongAnimationFrameTiming"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/929",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/283",
+   "position": "",
+   "concerns": []
+  }
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.11774255,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/236"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.PerformanceLongAnimationFrameTiming",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceLongAnimationFrameTiming",
+    "source_file": "api/PerformanceLongAnimationFrameTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#sec-PerformanceLongAnimationFrameTiming",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceLongAnimationFrameTiming.blockingDuration",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceLongAnimationFrameTiming/blockingDuration",
+    "source_file": "api/PerformanceLongAnimationFrameTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancelonganimationframetiming-blockingduration",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceLongAnimationFrameTiming.firstUIEventTimestamp",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceLongAnimationFrameTiming/firstUIEventTimestamp",
+    "source_file": "api/PerformanceLongAnimationFrameTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancelonganimationframetiming-firstuieventtimestamp",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceLongAnimationFrameTiming.renderStart",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceLongAnimationFrameTiming/renderStart",
+    "source_file": "api/PerformanceLongAnimationFrameTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancelonganimationframetiming-renderstart",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceLongAnimationFrameTiming.scripts",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceLongAnimationFrameTiming/scripts",
+    "source_file": "api/PerformanceLongAnimationFrameTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancelonganimationframetiming-scripts",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceLongAnimationFrameTiming.styleAndLayoutStart",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceLongAnimationFrameTiming/styleAndLayoutStart",
+    "source_file": "api/PerformanceLongAnimationFrameTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancelonganimationframetiming-styleandlayoutstart",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceLongAnimationFrameTiming.toJSON",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceLongAnimationFrameTiming/toJSON",
+    "source_file": "api/PerformanceLongAnimationFrameTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancelonganimationframetiming-tojson",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceScriptTiming",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceScriptTiming",
+    "source_file": "api/PerformanceScriptTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#sec-PerformanceScriptTiming",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceScriptTiming.executionStart",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceScriptTiming/executionStart",
+    "source_file": "api/PerformanceScriptTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancescripttiming-executionstart",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceScriptTiming.forcedStyleAndLayoutDuration",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceScriptTiming/forcedStyleAndLayoutDuration",
+    "source_file": "api/PerformanceScriptTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancescripttiming-forcedstyleandlayoutduration",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceScriptTiming.invoker",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceScriptTiming/invoker",
+    "source_file": "api/PerformanceScriptTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancescripttiming-invoker",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceScriptTiming.invokerType",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceScriptTiming/invokerType",
+    "source_file": "api/PerformanceScriptTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancescripttiming-invokertype",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceScriptTiming.pauseDuration",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceScriptTiming/pauseDuration",
+    "source_file": "api/PerformanceScriptTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancescripttiming-pauseduration",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceScriptTiming.sourceCharPosition",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceScriptTiming/sourceCharPosition",
+    "source_file": "api/PerformanceScriptTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancescripttiming-sourcecharposition",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceScriptTiming.sourceFunctionName",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceScriptTiming/sourceFunctionName",
+    "source_file": "api/PerformanceScriptTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancescripttiming-sourcefunctionname",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceScriptTiming.sourceURL",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceScriptTiming/sourceURL",
+    "source_file": "api/PerformanceScriptTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancescripttiming-sourceurl",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceScriptTiming.toJSON",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceScriptTiming/toJSON",
+    "source_file": "api/PerformanceScriptTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancescripttiming-tojson",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceScriptTiming.window",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceScriptTiming/window",
+    "source_file": "api/PerformanceScriptTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancescripttiming-window",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceScriptTiming.windowAttribution",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceScriptTiming/windowAttribution",
+    "source_file": "api/PerformanceScriptTiming.json",
+    "spec_url": "https://w3c.github.io/long-animation-frames/#dom-performancescripttiming-windowattribution",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:long-animation-frames"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

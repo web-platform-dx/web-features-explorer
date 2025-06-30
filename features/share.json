@@ -1,0 +1,688 @@
+{
+ "compat_features": [
+  "api.Navigator.canShare",
+  "api.Navigator.canShare.data_files_parameter",
+  "api.Navigator.canShare.data_text_parameter",
+  "api.Navigator.share",
+  "api.Navigator.share.data_files_parameter",
+  "api.Navigator.share.data_text_parameter",
+  "html.elements.iframe.allow.web-share",
+  "http.headers.Permissions-Policy.web-share"
+ ],
+ "description": "The navigator.share() method invokes the device's native sharing mechanism and passes text, links, files, and other content to share targets.",
+ "description_html": "The <code>navigator.share()</code> method invokes the device's native sharing mechanism and passes text, links, files, and other content to share targets.",
+ "name": "navigator.share()",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/web-share/",
+   "seriesComposition": "full",
+   "shortname": "web-share",
+   "series": {
+    "shortname": "web-share",
+    "currentSpecification": "web-share",
+    "title": "Web Share API",
+    "shortTitle": "Web Share API",
+    "releaseUrl": "https://www.w3.org/TR/web-share/",
+    "nightlyUrl": "https://w3c.github.io/web-share/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Applications Working Group",
+     "url": "https://www.w3.org/groups/wg/webapps/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/web-share/",
+    "status": "Recommendation",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/web-share/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/web-share",
+    "sourcePath": "index.html",
+    "filename": "index.html"
+   },
+   "title": "Web Share API",
+   "source": "w3c",
+   "shortTitle": "Web Share API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "web-share"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "128",
+   "chrome_android": "61",
+   "edge": "93",
+   "firefox_android": "79",
+   "safari": "12.1",
+   "safari_ios": "12.2"
+  }
+ },
+ "id": "share",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Web Share API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Web_Share_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/27",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Navigator.canShare",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/canShare",
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://w3c.github.io/web-share/#canshare-data-method",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "128"
+      },
+      {
+       "notes": "Only supported on ChromeOS and Windows, see <a href=\"https://crbug.com/40542648\">bug 40542648</a> and <a href=\"https://crbug.com/40729163\">bug 40729163</a>.",
+       "partial_implementation": true,
+       "version_added": "89",
+       "version_last": "127",
+       "version_removed": "128"
+      }
+     ],
+     "chrome_android": {
+      "version_added": "75"
+     },
+     "edge": [
+      {
+       "version_added": "93"
+      },
+      {
+       "notes": "Only supported on Windows.",
+       "partial_implementation": true,
+       "version_added": "81",
+       "version_last": "92",
+       "version_removed": "93"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.webshare.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "96"
+     },
+     "firefox_android": {
+      "version_added": "96"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": [
+      {
+       "version_added": "114"
+      },
+      {
+       "notes": "Only supported on ChromeOS and Windows, see <a href=\"https://crbug.com/40542648\">bug 40542648</a> and <a href=\"https://crbug.com/40729163\">bug 40729163</a>.",
+       "partial_implementation": true,
+       "version_added": "75",
+       "version_last": "113",
+       "version_removed": "114"
+      }
+     ],
+     "opera_android": {
+      "version_added": "54"
+     },
+     "safari": {
+      "version_added": "14"
+     },
+     "safari_ios": {
+      "version_added": "14"
+     },
+     "samsunginternet_android": {
+      "version_added": "11.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40540400",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "14"
+     }
+    },
+    "tags": [
+     "web-features:share"
+    ]
+   }
+  },
+  {
+   "key": "api.Navigator.canShare.data_files_parameter",
+   "compat": {
+    "description": "<code>data.files</code> parameter",
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://w3c.github.io/web-share/#dom-sharedata-files",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": "76"
+     },
+     "edge": {
+      "version_added": "81"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": "54"
+     },
+     "safari": {
+      "version_added": "14"
+     },
+     "safari_ios": {
+      "version_added": "14"
+     },
+     "samsunginternet_android": {
+      "version_added": "11.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "14"
+     }
+    },
+    "tags": [
+     "web-features:share"
+    ]
+   }
+  },
+  {
+   "key": "api.Navigator.canShare.data_text_parameter",
+   "compat": {
+    "description": "<code>data.text</code> parameter",
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://w3c.github.io/web-share/#dom-sharedata-text",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": "76"
+     },
+     "edge": {
+      "version_added": "81"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": "54"
+     },
+     "safari": {
+      "version_added": "14"
+     },
+     "safari_ios": {
+      "version_added": "14"
+     },
+     "samsunginternet_android": {
+      "version_added": "11.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "14"
+     }
+    },
+    "tags": [
+     "web-features:share"
+    ]
+   }
+  },
+  {
+   "key": "api.Navigator.share",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/share",
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://w3c.github.io/web-share/#share-method",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "128"
+      },
+      {
+       "notes": "Only supported on ChromeOS and Windows, see <a href=\"https://crbug.com/40542648\">bug 40542648</a> and <a href=\"https://crbug.com/40729163\">bug 40729163</a>.",
+       "partial_implementation": true,
+       "version_added": "89",
+       "version_last": "127",
+       "version_removed": "128"
+      }
+     ],
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": [
+      {
+       "version_added": "93"
+      },
+      {
+       "notes": "Only supported on Windows.",
+       "partial_implementation": true,
+       "version_added": "81",
+       "version_last": "92",
+       "version_removed": "93"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.webshare.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "71"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "114"
+      },
+      {
+       "notes": "Only supported on ChromeOS and Windows, see <a href=\"https://crbug.com/40542648\">bug 40542648</a> and <a href=\"https://crbug.com/40729163\">bug 40729163</a>.",
+       "partial_implementation": true,
+       "version_added": "75",
+       "version_last": "113",
+       "version_removed": "114"
+      }
+     ],
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40540400",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:share"
+    ]
+   }
+  },
+  {
+   "key": "api.Navigator.share.data_files_parameter",
+   "compat": {
+    "description": "<code>data.files</code> parameter",
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://w3c.github.io/web-share/#dom-sharedata-files",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": "76"
+     },
+     "edge": {
+      "version_added": "81"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": "54"
+     },
+     "safari": {
+      "version_added": "14"
+     },
+     "safari_ios": {
+      "version_added": "14"
+     },
+     "samsunginternet_android": {
+      "version_added": "11.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "14"
+     }
+    },
+    "tags": [
+     "web-features:share"
+    ]
+   }
+  },
+  {
+   "key": "api.Navigator.share.data_text_parameter",
+   "compat": {
+    "description": "<code>data.text</code> parameter",
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://w3c.github.io/web-share/#dom-sharedata-text",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": "76"
+     },
+     "edge": {
+      "version_added": "81"
+     },
+     "firefox": {
+      "version_added": "71"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": "54"
+     },
+     "safari": {
+      "version_added": "14"
+     },
+     "safari_ios": {
+      "version_added": "14"
+     },
+     "samsunginternet_android": {
+      "version_added": "11.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "14"
+     }
+    },
+    "tags": [
+     "web-features:share"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.iframe.allow.web-share",
+   "compat": {
+    "source_file": "html/elements/iframe.json",
+    "spec_url": "https://w3c.github.io/web-share/#permissions-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "86"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "notes": "Firefox recognizes the <code>web-share</code> permissions policy, but this has no effect in versions of Firefox that do not support the <a href=\"https://developer.mozilla.org/docs/Web/API/Navigator/share\"><code>share()</code></a> method.",
+      "version_added": "81"
+     },
+     "firefox_android": {
+      "notes": "Firefox for Android recognizes the <code>web-share</code> permissions policy, but this has no effect in versions of Firefox for Android that do not support the <a href=\"https://developer.mozilla.org/docs/Web/API/Navigator/share\"><code>share()</code></a> method.",
+      "version_added": "81"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "12.0"
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "61"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "86"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:share"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Permissions-Policy.web-share",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share",
+    "source_file": "http/headers/Permissions-Policy.json",
+    "spec_url": "https://w3c.github.io/web-share/#permissions-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "88"
+     },
+     "chrome_android": {
+      "version_added": "88"
+     },
+     "edge": {
+      "version_added": "88"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "14.0"
+     },
+     "opera": {
+      "version_added": "74"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40540400",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:share"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "html",
+  "http"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ },
+ "blockedOn": "Firefox",
+ "monthsBlocked": 10,
+ "blockedSince": "August 2024"
+}

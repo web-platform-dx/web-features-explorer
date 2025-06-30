@@ -1,0 +1,3564 @@
+{
+ "caniuse": [
+  "contentsecuritypolicy",
+  "contentsecuritypolicy2"
+ ],
+ "compat_features": [
+  "api.Document.securitypolicyviolation_event",
+  "api.Element.securitypolicyviolation_event",
+  "api.HTMLElement.nonce",
+  "api.HTMLIFrameElement.csp",
+  "api.SecurityPolicyViolationEvent",
+  "api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent",
+  "api.SecurityPolicyViolationEvent.blockedURI",
+  "api.SecurityPolicyViolationEvent.columnNumber",
+  "api.SecurityPolicyViolationEvent.disposition",
+  "api.SecurityPolicyViolationEvent.documentURI",
+  "api.SecurityPolicyViolationEvent.effectiveDirective",
+  "api.SecurityPolicyViolationEvent.lineNumber",
+  "api.SecurityPolicyViolationEvent.originalPolicy",
+  "api.SecurityPolicyViolationEvent.referrer",
+  "api.SecurityPolicyViolationEvent.sample",
+  "api.SecurityPolicyViolationEvent.sourceFile",
+  "api.SecurityPolicyViolationEvent.statusCode",
+  "api.SecurityPolicyViolationEvent.violatedDirective",
+  "api.SecurityPolicyViolationEvent.worker_support",
+  "api.WorkerGlobalScope.securitypolicyviolation_event",
+  "html.elements.iframe.csp",
+  "html.elements.meta.http-equiv.content-security-policy",
+  "html.global_attributes.nonce",
+  "html.global_attributes.nonce.nonce_hiding",
+  "http.headers.Content-Security-Policy",
+  "http.headers.Content-Security-Policy-Report-Only",
+  "http.headers.Content-Security-Policy.base-uri",
+  "http.headers.Content-Security-Policy.child-src",
+  "http.headers.Content-Security-Policy.connect-src",
+  "http.headers.Content-Security-Policy.default-src",
+  "http.headers.Content-Security-Policy.font-src",
+  "http.headers.Content-Security-Policy.form-action",
+  "http.headers.Content-Security-Policy.frame-ancestors",
+  "http.headers.Content-Security-Policy.frame-src",
+  "http.headers.Content-Security-Policy.img-src",
+  "http.headers.Content-Security-Policy.manifest-src",
+  "http.headers.Content-Security-Policy.media-src",
+  "http.headers.Content-Security-Policy.meta-element-support",
+  "http.headers.Content-Security-Policy.object-src",
+  "http.headers.Content-Security-Policy.report-sample",
+  "http.headers.Content-Security-Policy.report-to",
+  "http.headers.Content-Security-Policy.sandbox",
+  "http.headers.Content-Security-Policy.script-src",
+  "http.headers.Content-Security-Policy.script-src-attr",
+  "http.headers.Content-Security-Policy.script-src-elem",
+  "http.headers.Content-Security-Policy.script-src.external_scripts",
+  "http.headers.Content-Security-Policy.script-src.wasm-unsafe-eval",
+  "http.headers.Content-Security-Policy.strict-dynamic",
+  "http.headers.Content-Security-Policy.style-src",
+  "http.headers.Content-Security-Policy.style-src-attr",
+  "http.headers.Content-Security-Policy.style-src-elem",
+  "http.headers.Content-Security-Policy.unsafe-hashes",
+  "http.headers.Content-Security-Policy.worker-src",
+  "http.headers.Content-Security-Policy.worker_support"
+ ],
+ "description": "Content Security Policy (CSP) helps to mitigate certain security threats, including cross-site scripting (XSS) and clickjacking attacks. It consists of a set of directives from a website to a browser, which instruct the browser to restrict the things that the site is allowed to do.",
+ "description_html": "Content Security Policy (CSP) helps to mitigate certain security threats, including cross-site scripting (XSS) and clickjacking attacks. It consists of a set of directives from a website to a browser, which instruct the browser to restrict the things that the site is allowed to do.",
+ "group": "security",
+ "name": "Content Security Policy (CSP)",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/webappsec-csp/",
+   "seriesComposition": "full",
+   "shortname": "CSP3",
+   "series": {
+    "shortname": "CSP",
+    "currentSpecification": "CSP3",
+    "title": "Content Security Policy",
+    "shortTitle": "Content Security Policy",
+    "releaseUrl": "https://www.w3.org/TR/CSP/",
+    "nightlyUrl": "https://w3c.github.io/webappsec-csp/"
+   },
+   "seriesVersion": "3",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Application Security Working Group",
+     "url": "https://www.w3.org/groups/wg/webappsec/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/CSP3/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/webappsec-csp/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/webappsec-csp",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Content Security Policy Level 3",
+   "source": "w3c",
+   "shortTitle": "Content Security Policy 3",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "content-security-policy"
+    ],
+    "excludePaths": [
+     "content-security-policy/embedded-enforcement"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2019-02-02",
+  "baseline_low_date": "2016-08-02",
+  "support": {
+   "chrome": "25",
+   "chrome_android": "25",
+   "edge": "14",
+   "firefox": "23",
+   "firefox_android": "23",
+   "safari": "7",
+   "safari_ios": "7"
+  }
+ },
+ "id": "csp",
+ "groups": [
+  "security"
+ ],
+ "groupPaths": [
+  [
+   "Security"
+  ]
+ ],
+ "mdnUrls": [],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/666",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/355",
+   "position": "support",
+   "concerns": []
+  }
+ },
+ "originTrials": [],
+ "stateOfSurveys": [
+  {
+   "name": "State of HTML 2023",
+   "link": "https://2023.stateofhtml.com/en-US/features/#all_features",
+   "question": "features",
+   "subQuestion": "all_features",
+   "path": "dataAPI.surveys.state_of_html.html2023.features.all_features.15.entity"
+  },
+  {
+   "name": "State of HTML 2023",
+   "link": "https://2023.stateofhtml.com/en-US/content/#content_features",
+   "question": "content",
+   "subQuestion": "content_features",
+   "path": "dataAPI.surveys.state_of_html.html2023.content.content_features.3.entity"
+  }
+ ],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Document.securitypolicyviolation_event",
+   "compat": {
+    "description": "<code>securitypolicyviolation</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/securitypolicyviolation_event",
+    "source_file": "api/Document.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onsecuritypolicyviolation",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "76"
+     },
+     "chrome_android": {
+      "version_added": "76"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "93"
+     },
+     "firefox_android": {
+      "version_added": "93"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "63"
+     },
+     "opera_android": {
+      "version_added": "54"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "76"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.Element.securitypolicyviolation_event",
+   "compat": {
+    "description": "<code>securitypolicyviolation</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/securitypolicyviolation_event",
+    "source_file": "api/Element.json",
+    "spec_url": [
+     "https://w3c.github.io/webappsec-csp/#eventdef-globaleventhandlers-securitypolicyviolation",
+     "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onsecuritypolicyviolation"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLElement.nonce",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/nonce",
+    "source_file": "api/HTMLElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#dom-noncedelement-nonce",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "75"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "notes": "The property is defined only for its useful elements: <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>, and <code>&lt;style&gt;</code>; it is undefined for all other elements.",
+       "partial_implementation": true,
+       "version_added": "10",
+       "version_last": "15.3",
+       "version_removed": "15.4"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "notes": "The property is defined only for its useful elements: <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>, and <code>&lt;style&gt;</code>; it is undefined for all other elements.",
+       "partial_implementation": true,
+       "version_added": "10",
+       "version_last": "15.3",
+       "version_removed": "15.4"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": [
+      {
+       "version_added": "15.4"
+      },
+      {
+       "notes": "The property is defined only for its useful elements: <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>, and <code>&lt;style&gt;</code>; it is undefined for all other elements.",
+       "partial_implementation": true,
+       "version_added": "10",
+       "version_last": "15.3",
+       "version_removed": "15.4"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLIFrameElement.csp",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLIFrameElement/csp",
+    "source_file": "api/HTMLIFrameElement.json",
+    "spec_url": "https://w3c.github.io/webappsec-cspee/#ref-for-dom-htmliframeelement-csp",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#report-violation",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent",
+   "compat": {
+    "description": "<code>SecurityPolicyViolationEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent/SecurityPolicyViolationEvent",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-securitypolicyviolationevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent.blockedURI",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent/blockedURI",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-blockeduri",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent.columnNumber",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent/columnNumber",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-columnnumber",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent.disposition",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent/disposition",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-disposition",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "56"
+     },
+     "chrome_android": {
+      "version_added": "56"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "43"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "15"
+     },
+     "safari_ios": {
+      "version_added": "15"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "56"
+     },
+     "webview_ios": {
+      "version_added": "15"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent.documentURI",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent/documentURI",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-documenturi",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent.effectiveDirective",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent/effectiveDirective",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-effectivedirective",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent.lineNumber",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent/lineNumber",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-linenumber",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent.originalPolicy",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent/originalPolicy",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-originalpolicy",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent.referrer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent/referrer",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-referrer",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent.sample",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent/sample",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-sample",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "59"
+     },
+     "chrome_android": {
+      "version_added": "59"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "46"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "15"
+     },
+     "safari_ios": {
+      "version_added": "15"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "59"
+     },
+     "webview_ios": {
+      "version_added": "15"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent.sourceFile",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent/sourceFile",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-sourcefile",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent.statusCode",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent/statusCode",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-statuscode",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent.violatedDirective",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent/violatedDirective",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-violateddirective",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.SecurityPolicyViolationEvent.worker_support",
+   "compat": {
+    "description": "Available in workers",
+    "source_file": "api/SecurityPolicyViolationEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "56"
+     },
+     "chrome_android": {
+      "version_added": "56"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "43"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "56"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "api.WorkerGlobalScope.securitypolicyviolation_event",
+   "compat": {
+    "description": "<code>securitypolicyviolation</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/securitypolicyviolation_event",
+    "source_file": "api/WorkerGlobalScope.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#eventdef-globaleventhandlers-securitypolicyviolation",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.iframe.csp",
+   "compat": {
+    "source_file": "html/elements/iframe.json",
+    "spec_url": "https://w3c.github.io/webappsec-cspee/#element-attrdef-iframe-csp",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.meta.http-equiv.content-security-policy",
+   "compat": {
+    "description": "http-equiv=\"content-security-policy\"",
+    "source_file": "html/elements/meta.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-keyword-content-security-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "≤59"
+     },
+     "chrome_android": {
+      "version_added": "≤59"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤46"
+     },
+     "opera_android": {
+      "version_added": "≤43"
+     },
+     "safari": {
+      "version_added": "≤10.1"
+     },
+     "safari_ios": {
+      "version_added": "≤10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "≤7.0"
+     },
+     "webview_android": {
+      "version_added": "≤59"
+     },
+     "webview_ios": {
+      "version_added": "≤10.3"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "html.global_attributes.nonce",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/nonce",
+    "source_file": "html/global_attributes.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#attr-nonce",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "31"
+     },
+     "firefox_android": {
+      "version_added": "31"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "html.global_attributes.nonce.nonce_hiding",
+   "compat": {
+    "description": "<code>nonce</code> hiding behavior",
+    "source_file": "html/global_attributes.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#nonce-does-not-update-dom",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "75"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "15.5"
+     },
+     "safari_ios": {
+      "version_added": "15.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "15.5"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#csp-header",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "25"
+      },
+      {
+       "alternative_name": "X-Webkit-CSP",
+       "version_added": "14"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "25"
+      },
+      {
+       "alternative_name": "X-Webkit-CSP",
+       "version_added": "18"
+      }
+     ],
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": [
+      {
+       "version_added": "23"
+      },
+      {
+       "alternative_name": "X-Content-Security-Policy",
+       "version_added": "4"
+      }
+     ],
+     "firefox_android": {
+      "version_added": "23"
+     },
+     "ie": {
+      "alternative_name": "X-Content-Security-Policy",
+      "notes": "Only supporting 'sandbox' directive.",
+      "version_added": "10"
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "alternative_name": "X-Webkit-CSP",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": [
+      {
+       "version_added": "14"
+      },
+      {
+       "alternative_name": "X-Webkit-CSP",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "X-Webkit-CSP",
+       "version_added": "6"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "X-Webkit-CSP",
+       "version_added": "6"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "1.5"
+      },
+      {
+       "alternative_name": "X-Webkit-CSP",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "4.4"
+      },
+      {
+       "alternative_name": "X-Webkit-CSP",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "X-Webkit-CSP",
+       "version_added": "6"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy-Report-Only",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only",
+    "source_file": "http/headers/Content-Security-Policy-Report-Only.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#cspro-header",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "23"
+     },
+     "firefox_android": {
+      "version_added": "23"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.base-uri",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/base-uri",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-base-uri",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "35"
+     },
+     "firefox_android": {
+      "version_added": "35"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.child-src",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/child-src",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-child-src",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "45"
+     },
+     "firefox_android": {
+      "version_added": "45"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.connect-src",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/connect-src",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-connect-src",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": [
+      {
+       "version_added": "50"
+      },
+      {
+       "notes": "Before Firefox 50, ping attributes of &lt;a&gt; elements weren't covered by connect-src.",
+       "partial_implementation": true,
+       "version_added": "23",
+       "version_last": "49",
+       "version_removed": "50"
+      }
+     ],
+     "firefox_android": {
+      "version_added": "23"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.default-src",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-default-src",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "23"
+     },
+     "firefox_android": {
+      "version_added": "23"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.font-src",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/font-src",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-font-src",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "23"
+     },
+     "firefox_android": {
+      "version_added": "23"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.form-action",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/form-action",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-form-action",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "36"
+     },
+     "firefox_android": {
+      "version_added": "36"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.frame-ancestors",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-frame-ancestors",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": [
+      {
+       "version_added": "58"
+      },
+      {
+       "notes": "Before Firefox 58, <code>frame-ancestors</code> is ignored in <code>Content-Security-Policy-Report-Only</code>.",
+       "partial_implementation": true,
+       "version_added": "33",
+       "version_last": "57",
+       "version_removed": "58"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "58"
+      },
+      {
+       "notes": "Before Firefox for Android 58, <code>frame-ancestors</code> is ignored in <code>Content-Security-Policy-Report-Only</code>.",
+       "partial_implementation": true,
+       "version_added": "33",
+       "version_last": "57",
+       "version_removed": "58"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "26"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.frame-src",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-src",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-frame-src",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "23"
+     },
+     "firefox_android": {
+      "version_added": "23"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.img-src",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-img-src",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "23"
+     },
+     "firefox_android": {
+      "version_added": "23"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.manifest-src",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/manifest-src",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-manifest-src",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11"
+     },
+     "safari_ios": {
+      "version_added": "11"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "11"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.media-src",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/media-src",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-media-src",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "23"
+     },
+     "firefox_android": {
+      "version_added": "23"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.meta-element-support",
+   "compat": {
+    "description": "<code>&lt;meta&gt;</code> element support",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "≤18"
+     },
+     "firefox": {
+      "version_added": "45"
+     },
+     "firefox_android": {
+      "version_added": "45"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.object-src",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/object-src",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-object-src",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "23"
+     },
+     "firefox_android": {
+      "version_added": "23"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.report-sample",
+   "compat": {
+    "description": "<code>report-sample</code> source value",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "59"
+     },
+     "chrome_android": {
+      "version_added": "59"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "46"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "59"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.report-to",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-report-to",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "70"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.reporting.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "130"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "57"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "70"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.sandbox",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-sandbox",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.script-src",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-script-src",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "23"
+     },
+     "firefox_android": {
+      "version_added": "23"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.script-src-attr",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-attr",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-script-src-attr",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "75"
+     },
+     "chrome_android": {
+      "version_added": "75"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": "108"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "62"
+     },
+     "opera_android": {
+      "version_added": "54"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "11.0"
+     },
+     "webview_android": {
+      "version_added": "75"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.script-src-elem",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-script-src-elem",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "75"
+     },
+     "chrome_android": {
+      "version_added": "75"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": "108"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "62"
+     },
+     "opera_android": {
+      "version_added": "54"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "11.0"
+     },
+     "webview_android": {
+      "version_added": "75"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.script-src.external_scripts",
+   "compat": {
+    "description": "External scripts with hash",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#external-hash",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "59"
+     },
+     "chrome_android": {
+      "version_added": "59"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": "116"
+     },
+     "firefox_android": {
+      "version_added": "116"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "46"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "15.6"
+     },
+     "safari_ios": {
+      "version_added": "15.6"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "59"
+     },
+     "webview_ios": {
+      "version_added": "15.6"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.script-src.wasm-unsafe-eval",
+   "compat": {
+    "description": "Source expression allowing WebAssembly execution",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "102"
+     },
+     "firefox_android": {
+      "version_added": "102"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16"
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": "16"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.strict-dynamic",
+   "compat": {
+    "description": "<code>strict-dynamic</code> source value",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "52"
+     },
+     "chrome_android": {
+      "version_added": "52"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "39"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "52"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.style-src",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-style-src",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "23"
+     },
+     "firefox_android": {
+      "version_added": "23"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.style-src-attr",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-style-src-attr",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "75"
+     },
+     "chrome_android": {
+      "version_added": "75"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": "108"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "62"
+     },
+     "opera_android": {
+      "version_added": "54"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "11.0"
+     },
+     "webview_android": {
+      "version_added": "75"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.style-src-elem",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-elem",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-style-src-elem",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "75"
+     },
+     "chrome_android": {
+      "version_added": "75"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": "108"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "62"
+     },
+     "opera_android": {
+      "version_added": "54"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "11.0"
+     },
+     "webview_android": {
+      "version_added": "75"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.unsafe-hashes",
+   "compat": {
+    "description": "<code>unsafe-hashes</code> source value",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "109"
+     },
+     "firefox_android": {
+      "version_added": "109"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.worker-src",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/worker-src",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/webappsec-csp/#directive-worker-src",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Chrome 59 and higher skips the deprecated <code>child-src</code> directive.",
+      "version_added": "59"
+     },
+     "chrome_android": {
+      "notes": "Chrome Android 59 and higher skips the deprecated <code>child-src</code> directive.",
+      "version_added": "59"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "58"
+     },
+     "firefox_android": {
+      "version_added": "58"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Quest Browser 5.0 and higher skips the deprecated <code>child-src</code> directive.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Opera 46 and higher skips the deprecated <code>child-src</code> directive.",
+      "version_added": "46"
+     },
+     "opera_android": {
+      "notes": "Opera Android 43 and higher skips the deprecated <code>child-src</code> directive.",
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "15.5"
+     },
+     "safari_ios": {
+      "version_added": "15.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "notes": "WebView Android 59 and higher skips the deprecated <code>child-src</code> directive.",
+      "version_added": "59"
+     },
+     "webview_ios": {
+      "version_added": "15.5"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.worker_support",
+   "compat": {
+    "description": "Worker support",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "56"
+     },
+     "chrome_android": {
+      "version_added": "56"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "43"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "56"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:csp"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "html",
+  "http"
+ ],
+ "baselineLowDateAsObject": "2016-08-02T00:00:00.000Z",
+ "baselineHighDateAsObject": "2019-02-02T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

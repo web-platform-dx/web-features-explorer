@@ -1,0 +1,959 @@
+{
+ "compat_features": [
+  "api.Element.assignedSlot",
+  "api.Element.slot",
+  "api.HTMLSlotElement",
+  "api.HTMLSlotElement.assignedElements",
+  "api.HTMLSlotElement.assignedNodes",
+  "api.HTMLSlotElement.name",
+  "api.HTMLSlotElement.slotchange_event",
+  "api.Text.assignedSlot",
+  "css.selectors.slotted",
+  "html.elements.slot",
+  "html.elements.slot.name",
+  "html.global_attributes.slot"
+ ],
+ "description": "The <slot> HTML element is a placeholder inside a web component where consumers of the component can insert their own markup.",
+ "description_html": "The <code>&#x3C;slot></code> HTML element is a placeholder inside a web component where consumers of the component can insert their own markup.",
+ "group": [
+  "html-elements",
+  "web-components"
+ ],
+ "name": "<slot>",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "the-slot-element"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2022-07-15",
+  "baseline_low_date": "2020-01-15",
+  "support": {
+   "chrome": "53",
+   "chrome_android": "53",
+   "edge": "79",
+   "firefox": "63",
+   "firefox_android": "63",
+   "safari": "10",
+   "safari_ios": "10"
+  }
+ },
+ "id": "slot",
+ "groups": [
+  "html-elements",
+  "web-components"
+ ],
+ "groupPaths": [
+  [
+   "HTML",
+   "HTML elements"
+  ],
+  [
+   "Web Components"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "<slot>: The Web Component Slot element",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/slot"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.61142877,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/62"
+ },
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Element.assignedSlot",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/assignedSlot",
+    "source_file": "api/Element.json",
+    "spec_url": "https://dom.spec.whatwg.org/#dom-slotable-assignedslot",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "40"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "53"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:slot"
+    ]
+   }
+  },
+  {
+   "key": "api.Element.slot",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/slot",
+    "source_file": "api/Element.json",
+    "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-element-slot①",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "40"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "53"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:slot"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLSlotElement",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLSlotElement",
+    "source_file": "api/HTMLSlotElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/scripting.html#htmlslotelement",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "40"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "53"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:slot"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLSlotElement.assignedElements",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLSlotElement/assignedElements",
+    "source_file": "api/HTMLSlotElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/scripting.html#dom-slot-assignedelements-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "65"
+     },
+     "chrome_android": {
+      "version_added": "65"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "66"
+     },
+     "firefox_android": {
+      "version_added": "66"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "52"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "65"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:slot"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLSlotElement.assignedNodes",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLSlotElement/assignedNodes",
+    "source_file": "api/HTMLSlotElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/scripting.html#dom-slot-assignednodes-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "40"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "53"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:slot"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLSlotElement.name",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLSlotElement/name",
+    "source_file": "api/HTMLSlotElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/scripting.html#dom-slot-name-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "40"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "53"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:slot"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLSlotElement.slotchange_event",
+   "compat": {
+    "description": "<code>slotchange</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLSlotElement/slotchange_event",
+    "source_file": "api/HTMLSlotElement.json",
+    "spec_url": [
+     "https://dom.spec.whatwg.org/#eventdef-htmlslotelement-slotchange",
+     "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onslotchange"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "40"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": [
+      {
+       "version_added": "10.1"
+      },
+      {
+       "notes": "The <code>onslotchange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "10",
+       "version_last": "10",
+       "version_removed": "10.1"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "10.3"
+      },
+      {
+       "notes": "The <code>onslotchange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "10",
+       "version_last": "10",
+       "version_removed": "10.3"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "53"
+     },
+     "webview_ios": [
+      {
+       "version_added": "10.3"
+      },
+      {
+       "notes": "The <code>onslotchange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "10",
+       "version_last": "10",
+       "version_removed": "10.3"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:slot"
+    ]
+   }
+  },
+  {
+   "key": "api.Text.assignedSlot",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Text/assignedSlot",
+    "source_file": "api/Text.json",
+    "spec_url": "https://dom.spec.whatwg.org/#dom-slotable-assignedslot",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "40"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "53"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:slot"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.slotted",
+   "compat": {
+    "description": "<code>::slotted</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/::slotted",
+    "source_file": "css/selectors/slotted.json",
+    "spec_url": "https://drafts.csswg.org/css-scoping/#slotted-pseudo",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:slot"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.slot",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/slot",
+    "source_file": "html/elements/slot.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element",
+     "https://dom.spec.whatwg.org/#shadow-tree-slots"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "40"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "53"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:slot"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.slot.name",
+   "compat": {
+    "source_file": "html/elements/slot.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "40"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "53"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:slot"
+    ]
+   }
+  },
+  {
+   "key": "html.global_attributes.slot",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/slot",
+    "source_file": "html/global_attributes.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/dom.html#attr-slot",
+     "https://dom.spec.whatwg.org/#ref-for-dom-element-slot①"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "40"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "53"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:slot"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "css",
+  "html"
+ ],
+ "baselineLowDateAsObject": "2020-01-15T00:00:00.000Z",
+ "baselineHighDateAsObject": "2022-07-15T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

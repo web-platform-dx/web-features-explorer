@@ -1,0 +1,1078 @@
+{
+ "caniuse": "x-doc-messaging",
+ "compat_features": [
+  "api.DedicatedWorkerGlobalScope.message_event",
+  "api.DedicatedWorkerGlobalScope.postMessage",
+  "api.MessageEvent",
+  "api.MessageEvent.MessageEvent",
+  "api.MessageEvent.data",
+  "api.MessageEvent.lastEventId",
+  "api.MessageEvent.origin",
+  "api.MessageEvent.source",
+  "api.Window.message_event",
+  "api.Window.postMessage",
+  "api.Worker.message_event",
+  "api.Worker.postMessage"
+ ],
+ "description": "The postMessage() global method sends cross-origin messages to windows and workers, including popups and iframes. Also known as cross-document messaging.",
+ "description_html": "The <code>postMessage()</code> global method sends cross-origin messages to windows and workers, including popups and iframes. Also known as cross-document messaging.",
+ "group": "messaging",
+ "name": "postMessage",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/web-messaging.html#web-messaging",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "web-messaging"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "2",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "3",
+   "firefox_android": "4",
+   "safari": "4",
+   "safari_ios": "3.2"
+  }
+ },
+ "id": "postmessage",
+ "groups": [
+  "messaging"
+ ],
+ "groupPaths": [
+  [
+   "Messaging"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Window: postMessage() method",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Window/postMessage"
+  },
+  {
+   "title": "Worker: postMessage() method",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Worker/postMessage"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.DedicatedWorkerGlobalScope.message_event",
+   "compat": {
+    "description": "<code>message</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/message_event",
+    "source_file": "api/DedicatedWorkerGlobalScope.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/indices.html#event-message",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html#handler-messageeventtarget-onmessage"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11.5"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:postmessage"
+    ]
+   }
+  },
+  {
+   "key": "api.DedicatedWorkerGlobalScope.postMessage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/postMessage",
+    "source_file": "api/DedicatedWorkerGlobalScope.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/workers.html#dom-dedicatedworkerglobalscope-postmessage-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": [
+      {
+       "notes": "The <code>message</code> parameter does not support cloning <code>Blob</code> values.",
+       "version_added": "1.14"
+      },
+      {
+       "notes": [
+        "The <code>message</code> parameter does not support cloning <code>Blob</code> values.",
+        "The <code>transfer</code> parameter does not accept <code>ArrayBuffer</code> items. Passing an <code>ArrayBuffer</code> results in an error being thrown."
+       ],
+       "partial_implementation": true,
+       "version_added": "1.12",
+       "version_last": "1.13",
+       "version_removed": "1.14"
+      },
+      {
+       "notes": [
+        "The <code>message</code> parameter does not support cloning <code>SharedArrayBuffer</code> or <code>Blob</code> values.",
+        "The <code>transfer</code> parameter is ignored."
+       ],
+       "partial_implementation": true,
+       "version_added": "1.10",
+       "version_last": "1.11",
+       "version_removed": "1.12"
+      },
+      {
+       "notes": [
+        "Data passed in the <code>message</code> parameter is serialized with JSON, not the structured clone algorithm.",
+        "The <code>transfer</code> parameter is ignored."
+       ],
+       "partial_implementation": true,
+       "version_added": "1.0",
+       "version_last": "1.9",
+       "version_removed": "1.10"
+      }
+     ],
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:postmessage"
+    ]
+   }
+  },
+  {
+   "key": "api.MessageEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MessageEvent",
+    "source_file": "api/MessageEvent.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/comms.html#the-messageevent-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.4"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "nodejs": {
+      "version_added": "15.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:postmessage"
+    ]
+   }
+  },
+  {
+   "key": "api.MessageEvent.MessageEvent",
+   "compat": {
+    "description": "<code>MessageEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MessageEvent/MessageEvent",
+    "source_file": "api/MessageEvent.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/comms.html#the-messageevent-interface:dom-event-constructor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "16"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.4"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "26"
+     },
+     "firefox_android": {
+      "version_added": "26"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "15.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:postmessage"
+    ]
+   }
+  },
+  {
+   "key": "api.MessageEvent.data",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MessageEvent/data",
+    "source_file": "api/MessageEvent.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/comms.html#dom-messageevent-data-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.4"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "nodejs": {
+      "version_added": "15.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:postmessage"
+    ]
+   }
+  },
+  {
+   "key": "api.MessageEvent.lastEventId",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MessageEvent/lastEventId",
+    "source_file": "api/MessageEvent.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/comms.html#dom-messageevent-lasteventid-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.4"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "3"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "nodejs": {
+      "version_added": "15.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:postmessage"
+    ]
+   }
+  },
+  {
+   "key": "api.MessageEvent.origin",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MessageEvent/origin",
+    "source_file": "api/MessageEvent.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/comms.html#dom-messageevent-origin-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.4"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "nodejs": {
+      "version_added": "15.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:postmessage"
+    ]
+   }
+  },
+  {
+   "key": "api.MessageEvent.source",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MessageEvent/source",
+    "source_file": "api/MessageEvent.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/comms.html#dom-messageevent-source-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.11"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "15.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:postmessage"
+    ]
+   }
+  },
+  {
+   "key": "api.Window.message_event",
+   "compat": {
+    "description": "<code>message</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/message_event",
+    "source_file": "api/Window.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/indices.html#event-message",
+     "https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onmessage"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "60"
+     },
+     "chrome_android": {
+      "version_added": "60"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "9"
+     },
+     "firefox_android": {
+      "version_added": "9"
+     },
+     "ie": {
+      "version_added": "8"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "47"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "60"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:postmessage"
+    ]
+   }
+  },
+  {
+   "key": "api.Window.postMessage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/postMessage",
+    "source_file": "api/Window.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage-options-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": [
+       "Firefox 8 and up supports sending <code>File</code> and <code>FileList</code> objects between windows. This is only allowed if the recipient's principal is contained within the sender's principal for security reasons.",
+       "Before Firefox 6, the <code>message</code> parameter must be a string. Since Firefox 6, the <code>message</code> parameter is serialized using the <a href=\"https://developer.mozilla.org/docs/Web/API/Web_Workers_API/Structured_clone_algorithm\">structured clone algorithm</a>. This means you can pass a broad variety of data objects safely to the destination window without having to serialize them yourself."
+      ],
+      "version_added": "3"
+     },
+     "firefox_android": {
+      "notes": [
+       "Firefox for Android 8 and up supports sending <code>File</code> and <code>FileList</code> objects between windows. This is only allowed if the recipient's principal is contained within the sender's principal for security reasons.",
+       "Before Firefox for Android 6, the <code>message</code> parameter must be a string. Since Firefox for Android 6, the <code>message</code> parameter is serialized using the <a href=\"https://developer.mozilla.org/docs/Web/API/Web_Workers_API/Structured_clone_algorithm\">structured clone algorithm</a>. This means you can pass a broad variety of data objects safely to the destination window without having to serialize them yourself."
+      ],
+      "version_added": "4"
+     },
+     "ie": [
+      {
+       "notes": "IE10 had an important limitation: see this <a href=\"https://stackoverflow.com/questions/16226924/is-cross-origin-postmessage-broken-in-ie10\">article</a> for details.",
+       "version_added": "10"
+      },
+      {
+       "notes": "Support only for <code>&lt;frame&gt;</code> and <code>&lt;iframe&gt;</code>.",
+       "partial_implementation": true,
+       "version_added": "8",
+       "version_last": "9",
+       "version_removed": "10"
+      }
+     ],
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9.5"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:postmessage"
+    ]
+   }
+  },
+  {
+   "key": "api.Worker.message_event",
+   "compat": {
+    "description": "<code>message</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Worker/message_event",
+    "source_file": "api/Worker.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-message",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "nodejs": {
+      "notes": "Supports the event, but only via Node <code>EventEmitter</code>.",
+      "partial_implementation": true,
+      "version_added": "11.7.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11.5"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:postmessage"
+    ]
+   }
+  },
+  {
+   "key": "api.Worker.postMessage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Worker/postMessage",
+    "source_file": "api/Worker.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/workers.html#dom-worker-postmessage-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": [
+      {
+       "notes": "The <code>message</code> parameter does not support cloning <code>Blob</code> values.",
+       "version_added": "1.14"
+      },
+      {
+       "notes": [
+        "The <code>message</code> parameter does not support cloning <code>Blob</code> values.",
+        "The <code>transfer</code> parameter does not accept <code>ArrayBuffer</code> items. Passing an <code>ArrayBuffer</code> results in an error being thrown."
+       ],
+       "partial_implementation": true,
+       "version_added": "1.12",
+       "version_last": "1.13",
+       "version_removed": "1.14"
+      },
+      {
+       "notes": [
+        "The <code>message</code> parameter does not support <code>SharedArrayBuffer</code>.",
+        "The <code>transfer</code> parameter is not supported, and results in an error being thrown."
+       ],
+       "partial_implementation": true,
+       "version_added": "1.10",
+       "version_last": "1.11",
+       "version_removed": "1.12"
+      },
+      {
+       "notes": [
+        "Data passed in the <code>message</code> parameter is serialized with JSON, not the structured clone algorithm.",
+        "The <code>transfer</code> parameter is not supported, and results in an error being thrown."
+       ],
+       "partial_implementation": true,
+       "version_added": "1.0",
+       "version_last": "1.9",
+       "version_removed": "1.10"
+      }
+     ],
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "notes": "Internet Explorer does not support <code>Transferable</code> objects.",
+      "version_added": "10"
+     },
+     "nodejs": {
+      "notes": [
+       "Only accepts an array of transfer objects as the second parameter, not an options object with a <code>transfer</code> property.",
+       "Only supports transferring <code>ArrayBuffer</code> and <code>MessagePort</code> objects."
+      ],
+      "partial_implementation": true,
+      "version_added": "11.7.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:postmessage"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

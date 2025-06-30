@@ -1,0 +1,526 @@
+{
+ "compat_features": [
+  "api.ManagedMediaSource",
+  "api.ManagedMediaSource.ManagedMediaSource",
+  "api.ManagedMediaSource.endstreaming_event",
+  "api.ManagedMediaSource.startstreaming_event",
+  "api.ManagedMediaSource.streaming",
+  "api.ManagedSourceBuffer",
+  "api.ManagedSourceBuffer.bufferedchange_event"
+ ],
+ "description": "The ManagedMediaSource API is a MediaSource where the browser manages the memory of source buffers and may evict data if needed.",
+ "description_html": "The <code>ManagedMediaSource</code> API is a <code>MediaSource</code> where the browser manages the memory of source buffers and may evict data if needed.",
+ "name": "Managed media source",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/media-source/#managedmediasource-interface",
+   "seriesComposition": "full",
+   "shortname": "media-source-2",
+   "series": {
+    "shortname": "media-source",
+    "currentSpecification": "media-source-2",
+    "title": "Media Source Extensions™",
+    "shortTitle": "Media Source Extensions™",
+    "releaseUrl": "https://www.w3.org/TR/media-source/",
+    "nightlyUrl": "https://w3c.github.io/media-source/"
+   },
+   "seriesVersion": "2",
+   "nightly": {
+    "url": "https://w3c.github.io/media-source/",
+    "status": "Editor's Draft",
+    "sourcePath": "media-source-respec.html",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/media-source",
+    "filename": "index.html"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Media Working Group",
+     "url": "https://www.w3.org/media-wg/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/media-source-2/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "title": "Media Source Extensions™",
+   "source": "w3c",
+   "shortTitle": "Media Source Extensions™",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "media-source"
+    ]
+   },
+   "fragment": "managedmediasource-interface"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "safari": "17",
+   "safari_ios": "17.1"
+  }
+ },
+ "id": "managed-media-source",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Media Source API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Media_Source_Extensions_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/845",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.ManagedMediaSource",
+   "compat": {
+    "source_file": "api/ManagedMediaSource.json",
+    "spec_url": "https://w3c.github.io/media-source/#dom-managedmediasource",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17.1"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "17.1"
+     }
+    },
+    "tags": [
+     "web-features:managed-media-source"
+    ]
+   }
+  },
+  {
+   "key": "api.ManagedMediaSource.ManagedMediaSource",
+   "compat": {
+    "description": "<code>ManagedMediaSource()</code> constructor",
+    "source_file": "api/ManagedMediaSource.json",
+    "spec_url": "https://w3c.github.io/media-source/#dom-managedmediasource-constructor",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17.1"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "17.1"
+     }
+    },
+    "tags": [
+     "web-features:managed-media-source"
+    ]
+   }
+  },
+  {
+   "key": "api.ManagedMediaSource.endstreaming_event",
+   "compat": {
+    "description": "<code>endstreaming</code> event",
+    "source_file": "api/ManagedMediaSource.json",
+    "spec_url": "https://w3c.github.io/media-source/#dfn-endstreaming",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17.1"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "17.1"
+     }
+    },
+    "tags": [
+     "web-features:managed-media-source"
+    ]
+   }
+  },
+  {
+   "key": "api.ManagedMediaSource.startstreaming_event",
+   "compat": {
+    "description": "<code>startstreaming</code> event",
+    "source_file": "api/ManagedMediaSource.json",
+    "spec_url": "https://w3c.github.io/media-source/#dfn-startstreaming",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17.1"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "17.1"
+     }
+    },
+    "tags": [
+     "web-features:managed-media-source"
+    ]
+   }
+  },
+  {
+   "key": "api.ManagedMediaSource.streaming",
+   "compat": {
+    "source_file": "api/ManagedMediaSource.json",
+    "spec_url": "https://w3c.github.io/media-source/#dom-managedmediasource-streaming",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17.1"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "17.1"
+     }
+    },
+    "tags": [
+     "web-features:managed-media-source"
+    ]
+   }
+  },
+  {
+   "key": "api.ManagedSourceBuffer",
+   "compat": {
+    "source_file": "api/ManagedSourceBuffer.json",
+    "spec_url": "https://w3c.github.io/media-source/#dom-managedsourcebuffer",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17.1"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "17.1"
+     }
+    },
+    "tags": [
+     "web-features:managed-media-source"
+    ]
+   }
+  },
+  {
+   "key": "api.ManagedSourceBuffer.bufferedchange_event",
+   "compat": {
+    "description": "<code>bufferedchange</code> event",
+    "source_file": "api/ManagedSourceBuffer.json",
+    "spec_url": "https://w3c.github.io/media-source/#dfn-bufferedchange",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17.1"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "17.1"
+     }
+    },
+    "tags": [
+     "web-features:managed-media-source"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

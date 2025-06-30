@@ -1,0 +1,3243 @@
+{
+ "caniuse": "webtransport",
+ "compat_features": [
+  "api.WebTransport",
+  "api.WebTransport.WebTransport",
+  "api.WebTransport.WebTransport.options_allowPooling_parameter",
+  "api.WebTransport.WebTransport.options_congestionControl_parameter",
+  "api.WebTransport.WebTransport.options_requireUnreliable_parameter",
+  "api.WebTransport.WebTransport.options_serverCertificateHashes_parameter",
+  "api.WebTransport.byob_readers",
+  "api.WebTransport.close",
+  "api.WebTransport.closed",
+  "api.WebTransport.congestionControl",
+  "api.WebTransport.createBidirectionalStream",
+  "api.WebTransport.createBidirectionalStream.options_sendOrder_parameter",
+  "api.WebTransport.createUnidirectionalStream",
+  "api.WebTransport.createUnidirectionalStream.byob_readers",
+  "api.WebTransport.createUnidirectionalStream.options_sendOrder_parameter",
+  "api.WebTransport.datagrams",
+  "api.WebTransport.getStats",
+  "api.WebTransport.incomingBidirectionalStreams",
+  "api.WebTransport.incomingUnidirectionalStreams",
+  "api.WebTransport.ready",
+  "api.WebTransport.reliability",
+  "api.WebTransportBidirectionalStream",
+  "api.WebTransportBidirectionalStream.readable",
+  "api.WebTransportBidirectionalStream.readable.returns_WebTransportReceiveStream",
+  "api.WebTransportBidirectionalStream.writable",
+  "api.WebTransportBidirectionalStream.writable.returns_WebTransportSendStream",
+  "api.WebTransportDatagramDuplexStream",
+  "api.WebTransportDatagramDuplexStream.byob_readers",
+  "api.WebTransportDatagramDuplexStream.incomingHighWaterMark",
+  "api.WebTransportDatagramDuplexStream.incomingMaxAge",
+  "api.WebTransportDatagramDuplexStream.maxDatagramSize",
+  "api.WebTransportDatagramDuplexStream.outgoingHighWaterMark",
+  "api.WebTransportDatagramDuplexStream.outgoingMaxAge",
+  "api.WebTransportDatagramDuplexStream.readable",
+  "api.WebTransportDatagramDuplexStream.writable",
+  "api.WebTransportError",
+  "api.WebTransportError.WebTransportError",
+  "api.WebTransportError.source",
+  "api.WebTransportError.streamErrorCode",
+  "api.WebTransportReceiveStream",
+  "api.WebTransportReceiveStream.getStats",
+  "api.WebTransportSendStream",
+  "api.WebTransportSendStream.getStats",
+  "api.WebTransportSendStream.getWriter",
+  "api.WebTransportSendStream.sendOrder"
+ ],
+ "description": "The WebTransport API transmits data between a client and a server, by using the HTTP/3 protocol.",
+ "description_html": "The <code>WebTransport</code> API transmits data between a client and a server, by using the HTTP/3 protocol.",
+ "name": "WebTransport",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/webtransport/",
+   "seriesComposition": "full",
+   "shortname": "webtransport",
+   "series": {
+    "shortname": "webtransport",
+    "currentSpecification": "webtransport",
+    "title": "WebTransport",
+    "shortTitle": "WebTransport",
+    "releaseUrl": "https://www.w3.org/TR/webtransport/",
+    "nightlyUrl": "https://w3c.github.io/webtransport/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "WebTransport Working Group",
+     "url": "https://www.w3.org/groups/wg/webtransport/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/webtransport/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/webtransport/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/webtransport",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "WebTransport",
+   "source": "w3c",
+   "shortTitle": "WebTransport",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "webtransport"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "97",
+   "chrome_android": "97",
+   "edge": "97",
+   "firefox": "114",
+   "firefox_android": "114"
+  }
+ },
+ "id": "webtransport",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "WebTransport API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/WebTransport_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/167",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/18",
+   "position": "support",
+   "concerns": []
+  }
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.00000164,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/80"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.WebTransport",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransport",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#web-transport",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.WebTransport",
+   "compat": {
+    "description": "<code>WebTransport()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransport/WebTransport",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransport-webtransport",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.WebTransport.options_allowPooling_parameter",
+   "compat": {
+    "description": "<code>options.allowPooling</code> parameter",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportoptions-allowpooling",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.WebTransport.options_congestionControl_parameter",
+   "compat": {
+    "description": "<code>options.congestionControl</code> parameter",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportoptions-congestioncontrol",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.WebTransport.options_requireUnreliable_parameter",
+   "compat": {
+    "description": "<code>options.requireUnreliable</code> parameter",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportoptions-requireunreliable",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.WebTransport.options_serverCertificateHashes_parameter",
+   "compat": {
+    "description": "<code>options.serverCertificateHashes</code> parameter",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportoptions-servercertificatehashes",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "100"
+     },
+     "chrome_android": {
+      "version_added": "100"
+     },
+     "deno": {
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "100"
+     },
+     "firefox": {
+      "version_added": "125"
+     },
+     "firefox_android": {
+      "version_added": "125"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "21.0"
+     },
+     "opera": {
+      "version_added": "86"
+     },
+     "opera_android": {
+      "version_added": "69"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "100"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.byob_readers",
+   "compat": {
+    "description": "BYOB reader support",
+    "source_file": "api/WebTransport.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "109"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "109"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "95"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.close",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransport/close",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransport-close",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.closed",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransport/closed",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransport-closed",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.congestionControl",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransport/congestionControl",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransport-congestioncontrol",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.createBidirectionalStream",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransport/createBidirectionalStream",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransport-createbidirectionalstream",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.createBidirectionalStream.options_sendOrder_parameter",
+   "compat": {
+    "description": "<code>options.sendOrder</code> parameter",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportsendstreamoptions-sendorder",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "119"
+     },
+     "firefox_android": {
+      "version_added": "119"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.createUnidirectionalStream",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransport/createUnidirectionalStream",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransport-createunidirectionalstream",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "notes": "Returns a <code>WritableStream</code> instead of a <code>WebTransportSendStream</code>.",
+      "partial_implementation": true,
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "notes": "Returns a <code>WritableStream</code> instead of a <code>WebTransportSendStream</code>.",
+      "partial_implementation": true,
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.createUnidirectionalStream.byob_readers",
+   "compat": {
+    "description": "BYOB reader support",
+    "source_file": "api/WebTransport.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "109"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "deno": {
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "109"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "95"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.createUnidirectionalStream.options_sendOrder_parameter",
+   "compat": {
+    "description": "<code>options.sendOrder</code> parameter",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportsendstreamoptions-sendorder",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "119"
+     },
+     "firefox_android": {
+      "version_added": "119"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.datagrams",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransport/datagrams",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransport-datagrams",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.getStats",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransport/getStats",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransport-getstats",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "impl_url": "https://crbug.com/41492543",
+      "version_added": false
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/41492543",
+      "version_added": false
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "impl_url": "https://crbug.com/41492543",
+      "version_added": false
+     },
+     "firefox": {
+      "notes": "Method is defined but throws a not-implemented error.",
+      "partial_implementation": true,
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "notes": "Method is defined but throws a not-implemented error.",
+      "partial_implementation": true,
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/41492543",
+      "version_added": false
+     },
+     "opera": {
+      "impl_url": "https://crbug.com/41492543",
+      "version_added": false
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/41492543",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/41492543",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/41492543",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.incomingBidirectionalStreams",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransport/incomingBidirectionalStreams",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransport-incomingbidirectionalstreams",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.incomingUnidirectionalStreams",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransport/incomingUnidirectionalStreams",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransport-incomingunidirectionalstreams",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.ready",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransport/ready",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransport-ready",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransport.reliability",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransport/reliability",
+    "source_file": "api/WebTransport.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransport-reliability",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportBidirectionalStream",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportBidirectionalStream",
+    "source_file": "api/WebTransportBidirectionalStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#webtransportbidirectionalstream",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportBidirectionalStream.readable",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportBidirectionalStream/readable",
+    "source_file": "api/WebTransportBidirectionalStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportbidirectionalstream-readable",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportBidirectionalStream.readable.returns_WebTransportReceiveStream",
+   "compat": {
+    "description": "Returns <code>WebTransportReceiveStream</code> (earlier spec returned <code>WritableStream</code>)",
+    "source_file": "api/WebTransportBidirectionalStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportbidirectionalstream-readable",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportBidirectionalStream.writable",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportBidirectionalStream/writable",
+    "source_file": "api/WebTransportBidirectionalStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportbidirectionalstream-writable",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportBidirectionalStream.writable.returns_WebTransportSendStream",
+   "compat": {
+    "description": "Returns <code>WebTransportSendStream</code> (earlier spec returned <code>WritableStream</code>)",
+    "source_file": "api/WebTransportBidirectionalStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportbidirectionalstream-readable",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportDatagramDuplexStream",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportDatagramDuplexStream",
+    "source_file": "api/WebTransportDatagramDuplexStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#duplex-stream",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportDatagramDuplexStream.byob_readers",
+   "compat": {
+    "description": "BYOB reader support",
+    "source_file": "api/WebTransportDatagramDuplexStream.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "109"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "109"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "95"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportDatagramDuplexStream.incomingHighWaterMark",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportDatagramDuplexStream/incomingHighWaterMark",
+    "source_file": "api/WebTransportDatagramDuplexStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportdatagramduplexstream-incominghighwatermark",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportDatagramDuplexStream.incomingMaxAge",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportDatagramDuplexStream/incomingMaxAge",
+    "source_file": "api/WebTransportDatagramDuplexStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportdatagramduplexstream-incomingmaxage",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportDatagramDuplexStream.maxDatagramSize",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportDatagramDuplexStream/maxDatagramSize",
+    "source_file": "api/WebTransportDatagramDuplexStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportdatagramduplexstream-maxdatagramsize",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportDatagramDuplexStream.outgoingHighWaterMark",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportDatagramDuplexStream/outgoingHighWaterMark",
+    "source_file": "api/WebTransportDatagramDuplexStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportdatagramduplexstream-outgoinghighwatermark",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportDatagramDuplexStream.outgoingMaxAge",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportDatagramDuplexStream/outgoingMaxAge",
+    "source_file": "api/WebTransportDatagramDuplexStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportdatagramduplexstream-outgoingmaxage",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportDatagramDuplexStream.readable",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportDatagramDuplexStream/readable",
+    "source_file": "api/WebTransportDatagramDuplexStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportdatagramduplexstream-readable",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportDatagramDuplexStream.writable",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportDatagramDuplexStream/writable",
+    "source_file": "api/WebTransportDatagramDuplexStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportdatagramduplexstream-writable",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportError",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportError",
+    "source_file": "api/WebTransportError.json",
+    "spec_url": "https://w3c.github.io/webtransport/#webtransporterror",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportError.WebTransportError",
+   "compat": {
+    "description": "<code>WebTransportError()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportError/WebTransportError",
+    "source_file": "api/WebTransportError.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransporterror-webtransporterror",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportError.source",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportError/source",
+    "source_file": "api/WebTransportError.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransporterror-source",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportError.streamErrorCode",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportError/streamErrorCode",
+    "source_file": "api/WebTransportError.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransporterror-streamerrorcode",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "97"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportReceiveStream",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportReceiveStream",
+    "source_file": "api/WebTransportReceiveStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#webtransportreceivestream",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportReceiveStream.getStats",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportReceiveStream/getStats",
+    "source_file": "api/WebTransportReceiveStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportreceivestream-getstats",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportSendStream",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportSendStream",
+    "source_file": "api/WebTransportSendStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#webtransportsendstream",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportSendStream.getStats",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportSendStream/getStats",
+    "source_file": "api/WebTransportSendStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportsendstream-getstats",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportSendStream.getWriter",
+   "compat": {
+    "source_file": "api/WebTransportSendStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportsendstream-getwriter",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  },
+  {
+   "key": "api.WebTransportSendStream.sendOrder",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WebTransportSendStream/sendOrder",
+    "source_file": "api/WebTransportSendStream.json",
+    "spec_url": "https://w3c.github.io/webtransport/#dom-webtransportsendstream-sendorder",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--unstable-net",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "2.2"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "121"
+     },
+     "firefox_android": {
+      "version_added": "121"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webtransport"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [
+   "https://crbug.com/41492543"
+  ],
+  "chrome_android": [
+   "https://crbug.com/41492543"
+  ],
+  "edge": [
+   "https://crbug.com/41492543"
+  ],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ },
+ "blockedOn": "Safari",
+ "monthsBlocked": 24,
+ "blockedSince": "June 2023"
+}

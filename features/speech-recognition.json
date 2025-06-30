@@ -1,0 +1,2528 @@
+{
+ "caniuse": "speech-recognition",
+ "compat_features": [
+  "api.SpeechRecognition",
+  "api.SpeechRecognition.SpeechRecognition",
+  "api.SpeechRecognition.abort",
+  "api.SpeechRecognition.audioend_event",
+  "api.SpeechRecognition.audiostart_event",
+  "api.SpeechRecognition.continuous",
+  "api.SpeechRecognition.end_event",
+  "api.SpeechRecognition.error_event",
+  "api.SpeechRecognition.interimResults",
+  "api.SpeechRecognition.lang",
+  "api.SpeechRecognition.maxAlternatives",
+  "api.SpeechRecognition.nomatch_event",
+  "api.SpeechRecognition.result_event",
+  "api.SpeechRecognition.soundend_event",
+  "api.SpeechRecognition.soundstart_event",
+  "api.SpeechRecognition.speechend_event",
+  "api.SpeechRecognition.speechstart_event",
+  "api.SpeechRecognition.start",
+  "api.SpeechRecognition.start_event",
+  "api.SpeechRecognition.stop",
+  "api.SpeechRecognitionAlternative",
+  "api.SpeechRecognitionAlternative.confidence",
+  "api.SpeechRecognitionAlternative.transcript",
+  "api.SpeechRecognitionErrorEvent",
+  "api.SpeechRecognitionErrorEvent.SpeechRecognitionErrorEvent",
+  "api.SpeechRecognitionErrorEvent.error",
+  "api.SpeechRecognitionErrorEvent.message",
+  "api.SpeechRecognitionEvent",
+  "api.SpeechRecognitionEvent.SpeechRecognitionEvent",
+  "api.SpeechRecognitionEvent.resultIndex",
+  "api.SpeechRecognitionEvent.results",
+  "api.SpeechRecognitionResult",
+  "api.SpeechRecognitionResult.isFinal",
+  "api.SpeechRecognitionResult.item",
+  "api.SpeechRecognitionResult.length",
+  "api.SpeechRecognitionResultList",
+  "api.SpeechRecognitionResultList.item",
+  "api.SpeechRecognitionResultList.length"
+ ],
+ "description": "The SpeechRecognition API converts audio into text using the device's speech recognition service.",
+ "description_html": "The <code>SpeechRecognition</code> API converts audio into text using the device's speech recognition service.",
+ "group": "speech",
+ "name": "Speech recognition",
+ "spec": [
+  {
+   "url": "https://webaudio.github.io/web-speech-api/#speechreco-section",
+   "seriesComposition": "full",
+   "shortname": "speech-api",
+   "series": {
+    "shortname": "speech-api",
+    "currentSpecification": "speech-api",
+    "title": "Web Speech API",
+    "shortTitle": "Web Speech API",
+    "nightlyUrl": "https://webaudio.github.io/web-speech-api/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Audio Community Group",
+     "url": "https://www.w3.org/community/audio-comgp/"
+    }
+   ],
+   "nightly": {
+    "url": "https://webaudio.github.io/web-speech-api/",
+    "status": "Draft Community Group Report",
+    "alternateUrls": [],
+    "repository": "https://github.com/WebAudio/web-speech-api",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Web Speech API",
+   "source": "spec",
+   "shortTitle": "Web Speech API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": "speechreco-section"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {}
+ },
+ "id": "speech-recognition",
+ "groups": [
+  "speech"
+ ],
+ "groupPaths": [
+  [
+   "Speech"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Web Speech API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Web_Speech_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/170",
+   "position": "",
+   "concerns": []
+  },
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.00032634,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/63"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.SpeechRecognition",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#speechreco-section",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "You'll need to serve your code through a web server for recognition to work.",
+      "prefix": "webkit",
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "notes": "You'll need to serve your code through a web server for recognition to work.",
+      "prefix": "webkit",
+      "version_added": "33"
+     },
+     "edge": {
+      "notes": "You'll need to serve your code through a web server for recognition to work.",
+      "prefix": "webkit",
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "You'll need to serve your code through a web server for recognition to work.",
+      "prefix": "webkit",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "You'll need to serve your code through a web server for recognition to work.",
+      "prefix": "webkit",
+      "version_added": "20"
+     },
+     "opera_android": {
+      "notes": "You'll need to serve your code through a web server for recognition to work.",
+      "prefix": "webkit",
+      "version_added": "20"
+     },
+     "safari": {
+      "prefix": "webkit",
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "prefix": "webkit",
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "notes": "You'll need to serve your code through a web server for recognition to work.",
+      "prefix": "webkit",
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "notes": "You'll need to serve your code through a web server for recognition to work.",
+      "prefix": "webkit",
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "prefix": "webkit",
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.SpeechRecognition",
+   "compat": {
+    "description": "<code>SpeechRecognition()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/SpeechRecognition",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-speechrecognition",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "prefix": "webkit",
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "prefix": "webkit",
+      "version_added": "33"
+     },
+     "edge": {
+      "prefix": "webkit",
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "prefix": "webkit",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "prefix": "webkit",
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "prefix": "webkit",
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "prefix": "webkit",
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "prefix": "webkit",
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "prefix": "webkit",
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.abort",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/abort",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-abort",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.audioend_event",
+   "compat": {
+    "description": "<code>audioend</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/audioend_event",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": [
+     "https://webaudio.github.io/web-speech-api/#eventdef-speechrecognition-audioend",
+     "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-onaudioend"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.audiostart_event",
+   "compat": {
+    "description": "<code>audiostart</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/audiostart_event",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": [
+     "https://webaudio.github.io/web-speech-api/#eventdef-speechrecognition-audiostart",
+     "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-onaudiostart"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.continuous",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/continuous",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-continuous",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/41297427",
+      "notes": "The property can be set, but has no effect.",
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/41297427",
+      "notes": "The property can be set, but has no effect.",
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/41297427",
+      "notes": "The property can be set, but has no effect.",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/41297427",
+      "notes": "The property can be set, but has no effect.",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/41297427",
+      "notes": "The property can be set, but has no effect.",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.end_event",
+   "compat": {
+    "description": "<code>end</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/end_event",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": [
+     "https://webaudio.github.io/web-speech-api/#eventdef-speechrecognition-end",
+     "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-onend"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.error_event",
+   "compat": {
+    "description": "<code>error</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/error_event",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": [
+     "https://webaudio.github.io/web-speech-api/#eventdef-speechrecognition-error",
+     "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-onerror"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.interimResults",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/interimResults",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-interimresults",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.lang",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/lang",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-lang",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.maxAlternatives",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/maxAlternatives",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-maxalternatives",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.nomatch_event",
+   "compat": {
+    "description": "<code>nomatch</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/nomatch_event",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": [
+     "https://webaudio.github.io/web-speech-api/#eventdef-speechrecognition-nomatch",
+     "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-onnomatch"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.result_event",
+   "compat": {
+    "description": "<code>result</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/result_event",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": [
+     "https://webaudio.github.io/web-speech-api/#eventdef-speechrecognition-result",
+     "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-onresult"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.soundend_event",
+   "compat": {
+    "description": "<code>soundend</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/soundend_event",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": [
+     "https://webaudio.github.io/web-speech-api/#eventdef-speechrecognition-soundend",
+     "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-onsoundend"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.soundstart_event",
+   "compat": {
+    "description": "<code>soundstart</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/soundstart_event",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": [
+     "https://webaudio.github.io/web-speech-api/#eventdef-speechrecognition-soundstart",
+     "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-onsoundstart"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.speechend_event",
+   "compat": {
+    "description": "<code>speechend</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/speechend_event",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": [
+     "https://webaudio.github.io/web-speech-api/#eventdef-speechrecognition-speechend",
+     "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-onspeechend"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.speechstart_event",
+   "compat": {
+    "description": "<code>speechstart</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/speechstart_event",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": [
+     "https://webaudio.github.io/web-speech-api/#eventdef-speechrecognition-speechstart",
+     "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-onspeechstart"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.start",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/start",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-start",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.start_event",
+   "compat": {
+    "description": "<code>start</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/start_event",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": [
+     "https://webaudio.github.io/web-speech-api/#eventdef-speechrecognition-start",
+     "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-onstart"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.stop",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/stop",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-stop",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionAlternative",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionAlternative",
+    "source_file": "api/SpeechRecognitionAlternative.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#speechreco-alternative",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionAlternative.confidence",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionAlternative/confidence",
+    "source_file": "api/SpeechRecognitionAlternative.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognitionalternative-confidence",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionAlternative.transcript",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionAlternative/transcript",
+    "source_file": "api/SpeechRecognitionAlternative.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognitionalternative-transcript",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionErrorEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionErrorEvent",
+    "source_file": "api/SpeechRecognitionErrorEvent.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#speechrecognitionerrorevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "33"
+     },
+     "edge": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "20"
+     },
+     "opera_android": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionErrorEvent.SpeechRecognitionErrorEvent",
+   "compat": {
+    "description": "<code>SpeechRecognitionErrorEvent()</code> constructor",
+    "source_file": "api/SpeechRecognitionErrorEvent.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognitionerrorevent-speechrecognitionerrorevent",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "33"
+     },
+     "edge": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "20"
+     },
+     "opera_android": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "alternative_name": "webkitSpeechRecognitionError",
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionErrorEvent.error",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionErrorEvent/error",
+    "source_file": "api/SpeechRecognitionErrorEvent.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognitionerrorevent-error",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionErrorEvent.message",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionErrorEvent/message",
+    "source_file": "api/SpeechRecognitionErrorEvent.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognitionerrorevent-message",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionEvent",
+    "source_file": "api/SpeechRecognitionEvent.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#speechreco-event",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "prefix": "webkit",
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "prefix": "webkit",
+      "version_added": "33"
+     },
+     "edge": {
+      "prefix": "webkit",
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "prefix": "webkit",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "prefix": "webkit",
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "prefix": "webkit",
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionEvent.SpeechRecognitionEvent",
+   "compat": {
+    "description": "<code>SpeechRecognitionEvent()</code> constructor",
+    "source_file": "api/SpeechRecognitionEvent.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-speechrecognition",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "prefix": "webkit",
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "prefix": "webkit",
+      "version_added": "33"
+     },
+     "edge": {
+      "prefix": "webkit",
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "prefix": "webkit",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "prefix": "webkit",
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "prefix": "webkit",
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionEvent.resultIndex",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionEvent/resultIndex",
+    "source_file": "api/SpeechRecognitionEvent.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognitionevent-resultindex",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionEvent.results",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionEvent/results",
+    "source_file": "api/SpeechRecognitionEvent.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognitionevent-results",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionResult",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionResult",
+    "source_file": "api/SpeechRecognitionResult.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#speechreco-result",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionResult.isFinal",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionResult/isFinal",
+    "source_file": "api/SpeechRecognitionResult.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognitionresult-isfinal",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionResult.item",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionResult/item",
+    "source_file": "api/SpeechRecognitionResult.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognitionresult-item",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionResult.length",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionResult/length",
+    "source_file": "api/SpeechRecognitionResult.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognitionresult-length",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionResultList",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionResultList",
+    "source_file": "api/SpeechRecognitionResultList.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#speechreco-resultlist",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionResultList.item",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionResultList/item",
+    "source_file": "api/SpeechRecognitionResultList.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognitionresultlist-item",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognitionResultList.length",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognitionResultList/length",
+    "source_file": "api/SpeechRecognitionResultList.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognitionresultlist-length",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [
+   "https://crbug.com/41297427"
+  ],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

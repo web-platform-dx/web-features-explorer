@@ -1,0 +1,955 @@
+{
+ "compat_features": [
+  "css.properties.height.fit-content",
+  "css.properties.max-height.fit-content",
+  "css.properties.max-width.fit-content",
+  "css.properties.min-height.fit-content",
+  "css.properties.min-width.fit-content",
+  "css.properties.width.fit-content"
+ ],
+ "description": "The fit-content CSS keyword expands a box as needed to fit its contents until the maximum size is reached, preserving the content's preferred aspect ratio.",
+ "description_html": "The <code>fit-content</code> CSS keyword expands a box as needed to fit its contents until the maximum size is reached, preserving the content's preferred aspect ratio.",
+ "group": "layout",
+ "name": "fit-content",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+   "seriesComposition": "delta",
+   "shortname": "css-sizing-4",
+   "series": {
+    "shortname": "css-sizing",
+    "currentSpecification": "css-sizing-3",
+    "title": "CSS Box Sizing",
+    "shortTitle": "CSS Sizing",
+    "releaseUrl": "https://www.w3.org/TR/css-sizing/",
+    "nightlyUrl": "https://drafts.csswg.org/css-sizing/"
+   },
+   "seriesVersion": "4",
+   "shortTitle": "CSS Sizing 4",
+   "seriesPrevious": "css-sizing-3",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-sizing-4/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-sizing-4/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-sizing-4/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-sizing-4/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Box Sizing Module Level 4",
+   "source": "w3c",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-sizing"
+    ]
+   },
+   "fragment": "valdef-width-fit-content"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2024-05-02",
+  "baseline_low_date": "2021-11-02",
+  "support": {
+   "chrome": "46",
+   "chrome_android": "46",
+   "edge": "79",
+   "firefox": "94",
+   "firefox_android": "94",
+   "safari": "11",
+   "safari_ios": "11"
+  }
+ },
+ "id": "fit-content",
+ "groups": [
+  "layout"
+ ],
+ "groupPaths": [
+  [
+   "CSS",
+   "Layout"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "fit-content",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/fit-content"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "css.properties.height.fit-content",
+   "compat": {
+    "source_file": "css/properties/height.json",
+    "spec_url": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "46"
+     },
+     "chrome_android": {
+      "version_added": "46"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": [
+      {
+       "version_added": "94"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "41"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "94"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "41"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "33"
+     },
+     "opera_android": {
+      "version_added": "33"
+     },
+     "safari": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "9"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "9"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "46"
+     },
+     "webview_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "9"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:fit-content"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.max-height.fit-content",
+   "compat": {
+    "source_file": "css/properties/max-height.json",
+    "spec_url": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "25"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "25"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "79"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "94"
+      },
+      {
+       "notes": "Firefox implements the definitions given in CSS3 Basic Box. This defines <code>available</code> and not <code>fit-available</code>. Also, the definition of <code>fit-content</code> is simpler than in CSS3 Sizing.",
+       "partial_implementation": true,
+       "prefix": "-moz-",
+       "version_added": "3"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "94"
+      },
+      {
+       "notes": "Firefox for Android implements the definitions given in CSS3 Basic Box. This defines <code>available</code> and not <code>fit-available</code>. Also, the definition of <code>fit-content</code> is simpler than in CSS3 Sizing.",
+       "partial_implementation": true,
+       "prefix": "-moz-",
+       "version_added": "4"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": {
+      "version_added": "44"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "2"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "1"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.5"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "1"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:fit-content"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.max-width.fit-content",
+   "compat": {
+    "source_file": "css/properties/max-width.json",
+    "spec_url": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "25"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "25"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "79"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "94"
+      },
+      {
+       "notes": "Firefox implements the definitions given in CSS3 Basic Box. This defines <code>available</code> and not <code>fit-available</code>. Also, the definition of <code>fit-content</code> is simpler than in CSS3 Sizing.",
+       "partial_implementation": true,
+       "prefix": "-moz-",
+       "version_added": "3"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "94"
+      },
+      {
+       "notes": "Firefox for Android implements the definitions given in CSS3 Basic Box. This defines <code>available</code> and not <code>fit-available</code>. Also, the definition of <code>fit-content</code> is simpler than in CSS3 Sizing.",
+       "partial_implementation": true,
+       "prefix": "-moz-",
+       "version_added": "4"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": {
+      "version_added": "44"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "2"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "1"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.5"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "1"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:fit-content"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.min-height.fit-content",
+   "compat": {
+    "source_file": "css/properties/min-height.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "25"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "25"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "79"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "94"
+      },
+      {
+       "notes": "Firefox implements the definitions given in CSS3 Basic Box. This defines <code>available</code> and not <code>fit-available</code>. Also, the definition of <code>fit-content</code> is simpler than in CSS3 Sizing.",
+       "prefix": "-moz-",
+       "version_added": "3"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "94"
+      },
+      {
+       "notes": "Firefox for Android implements the definitions given in CSS3 Basic Box. This defines <code>available</code> and not <code>fit-available</code>. Also, the definition of <code>fit-content</code> is simpler than in CSS3 Sizing.",
+       "prefix": "-moz-",
+       "version_added": "4"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": {
+      "version_added": "44"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "2"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "1"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.5"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "1"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:fit-content"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.min-width.fit-content",
+   "compat": {
+    "source_file": "css/properties/min-width.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "25"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "25"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "79"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "94"
+      },
+      {
+       "notes": "Firefox implements the definitions given in CSS3 Basic Box. This defines <code>available</code> and not <code>fit-available</code>. Also, the definition of <code>fit-content</code> is simpler than in CSS3 Sizing.",
+       "prefix": "-moz-",
+       "version_added": "3"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "94"
+      },
+      {
+       "notes": "Firefox for Android implements the definitions given in CSS3 Basic Box. This defines <code>available</code> and not <code>fit-available</code>. Also, the definition of <code>fit-content</code> is simpler than in CSS3 Sizing.",
+       "prefix": "-moz-",
+       "version_added": "4"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "33"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "33"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.5"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:fit-content"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.width.fit-content",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/fit-content",
+    "source_file": "css/properties/width.json",
+    "spec_url": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "22"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "1",
+       "version_last": "47",
+       "version_removed": "48"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "25"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "18",
+       "version_last": "47",
+       "version_removed": "48"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "79"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "94"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "3"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "94"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "4"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "33"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "15",
+       "version_last": "34",
+       "version_removed": "35"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "33"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "14",
+       "version_last": "34",
+       "version_removed": "35"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "2"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "1"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.5"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "1.0",
+       "version_last": "4.2",
+       "version_removed": "5.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "46"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "4.4",
+       "version_last": "47",
+       "version_removed": "48"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      },
+      {
+       "alternative_name": "intrinsic",
+       "version_added": "1"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:fit-content"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "css"
+ ],
+ "baselineLowDateAsObject": "2021-11-02T00:00:00.000Z",
+ "baselineHighDateAsObject": "2024-05-02T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

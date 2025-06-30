@@ -1,0 +1,919 @@
+{
+ "compat_features": [
+  "css.properties.direction",
+  "css.properties.direction.ltr",
+  "css.properties.direction.rtl",
+  "css.properties.unicode-bidi",
+  "css.properties.unicode-bidi.bidi-override",
+  "css.properties.unicode-bidi.embed",
+  "css.properties.unicode-bidi.isolate",
+  "css.properties.unicode-bidi.isolate-override",
+  "css.properties.unicode-bidi.normal",
+  "css.properties.unicode-bidi.plaintext"
+ ],
+ "description": "The unicode-bidi and direction CSS properties override the Unicode layout algorithm. They are intended for Document Type Definition (DTD) designers. For HTML documents, you should use the dir global HTML attribute and <bdo> HTML element instead.",
+ "description_html": "The <code>unicode-bidi</code> and <code>direction</code> CSS properties override the Unicode layout algorithm. They are intended for Document Type Definition (DTD) designers. For HTML documents, you should use the <code>dir</code> global HTML attribute and <code>&#x3C;bdo></code> HTML element instead.",
+ "group": "css",
+ "name": "Layout direction override",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css-writing-modes-4/#direction",
+   "seriesComposition": "full",
+   "shortname": "css-writing-modes-4",
+   "series": {
+    "shortname": "css-writing-modes",
+    "currentSpecification": "css-writing-modes-4",
+    "title": "CSS Writing Modes",
+    "shortTitle": "CSS Writing Modes",
+    "releaseUrl": "https://www.w3.org/TR/css-writing-modes/",
+    "nightlyUrl": "https://drafts.csswg.org/css-writing-modes/"
+   },
+   "seriesVersion": "4",
+   "seriesPrevious": "css-writing-modes-3",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-writing-modes-4/",
+    "status": "Candidate Recommendation Snapshot",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-writing-modes-4/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-writing-modes-4/",
+     "https://w3c.github.io/csswg-drafts/css-writing-modes/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-writing-modes-4/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Writing Modes Level 4",
+   "source": "w3c",
+   "shortTitle": "CSS Writing Modes 4",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-writing-modes"
+    ]
+   },
+   "fragment": "direction"
+  },
+  {
+   "url": "https://drafts.csswg.org/css-writing-modes-4/#unicode-bidi",
+   "seriesComposition": "full",
+   "shortname": "css-writing-modes-4",
+   "series": {
+    "shortname": "css-writing-modes",
+    "currentSpecification": "css-writing-modes-4",
+    "title": "CSS Writing Modes",
+    "shortTitle": "CSS Writing Modes",
+    "releaseUrl": "https://www.w3.org/TR/css-writing-modes/",
+    "nightlyUrl": "https://drafts.csswg.org/css-writing-modes/"
+   },
+   "seriesVersion": "4",
+   "seriesPrevious": "css-writing-modes-3",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-writing-modes-4/",
+    "status": "Candidate Recommendation Snapshot",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-writing-modes-4/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-writing-modes-4/",
+     "https://w3c.github.io/csswg-drafts/css-writing-modes/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-writing-modes-4/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Writing Modes Level 4",
+   "source": "w3c",
+   "shortTitle": "CSS Writing Modes 4",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-writing-modes"
+    ]
+   },
+   "fragment": "unicode-bidi"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2022-07-15",
+  "baseline_low_date": "2020-01-15",
+  "support": {
+   "chrome": "48",
+   "chrome_android": "48",
+   "edge": "79",
+   "firefox": "50",
+   "firefox_android": "50",
+   "safari": "11",
+   "safari_ios": "11"
+  }
+ },
+ "id": "layout-direction-override",
+ "groups": [
+  "css"
+ ],
+ "groupPaths": [
+  [
+   "CSS"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "unicode-bidi",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/unicode-bidi"
+  },
+  {
+   "title": "direction",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/direction"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "css.properties.direction",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/direction",
+    "source_file": "css/properties/direction.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css-writing-modes/#direction",
+     "https://svgwg.org/svg2-draft/text.html#DirectionProperty"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "5.5"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9.2"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:layout-direction-override"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.direction.ltr",
+   "compat": {
+    "source_file": "css/properties/direction.json",
+    "spec_url": "https://drafts.csswg.org/css-writing-modes/#valdef-direction-ltr",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:layout-direction-override"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.direction.rtl",
+   "compat": {
+    "source_file": "css/properties/direction.json",
+    "spec_url": "https://drafts.csswg.org/css-writing-modes/#valdef-direction-rtl",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:layout-direction-override"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.unicode-bidi",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/unicode-bidi",
+    "source_file": "css/properties/unicode-bidi.json",
+    "spec_url": "https://drafts.csswg.org/css-writing-modes/#unicode-bidi",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "5.5"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9.2"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1.3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:layout-direction-override"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.unicode-bidi.bidi-override",
+   "compat": {
+    "source_file": "css/properties/unicode-bidi.json",
+    "spec_url": "https://drafts.csswg.org/css-writing-modes/#valdef-unicode-bidi-bidi-override",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:layout-direction-override"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.unicode-bidi.embed",
+   "compat": {
+    "source_file": "css/properties/unicode-bidi.json",
+    "spec_url": "https://drafts.csswg.org/css-writing-modes/#valdef-unicode-bidi-embed",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:layout-direction-override"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.unicode-bidi.isolate",
+   "compat": {
+    "source_file": "css/properties/unicode-bidi.json",
+    "spec_url": "https://drafts.csswg.org/css-writing-modes/#valdef-unicode-bidi-isolate",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "48"
+      },
+      {
+       "notes": [
+        "Before Chrome 47, <code>-webkit-isolate</code> could lock up the browser.",
+        "Since Chrome 19, the syntax from a previous version of the specification, where the <code>isolate</code> keyword could be used together with <code>bidi-override</code>, is allowed."
+       ],
+       "prefix": "-webkit-",
+       "version_added": "16"
+      }
+     ],
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "79"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "50"
+      },
+      {
+       "notes": "From Firefox 10 to Firefox 16 (inclusive), the <code>isolate</code> keyword could be used together with <code>bidi-override</code>, which was the syntax from a previous version of the specification. From Firefox 17, only one value is allowed. Use <code>isolate-override</code> instead the previous <code>isolate bidi-override</code>.",
+       "prefix": "-moz-",
+       "version_added": "10",
+       "version_last": "53",
+       "version_removed": "54"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "notes": "From Firefox for Android 10 to Firefox for Android 16 (inclusive), the <code>isolate</code> keyword could be used together with <code>bidi-override</code>, which was the syntax from a previous version of the specification. From Firefox for Android 17, only one value is allowed. Use <code>isolate-override</code> instead the previous <code>isolate bidi-override</code>.",
+       "prefix": "-moz-",
+       "version_added": "10",
+       "version_last": "53",
+       "version_removed": "54"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "35"
+      },
+      {
+       "notes": [
+        "Before Opera 34, <code>-webkit-isolate</code> could lock up the browser.",
+        "Since Opera 15, the syntax from a previous version of the specification, where the <code>isolate</code> keyword could be used together with <code>bidi-override</code>, is allowed."
+       ],
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": [
+      {
+       "version_added": "11"
+      },
+      {
+       "notes": "Before Safari 9, <code>-webkit-isolate</code> could lock up the browser.",
+       "prefix": "-webkit-",
+       "version_added": "6"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "notes": "Before Safari on iOS 9, <code>-webkit-isolate</code> could lock up the browser.",
+       "prefix": "-webkit-",
+       "version_added": "6"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "48"
+     },
+     "webview_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "notes": "Before WebView on iOS 9, <code>-webkit-isolate</code> could lock up the browser.",
+       "prefix": "-webkit-",
+       "version_added": "6"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:layout-direction-override"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.unicode-bidi.isolate-override",
+   "compat": {
+    "source_file": "css/properties/unicode-bidi.json",
+    "spec_url": "https://drafts.csswg.org/css-writing-modes/#valdef-unicode-bidi-isolate-override",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "17",
+       "version_last": "53",
+       "version_removed": "54"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "17",
+       "version_last": "53",
+       "version_removed": "54"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "48"
+     },
+     "webview_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:layout-direction-override"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.unicode-bidi.normal",
+   "compat": {
+    "source_file": "css/properties/unicode-bidi.json",
+    "spec_url": "https://drafts.csswg.org/css-writing-modes/#valdef-unicode-bidi-normal",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:layout-direction-override"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.unicode-bidi.plaintext",
+   "compat": {
+    "source_file": "css/properties/unicode-bidi.json",
+    "spec_url": "https://drafts.csswg.org/css-writing-modes/#valdef-unicode-bidi-plaintext",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": [
+      {
+       "version_added": "50"
+      },
+      {
+       "notes": [
+        "Before Firefox 50, the <code>plaintext</code> value was ignored for vertical writing modes (<a href=\"https://bugzil.la/1302734\">bug 1302734</a>).",
+        "Before Firefox 15, <code>plaintext</code> didn't do anything to an inline element. The specification changed and the implementation was changed in Firefox 15."
+       ],
+       "prefix": "-moz-",
+       "version_added": "10",
+       "version_last": "53",
+       "version_removed": "54"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "notes": [
+        "Before Firefox for Android 50, the <code>plaintext</code> value was ignored for vertical writing modes (<a href=\"https://bugzil.la/1302734\">bug 1302734</a>).",
+        "Before Firefox for Android 15, <code>plaintext</code> didn't do anything to an inline element. The specification changed and the implementation was changed in Firefox for Android 15."
+       ],
+       "prefix": "-moz-",
+       "version_added": "10",
+       "version_last": "53",
+       "version_removed": "54"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "6"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "6"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "48"
+     },
+     "webview_ios": [
+      {
+       "version_added": "11"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "6"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:layout-direction-override"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "css"
+ ],
+ "baselineLowDateAsObject": "2020-01-15T00:00:00.000Z",
+ "baselineHighDateAsObject": "2022-07-15T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

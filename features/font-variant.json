@@ -1,0 +1,873 @@
+{
+ "compat_features": [
+  "css.at-rules.font-face.font-variant",
+  "css.properties.font-variant",
+  "css.properties.font-variant.css_fonts_shorthand",
+  "css.properties.font-variant.greek_accented_characters",
+  "css.properties.font-variant.historical-forms",
+  "css.properties.font-variant.none",
+  "css.properties.font-variant.normal",
+  "css.properties.font-variant.sub",
+  "css.properties.font-variant.super",
+  "css.properties.font-variant.turkic_is",
+  "css.properties.font-variant.uppercase_eszett",
+  "svg.global_attributes.font-variant"
+ ],
+ "description": "The font-variant CSS property is a shorthand for font-variant-alternates, font-variant-caps, font-variant-east-asian, font-variant-emoji, font-variant-ligatures, font-variant-numeric, and font-variant-position.",
+ "description_html": "The <code>font-variant</code> CSS property is a shorthand for <code>font-variant-alternates</code>, <code>font-variant-caps</code>, <code>font-variant-east-asian</code>, <code>font-variant-emoji</code>, <code>font-variant-ligatures</code>, <code>font-variant-numeric</code>, and <code>font-variant-position</code>.",
+ "group": "font-features",
+ "name": "font-variant",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css-fonts-4/#font-variant-prop",
+   "seriesComposition": "full",
+   "shortname": "css-fonts-4",
+   "series": {
+    "shortname": "css-fonts",
+    "currentSpecification": "css-fonts-4",
+    "title": "CSS Fonts",
+    "shortTitle": "CSS Fonts",
+    "releaseUrl": "https://www.w3.org/TR/css-fonts/",
+    "nightlyUrl": "https://drafts.csswg.org/css-fonts/"
+   },
+   "seriesVersion": "4",
+   "seriesNext": "css-fonts-5",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-fonts-4/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-fonts-4/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-fonts-4/",
+     "https://w3c.github.io/csswg-drafts/css-fonts/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-fonts-4/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Fonts Module Level 4",
+   "source": "w3c",
+   "shortTitle": "CSS Fonts 4",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-fonts"
+    ]
+   },
+   "fragment": "font-variant-prop"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "1",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "1",
+   "firefox_android": "4",
+   "safari": "1",
+   "safari_ios": "1"
+  }
+ },
+ "id": "font-variant",
+ "groups": [
+  "font-features"
+ ],
+ "groupPaths": [
+  [
+   "CSS",
+   "Fonts",
+   "Typographic font features"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "font-variant",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/font-variant"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [
+  {
+   "year": "2022",
+   "label": "interop-2022-text"
+  }
+ ],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "css.at-rules.font-face.font-variant",
+   "compat": {
+    "source_file": "css/at-rules/font-face.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "10"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:font-variant"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.font-variant",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/font-variant",
+    "source_file": "css/properties/font-variant.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css-fonts/#font-variant-prop",
+     "https://svgwg.org/svg2-draft/text.html#FontVariantProperty"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "notes": "Only supports the <code>small-caps</code> and <code>normal</code> keywords.",
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3.5"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:font-variant"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.font-variant.css_fonts_shorthand",
+   "compat": {
+    "description": "CSS Fonts Module Level 3 shorthand",
+    "source_file": "css/properties/font-variant.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "52"
+     },
+     "chrome_android": {
+      "version_added": "52"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "39"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "9.1"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "52"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:font-variant"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.font-variant.greek_accented_characters",
+   "compat": {
+    "description": "Greek accented characters",
+    "source_file": "css/properties/font-variant.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Some operating systems may correctly omit accents in all-uppercase Greek text.",
+      "version_added": false
+     },
+     "chrome_android": {
+      "notes": "Some operating systems may correctly omit accents in all-uppercase Greek text.",
+      "version_added": false
+     },
+     "edge": {
+      "notes": "Some operating systems may correctly omit accents in all-uppercase Greek text.",
+      "version_added": false
+     },
+     "firefox": {
+      "notes": "Some operating systems may correctly omit accents in all-uppercase Greek text.",
+      "version_added": false
+     },
+     "firefox_android": {
+      "notes": "Some operating systems may correctly omit accents in all-uppercase Greek text.",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Some operating systems may correctly omit accents in all-uppercase Greek text.",
+      "version_added": false
+     },
+     "opera": {
+      "notes": "Some operating systems may correctly omit accents in all-uppercase Greek text.",
+      "version_added": false
+     },
+     "opera_android": {
+      "notes": "Some operating systems may correctly omit accents in all-uppercase Greek text.",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "notes": "Some operating systems may correctly omit accents in all-uppercase Greek text.",
+      "version_added": false
+     },
+     "webview_android": {
+      "notes": "Some operating systems may correctly omit accents in all-uppercase Greek.",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:font-variant"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.font-variant.historical-forms",
+   "compat": {
+    "source_file": "css/properties/font-variant.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#valdef-font-variant-alternates-historical-forms",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "111"
+     },
+     "chrome_android": {
+      "version_added": "111"
+     },
+     "edge": {
+      "version_added": "111"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "97"
+     },
+     "opera_android": {
+      "version_added": "75"
+     },
+     "safari": {
+      "version_added": "9.1"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "22.0"
+     },
+     "webview_android": {
+      "version_added": "111"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:font-variant"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.font-variant.none",
+   "compat": {
+    "source_file": "css/properties/font-variant.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#font-size-adjust-none-value",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "52"
+     },
+     "chrome_android": {
+      "version_added": "52"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "39"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "52"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:font-variant"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.font-variant.normal",
+   "compat": {
+    "source_file": "css/properties/font-variant.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#font-variant-normal-value",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:font-variant"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.font-variant.sub",
+   "compat": {
+    "source_file": "css/properties/font-variant.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#valdef-font-variant-position-sub",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "110"
+     },
+     "chrome_android": {
+      "version_added": "110"
+     },
+     "edge": {
+      "version_added": "110"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "96"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "9.1"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "110"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:font-variant"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.font-variant.super",
+   "compat": {
+    "source_file": "css/properties/font-variant.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#valdef-font-variant-position-super",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "110"
+     },
+     "chrome_android": {
+      "version_added": "110"
+     },
+     "edge": {
+      "version_added": "110"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "96"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "9.1"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "110"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:font-variant"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.font-variant.turkic_is",
+   "compat": {
+    "description": "<code>i</code> → <code>İ</code> and <code>ı</code> → <code>I</code>",
+    "source_file": "css/properties/font-variant.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "31"
+     },
+     "chrome_android": {
+      "version_added": "31"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "14"
+     },
+     "firefox_android": {
+      "version_added": "14"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "18"
+     },
+     "opera_android": {
+      "version_added": "18"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:font-variant"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.font-variant.uppercase_eszett",
+   "compat": {
+    "description": "<code>ß</code> → <code>SS</code>",
+    "source_file": "css/properties/font-variant.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Some operating systems may capitalize <code>ß</code> as <code>SS</code>.",
+      "version_added": false
+     },
+     "chrome_android": {
+      "notes": "Some operating systems may capitalize <code>ß</code> as <code>SS</code>.",
+      "version_added": false
+     },
+     "edge": {
+      "notes": "Some operating systems may capitalize <code>ß</code> as <code>SS</code>.",
+      "version_added": false
+     },
+     "firefox": {
+      "notes": "Some operating systems may capitalize <code>ß</code> as <code>SS</code>.",
+      "version_added": false
+     },
+     "firefox_android": {
+      "notes": "Some operating systems may capitalize <code>ß</code> as <code>SS</code>.",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Some operating systems may capitalize <code>ß</code> as <code>SS</code>.",
+      "version_added": false
+     },
+     "opera": {
+      "notes": "Some operating systems may capitalize <code>ß</code> as <code>SS</code>.",
+      "version_added": false
+     },
+     "opera_android": {
+      "notes": "Some operating systems may capitalize <code>ß</code> as <code>SS</code>.",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "notes": "Some operating systems may capitalize <code>ß</code> as <code>SS</code>.",
+      "version_added": false
+     },
+     "webview_android": {
+      "notes": "Some operating systems may capitalize <code>ß</code> as <code>SS</code>.",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:font-variant"
+    ]
+   }
+  },
+  {
+   "key": "svg.global_attributes.font-variant",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/font-variant",
+    "source_file": "svg/global_attributes.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css-fonts/#font-variant-prop",
+     "https://svgwg.org/svg2-draft/text.html#FontVariantProperty"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "notes": "Only supports the <code>small-caps</code> and <code>normal</code> keywords.",
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3.5"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:font-variant"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "css",
+  "svg"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

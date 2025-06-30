@@ -1,0 +1,4017 @@
+{
+ "compat_features": [
+  "api.XRCompositionLayer",
+  "api.XRCompositionLayer.blendTextureSourceAlpha",
+  "api.XRCompositionLayer.destroy",
+  "api.XRCompositionLayer.layout",
+  "api.XRCompositionLayer.mipLevels",
+  "api.XRCompositionLayer.needsRedraw",
+  "api.XRCubeLayer",
+  "api.XRCubeLayer.orientation",
+  "api.XRCubeLayer.redraw_event",
+  "api.XRCubeLayer.space",
+  "api.XRCylinderLayer",
+  "api.XRCylinderLayer.aspectRatio",
+  "api.XRCylinderLayer.centralAngle",
+  "api.XRCylinderLayer.radius",
+  "api.XRCylinderLayer.redraw_event",
+  "api.XRCylinderLayer.space",
+  "api.XRCylinderLayer.transform",
+  "api.XREquirectLayer",
+  "api.XREquirectLayer.centralHorizontalAngle",
+  "api.XREquirectLayer.lowerVerticalAngle",
+  "api.XREquirectLayer.radius",
+  "api.XREquirectLayer.redraw_event",
+  "api.XREquirectLayer.space",
+  "api.XREquirectLayer.transform",
+  "api.XREquirectLayer.upperVerticalAngle",
+  "api.XRLayerEvent",
+  "api.XRLayerEvent.XRLayerEvent",
+  "api.XRLayerEvent.layer",
+  "api.XRMediaBinding",
+  "api.XRMediaBinding.XRMediaBinding",
+  "api.XRMediaBinding.createCylinderLayer",
+  "api.XRMediaBinding.createEquirectLayer",
+  "api.XRMediaBinding.createQuadLayer",
+  "api.XRProjectionLayer",
+  "api.XRProjectionLayer.fixedFoveation",
+  "api.XRProjectionLayer.ignoreDepthValues",
+  "api.XRProjectionLayer.textureArrayLength",
+  "api.XRProjectionLayer.textureHeight",
+  "api.XRProjectionLayer.textureWidth",
+  "api.XRQuadLayer",
+  "api.XRQuadLayer.height",
+  "api.XRQuadLayer.redraw_event",
+  "api.XRQuadLayer.space",
+  "api.XRQuadLayer.transform",
+  "api.XRQuadLayer.width",
+  "api.XRRenderState.layers",
+  "api.XRSubImage",
+  "api.XRSubImage.viewport",
+  "api.XRWebGLBinding",
+  "api.XRWebGLBinding.XRWebGLBinding",
+  "api.XRWebGLBinding.createCubeLayer",
+  "api.XRWebGLBinding.createCylinderLayer",
+  "api.XRWebGLBinding.createEquirectLayer",
+  "api.XRWebGLBinding.createProjectionLayer",
+  "api.XRWebGLBinding.createQuadLayer",
+  "api.XRWebGLBinding.getSubImage",
+  "api.XRWebGLBinding.getViewSubImage",
+  "api.XRWebGLBinding.nativeProjectionScaleFactor",
+  "api.XRWebGLSubImage",
+  "api.XRWebGLSubImage.colorTexture",
+  "api.XRWebGLSubImage.colorTextureHeight",
+  "api.XRWebGLSubImage.colorTextureWidth",
+  "api.XRWebGLSubImage.depthStencilTexture",
+  "api.XRWebGLSubImage.imageIndex"
+ ],
+ "description": "WebXR layer types, such as XRCylinderLayer, XRCylinderLayer, XREquirectLayer, XRProjectionLayer or XRQuadLayer, are managed by the system compositor, to reduce latency or resampling.",
+ "description_html": "WebXR layer types, such as <code>XRCylinderLayer</code>, <code>XRCylinderLayer</code>, <code>XREquirectLayer</code>, <code>XRProjectionLayer</code> or <code>XRQuadLayer</code>, are managed by the system compositor, to reduce latency or resampling.",
+ "group": "webxr",
+ "name": "Layers (WebXR)",
+ "spec": [
+  {
+   "url": "https://immersive-web.github.io/layers/",
+   "seriesComposition": "full",
+   "shortname": "webxrlayers-1",
+   "series": {
+    "shortname": "webxrlayers",
+    "currentSpecification": "webxrlayers-1",
+    "title": "WebXR Layers API",
+    "shortTitle": "WebXR Layers API",
+    "releaseUrl": "https://www.w3.org/TR/webxrlayers/",
+    "nightlyUrl": "https://immersive-web.github.io/layers/"
+   },
+   "seriesVersion": "1",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Immersive Web Working Group",
+     "url": "https://www.w3.org/immersive-web/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/webxrlayers-1/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://immersive-web.github.io/layers/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/immersive-web/layers",
+    "sourcePath": "webxrlayers-1.bs",
+    "filename": "index.html"
+   },
+   "title": "WebXR Layers API Level 1",
+   "source": "w3c",
+   "shortTitle": "WebXR Layers API 1",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "webxr/layers"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {}
+ },
+ "id": "webxr-layers",
+ "groups": [
+  "webxr"
+ ],
+ "groupPaths": [
+  [
+   "WebXR"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "XRCompositionLayer",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/XRCompositionLayer"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/412",
+   "position": "",
+   "concerns": []
+  },
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.XRCompositionLayer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCompositionLayer",
+    "source_file": "api/XRCompositionLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#xrcompositionlayertype",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCompositionLayer.blendTextureSourceAlpha",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCompositionLayer/blendTextureSourceAlpha",
+    "source_file": "api/XRCompositionLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrcompositionlayer-blendtexturesourcealpha",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCompositionLayer.destroy",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCompositionLayer/destroy",
+    "source_file": "api/XRCompositionLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrcompositionlayer-destroy",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCompositionLayer.layout",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCompositionLayer/layout",
+    "source_file": "api/XRCompositionLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrcompositionlayer-layout",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCompositionLayer.mipLevels",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCompositionLayer/mipLevels",
+    "source_file": "api/XRCompositionLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrcompositionlayer-miplevels",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCompositionLayer.needsRedraw",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCompositionLayer/needsRedraw",
+    "source_file": "api/XRCompositionLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrcompositionlayer-needsredraw",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCubeLayer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCubeLayer",
+    "source_file": "api/XRCubeLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#xcubelayertype",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCubeLayer.orientation",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCubeLayer/orientation",
+    "source_file": "api/XRCubeLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrcubelayer-orientation",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCubeLayer.redraw_event",
+   "compat": {
+    "description": "<code>redraw</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCubeLayer/redraw_event",
+    "source_file": "api/XRCubeLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrcubelayer-onredraw",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCubeLayer.space",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCubeLayer/space",
+    "source_file": "api/XRCubeLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrcubelayer-space",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCylinderLayer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCylinderLayer",
+    "source_file": "api/XRCylinderLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#xrcylinderayertype",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCylinderLayer.aspectRatio",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCylinderLayer/aspectRatio",
+    "source_file": "api/XRCylinderLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrcylinderlayer-aspectratio",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCylinderLayer.centralAngle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCylinderLayer/centralAngle",
+    "source_file": "api/XRCylinderLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrcylinderlayer-centralangle",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCylinderLayer.radius",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCylinderLayer/radius",
+    "source_file": "api/XRCylinderLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrcylinderlayer-radius",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCylinderLayer.redraw_event",
+   "compat": {
+    "description": "<code>redraw</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCylinderLayer/redraw_event",
+    "source_file": "api/XRCylinderLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrcylinderlayer-onredraw",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCylinderLayer.space",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCylinderLayer/space",
+    "source_file": "api/XRCylinderLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrcylinderlayer-space",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRCylinderLayer.transform",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRCylinderLayer/transform",
+    "source_file": "api/XRCylinderLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrcylinderlayer-transform",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XREquirectLayer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XREquirectLayer",
+    "source_file": "api/XREquirectLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#xrequirectlayertype",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XREquirectLayer.centralHorizontalAngle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XREquirectLayer/centralHorizontalAngle",
+    "source_file": "api/XREquirectLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrequirectlayer-centralhorizontalangle",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XREquirectLayer.lowerVerticalAngle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XREquirectLayer/lowerVerticalAngle",
+    "source_file": "api/XREquirectLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrequirectlayer-lowerverticalangle",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XREquirectLayer.radius",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XREquirectLayer/radius",
+    "source_file": "api/XREquirectLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrequirectlayer-radius",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XREquirectLayer.redraw_event",
+   "compat": {
+    "description": "<code>redraw</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XREquirectLayer/redraw_event",
+    "source_file": "api/XREquirectLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrequirectlayer-onredraw",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XREquirectLayer.space",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XREquirectLayer/space",
+    "source_file": "api/XREquirectLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrequirectlayer-space",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XREquirectLayer.transform",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XREquirectLayer/transform",
+    "source_file": "api/XREquirectLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrequirectlayer-transform",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XREquirectLayer.upperVerticalAngle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XREquirectLayer/upperVerticalAngle",
+    "source_file": "api/XREquirectLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrequirectlayer-upperverticalangle",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRLayerEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRLayerEvent",
+    "source_file": "api/XRLayerEvent.json",
+    "spec_url": "https://immersive-web.github.io/layers/#xrlayerevent-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRLayerEvent.XRLayerEvent",
+   "compat": {
+    "description": "<code>XRLayerEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRLayerEvent/XRLayerEvent",
+    "source_file": "api/XRLayerEvent.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrlayerevent-xrlayerevent",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRLayerEvent.layer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRLayerEvent/layer",
+    "source_file": "api/XRLayerEvent.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrlayerevent-layer",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRMediaBinding",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRMediaBinding",
+    "source_file": "api/XRMediaBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#XRWebGLBindingtype",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRMediaBinding.XRMediaBinding",
+   "compat": {
+    "description": "<code>XRMediaBinding()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRMediaBinding/XRMediaBinding",
+    "source_file": "api/XRMediaBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrmediabinding-xrmediabinding",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRMediaBinding.createCylinderLayer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRMediaBinding/createCylinderLayer",
+    "source_file": "api/XRMediaBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrmediabinding-createcylinderlayer",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRMediaBinding.createEquirectLayer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRMediaBinding/createEquirectLayer",
+    "source_file": "api/XRMediaBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrmediabinding-createequirectlayer",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRMediaBinding.createQuadLayer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRMediaBinding/createQuadLayer",
+    "source_file": "api/XRMediaBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrmediabinding-createquadlayer",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRProjectionLayer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRProjectionLayer",
+    "source_file": "api/XRProjectionLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#xrprojectionlayertype",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRProjectionLayer.fixedFoveation",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRProjectionLayer/fixedFoveation",
+    "source_file": "api/XRProjectionLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrprojectionlayer-fixedfoveation",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRProjectionLayer.ignoreDepthValues",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRProjectionLayer/ignoreDepthValues",
+    "source_file": "api/XRProjectionLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrprojectionlayer-ignoredepthvalues",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRProjectionLayer.textureArrayLength",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRProjectionLayer/textureArrayLength",
+    "source_file": "api/XRProjectionLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrprojectionlayer-texturearraylength",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRProjectionLayer.textureHeight",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRProjectionLayer/textureHeight",
+    "source_file": "api/XRProjectionLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrprojectionlayer-textureheight",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRProjectionLayer.textureWidth",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRProjectionLayer/textureWidth",
+    "source_file": "api/XRProjectionLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrprojectionlayer-texturewidth",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRQuadLayer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRQuadLayer",
+    "source_file": "api/XRQuadLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#xrquadlayertype",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRQuadLayer.height",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRQuadLayer/height",
+    "source_file": "api/XRQuadLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrquadlayer-height",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRQuadLayer.redraw_event",
+   "compat": {
+    "description": "<code>redraw</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRQuadLayer/redraw_event",
+    "source_file": "api/XRQuadLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrquadlayer-onredraw",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRQuadLayer.space",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRQuadLayer/space",
+    "source_file": "api/XRQuadLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrquadlayer-space",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRQuadLayer.transform",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRQuadLayer/transform",
+    "source_file": "api/XRQuadLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrquadlayer-transform",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRQuadLayer.width",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRQuadLayer/width",
+    "source_file": "api/XRQuadLayer.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrquadlayer-width",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRRenderState.layers",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRRenderState/layers",
+    "source_file": "api/XRRenderState.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrrenderstate-layers",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRSubImage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRSubImage",
+    "source_file": "api/XRSubImage.json",
+    "spec_url": "https://immersive-web.github.io/layers/#xrsubimagetype",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRSubImage.viewport",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRSubImage/viewport",
+    "source_file": "api/XRSubImage.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrsubimage-viewport",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLBinding",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLBinding",
+    "source_file": "api/XRWebGLBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#XRWebGLBindingtype",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLBinding.XRWebGLBinding",
+   "compat": {
+    "description": "<code>XRWebGLBinding()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLBinding/XRWebGLBinding",
+    "source_file": "api/XRWebGLBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrwebglbinding-xrwebglbinding",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLBinding.createCubeLayer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLBinding/createCubeLayer",
+    "source_file": "api/XRWebGLBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrwebglbinding-createcubelayer",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLBinding.createCylinderLayer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLBinding/createCylinderLayer",
+    "source_file": "api/XRWebGLBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrwebglbinding-createcylinderlayer",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLBinding.createEquirectLayer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLBinding/createEquirectLayer",
+    "source_file": "api/XRWebGLBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrwebglbinding-createequirectlayer",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLBinding.createProjectionLayer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLBinding/createProjectionLayer",
+    "source_file": "api/XRWebGLBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrwebglbinding-createprojectionlayer",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLBinding.createQuadLayer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLBinding/createQuadLayer",
+    "source_file": "api/XRWebGLBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrwebglbinding-createquadlayer",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLBinding.getSubImage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLBinding/getSubImage",
+    "source_file": "api/XRWebGLBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrwebglbinding-getsubimage",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLBinding.getViewSubImage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLBinding/getViewSubImage",
+    "source_file": "api/XRWebGLBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrwebglbinding-getviewsubimage",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLBinding.nativeProjectionScaleFactor",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLBinding/nativeProjectionScaleFactor",
+    "source_file": "api/XRWebGLBinding.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrwebglbinding-nativeprojectionscalefactor",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLSubImage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLSubImage",
+    "source_file": "api/XRWebGLSubImage.json",
+    "spec_url": "https://immersive-web.github.io/layers/#xrwebglsubimagetype",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLSubImage.colorTexture",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLSubImage/colorTexture",
+    "source_file": "api/XRWebGLSubImage.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrwebglsubimage-colortexture",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLSubImage.colorTextureHeight",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLSubImage/colorTextureHeight",
+    "source_file": "api/XRWebGLSubImage.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrwebglsubimage-colortextureheight",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLSubImage.colorTextureWidth",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLSubImage/colorTextureWidth",
+    "source_file": "api/XRWebGLSubImage.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrwebglsubimage-colortexturewidth",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLSubImage.depthStencilTexture",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLSubImage/depthStencilTexture",
+    "source_file": "api/XRWebGLSubImage.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrwebglsubimage-depthstenciltexture",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLSubImage.imageIndex",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLSubImage/imageIndex",
+    "source_file": "api/XRWebGLSubImage.json",
+    "spec_url": "https://immersive-web.github.io/layers/#dom-xrwebglsubimage-imageindex",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.1"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-layers"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

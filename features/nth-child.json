@@ -1,0 +1,788 @@
+{
+ "compat_features": [
+  "css.selectors.first-child",
+  "css.selectors.first-child.no_parent_required",
+  "css.selectors.last-child",
+  "css.selectors.last-child.no_parent_required",
+  "css.selectors.nth-child",
+  "css.selectors.nth-child.no_parent_required",
+  "css.selectors.nth-last-child",
+  "css.selectors.nth-last-child.no_parent_required",
+  "css.selectors.only-child",
+  "css.selectors.only-child.no_parent_required"
+ ],
+ "description": "The :nth-child() and :nth-last-child() CSS functional pseudo-classes match elements based on their index within a list of elements. The :first-child and :last-child pseudo-classes match the first and last element in a list, and the :only-child pseudo-class matches an element with no siblings.",
+ "description_html": "The <code>:nth-child()</code> and <code>:nth-last-child()</code> CSS functional pseudo-classes match elements based on their index within a list of elements. The <code>:first-child</code> and <code>:last-child</code> pseudo-classes match the first and last element in a list, and the <code>:only-child</code> pseudo-class matches an element with no siblings.",
+ "group": "selectors",
+ "name": ":nth-child()",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/selectors-3/#nth-child-pseudo",
+   "seriesComposition": "full",
+   "shortname": "selectors-3",
+   "series": {
+    "shortname": "selectors",
+    "currentSpecification": "selectors-4",
+    "title": "Selectors",
+    "shortTitle": "Selectors",
+    "releaseUrl": "https://www.w3.org/TR/selectors/",
+    "nightlyUrl": "https://drafts.csswg.org/selectors/"
+   },
+   "seriesVersion": "3",
+   "seriesNext": "selectors-4",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/selectors-3/",
+    "status": "Recommendation",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/selectors-3/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/selectors-3/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "selectors-3/Overview.src.html",
+    "filename": "index.html"
+   },
+   "title": "Selectors Level 3",
+   "source": "w3c",
+   "shortTitle": "Selectors 3",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/selectors"
+    ]
+   },
+   "fragment": "nth-child-pseudo"
+  },
+  {
+   "url": "https://drafts.csswg.org/selectors-3/#nth-last-child-pseudo",
+   "seriesComposition": "full",
+   "shortname": "selectors-3",
+   "series": {
+    "shortname": "selectors",
+    "currentSpecification": "selectors-4",
+    "title": "Selectors",
+    "shortTitle": "Selectors",
+    "releaseUrl": "https://www.w3.org/TR/selectors/",
+    "nightlyUrl": "https://drafts.csswg.org/selectors/"
+   },
+   "seriesVersion": "3",
+   "seriesNext": "selectors-4",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/selectors-3/",
+    "status": "Recommendation",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/selectors-3/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/selectors-3/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "selectors-3/Overview.src.html",
+    "filename": "index.html"
+   },
+   "title": "Selectors Level 3",
+   "source": "w3c",
+   "shortTitle": "Selectors 3",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/selectors"
+    ]
+   },
+   "fragment": "nth-last-child-pseudo"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "1",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "3.5",
+   "firefox_android": "4",
+   "safari": "3.1",
+   "safari_ios": "2"
+  }
+ },
+ "id": "nth-child",
+ "groups": [
+  "selectors"
+ ],
+ "groupPaths": [
+  [
+   "CSS",
+   "Selectors"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": ":nth-child()",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/:nth-child"
+  },
+  {
+   "title": ":nth-last-child()",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/:nth-last-child"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "css.selectors.first-child",
+   "compat": {
+    "description": "<code>:first-child</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:first-child",
+    "source_file": "css/selectors/first-child.json",
+    "spec_url": "https://drafts.csswg.org/selectors/#first-child-pseudo",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "notes": [
+       "Internet Explorer 7 doesn't update <code>:first-child</code> styles when elements are added dynamically.",
+       "In Internet Explorer 8, if an element is inserted dynamically by clicking on a link, then the <code>:first-child</code> style isn't applied until the link loses focus."
+      ],
+      "version_added": "7"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9.5"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:nth-child"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.first-child.no_parent_required",
+   "compat": {
+    "description": "Matches elements with no parent",
+    "source_file": "css/selectors/first-child.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "57"
+     },
+     "chrome_android": {
+      "version_added": "57"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "44"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "57"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:nth-child"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.last-child",
+   "compat": {
+    "description": "<code>:last-child</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:last-child",
+    "source_file": "css/selectors/last-child.json",
+    "spec_url": "https://drafts.csswg.org/selectors/#the-last-child-pseudo",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9.5"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:nth-child"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.last-child.no_parent_required",
+   "compat": {
+    "description": "Matches elements with no parent",
+    "source_file": "css/selectors/last-child.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "57"
+     },
+     "chrome_android": {
+      "version_added": "57"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "44"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "57"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:nth-child"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.nth-child",
+   "compat": {
+    "description": "<code>:nth-child()</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:nth-child",
+    "source_file": "css/selectors/nth-child.json",
+    "spec_url": "https://drafts.csswg.org/selectors/#nth-child-pseudo",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Before Opera 15, Opera does not handle dynamically inserted elements for <code>:nth-child()</code>.",
+      "version_added": "9.5"
+     },
+     "opera_android": {
+      "notes": "Before Opera 15, Opera does not handle dynamically inserted elements for <code>:nth-child()</code>.",
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:nth-child"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.nth-child.no_parent_required",
+   "compat": {
+    "description": "Matches elements with no parent",
+    "source_file": "css/selectors/nth-child.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "57"
+     },
+     "chrome_android": {
+      "version_added": "57"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "44"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "57"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:nth-child"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.nth-last-child",
+   "compat": {
+    "description": "<code>:nth-last-child()</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:nth-last-child",
+    "source_file": "css/selectors/nth-last-child.json",
+    "spec_url": "https://drafts.csswg.org/selectors/#nth-last-child-pseudo",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:nth-child"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.nth-last-child.no_parent_required",
+   "compat": {
+    "description": "Matches elements with no parent",
+    "source_file": "css/selectors/nth-last-child.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "57"
+     },
+     "chrome_android": {
+      "version_added": "57"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "44"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "57"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:nth-child"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.only-child",
+   "compat": {
+    "description": "<code>:only-child</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:only-child",
+    "source_file": "css/selectors/only-child.json",
+    "spec_url": "https://drafts.csswg.org/selectors/#only-child-pseudo",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9.5"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:nth-child"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.only-child.no_parent_required",
+   "compat": {
+    "description": "Matches elements with no parent",
+    "source_file": "css/selectors/only-child.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "57"
+     },
+     "chrome_android": {
+      "version_added": "57"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "44"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "57"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:nth-child"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "css"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

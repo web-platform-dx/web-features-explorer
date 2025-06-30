@@ -1,0 +1,469 @@
+{
+ "compat_features": [
+  "api.CookieStore.delete.partitioned_option",
+  "api.CookieStore.get.partitioned_return_property",
+  "api.CookieStore.set.partitioned_option",
+  "api.ExtendableCookieChangeEvent.changed.partitioned_property",
+  "api.ExtendableCookieChangeEvent.deleted.partitioned_property",
+  "http.headers.Set-Cookie.Partitioned"
+ ],
+ "description": "Partitioned cookies allow you to opt a cookie into partitioned storage, with a separate cookie jar per top-level site. Also known as Cookies Having Independent Partitioned State or CHIPS.",
+ "description_html": "Partitioned cookies allow you to opt a cookie into partitioned storage, with a separate cookie jar per top-level site. Also known as Cookies Having Independent Partitioned State or CHIPS.",
+ "name": "Partitioned cookies",
+ "spec": [
+  {
+   "url": "https://wicg.github.io/cookie-store/",
+   "seriesComposition": "full",
+   "shortname": "cookie-store",
+   "series": {
+    "shortname": "cookie-store",
+    "currentSpecification": "cookie-store",
+    "title": "Cookie Store API",
+    "shortTitle": "Cookie Store API",
+    "nightlyUrl": "https://wicg.github.io/cookie-store/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Platform Incubator Community Group",
+     "url": "https://www.w3.org/community/wicg/"
+    }
+   ],
+   "nightly": {
+    "url": "https://wicg.github.io/cookie-store/",
+    "status": "Draft Community Group Report",
+    "alternateUrls": [],
+    "repository": "https://github.com/WICG/cookie-store",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Cookie Store API",
+   "source": "spec",
+   "shortTitle": "Cookie Store API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "cookie-store"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "114",
+   "chrome_android": "114",
+   "edge": "114"
+  }
+ },
+ "id": "partitioned-cookies",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/678",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/50",
+   "position": "",
+   "concerns": [
+    "performance"
+   ]
+  }
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.CookieStore.delete.partitioned_option",
+   "compat": {
+    "description": "<code>partitioned</code> option",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookiestoredeleteoptions-partitioned",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "114"
+     },
+     "chrome_android": {
+      "version_added": "114"
+     },
+     "edge": {
+      "version_added": "114"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "100"
+     },
+     "opera_android": {
+      "version_added": "76"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "114"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:partitioned-cookies"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore.get.partitioned_return_property",
+   "compat": {
+    "description": "<code>partitioned</code> in return value",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookielistitem-partitioned",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "114"
+     },
+     "chrome_android": {
+      "version_added": "114"
+     },
+     "edge": {
+      "version_added": "114"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "100"
+     },
+     "opera_android": {
+      "version_added": "76"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "114"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:partitioned-cookies"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore.set.partitioned_option",
+   "compat": {
+    "description": "<code>partitioned</code> option",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookieinit-partitioned",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "114"
+     },
+     "chrome_android": {
+      "version_added": "114"
+     },
+     "edge": {
+      "version_added": "114"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "100"
+     },
+     "opera_android": {
+      "version_added": "76"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "114"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:partitioned-cookies"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableCookieChangeEvent.changed.partitioned_property",
+   "compat": {
+    "description": "<code>partitioned</code> property",
+    "source_file": "api/ExtendableCookieChangeEvent.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookielistitem-partitioned",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "114"
+     },
+     "chrome_android": {
+      "version_added": "114"
+     },
+     "edge": {
+      "version_added": "114"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "100"
+     },
+     "opera_android": {
+      "version_added": "76"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "114"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:partitioned-cookies"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableCookieChangeEvent.deleted.partitioned_property",
+   "compat": {
+    "description": "<code>partitioned</code> property",
+    "source_file": "api/ExtendableCookieChangeEvent.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookielistitem-partitioned",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "114"
+     },
+     "chrome_android": {
+      "version_added": "114"
+     },
+     "edge": {
+      "version_added": "114"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "100"
+     },
+     "opera_android": {
+      "version_added": "76"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "114"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:partitioned-cookies"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Set-Cookie.Partitioned",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies",
+    "source_file": "http/headers/Set-Cookie.json",
+    "spec_url": "https://datatracker.ietf.org/doc/html/draft-cutler-httpbis-partitioned-cookies#section-2.1",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "114"
+     },
+     "chrome_android": {
+      "version_added": "114"
+     },
+     "edge": {
+      "version_added": "114"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "100"
+     },
+     "opera_android": {
+      "version_added": "76"
+     },
+     "safari": {
+      "version_added": "18.4",
+      "version_last": "18.4",
+      "version_removed": "18.5"
+     },
+     "safari_ios": {
+      "version_added": "18.4",
+      "version_last": "18.4",
+      "version_removed": "18.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "18.4",
+      "version_last": "18.4",
+      "version_removed": "18.5"
+     }
+    },
+    "tags": [
+     "web-features:partitioned-cookies"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "http"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

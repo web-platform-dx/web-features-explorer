@@ -1,0 +1,2225 @@
+{
+ "caniuse": "dragndrop",
+ "compat_features": [
+  "api.DataTransfer",
+  "api.DataTransfer.DataTransfer",
+  "api.DataTransfer.clearData",
+  "api.DataTransfer.dropEffect",
+  "api.DataTransfer.effectAllowed",
+  "api.DataTransfer.files",
+  "api.DataTransfer.getData",
+  "api.DataTransfer.items",
+  "api.DataTransfer.setData",
+  "api.DataTransfer.setDragImage",
+  "api.DataTransfer.types",
+  "api.DataTransferItem",
+  "api.DataTransferItem.getAsFile",
+  "api.DataTransferItem.getAsFileSystemHandle",
+  "api.DataTransferItem.getAsString",
+  "api.DataTransferItem.kind",
+  "api.DataTransferItem.type",
+  "api.DataTransferItemList",
+  "api.DataTransferItemList.add",
+  "api.DataTransferItemList.clear",
+  "api.DataTransferItemList.length",
+  "api.DataTransferItemList.remove",
+  "api.DragEvent",
+  "api.DragEvent.DragEvent",
+  "api.DragEvent.dataTransfer",
+  "api.HTMLElement.drag_event",
+  "api.HTMLElement.dragend_event",
+  "api.HTMLElement.dragenter_event",
+  "api.HTMLElement.draggable",
+  "api.HTMLElement.dragleave_event",
+  "api.HTMLElement.dragover_event",
+  "api.HTMLElement.dragstart_event",
+  "api.HTMLElement.drop_event"
+ ],
+ "description": "The Drag and Drop API lets users drag and drop elements and external files such as images onto web pages. Developers can customize which elements can become draggable, the type of feedback the draggable elements produce, and the droppable elements.",
+ "description_html": "The Drag and Drop API lets users drag and drop elements and external files such as images onto web pages. Developers can customize which elements can become draggable, the type of feedback the draggable elements produce, and the droppable elements.",
+ "name": "Drag and Drop",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/dnd.html#dnd",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "dnd"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "3",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "3.5",
+   "firefox_android": "4",
+   "safari": "4",
+   "safari_ios": "3.2"
+  }
+ },
+ "id": "draganddrop",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "HTML Drag and Drop API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.DataTransfer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransfer",
+    "source_file": "api/DataTransfer.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#the-datatransfer-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "3"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": "As of Firefox 52, the <a href=\"https://developer.mozilla.org/docs/Web/API/DataTransfer/types\"><code>DataTransfer.types</code></a> property returns a frozen array of <a href=\"https://developer.mozilla.org/docs/Web/API/DOMString\"><code>DOMString</code></a>s as per spec, rather than a <a href=\"https://developer.mozilla.org/docs/Web/API/DOMStringList\"><code>DOMStringList</code></a>.",
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "notes": "As of Firefox for Android 52, the <a href=\"https://developer.mozilla.org/docs/Web/API/DataTransfer/types\"><code>DataTransfer.types</code></a> property returns a frozen array of <a href=\"https://developer.mozilla.org/docs/Web/API/DOMString\"><code>DOMString</code></a>s as per spec, rather than a <a href=\"https://developer.mozilla.org/docs/Web/API/DOMStringList\"><code>DOMStringList</code></a>.",
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "8"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "12"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransfer.DataTransfer",
+   "compat": {
+    "description": "<code>DataTransfer()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransfer/DataTransfer",
+    "source_file": "api/DataTransfer.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "59"
+     },
+     "chrome_android": {
+      "version_added": "59"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "62"
+     },
+     "firefox_android": {
+      "version_added": "62"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "46"
+     },
+     "opera_android": {
+      "version_added": "44"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "59"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransfer.clearData",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransfer/clearData",
+    "source_file": "api/DataTransfer.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-cleardata-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "3"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "8"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransfer.dropEffect",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransfer/dropEffect",
+    "source_file": "api/DataTransfer.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-dropeffect-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "3"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "8"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransfer.effectAllowed",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransfer/effectAllowed",
+    "source_file": "api/DataTransfer.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-effectallowed-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "3"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "8"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransfer.files",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransfer/files",
+    "source_file": "api/DataTransfer.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-files-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "3"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.6"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransfer.getData",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransfer/getData",
+    "source_file": "api/DataTransfer.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-getdata-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "3"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "8"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransfer.items",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransfer/items",
+    "source_file": "api/DataTransfer.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-items-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "3"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "12"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransfer.setData",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransfer/setData",
+    "source_file": "api/DataTransfer.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-setdata-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "3"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "8"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "12"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransfer.setDragImage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransfer/setDragImage",
+    "source_file": "api/DataTransfer.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-setdragimage-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "3"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransfer.types",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransfer/types",
+    "source_file": "api/DataTransfer.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-types-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "3"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "notes": [
+       "The property returns a <a href=\"https://developer.mozilla.org/docs/Web/API/DOMStringList\"><code>DOMStringList</code></a>.",
+       "<code>Text</code> is returned instead of <code>text/plain</code>"
+      ],
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "As of Opera 12, <code>Text</code> is returned instead of <code>text/plain</code>",
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransferItem",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransferItem",
+    "source_file": "api/DataTransferItem.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#the-datatransferitem-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "11"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "≤14"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransferItem.getAsFile",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransferItem/getAsFile",
+    "source_file": "api/DataTransferItem.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransferitem-getasfile-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "11"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "≤14"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransferItem.getAsFileSystemHandle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransferItem/getAsFileSystemHandle",
+    "source_file": "api/DataTransferItem.json",
+    "spec_url": "https://wicg.github.io/file-system-access/#dom-datatransferitem-getasfilesystemhandle",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "132"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "132"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransferItem.getAsString",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransferItem/getAsString",
+    "source_file": "api/DataTransferItem.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransferitem-getasstring-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "11"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "≤14"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransferItem.kind",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransferItem/kind",
+    "source_file": "api/DataTransferItem.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransferitem-kind-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "11"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "≤14"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransferItem.type",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransferItem/type",
+    "source_file": "api/DataTransferItem.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransferitem-type-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "11"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "≤14"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransferItemList",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransferItemList",
+    "source_file": "api/DataTransferItemList.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#the-datatransferitemlist-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "13"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "≤14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransferItemList.add",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransferItemList/add",
+    "source_file": "api/DataTransferItemList.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransferitemlist-add-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "13"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "≤14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransferItemList.clear",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransferItemList/clear",
+    "source_file": "api/DataTransferItemList.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransferitemlist-clear-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "13"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "≤14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransferItemList.length",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransferItemList/length",
+    "source_file": "api/DataTransferItemList.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransferitemlist-length-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "13"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "≤14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DataTransferItemList.remove",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DataTransferItemList/remove",
+    "source_file": "api/DataTransferItemList.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransferitemlist-remove-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "31"
+     },
+     "chrome_android": {
+      "version_added": "31"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "≤14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DragEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DragEvent",
+    "source_file": "api/DragEvent.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#the-dragevent-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "46"
+     },
+     "chrome_android": {
+      "version_added": "46"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "notes": "Before Internet Explorer 10, <code>DragEvent</code> is exposed in standards mode but not quirks mode.",
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "33"
+     },
+     "safari": {
+      "version_added": "14"
+     },
+     "safari_ios": {
+      "version_added": "14"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "46"
+     },
+     "webview_ios": {
+      "version_added": "14"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DragEvent.DragEvent",
+   "compat": {
+    "description": "<code>DragEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DragEvent/DragEvent",
+    "source_file": "api/DragEvent.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#the-dragevent-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "46"
+     },
+     "chrome_android": {
+      "version_added": "46"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "33"
+     },
+     "safari": {
+      "version_added": "14"
+     },
+     "safari_ios": {
+      "version_added": "14"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "46"
+     },
+     "webview_ios": {
+      "version_added": "14"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.DragEvent.dataTransfer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/DragEvent/dataTransfer",
+    "source_file": "api/DragEvent.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-dragevent-datatransfer-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "46"
+     },
+     "chrome_android": {
+      "version_added": "46"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "notes": "The value is always <code>null</code>.",
+      "partial_implementation": true,
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "33"
+     },
+     "opera_android": {
+      "version_added": "33"
+     },
+     "safari": {
+      "version_added": "14"
+     },
+     "safari_ios": {
+      "version_added": "14"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "46"
+     },
+     "webview_ios": {
+      "version_added": "14"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLElement.drag_event",
+   "compat": {
+    "description": "<code>drag</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/drag_event",
+    "source_file": "api/HTMLElement.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrag",
+     "https://html.spec.whatwg.org/multipage/dnd.html#event-dnd-drag"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "9"
+     },
+     "firefox_android": {
+      "version_added": "9"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "12"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLElement.dragend_event",
+   "compat": {
+    "description": "<code>dragend</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/dragend_event",
+    "source_file": "api/HTMLElement.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragend",
+     "https://html.spec.whatwg.org/multipage/dnd.html#event-dnd-dragend"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "9"
+     },
+     "firefox_android": {
+      "version_added": "9"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "12"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLElement.dragenter_event",
+   "compat": {
+    "description": "<code>dragenter</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/dragenter_event",
+    "source_file": "api/HTMLElement.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragenter",
+     "https://html.spec.whatwg.org/multipage/dnd.html#event-dnd-dragenter"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "9"
+     },
+     "firefox_android": {
+      "version_added": "9"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "12"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLElement.draggable",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/draggable",
+    "source_file": "api/HTMLElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dnd.html#dom-draggable",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "2"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "12"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLElement.dragleave_event",
+   "compat": {
+    "description": "<code>dragleave</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/dragleave_event",
+    "source_file": "api/HTMLElement.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragleave",
+     "https://html.spec.whatwg.org/multipage/dnd.html#event-dnd-dragleave"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "9"
+     },
+     "firefox_android": {
+      "version_added": "9"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "12"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLElement.dragover_event",
+   "compat": {
+    "description": "<code>dragover</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/dragover_event",
+    "source_file": "api/HTMLElement.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragover",
+     "https://html.spec.whatwg.org/multipage/dnd.html#event-dnd-dragover"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "9"
+     },
+     "firefox_android": {
+      "version_added": "9"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "12"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLElement.dragstart_event",
+   "compat": {
+    "description": "<code>dragstart</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/dragstart_event",
+    "source_file": "api/HTMLElement.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragstart",
+     "https://html.spec.whatwg.org/multipage/dnd.html#event-dnd-dragstart"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "9"
+     },
+     "firefox_android": {
+      "version_added": "9"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "12"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLElement.drop_event",
+   "compat": {
+    "description": "<code>drop</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/drop_event",
+    "source_file": "api/HTMLElement.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrop",
+     "https://html.spec.whatwg.org/multipage/dnd.html#event-dnd-drop"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "9"
+     },
+     "firefox_android": {
+      "version_added": "9"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "12"
+     },
+     "opera_android": {
+      "version_added": "12"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:draganddrop"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

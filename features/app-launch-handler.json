@@ -1,0 +1,525 @@
+{
+ "compat_features": [
+  "api.LaunchParams",
+  "api.LaunchParams.targetURL",
+  "api.LaunchQueue",
+  "api.LaunchQueue.setConsumer",
+  "api.Window.launchQueue",
+  "manifests.webapp.launch_handler",
+  "manifests.webapp.launch_handler.client_mode"
+ ],
+ "description": "The launch_handler web app manifest member, with the client_mode property, configure how web app launches behave when an instance of the app is already open. For example, you can choose to focus the existing app instance instead of launching a new one.",
+ "description_html": "The <code>launch_handler</code> web app manifest member, with the <code>client_mode</code> property, configure how web app launches behave when an instance of the app is already open. For example, you can choose to focus the existing app instance instead of launching a new one.",
+ "group": "progressive-web-app",
+ "name": "Launch handler",
+ "spec": [
+  {
+   "url": "https://wicg.github.io/web-app-launch/",
+   "seriesComposition": "full",
+   "shortname": "web-app-launch",
+   "series": {
+    "shortname": "web-app-launch",
+    "currentSpecification": "web-app-launch",
+    "title": "Web App Launch Handler API",
+    "shortTitle": "Web App Launch Handler API",
+    "nightlyUrl": "https://wicg.github.io/web-app-launch/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Platform Incubator Community Group",
+     "url": "https://www.w3.org/community/wicg/"
+    }
+   ],
+   "nightly": {
+    "url": "https://wicg.github.io/web-app-launch/",
+    "status": "Draft Community Group Report",
+    "alternateUrls": [],
+    "repository": "https://github.com/WICG/web-app-launch",
+    "sourcePath": "index.html",
+    "filename": "index.html"
+   },
+   "title": "Web App Launch Handler API",
+   "source": "spec",
+   "shortTitle": "Web App Launch Handler API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "110",
+   "edge": "110"
+  }
+ },
+ "id": "app-launch-handler",
+ "groups": [
+  "progressive-web-app"
+ ],
+ "groupPaths": [
+  [
+   "Progressive web app"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Launch Handler API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Launch_Handler_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.0101934,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/309"
+ },
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.LaunchParams",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/LaunchParams",
+    "source_file": "api/LaunchParams.json",
+    "spec_url": "https://wicg.github.io/web-app-launch/#launchparams-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "102"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "102"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "88"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:app-launch-handler"
+    ]
+   }
+  },
+  {
+   "key": "api.LaunchParams.targetURL",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/LaunchParams/targetURL",
+    "source_file": "api/LaunchParams.json",
+    "spec_url": "https://wicg.github.io/web-app-launch/#ref-for-dom-launchparams-targeturl-7",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "110"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "110"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "96"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:app-launch-handler"
+    ]
+   }
+  },
+  {
+   "key": "api.LaunchQueue",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/LaunchQueue",
+    "source_file": "api/LaunchQueue.json",
+    "spec_url": "https://wicg.github.io/web-app-launch/#launchqueue-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "102"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "102"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "88"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:app-launch-handler"
+    ]
+   }
+  },
+  {
+   "key": "api.LaunchQueue.setConsumer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/LaunchQueue/setConsumer",
+    "source_file": "api/LaunchQueue.json",
+    "spec_url": "https://wicg.github.io/web-app-launch/#dom-launchqueue-setconsumer",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "102"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "102"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "88"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:app-launch-handler"
+    ]
+   }
+  },
+  {
+   "key": "api.Window.launchQueue",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/launchQueue",
+    "source_file": "api/Window.json",
+    "spec_url": "https://wicg.github.io/web-app-launch/#launchqueue-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "102"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "102"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "88"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:app-launch-handler"
+    ]
+   }
+  },
+  {
+   "key": "manifests.webapp.launch_handler",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/Progressive_web_apps/Manifest/Reference/launch_handler",
+    "source_file": "manifests/webapp/launch_handler.json",
+    "spec_url": "https://wicg.github.io/web-app-launch/#launch_handler-member",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "110"
+     },
+     "chrome_android": {
+      "version_added": "110"
+     },
+     "edge": {
+      "version_added": "110"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "96"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "110"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:app-launch-handler"
+    ]
+   }
+  },
+  {
+   "key": "manifests.webapp.launch_handler.client_mode",
+   "compat": {
+    "source_file": "manifests/webapp/launch_handler.json",
+    "spec_url": "https://wicg.github.io/web-app-launch/#client_mode-member",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "110"
+     },
+     "chrome_android": {
+      "version_added": "110"
+     },
+     "edge": {
+      "version_added": "110"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "96"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "110"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:app-launch-handler"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "manifests"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

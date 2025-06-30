@@ -1,0 +1,206 @@
+{
+ "caniuse": "css-textshadow",
+ "compat_features": [
+  "css.properties.text-shadow"
+ ],
+ "description": "The text-shadow CSS property sets the position and styles of shadow on text.",
+ "description_html": "The <code>text-shadow</code> CSS property sets the position and styles of shadow on text.",
+ "group": "text",
+ "name": "text-shadow",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css-text-decor-4/#text-shadow-property",
+   "seriesComposition": "delta",
+   "shortname": "css-text-decor-4",
+   "series": {
+    "shortname": "css-text-decor",
+    "currentSpecification": "css-text-decor-3",
+    "title": "CSS Text Decoration",
+    "shortTitle": "CSS Text Decoration",
+    "releaseUrl": "https://www.w3.org/TR/css-text-decor/",
+    "nightlyUrl": "https://drafts.csswg.org/css-text-decor/"
+   },
+   "seriesVersion": "4",
+   "seriesPrevious": "css-text-decor-3",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-text-decor-4/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-text-decor-4/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-text-decor-4/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-text-decor-4/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Text Decoration Module Level 4",
+   "source": "w3c",
+   "shortTitle": "CSS Text Decoration 4",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-text-decor"
+    ]
+   },
+   "fragment": "text-shadow-property"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "2",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "3.5",
+   "firefox_android": "4",
+   "safari": "1.1",
+   "safari_ios": "1"
+  }
+ },
+ "id": "text-shadow",
+ "groups": [
+  "text"
+ ],
+ "groupPaths": [
+  [
+   "CSS",
+   "Text"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "text-shadow",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/text-shadow"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "css.properties.text-shadow",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/text-shadow",
+    "source_file": "css/properties/text-shadow.json",
+    "spec_url": "https://drafts.csswg.org/css-text-decor/#text-shadow-property",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "2"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": [
+       "Firefox versions before 57 have a bug whereby <a href=\"https://developer.mozilla.org/docs/Web/CSS/transition\"><code>transition</code></a>s will not work when transitioning from a <code>text-shadow</code> with a color specified to a <code>text-shadow</code> without a color specified (<a href=\"https://bugzil.la/726550\">bug 726550</a>).",
+       "From Firefox 4, the blur radius is capped at 300 for performance reasons.",
+       "Firefox theoretically supports infinite text-shadows (don't try it).",
+       "If the <code>&lt;color&gt;</code> value is unspecified, then Firefox uses the value of the element's <a href=\"https://developer.mozilla.org/docs/Web/CSS/color\"><code>color</code></a> property."
+      ],
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "notes": [
+       "Firefox for Android versions before 57 have a bug whereby <a href=\"https://developer.mozilla.org/docs/Web/CSS/transition\"><code>transition</code></a>s will not work when transitioning from a <code>text-shadow</code> with a color specified to a <code>text-shadow</code> without a color specified (<a href=\"https://bugzil.la/726550\">bug 726550</a>).",
+       "From Firefox for Android 4, the blur radius is capped at 300 for performance reasons.",
+       "Firefox for Android theoretically supports infinite text-shadows (don't try it).",
+       "If the <code>&lt;color&gt;</code> value is unspecified, then Firefox for Android uses the value of the element's <a href=\"https://developer.mozilla.org/docs/Web/CSS/color\"><code>color</code></a> property."
+      ],
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": [
+       "Opera supports a maximum of 6-9 text-shadows for performance reasons. The blur radius is limited to 100px.",
+       "Opera 9.5 to 10.1 adheres to the old, reverse painting order (in CSS2, the first specified shadow is on the bottom)."
+      ],
+      "version_added": "9.5"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "notes": [
+       "In Safari, any shadows that do not explicitly specify a color are transparent.",
+       "Safari 1.1 to 3.2 only supports one text-shadow (displays the first shadow of a comma-separated list and ignores the rest). Safari 4.0 (WebKit 528) and later support multiple text-shadows."
+      ],
+      "version_added": "1.1"
+     },
+     "safari_ios": {
+      "notes": [
+       "In Safari, any shadows that do not explicitly specify a color are transparent.",
+       "Safari iOS 1 and 2 only support one text-shadow (displays the first shadow of a comma-separated list and ignores the rest). Safari iOS 3 (WebKit 528) and later support multiple text-shadows."
+      ],
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "notes": [
+       "In Safari, any shadows that do not explicitly specify a color are transparent.",
+       "Safari iOS 1 and 2 only support one text-shadow (displays the first shadow of a comma-separated list and ignores the rest). Safari iOS 3 (WebKit 528) and later support multiple text-shadows."
+      ],
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:text-shadow"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "css"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

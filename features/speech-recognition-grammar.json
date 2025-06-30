@@ -1,0 +1,780 @@
+{
+ "compat_features": [
+  "api.SpeechGrammar",
+  "api.SpeechGrammar.src",
+  "api.SpeechGrammar.weight",
+  "api.SpeechGrammarList",
+  "api.SpeechGrammarList.SpeechGrammarList",
+  "api.SpeechGrammarList.addFromString",
+  "api.SpeechGrammarList.addFromURI",
+  "api.SpeechGrammarList.item",
+  "api.SpeechGrammarList.length",
+  "api.SpeechRecognition.grammars"
+ ],
+ "description": "The SpeechRecognition.grammars property of the Web Speech API represents a set of words or patterns of words that the recognition service should recognize, used for when the recognition service's accuracy is low. This feature has been removed due to advancements in speech recognition.",
+ "description_html": "The <code>SpeechRecognition.grammars</code> property of the Web Speech API represents a set of words or patterns of words that the recognition service should recognize, used for when the recognition service's accuracy is low. This feature has been removed due to advancements in speech recognition.",
+ "discouraged": {
+  "according_to": [
+   "https://github.com/WebAudio/web-speech-api/pull/117"
+  ]
+ },
+ "group": "speech",
+ "name": "Speech recognition grammar",
+ "spec": [
+  {
+   "url": "https://webaudio.github.io/web-speech-api/#speechreco-section",
+   "seriesComposition": "full",
+   "shortname": "speech-api",
+   "series": {
+    "shortname": "speech-api",
+    "currentSpecification": "speech-api",
+    "title": "Web Speech API",
+    "shortTitle": "Web Speech API",
+    "nightlyUrl": "https://webaudio.github.io/web-speech-api/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Audio Community Group",
+     "url": "https://www.w3.org/community/audio-comgp/"
+    }
+   ],
+   "nightly": {
+    "url": "https://webaudio.github.io/web-speech-api/",
+    "status": "Draft Community Group Report",
+    "alternateUrls": [],
+    "repository": "https://github.com/WebAudio/web-speech-api",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Web Speech API",
+   "source": "spec",
+   "shortTitle": "Web Speech API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": "speechreco-section"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {}
+ },
+ "id": "speech-recognition-grammar",
+ "groups": [
+  "speech"
+ ],
+ "groupPaths": [
+  [
+   "Speech"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "SpeechGrammar",
+   "url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammar"
+  },
+  {
+   "title": "SpeechGrammar: src property",
+   "url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammar/src"
+  },
+  {
+   "title": "SpeechGrammar: weight property",
+   "url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammar/weight"
+  },
+  {
+   "title": "SpeechGrammarList",
+   "url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammarList"
+  },
+  {
+   "title": "SpeechGrammarList: SpeechGrammarList() constructor",
+   "url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammarList/SpeechGrammarList"
+  },
+  {
+   "title": "SpeechGrammarList: addFromString() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammarList/addFromString"
+  },
+  {
+   "title": "SpeechGrammarList: addFromURI() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammarList/addFromURI"
+  },
+  {
+   "title": "SpeechGrammarList: item() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammarList/item"
+  },
+  {
+   "title": "SpeechGrammarList: length property",
+   "url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammarList/length"
+  },
+  {
+   "title": "SpeechRecognition: grammars property",
+   "url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/grammars"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.SpeechGrammar",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammar",
+    "source_file": "api/SpeechGrammar.json",
+    "status": {
+     "deprecated": true,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "prefix": "webkit",
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "prefix": "webkit",
+      "version_added": "25"
+     },
+     "edge": {
+      "prefix": "webkit",
+      "version_added": "79"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.webspeech.recognition.enable",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "notes": "Note that currently only the speech synthesis part is available in Firefox Desktop - the speech recognition part will be available soon, once the required internal permissions are sorted out.",
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "prefix": "webkit",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "prefix": "webkit",
+      "version_added": "15"
+     },
+     "opera_android": {
+      "prefix": "webkit",
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "prefix": "webkit",
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition-grammar"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechGrammar.src",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammar/src",
+    "source_file": "api/SpeechGrammar.json",
+    "status": {
+     "deprecated": true,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.webspeech.recognition.enable",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "notes": "Note that currently only the speech synthesis part is available in Firefox Desktop - the speech recognition part will be available soon, once the required internal permissions are sorted out.",
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition-grammar"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechGrammar.weight",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammar/weight",
+    "source_file": "api/SpeechGrammar.json",
+    "status": {
+     "deprecated": true,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.webspeech.recognition.enable",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "notes": "Note that currently only the speech synthesis part is available in Firefox Desktop - the speech recognition part will be available soon, once the required internal permissions are sorted out.",
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition-grammar"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechGrammarList",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammarList",
+    "source_file": "api/SpeechGrammarList.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#speechgrammarlist",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "prefix": "webkit",
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "prefix": "webkit",
+      "version_added": "33"
+     },
+     "edge": {
+      "prefix": "webkit",
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "prefix": "webkit",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "prefix": "webkit",
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "prefix": "webkit",
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition-grammar"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechGrammarList.SpeechGrammarList",
+   "compat": {
+    "description": "<code>SpeechGrammarList()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammarList/SpeechGrammarList",
+    "source_file": "api/SpeechGrammarList.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechgrammarlist-speechgrammarlist",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "prefix": "webkit",
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "prefix": "webkit",
+      "version_added": "33"
+     },
+     "edge": {
+      "prefix": "webkit",
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "prefix": "webkit",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "prefix": "webkit",
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "prefix": "webkit",
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition-grammar"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechGrammarList.addFromString",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammarList/addFromString",
+    "source_file": "api/SpeechGrammarList.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechgrammarlist-addfromstring",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition-grammar"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechGrammarList.addFromURI",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammarList/addFromURI",
+    "source_file": "api/SpeechGrammarList.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechgrammarlist-addfromuri",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition-grammar"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechGrammarList.item",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammarList/item",
+    "source_file": "api/SpeechGrammarList.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechgrammarlist-item",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition-grammar"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechGrammarList.length",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammarList/length",
+    "source_file": "api/SpeechGrammarList.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechgrammarlist-length",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition-grammar"
+    ]
+   }
+  },
+  {
+   "key": "api.SpeechRecognition.grammars",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechRecognition/grammars",
+    "source_file": "api/SpeechRecognition.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechrecognition-grammars",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "33"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "20"
+     },
+     "opera_android": {
+      "version_added": "20"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:speech-recognition-grammar"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

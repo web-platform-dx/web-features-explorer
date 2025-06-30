@@ -1,0 +1,1601 @@
+{
+ "caniuse": "sharedarraybuffer",
+ "compat_features": [
+  "javascript.builtins.Atomics",
+  "javascript.builtins.Atomics.Atomic_operations_on_non_shared_buffers",
+  "javascript.builtins.Atomics.add",
+  "javascript.builtins.Atomics.and",
+  "javascript.builtins.Atomics.compareExchange",
+  "javascript.builtins.Atomics.exchange",
+  "javascript.builtins.Atomics.isLockFree",
+  "javascript.builtins.Atomics.load",
+  "javascript.builtins.Atomics.notify",
+  "javascript.builtins.Atomics.or",
+  "javascript.builtins.Atomics.store",
+  "javascript.builtins.Atomics.sub",
+  "javascript.builtins.Atomics.wait",
+  "javascript.builtins.Atomics.xor",
+  "javascript.builtins.DataView.DataView.sharedarraybuffer_support",
+  "javascript.builtins.SharedArrayBuffer",
+  "javascript.builtins.SharedArrayBuffer.@@species",
+  "javascript.builtins.SharedArrayBuffer.SharedArrayBuffer",
+  "javascript.builtins.SharedArrayBuffer.byteLength",
+  "javascript.builtins.SharedArrayBuffer.slice"
+ ],
+ "description": "The SharedArrayBuffer object represents bytes shared between multiple workers and the main thread. The Atomics object safely accesses SharedArrayBuffer data to make sure predictable values are read and written and that operations are not interrupted.",
+ "description_html": "The <code>SharedArrayBuffer</code> object represents bytes shared between multiple workers and the main thread. The <code>Atomics</code> object safely accesses <code>SharedArrayBuffer</code> data to make sure predictable values are read and written and that operations are not interrupted.",
+ "group": "javascript",
+ "name": "SharedArrayBuffer and Atomics",
+ "spec": [
+  {
+   "url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-sharedarraybuffer-objects",
+   "seriesComposition": "full",
+   "shortname": "ecmascript",
+   "series": {
+    "shortname": "ecmascript",
+    "currentSpecification": "ecmascript",
+    "title": "ECMAScript® 2026 Language Specification",
+    "shortTitle": "ECMAScript",
+    "nightlyUrl": "https://tc39.es/ecma262/multipage/"
+   },
+   "shortTitle": "ECMAScript",
+   "tests": {
+    "repository": "https://github.com/tc39/test262",
+    "testPaths": [
+     "test"
+    ],
+    "excludePaths": [
+     "test/intl402"
+    ]
+   },
+   "organization": "Ecma International",
+   "groups": [
+    {
+     "name": "TC39",
+     "url": "https://tc39.es/"
+    }
+   ],
+   "nightly": {
+    "url": "https://tc39.es/ecma262/multipage/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/tc39/ecma262",
+    "sourcePath": "spec.html",
+    "pages": [
+     "https://tc39.es/ecma262/multipage/scope.html",
+     "https://tc39.es/ecma262/multipage/conformance.html",
+     "https://tc39.es/ecma262/multipage/normative-references.html",
+     "https://tc39.es/ecma262/multipage/overview.html",
+     "https://tc39.es/ecma262/multipage/notational-conventions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html",
+     "https://tc39.es/ecma262/multipage/abstract-operations.html",
+     "https://tc39.es/ecma262/multipage/syntax-directed-operations.html",
+     "https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html",
+     "https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-source-code.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html",
+     "https://tc39.es/ecma262/multipage/error-handling-and-language-extensions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-standard-built-in-objects.html",
+     "https://tc39.es/ecma262/multipage/global-object.html",
+     "https://tc39.es/ecma262/multipage/fundamental-objects.html",
+     "https://tc39.es/ecma262/multipage/numbers-and-dates.html",
+     "https://tc39.es/ecma262/multipage/text-processing.html",
+     "https://tc39.es/ecma262/multipage/indexed-collections.html",
+     "https://tc39.es/ecma262/multipage/keyed-collections.html",
+     "https://tc39.es/ecma262/multipage/structured-data.html",
+     "https://tc39.es/ecma262/multipage/managing-memory.html",
+     "https://tc39.es/ecma262/multipage/control-abstraction-objects.html",
+     "https://tc39.es/ecma262/multipage/reflection.html",
+     "https://tc39.es/ecma262/multipage/memory-model.html",
+     "https://tc39.es/ecma262/multipage/grammar-summary.html",
+     "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html",
+     "https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html",
+     "https://tc39.es/ecma262/multipage/host-layering-points.html",
+     "https://tc39.es/ecma262/multipage/corrections-and-clarifications-in-ecmascript-2015-with-possible-compatibility-impact.html",
+     "https://tc39.es/ecma262/multipage/additions-and-changes-that-introduce-incompatibilities-with-prior-editions.html",
+     "https://tc39.es/ecma262/multipage/bibliography.html",
+     "https://tc39.es/ecma262/multipage/colophon.html",
+     "https://tc39.es/ecma262/multipage/copyright-and-software-license.html"
+    ],
+    "filename": "index.html"
+   },
+   "title": "ECMAScript® 2026 Language Specification",
+   "source": "spec",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": "sec-sharedarraybuffer-objects"
+  },
+  {
+   "url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics-object",
+   "seriesComposition": "full",
+   "shortname": "ecmascript",
+   "series": {
+    "shortname": "ecmascript",
+    "currentSpecification": "ecmascript",
+    "title": "ECMAScript® 2026 Language Specification",
+    "shortTitle": "ECMAScript",
+    "nightlyUrl": "https://tc39.es/ecma262/multipage/"
+   },
+   "shortTitle": "ECMAScript",
+   "tests": {
+    "repository": "https://github.com/tc39/test262",
+    "testPaths": [
+     "test"
+    ],
+    "excludePaths": [
+     "test/intl402"
+    ]
+   },
+   "organization": "Ecma International",
+   "groups": [
+    {
+     "name": "TC39",
+     "url": "https://tc39.es/"
+    }
+   ],
+   "nightly": {
+    "url": "https://tc39.es/ecma262/multipage/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/tc39/ecma262",
+    "sourcePath": "spec.html",
+    "pages": [
+     "https://tc39.es/ecma262/multipage/scope.html",
+     "https://tc39.es/ecma262/multipage/conformance.html",
+     "https://tc39.es/ecma262/multipage/normative-references.html",
+     "https://tc39.es/ecma262/multipage/overview.html",
+     "https://tc39.es/ecma262/multipage/notational-conventions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html",
+     "https://tc39.es/ecma262/multipage/abstract-operations.html",
+     "https://tc39.es/ecma262/multipage/syntax-directed-operations.html",
+     "https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html",
+     "https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-source-code.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html",
+     "https://tc39.es/ecma262/multipage/error-handling-and-language-extensions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-standard-built-in-objects.html",
+     "https://tc39.es/ecma262/multipage/global-object.html",
+     "https://tc39.es/ecma262/multipage/fundamental-objects.html",
+     "https://tc39.es/ecma262/multipage/numbers-and-dates.html",
+     "https://tc39.es/ecma262/multipage/text-processing.html",
+     "https://tc39.es/ecma262/multipage/indexed-collections.html",
+     "https://tc39.es/ecma262/multipage/keyed-collections.html",
+     "https://tc39.es/ecma262/multipage/structured-data.html",
+     "https://tc39.es/ecma262/multipage/managing-memory.html",
+     "https://tc39.es/ecma262/multipage/control-abstraction-objects.html",
+     "https://tc39.es/ecma262/multipage/reflection.html",
+     "https://tc39.es/ecma262/multipage/memory-model.html",
+     "https://tc39.es/ecma262/multipage/grammar-summary.html",
+     "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html",
+     "https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html",
+     "https://tc39.es/ecma262/multipage/host-layering-points.html",
+     "https://tc39.es/ecma262/multipage/corrections-and-clarifications-in-ecmascript-2015-with-possible-compatibility-impact.html",
+     "https://tc39.es/ecma262/multipage/additions-and-changes-that-introduce-incompatibilities-with-prior-editions.html",
+     "https://tc39.es/ecma262/multipage/bibliography.html",
+     "https://tc39.es/ecma262/multipage/colophon.html",
+     "https://tc39.es/ecma262/multipage/copyright-and-software-license.html"
+    ],
+    "filename": "index.html"
+   },
+   "title": "ECMAScript® 2026 Language Specification",
+   "source": "spec",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": "sec-atomics-object"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2024-06-13",
+  "baseline_low_date": "2021-12-13",
+  "support": {
+   "chrome": "68",
+   "chrome_android": "89",
+   "edge": "79",
+   "firefox": "79",
+   "firefox_android": "79",
+   "safari": "15.2",
+   "safari_ios": "15.2"
+  }
+ },
+ "id": "shared-memory",
+ "groups": [
+  "javascript"
+ ],
+ "groupPaths": [
+  [
+   "JavaScript"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "SharedArrayBuffer",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer"
+  },
+  {
+   "title": "Atomics",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "javascript.builtins.Atomics",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics",
+    "source_file": "javascript/builtins/Atomics.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics-object",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "78"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "notes": "Before Safari 16.4, <code>Atomics</code> is gated behind COOP/COEP. For more detail, read <a href=\"https://web.dev/coop-coep/\">Making your website \"cross-origin isolated\" using COOP and COEP</a>.",
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "notes": "Before Safari on iOS 16.4, <code>Atomics</code> is gated behind COOP/COEP. For more detail, read <a href=\"https://web.dev/coop-coep/\">Making your website \"cross-origin isolated\" using COOP and COEP</a>.",
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "notes": "Before WebView on iOS 16.4, <code>Atomics</code> is gated behind COOP/COEP. For more detail, read <a href=\"https://web.dev/coop-coep/\">Making your website \"cross-origin isolated\" using COOP and COEP</a>.",
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Atomics.Atomic_operations_on_non_shared_buffers",
+   "compat": {
+    "description": "Atomic operations on non-shared <code>ArrayBuffer</code> objects",
+    "source_file": "javascript/builtins/Atomics.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "79"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2021",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Atomics.add",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/add",
+    "source_file": "javascript/builtins/Atomics.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics.add",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "78"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Atomics.and",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/and",
+    "source_file": "javascript/builtins/Atomics.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics.and",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "78"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Atomics.compareExchange",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange",
+    "source_file": "javascript/builtins/Atomics.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics.compareexchange",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "78"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Atomics.exchange",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/exchange",
+    "source_file": "javascript/builtins/Atomics.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics.exchange",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "78"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Atomics.isLockFree",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree",
+    "source_file": "javascript/builtins/Atomics.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics.islockfree",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "78"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Atomics.load",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/load",
+    "source_file": "javascript/builtins/Atomics.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics.load",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "78"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Atomics.notify",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/notify",
+    "source_file": "javascript/builtins/Atomics.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics.notify",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "78"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Atomics.or",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/or",
+    "source_file": "javascript/builtins/Atomics.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics.or",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "78"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Atomics.store",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/store",
+    "source_file": "javascript/builtins/Atomics.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics.store",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "78"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Atomics.sub",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/sub",
+    "source_file": "javascript/builtins/Atomics.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics.sub",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "78"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Atomics.wait",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait",
+    "source_file": "javascript/builtins/Atomics.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics.wait",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "78"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Atomics.xor",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Atomics/xor",
+    "source_file": "javascript/builtins/Atomics.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics.xor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "78"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.DataView.DataView.sharedarraybuffer_support",
+   "compat": {
+    "description": "<code>SharedArrayBuffer</code> accepted as buffer",
+    "source_file": "javascript/builtins/DataView.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "79"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.SharedArrayBuffer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer",
+    "source_file": "javascript/builtins/SharedArrayBuffer.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-sharedarraybuffer-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "79"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.SharedArrayBuffer.@@species",
+   "compat": {
+    "description": "[Symbol.species]",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Symbol.species",
+    "source_file": "javascript/builtins/SharedArrayBuffer.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-sharedarraybuffer-%symbol.species%",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "79"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.SharedArrayBuffer.SharedArrayBuffer",
+   "compat": {
+    "description": "<code>SharedArrayBuffer()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer",
+    "source_file": "javascript/builtins/SharedArrayBuffer.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-sharedarraybuffer-constructor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "79"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.SharedArrayBuffer.byteLength",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength",
+    "source_file": "javascript/builtins/SharedArrayBuffer.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-get-sharedarraybuffer.prototype.bytelength",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "79"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.SharedArrayBuffer.slice",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice",
+    "source_file": "javascript/builtins/SharedArrayBuffer.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/structured-data.html#sec-sharedarraybuffer.prototype.slice",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "79"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "8.10.0"
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2017",
+     "web-features:shared-memory"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "javascript"
+ ],
+ "baselineLowDateAsObject": "2021-12-13T00:00:00.000Z",
+ "baselineHighDateAsObject": "2024-06-13T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

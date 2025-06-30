@@ -1,0 +1,830 @@
+{
+ "compat_features": [
+  "api.Document.execCommand",
+  "api.Document.execCommand.copy",
+  "api.Document.execCommand.cut",
+  "api.Document.execCommand.defaultParagraphSeparator",
+  "api.Document.execCommand.insertBrOnReturn",
+  "api.Document.queryCommandEnabled",
+  "api.Document.queryCommandIndeterm",
+  "api.Document.queryCommandState",
+  "api.Document.queryCommandSupported",
+  "api.Document.queryCommandValue"
+ ],
+ "description": "The execCommand() method reads and writes from the clipboard and performs editing commands on editable text, such as changing the font name or style. Related methods check whether commands are supported, enabled, or applied.",
+ "description_html": "The <code>execCommand()</code> method reads and writes from the clipboard and performs editing commands on editable text, such as changing the font name or style. Related methods check whether commands are supported, enabled, or applied.",
+ "discouraged": {
+  "according_to": [
+   "https://w3c.github.io/editing/docs/execCommand/"
+  ],
+  "alternatives": [
+   "async-clipboard",
+   "contenteditable"
+  ]
+ },
+ "group": "clipboard",
+ "name": "execCommand()",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/editing/docs/execCommand/"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "1",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "69",
+   "firefox_android": "79",
+   "safari": "1.3",
+   "safari_ios": "1"
+  }
+ },
+ "id": "execcommand",
+ "groups": [
+  "clipboard"
+ ],
+ "groupPaths": [
+  [
+   "Clipboard"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Document: execCommand() method",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Document/execCommand"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Document.execCommand",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/execCommand",
+    "source_file": "api/Document.json",
+    "status": {
+     "deprecated": true,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "notes": [
+        "From Firefox 82, nested calls are not supported (return <code>false</code>). See <a href=\"https://bugzil.la/1634262\">bug 1634262</a>.",
+        "Before Firefox 89, manipulating the content of <code>&lt;input&gt;</code> and <code>&lt;textarea&gt;</code> elements using <code>Document.execCommand()</code> commands requires workarounds (see <a href=\"https://bugzil.la/1220696\">bug 1220696</a>)."
+       ],
+       "version_added": "69"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "1",
+       "version_last": "68",
+       "version_removed": "69"
+      }
+     ],
+     "firefox_android": [
+      {
+       "notes": [
+        "From Firefox for Android 82, nested calls are not supported (return <code>false</code>). See <a href=\"https://bugzil.la/1634262\">bug 1634262</a>.",
+        "Before Firefox for Android 89, manipulating the content of <code>&lt;input&gt;</code> and <code>&lt;textarea&gt;</code> elements using <code>Document.execCommand()</code> commands requires workarounds (see <a href=\"https://bugzil.la/1220696\">bug 1220696</a>)."
+       ],
+       "version_added": "79"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "4",
+       "version_last": "68",
+       "version_removed": "79"
+      }
+     ],
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1.3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:execcommand"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.execCommand.copy",
+   "compat": {
+    "description": "<code>copy</code> command",
+    "source_file": "api/Document.json",
+    "status": {
+     "deprecated": true,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:execcommand"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.execCommand.cut",
+   "compat": {
+    "description": "<code>cut</code> command",
+    "source_file": "api/Document.json",
+    "status": {
+     "deprecated": true,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:execcommand"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.execCommand.defaultParagraphSeparator",
+   "compat": {
+    "description": "<code>defaultParagraphSeparator</code> command",
+    "source_file": "api/Document.json",
+    "status": {
+     "deprecated": true,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "≤18",
+      "version_last": "18",
+      "version_removed": "79"
+     },
+     "firefox": {
+      "version_added": "55"
+     },
+     "firefox_android": {
+      "version_added": "55"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:execcommand"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.execCommand.insertBrOnReturn",
+   "compat": {
+    "description": "<code>insertBrOnReturn</code> command",
+    "source_file": "api/Document.json",
+    "status": {
+     "deprecated": true,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:execcommand"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.queryCommandEnabled",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/queryCommandEnabled",
+    "source_file": "api/Document.json",
+    "status": {
+     "deprecated": true,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "version_added": "69"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "41",
+       "version_last": "68",
+       "version_removed": "69"
+      },
+      {
+       "notes": [
+        "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+        "<code>queryCommandEnabled</code> with arguments <code>cut</code>, <code>copy</code> or <code>paste</code> would throw errors unless the script had special privileges."
+       ],
+       "partial_implementation": true,
+       "version_added": "1",
+       "version_last": "40",
+       "version_removed": "41"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "79"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "41",
+       "version_last": "68",
+       "version_removed": "79"
+      },
+      {
+       "notes": [
+        "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+        "<code>queryCommandEnabled</code> with arguments <code>cut</code>, <code>copy</code> or <code>paste</code> would throw errors unless the script had special privileges."
+       ],
+       "partial_implementation": true,
+       "version_added": "4",
+       "version_last": "40",
+       "version_removed": "41"
+      }
+     ],
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:execcommand"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.queryCommandIndeterm",
+   "compat": {
+    "source_file": "api/Document.json",
+    "status": {
+     "deprecated": true,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "version_added": "69"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "1",
+       "version_last": "68",
+       "version_removed": "69"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "79"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "4",
+       "version_last": "68",
+       "version_removed": "79"
+      }
+     ],
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:execcommand"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.queryCommandState",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/queryCommandState",
+    "source_file": "api/Document.json",
+    "status": {
+     "deprecated": true,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "version_added": "69"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "1",
+       "version_last": "68",
+       "version_removed": "69"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "79"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "4",
+       "version_last": "68",
+       "version_removed": "79"
+      }
+     ],
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:execcommand"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.queryCommandSupported",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/queryCommandSupported",
+    "source_file": "api/Document.json",
+    "status": {
+     "deprecated": true,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "version_added": "69"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "41",
+       "version_last": "68",
+       "version_removed": "69"
+      },
+      {
+       "notes": [
+        "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+        "The <code>\"paste\"</code> command is reported as supported when the paste feature is available even if the calling script has insufficient privileges to actually perform the action."
+       ],
+       "partial_implementation": true,
+       "version_added": "1",
+       "version_last": "40",
+       "version_removed": "41"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "79"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "41",
+       "version_last": "68",
+       "version_removed": "79"
+      },
+      {
+       "notes": [
+        "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+        "The <code>\"paste\"</code> command is reported as supported when the paste feature is available even if the calling script has insufficient privileges to actually perform the action."
+       ],
+       "partial_implementation": true,
+       "version_added": "4",
+       "version_last": "40",
+       "version_removed": "41"
+      }
+     ],
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:execcommand"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.queryCommandValue",
+   "compat": {
+    "source_file": "api/Document.json",
+    "status": {
+     "deprecated": true,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "version_added": "69"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "1",
+       "version_last": "68",
+       "version_removed": "69"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "79"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "4",
+       "version_last": "68",
+       "version_removed": "79"
+      }
+     ],
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:execcommand"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

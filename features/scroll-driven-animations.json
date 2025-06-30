@@ -1,0 +1,2528 @@
+{
+ "compat_features": [
+  "api.ScrollTimeline",
+  "api.ScrollTimeline.ScrollTimeline",
+  "api.ScrollTimeline.axis",
+  "api.ScrollTimeline.source",
+  "api.ViewTimeline",
+  "api.ViewTimeline.ViewTimeline",
+  "api.ViewTimeline.endOffset",
+  "api.ViewTimeline.startOffset",
+  "api.ViewTimeline.subject",
+  "css.properties.animation-range",
+  "css.properties.animation-range-end",
+  "css.properties.animation-range-end.normal",
+  "css.properties.animation-range-start",
+  "css.properties.animation-range-start.normal",
+  "css.properties.animation-timeline",
+  "css.properties.animation-timeline.scroll",
+  "css.properties.animation-timeline.view",
+  "css.properties.animation.animation-timeline_included",
+  "css.properties.scroll-timeline",
+  "css.properties.scroll-timeline-axis",
+  "css.properties.scroll-timeline-axis.block",
+  "css.properties.scroll-timeline-axis.inline",
+  "css.properties.scroll-timeline-axis.x",
+  "css.properties.scroll-timeline-axis.y",
+  "css.properties.scroll-timeline-name",
+  "css.properties.timeline-scope",
+  "css.properties.timeline-scope.all",
+  "css.properties.timeline-scope.none",
+  "css.properties.view-timeline",
+  "css.properties.view-timeline-axis",
+  "css.properties.view-timeline-axis.block",
+  "css.properties.view-timeline-axis.inline",
+  "css.properties.view-timeline-axis.x",
+  "css.properties.view-timeline-axis.y",
+  "css.properties.view-timeline-inset",
+  "css.properties.view-timeline-inset.auto",
+  "css.properties.view-timeline-name"
+ ],
+ "description": "The animation-timeline, scroll-timeline, and view-timeline CSS properties advance animations based on the user's scroll position.",
+ "description_html": "The <code>animation-timeline</code>, <code>scroll-timeline</code>, and <code>view-timeline</code> CSS properties advance animations based on the user's scroll position.",
+ "group": [
+  "scrolling",
+  "animation"
+ ],
+ "name": "Scroll-driven animations",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/scroll-animations-1/",
+   "seriesComposition": "full",
+   "shortname": "scroll-animations-1",
+   "series": {
+    "shortname": "scroll-animations",
+    "currentSpecification": "scroll-animations-1",
+    "title": "Scroll-driven Animations",
+    "shortTitle": "Scroll-driven Animations",
+    "releaseUrl": "https://www.w3.org/TR/scroll-animations/",
+    "nightlyUrl": "https://drafts.csswg.org/scroll-animations/"
+   },
+   "seriesVersion": "1",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/scroll-animations-1/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/scroll-animations-1/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/scroll-animations-1/",
+     "https://w3c.github.io/csswg-drafts/scroll-animations/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "scroll-animations-1/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "Scroll-driven Animations",
+   "source": "w3c",
+   "shortTitle": "Scroll-driven Animations",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "scroll-animations"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "115",
+   "chrome_android": "115",
+   "edge": "115"
+  }
+ },
+ "id": "scroll-driven-animations",
+ "groups": [
+  "scrolling",
+  "animation"
+ ],
+ "groupPaths": [
+  [
+   "Scrolling"
+  ],
+  [
+   "Animation"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "CSS scroll-driven animations",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/CSS_scroll-driven_animations"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/347",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/152",
+   "position": "support",
+   "concerns": []
+  }
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.00793124,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/230"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.ScrollTimeline",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ScrollTimeline",
+    "source_file": "api/ScrollTimeline.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#scrolltimeline-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "api.ScrollTimeline.ScrollTimeline",
+   "compat": {
+    "description": "<code>ScrollTimeline()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ScrollTimeline/ScrollTimeline",
+    "source_file": "api/ScrollTimeline.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#dom-scrolltimeline-scrolltimeline",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "api.ScrollTimeline.axis",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ScrollTimeline/axis",
+    "source_file": "api/ScrollTimeline.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#dom-scrolltimeline-axis",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "api.ScrollTimeline.source",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ScrollTimeline/source",
+    "source_file": "api/ScrollTimeline.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#dom-scrolltimeline-source",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTimeline",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ViewTimeline",
+    "source_file": "api/ViewTimeline.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#viewtimeline-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTimeline.ViewTimeline",
+   "compat": {
+    "description": "<code>ViewTimeline()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ViewTimeline/ViewTimeline",
+    "source_file": "api/ViewTimeline.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#dom-viewtimeline-viewtimeline",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTimeline.endOffset",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ViewTimeline/endOffset",
+    "source_file": "api/ViewTimeline.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#dom-viewtimeline-endoffset",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTimeline.startOffset",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ViewTimeline/startOffset",
+    "source_file": "api/ViewTimeline.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#dom-viewtimeline-startoffset",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTimeline.subject",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ViewTimeline/subject",
+    "source_file": "api/ViewTimeline.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#dom-viewtimeline-subject",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.animation-range",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/animation-range",
+    "source_file": "css/properties/animation-range.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#animation-range",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.animation-range-end",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/animation-range-end",
+    "source_file": "css/properties/animation-range-end.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#animation-range-end",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.animation-range-end.normal",
+   "compat": {
+    "source_file": "css/properties/animation-range-end.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#valdef-animation-range-end-normal",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.animation-range-start",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/animation-range-start",
+    "source_file": "css/properties/animation-range-start.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#animation-range-start",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.animation-range-start.normal",
+   "compat": {
+    "source_file": "css/properties/animation-range-start.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#valdef-animation-range-start-normal",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.animation-timeline",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/animation-timeline",
+    "source_file": "css/properties/animation-timeline.json",
+    "spec_url": "https://drafts.csswg.org/css-animations-2/#animation-timeline",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "layout.css.scroll-driven-animations.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "110"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.animation-timeline.scroll",
+   "compat": {
+    "description": "<code>scroll()</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/animation-timeline/scroll",
+    "source_file": "css/properties/animation-timeline.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#scroll-notation",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "layout.css.scroll-driven-animations.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "notes": [
+       "Zero scroll range is treated as 100% but should be 0% (see <a href=\"https://bugzil.la/1780865\">bug 1780865</a>).",
+       "Supports the deprecated <code>horizontal</code> and <code>vertical</code> axis values, and not the <code>x</code> and <code>y</code> values."
+      ],
+      "version_added": "110"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.animation-timeline.view",
+   "compat": {
+    "description": "<code>view()</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/animation-timeline/view",
+    "source_file": "css/properties/animation-timeline.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#view-notation",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "layout.css.scroll-driven-animations.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.animation.animation-timeline_included",
+   "compat": {
+    "description": "<code>animation-timeline</code> included in shorthand",
+    "source_file": "css/properties/animation.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Support is currently reset-only. Including <code>animation</code> resets a previously-declared <code>animation-timeline</code> value to <code>auto</code>, but <code>animation-timeline</code> cannot be set via <code>animation</code>.",
+      "partial_implementation": true,
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "notes": "Support is currently reset-only. Including <code>animation</code> resets a previously-declared <code>animation-timeline</code> value to <code>auto</code>, but <code>animation-timeline</code> cannot be set via <code>animation</code>.",
+      "partial_implementation": true,
+      "version_added": "115"
+     },
+     "edge": {
+      "notes": "Support is currently reset-only. Including <code>animation</code> resets a previously-declared <code>animation-timeline</code> value to <code>auto</code>, but <code>animation-timeline</code> cannot be set via <code>animation</code>.",
+      "partial_implementation": true,
+      "version_added": "115"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "notes": "Support is currently reset-only. Including <code>animation</code> resets a previously-declared <code>animation-timeline</code> value to <code>auto</code>, but <code>animation-timeline</code> cannot be set via <code>animation</code>.",
+      "partial_implementation": true,
+      "version_added": "101"
+     },
+     "opera_android": {
+      "notes": "Support is currently reset-only. Including <code>animation</code> resets a previously-declared <code>animation-timeline</code> value to <code>auto</code>, but <code>animation-timeline</code> cannot be set via <code>animation</code>.",
+      "partial_implementation": true,
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "notes": "Support is currently reset-only. Including <code>animation</code> resets a previously-declared <code>animation-timeline</code> value to <code>auto</code>, but <code>animation-timeline</code> cannot be set via <code>animation</code>.",
+      "partial_implementation": true,
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "notes": "Support is currently reset-only. Including <code>animation</code> resets a previously-declared <code>animation-timeline</code> value to <code>auto</code>, but <code>animation-timeline</code> cannot be set via <code>animation</code>.",
+      "partial_implementation": true,
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.scroll-timeline",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/scroll-timeline",
+    "source_file": "css/properties/scroll-timeline.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#scroll-timeline-shorthand",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "layout.css.scroll-driven-animations.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "notes": [
+       "The syntax of the shorthand property uses the fixed order of name and then the axis.",
+       "Supports the deprecated <code>horizontal</code> and <code>vertical</code> axis values, and not the <code>x</code> and <code>y</code> values.",
+       "The <code>@scroll-timeline</code> at-rule is replaced with the longhand properties <code>scroll-timeline-name</code> and <code>scroll-timeline-axis</code> and the shorthand property <code>scroll-timeline</code>."
+      ],
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.scroll-timeline-axis",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/scroll-timeline-axis",
+    "source_file": "css/properties/scroll-timeline-axis.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#propdef-scroll-timeline-axis",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "layout.css.scroll-driven-animations.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "notes": [
+       "The syntax of the shorthand property uses the fixed order of name and then the axis.",
+       "Supports the deprecated <code>horizontal</code> and <code>vertical</code> values, and not the <code>x</code> and <code>y</code> values.",
+       "The <code>@scroll-timeline</code> at-rule is replaced with the longhand properties <code>scroll-timeline-name</code> and <code>scroll-timeline-axis</code> and the shorthand property <code>scroll-timeline</code>."
+      ],
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.scroll-timeline-axis.block",
+   "compat": {
+    "source_file": "css/properties/scroll-timeline-axis.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#valdef-scroll-block",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.scroll-timeline-axis.inline",
+   "compat": {
+    "source_file": "css/properties/scroll-timeline-axis.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#valdef-scroll-inline",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.scroll-timeline-axis.x",
+   "compat": {
+    "source_file": "css/properties/scroll-timeline-axis.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#valdef-scroll-x",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.scroll-timeline-axis.y",
+   "compat": {
+    "source_file": "css/properties/scroll-timeline-axis.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#valdef-scroll-y",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.scroll-timeline-name",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/scroll-timeline-name",
+    "source_file": "css/properties/scroll-timeline-name.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#scroll-timeline-name",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "layout.css.scroll-driven-animations.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "notes": [
+       "The syntax of the shorthand property uses the fixed order of name and then the axis.",
+       "The <code>@scroll-timeline</code> at-rule is replaced with the longhand properties <code>scroll-timeline-name</code> and <code>scroll-timeline-axis</code> and the shorthand property <code>scroll-timeline</code>."
+      ],
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.timeline-scope",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/timeline-scope",
+    "source_file": "css/properties/timeline-scope.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#propdef-timeline-scope",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "116"
+     },
+     "chrome_android": {
+      "version_added": "116"
+     },
+     "edge": {
+      "version_added": "116"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "102"
+     },
+     "opera_android": {
+      "version_added": "78"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "24.0"
+     },
+     "webview_android": {
+      "version_added": "116"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.timeline-scope.all",
+   "compat": {
+    "source_file": "css/properties/timeline-scope.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#valdef-timeline-scope-all",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "116"
+     },
+     "chrome_android": {
+      "version_added": "116"
+     },
+     "edge": {
+      "version_added": "116"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "102"
+     },
+     "opera_android": {
+      "version_added": "78"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "24.0"
+     },
+     "webview_android": {
+      "version_added": "116"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.timeline-scope.none",
+   "compat": {
+    "source_file": "css/properties/timeline-scope.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#valdef-timeline-scope-none",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "116"
+     },
+     "chrome_android": {
+      "version_added": "116"
+     },
+     "edge": {
+      "version_added": "116"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "102"
+     },
+     "opera_android": {
+      "version_added": "78"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "24.0"
+     },
+     "webview_android": {
+      "version_added": "116"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.view-timeline",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/view-timeline",
+    "source_file": "css/properties/view-timeline.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#view-timeline-shorthand",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "layout.css.scroll-driven-animations.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "notes": "Now supports the <code>x</code> and <code>y</code> values, and also the deprecated <code>horizontal</code> and <code>vertical</code> values.",
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.view-timeline-axis",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/view-timeline-axis",
+    "source_file": "css/properties/view-timeline-axis.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#view-timeline-axis",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "layout.css.scroll-driven-animations.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "notes": "Now supports the <code>x</code> and <code>y</code> values, and also the deprecated <code>horizontal</code> and <code>vertical</code> values.",
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.view-timeline-axis.block",
+   "compat": {
+    "source_file": "css/properties/view-timeline-axis.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#valdef-scroll-block",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.view-timeline-axis.inline",
+   "compat": {
+    "source_file": "css/properties/view-timeline-axis.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#valdef-scroll-inline",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.view-timeline-axis.x",
+   "compat": {
+    "source_file": "css/properties/view-timeline-axis.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#valdef-scroll-x",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.view-timeline-axis.y",
+   "compat": {
+    "source_file": "css/properties/view-timeline-axis.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#valdef-scroll-y",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.view-timeline-inset",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/view-timeline-inset",
+    "source_file": "css/properties/view-timeline-inset.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#view-timeline-inset",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.view-timeline-inset.auto",
+   "compat": {
+    "source_file": "css/properties/view-timeline-inset.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#valdef-view-timeline-inset-auto",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1676779",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.view-timeline-name",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/view-timeline-name",
+    "source_file": "css/properties/view-timeline-name.json",
+    "spec_url": "https://drafts.csswg.org/scroll-animations/#view-timeline-name",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "115"
+     },
+     "chrome_android": {
+      "version_added": "115"
+     },
+     "edge": {
+      "version_added": "115"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "layout.css.scroll-driven-animations.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "101"
+     },
+     "opera_android": {
+      "version_added": "77"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": "115"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:scroll-driven-animations"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "css"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [
+   "https://bugzil.la/1676779"
+  ],
+  "firefox_android": [
+   "https://bugzil.la/1676779"
+  ],
+  "safari": [],
+  "safari_ios": []
+ }
+}

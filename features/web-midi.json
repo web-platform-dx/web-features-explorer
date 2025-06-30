@@ -1,0 +1,3304 @@
+{
+ "caniuse": "midi",
+ "compat_features": [
+  "api.MIDIAccess",
+  "api.MIDIAccess.inputs",
+  "api.MIDIAccess.outputs",
+  "api.MIDIAccess.statechange_event",
+  "api.MIDIAccess.sysexEnabled",
+  "api.MIDIConnectionEvent",
+  "api.MIDIConnectionEvent.MIDIConnectionEvent",
+  "api.MIDIConnectionEvent.port",
+  "api.MIDIInput",
+  "api.MIDIInput.midimessage_event",
+  "api.MIDIInputMap",
+  "api.MIDIInputMap.@@iterator",
+  "api.MIDIInputMap.entries",
+  "api.MIDIInputMap.forEach",
+  "api.MIDIInputMap.get",
+  "api.MIDIInputMap.has",
+  "api.MIDIInputMap.keys",
+  "api.MIDIInputMap.size",
+  "api.MIDIInputMap.values",
+  "api.MIDIMessageEvent",
+  "api.MIDIMessageEvent.MIDIMessageEvent",
+  "api.MIDIMessageEvent.data",
+  "api.MIDIOutput",
+  "api.MIDIOutput.clear",
+  "api.MIDIOutput.send",
+  "api.MIDIOutputMap",
+  "api.MIDIOutputMap.@@iterator",
+  "api.MIDIOutputMap.entries",
+  "api.MIDIOutputMap.forEach",
+  "api.MIDIOutputMap.get",
+  "api.MIDIOutputMap.has",
+  "api.MIDIOutputMap.keys",
+  "api.MIDIOutputMap.size",
+  "api.MIDIOutputMap.values",
+  "api.MIDIPort",
+  "api.MIDIPort.close",
+  "api.MIDIPort.connection",
+  "api.MIDIPort.id",
+  "api.MIDIPort.manufacturer",
+  "api.MIDIPort.name",
+  "api.MIDIPort.open",
+  "api.MIDIPort.state",
+  "api.MIDIPort.statechange_event",
+  "api.MIDIPort.type",
+  "api.MIDIPort.version",
+  "api.Navigator.requestMIDIAccess",
+  "api.Navigator.requestMIDIAccess.secure_context_required",
+  "api.Permissions.permission_midi",
+  "html.elements.iframe.allow.midi",
+  "http.headers.Permissions-Policy.midi"
+ ],
+ "description": "The Web MIDI API enables selecting MIDI input and output devices and sending and receiving MIDI messages.",
+ "description_html": "The Web MIDI API enables selecting MIDI input and output devices and sending and receiving MIDI messages.",
+ "name": "Web MIDI",
+ "spec": [
+  {
+   "url": "https://webaudio.github.io/web-midi-api/",
+   "seriesComposition": "full",
+   "shortname": "webmidi",
+   "series": {
+    "shortname": "webmidi",
+    "currentSpecification": "webmidi",
+    "title": "Web MIDI API",
+    "shortTitle": "Web MIDI API",
+    "releaseUrl": "https://www.w3.org/TR/webmidi/",
+    "nightlyUrl": "https://webaudio.github.io/web-midi-api/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Audio Working Group",
+     "url": "https://www.w3.org/groups/wg/audio/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/webmidi/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://webaudio.github.io/web-midi-api/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/WebAudio/web-midi-api",
+    "sourcePath": "index.html",
+    "filename": "index.html"
+   },
+   "title": "Web MIDI API",
+   "source": "w3c",
+   "shortTitle": "Web MIDI API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "webmidi"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "43",
+   "chrome_android": "43",
+   "edge": "79",
+   "firefox": "108"
+  }
+ },
+ "id": "web-midi",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Web Locks API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Web_Locks_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/58",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.00000708,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/153"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.MIDIAccess",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIAccess",
+    "source_file": "api/MIDIAccess.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#midiaccess-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIAccess.inputs",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIAccess/inputs",
+    "source_file": "api/MIDIAccess.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiaccess-inputs",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIAccess.outputs",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIAccess/outputs",
+    "source_file": "api/MIDIAccess.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiaccess-outputs",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIAccess.statechange_event",
+   "compat": {
+    "description": "<code>statechange</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIAccess/statechange_event",
+    "source_file": "api/MIDIAccess.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiaccess-onstatechange",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIAccess.sysexEnabled",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIAccess/sysexEnabled",
+    "source_file": "api/MIDIAccess.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiaccess-sysexenabled",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIConnectionEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIConnectionEvent",
+    "source_file": "api/MIDIConnectionEvent.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#midiconnectionevent-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIConnectionEvent.MIDIConnectionEvent",
+   "compat": {
+    "description": "<code>MIDIConnectionEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIConnectionEvent/MIDIConnectionEvent",
+    "source_file": "api/MIDIConnectionEvent.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiconnectionevent-constructor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIConnectionEvent.port",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIConnectionEvent/port",
+    "source_file": "api/MIDIConnectionEvent.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiconnectionevent-port",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIInput",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIInput",
+    "source_file": "api/MIDIInput.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#midiinput-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIInput.midimessage_event",
+   "compat": {
+    "description": "<code>midimessage</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIInput/midimessage_event",
+    "source_file": "api/MIDIInput.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiinput-onmidimessage",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIInputMap",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIInputMap",
+    "source_file": "api/MIDIInputMap.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#midiinputmap-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIInputMap.@@iterator",
+   "compat": {
+    "description": "[Symbol.iterator]",
+    "source_file": "api/MIDIInputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIInputMap.entries",
+   "compat": {
+    "source_file": "api/MIDIInputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIInputMap.forEach",
+   "compat": {
+    "source_file": "api/MIDIInputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIInputMap.get",
+   "compat": {
+    "source_file": "api/MIDIInputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIInputMap.has",
+   "compat": {
+    "source_file": "api/MIDIInputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIInputMap.keys",
+   "compat": {
+    "source_file": "api/MIDIInputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIInputMap.size",
+   "compat": {
+    "source_file": "api/MIDIInputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIInputMap.values",
+   "compat": {
+    "source_file": "api/MIDIInputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIMessageEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIMessageEvent",
+    "source_file": "api/MIDIMessageEvent.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#midimessageevent-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIMessageEvent.MIDIMessageEvent",
+   "compat": {
+    "description": "<code>MIDIMessageEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIMessageEvent/MIDIMessageEvent",
+    "source_file": "api/MIDIMessageEvent.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midimessageevent-constructor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIMessageEvent.data",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIMessageEvent/data",
+    "source_file": "api/MIDIMessageEvent.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midimessageevent-data",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIOutput",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIOutput",
+    "source_file": "api/MIDIOutput.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#MIDIOutput",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIOutput.clear",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIOutput/clear",
+    "source_file": "api/MIDIOutput.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midioutput-clear",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "impl_url": "https://crbug.com/40411677",
+      "version_added": false
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40411677",
+      "version_added": false
+     },
+     "edge": {
+      "impl_url": "https://crbug.com/40411677",
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40411677",
+      "version_added": false
+     },
+     "opera": {
+      "impl_url": "https://crbug.com/40411677",
+      "version_added": false
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40411677",
+      "version_added": false
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40411677",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40411677",
+      "version_added": false
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIOutput.send",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIOutput/send",
+    "source_file": "api/MIDIOutput.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midioutput-send",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIOutputMap",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIOutputMap",
+    "source_file": "api/MIDIOutputMap.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#midiinputmap-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIOutputMap.@@iterator",
+   "compat": {
+    "description": "[Symbol.iterator]",
+    "source_file": "api/MIDIOutputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIOutputMap.entries",
+   "compat": {
+    "source_file": "api/MIDIOutputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIOutputMap.forEach",
+   "compat": {
+    "source_file": "api/MIDIOutputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIOutputMap.get",
+   "compat": {
+    "source_file": "api/MIDIOutputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIOutputMap.has",
+   "compat": {
+    "source_file": "api/MIDIOutputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIOutputMap.keys",
+   "compat": {
+    "source_file": "api/MIDIOutputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIOutputMap.size",
+   "compat": {
+    "source_file": "api/MIDIOutputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIOutputMap.values",
+   "compat": {
+    "source_file": "api/MIDIOutputMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIPort",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIPort",
+    "source_file": "api/MIDIPort.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#MIDIPort",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIPort.close",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIPort/close",
+    "source_file": "api/MIDIPort.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiport-close",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIPort.connection",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIPort/connection",
+    "source_file": "api/MIDIPort.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiport-connection",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIPort.id",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIPort/id",
+    "source_file": "api/MIDIPort.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiport-id",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIPort.manufacturer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIPort/manufacturer",
+    "source_file": "api/MIDIPort.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiport-manufacturer",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIPort.name",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIPort/name",
+    "source_file": "api/MIDIPort.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiport-name",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIPort.open",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIPort/open",
+    "source_file": "api/MIDIPort.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiport-open",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIPort.state",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIPort/state",
+    "source_file": "api/MIDIPort.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiport-state",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIPort.statechange_event",
+   "compat": {
+    "description": "<code>statechange</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIPort/statechange_event",
+    "source_file": "api/MIDIPort.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiport-onstatechange",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIPort.type",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIPort/type",
+    "source_file": "api/MIDIPort.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiport-type",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.MIDIPort.version",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MIDIPort/version",
+    "source_file": "api/MIDIPort.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-midiport-version",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.Navigator.requestMIDIAccess",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/requestMIDIAccess",
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#dom-navigator-requestmidiaccess",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "notes": "API access is gated by installation of a <a href=\"https://support.mozilla.org/en-US/kb/site-permission-add-ons\">site permission add-on</a> (user prompt), secure context, and <a href=\"https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy/midi\"><code>Permission Policy: midi</code></a>.",
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.Navigator.requestMIDIAccess.secure_context_required",
+   "compat": {
+    "description": "Secure context required",
+    "source_file": "api/Navigator.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "108"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "api.Permissions.permission_midi",
+   "compat": {
+    "description": "<code>midi</code> permission",
+    "source_file": "api/Permissions.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#permissions-integration",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "110"
+     },
+     "firefox_android": {
+      "version_added": "110"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.iframe.allow.midi",
+   "compat": {
+    "source_file": "html/elements/iframe.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#permissions-policy-integration",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "64"
+     },
+     "chrome_android": {
+      "version_added": "64"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "74"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "51"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "64"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Permissions-Policy.midi",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Permissions-Policy/midi",
+    "source_file": "http/headers/Permissions-Policy.json",
+    "spec_url": "https://webaudio.github.io/web-midi-api/#permissions-policy-integration",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "88"
+     },
+     "chrome_android": {
+      "version_added": "88"
+     },
+     "edge": {
+      "version_added": "88"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "14.0"
+     },
+     "opera": {
+      "version_added": "74"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "88"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/107250",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:web-midi"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "html",
+  "http"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [
+   "https://crbug.com/40411677"
+  ],
+  "chrome_android": [
+   "https://crbug.com/40411677"
+  ],
+  "edge": [
+   "https://crbug.com/40411677"
+  ],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [
+   "https://webkit.org/b/107250"
+  ],
+  "safari_ios": [
+   "https://webkit.org/b/107250"
+  ]
+ }
+}

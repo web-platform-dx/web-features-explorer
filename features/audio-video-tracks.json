@@ -1,0 +1,3175 @@
+{
+ "caniuse": [
+  "audiotracks",
+  "videotracks"
+ ],
+ "compat_features": [
+  "api.AudioTrack",
+  "api.AudioTrack.enabled",
+  "api.AudioTrack.id",
+  "api.AudioTrack.kind",
+  "api.AudioTrack.label",
+  "api.AudioTrack.language",
+  "api.AudioTrackList",
+  "api.AudioTrackList.addtrack_event",
+  "api.AudioTrackList.change_event",
+  "api.AudioTrackList.getTrackById",
+  "api.AudioTrackList.length",
+  "api.AudioTrackList.removetrack_event",
+  "api.HTMLMediaElement.audioTracks",
+  "api.HTMLMediaElement.videoTracks",
+  "api.VideoTrack",
+  "api.VideoTrack.id",
+  "api.VideoTrack.kind",
+  "api.VideoTrack.label",
+  "api.VideoTrack.language",
+  "api.VideoTrack.selected",
+  "api.VideoTrackList",
+  "api.VideoTrackList.addtrack_event",
+  "api.VideoTrackList.change_event",
+  "api.VideoTrackList.getTrackById",
+  "api.VideoTrackList.length",
+  "api.VideoTrackList.removetrack_event",
+  "api.VideoTrackList.selectedIndex"
+ ],
+ "description": "The audioTracks and videoTracks APIs for media elements switch audio and video tracks during playback.",
+ "description_html": "The <code>audioTracks</code> and <code>videoTracks</code> APIs for media elements switch audio and video tracks during playback.",
+ "group": "media-elements",
+ "name": "Audio and video tracks",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/media.html#media-resources-with-multiple-media-tracks",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "media-resources-with-multiple-media-tracks"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "safari": "8",
+   "safari_ios": "8"
+  }
+ },
+ "id": "audio-video-tracks",
+ "groups": [
+  "media-elements"
+ ],
+ "groupPaths": [
+  [
+   "HTML",
+   "Media elements"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "HTMLMediaElement: audioTracks property",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/audioTracks"
+  },
+  {
+   "title": "HTMLMediaElement: videoTracks property",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/videoTracks"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.AudioTrack",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioTrack",
+    "source_file": "api/AudioTrack.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#audiotrack",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioTrack.enabled",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioTrack/enabled",
+    "source_file": "api/AudioTrack.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-audiotrack-enabled-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioTrack.id",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioTrack/id",
+    "source_file": "api/AudioTrack.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-audiotrack-id-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioTrack.kind",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioTrack/kind",
+    "source_file": "api/AudioTrack.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-audiotrack-kind-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioTrack.label",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioTrack/label",
+    "source_file": "api/AudioTrack.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-audiotrack-label-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioTrack.language",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioTrack/language",
+    "source_file": "api/AudioTrack.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-audiotrack-language-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioTrackList",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioTrackList",
+    "source_file": "api/AudioTrackList.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#audiotracklist-and-videotracklist-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioTrackList.addtrack_event",
+   "compat": {
+    "description": "<code>addtrack</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioTrackList/addtrack_event",
+    "source_file": "api/AudioTrackList.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/media.html#event-media-addtrack",
+     "https://html.spec.whatwg.org/multipage/media.html#handler-tracklist-onaddtrack"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioTrackList.change_event",
+   "compat": {
+    "description": "<code>change</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioTrackList/change_event",
+    "source_file": "api/AudioTrackList.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/media.html#event-media-change",
+     "https://html.spec.whatwg.org/multipage/media.html#handler-tracklist-onchange"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioTrackList.getTrackById",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioTrackList/getTrackById",
+    "source_file": "api/AudioTrackList.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-audiotracklist-gettrackbyid-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioTrackList.length",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioTrackList/length",
+    "source_file": "api/AudioTrackList.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-audiotracklist-length-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioTrackList.removetrack_event",
+   "compat": {
+    "description": "<code>removetrack</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioTrackList/removetrack_event",
+    "source_file": "api/AudioTrackList.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/media.html#event-media-removetrack",
+     "https://html.spec.whatwg.org/multipage/media.html#handler-tracklist-onremovetrack"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLMediaElement.audioTracks",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/audioTracks",
+    "source_file": "api/HTMLMediaElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-media-audiotracks-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "#enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "#enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "#enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "#enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLMediaElement.videoTracks",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/videoTracks",
+    "source_file": "api/HTMLMediaElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-media-videotracks-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "#enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "#enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "#enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "#enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.VideoTrack",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VideoTrack",
+    "source_file": "api/VideoTrack.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#videotrack",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.VideoTrack.id",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VideoTrack/id",
+    "source_file": "api/VideoTrack.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-videotrack-id-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.VideoTrack.kind",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VideoTrack/kind",
+    "source_file": "api/VideoTrack.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-videotrack-kind-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.VideoTrack.label",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VideoTrack/label",
+    "source_file": "api/VideoTrack.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-videotrack-label-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.VideoTrack.language",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VideoTrack/language",
+    "source_file": "api/VideoTrack.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-videotrack-language-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.VideoTrack.selected",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VideoTrack/selected",
+    "source_file": "api/VideoTrack.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-videotrack-selected-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.VideoTrackList",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VideoTrackList",
+    "source_file": "api/VideoTrackList.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#audiotracklist-and-videotracklist-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.VideoTrackList.addtrack_event",
+   "compat": {
+    "description": "<code>addtrack</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VideoTrackList/addtrack_event",
+    "source_file": "api/VideoTrackList.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/media.html#event-media-addtrack",
+     "https://html.spec.whatwg.org/multipage/media.html#handler-tracklist-onaddtrack"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.VideoTrackList.change_event",
+   "compat": {
+    "description": "<code>change</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VideoTrackList/change_event",
+    "source_file": "api/VideoTrackList.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/media.html#event-media-change",
+     "https://html.spec.whatwg.org/multipage/media.html#handler-tracklist-onchange"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.VideoTrackList.getTrackById",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VideoTrackList/getTrackById",
+    "source_file": "api/VideoTrackList.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-videotracklist-gettrackbyid-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.VideoTrackList.length",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VideoTrackList/length",
+    "source_file": "api/VideoTrackList.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-videotracklist-length-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.VideoTrackList.removetrack_event",
+   "compat": {
+    "description": "<code>removetrack</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VideoTrackList/removetrack_event",
+    "source_file": "api/VideoTrackList.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/media.html#event-media-removetrack",
+     "https://html.spec.whatwg.org/multipage/media.html#handler-tracklist-onremovetrack"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  },
+  {
+   "key": "api.VideoTrackList.selectedIndex",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VideoTrackList/selectedIndex",
+    "source_file": "api/VideoTrackList.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/media.html#dom-videotracklist-selectedindex-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "37"
+     },
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "enable-experimental-web-platform-features",
+         "type": "preference",
+         "value_to_set": "enabled"
+        }
+       ],
+       "version_added": "79"
+      },
+      {
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "flags": [
+       {
+        "name": "media.track.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "33"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "enabled"
+       }
+      ],
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:audio-video-tracks"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

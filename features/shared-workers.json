@@ -1,0 +1,1040 @@
+{
+ "caniuse": "sharedworkers",
+ "compat_features": [
+  "api.SharedWorker",
+  "api.SharedWorker.SharedWorker",
+  "api.SharedWorker.SharedWorker.mime_checks",
+  "api.SharedWorker.SharedWorker.options_name_parameter",
+  "api.SharedWorker.error_event",
+  "api.SharedWorker.port",
+  "api.SharedWorkerGlobalScope",
+  "api.SharedWorkerGlobalScope.close",
+  "api.SharedWorkerGlobalScope.connect_event",
+  "api.SharedWorkerGlobalScope.name"
+ ],
+ "description": "The SharedWorker() constructor runs a script in its own thread, which can send and receive messages with other scripts running at the same origin.",
+ "description_html": "The <code>SharedWorker()</code> constructor runs a script in its own thread, which can send and receive messages with other scripts running at the same origin.",
+ "group": "workers",
+ "name": "Shared worker",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/workers.html#shared-workers-introduction",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "shared-workers-introduction"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "5",
+   "edge": "79",
+   "firefox": "29",
+   "firefox_android": "33",
+   "safari": "16",
+   "safari_ios": "16"
+  }
+ },
+ "id": "shared-workers",
+ "groups": [
+  "workers"
+ ],
+ "groupPaths": [
+  [
+   "Workers"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "SharedWorker",
+   "url": "https://developer.mozilla.org/docs/Web/API/SharedWorker"
+  },
+  {
+   "title": "SharedWorker: SharedWorker() constructor",
+   "url": "https://developer.mozilla.org/docs/Web/API/SharedWorker/SharedWorker"
+  },
+  {
+   "title": "SharedWorker: error event",
+   "url": "https://developer.mozilla.org/docs/Web/API/SharedWorker/error_event"
+  },
+  {
+   "title": "SharedWorker: port property",
+   "url": "https://developer.mozilla.org/docs/Web/API/SharedWorker/port"
+  },
+  {
+   "title": "SharedWorkerGlobalScope",
+   "url": "https://developer.mozilla.org/docs/Web/API/SharedWorkerGlobalScope"
+  },
+  {
+   "title": "SharedWorkerGlobalScope: close() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/SharedWorkerGlobalScope/close"
+  },
+  {
+   "title": "SharedWorkerGlobalScope: connect event",
+   "url": "https://developer.mozilla.org/docs/Web/API/SharedWorkerGlobalScope/connect_event"
+  },
+  {
+   "title": "SharedWorkerGlobalScope: name property",
+   "url": "https://developer.mozilla.org/docs/Web/API/SharedWorkerGlobalScope/name"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.SharedWorker",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SharedWorker",
+    "source_file": "api/SharedWorker.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/workers.html#shared-workers-and-the-sharedworker-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "29"
+     },
+     "firefox_android": {
+      "version_added": "33"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11",
+      "version_last": "12.1",
+      "version_removed": "14"
+     },
+     "safari": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "4.0",
+      "version_last": "4.2",
+      "version_removed": "5.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "webview_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:shared-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedWorker.SharedWorker",
+   "compat": {
+    "description": "<code>SharedWorker()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SharedWorker/SharedWorker",
+    "source_file": "api/SharedWorker.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/workers.html#dom-sharedworker-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "29"
+     },
+     "firefox_android": {
+      "version_added": "33"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11",
+      "version_last": "12.1",
+      "version_removed": "14"
+     },
+     "safari": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "4.0",
+      "version_last": "4.2",
+      "version_removed": "5.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:shared-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedWorker.SharedWorker.mime_checks",
+   "compat": {
+    "description": "Strict MIME type checks for shared worker scripts",
+    "source_file": "api/SharedWorker.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "impl_url": "https://crbug.com/40554522",
+      "version_added": false
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40554522",
+      "version_added": false
+     },
+     "edge": {
+      "impl_url": "https://crbug.com/40554522",
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "81"
+     },
+     "firefox_android": {
+      "version_added": "81"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40554522",
+      "version_added": false
+     },
+     "opera": {
+      "impl_url": "https://crbug.com/40554522",
+      "version_added": false
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40554522",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16"
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40554522",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40554522",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "16"
+     }
+    },
+    "tags": [
+     "web-features:shared-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedWorker.SharedWorker.options_name_parameter",
+   "compat": {
+    "description": "<code>options.name</code> parameter",
+    "source_file": "api/SharedWorker.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "70"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "55"
+     },
+     "firefox_android": {
+      "version_added": "55"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "57"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:shared-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedWorker.error_event",
+   "compat": {
+    "description": "<code>error</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SharedWorker/error_event",
+    "source_file": "api/SharedWorker.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/workers.html#handler-abstractworker-onerror",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "29"
+     },
+     "firefox_android": {
+      "version_added": "33"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11",
+      "version_last": "12.1",
+      "version_removed": "14"
+     },
+     "safari": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "4.0",
+      "version_last": "4.2",
+      "version_removed": "5.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:shared-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedWorker.port",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SharedWorker/port",
+    "source_file": "api/SharedWorker.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/workers.html#dom-sharedworker-port-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "5"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "29"
+     },
+     "firefox_android": {
+      "version_added": "33"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11",
+      "version_last": "12.1",
+      "version_removed": "14"
+     },
+     "safari": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "4.0",
+      "version_last": "4.2",
+      "version_removed": "5.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:shared-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedWorkerGlobalScope",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SharedWorkerGlobalScope",
+    "source_file": "api/SharedWorkerGlobalScope.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/workers.html#shared-workers-and-the-sharedworkerglobalscope-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "29"
+     },
+     "firefox_android": {
+      "version_added": "29"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "webview_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:shared-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedWorkerGlobalScope.close",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SharedWorkerGlobalScope/close",
+    "source_file": "api/SharedWorkerGlobalScope.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/workers.html#dom-sharedworkerglobalscope-close-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "29"
+     },
+     "firefox_android": {
+      "version_added": "29"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "webview_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:shared-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedWorkerGlobalScope.connect_event",
+   "compat": {
+    "description": "<code>connect</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SharedWorkerGlobalScope/connect_event",
+    "source_file": "api/SharedWorkerGlobalScope.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/indices.html#event-workerglobalscope-connect",
+     "https://html.spec.whatwg.org/multipage/workers.html#handler-sharedworkerglobalscope-onconnect"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "notes": "Before version 65 the <code>data</code> property of the event object was <code>null</code>; it is now initialized to an empty string, as per spec.",
+      "version_added": "29"
+     },
+     "firefox_android": {
+      "notes": "Before version 65 the <code>data</code> property of the event object was <code>null</code>; it is now initialized to an empty string, as per spec.",
+      "version_added": "29"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "webview_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:shared-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedWorkerGlobalScope.name",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SharedWorkerGlobalScope/name",
+    "source_file": "api/SharedWorkerGlobalScope.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/workers.html#dom-sharedworkerglobalscope-name-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "4"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "29"
+     },
+     "firefox_android": {
+      "version_added": "29"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "10.6"
+     },
+     "opera_android": {
+      "version_added": "11"
+     },
+     "safari": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ],
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40290702",
+      "version_added": false
+     },
+     "webview_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "version_added": "5",
+       "version_last": "6",
+       "version_removed": "7"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:shared-workers"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [
+   "https://crbug.com/40554522"
+  ],
+  "chrome_android": [
+   "https://crbug.com/40290702",
+   "https://crbug.com/40554522"
+  ],
+  "edge": [
+   "https://crbug.com/40554522"
+  ],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ },
+ "blockedOn": "Chrome Android",
+ "monthsBlocked": 33,
+ "blockedSince": "September 2022"
+}

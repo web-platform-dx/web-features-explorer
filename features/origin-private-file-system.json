@@ -1,0 +1,1750 @@
+{
+ "compat_features": [
+  "api.FileSystemDirectoryHandle",
+  "api.FileSystemDirectoryHandle.entries",
+  "api.FileSystemDirectoryHandle.getDirectoryHandle",
+  "api.FileSystemDirectoryHandle.getFileHandle",
+  "api.FileSystemDirectoryHandle.keys",
+  "api.FileSystemDirectoryHandle.removeEntry",
+  "api.FileSystemDirectoryHandle.resolve",
+  "api.FileSystemDirectoryHandle.values",
+  "api.FileSystemFileHandle",
+  "api.FileSystemFileHandle.createSyncAccessHandle",
+  "api.FileSystemFileHandle.getFile",
+  "api.FileSystemHandle",
+  "api.FileSystemHandle.isSameEntry",
+  "api.FileSystemHandle.kind",
+  "api.FileSystemHandle.name",
+  "api.FileSystemSyncAccessHandle",
+  "api.FileSystemSyncAccessHandle.close",
+  "api.FileSystemSyncAccessHandle.close.sync_version",
+  "api.FileSystemSyncAccessHandle.flush",
+  "api.FileSystemSyncAccessHandle.flush.sync_version",
+  "api.FileSystemSyncAccessHandle.getSize",
+  "api.FileSystemSyncAccessHandle.getSize.sync_version",
+  "api.FileSystemSyncAccessHandle.read",
+  "api.FileSystemSyncAccessHandle.truncate",
+  "api.FileSystemSyncAccessHandle.truncate.sync_version",
+  "api.FileSystemSyncAccessHandle.write",
+  "api.StorageManager.getDirectory"
+ ],
+ "description": "The navigator.storage.getDirectory() method returns a FileSystemDirectoryHandle that is restricted to a specific origin and invisible to the user's actual file system for faster file-based applications, such as SQLite databases.",
+ "description_html": "The <code>navigator.storage.getDirectory()</code> method returns a <code>FileSystemDirectoryHandle</code> that is restricted to a specific origin and invisible to the user's actual file system for faster file-based applications, such as SQLite databases.",
+ "group": "file-system",
+ "name": "Origin private file system",
+ "spec": [
+  {
+   "url": "https://fs.spec.whatwg.org/#origin-private-file-system",
+   "seriesComposition": "full",
+   "shortname": "fs",
+   "series": {
+    "shortname": "fs",
+    "currentSpecification": "fs",
+    "title": "File System",
+    "shortTitle": "File System",
+    "nightlyUrl": "https://fs.spec.whatwg.org/"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "Storage Workstream",
+     "url": "https://fs.spec.whatwg.org/"
+    }
+   ],
+   "nightly": {
+    "url": "https://fs.spec.whatwg.org/",
+    "status": "Living Standard",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/fs",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "File System",
+   "source": "whatwg",
+   "shortTitle": "File System",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "fs"
+    ]
+   },
+   "fragment": "origin-private-file-system"
+  }
+ ],
+ "status": {
+  "baseline": "low",
+  "baseline_low_date": "2023-03-27",
+  "support": {
+   "chrome": "108",
+   "chrome_android": "109",
+   "edge": "108",
+   "firefox": "111",
+   "firefox_android": "111",
+   "safari": "16.4",
+   "safari_ios": "16.4"
+  }
+ },
+ "id": "origin-private-file-system",
+ "groups": [
+  "file-system"
+ ],
+ "groupPaths": [
+  [
+   "File system access"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Origin private file system",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/File_System_API/Origin_private_file_system"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.00169328,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/50"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.FileSystemDirectoryHandle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemDirectoryHandle",
+    "source_file": "api/FileSystemDirectoryHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemdirectoryhandle",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemDirectoryHandle.entries",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemDirectoryHandle/entries",
+    "source_file": "api/FileSystemDirectoryHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemdirectoryhandle-asynciterable",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemDirectoryHandle.getDirectoryHandle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemDirectoryHandle/getDirectoryHandle",
+    "source_file": "api/FileSystemDirectoryHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemdirectoryhandle-getdirectoryhandle",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemDirectoryHandle.getFileHandle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemDirectoryHandle/getFileHandle",
+    "source_file": "api/FileSystemDirectoryHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemdirectoryhandle-getfilehandle",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemDirectoryHandle.keys",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemDirectoryHandle/keys",
+    "source_file": "api/FileSystemDirectoryHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemdirectoryhandle-asynciterable",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemDirectoryHandle.removeEntry",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemDirectoryHandle/removeEntry",
+    "source_file": "api/FileSystemDirectoryHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemdirectoryhandle-removeentry",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemDirectoryHandle.resolve",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemDirectoryHandle/resolve",
+    "source_file": "api/FileSystemDirectoryHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemdirectoryhandle-resolve",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemDirectoryHandle.values",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemDirectoryHandle/values",
+    "source_file": "api/FileSystemDirectoryHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemdirectoryhandle-asynciterable",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemFileHandle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle",
+    "source_file": "api/FileSystemFileHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemfilehandle",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemFileHandle.createSyncAccessHandle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle/createSyncAccessHandle",
+    "source_file": "api/FileSystemFileHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemfilehandle-createsyncaccesshandle",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "102"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "102"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "88"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemFileHandle.getFile",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle/getFile",
+    "source_file": "api/FileSystemFileHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemfilehandle-getfile",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemHandle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemHandle",
+    "source_file": "api/FileSystemHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemhandle",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemHandle.isSameEntry",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemHandle/isSameEntry",
+    "source_file": "api/FileSystemHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemhandle-issameentry",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemHandle.kind",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemHandle/kind",
+    "source_file": "api/FileSystemHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#ref-for-dom-filesystemhandle-kind①",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemHandle.name",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemHandle/name",
+    "source_file": "api/FileSystemHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#ref-for-dom-filesystemhandle-name①",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemSyncAccessHandle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemSyncAccessHandle",
+    "source_file": "api/FileSystemSyncAccessHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemsyncaccesshandle",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "102"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "102"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "88"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemSyncAccessHandle.close",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemSyncAccessHandle/close",
+    "source_file": "api/FileSystemSyncAccessHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemsyncaccesshandle-close",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "102"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "102"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "88"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemSyncAccessHandle.close.sync_version",
+   "compat": {
+    "description": "Synchronous implementation of the <code>close()</code> method",
+    "source_file": "api/FileSystemSyncAccessHandle.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "108"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "108"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "94"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemSyncAccessHandle.flush",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemSyncAccessHandle/flush",
+    "source_file": "api/FileSystemSyncAccessHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemsyncaccesshandle-flush",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "102"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "102"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "88"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemSyncAccessHandle.flush.sync_version",
+   "compat": {
+    "description": "Synchronous implementation of the <code>flush()</code> method",
+    "source_file": "api/FileSystemSyncAccessHandle.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "108"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "108"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "94"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemSyncAccessHandle.getSize",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemSyncAccessHandle/getSize",
+    "source_file": "api/FileSystemSyncAccessHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemsyncaccesshandle-getsize",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "102"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "102"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "88"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemSyncAccessHandle.getSize.sync_version",
+   "compat": {
+    "description": "Synchronous implementation of the <code>getSize()</code> method",
+    "source_file": "api/FileSystemSyncAccessHandle.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "108"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "108"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "94"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemSyncAccessHandle.read",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemSyncAccessHandle/read",
+    "source_file": "api/FileSystemSyncAccessHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemsyncaccesshandle-read",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "102"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "102"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "88"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemSyncAccessHandle.truncate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemSyncAccessHandle/truncate",
+    "source_file": "api/FileSystemSyncAccessHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemsyncaccesshandle-truncate",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "102"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "102"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "88"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemSyncAccessHandle.truncate.sync_version",
+   "compat": {
+    "description": "Synchronous implementation of the <code>truncate()</code> method",
+    "source_file": "api/FileSystemSyncAccessHandle.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "108"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "108"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "94"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.FileSystemSyncAccessHandle.write",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FileSystemSyncAccessHandle/write",
+    "source_file": "api/FileSystemSyncAccessHandle.json",
+    "spec_url": "https://fs.spec.whatwg.org/#api-filesystemsyncaccesshandle-write",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "102"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "102"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "88"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageManager.getDirectory",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StorageManager/getDirectory",
+    "source_file": "api/StorageManager.json",
+    "spec_url": "https://fs.spec.whatwg.org/#dom-storagemanager-getdirectory",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "111"
+     },
+     "firefox_android": {
+      "version_added": "111"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:origin-private-file-system"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2023-03-27T00:00:00.000Z",
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

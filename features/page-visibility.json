@@ -1,0 +1,688 @@
+{
+ "caniuse": "pagevisibility",
+ "compat_features": [
+  "api.Document.hidden",
+  "api.Document.visibilityState",
+  "api.Document.visibilitychange_event"
+ ],
+ "description": "The document.visibilityState and document.hidden properties tell you whether the page is visible to the user (for example, it's not minimized or in a background tab).",
+ "description_html": "The <code>document.visibilityState</code> and <code>document.hidden</code> properties tell you whether the page is visible to the user (for example, it's not minimized or in a background tab).",
+ "name": "Page visibility",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/interaction.html#page-visibility",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "page-visibility"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "33",
+   "chrome_android": "33",
+   "edge": "12",
+   "firefox": "18",
+   "firefox_android": "18",
+   "safari": "7",
+   "safari_ios": "7"
+  }
+ },
+ "id": "page-visibility",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Page Visibility API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Page_Visibility_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Document.hidden",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/hidden",
+    "source_file": "api/Document.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/interaction.html#dom-document-hidden",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "33"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "13"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "33"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "18"
+      }
+     ],
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "notes": "Since Firefox 56 it also returns <code>true</code> on macOS when the window is completely hidden by another non-translucent application.",
+       "version_added": "18"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "10",
+       "version_last": "51",
+       "version_removed": "52"
+      }
+     ],
+     "firefox_android": [
+      {
+       "notes": "Since Firefox for Android 56 it also returns <code>true</code> on macOS when the window is completely hidden by another non-translucent application.",
+       "version_added": "18"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "10",
+       "version_last": "51",
+       "version_removed": "52"
+      }
+     ],
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": {
+      "version_added": "12.1"
+     },
+     "opera_android": {
+      "version_added": "12.1"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": [
+      {
+       "version_added": "2.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "4.4.3"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:page-visibility"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.visibilityState",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/visibilityState",
+    "source_file": "api/Document.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/interaction.html#dom-document-visibilitystate",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "33"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "13"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "33"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "18"
+      }
+     ],
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "version_added": "18"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "10",
+       "version_last": "51",
+       "version_removed": "52"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "18"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "10",
+       "version_last": "51",
+       "version_removed": "52"
+      }
+     ],
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "20"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "15"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "20"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "14"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": [
+      {
+       "version_added": "2.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "4.4.3"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:page-visibility"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.visibilitychange_event",
+   "compat": {
+    "description": "<code>visibilitychange</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/visibilitychange_event",
+    "source_file": "api/Document.json",
+    "spec_url": [
+     "https://html.spec.whatwg.org/multipage/indices.html#event-visibilitychange",
+     "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onvisibilitychange"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "62"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "13"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "33",
+       "version_last": "61",
+       "version_removed": "62"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "62"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "18"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "33",
+       "version_last": "61",
+       "version_removed": "62"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "18"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "12",
+       "version_last": "17",
+       "version_removed": "18"
+      }
+     ],
+     "firefox": {
+      "version_added": "56"
+     },
+     "firefox_android": {
+      "version_added": "56"
+     },
+     "ie": {
+      "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+      "partial_implementation": true,
+      "version_added": "10"
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "49"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "15"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "20",
+       "version_last": "48",
+       "version_removed": "49"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "46"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "14"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "20",
+       "version_last": "45",
+       "version_removed": "46"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "14.1"
+      },
+      {
+       "notes": "Doesn't fire the <code>visibilitychange</code> event when navigating away from a document, so also include code to check for the <code>pagehide</code> event (which does fire for that case in all current browsers). See <a href=\"https://webkit.org/b/116769\">bug 116769</a>, <a href=\"https://webkit.org/b/151234\">bug 151234</a>, <a href=\"https://webkit.org/b/151610\">bug 151610</a>, and <a href=\"https://webkit.org/b/194897\">bug 194897</a>.",
+       "partial_implementation": true,
+       "version_added": "14",
+       "version_last": "14",
+       "version_removed": "14.1"
+      },
+      {
+       "notes": [
+        "Doesn't fire the <code>visibilitychange</code> event when navigating away from a document, so also include code to check for the <code>pagehide</code> event (which does fire for that case in all current browsers). See <a href=\"https://webkit.org/b/116769\">bug 116769</a>, <a href=\"https://webkit.org/b/151234\">bug 151234</a>, <a href=\"https://webkit.org/b/151610\">bug 151610</a>, and <a href=\"https://webkit.org/b/194897\">bug 194897</a>.",
+        "Before Safari 14, the event does not bubble, so <code>document.addEventListener('visibilitychange', ...)</code> works, but <code>window.addEventListener('visibilitychange', ...)</code> does not."
+       ],
+       "partial_implementation": true,
+       "version_added": "10.1",
+       "version_last": "13.1",
+       "version_removed": "14"
+      },
+      {
+       "notes": [
+        "Doesn't fire the <code>visibilitychange</code> event when navigating away from a document, so also include code to check for the <code>pagehide</code> event (which does fire for that case in all current browsers). See <a href=\"https://webkit.org/b/116769\">bug 116769</a>, <a href=\"https://webkit.org/b/151234\">bug 151234</a>, <a href=\"https://webkit.org/b/151610\">bug 151610</a>, and <a href=\"https://webkit.org/b/194897\">bug 194897</a>.",
+        "Before Safari 14, the event does not bubble, so <code>document.addEventListener('visibilitychange', ...)</code> works, but <code>window.addEventListener('visibilitychange', ...)</code> does not.",
+        "The <code>onvisibilitychange</code> event handler property is not supported."
+       ],
+       "partial_implementation": true,
+       "version_added": "7",
+       "version_last": "10",
+       "version_removed": "10.1"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "14.5"
+      },
+      {
+       "notes": "Doesn't fire the <code>visibilitychange</code> event when navigating away from a document, so also include code to check for the <code>pagehide</code> event (which does fire for that case in all current browsers). See <a href=\"https://webkit.org/b/116769\">bug 116769</a>, <a href=\"https://webkit.org/b/151234\">bug 151234</a>, <a href=\"https://webkit.org/b/151610\">bug 151610</a>, and <a href=\"https://webkit.org/b/194897\">bug 194897</a>.",
+       "partial_implementation": true,
+       "version_added": "14",
+       "version_last": "14",
+       "version_removed": "14.5"
+      },
+      {
+       "notes": [
+        "Doesn't fire the <code>visibilitychange</code> event when navigating away from a document, so also include code to check for the <code>pagehide</code> event (which does fire for that case in all current browsers). See <a href=\"https://webkit.org/b/116769\">bug 116769</a>, <a href=\"https://webkit.org/b/151234\">bug 151234</a>, <a href=\"https://webkit.org/b/151610\">bug 151610</a>, and <a href=\"https://webkit.org/b/194897\">bug 194897</a>.",
+        "Before Safari on iOS 14, the event does not bubble, so <code>document.addEventListener('visibilitychange', ...)</code> works, but <code>window.addEventListener('visibilitychange', ...)</code> does not."
+       ],
+       "partial_implementation": true,
+       "version_added": "10.3",
+       "version_last": "13.4",
+       "version_removed": "14"
+      },
+      {
+       "notes": [
+        "Doesn't fire the <code>visibilitychange</code> event when navigating away from a document, so also include code to check for the <code>pagehide</code> event (which does fire for that case in all current browsers). See <a href=\"https://webkit.org/b/116769\">bug 116769</a>, <a href=\"https://webkit.org/b/151234\">bug 151234</a>, <a href=\"https://webkit.org/b/151610\">bug 151610</a>, and <a href=\"https://webkit.org/b/194897\">bug 194897</a>.",
+        "Before Safari on iOS 14, the event does not bubble, so <code>document.addEventListener('visibilitychange', ...)</code> works, but <code>window.addEventListener('visibilitychange', ...)</code> does not.",
+        "The <code>onvisibilitychange</code> event handler property is not supported."
+       ],
+       "partial_implementation": true,
+       "version_added": "7",
+       "version_last": "10",
+       "version_removed": "10.3"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "8.0"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "1.0"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "2.0",
+       "version_last": "7.4",
+       "version_removed": "8.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "62"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "4.4"
+      },
+      {
+       "notes": "The <code>onvisibilitychange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "4.4.3",
+       "version_last": "61",
+       "version_removed": "62"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "14.5"
+      },
+      {
+       "notes": "Doesn't fire the <code>visibilitychange</code> event when navigating away from a document, so also include code to check for the <code>pagehide</code> event (which does fire for that case in all current browsers). See <a href=\"https://webkit.org/b/116769\">bug 116769</a>, <a href=\"https://webkit.org/b/151234\">bug 151234</a>, <a href=\"https://webkit.org/b/151610\">bug 151610</a>, and <a href=\"https://webkit.org/b/194897\">bug 194897</a>.",
+       "partial_implementation": true,
+       "version_added": "14",
+       "version_last": "14",
+       "version_removed": "14.5"
+      },
+      {
+       "notes": [
+        "Doesn't fire the <code>visibilitychange</code> event when navigating away from a document, so also include code to check for the <code>pagehide</code> event (which does fire for that case in all current browsers). See <a href=\"https://webkit.org/b/116769\">bug 116769</a>, <a href=\"https://webkit.org/b/151234\">bug 151234</a>, <a href=\"https://webkit.org/b/151610\">bug 151610</a>, and <a href=\"https://webkit.org/b/194897\">bug 194897</a>.",
+        "Before WebView on iOS 14, the event does not bubble, so <code>document.addEventListener('visibilitychange', ...)</code> works, but <code>window.addEventListener('visibilitychange', ...)</code> does not."
+       ],
+       "partial_implementation": true,
+       "version_added": "10.3",
+       "version_last": "13.4",
+       "version_removed": "14"
+      },
+      {
+       "notes": [
+        "Doesn't fire the <code>visibilitychange</code> event when navigating away from a document, so also include code to check for the <code>pagehide</code> event (which does fire for that case in all current browsers). See <a href=\"https://webkit.org/b/116769\">bug 116769</a>, <a href=\"https://webkit.org/b/151234\">bug 151234</a>, <a href=\"https://webkit.org/b/151610\">bug 151610</a>, and <a href=\"https://webkit.org/b/194897\">bug 194897</a>.",
+        "Before WebView on iOS 14, the event does not bubble, so <code>document.addEventListener('visibilitychange', ...)</code> works, but <code>window.addEventListener('visibilitychange', ...)</code> does not.",
+        "The <code>onvisibilitychange</code> event handler property is not supported."
+       ],
+       "partial_implementation": true,
+       "version_added": "7",
+       "version_last": "10",
+       "version_removed": "10.3"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:page-visibility"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

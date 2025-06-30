@@ -1,0 +1,1029 @@
+{
+ "compat_features": [
+  "api.Permissions.permission_compute-pressure",
+  "api.PressureObserver",
+  "api.PressureObserver.PressureObserver",
+  "api.PressureObserver.disconnect",
+  "api.PressureObserver.knownSources_static",
+  "api.PressureObserver.observe",
+  "api.PressureObserver.takeRecords",
+  "api.PressureObserver.unobserve",
+  "api.PressureRecord",
+  "api.PressureRecord.source",
+  "api.PressureRecord.state",
+  "api.PressureRecord.time",
+  "api.PressureRecord.toJSON",
+  "html.elements.iframe.allow.compute-pressure",
+  "http.headers.Permissions-Policy.compute-pressure"
+ ],
+ "description": "The PressureObserver API monitors CPU load, allowing you to adjust workloads in response to available computing resources. Also known as the Compute Pressure API.",
+ "description_html": "The <code>PressureObserver</code> API monitors CPU load, allowing you to adjust workloads in response to available computing resources. Also known as the Compute Pressure API.",
+ "group": "compute-pressure",
+ "name": "CPU compute pressure",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/compute-pressure/",
+   "seriesComposition": "full",
+   "shortname": "compute-pressure",
+   "series": {
+    "shortname": "compute-pressure",
+    "currentSpecification": "compute-pressure",
+    "title": "Compute Pressure",
+    "shortTitle": "Compute Pressure",
+    "releaseUrl": "https://www.w3.org/TR/compute-pressure/",
+    "nightlyUrl": "https://w3c.github.io/compute-pressure/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Devices and Sensors Working Group",
+     "url": "https://www.w3.org/das/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/compute-pressure/",
+    "status": "Candidate Recommendation Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/compute-pressure/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/compute-pressure",
+    "sourcePath": "index.html",
+    "filename": "index.html"
+   },
+   "title": "Compute Pressure Level 1",
+   "source": "w3c",
+   "shortTitle": "Compute Pressure 1",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "125",
+   "edge": "125"
+  }
+ },
+ "id": "compute-pressure",
+ "groups": [
+  "compute-pressure"
+ ],
+ "groupPaths": [
+  [
+   "Compute pressure"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Compute Pressure API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Compute_Pressure_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/521",
+   "position": "",
+   "concerns": []
+  },
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/255",
+   "position": "oppose",
+   "concerns": [
+    "privacy",
+    "device independence"
+   ]
+  }
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.00124342,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/17"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.Permissions.permission_compute-pressure",
+   "compat": {
+    "description": "<code>compute-pressure</code> permission",
+    "source_file": "api/Permissions.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#policy-control",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  },
+  {
+   "key": "api.PressureObserver",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PressureObserver",
+    "source_file": "api/PressureObserver.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#the-pressureobserver-object",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  },
+  {
+   "key": "api.PressureObserver.PressureObserver",
+   "compat": {
+    "description": "<code>PressureObserver()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PressureObserver/PressureObserver",
+    "source_file": "api/PressureObserver.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#dom-pressureobserver-constructor",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  },
+  {
+   "key": "api.PressureObserver.disconnect",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PressureObserver/disconnect",
+    "source_file": "api/PressureObserver.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#dom-pressureobserver-disconnect",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  },
+  {
+   "key": "api.PressureObserver.knownSources_static",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PressureObserver/knownSources_static",
+    "source_file": "api/PressureObserver.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#dom-pressureobserver-knownsources",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  },
+  {
+   "key": "api.PressureObserver.observe",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PressureObserver/observe",
+    "source_file": "api/PressureObserver.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#the-observe-method",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  },
+  {
+   "key": "api.PressureObserver.takeRecords",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PressureObserver/takeRecords",
+    "source_file": "api/PressureObserver.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#the-takerecords-method",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  },
+  {
+   "key": "api.PressureObserver.unobserve",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PressureObserver/unobserve",
+    "source_file": "api/PressureObserver.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#the-unobserve-method",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  },
+  {
+   "key": "api.PressureRecord",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PressureRecord",
+    "source_file": "api/PressureRecord.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#the-pressurerecord-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  },
+  {
+   "key": "api.PressureRecord.source",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PressureRecord/source",
+    "source_file": "api/PressureRecord.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#dom-pressurerecord-source",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  },
+  {
+   "key": "api.PressureRecord.state",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PressureRecord/state",
+    "source_file": "api/PressureRecord.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#the-state-attribute",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  },
+  {
+   "key": "api.PressureRecord.time",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PressureRecord/time",
+    "source_file": "api/PressureRecord.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#the-time-attribute",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  },
+  {
+   "key": "api.PressureRecord.toJSON",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PressureRecord/toJSON",
+    "source_file": "api/PressureRecord.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#the-tojson-member",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.iframe.allow.compute-pressure",
+   "compat": {
+    "source_file": "html/elements/iframe.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#policy-control",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Permissions-Policy.compute-pressure",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Permissions-Policy/compute-pressure",
+    "source_file": "http/headers/Permissions-Policy.json",
+    "spec_url": "https://w3c.github.io/compute-pressure/#policy-control",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:compute-pressure"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "html",
+  "http"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

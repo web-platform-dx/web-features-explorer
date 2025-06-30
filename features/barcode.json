@@ -1,0 +1,473 @@
+{
+ "compat_features": [
+  "api.BarcodeDetector",
+  "api.BarcodeDetector.BarcodeDetector",
+  "api.BarcodeDetector.detect",
+  "api.BarcodeDetector.getSupportedFormats_static"
+ ],
+ "description": "The BarcodeDetector API recognizes various barcode formats in images.",
+ "description_html": "The <code>BarcodeDetector</code> API recognizes various barcode formats in images.",
+ "name": "Barcode detector",
+ "spec": [
+  {
+   "url": "https://wicg.github.io/shape-detection-api/#barcode-detection-api",
+   "seriesComposition": "full",
+   "shortname": "shape-detection-api",
+   "series": {
+    "shortname": "shape-detection-api",
+    "currentSpecification": "shape-detection-api",
+    "title": "Accelerated Shape Detection in Images",
+    "shortTitle": "Accelerated Shape Detection in Images",
+    "nightlyUrl": "https://wicg.github.io/shape-detection-api/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Platform Incubator Community Group",
+     "url": "https://www.w3.org/community/wicg/"
+    }
+   ],
+   "nightly": {
+    "url": "https://wicg.github.io/shape-detection-api/",
+    "status": "Draft Community Group Report",
+    "alternateUrls": [],
+    "repository": "https://github.com/WICG/shape-detection-api",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Accelerated Shape Detection in Images",
+   "source": "spec",
+   "shortTitle": "Accelerated Shape Detection in Images",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "shape-detection"
+    ]
+   },
+   "fragment": "barcode-detection-api"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome_android": "83"
+  }
+ },
+ "id": "barcode",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Barcode Detection API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Barcode_Detection_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.BarcodeDetector",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/BarcodeDetector",
+    "source_file": "api/BarcodeDetector.json",
+    "spec_url": "https://wicg.github.io/shape-detection-api/#barcode-detection-api",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "notes": [
+        "Supported on ChromeOS and macOS only.",
+        "Before Chrome 113, on macOS Ventura (13) and above, this interface silently failed. See <a href=\"https://crbug.com/40245611\">bug 40245611</a>."
+       ],
+       "partial_implementation": true,
+       "version_added": "88"
+      },
+      {
+       "notes": "Supported on macOS only.",
+       "partial_implementation": true,
+       "version_added": "83",
+       "version_last": "87",
+       "version_removed": "88"
+      }
+     ],
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "notes": [
+       "Supported on macOS only.",
+       "Before Chrome 113, on macOS Ventura (13) and above, this interface silently failed. See <a href=\"https://crbug.com/40245611\">bug 40245611</a>."
+      ],
+      "partial_implementation": true,
+      "version_added": "83"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1553738",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1553738",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "notes": [
+       "Supported on macOS only.",
+       "Before Chrome 113, on macOS Ventura (13) and above, this interface silently failed. See <a href=\"https://crbug.com/40245611\">bug 40245611</a>."
+      ],
+      "partial_implementation": true,
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "flags": [
+       {
+        "name": "Shape Detection API",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "flags": [
+       {
+        "name": "Shape Detection API",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:barcode"
+    ]
+   }
+  },
+  {
+   "key": "api.BarcodeDetector.BarcodeDetector",
+   "compat": {
+    "description": "<code>BarcodeDetector()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/BarcodeDetector/BarcodeDetector",
+    "source_file": "api/BarcodeDetector.json",
+    "spec_url": "https://wicg.github.io/shape-detection-api/#dom-barcodedetector-barcodedetector",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "notes": "Supported on ChromeOS and macOS only.",
+       "partial_implementation": true,
+       "version_added": "88"
+      },
+      {
+       "notes": "Supported on macOS only.",
+       "partial_implementation": true,
+       "version_added": "83",
+       "version_last": "87",
+       "version_removed": "88"
+      }
+     ],
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "notes": "Supported on macOS only.",
+      "partial_implementation": true,
+      "version_added": "83"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1553738",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1553738",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "notes": "Supported on macOS only.",
+      "partial_implementation": true,
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "flags": [
+       {
+        "name": "Shape Detection API",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "flags": [
+       {
+        "name": "Shape Detection API",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:barcode"
+    ]
+   }
+  },
+  {
+   "key": "api.BarcodeDetector.detect",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/BarcodeDetector/detect",
+    "source_file": "api/BarcodeDetector.json",
+    "spec_url": "https://wicg.github.io/shape-detection-api/#dom-barcodedetector-detect",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "notes": "Supported on ChromeOS and macOS only.",
+       "partial_implementation": true,
+       "version_added": "88"
+      },
+      {
+       "notes": "Supported on macOS only.",
+       "partial_implementation": true,
+       "version_added": "83",
+       "version_last": "87",
+       "version_removed": "88"
+      }
+     ],
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "notes": "Supported on macOS only.",
+      "partial_implementation": true,
+      "version_added": "83"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1553738",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1553738",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "notes": "Supported on macOS only.",
+      "partial_implementation": true,
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "flags": [
+       {
+        "name": "Shape Detection API",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "flags": [
+       {
+        "name": "Shape Detection API",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:barcode"
+    ]
+   }
+  },
+  {
+   "key": "api.BarcodeDetector.getSupportedFormats_static",
+   "compat": {
+    "description": "<code>getSupportedFormats()</code> static method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/BarcodeDetector/getSupportedFormats_static",
+    "source_file": "api/BarcodeDetector.json",
+    "spec_url": "https://wicg.github.io/shape-detection-api/#dom-barcodedetector-getsupportedformats",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "notes": "Supported on ChromeOS and macOS only.",
+       "partial_implementation": true,
+       "version_added": "88"
+      },
+      {
+       "notes": "Supported on macOS only.",
+       "partial_implementation": true,
+       "version_added": "83",
+       "version_last": "87",
+       "version_removed": "88"
+      }
+     ],
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "notes": "Supported on macOS only.",
+      "partial_implementation": true,
+      "version_added": "83"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1553738",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1553738",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "notes": "Supported on macOS only.",
+      "partial_implementation": true,
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "flags": [
+       {
+        "name": "Shape Detection API",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "flags": [
+       {
+        "name": "Shape Detection API",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:barcode"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [
+   "https://bugzil.la/1553738"
+  ],
+  "firefox_android": [
+   "https://bugzil.la/1553738"
+  ],
+  "safari": [],
+  "safari_ios": []
+ }
+}

@@ -1,0 +1,780 @@
+{
+ "caniuse": "permissions-api",
+ "compat_features": [
+  "api.Navigator.permissions",
+  "api.PermissionStatus",
+  "api.PermissionStatus.change_event",
+  "api.PermissionStatus.name",
+  "api.PermissionStatus.state",
+  "api.Permissions",
+  "api.Permissions.query",
+  "api.Permissions.request",
+  "api.WorkerNavigator.permissions"
+ ],
+ "description": "The navigator.permissions API checks whether a permission, such as access to geolocation data, has been granted.",
+ "description_html": "The <code>navigator.permissions</code> API checks whether a permission, such as access to geolocation data, has been granted.",
+ "group": "security",
+ "name": "Permissions",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/permissions/",
+   "seriesComposition": "full",
+   "shortname": "permissions",
+   "series": {
+    "shortname": "permissions",
+    "currentSpecification": "permissions",
+    "title": "Permissions",
+    "shortTitle": "Permissions",
+    "releaseUrl": "https://www.w3.org/TR/permissions/",
+    "nightlyUrl": "https://w3c.github.io/permissions/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Application Security Working Group",
+     "url": "https://www.w3.org/groups/wg/webappsec/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/permissions/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/permissions/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/permissions",
+    "sourcePath": "index.html",
+    "filename": "index.html"
+   },
+   "title": "Permissions",
+   "source": "w3c",
+   "shortTitle": "Permissions",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "permissions"
+    ]
+   },
+   "fragment": null
+  },
+  {
+   "url": "https://wicg.github.io/permissions-request/#dom-permissions-request",
+   "seriesComposition": "full",
+   "shortname": "permissions-request",
+   "series": {
+    "shortname": "permissions-request",
+    "currentSpecification": "permissions-request",
+    "title": "Requesting Permissions",
+    "shortTitle": "Requesting Permissions",
+    "nightlyUrl": "https://wicg.github.io/permissions-request/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Platform Incubator Community Group",
+     "url": "https://www.w3.org/community/wicg/"
+    }
+   ],
+   "nightly": {
+    "url": "https://wicg.github.io/permissions-request/",
+    "status": "Draft Community Group Report",
+    "alternateUrls": [],
+    "repository": "https://github.com/WICG/permissions-request",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Requesting Permissions",
+   "source": "spec",
+   "shortTitle": "Requesting Permissions",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "permissions-request"
+    ]
+   },
+   "fragment": "dom-permissions-request"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2025-03-12",
+  "baseline_low_date": "2022-09-12",
+  "support": {
+   "chrome": "44",
+   "chrome_android": "44",
+   "edge": "79",
+   "firefox": "46",
+   "firefox_android": "46",
+   "safari": "16",
+   "safari_ios": "16"
+  }
+ },
+ "id": "permissions",
+ "groups": [
+  "security"
+ ],
+ "groupPaths": [
+  [
+   "Security"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Permissions API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Permissions_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/19",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Navigator.permissions",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/permissions",
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://w3c.github.io/permissions/#dom-navigator-permissions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "46"
+     },
+     "firefox_android": {
+      "version_added": "46"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40418964",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "16"
+     }
+    },
+    "tags": [
+     "web-features:permissions"
+    ]
+   }
+  },
+  {
+   "key": "api.PermissionStatus",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PermissionStatus",
+    "source_file": "api/PermissionStatus.json",
+    "spec_url": "https://w3c.github.io/permissions/#permissionstatus-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "46"
+     },
+     "firefox_android": {
+      "version_added": "46"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40418964",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "16"
+     }
+    },
+    "tags": [
+     "web-features:permissions"
+    ]
+   }
+  },
+  {
+   "key": "api.PermissionStatus.change_event",
+   "compat": {
+    "description": "<code>change</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PermissionStatus/change_event",
+    "source_file": "api/PermissionStatus.json",
+    "spec_url": "https://w3c.github.io/permissions/#dom-permissionstatus-onchange",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "46"
+     },
+     "firefox_android": {
+      "version_added": "46"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:permissions"
+    ]
+   }
+  },
+  {
+   "key": "api.PermissionStatus.name",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PermissionStatus/name",
+    "source_file": "api/PermissionStatus.json",
+    "spec_url": "https://w3c.github.io/permissions/#dom-permissionstatus-name",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "97"
+     },
+     "chrome_android": {
+      "version_added": "97"
+     },
+     "edge": {
+      "version_added": "97"
+     },
+     "firefox": {
+      "version_added": "93"
+     },
+     "firefox_android": {
+      "version_added": "93"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "83"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16"
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "16"
+     }
+    },
+    "tags": [
+     "web-features:permissions"
+    ]
+   }
+  },
+  {
+   "key": "api.PermissionStatus.state",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PermissionStatus/state",
+    "source_file": "api/PermissionStatus.json",
+    "spec_url": "https://w3c.github.io/permissions/#dom-permissionstatus-state",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "44"
+      },
+      {
+       "alternative_name": "status",
+       "version_added": "43",
+       "version_last": "43",
+       "version_removed": "44"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "44"
+      },
+      {
+       "alternative_name": "status",
+       "version_added": "43",
+       "version_last": "43",
+       "version_removed": "44"
+      }
+     ],
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "46"
+     },
+     "firefox_android": {
+      "version_added": "46"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "31"
+      },
+      {
+       "alternative_name": "status",
+       "version_added": "30",
+       "version_last": "30",
+       "version_removed": "31"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "32"
+      },
+      {
+       "alternative_name": "status",
+       "version_added": "30",
+       "version_last": "30",
+       "version_removed": "32"
+      }
+     ],
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "16"
+     }
+    },
+    "tags": [
+     "web-features:permissions"
+    ]
+   }
+  },
+  {
+   "key": "api.Permissions",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Permissions",
+    "source_file": "api/Permissions.json",
+    "spec_url": "https://w3c.github.io/permissions/#permissions-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "46"
+     },
+     "firefox_android": {
+      "version_added": "46"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40418964",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "16"
+     }
+    },
+    "tags": [
+     "web-features:permissions"
+    ]
+   }
+  },
+  {
+   "key": "api.Permissions.query",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Permissions/query",
+    "source_file": "api/Permissions.json",
+    "spec_url": "https://w3c.github.io/permissions/#dom-permissions-query",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "46"
+     },
+     "firefox_android": {
+      "version_added": "46"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "16"
+     }
+    },
+    "tags": [
+     "web-features:permissions"
+    ]
+   }
+  },
+  {
+   "key": "api.Permissions.request",
+   "compat": {
+    "source_file": "api/Permissions.json",
+    "spec_url": "https://wicg.github.io/permissions-request/#dom-permissions-request",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "flags": [
+       {
+        "name": "#enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "46"
+     },
+     "chrome_android": {
+      "flags": [
+       {
+        "name": "#enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "46"
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "flags": [
+       {
+        "name": "#enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "flags": [
+       {
+        "name": "#enable-experimental-web-platform-features",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "33"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:permissions"
+    ]
+   }
+  },
+  {
+   "key": "api.WorkerNavigator.permissions",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WorkerNavigator/permissions",
+    "source_file": "api/WorkerNavigator.json",
+    "spec_url": "https://w3c.github.io/permissions/#dom-workernavigator-permissions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "133"
+     },
+     "firefox_android": {
+      "version_added": "133"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40418964",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:permissions"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2022-09-12T00:00:00.000Z",
+ "baselineHighDateAsObject": "2025-03-12T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

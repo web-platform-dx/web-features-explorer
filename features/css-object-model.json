@@ -1,0 +1,5227 @@
+{
+ "compat_features": [
+  "api.CSS",
+  "api.CSSConditionRule",
+  "api.CSSConditionRule.conditionText",
+  "api.CSSGroupingRule",
+  "api.CSSGroupingRule.cssRules",
+  "api.CSSGroupingRule.deleteRule",
+  "api.CSSGroupingRule.insertRule",
+  "api.CSSMarginRule",
+  "api.CSSMarginRule.name",
+  "api.CSSMarginRule.style",
+  "api.CSSMediaRule",
+  "api.CSSMediaRule.media",
+  "api.CSSPageDescriptors",
+  "api.CSSPageDescriptors.margin",
+  "api.CSSPageDescriptors.margin-bottom",
+  "api.CSSPageDescriptors.margin-left",
+  "api.CSSPageDescriptors.margin-right",
+  "api.CSSPageDescriptors.margin-top",
+  "api.CSSPageDescriptors.marginBottom",
+  "api.CSSPageDescriptors.marginLeft",
+  "api.CSSPageDescriptors.marginRight",
+  "api.CSSPageDescriptors.marginTop",
+  "api.CSSPageDescriptors.page-orientation",
+  "api.CSSPageDescriptors.pageOrientation",
+  "api.CSSPageDescriptors.size",
+  "api.CSSPageRule",
+  "api.CSSPageRule.selectorText",
+  "api.CSSPageRule.style",
+  "api.CSSPageRule.style.type_CSSPageDescriptors",
+  "api.CSSPseudoElement",
+  "api.CSSPseudoElement.element",
+  "api.CSSPseudoElement.type",
+  "api.CSSRule",
+  "api.CSSRule.cssText",
+  "api.CSSRule.parentRule",
+  "api.CSSRule.parentStyleSheet",
+  "api.CSSRuleList",
+  "api.CSSRuleList.item",
+  "api.CSSRuleList.length",
+  "api.CSSStyleDeclaration",
+  "api.CSSStyleDeclaration.@@iterator",
+  "api.CSSStyleDeclaration.cssFloat",
+  "api.CSSStyleDeclaration.cssText",
+  "api.CSSStyleDeclaration.getPropertyPriority",
+  "api.CSSStyleDeclaration.getPropertyValue",
+  "api.CSSStyleDeclaration.item",
+  "api.CSSStyleDeclaration.length",
+  "api.CSSStyleDeclaration.parentRule",
+  "api.CSSStyleDeclaration.removeProperty",
+  "api.CSSStyleDeclaration.setProperty",
+  "api.CSSStyleRule",
+  "api.CSSStyleRule.selectorText",
+  "api.CSSStyleRule.style",
+  "api.CSSStyleSheet",
+  "api.CSSStyleSheet.cssRules",
+  "api.CSSStyleSheet.deleteRule",
+  "api.CSSStyleSheet.insertRule",
+  "api.CSSStyleSheet.insertRule.index_parameter_optional",
+  "api.CSSStyleSheet.ownerRule",
+  "api.Document.styleSheets",
+  "api.HTMLElement.style",
+  "api.HTMLLinkElement.sheet",
+  "api.HTMLStyleElement.sheet",
+  "api.MediaList",
+  "api.MediaList.appendMedium",
+  "api.MediaList.deleteMedium",
+  "api.MediaList.item",
+  "api.MediaList.length",
+  "api.MediaList.mediaText",
+  "api.MediaList.toString",
+  "api.ProcessingInstruction.sheet",
+  "api.ShadowRoot.styleSheets",
+  "api.StyleSheet",
+  "api.StyleSheet.disabled",
+  "api.StyleSheet.href",
+  "api.StyleSheet.media",
+  "api.StyleSheet.ownerNode",
+  "api.StyleSheet.parentStyleSheet",
+  "api.StyleSheet.title",
+  "api.StyleSheet.type",
+  "api.StyleSheetList",
+  "api.StyleSheetList.item",
+  "api.StyleSheetList.length"
+ ],
+ "description": "The CSS object model API reads, creates, and modifies CSS stylesheets and inline styles. Also known as CSSOM.",
+ "description_html": "The CSS object model API reads, creates, and modifies CSS stylesheets and inline styles. Also known as CSSOM.",
+ "group": "cssom",
+ "name": "CSS object model",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/cssom-1/#css-object-model",
+   "seriesComposition": "full",
+   "shortname": "cssom-1",
+   "series": {
+    "shortname": "cssom",
+    "currentSpecification": "cssom-1",
+    "title": "CSS Object Model (CSSOM)",
+    "shortTitle": "CSSOM",
+    "releaseUrl": "https://www.w3.org/TR/cssom/",
+    "nightlyUrl": "https://drafts.csswg.org/cssom/"
+   },
+   "seriesVersion": "1",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/cssom-1/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/cssom-1/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/cssom-1/",
+     "https://w3c.github.io/csswg-drafts/cssom/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "cssom-1/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Object Model (CSSOM)",
+   "source": "w3c",
+   "shortTitle": "CSSOM",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/cssom"
+    ]
+   },
+   "fragment": "css-object-model"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-03-30",
+  "baseline_low_date": "2015-09-30",
+  "support": {
+   "chrome": "28",
+   "chrome_android": "28",
+   "edge": "12",
+   "firefox": "22",
+   "firefox_android": "22",
+   "safari": "9",
+   "safari_ios": "9"
+  }
+ },
+ "id": "css-object-model",
+ "groups": [
+  "cssom"
+ ],
+ "groupPaths": [
+  [
+   "CSS",
+   "CSS object models"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "CSS Object Model (CSSOM)",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/CSS_Object_Model"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.CSS",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSS",
+    "source_file": "api/CSS.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#namespacedef-css",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "28"
+     },
+     "chrome_android": {
+      "version_added": "28"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "22"
+     },
+     "firefox_android": {
+      "version_added": "22"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "15"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSConditionRule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSConditionRule",
+    "source_file": "api/CSSConditionRule.json",
+    "spec_url": "https://drafts.csswg.org/css-conditional-3/#the-cssconditionrule-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "56"
+     },
+     "chrome_android": {
+      "version_added": "56"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "20"
+     },
+     "firefox_android": {
+      "version_added": "20"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "43"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "56"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSConditionRule.conditionText",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSConditionRule/conditionText",
+    "source_file": "api/CSSConditionRule.json",
+    "spec_url": "https://drafts.csswg.org/css-conditional-3/#dom-cssconditionrule-conditiontext",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "56"
+     },
+     "chrome_android": {
+      "version_added": "56"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "20"
+     },
+     "firefox_android": {
+      "version_added": "20"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "43"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "56"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSGroupingRule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSGroupingRule",
+    "source_file": "api/CSSGroupingRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#the-cssgroupingrule-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "45"
+     },
+     "chrome_android": {
+      "version_added": "45"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "20"
+     },
+     "firefox_android": {
+      "version_added": "20"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "32"
+     },
+     "opera_android": {
+      "version_added": "32"
+     },
+     "safari": [
+      {
+       "version_added": "14.1"
+      },
+      {
+       "notes": "The <code>CSSGroupingRule</code> interface itself is not present, but many of the methods are available on various interfaces such as the <a href=\"https://developer.mozilla.org/docs/Web/API/CSSMediaRule\"><code>CSSMediaRule</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/CSSPageRule\"><code>CSSPageRule</code></a> interfaces.",
+       "partial_implementation": true,
+       "version_added": "3",
+       "version_last": "14",
+       "version_removed": "14.1"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "14.5"
+      },
+      {
+       "notes": "The <code>CSSGroupingRule</code> interface itself is not present, but many of the methods are available on various interfaces such as the <a href=\"https://developer.mozilla.org/docs/Web/API/CSSMediaRule\"><code>CSSMediaRule</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/CSSPageRule\"><code>CSSPageRule</code></a> interfaces.",
+       "partial_implementation": true,
+       "version_added": "2",
+       "version_last": "14",
+       "version_removed": "14.5"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "45"
+     },
+     "webview_ios": [
+      {
+       "version_added": "14.5"
+      },
+      {
+       "notes": "The <code>CSSGroupingRule</code> interface itself is not present, but many of the methods are available on various interfaces such as the <a href=\"https://developer.mozilla.org/docs/Web/API/CSSMediaRule\"><code>CSSMediaRule</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/CSSPageRule\"><code>CSSPageRule</code></a> interfaces.",
+       "partial_implementation": true,
+       "version_added": "2",
+       "version_last": "14",
+       "version_removed": "14.5"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSGroupingRule.cssRules",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSGroupingRule/cssRules",
+    "source_file": "api/CSSGroupingRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssgroupingrule-cssrules",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "45"
+     },
+     "chrome_android": {
+      "version_added": "45"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "20"
+     },
+     "firefox_android": {
+      "version_added": "20"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "32"
+     },
+     "opera_android": {
+      "version_added": "32"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "45"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSGroupingRule.deleteRule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSGroupingRule/deleteRule",
+    "source_file": "api/CSSGroupingRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssgroupingrule-deleterule",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "45"
+     },
+     "chrome_android": {
+      "version_added": "45"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "20"
+     },
+     "firefox_android": {
+      "version_added": "20"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "32"
+     },
+     "opera_android": {
+      "version_added": "32"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "45"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSGroupingRule.insertRule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSGroupingRule/insertRule",
+    "source_file": "api/CSSGroupingRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssgroupingrule-insertrule",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "45"
+     },
+     "chrome_android": {
+      "version_added": "45"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "20"
+     },
+     "firefox_android": {
+      "version_added": "20"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "32"
+     },
+     "opera_android": {
+      "version_added": "32"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "45"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSMarginRule",
+   "compat": {
+    "source_file": "api/CSSMarginRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#the-cssmarginrule-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "version_added": "131"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSMarginRule.name",
+   "compat": {
+    "source_file": "api/CSSMarginRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssmarginrule-name",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "version_added": "131"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSMarginRule.style",
+   "compat": {
+    "source_file": "api/CSSMarginRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssmarginrule-style",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "version_added": "131"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSMediaRule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSMediaRule",
+    "source_file": "api/CSSMediaRule.json",
+    "spec_url": "https://drafts.csswg.org/css-conditional-3/#the-cssmediarule-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": "Before Firefox 20, <code>conditionText</code> could not be set.",
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "notes": "Before Firefox for Android 20, <code>conditionText</code> could not be set.",
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSMediaRule.media",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSMediaRule/media",
+    "source_file": "api/CSSMediaRule.json",
+    "spec_url": "https://drafts.csswg.org/css-conditional-3/#dom-cssmediarule-media",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageDescriptors",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageDescriptors",
+    "source_file": "api/CSSPageDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#csspagedescriptors",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageDescriptors.margin",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageDescriptors#margin",
+    "source_file": "api/CSSPageDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-csspagedescriptors-margin",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageDescriptors.margin-bottom",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageDescriptors#margin-bottom",
+    "source_file": "api/CSSPageDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-csspagedescriptors-margin-bottom",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageDescriptors.margin-left",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageDescriptors#margin-left",
+    "source_file": "api/CSSPageDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-csspagedescriptors-margin-left",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageDescriptors.margin-right",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageDescriptors#margin-right",
+    "source_file": "api/CSSPageDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-csspagedescriptors-margin-right",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageDescriptors.margin-top",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageDescriptors#margin-top",
+    "source_file": "api/CSSPageDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-csspagedescriptors-margin-top",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageDescriptors.marginBottom",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageDescriptors#marginbottom",
+    "source_file": "api/CSSPageDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-csspagedescriptors-marginbottom",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageDescriptors.marginLeft",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageDescriptors#marginleft",
+    "source_file": "api/CSSPageDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-csspagedescriptors-marginleft",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageDescriptors.marginRight",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageDescriptors#marginright",
+    "source_file": "api/CSSPageDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-csspagedescriptors-marginright",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageDescriptors.marginTop",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageDescriptors#margintop",
+    "source_file": "api/CSSPageDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-csspagedescriptors-margintop",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageDescriptors.page-orientation",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageDescriptors#page-orientation",
+    "source_file": "api/CSSPageDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-csspagedescriptors-page-orientation",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageDescriptors.pageOrientation",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageDescriptors#pageorientation",
+    "source_file": "api/CSSPageDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-csspagedescriptors-pageorientation",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageDescriptors.size",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageDescriptors#size",
+    "source_file": "api/CSSPageDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-csspagedescriptors-size",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageRule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageRule",
+    "source_file": "api/CSSPageRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#the-csspagerule-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "19"
+     },
+     "firefox_android": {
+      "version_added": "19"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageRule.selectorText",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageRule/selectorText",
+    "source_file": "api/CSSPageRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-csspagerule-selectortext",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "110"
+     },
+     "firefox_android": {
+      "version_added": "110"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageRule.style",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPageRule/style",
+    "source_file": "api/CSSPageRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-csspagerule-style",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "19"
+     },
+     "firefox_android": {
+      "version_added": "19"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPageRule.style.type_CSSPageDescriptors",
+   "compat": {
+    "description": "Type changed to <a href=\"https://developer.mozilla.org/docs/Web/API/CSSPageDescriptors\"><code>CSSPageDescriptors</code></a>",
+    "source_file": "api/CSSPageRule.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPseudoElement",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPseudoElement",
+    "source_file": "api/CSSPseudoElement.json",
+    "spec_url": "https://drafts.csswg.org/css-pseudo/#CSSPseudoElement-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.css_pseudo_element.enabled",
+        "type": "preference"
+       }
+      ],
+      "version_added": "75"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPseudoElement.element",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPseudoElement/element",
+    "source_file": "api/CSSPseudoElement.json",
+    "spec_url": "https://drafts.csswg.org/css-pseudo/#dom-csspseudoelement-element",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.css_pseudo_element.enabled",
+        "type": "preference"
+       }
+      ],
+      "version_added": "75"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPseudoElement.type",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPseudoElement/type",
+    "source_file": "api/CSSPseudoElement.json",
+    "spec_url": "https://drafts.csswg.org/css-pseudo/#dom-csspseudoelement-type",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.css_pseudo_element.enabled",
+        "type": "preference"
+       }
+      ],
+      "version_added": "75"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSRule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSRule",
+    "source_file": "api/CSSRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#the-cssrule-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSRule.cssText",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSRule/cssText",
+    "source_file": "api/CSSRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssrule-csstext",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "notes": "The property normalizes rules and does not return the original verbatim rule text. For example, <code>border-width: 1px; border-style:solid; border-color:white;</code> returns <code>border: 1px solid white;</code>.",
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSRule.parentRule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSRule/parentRule",
+    "source_file": "api/CSSRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssrule-parentrule",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSRule.parentStyleSheet",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSRule/parentStyleSheet",
+    "source_file": "api/CSSRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssrule-parentstylesheet",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSRuleList",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSRuleList",
+    "source_file": "api/CSSRuleList.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#the-cssrulelist-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSRuleList.item",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSRuleList/item",
+    "source_file": "api/CSSRuleList.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssrulelist-item",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSRuleList.length",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSRuleList/length",
+    "source_file": "api/CSSRuleList.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssrulelist-length",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleDeclaration",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration",
+    "source_file": "api/CSSStyleDeclaration.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#the-cssstyledeclaration-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "5"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleDeclaration.@@iterator",
+   "compat": {
+    "description": "[Symbol.iterator]",
+    "source_file": "api/CSSStyleDeclaration.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "36"
+     },
+     "firefox_android": {
+      "version_added": "36"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "11"
+     },
+     "safari_ios": {
+      "version_added": "11"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": "11"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleDeclaration.cssFloat",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration/cssFloat",
+    "source_file": "api/CSSStyleDeclaration.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstyleproperties-cssfloat",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1",
+      "version_last": "16",
+      "version_removed": "17"
+     },
+     "firefox_android": {
+      "version_added": "4",
+      "version_last": "16",
+      "version_removed": "17"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleDeclaration.cssText",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration/cssText",
+    "source_file": "api/CSSStyleDeclaration.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-csstext",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "5"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleDeclaration.getPropertyPriority",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration/getPropertyPriority",
+    "source_file": "api/CSSStyleDeclaration.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-getpropertypriority",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleDeclaration.getPropertyValue",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration/getPropertyValue",
+    "source_file": "api/CSSStyleDeclaration.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-getpropertyvalue",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleDeclaration.item",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration/item",
+    "source_file": "api/CSSStyleDeclaration.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-item",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleDeclaration.length",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration/length",
+    "source_file": "api/CSSStyleDeclaration.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-length",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleDeclaration.parentRule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration/parentRule",
+    "source_file": "api/CSSStyleDeclaration.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-parentrule",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleDeclaration.removeProperty",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration/removeProperty",
+    "source_file": "api/CSSStyleDeclaration.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-removeproperty",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleDeclaration.setProperty",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleDeclaration/setProperty",
+    "source_file": "api/CSSStyleDeclaration.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-setproperty",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleRule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleRule",
+    "source_file": "api/CSSStyleRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#the-cssstylerule-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleRule.selectorText",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleRule/selectorText",
+    "source_file": "api/CSSStyleRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstylerule-selectortext",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleRule.style",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleRule/style",
+    "source_file": "api/CSSStyleRule.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstylerule-style",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleSheet",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleSheet",
+    "source_file": "api/CSSStyleSheet.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#the-cssstylesheet-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleSheet.cssRules",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleSheet/cssRules",
+    "source_file": "api/CSSStyleSheet.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstylesheet-cssrules",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleSheet.deleteRule",
+   "compat": {
+    "description": "<code>deleteRule()</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleSheet/deleteRule",
+    "source_file": "api/CSSStyleSheet.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstylesheet-deleterule",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleSheet.insertRule",
+   "compat": {
+    "description": "<code>insertRule()</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleSheet/insertRule",
+    "source_file": "api/CSSStyleSheet.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstylesheet-insertrule",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleSheet.insertRule.index_parameter_optional",
+   "compat": {
+    "description": "<code>index</code> parameter is optional",
+    "source_file": "api/CSSStyleSheet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "55"
+     },
+     "firefox_android": {
+      "version_added": "55"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSStyleSheet.ownerRule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSStyleSheet/ownerRule",
+    "source_file": "api/CSSStyleSheet.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-cssstylesheet-ownerrule",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.styleSheets",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/styleSheets",
+    "source_file": "api/Document.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-documentorshadowroot-stylesheets",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLElement.style",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/style",
+    "source_file": "api/HTMLElement.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-elementcssinlinestyle-style",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "5.5"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "8"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLLinkElement.sheet",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLLinkElement/sheet",
+    "source_file": "api/HTMLLinkElement.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-linkstyle-sheet",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLStyleElement.sheet",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLStyleElement/sheet",
+    "source_file": "api/HTMLStyleElement.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-linkstyle-sheet",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaList",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaList",
+    "source_file": "api/MediaList.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#the-medialist-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaList.appendMedium",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaList/appendMedium",
+    "source_file": "api/MediaList.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-medialist-appendmedium",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaList.deleteMedium",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaList/deleteMedium",
+    "source_file": "api/MediaList.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-medialist-deletemedium",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaList.item",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaList/item",
+    "source_file": "api/MediaList.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-medialist-item",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaList.length",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaList/length",
+    "source_file": "api/MediaList.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-medialist-length",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaList.mediaText",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaList/mediaText",
+    "source_file": "api/MediaList.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-medialist-mediatext",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaList.toString",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaList/toString",
+    "source_file": "api/MediaList.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#MediaList-stringification-behavior",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.ProcessingInstruction.sheet",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ProcessingInstruction/sheet",
+    "source_file": "api/ProcessingInstruction.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-linkstyle-sheet",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.ShadowRoot.styleSheets",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ShadowRoot/styleSheets",
+    "source_file": "api/ShadowRoot.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-documentorshadowroot-stylesheets",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "40"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "53"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.StyleSheet",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StyleSheet",
+    "source_file": "api/StyleSheet.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#the-stylesheet-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.StyleSheet.disabled",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StyleSheet/disabled",
+    "source_file": "api/StyleSheet.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-stylesheet-disabled",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.StyleSheet.href",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StyleSheet/href",
+    "source_file": "api/StyleSheet.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-stylesheet-href",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.StyleSheet.media",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StyleSheet/media",
+    "source_file": "api/StyleSheet.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-stylesheet-media",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.StyleSheet.ownerNode",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StyleSheet/ownerNode",
+    "source_file": "api/StyleSheet.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-stylesheet-ownernode",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.StyleSheet.parentStyleSheet",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StyleSheet/parentStyleSheet",
+    "source_file": "api/StyleSheet.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-stylesheet-parentstylesheet",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.StyleSheet.title",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StyleSheet/title",
+    "source_file": "api/StyleSheet.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-stylesheet-title",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.StyleSheet.type",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StyleSheet/type",
+    "source_file": "api/StyleSheet.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-stylesheet-type",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.StyleSheetList",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StyleSheetList",
+    "source_file": "api/StyleSheetList.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#the-stylesheetlist-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.StyleSheetList.item",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StyleSheetList/item",
+    "source_file": "api/StyleSheetList.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-stylesheetlist-item",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  },
+  {
+   "key": "api.StyleSheetList.length",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StyleSheetList/length",
+    "source_file": "api/StyleSheetList.json",
+    "spec_url": "https://drafts.csswg.org/cssom/#dom-stylesheetlist-length",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:css-object-model"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2015-09-30T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-03-30T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

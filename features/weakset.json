@@ -1,0 +1,697 @@
+{
+ "compat_features": [
+  "javascript.builtins.WeakSet",
+  "javascript.builtins.WeakSet.WeakSet",
+  "javascript.builtins.WeakSet.WeakSet.iterable_allowed",
+  "javascript.builtins.WeakSet.WeakSet.null_allowed",
+  "javascript.builtins.WeakSet.add",
+  "javascript.builtins.WeakSet.delete",
+  "javascript.builtins.WeakSet.has",
+  "javascript.builtins.WeakSet.symbol_as_keys"
+ ],
+ "description": "A WeakSet object stores unique values of any type without creating strong references to the values, such that membership in the set does not prevent garbage collection of the value.",
+ "description_html": "A <code>WeakSet</code> object stores unique values of any type without creating strong references to the values, such that membership in the set does not prevent garbage collection of the value.",
+ "group": "collections",
+ "name": "WeakSet",
+ "spec": [
+  {
+   "url": "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-weakset-objects",
+   "seriesComposition": "full",
+   "shortname": "ecmascript",
+   "series": {
+    "shortname": "ecmascript",
+    "currentSpecification": "ecmascript",
+    "title": "ECMAScript® 2026 Language Specification",
+    "shortTitle": "ECMAScript",
+    "nightlyUrl": "https://tc39.es/ecma262/multipage/"
+   },
+   "shortTitle": "ECMAScript",
+   "tests": {
+    "repository": "https://github.com/tc39/test262",
+    "testPaths": [
+     "test"
+    ],
+    "excludePaths": [
+     "test/intl402"
+    ]
+   },
+   "organization": "Ecma International",
+   "groups": [
+    {
+     "name": "TC39",
+     "url": "https://tc39.es/"
+    }
+   ],
+   "nightly": {
+    "url": "https://tc39.es/ecma262/multipage/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/tc39/ecma262",
+    "sourcePath": "spec.html",
+    "pages": [
+     "https://tc39.es/ecma262/multipage/scope.html",
+     "https://tc39.es/ecma262/multipage/conformance.html",
+     "https://tc39.es/ecma262/multipage/normative-references.html",
+     "https://tc39.es/ecma262/multipage/overview.html",
+     "https://tc39.es/ecma262/multipage/notational-conventions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html",
+     "https://tc39.es/ecma262/multipage/abstract-operations.html",
+     "https://tc39.es/ecma262/multipage/syntax-directed-operations.html",
+     "https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html",
+     "https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-source-code.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html",
+     "https://tc39.es/ecma262/multipage/error-handling-and-language-extensions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-standard-built-in-objects.html",
+     "https://tc39.es/ecma262/multipage/global-object.html",
+     "https://tc39.es/ecma262/multipage/fundamental-objects.html",
+     "https://tc39.es/ecma262/multipage/numbers-and-dates.html",
+     "https://tc39.es/ecma262/multipage/text-processing.html",
+     "https://tc39.es/ecma262/multipage/indexed-collections.html",
+     "https://tc39.es/ecma262/multipage/keyed-collections.html",
+     "https://tc39.es/ecma262/multipage/structured-data.html",
+     "https://tc39.es/ecma262/multipage/managing-memory.html",
+     "https://tc39.es/ecma262/multipage/control-abstraction-objects.html",
+     "https://tc39.es/ecma262/multipage/reflection.html",
+     "https://tc39.es/ecma262/multipage/memory-model.html",
+     "https://tc39.es/ecma262/multipage/grammar-summary.html",
+     "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html",
+     "https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html",
+     "https://tc39.es/ecma262/multipage/host-layering-points.html",
+     "https://tc39.es/ecma262/multipage/corrections-and-clarifications-in-ecmascript-2015-with-possible-compatibility-impact.html",
+     "https://tc39.es/ecma262/multipage/additions-and-changes-that-introduce-incompatibilities-with-prior-editions.html",
+     "https://tc39.es/ecma262/multipage/bibliography.html",
+     "https://tc39.es/ecma262/multipage/colophon.html",
+     "https://tc39.es/ecma262/multipage/copyright-and-software-license.html"
+    ],
+    "filename": "index.html"
+   },
+   "title": "ECMAScript® 2026 Language Specification",
+   "source": "spec",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": "sec-weakset-objects"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-03-30",
+  "baseline_low_date": "2015-09-30",
+  "support": {
+   "chrome": "36",
+   "chrome_android": "36",
+   "edge": "12",
+   "firefox": "34",
+   "firefox_android": "34",
+   "safari": "9",
+   "safari_ios": "9"
+  }
+ },
+ "id": "weakset",
+ "groups": [
+  "collections"
+ ],
+ "groupPaths": [
+  [
+   "JavaScript",
+   "Collections"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "WeakSet",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WeakSet"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "javascript.builtins.WeakSet",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "source_file": "javascript/builtins/WeakSet.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-weakset-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "36"
+     },
+     "chrome_android": {
+      "version_added": "36"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:weakset"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.WeakSet.WeakSet",
+   "compat": {
+    "description": "<code>WeakSet()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet",
+    "source_file": "javascript/builtins/WeakSet.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-weakset-constructor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "36"
+     },
+     "chrome_android": {
+      "version_added": "36"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:weakset"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.WeakSet.WeakSet.iterable_allowed",
+   "compat": {
+    "description": "<code>new WeakSet(iterable)</code>",
+    "source_file": "javascript/builtins/WeakSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:weakset"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.WeakSet.WeakSet.null_allowed",
+   "compat": {
+    "description": "<code>new WeakSet(null)</code>",
+    "source_file": "javascript/builtins/WeakSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "36"
+     },
+     "chrome_android": {
+      "version_added": "36"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "37"
+     },
+     "firefox_android": {
+      "version_added": "37"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:weakset"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.WeakSet.add",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/add",
+    "source_file": "javascript/builtins/WeakSet.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-weakset.prototype.add",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "36"
+     },
+     "chrome_android": {
+      "version_added": "36"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:weakset"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.WeakSet.delete",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/delete",
+    "source_file": "javascript/builtins/WeakSet.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-weakset.prototype.delete",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "36"
+     },
+     "chrome_android": {
+      "version_added": "36"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:weakset"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.WeakSet.has",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/has",
+    "source_file": "javascript/builtins/WeakSet.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/keyed-collections.html#sec-weakset.prototype.has",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "36"
+     },
+     "chrome_android": {
+      "version_added": "36"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:weakset"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.WeakSet.symbol_as_keys",
+   "compat": {
+    "description": "Non-registered symbols as keys",
+    "source_file": "javascript/builtins/WeakSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "109"
+     },
+     "chrome_android": {
+      "version_added": "109"
+     },
+     "deno": {
+      "version_added": "1.28"
+     },
+     "edge": {
+      "version_added": "109"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1710433",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1710433",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "20.0.0"
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "95"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "109"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2023",
+     "web-features:weakset"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "javascript"
+ ],
+ "baselineLowDateAsObject": "2015-09-30T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-03-30T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [
+   "https://bugzil.la/1710433"
+  ],
+  "firefox_android": [
+   "https://bugzil.la/1710433"
+  ],
+  "safari": [],
+  "safari_ios": []
+ }
+}

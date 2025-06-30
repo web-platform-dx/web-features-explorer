@@ -1,0 +1,1359 @@
+{
+ "caniuse": "es6-module",
+ "compat_features": [
+  "api.Worklet.ecmascript_modules",
+  "html.elements.script.nomodule",
+  "html.elements.script.type.module",
+  "javascript.operators.import",
+  "javascript.operators.import_meta",
+  "javascript.operators.import_meta.resolve",
+  "javascript.statements.export",
+  "javascript.statements.export.arbitrary_module_namespace_identifier_names",
+  "javascript.statements.export.default",
+  "javascript.statements.export.namespace",
+  "javascript.statements.import",
+  "javascript.statements.import.arbitrary_module_namespace_identifier_names",
+  "javascript.statements.import.import_attributes",
+  "javascript.statements.import.worklet_support",
+  "svg.elements.script.type.module"
+ ],
+ "description": "JavaScript modules allow code to be organized into reusable units. Modules use import to load other modules and export to declare what is available to import from other modules. In HTML, modules are loaded with <script type=\"module\">.",
+ "description_html": "JavaScript modules allow code to be organized into reusable units. Modules use <code>import</code> to load other modules and <code>export</code> to declare what is available to import from other modules. In HTML, modules are loaded with <code>&#x3C;script type=\"module\"></code>.",
+ "group": "js-modules",
+ "name": "JavaScript modules",
+ "snapshot": "ecmascript-2015",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/webappapis.html#javascript-module-script",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "javascript-module-script"
+  },
+  {
+   "url": "https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html#sec-modules",
+   "seriesComposition": "full",
+   "shortname": "ecmascript",
+   "series": {
+    "shortname": "ecmascript",
+    "currentSpecification": "ecmascript",
+    "title": "ECMAScript® 2026 Language Specification",
+    "shortTitle": "ECMAScript",
+    "nightlyUrl": "https://tc39.es/ecma262/multipage/"
+   },
+   "shortTitle": "ECMAScript",
+   "tests": {
+    "repository": "https://github.com/tc39/test262",
+    "testPaths": [
+     "test"
+    ],
+    "excludePaths": [
+     "test/intl402"
+    ]
+   },
+   "organization": "Ecma International",
+   "groups": [
+    {
+     "name": "TC39",
+     "url": "https://tc39.es/"
+    }
+   ],
+   "nightly": {
+    "url": "https://tc39.es/ecma262/multipage/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/tc39/ecma262",
+    "sourcePath": "spec.html",
+    "pages": [
+     "https://tc39.es/ecma262/multipage/scope.html",
+     "https://tc39.es/ecma262/multipage/conformance.html",
+     "https://tc39.es/ecma262/multipage/normative-references.html",
+     "https://tc39.es/ecma262/multipage/overview.html",
+     "https://tc39.es/ecma262/multipage/notational-conventions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html",
+     "https://tc39.es/ecma262/multipage/abstract-operations.html",
+     "https://tc39.es/ecma262/multipage/syntax-directed-operations.html",
+     "https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html",
+     "https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-source-code.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html",
+     "https://tc39.es/ecma262/multipage/error-handling-and-language-extensions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-standard-built-in-objects.html",
+     "https://tc39.es/ecma262/multipage/global-object.html",
+     "https://tc39.es/ecma262/multipage/fundamental-objects.html",
+     "https://tc39.es/ecma262/multipage/numbers-and-dates.html",
+     "https://tc39.es/ecma262/multipage/text-processing.html",
+     "https://tc39.es/ecma262/multipage/indexed-collections.html",
+     "https://tc39.es/ecma262/multipage/keyed-collections.html",
+     "https://tc39.es/ecma262/multipage/structured-data.html",
+     "https://tc39.es/ecma262/multipage/managing-memory.html",
+     "https://tc39.es/ecma262/multipage/control-abstraction-objects.html",
+     "https://tc39.es/ecma262/multipage/reflection.html",
+     "https://tc39.es/ecma262/multipage/memory-model.html",
+     "https://tc39.es/ecma262/multipage/grammar-summary.html",
+     "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html",
+     "https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html",
+     "https://tc39.es/ecma262/multipage/host-layering-points.html",
+     "https://tc39.es/ecma262/multipage/corrections-and-clarifications-in-ecmascript-2015-with-possible-compatibility-impact.html",
+     "https://tc39.es/ecma262/multipage/additions-and-changes-that-introduce-incompatibilities-with-prior-editions.html",
+     "https://tc39.es/ecma262/multipage/bibliography.html",
+     "https://tc39.es/ecma262/multipage/colophon.html",
+     "https://tc39.es/ecma262/multipage/copyright-and-software-license.html"
+    ],
+    "filename": "index.html"
+   },
+   "title": "ECMAScript® 2026 Language Specification",
+   "source": "spec",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": "sec-modules"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2020-11-09",
+  "baseline_low_date": "2018-05-09",
+  "support": {
+   "chrome": "61",
+   "chrome_android": "61",
+   "edge": "16",
+   "firefox": "60",
+   "firefox_android": "60",
+   "safari": "11",
+   "safari_ios": "11"
+  }
+ },
+ "id": "js-modules",
+ "groups": [
+  "js-modules"
+ ],
+ "groupPaths": [
+  [
+   "JavaScript modules"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "<script> type attribute",
+   "anchor": "module",
+   "url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type#module"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "stateOfSurveys": [
+  {
+   "name": "State of HTML 2024",
+   "link": "https://2024.stateofhtml.com/en-US/features/web_components/#web_components_features",
+   "question": "web_components",
+   "subQuestion": "web_components_features",
+   "path": "dataAPI.surveys.state_of_html.html2024.web_components.web_components_features.10.entity"
+  },
+  {
+   "name": "State of HTML 2024",
+   "link": "https://2024.stateofhtml.com/en-US/features/web_components/#web_component_features",
+   "question": "web_components",
+   "subQuestion": "web_component_features",
+   "path": "dataAPI.surveys.state_of_html.html2024.web_components.web_component_features.10.entity"
+  },
+  {
+   "name": "State of HTML 2024",
+   "link": "https://2024.stateofhtml.com/en-US/features/#all_features",
+   "question": "features",
+   "subQuestion": "all_features",
+   "path": "dataAPI.surveys.state_of_html.html2024.features.all_features.37.entity"
+  },
+  {
+   "name": "State of HTML 2023",
+   "link": "https://2023.stateofhtml.com/en-US/features/web_components/#web_components_main_features",
+   "question": "web_components",
+   "subQuestion": "web_components_main_features",
+   "path": "dataAPI.surveys.state_of_html.html2023.web_components.web_components_main_features.10.entity"
+  },
+  {
+   "name": "State of HTML 2023",
+   "link": "https://2023.stateofhtml.com/en-US/features/#all_features",
+   "question": "features",
+   "subQuestion": "all_features",
+   "path": "dataAPI.surveys.state_of_html.html2023.features.all_features.30.entity"
+  }
+ ],
+ "useCounters": {
+  "percentageOfPageLoad": 0.266594,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/47"
+ },
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Worklet.ecmascript_modules",
+   "compat": {
+    "description": "Support for ECMAScript modules",
+    "source_file": "api/Worklet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": "80"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "80"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "67"
+     },
+     "opera_android": {
+      "version_added": "57"
+     },
+     "safari": {
+      "notes": [
+       "Nested workers support was introduced in Safari 15.5.",
+       "Script loading in nested workers was introduced in Safari 16.4."
+      ],
+      "version_added": "15"
+     },
+     "safari_ios": {
+      "notes": [
+       "Nested workers support was introduced in Safari on iOS 15.5.",
+       "Script loading in nested workers was introduced in Safari on iOS 16.4."
+      ],
+      "version_added": "15"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "80"
+     },
+     "webview_ios": {
+      "notes": [
+       "Nested workers support was introduced in WebView on iOS 15.5.",
+       "Script loading in nested workers was introduced in WebView on iOS 16.4."
+      ],
+      "version_added": "15"
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.script.nomodule",
+   "compat": {
+    "source_file": "html/elements/script.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/scripting.html#attr-script-nomodule",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "11"
+     },
+     "safari_ios": {
+      "version_added": "11"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "11"
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.script.type.module",
+   "compat": {
+    "description": "<code>type=\"module\"</code>",
+    "source_file": "html/elements/script.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Module scripts without the <code>async</code> attribute do not load when the page is served as XHTML (<code>application/xhtml+xml</code>). See <a href=\"https://crbug.com/40518469\">bug 40518469</a>.",
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "notes": "Module scripts without the <code>async</code> attribute do not load when the page is served as XHTML (<code>application/xhtml+xml</code>). See <a href=\"https://crbug.com/40518469\">bug 40518469</a>.",
+      "version_added": "61"
+     },
+     "edge": [
+      {
+       "notes": "Module scripts without the <code>async</code> attribute do not load when the page is served as XHTML (<code>application/xhtml+xml</code>). See <a href=\"https://crbug.com/40518469\">bug 40518469</a>.",
+       "version_added": "79"
+      },
+      {
+       "version_added": "16",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Module scripts without the <code>async</code> attribute do not load when the page is served as XHTML (<code>application/xhtml+xml</code>). See <a href=\"https://crbug.com/40518469\">bug 40518469</a>.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Module scripts without the <code>async</code> attribute do not load when the page is served as XHTML (<code>application/xhtml+xml</code>). See <a href=\"https://crbug.com/40518469\">bug 40518469</a>.",
+      "version_added": "48"
+     },
+     "opera_android": {
+      "notes": "Module scripts without the <code>async</code> attribute do not load when the page is served as XHTML (<code>application/xhtml+xml</code>). See <a href=\"https://crbug.com/40518469\">bug 40518469</a>.",
+      "version_added": "45"
+     },
+     "safari": {
+      "notes": "Module scripts do not load when the page is served as XHTML (<code>application/xhtml+xml</code>).",
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "notes": "Module scripts do not load when the page is served as XHTML (<code>application/xhtml+xml</code>).",
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "notes": "Module scripts without the <code>async</code> attribute do not load when the page is served as XHTML (<code>application/xhtml+xml</code>). See <a href=\"https://crbug.com/40518469\">bug 40518469</a>.",
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "notes": "Module scripts without the <code>async</code> attribute do not load when the page is served as XHTML (<code>application/xhtml+xml</code>). See <a href=\"https://crbug.com/40518469\">bug 40518469</a>.",
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "notes": "Module scripts do not load when the page is served as XHTML (<code>application/xhtml+xml</code>).",
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  },
+  {
+   "key": "javascript.operators.import",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/import",
+    "source_file": "javascript/operators/import.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-import-calls",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "63"
+     },
+     "chrome_android": {
+      "version_added": "63"
+     },
+     "deno": {
+      "notes": "Bundled Deno applications (using <code>deno compile</code>) do not support dynamic imports",
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "67"
+     },
+     "firefox_android": {
+      "version_added": "67"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": [
+      {
+       "notes": "Dynamic <code>import</code> can be used in either CommonJS or ES module files, to import either CommonJS or ES module files. See Node's <a href=\"https://nodejs.org/api/esm.html#esm_import_expressions\">ECMAScript Modules documentation</a> for more details.",
+       "version_added": "13.2.0"
+      },
+      {
+       "notes": "Dynamic <code>import</code> can be used in either CommonJS or ES module files, to import either CommonJS or ES module files. See Node's <a href=\"https://nodejs.org/api/esm.html#esm_import_expressions\">ECMAScript Modules documentation</a> for more details.",
+       "version_added": "12.17.0",
+       "version_last": "12.19.0",
+       "version_removed": "13.0.0"
+      }
+     ],
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "50"
+     },
+     "opera_android": {
+      "version_added": "46"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "63"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  },
+  {
+   "key": "javascript.operators.import_meta",
+   "compat": {
+    "description": "<code>import.meta</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/import.meta",
+    "source_file": "javascript/operators/import_meta.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-ImportMeta",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "64"
+     },
+     "chrome_android": {
+      "version_added": "64"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "62"
+     },
+     "firefox_android": {
+      "version_added": "62"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "10.4.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "51"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "12"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "64"
+     },
+     "webview_ios": {
+      "version_added": "12"
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  },
+  {
+   "key": "javascript.operators.import_meta.resolve",
+   "compat": {
+    "description": "<code>import.meta.resolve</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/import.meta/resolve",
+    "source_file": "javascript/operators/import_meta.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/webappapis.html#import-meta-resolve",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "105"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "deno": {
+      "version_added": "1.24"
+     },
+     "edge": {
+      "version_added": "105"
+     },
+     "firefox": {
+      "version_added": "106"
+     },
+     "firefox_android": {
+      "version_added": "106"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": [
+      {
+       "version_added": "20.8.0"
+      },
+      {
+       "notes": "Returns a <code>URL</code> object instead of a string.",
+       "partial_implementation": true,
+       "version_added": "20.6.0",
+       "version_last": "20.6.0",
+       "version_removed": "20.8.0"
+      },
+      {
+       "version_added": "18.19.0",
+       "version_last": "18.20.0",
+       "version_removed": "19.0.0"
+      }
+     ],
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "91"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": "105"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  },
+  {
+   "key": "javascript.statements.export",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export",
+    "source_file": "javascript/statements.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html#sec-exports",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "notes": "Modules must either have a filename ending in <code>.mjs</code>, or the nearest parent <code>package.json</code> file must contain <code>\"type\": \"module\"</code>. See Node's <a href=\"https://nodejs.org/api/esm.html#esm_enabling\">ECMAScript Modules documentation</a> for more details.",
+      "version_added": "13.2.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  },
+  {
+   "key": "javascript.statements.export.arbitrary_module_namespace_identifier_names",
+   "compat": {
+    "description": "Arbitrary module namespace identifier names",
+    "source_file": "javascript/statements.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "88"
+     },
+     "chrome_android": {
+      "version_added": "88"
+     },
+     "deno": {
+      "version_added": "1.6"
+     },
+     "edge": {
+      "version_added": "88"
+     },
+     "firefox": {
+      "version_added": "87"
+     },
+     "firefox_android": {
+      "version_added": "87"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "16.0.0"
+     },
+     "oculus": {
+      "version_added": "14.0"
+     },
+     "opera": {
+      "version_added": "74"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "88"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  },
+  {
+   "key": "javascript.statements.export.default",
+   "compat": {
+    "description": "<code>default</code> keyword with <code>export</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export",
+    "source_file": "javascript/statements.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html#sec-exports",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "notes": "Modules must either have a filename ending in <code>.mjs</code>, or the nearest parent <code>package.json</code> file must contain <code>\"type\": \"module\"</code>. See Node's <a href=\"https://nodejs.org/api/esm.html#esm_enabling\">ECMAScript Modules documentation</a> for more details.",
+      "version_added": "13.2.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  },
+  {
+   "key": "javascript.statements.export.namespace",
+   "compat": {
+    "description": "<code>export * as namespace</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export",
+    "source_file": "javascript/statements.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html#sec-exports",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "72"
+     },
+     "chrome_android": {
+      "version_added": "72"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "80"
+     },
+     "firefox_android": {
+      "version_added": "80"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "notes": "Modules must either have a filename ending in <code>.mjs</code>, or the nearest parent <code>package.json</code> file must contain <code>\"type\": \"module\"</code>. See Node's <a href=\"https://nodejs.org/api/esm.html#esm_enabling\">ECMAScript Modules documentation</a> for more details.",
+      "version_added": "13.2.0"
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "60"
+     },
+     "opera_android": {
+      "version_added": "51"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "11.0"
+     },
+     "webview_android": {
+      "version_added": "72"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  },
+  {
+   "key": "javascript.statements.import",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import",
+    "source_file": "javascript/statements.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html#sec-imports",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": [
+      {
+       "notes": "Modules must either have a filename ending in <code>.mjs</code>, or the nearest parent <code>package.json</code> file must contain <code>\"type\": \"module\"</code>. See Node's <a href=\"https://nodejs.org/api/esm.html#esm_enabling\">ECMAScript Modules documentation</a> for more details.",
+       "version_added": "13.2.0"
+      },
+      {
+       "notes": "Modules must either have a filename ending in <code>.mjs</code>, or the nearest parent <code>package.json</code> file must contain <code>\"type\": \"module\"</code>. See Node's <a href=\"https://nodejs.org/api/esm.html#esm_enabling\">ECMAScript Modules documentation</a> for more details.",
+       "version_added": "12.17.0",
+       "version_last": "12.19.0",
+       "version_removed": "13.0.0"
+      }
+     ],
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  },
+  {
+   "key": "javascript.statements.import.arbitrary_module_namespace_identifier_names",
+   "compat": {
+    "description": "Arbitrary module namespace identifier names",
+    "source_file": "javascript/statements.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "88"
+     },
+     "chrome_android": {
+      "version_added": "88"
+     },
+     "deno": {
+      "version_added": "1.6"
+     },
+     "edge": {
+      "version_added": "88"
+     },
+     "firefox": {
+      "version_added": "87"
+     },
+     "firefox_android": {
+      "version_added": "87"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "16.0.0"
+     },
+     "oculus": {
+      "version_added": "14.0"
+     },
+     "opera": {
+      "version_added": "74"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "88"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  },
+  {
+   "key": "javascript.statements.import.import_attributes",
+   "compat": {
+    "description": "Import attributes (<code>with</code> syntax)",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import/with",
+    "source_file": "javascript/statements.json",
+    "spec_url": "https://tc39.es/proposal-import-attributes/#prod-WithClause",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "deno": {
+      "version_added": "1.37"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": "138"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": [
+      {
+       "version_added": "20.10.0"
+      },
+      {
+       "version_added": "18.20.0",
+       "version_last": "18.20.0",
+       "version_removed": "19.0.0"
+      }
+     ],
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": "17.2"
+     },
+     "safari_ios": {
+      "version_added": "17.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": "17.2"
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  },
+  {
+   "key": "javascript.statements.import.worklet_support",
+   "compat": {
+    "description": "Available in worklets",
+    "source_file": "javascript/statements.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  },
+  {
+   "key": "svg.elements.script.type.module",
+   "compat": {
+    "description": "<code>type='module'</code>",
+    "source_file": "svg/elements/script.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "117"
+     },
+     "firefox_android": {
+      "version_added": "117"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:js-modules"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "html",
+  "javascript",
+  "svg"
+ ],
+ "baselineLowDateAsObject": "2018-05-09T00:00:00.000Z",
+ "baselineHighDateAsObject": "2020-11-09T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

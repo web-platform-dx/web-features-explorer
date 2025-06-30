@@ -1,0 +1,777 @@
+{
+ "compat_features": [
+  "api.XSLTProcessor",
+  "api.XSLTProcessor.XSLTProcessor",
+  "api.XSLTProcessor.clearParameters",
+  "api.XSLTProcessor.getParameter",
+  "api.XSLTProcessor.importStylesheet",
+  "api.XSLTProcessor.removeParameter",
+  "api.XSLTProcessor.reset",
+  "api.XSLTProcessor.setParameter",
+  "api.XSLTProcessor.transformToDocument",
+  "api.XSLTProcessor.transformToFragment"
+ ],
+ "description": "The XSLTProcessor API transforms XML documents into new XML or HTML documents, using XSLT stylesheets. You can use XSLT to convert data between different XML schemas or to convert XML data into web pages or PDF documents. Also known as Extensible Stylesheet Language Transformations.",
+ "description_html": "The <code>XSLTProcessor</code> API transforms XML documents into new XML or HTML documents, using XSLT stylesheets. You can use XSLT to convert data between different XML schemas or to convert XML data into web pages or PDF documents. Also known as Extensible Stylesheet Language Transformations.",
+ "group": "xml",
+ "name": "XSLT",
+ "spec": [
+  {
+   "url": "https://dom.spec.whatwg.org/#xslt",
+   "seriesComposition": "full",
+   "shortname": "dom",
+   "series": {
+    "shortname": "dom",
+    "currentSpecification": "dom",
+    "title": "DOM",
+    "shortTitle": "DOM",
+    "nightlyUrl": "https://dom.spec.whatwg.org/"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "DOM Workstream",
+     "url": "https://dom.spec.whatwg.org/"
+    }
+   ],
+   "nightly": {
+    "url": "https://dom.spec.whatwg.org/",
+    "status": "Living Standard",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/dom",
+    "sourcePath": "dom.bs",
+    "filename": "index.html"
+   },
+   "title": "DOM",
+   "source": "whatwg",
+   "shortTitle": "DOM",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "dom",
+     "shadow-dom"
+    ]
+   },
+   "fragment": "xslt"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "1",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "1",
+   "firefox_android": "4",
+   "safari": "3.1",
+   "safari_ios": "2"
+  }
+ },
+ "id": "xslt",
+ "groups": [
+  "xml"
+ ],
+ "groupPaths": [
+  [
+   "XML"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "XSLTProcessor",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/XSLTProcessor"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.XSLTProcessor",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XSLTProcessor",
+    "source_file": "api/XSLTProcessor.json",
+    "spec_url": "https://dom.spec.whatwg.org/#interface-xsltprocessor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:xslt"
+    ]
+   }
+  },
+  {
+   "key": "api.XSLTProcessor.XSLTProcessor",
+   "compat": {
+    "description": "<code>XSLTProcessor()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XSLTProcessor/XSLTProcessor",
+    "source_file": "api/XSLTProcessor.json",
+    "spec_url": "https://dom.spec.whatwg.org/#dom-xsltprocessor-xsltprocessor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:xslt"
+    ]
+   }
+  },
+  {
+   "key": "api.XSLTProcessor.clearParameters",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XSLTProcessor/clearParameters",
+    "source_file": "api/XSLTProcessor.json",
+    "spec_url": "https://dom.spec.whatwg.org/#dom-xsltprocessor-clearparameters",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:xslt"
+    ]
+   }
+  },
+  {
+   "key": "api.XSLTProcessor.getParameter",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XSLTProcessor/getParameter",
+    "source_file": "api/XSLTProcessor.json",
+    "spec_url": "https://dom.spec.whatwg.org/#dom-xsltprocessor-getparameter",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Chrome only supports string values.",
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "notes": "Chrome Android only supports string values.",
+      "version_added": "18"
+     },
+     "edge": {
+      "notes": "Edge only supports string values.",
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Quest Browser only supports string values.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Opera only supports string values.",
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "notes": "Opera only supports string values.",
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "notes": "Safari only supports string values.",
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "notes": "Safari on iOS only supports string values.",
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "notes": "Samsung Internet only supports string values.",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "notes": "WebView only supports string values.",
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "notes": "WebView on iOS only supports string values.",
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:xslt"
+    ]
+   }
+  },
+  {
+   "key": "api.XSLTProcessor.importStylesheet",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XSLTProcessor/importStylesheet",
+    "source_file": "api/XSLTProcessor.json",
+    "spec_url": "https://dom.spec.whatwg.org/#dom-xsltprocessor-importstylesheet",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:xslt"
+    ]
+   }
+  },
+  {
+   "key": "api.XSLTProcessor.removeParameter",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XSLTProcessor/removeParameter",
+    "source_file": "api/XSLTProcessor.json",
+    "spec_url": "https://dom.spec.whatwg.org/#dom-xsltprocessor-removeparameter",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:xslt"
+    ]
+   }
+  },
+  {
+   "key": "api.XSLTProcessor.reset",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XSLTProcessor/reset",
+    "source_file": "api/XSLTProcessor.json",
+    "spec_url": "https://dom.spec.whatwg.org/#dom-xsltprocessor-reset",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:xslt"
+    ]
+   }
+  },
+  {
+   "key": "api.XSLTProcessor.setParameter",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XSLTProcessor/setParameter",
+    "source_file": "api/XSLTProcessor.json",
+    "spec_url": "https://dom.spec.whatwg.org/#dom-xsltprocessor-setparameter",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Chrome only supports string values.",
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "notes": "Chrome Android only supports string values.",
+      "version_added": "18"
+     },
+     "edge": {
+      "notes": "Edge only supports string values.",
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Quest Browser only supports string values.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Opera only supports string values.",
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "notes": "Opera only supports string values.",
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "notes": "Safari only supports string values.",
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "notes": "Safari on iOS only supports string values.",
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "notes": "Samsung Internet only supports string values.",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "notes": "WebView only supports string values.",
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "notes": "WebView on iOS only supports string values.",
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:xslt"
+    ]
+   }
+  },
+  {
+   "key": "api.XSLTProcessor.transformToDocument",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XSLTProcessor/transformToDocument",
+    "source_file": "api/XSLTProcessor.json",
+    "spec_url": "https://dom.spec.whatwg.org/#dom-xsltprocessor-transformtodocument",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Chrome returns <code>null</code> if an error occurs.",
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "notes": "Chrome Android returns <code>null</code> if an error occurs.",
+      "version_added": "18"
+     },
+     "edge": {
+      "notes": "Edge returns <code>null</code> if an error occurs.",
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": "Firefox throws an exception if an error occurs.",
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "notes": "Firefox for Android throws an exception if an error occurs.",
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Quest Browser returns <code>null</code> if an error occurs.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": [
+       "Opera 12.1 and earlier throws an exception if an error occurs.",
+       "Opera 15 and later returns <code>null</code> if an error occurs."
+      ],
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "notes": [
+       "Opera Android 12.1 and earlier throws an exception if an error occurs.",
+       "Opera Android 14 and later returns <code>null</code> if an error occurs."
+      ],
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "notes": "Safari returns <code>null</code> if an error occurs.",
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "notes": "Safari on iOS returns <code>null</code> if an error occurs.",
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "notes": "Samsung Internet returns <code>null</code> if an error occurs.",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "notes": "WebView returns <code>null</code> if an error occurs.",
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "notes": "WebView on iOS returns <code>null</code> if an error occurs.",
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:xslt"
+    ]
+   }
+  },
+  {
+   "key": "api.XSLTProcessor.transformToFragment",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XSLTProcessor/transformToFragment",
+    "source_file": "api/XSLTProcessor.json",
+    "spec_url": "https://dom.spec.whatwg.org/#dom-xsltprocessor-transformtofragment",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Chrome returns <code>null</code> if an error occurs.",
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "notes": "Chrome Android returns <code>null</code> if an error occurs.",
+      "version_added": "18"
+     },
+     "edge": {
+      "notes": "Edge returns <code>null</code> if an error occurs.",
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": "Firefox throws an exception if an error occurs.",
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "notes": "Firefox for Android throws an exception if an error occurs.",
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Quest Browser returns <code>null</code> if an error occurs.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": [
+       "Opera 12.1 and earlier throws an exception if an error occurs.",
+       "Opera 15 and later returns <code>null</code> if an error occurs."
+      ],
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "notes": [
+       "Opera Android 12.1 and earlier throws an exception if an error occurs.",
+       "Opera Android 14 and later returns <code>null</code> if an error occurs."
+      ],
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "notes": "Safari returns <code>null</code> if an error occurs.",
+      "version_added": "3.1"
+     },
+     "safari_ios": {
+      "notes": "Safari on iOS returns <code>null</code> if an error occurs.",
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "notes": "Samsung Internet returns <code>null</code> if an error occurs.",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "notes": "WebView returns <code>null</code> if an error occurs.",
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "notes": "WebView on iOS returns <code>null</code> if an error occurs.",
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:xslt"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

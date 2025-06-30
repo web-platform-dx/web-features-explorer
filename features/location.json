@@ -1,0 +1,1394 @@
+{
+ "compat_features": [
+  "api.Document.location",
+  "api.Location",
+  "api.Location.ancestorOrigins",
+  "api.Location.assign",
+  "api.Location.hash",
+  "api.Location.host",
+  "api.Location.hostname",
+  "api.Location.href",
+  "api.Location.origin",
+  "api.Location.pathname",
+  "api.Location.port",
+  "api.Location.protocol",
+  "api.Location.reload",
+  "api.Location.replace",
+  "api.Location.search",
+  "api.Location.toString",
+  "api.Window.location"
+ ],
+ "description": "The location global object represents the current page's address. You can use it to get the parts of the address (such as location.hostname or location.pathname) or navigate to another URL.",
+ "description_html": "The <code>location</code> global object represents the current page's address. You can use it to get the parts of the address (such as <code>location.hostname</code> or <code>location.pathname</code>) or navigate to another URL.",
+ "name": "Location",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-location-interface",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "the-location-interface"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "1",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "1",
+   "firefox_android": "4",
+   "safari": "1",
+   "safari_ios": "1"
+  }
+ },
+ "id": "location",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Document: location property",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Document/location"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Document.location",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/location",
+    "source_file": "api/Document.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-location-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": [
+      {
+       "version_added": "4"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "1",
+       "version_last": "3.1",
+       "version_removed": "4"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "3.2"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "1",
+       "version_last": "3",
+       "version_removed": "3.2"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": [
+      {
+       "version_added": "3.2"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "1",
+       "version_last": "3",
+       "version_removed": "3.2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-location-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location.ancestorOrigins",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/ancestorOrigins",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-ancestororigins-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "20"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "notes": "This value is always empty in Deno.",
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location.assign",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/assign",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-assign-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "notes": "This method exists but has no effect in Deno. A location can be assigned using the <code>--location</code> runtime flag.",
+      "partial_implementation": true,
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "5.5"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location.hash",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/hash",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-hash-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location.host",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/host",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-host-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location.hostname",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/hostname",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-hostname-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location.href",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/href",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-href-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location.origin",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/origin",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-origin-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "8"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": "Before Firefox 49, results for URL using the blob scheme incorrectly returned null.",
+      "version_added": "21"
+     },
+     "firefox_android": {
+      "notes": "Before Firefox for Android 49, results for URL using the blob scheme incorrectly returned null.",
+      "version_added": "21"
+     },
+     "ie": {
+      "notes": "Intranet sites are set to Compatibility View, which will emulate IE7 and omit <code>window.location.origin</code>.",
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "5.1"
+     },
+     "safari_ios": {
+      "version_added": "5"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "5"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location.pathname",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/pathname",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-pathname-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": "Before Firefox 53, the <code>pathname</code> property returned wrong parts of the URL. For example, for a URL of <code>https://z.com/x?a=true&amp;b=false</code>, <code>pathname</code> would return \"/x?a=true&amp;b=false\" rather than \"/x\".",
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "notes": "Before Firefox for Android 53, the <code>pathname</code> property returned wrong parts of the URL. For example, for a URL of <code>https://z.com/x?a=true&amp;b=false</code>, <code>pathname</code> would return \"/x?a=true&amp;b=false\" rather than \"/x\".",
+      "version_added": "4"
+     },
+     "ie": {
+      "notes": "Internet Explorer does not provide the leading slash character in the <code>pathname</code> (<code>docs/Web/API/Location</code> instead of <code>/docs/Web/API/Location</code>).",
+      "version_added": "3"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location.port",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/port",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-port-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location.protocol",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/protocol",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-protocol-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location.reload",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/reload",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-reload-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "notes": "This method exists but has no effect in Deno.",
+      "partial_implementation": true,
+      "version_added": "1.7"
+     },
+     "edge": {
+      "notes": "Before Edge 79, if a page added to <em>Trusted Sites</em> contains a cross-origin iframe, then calling <code>reload()</code> from within the iframe reloads the trusted page (in other words, the top page reloads, not the iframe).",
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "notes": "If a page added to <em>Trusted Sites</em> contains a cross-origin iframe, then calling <code>reload()</code> from within the iframe reloads the trusted page (in other words, the top page reloads, not the iframe).",
+      "version_added": "5.5"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location.replace",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/replace",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-replace-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "notes": "This method exists but has no effect in Deno. A location can be assigned using the <code>--location</code> runtime flag.",
+      "partial_implementation": true,
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "5.5"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location.search",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/search",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-search-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": "Before Firefox 53, the <code>search</code> property returned wrong parts of the URL. For example, for a URL of <code>https://z.com/x?a=true&amp;b=false</code>, <code>search</code> would return \"\", rather than \"?a=true&amp;b=false\".",
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "notes": "Before Firefox for Android 53, the <code>search</code> property returned wrong parts of the URL. For example, for a URL of <code>https://z.com/x?a=true&amp;b=false</code>, <code>search</code> would return \"\", rather than \"?a=true&amp;b=false\".",
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Location.toString",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/toString",
+    "source_file": "api/Location.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-href-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "52"
+     },
+     "chrome_android": {
+      "version_added": "52"
+     },
+     "deno": {
+      "flags": [
+       {
+        "name": "--location [url]",
+        "type": "runtime_flag"
+       }
+      ],
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "22"
+     },
+     "firefox_android": {
+      "version_added": "22"
+     },
+     "ie": {
+      "notes": "Intranet sites are set to Compatibility View, which will emulate IE7 and omit <code>window.location.toString</code>.",
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "39"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "52"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  },
+  {
+   "key": "api.Window.location",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/location",
+    "source_file": "api/Window.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-location-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "notes": "Reflects the value passed via the <code>--location</code> runtime flag.",
+      "version_added": "1.7"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": "Before Firefox 57, single quotes contained in URLs were escaped when accessed via URL APIs. See <a href=\"https://bugzil.la/1386683\">bug 1386683</a>.",
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "notes": "Before Firefox for Android 57, single quotes contained in URLs were escaped when accessed via URL APIs. See <a href=\"https://bugzil.la/1386683\">bug 1386683</a>.",
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:location"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

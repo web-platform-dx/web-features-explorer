@@ -1,0 +1,1079 @@
+{
+ "compat_features": [
+  "api.Navigator.storageBuckets",
+  "api.StorageBucket",
+  "api.StorageBucket.caches",
+  "api.StorageBucket.estimate",
+  "api.StorageBucket.expires",
+  "api.StorageBucket.getDirectory",
+  "api.StorageBucket.indexedDB",
+  "api.StorageBucket.name",
+  "api.StorageBucket.persist",
+  "api.StorageBucket.persisted",
+  "api.StorageBucket.setExpires",
+  "api.StorageBucketManager",
+  "api.StorageBucketManager.delete",
+  "api.StorageBucketManager.keys",
+  "api.StorageBucketManager.open",
+  "api.WorkerNavigator.storageBuckets"
+ ],
+ "description": "The navigator.storageBuckets API allows you to organize locally stored data into groups called storage buckets. Each bucket can have different settings, allowing the browser to manage and delete buckets independently rather than applying the same treatment to all.",
+ "description_html": "The <code>navigator.storageBuckets</code> API allows you to organize locally stored data into groups called storage buckets. Each bucket can have different settings, allowing the browser to manage and delete buckets independently rather than applying the same treatment to all.",
+ "group": "storage",
+ "name": "Storage buckets",
+ "spec": [
+  {
+   "url": "https://wicg.github.io/storage-buckets/",
+   "seriesComposition": "full",
+   "shortname": "storage-buckets",
+   "series": {
+    "shortname": "storage-buckets",
+    "currentSpecification": "storage-buckets",
+    "title": "Storage Buckets API",
+    "shortTitle": "Storage Buckets API",
+    "nightlyUrl": "https://wicg.github.io/storage-buckets/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Platform Incubator Community Group",
+     "url": "https://www.w3.org/community/wicg/"
+    }
+   ],
+   "nightly": {
+    "url": "https://wicg.github.io/storage-buckets/",
+    "status": "Draft Community Group Report",
+    "alternateUrls": [],
+    "repository": "https://github.com/WICG/storage-buckets",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Storage Buckets API",
+   "source": "spec",
+   "shortTitle": "Storage Buckets API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "storage/buckets"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "122",
+   "chrome_android": "122",
+   "edge": "122"
+  }
+ },
+ "id": "storage-buckets",
+ "groups": [
+  "storage"
+ ],
+ "groupPaths": [
+  [
+   "Storage"
+  ]
+ ],
+ "mdnUrls": [],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/475",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/181",
+   "position": "",
+   "concerns": []
+  }
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.0011629,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/66"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.Navigator.storageBuckets",
+   "compat": {
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#dom-navigatorstoragebuckets-storagebuckets",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1594740",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1594740",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageBucket",
+   "compat": {
+    "source_file": "api/StorageBucket.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#storagebucket",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1594740",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1594740",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageBucket.caches",
+   "compat": {
+    "source_file": "api/StorageBucket.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#dom-storagebucket-caches",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageBucket.estimate",
+   "compat": {
+    "source_file": "api/StorageBucket.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#dom-storagebucket-caches",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageBucket.expires",
+   "compat": {
+    "source_file": "api/StorageBucket.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#dom-storagebucket-expires",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageBucket.getDirectory",
+   "compat": {
+    "source_file": "api/StorageBucket.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#dom-storagebucket-getdirectory",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageBucket.indexedDB",
+   "compat": {
+    "source_file": "api/StorageBucket.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#dom-storagebucket-indexeddb",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageBucket.name",
+   "compat": {
+    "source_file": "api/StorageBucket.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#dom-storagebucket-name",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageBucket.persist",
+   "compat": {
+    "source_file": "api/StorageBucket.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#dom-storagebucket-persist",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageBucket.persisted",
+   "compat": {
+    "source_file": "api/StorageBucket.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#dom-storagebucket-persisted",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageBucket.setExpires",
+   "compat": {
+    "source_file": "api/StorageBucket.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#dom-storagebucket-setexpires",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageBucketManager",
+   "compat": {
+    "source_file": "api/StorageBucketManager.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#storagebucketmanager",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1594740",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1594740",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageBucketManager.delete",
+   "compat": {
+    "source_file": "api/StorageBucketManager.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#dom-storagebucketmanager-delete",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageBucketManager.keys",
+   "compat": {
+    "source_file": "api/StorageBucketManager.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#dom-storagebucketmanager-keys",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageBucketManager.open",
+   "compat": {
+    "source_file": "api/StorageBucketManager.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#dom-storagebucketmanager-open",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  },
+  {
+   "key": "api.WorkerNavigator.storageBuckets",
+   "compat": {
+    "source_file": "api/WorkerNavigator.json",
+    "spec_url": "https://wicg.github.io/storage-buckets/#dom-navigatorstoragebuckets-storagebuckets",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "122"
+     },
+     "chrome_android": {
+      "version_added": "122"
+     },
+     "edge": {
+      "version_added": "122"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1594740",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1594740",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "108"
+     },
+     "opera_android": {
+      "version_added": "81"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "26.0"
+     },
+     "webview_android": {
+      "version_added": "122"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-buckets"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [
+   "https://bugzil.la/1594740"
+  ],
+  "firefox_android": [
+   "https://bugzil.la/1594740"
+  ],
+  "safari": [],
+  "safari_ios": []
+ }
+}

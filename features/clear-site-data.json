@@ -1,0 +1,690 @@
+{
+ "compat_features": [
+  "http.headers.Clear-Site-Data",
+  "http.headers.Clear-Site-Data.cache",
+  "http.headers.Clear-Site-Data.clientHints",
+  "http.headers.Clear-Site-Data.cookies",
+  "http.headers.Clear-Site-Data.executionContexts",
+  "http.headers.Clear-Site-Data.secure_context_required",
+  "http.headers.Clear-Site-Data.storage",
+  "http.headers.Clear-Site-Data.wildcard"
+ ],
+ "description": "The Clear-Site-Data header deletes browsing data (such as cookies, storage, or cache) associated with the requesting website.",
+ "description_html": "The <code>Clear-Site-Data</code> header deletes browsing data (such as cookies, storage, or cache) associated with the requesting website.",
+ "name": "Clearing site data",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/webappsec-clear-site-data/",
+   "seriesComposition": "full",
+   "shortname": "clear-site-data",
+   "series": {
+    "shortname": "clear-site-data",
+    "currentSpecification": "clear-site-data",
+    "title": "Clear Site Data",
+    "shortTitle": "Clear Site Data",
+    "releaseUrl": "https://www.w3.org/TR/clear-site-data/",
+    "nightlyUrl": "https://w3c.github.io/webappsec-clear-site-data/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Application Security Working Group",
+     "url": "https://www.w3.org/groups/wg/webappsec/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/clear-site-data/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/webappsec-clear-site-data/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/webappsec-clear-site-data",
+    "sourcePath": "index.src.html",
+    "filename": "index.html"
+   },
+   "title": "Clear Site Data",
+   "source": "w3c",
+   "shortTitle": "Clear Site Data",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "clear-site-data"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": "low",
+  "baseline_low_date": "2023-09-18",
+  "support": {
+   "chrome": "117",
+   "chrome_android": "117",
+   "edge": "117",
+   "firefox": "63",
+   "firefox_android": "63",
+   "safari": "17",
+   "safari_ios": "17"
+  }
+ },
+ "id": "clear-site-data",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/90",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/230",
+   "position": "blocked",
+   "concerns": []
+  }
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.000451,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/339"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "http.headers.Clear-Site-Data",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Clear-Site-Data",
+    "source_file": "http/headers/Clear-Site-Data.json",
+    "spec_url": "https://w3c.github.io/webappsec-clear-site-data/#header",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "17"
+     }
+    },
+    "tags": [
+     "web-features:clear-site-data"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Clear-Site-Data.cache",
+   "compat": {
+    "description": "<code>&quot;cache&quot;</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache",
+    "source_file": "http/headers/Clear-Site-Data.json",
+    "spec_url": "https://w3c.github.io/webappsec-clear-site-data/#grammardef-cache",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "notes": "Setting this value may increase response duration (see <a href=\"https://crbug.com/40233601\">bug 40233601</a>.",
+       "version_added": "65"
+      },
+      {
+       "notes": "Setting this value may prevent a page from fully load (see <a href=\"https://crbug.com/41343050\">bug 41343050</a>.",
+       "version_added": "61",
+       "version_last": "62",
+       "version_removed": "63"
+      }
+     ],
+     "chrome_android": [
+      {
+       "notes": "Setting this value may increase response duration (see <a href=\"https://crbug.com/40233601\">bug 40233601</a>.",
+       "version_added": "65"
+      },
+      {
+       "notes": "Setting this value may prevent a page from fully load (see <a href=\"https://crbug.com/41343050\">bug 41343050</a>.",
+       "version_added": "61",
+       "version_last": "62",
+       "version_removed": "63"
+      }
+     ],
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": [
+      {
+       "version_added": "138"
+      },
+      {
+       "impl_url": "https://bugzil.la/1838506",
+       "version_added": "63",
+       "version_last": "93",
+       "version_removed": "94"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "138"
+      },
+      {
+       "impl_url": "https://bugzil.la/1838506",
+       "version_added": "63",
+       "version_last": "93",
+       "version_removed": "94"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Setting this value may increase response duration (see <a href=\"https://crbug.com/40233601\">bug 40233601</a>.",
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "notes": "Setting this value may increase response duration (see <a href=\"https://crbug.com/40233601\">bug 40233601</a>.",
+       "version_added": "52"
+      },
+      {
+       "notes": "Setting this value may prevent a page from fully load (see <a href=\"https://crbug.com/41343050\">bug 41343050</a>.",
+       "version_added": "48",
+       "version_last": "49",
+       "version_removed": "50"
+      }
+     ],
+     "opera_android": [
+      {
+       "notes": "Setting this value may increase response duration (see <a href=\"https://crbug.com/40233601\">bug 40233601</a>.",
+       "version_added": "47"
+      },
+      {
+       "notes": "Setting this value may prevent a page from fully load (see <a href=\"https://crbug.com/41343050\">bug 41343050</a>.",
+       "version_added": "45",
+       "version_last": "45",
+       "version_removed": "46"
+      }
+     ],
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "notes": "Setting this value may increase response duration (see <a href=\"https://crbug.com/40233601\">bug 40233601</a>.",
+      "version_added": "9.0"
+     },
+     "webview_android": [
+      {
+       "notes": "Setting this value may increase response duration (see <a href=\"https://crbug.com/40233601\">bug 40233601</a>.",
+       "version_added": "65"
+      },
+      {
+       "notes": "Setting this value may prevent a page from fully load (see <a href=\"https://crbug.com/41343050\">bug 41343050</a>.",
+       "version_added": "61",
+       "version_last": "62",
+       "version_removed": "63"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "17"
+     }
+    },
+    "tags": [
+     "web-features:clear-site-data"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Clear-Site-Data.clientHints",
+   "compat": {
+    "description": "<code>&quot;clientHints&quot;</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#clienthints",
+    "source_file": "http/headers/Clear-Site-Data.json",
+    "spec_url": "https://w3c.github.io/webappsec-clear-site-data/#grammardef-clienthints",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "117"
+     },
+     "chrome_android": {
+      "version_added": "117"
+     },
+     "edge": {
+      "version_added": "117"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "103"
+     },
+     "opera_android": {
+      "version_added": "78"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "24.0"
+     },
+     "webview_android": {
+      "version_added": "117"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:clear-site-data"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Clear-Site-Data.cookies",
+   "compat": {
+    "description": "<code>&quot;cookies&quot;</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cookies",
+    "source_file": "http/headers/Clear-Site-Data.json",
+    "spec_url": "https://w3c.github.io/webappsec-clear-site-data/#grammardef-cookies",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "17"
+     }
+    },
+    "tags": [
+     "web-features:clear-site-data"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Clear-Site-Data.executionContexts",
+   "compat": {
+    "description": "<code>&quot;executionContexts&quot;</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#executioncontexts",
+    "source_file": "http/headers/Clear-Site-Data.json",
+    "spec_url": "https://w3c.github.io/webappsec-clear-site-data/#grammardef-executioncontexts",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "impl_url": "https://crbug.com/40599527",
+      "version_added": false
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40599527",
+      "version_added": false
+     },
+     "edge": {
+      "impl_url": "https://crbug.com/40599527",
+      "version_added": false
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1635189",
+      "version_added": "63",
+      "version_last": "67",
+      "version_removed": "68"
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1635189",
+      "version_added": "63",
+      "version_last": "67",
+      "version_removed": "68"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40599527",
+      "version_added": false
+     },
+     "opera": {
+      "impl_url": "https://crbug.com/40599527",
+      "version_added": false
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40599527",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "17",
+      "version_last": "18.2",
+      "version_removed": "18.3"
+     },
+     "safari_ios": {
+      "version_added": "17",
+      "version_last": "18.2",
+      "version_removed": "18.3"
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40599527",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40599527",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "17",
+      "version_last": "18.2",
+      "version_removed": "18.3"
+     }
+    },
+    "tags": [
+     "web-features:clear-site-data"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Clear-Site-Data.secure_context_required",
+   "compat": {
+    "description": "Secure context required",
+    "source_file": "http/headers/Clear-Site-Data.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "17"
+     }
+    },
+    "tags": [
+     "web-features:clear-site-data"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Clear-Site-Data.storage",
+   "compat": {
+    "description": "<code>&quot;storage&quot;</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Clear-Site-Data",
+    "source_file": "http/headers/Clear-Site-Data.json",
+    "spec_url": "https://w3c.github.io/webappsec-clear-site-data/#grammardef-storage",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "17"
+     }
+    },
+    "tags": [
+     "web-features:clear-site-data"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Clear-Site-Data.wildcard",
+   "compat": {
+    "description": "<code>&quot;*&quot;</code> (wildcard)",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#sect",
+    "source_file": "http/headers/Clear-Site-Data.json",
+    "spec_url": "https://w3c.github.io/webappsec-clear-site-data/#grammardef-",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "117"
+     },
+     "chrome_android": {
+      "version_added": "117"
+     },
+     "edge": {
+      "version_added": "117"
+     },
+     "firefox": {
+      "version_added": "63"
+     },
+     "firefox_android": {
+      "version_added": "63"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "103"
+     },
+     "opera_android": {
+      "version_added": "78"
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "24.0"
+     },
+     "webview_android": {
+      "version_added": "117"
+     },
+     "webview_ios": {
+      "version_added": "17"
+     }
+    },
+    "tags": [
+     "web-features:clear-site-data"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "http"
+ ],
+ "baselineLowDateAsObject": "2023-09-18T00:00:00.000Z",
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [
+   "https://crbug.com/40599527"
+  ],
+  "chrome_android": [
+   "https://crbug.com/40599527"
+  ],
+  "edge": [
+   "https://crbug.com/40599527"
+  ],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

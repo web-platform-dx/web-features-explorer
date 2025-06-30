@@ -1,0 +1,2285 @@
+{
+ "caniuse": "webhid",
+ "compat_features": [
+  "api.HID",
+  "api.HID.connect_event",
+  "api.HID.disconnect_event",
+  "api.HID.getDevices",
+  "api.HID.requestDevice",
+  "api.HID.worker_support",
+  "api.HIDConnectionEvent",
+  "api.HIDConnectionEvent.HIDConnectionEvent",
+  "api.HIDConnectionEvent.device",
+  "api.HIDConnectionEvent.worker_support",
+  "api.HIDDevice",
+  "api.HIDDevice.close",
+  "api.HIDDevice.collections",
+  "api.HIDDevice.forget",
+  "api.HIDDevice.inputreport_event",
+  "api.HIDDevice.open",
+  "api.HIDDevice.opened",
+  "api.HIDDevice.productId",
+  "api.HIDDevice.productName",
+  "api.HIDDevice.receiveFeatureReport",
+  "api.HIDDevice.sendFeatureReport",
+  "api.HIDDevice.sendReport",
+  "api.HIDDevice.vendorId",
+  "api.HIDDevice.worker_support",
+  "api.HIDInputReportEvent",
+  "api.HIDInputReportEvent.data",
+  "api.HIDInputReportEvent.device",
+  "api.HIDInputReportEvent.reportId",
+  "api.HIDInputReportEvent.worker_support",
+  "api.Navigator.hid",
+  "api.WorkerNavigator.hid",
+  "html.elements.iframe.allow.hid",
+  "http.headers.Permissions-Policy.hid"
+ ],
+ "description": "The WebHID API provides access to Human Interface Devices (HID) that are connected to the user's device.",
+ "description_html": "The WebHID API provides access to Human Interface Devices (HID) that are connected to the user's device.",
+ "name": "WebHID",
+ "spec": [
+  {
+   "url": "https://wicg.github.io/webhid/",
+   "seriesComposition": "full",
+   "shortname": "webhid",
+   "series": {
+    "shortname": "webhid",
+    "currentSpecification": "webhid",
+    "title": "WebHID API",
+    "shortTitle": "WebHID API",
+    "nightlyUrl": "https://wicg.github.io/webhid/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Platform Incubator Community Group",
+     "url": "https://www.w3.org/community/wicg/"
+    }
+   ],
+   "nightly": {
+    "url": "https://wicg.github.io/webhid/",
+    "status": "Draft Community Group Report",
+    "alternateUrls": [],
+    "repository": "https://github.com/WICG/webhid",
+    "sourcePath": "index.html",
+    "filename": "index.html"
+   },
+   "title": "WebHID API",
+   "source": "spec",
+   "shortTitle": "WebHID API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "webhid"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "89",
+   "edge": "89"
+  }
+ },
+ "id": "webhid",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "WebHID API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/WebHID_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/459",
+   "position": "negative",
+   "concerns": []
+  },
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.0000087,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/77"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.HID",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HID",
+    "source_file": "api/HID.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hid",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40163407",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HID.connect_event",
+   "compat": {
+    "description": "<code>connect</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HID/connect_event",
+    "source_file": "api/HID.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hid-onconnect",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HID.disconnect_event",
+   "compat": {
+    "description": "<code>disconnect</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HID/disconnect_event",
+    "source_file": "api/HID.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hid-ondisconnect",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HID.getDevices",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HID/getDevices",
+    "source_file": "api/HID.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hid-getdevices",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HID.requestDevice",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HID/requestDevice",
+    "source_file": "api/HID.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hid-requestdevice",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HID.worker_support",
+   "compat": {
+    "description": "Available in workers",
+    "source_file": "api/HID.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "notes": "Dedicated workers and WebExtension service workers, not shared workers and non-WebExtension service workers.",
+       "partial_implementation": true,
+       "version_added": "131"
+      },
+      {
+       "notes": "WebExtension service workers only.",
+       "partial_implementation": true,
+       "version_added": "117",
+       "version_last": "130",
+       "version_removed": "131"
+      }
+     ],
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": [
+      {
+       "notes": "Dedicated workers and WebExtension service workers, not shared workers and non-WebExtension service workers.",
+       "partial_implementation": true,
+       "version_added": "131"
+      },
+      {
+       "notes": "WebExtension service workers only.",
+       "partial_implementation": true,
+       "version_added": "117",
+       "version_last": "130",
+       "version_removed": "131"
+      }
+     ],
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": [
+      {
+       "notes": "Dedicated workers and WebExtension service workers, not shared workers and non-WebExtension service workers.",
+       "partial_implementation": true,
+       "version_added": "116"
+      },
+      {
+       "notes": "WebExtension service workers only.",
+       "partial_implementation": true,
+       "version_added": "103",
+       "version_last": "115",
+       "version_removed": "116"
+      }
+     ],
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDConnectionEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDConnectionEvent",
+    "source_file": "api/HIDConnectionEvent.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hidconnectionevent",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40163407",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDConnectionEvent.HIDConnectionEvent",
+   "compat": {
+    "description": "<code>HIDConnectionEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDConnectionEvent/HIDConnectionEvent",
+    "source_file": "api/HIDConnectionEvent.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hidconnectionevent-constructor",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDConnectionEvent.device",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDConnectionEvent/device",
+    "source_file": "api/HIDConnectionEvent.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hidconnectionevent-device",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDConnectionEvent.worker_support",
+   "compat": {
+    "description": "Available in workers",
+    "source_file": "api/HIDConnectionEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "notes": "Dedicated workers and WebExtension service workers, not shared workers and non-WebExtension service workers.",
+       "partial_implementation": true,
+       "version_added": "131"
+      },
+      {
+       "notes": "WebExtension service workers only.",
+       "partial_implementation": true,
+       "version_added": "117",
+       "version_last": "130",
+       "version_removed": "131"
+      }
+     ],
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": [
+      {
+       "notes": "Dedicated workers and WebExtension service workers, not shared workers and non-WebExtension service workers.",
+       "partial_implementation": true,
+       "version_added": "131"
+      },
+      {
+       "notes": "WebExtension service workers only.",
+       "partial_implementation": true,
+       "version_added": "117",
+       "version_last": "130",
+       "version_removed": "131"
+      }
+     ],
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": [
+      {
+       "notes": "Dedicated workers and WebExtension service workers, not shared workers and non-WebExtension service workers.",
+       "partial_implementation": true,
+       "version_added": "116"
+      },
+      {
+       "notes": "WebExtension service workers only.",
+       "partial_implementation": true,
+       "version_added": "103",
+       "version_last": "115",
+       "version_removed": "116"
+      }
+     ],
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDDevice",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDDevice",
+    "source_file": "api/HIDDevice.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hiddevice",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40163407",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDDevice.close",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDDevice/close",
+    "source_file": "api/HIDDevice.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hiddevice-close",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDDevice.collections",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDDevice/collections",
+    "source_file": "api/HIDDevice.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hiddevice-collections",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDDevice.forget",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDDevice/forget",
+    "source_file": "api/HIDDevice.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hiddevice-forget",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "100"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "100"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "86"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDDevice.inputreport_event",
+   "compat": {
+    "description": "<code>inputreport</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDDevice/inputreport_event",
+    "source_file": "api/HIDDevice.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hiddevice-oninputreport",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDDevice.open",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDDevice/open",
+    "source_file": "api/HIDDevice.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hiddevice-open",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDDevice.opened",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDDevice/opened",
+    "source_file": "api/HIDDevice.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hiddevice-opened",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDDevice.productId",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDDevice/productId",
+    "source_file": "api/HIDDevice.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hiddevice-productid",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDDevice.productName",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDDevice/productName",
+    "source_file": "api/HIDDevice.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hiddevice-productname",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDDevice.receiveFeatureReport",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDDevice/receiveFeatureReport",
+    "source_file": "api/HIDDevice.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hiddevice-receivefeaturereport",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDDevice.sendFeatureReport",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDDevice/sendFeatureReport",
+    "source_file": "api/HIDDevice.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hiddevice-sendfeaturereport",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDDevice.sendReport",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDDevice/sendReport",
+    "source_file": "api/HIDDevice.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hiddevice-sendreport",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDDevice.vendorId",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDDevice/vendorId",
+    "source_file": "api/HIDDevice.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hiddevice-vendorid",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDDevice.worker_support",
+   "compat": {
+    "description": "Available in workers",
+    "source_file": "api/HIDDevice.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "notes": "Dedicated workers and WebExtension service workers, not shared workers and non-WebExtension service workers.",
+       "partial_implementation": true,
+       "version_added": "131"
+      },
+      {
+       "notes": "WebExtension service workers only.",
+       "partial_implementation": true,
+       "version_added": "117",
+       "version_last": "130",
+       "version_removed": "131"
+      }
+     ],
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": [
+      {
+       "notes": "Dedicated workers and WebExtension service workers, not shared workers and non-WebExtension service workers.",
+       "partial_implementation": true,
+       "version_added": "131"
+      },
+      {
+       "notes": "WebExtension service workers only.",
+       "partial_implementation": true,
+       "version_added": "117",
+       "version_last": "130",
+       "version_removed": "131"
+      }
+     ],
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": [
+      {
+       "notes": "Dedicated workers and WebExtension service workers, not shared workers and non-WebExtension service workers.",
+       "partial_implementation": true,
+       "version_added": "116"
+      },
+      {
+       "notes": "WebExtension service workers only.",
+       "partial_implementation": true,
+       "version_added": "103",
+       "version_last": "115",
+       "version_removed": "116"
+      }
+     ],
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDInputReportEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDInputReportEvent",
+    "source_file": "api/HIDInputReportEvent.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hidinputreportevent",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40163407",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDInputReportEvent.data",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDInputReportEvent/data",
+    "source_file": "api/HIDInputReportEvent.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hidinputreportevent-data",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDInputReportEvent.device",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDInputReportEvent/device",
+    "source_file": "api/HIDInputReportEvent.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hidinputreportevent-device",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDInputReportEvent.reportId",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HIDInputReportEvent/reportId",
+    "source_file": "api/HIDInputReportEvent.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-hidinputreportevent-reportid",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.HIDInputReportEvent.worker_support",
+   "compat": {
+    "description": "Available in workers",
+    "source_file": "api/HIDInputReportEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "notes": "Dedicated workers and WebExtension service workers, not shared workers and non-WebExtension service workers.",
+       "partial_implementation": true,
+       "version_added": "131"
+      },
+      {
+       "notes": "WebExtension service workers only.",
+       "partial_implementation": true,
+       "version_added": "117",
+       "version_last": "130",
+       "version_removed": "131"
+      }
+     ],
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": [
+      {
+       "notes": "Dedicated workers and WebExtension service workers, not shared workers and non-WebExtension service workers.",
+       "partial_implementation": true,
+       "version_added": "131"
+      },
+      {
+       "notes": "WebExtension service workers only.",
+       "partial_implementation": true,
+       "version_added": "117",
+       "version_last": "130",
+       "version_removed": "131"
+      }
+     ],
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": [
+      {
+       "notes": "Dedicated workers and WebExtension service workers, not shared workers and non-WebExtension service workers.",
+       "partial_implementation": true,
+       "version_added": "116"
+      },
+      {
+       "notes": "WebExtension service workers only.",
+       "partial_implementation": true,
+       "version_added": "103",
+       "version_last": "115",
+       "version_removed": "116"
+      }
+     ],
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.Navigator.hid",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/hid",
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://wicg.github.io/webhid/#dom-navigator-hid",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40163407",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "api.WorkerNavigator.hid",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WorkerNavigator/hid",
+    "source_file": "api/WorkerNavigator.json",
+    "spec_url": "https://wicg.github.io/webhid/#hid-attribute-0",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "131"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40163407",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.iframe.allow.hid",
+   "compat": {
+    "source_file": "html/elements/iframe.json",
+    "spec_url": "https://wicg.github.io/webhid/#permissions-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": "89"
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "15.0"
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "89"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Permissions-Policy.hid",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Permissions-Policy/hid",
+    "source_file": "http/headers/Permissions-Policy.json",
+    "spec_url": "https://wicg.github.io/webhid/#permissions-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40628009",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40163407",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webhid"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "html",
+  "http"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [
+   "https://crbug.com/40628009"
+  ],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

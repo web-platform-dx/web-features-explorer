@@ -1,0 +1,1280 @@
+{
+ "compat_features": [
+  "api.Summarizer",
+  "api.Summarizer.availability_static",
+  "api.Summarizer.create_static",
+  "api.Summarizer.destroy",
+  "api.Summarizer.expectedContextLanguages",
+  "api.Summarizer.expectedInputLanguages",
+  "api.Summarizer.format",
+  "api.Summarizer.inputQuota",
+  "api.Summarizer.length",
+  "api.Summarizer.measureInputUsage",
+  "api.Summarizer.outputLanguage",
+  "api.Summarizer.sharedContext",
+  "api.Summarizer.summarize",
+  "api.Summarizer.summarizeStreaming",
+  "api.Summarizer.type",
+  "http.headers.Permissions-Policy.summarizer"
+ ],
+ "description": "The Summarizer API uses an on-device language model to summarize text.",
+ "description_html": "The <code>Summarizer</code> API uses an on-device language model to summarize text.",
+ "name": "Summarizer",
+ "spec": [
+  {
+   "url": "https://webmachinelearning.github.io/writing-assistance-apis/",
+   "seriesComposition": "full",
+   "shortname": "writing-assistance-apis",
+   "series": {
+    "shortname": "writing-assistance-apis",
+    "currentSpecification": "writing-assistance-apis",
+    "title": "Writing Assistance APIs",
+    "shortTitle": "Writing Assistance APIs",
+    "nightlyUrl": "https://webmachinelearning.github.io/writing-assistance-apis/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Machine Learning Community Group",
+     "url": "https://www.w3.org/community/webmachinelearning/"
+    }
+   ],
+   "nightly": {
+    "url": "https://webmachinelearning.github.io/writing-assistance-apis/",
+    "status": "Draft Community Group Report",
+    "alternateUrls": [],
+    "repository": "https://github.com/webmachinelearning/writing-assistance-apis",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Writing Assistance APIs",
+   "source": "spec",
+   "shortTitle": "Writing Assistance APIs",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "138"
+  }
+ },
+ "id": "summarizer",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Summarizer API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Summarizer_API"
+  }
+ ],
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Summarizer",
+   "compat": {
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#summarizer",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "api.Summarizer.availability_static",
+   "compat": {
+    "description": "<code>availability()</code> static method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Summarizer/availability_static",
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#dom-summarizer-availability",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "api.Summarizer.create_static",
+   "compat": {
+    "description": "<code>create()</code> static method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Summarizer/create_static",
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#dom-summarizer-create",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "api.Summarizer.destroy",
+   "compat": {
+    "description": "<code>destroy()</code> instance method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Summarizer/destroy",
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#dom-destroyablemodel-destroy",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "api.Summarizer.expectedContextLanguages",
+   "compat": {
+    "description": "<code>expectedContextLanguages</code> property",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Summarizer/expectedContextLanguages",
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#dom-summarizer-expectedcontextlanguages",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "api.Summarizer.expectedInputLanguages",
+   "compat": {
+    "description": "<code>expectedInputLanguages</code> property",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Summarizer/expectedInputLanguages",
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#dom-summarizer-expectedinputlanguages",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "api.Summarizer.format",
+   "compat": {
+    "description": "<code>format</code> property",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Summarizer/format",
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#dom-summarizer-format",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "api.Summarizer.inputQuota",
+   "compat": {
+    "description": "<code>inputQuota</code> property",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Summarizer/inputQuota",
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#dom-summarizer-inputquota",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "api.Summarizer.length",
+   "compat": {
+    "description": "<code>length</code> property",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Summarizer/length",
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#dom-summarizer-length",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "api.Summarizer.measureInputUsage",
+   "compat": {
+    "description": "<code>measureInputUsage()</code> instance method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Summarizer/measureInputUsage",
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#dom-summarizer-measureinputusage",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "api.Summarizer.outputLanguage",
+   "compat": {
+    "description": "<code>outputLanguage</code> property",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Summarizer/outputLanguage",
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#dom-summarizer-outputlanguage",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "api.Summarizer.sharedContext",
+   "compat": {
+    "description": "<code>sharedContext</code> property",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Summarizer/sharedContext",
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#dom-summarizer-sharedcontext",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "api.Summarizer.summarize",
+   "compat": {
+    "description": "<code>summarize()</code> instance method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Summarizer/summarize",
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#dom-summarizer-summarize",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "api.Summarizer.summarizeStreaming",
+   "compat": {
+    "description": "<code>summarizeStreaming()</code> instance method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Summarizer/summarizeStreaming",
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#dom-summarizer-summarizestreaming",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "api.Summarizer.type",
+   "compat": {
+    "description": "<code>type</code> property",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Summarizer/type",
+    "source_file": "api/Summarizer.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#dom-summarizer-type",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Availability may be subject to geographical restrictions.",
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "flags": [
+       {
+        "name": "#edge-llm-summarization-api-for-phi-mini",
+        "type": "preference",
+        "value_to_set": "Enabled"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Permissions-Policy.summarizer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Permissions-Policy/summarizer",
+    "source_file": "http/headers/Permissions-Policy.json",
+    "spec_url": "https://webmachinelearning.github.io/writing-assistance-apis/#summarizer-permissions-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "138"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "138"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:summarizer"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "http"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

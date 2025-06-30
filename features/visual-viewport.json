@@ -1,0 +1,1012 @@
+{
+ "compat_features": [
+  "api.VisualViewport",
+  "api.VisualViewport.height",
+  "api.VisualViewport.offsetLeft",
+  "api.VisualViewport.offsetTop",
+  "api.VisualViewport.pageLeft",
+  "api.VisualViewport.pageTop",
+  "api.VisualViewport.resize_event",
+  "api.VisualViewport.scale",
+  "api.VisualViewport.scroll_event",
+  "api.VisualViewport.scrollend_event",
+  "api.VisualViewport.width",
+  "api.Window.visualViewport"
+ ],
+ "description": "The visualViewport API provides a way to query and modify the user-visible viewport of a web page.",
+ "description_html": "The <code>visualViewport</code> API provides a way to query and modify the user-visible viewport of a web page.",
+ "name": "Visual viewport API",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/cssom-view-1/#visualViewport",
+   "seriesComposition": "full",
+   "shortname": "cssom-view-1",
+   "series": {
+    "shortname": "cssom-view",
+    "currentSpecification": "cssom-view-1",
+    "title": "CSSOM View",
+    "shortTitle": "CSSOM View",
+    "releaseUrl": "https://www.w3.org/TR/cssom-view/",
+    "nightlyUrl": "https://drafts.csswg.org/cssom-view/"
+   },
+   "seriesVersion": "1",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/cssom-view-1/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/cssom-view-1/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/cssom-view-1/",
+     "https://w3c.github.io/csswg-drafts/cssom-view/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "cssom-view-1/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSSOM View Module",
+   "source": "w3c",
+   "shortTitle": "CSSOM View",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/cssom-view"
+    ]
+   },
+   "fragment": "visualViewport"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2024-02-10",
+  "baseline_low_date": "2021-08-10",
+  "support": {
+   "chrome": "61",
+   "chrome_android": "61",
+   "edge": "79",
+   "firefox": "91",
+   "firefox_android": "68",
+   "safari": "13",
+   "safari_ios": "13"
+  }
+ },
+ "id": "visual-viewport",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Visual Viewport API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Visual_Viewport_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.VisualViewport",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VisualViewport",
+    "source_file": "api/VisualViewport.json",
+    "spec_url": "https://drafts.csswg.org/cssom-view/#the-visualviewport-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "91"
+     },
+     "firefox_android": {
+      "version_added": "68"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:visual-viewport"
+    ]
+   }
+  },
+  {
+   "key": "api.VisualViewport.height",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VisualViewport/height",
+    "source_file": "api/VisualViewport.json",
+    "spec_url": "https://drafts.csswg.org/cssom-view/#dom-visualviewport-height",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "91"
+     },
+     "firefox_android": {
+      "version_added": "68"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:visual-viewport"
+    ]
+   }
+  },
+  {
+   "key": "api.VisualViewport.offsetLeft",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VisualViewport/offsetLeft",
+    "source_file": "api/VisualViewport.json",
+    "spec_url": "https://drafts.csswg.org/cssom-view/#dom-visualviewport-offsetleft",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "91"
+     },
+     "firefox_android": {
+      "version_added": "68"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:visual-viewport"
+    ]
+   }
+  },
+  {
+   "key": "api.VisualViewport.offsetTop",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VisualViewport/offsetTop",
+    "source_file": "api/VisualViewport.json",
+    "spec_url": "https://drafts.csswg.org/cssom-view/#dom-visualviewport-offsettop",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "91"
+     },
+     "firefox_android": {
+      "version_added": "68"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:visual-viewport"
+    ]
+   }
+  },
+  {
+   "key": "api.VisualViewport.pageLeft",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VisualViewport/pageLeft",
+    "source_file": "api/VisualViewport.json",
+    "spec_url": "https://drafts.csswg.org/cssom-view/#dom-visualviewport-pageleft",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "91"
+     },
+     "firefox_android": {
+      "version_added": "68"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:visual-viewport"
+    ]
+   }
+  },
+  {
+   "key": "api.VisualViewport.pageTop",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VisualViewport/pageTop",
+    "source_file": "api/VisualViewport.json",
+    "spec_url": "https://drafts.csswg.org/cssom-view/#dom-visualviewport-pagetop",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "91"
+     },
+     "firefox_android": {
+      "version_added": "68"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:visual-viewport"
+    ]
+   }
+  },
+  {
+   "key": "api.VisualViewport.resize_event",
+   "compat": {
+    "description": "<code>resize</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VisualViewport/resize_event",
+    "source_file": "api/VisualViewport.json",
+    "spec_url": "https://drafts.csswg.org/cssom-view/#eventdef-window-resize",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "62"
+      },
+      {
+       "notes": "The <code>onresize</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "61",
+       "version_last": "61",
+       "version_removed": "62"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "62"
+      },
+      {
+       "notes": "The <code>onresize</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "61",
+       "version_last": "61",
+       "version_removed": "62"
+      }
+     ],
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "91"
+     },
+     "firefox_android": {
+      "version_added": "68"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "49"
+      },
+      {
+       "notes": "The <code>onresize</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "48",
+       "version_last": "48",
+       "version_removed": "49"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "46"
+      },
+      {
+       "notes": "The <code>onresize</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "45",
+       "version_last": "45",
+       "version_removed": "46"
+      }
+     ],
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": [
+      {
+       "version_added": "62"
+      },
+      {
+       "notes": "The <code>onresize</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "61",
+       "version_last": "61",
+       "version_removed": "62"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:visual-viewport"
+    ]
+   }
+  },
+  {
+   "key": "api.VisualViewport.scale",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VisualViewport/scale",
+    "source_file": "api/VisualViewport.json",
+    "spec_url": "https://drafts.csswg.org/cssom-view/#dom-visualviewport-scale",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "91"
+     },
+     "firefox_android": {
+      "version_added": "68"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:visual-viewport"
+    ]
+   }
+  },
+  {
+   "key": "api.VisualViewport.scroll_event",
+   "compat": {
+    "description": "<code>scroll</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VisualViewport/scroll_event",
+    "source_file": "api/VisualViewport.json",
+    "spec_url": "https://drafts.csswg.org/cssom-view/#eventdef-document-scroll",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "62"
+      },
+      {
+       "notes": "The <code>onscroll</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "61",
+       "version_last": "61",
+       "version_removed": "62"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "62"
+      },
+      {
+       "notes": "The <code>onscroll</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "61",
+       "version_last": "61",
+       "version_removed": "62"
+      }
+     ],
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "91"
+     },
+     "firefox_android": {
+      "version_added": "68"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "49"
+      },
+      {
+       "notes": "The <code>onscroll</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "48",
+       "version_last": "48",
+       "version_removed": "49"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "46"
+      },
+      {
+       "notes": "The <code>onscroll</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "45",
+       "version_last": "45",
+       "version_removed": "46"
+      }
+     ],
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": [
+      {
+       "version_added": "62"
+      },
+      {
+       "notes": "The <code>onscroll</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "61",
+       "version_last": "61",
+       "version_removed": "62"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:visual-viewport"
+    ]
+   }
+  },
+  {
+   "key": "api.VisualViewport.scrollend_event",
+   "compat": {
+    "description": "<code>scrollend</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VisualViewport/scrollend_event",
+    "source_file": "api/VisualViewport.json",
+    "spec_url": "https://drafts.csswg.org/cssom-view/#eventdef-document-scrollend",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "126"
+      },
+      {
+       "notes": "The <code>onscrollend</code> event handler property is not supported. See <a href=\"https://crbug.com/325307785\">bug 325307785</a>.",
+       "partial_implementation": true,
+       "version_added": "114",
+       "version_last": "125",
+       "version_removed": "126"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "126"
+      },
+      {
+       "notes": "The <code>onscrollend</code> event handler property is not supported. See <a href=\"https://crbug.com/325307785\">bug 325307785</a>.",
+       "partial_implementation": true,
+       "version_added": "114",
+       "version_last": "125",
+       "version_removed": "126"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "126"
+      },
+      {
+       "notes": "The <code>onscrollend</code> event handler property is not supported. See <a href=\"https://crbug.com/325307785\">bug 325307785</a>.",
+       "partial_implementation": true,
+       "version_added": "114",
+       "version_last": "125",
+       "version_removed": "126"
+      }
+     ],
+     "firefox": {
+      "impl_url": "https://bugzil.la/1801658",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1801658",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": [
+      {
+       "version_added": "112"
+      },
+      {
+       "notes": "The <code>onscrollend</code> event handler property is not supported. See <a href=\"https://crbug.com/325307785\">bug 325307785</a>.",
+       "partial_implementation": true,
+       "version_added": "100",
+       "version_last": "111",
+       "version_removed": "112"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "83"
+      },
+      {
+       "notes": "The <code>onscrollend</code> event handler property is not supported. See <a href=\"https://crbug.com/325307785\">bug 325307785</a>.",
+       "partial_implementation": true,
+       "version_added": "76",
+       "version_last": "82",
+       "version_removed": "83"
+      }
+     ],
+     "safari": {
+      "impl_url": "https://webkit.org/b/201556",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/201556",
+      "version_added": false
+     },
+     "samsunginternet_android": [
+      {
+       "version_added": "28.0"
+      },
+      {
+       "notes": "The <code>onscrollend</code> event handler property is not supported. See <a href=\"https://crbug.com/325307785\">bug 325307785</a>.",
+       "partial_implementation": true,
+       "version_added": "23.0",
+       "version_last": "27.0",
+       "version_removed": "28.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "126"
+      },
+      {
+       "notes": "The <code>onscrollend</code> event handler property is not supported. See <a href=\"https://crbug.com/325307785\">bug 325307785</a>.",
+       "partial_implementation": true,
+       "version_added": "114",
+       "version_last": "125",
+       "version_removed": "126"
+      }
+     ],
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/201556",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:visual-viewport"
+    ]
+   }
+  },
+  {
+   "key": "api.VisualViewport.width",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VisualViewport/width",
+    "source_file": "api/VisualViewport.json",
+    "spec_url": "https://drafts.csswg.org/cssom-view/#dom-visualviewport-width",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "91"
+     },
+     "firefox_android": {
+      "version_added": "68"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:visual-viewport"
+    ]
+   }
+  },
+  {
+   "key": "api.Window.visualViewport",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/visualViewport",
+    "source_file": "api/Window.json",
+    "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-visualviewport",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "91"
+     },
+     "firefox_android": {
+      "version_added": "68"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:visual-viewport"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2021-08-10T00:00:00.000Z",
+ "baselineHighDateAsObject": "2024-02-10T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [
+   "https://bugzil.la/1801658"
+  ],
+  "firefox_android": [
+   "https://bugzil.la/1801658"
+  ],
+  "safari": [
+   "https://webkit.org/b/201556"
+  ],
+  "safari_ios": [
+   "https://webkit.org/b/201556"
+  ]
+ }
+}

@@ -1,0 +1,1026 @@
+{
+ "compat_features": [
+  "api.Document.cookie",
+  "http.headers.Cookie",
+  "http.headers.Set-Cookie",
+  "http.headers.Set-Cookie.HttpOnly",
+  "http.headers.Set-Cookie.Max-Age",
+  "http.headers.Set-Cookie.SameSite",
+  "http.headers.Set-Cookie.SameSite.Lax",
+  "http.headers.Set-Cookie.SameSite.Lax_default",
+  "http.headers.Set-Cookie.SameSite.None",
+  "http.headers.Set-Cookie.SameSite.Strict",
+  "http.headers.Set-Cookie.SameSite.none_requires_secure",
+  "http.headers.Set-Cookie.SameSite.schemeful",
+  "http.headers.Set-Cookie.cookie_prefixes"
+ ],
+ "description": "The Set-Cookie HTTP header stores limited amounts of data that persist across request and response, creating shared state between the browser and server.",
+ "description_html": "The <code>Set-Cookie</code> HTTP header stores limited amounts of data that persist across request and response, creating shared state between the browser and server.",
+ "name": "Cookies",
+ "spec": [
+  {
+   "url": "https://httpwg.org/specs/rfc6265.html",
+   "seriesComposition": "full",
+   "shortname": "rfc6265",
+   "series": {
+    "shortname": "rfc6265",
+    "currentSpecification": "rfc6265",
+    "title": "HTTP State Management Mechanism",
+    "shortTitle": "HTTP State Management Mechanism",
+    "nightlyUrl": "https://httpwg.org/specs/rfc6265.html"
+   },
+   "organization": "IETF",
+   "groups": [
+    {
+     "name": "HTTP State Management Mechanism Working Group",
+     "url": "https://datatracker.ietf.org/wg/httpstate/"
+    }
+   ],
+   "nightly": {
+    "url": "https://httpwg.org/specs/rfc6265.html",
+    "status": "Proposed Standard",
+    "alternateUrls": [
+     "https://datatracker.ietf.org/doc/html/rfc6265",
+     "https://tools.ietf.org/html/rfc6265"
+    ],
+    "repository": "https://github.com/httpwg/httpwg.github.io",
+    "sourcePath": "specs/rfc6265.xml",
+    "filename": "rfc6265.html"
+   },
+   "title": "HTTP State Management Mechanism",
+   "source": "ietf",
+   "shortTitle": "HTTP State Management Mechanism",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "1",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "1",
+   "firefox_android": "4",
+   "safari": "1",
+   "safari_ios": "1"
+  }
+ },
+ "id": "cookies",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Document.cookie",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/cookie",
+    "source_file": "api/Document.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/dom.html#dom-document-cookie",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "version_added": "68"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "1",
+       "version_last": "67",
+       "version_removed": "68"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "68"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "4",
+       "version_last": "67",
+       "version_removed": "68"
+      }
+     ],
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": [
+      {
+       "version_added": "4"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "1",
+       "version_last": "3.1",
+       "version_removed": "4"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "3.2"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "1",
+       "version_last": "3",
+       "version_removed": "3.2"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": [
+      {
+       "version_added": "3.2"
+      },
+      {
+       "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLDocument\"><code>HTMLDocument</code></a>, not all <code>Document</code> objects.",
+       "partial_implementation": true,
+       "version_added": "1",
+       "version_last": "3",
+       "version_removed": "3.2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:cookies"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Cookie",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Cookie",
+    "source_file": "http/headers/Cookie.json",
+    "spec_url": "https://httpwg.org/specs/rfc6265.html#cookie",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:cookies"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Set-Cookie",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Set-Cookie",
+    "source_file": "http/headers/Set-Cookie.json",
+    "spec_url": "https://httpwg.org/specs/rfc6265.html#sane-set-cookie",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:cookies"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Set-Cookie.HttpOnly",
+   "compat": {
+    "source_file": "http/headers/Set-Cookie.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "3"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "11"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "5"
+     },
+     "safari_ios": {
+      "version_added": "4"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "4"
+     }
+    },
+    "tags": [
+     "web-features:cookies"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Set-Cookie.Max-Age",
+   "compat": {
+    "source_file": "http/headers/Set-Cookie.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "8"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:cookies"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Set-Cookie.SameSite",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Set-Cookie",
+    "source_file": "http/headers/Set-Cookie.json",
+    "spec_url": [
+     "https://httpwg.org/specs/rfc6265.html#sane-set-cookie",
+     "https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#name-the-samesite-attribute"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "39"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": [
+      {
+       "notes": "Safari 13 on macOS 10.14 (Mojave), treats <code>SameSite=None</code> and invalid values as <code>Strict</code>. This is fixed in version 10.15 (Catalina) and later.",
+       "version_added": "13"
+      },
+      {
+       "notes": "Treats <code>SameSite=None</code> and invalid values as <code>Strict</code> in macOS before 10.15 Catalina. See <a href=\"https://webkit.org/b/198181\">bug 198181</a>.",
+       "partial_implementation": true,
+       "version_added": "12",
+       "version_last": "12.1",
+       "version_removed": "13"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "13"
+      },
+      {
+       "notes": "Treats <code>SameSite=None</code> and invalid values as <code>Strict</code> in iOS before 13. See <a href=\"https://webkit.org/b/198181\">bug 198181</a>.",
+       "partial_implementation": true,
+       "version_added": "12.2",
+       "version_last": "12.2",
+       "version_removed": "13"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": [
+      {
+       "version_added": "13"
+      },
+      {
+       "notes": "Treats <code>SameSite=None</code> and invalid values as <code>Strict</code> in iOS before 13. See <a href=\"https://webkit.org/b/198181\">bug 198181</a>.",
+       "partial_implementation": true,
+       "version_added": "12.2",
+       "version_last": "12.2",
+       "version_removed": "13"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:cookies"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Set-Cookie.SameSite.Lax",
+   "compat": {
+    "description": "<code>SameSite=Lax</code>",
+    "source_file": "http/headers/Set-Cookie.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "39"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "12"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:cookies"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Set-Cookie.SameSite.Lax_default",
+   "compat": {
+    "description": "Defaults to <code>Lax</code>",
+    "source_file": "http/headers/Set-Cookie.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": "80"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "network.cookie.sameSite.laxByDefault",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "69"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "9.0"
+     },
+     "opera": {
+      "version_added": "71"
+     },
+     "opera_android": {
+      "version_added": "60"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "80"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookies"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Set-Cookie.SameSite.None",
+   "compat": {
+    "description": "<code>SameSite=None</code>",
+    "source_file": "http/headers/Set-Cookie.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "67"
+      },
+      {
+       "notes": "Rejects cookies with <code>SameSite=None</code>. See <a href=\"https://www.chromium.org/updates/same-site/incompatible-clients\">SameSite=None: Known Incompatible Clients</a>.",
+       "partial_implementation": true,
+       "version_added": "51",
+       "version_last": "66",
+       "version_removed": "67"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "67"
+      },
+      {
+       "notes": "Rejects cookies with <code>SameSite=None</code>. See <a href=\"https://www.chromium.org/updates/same-site/incompatible-clients\">SameSite=None: Known Incompatible Clients</a>.",
+       "partial_implementation": true,
+       "version_added": "51",
+       "version_last": "66",
+       "version_removed": "67"
+      }
+     ],
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": [
+      {
+       "version_added": "6.0"
+      },
+      {
+       "notes": "Rejects cookies with <code>SameSite=None</code>. See <a href=\"https://www.chromium.org/updates/same-site/incompatible-clients\">SameSite=None: Known Incompatible Clients</a>.",
+       "partial_implementation": true,
+       "version_added": "5.0",
+       "version_last": "5.4",
+       "version_removed": "6.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "54"
+      },
+      {
+       "notes": "Rejects cookies with <code>SameSite=None</code>. See <a href=\"https://www.chromium.org/updates/same-site/incompatible-clients\">SameSite=None: Known Incompatible Clients</a>.",
+       "partial_implementation": true,
+       "version_added": "51",
+       "version_last": "53",
+       "version_removed": "54"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "48"
+      },
+      {
+       "notes": "Rejects cookies with <code>SameSite=None</code>. See <a href=\"https://www.chromium.org/updates/same-site/incompatible-clients\">SameSite=None: Known Incompatible Clients</a>.",
+       "partial_implementation": true,
+       "version_added": "41",
+       "version_last": "47",
+       "version_removed": "48"
+      }
+     ],
+     "safari": {
+      "notes": "Not supported before macOS version 10.15 (Catalina).",
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": [
+      {
+       "version_added": "9.4"
+      },
+      {
+       "notes": "Rejects cookies with <code>SameSite=None</code>. See <a href=\"https://www.chromium.org/updates/same-site/incompatible-clients\">SameSite=None: Known Incompatible Clients</a>.",
+       "partial_implementation": true,
+       "version_added": "5.4",
+       "version_last": "9.2",
+       "version_removed": "9.4"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "67"
+      },
+      {
+       "notes": "Rejects cookies with <code>SameSite=None</code>. See <a href=\"https://www.chromium.org/updates/same-site/incompatible-clients\">SameSite=None: Known Incompatible Clients</a>.",
+       "partial_implementation": true,
+       "version_added": "51",
+       "version_last": "66",
+       "version_removed": "67"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:cookies"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Set-Cookie.SameSite.Strict",
+   "compat": {
+    "description": "<code>SameSite=Strict</code>",
+    "source_file": "http/headers/Set-Cookie.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "39"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "12"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:cookies"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Set-Cookie.SameSite.none_requires_secure",
+   "compat": {
+    "description": "Secure attribute required if <code>SameSite=None</code>",
+    "source_file": "http/headers/Set-Cookie.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": "80"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "131"
+     },
+     "firefox_android": {
+      "version_added": "131"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "9.0"
+     },
+     "opera": {
+      "version_added": "71"
+     },
+     "opera_android": {
+      "version_added": "60"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookies"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Set-Cookie.SameSite.schemeful",
+   "compat": {
+    "description": "URL scheme-aware (\"schemeful\")",
+    "source_file": "http/headers/Set-Cookie.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "91"
+     },
+     "chrome_android": {
+      "version_added": "91"
+     },
+     "edge": {
+      "version_added": "91"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "network.cookie.sameSite.schemeful",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "79"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "77"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "16.0"
+     },
+     "webview_android": {
+      "version_added": "91"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookies"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Set-Cookie.cookie_prefixes",
+   "compat": {
+    "description": "Cookie prefixes",
+    "source_file": "http/headers/Set-Cookie.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "49"
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:cookies"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "http"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

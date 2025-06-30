@@ -1,0 +1,1744 @@
+{
+ "compat_features": [
+  "css.properties.align-content.multicol_context",
+  "css.properties.column-count",
+  "css.properties.column-count.auto",
+  "css.properties.column-gap",
+  "css.properties.column-gap.multicol_context",
+  "css.properties.column-gap.multicol_context.calc_values",
+  "css.properties.column-gap.multicol_context.percentage_values",
+  "css.properties.column-gap.normal",
+  "css.properties.column-rule",
+  "css.properties.column-rule-color",
+  "css.properties.column-rule-style",
+  "css.properties.column-rule-width",
+  "css.properties.column-width",
+  "css.properties.column-width.auto",
+  "css.properties.columns",
+  "css.properties.gap.multicol_context"
+ ],
+ "description": "Multi-column layout flows an element's content across one or more columns in a single row, without affecting the display property of its children.",
+ "description_html": "Multi-column layout flows an element's content across one or more columns in a single row, without affecting the <code>display</code> property of its children.",
+ "group": "multi-column",
+ "name": "Multi-column layout",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css-multicol-1/",
+   "seriesComposition": "full",
+   "shortname": "css-multicol-1",
+   "series": {
+    "shortname": "css-multicol",
+    "currentSpecification": "css-multicol-1",
+    "title": "CSS Multi-column Layout",
+    "shortTitle": "CSS Multicol",
+    "releaseUrl": "https://www.w3.org/TR/css-multicol/",
+    "nightlyUrl": "https://drafts.csswg.org/css-multicol/"
+   },
+   "seriesVersion": "1",
+   "shortTitle": "CSS Multicol 1",
+   "seriesNext": "css-multicol-2",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-multicol-1/",
+    "status": "Candidate Recommendation Snapshot",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-multicol-1/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-multicol-1/",
+     "https://w3c.github.io/csswg-drafts/css-multicol/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-multicol-1/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Multi-column Layout Module Level 1",
+   "source": "w3c",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-multicol"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2019-09-07",
+  "baseline_low_date": "2017-03-07",
+  "support": {
+   "chrome": "50",
+   "chrome_android": "50",
+   "edge": "12",
+   "firefox": "52",
+   "firefox_android": "52",
+   "safari": "9",
+   "safari_ios": "9"
+  }
+ },
+ "id": "multi-column",
+ "groups": [
+  "multi-column"
+ ],
+ "groupPaths": [
+  [
+   "CSS",
+   "Layout",
+   "multi-column"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "columns",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/columns"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "css.properties.align-content.multicol_context",
+   "compat": {
+    "description": "Supported in Multi-column Layout",
+    "source_file": "css/properties/align-content.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css-align/#align-justify-content",
+     "https://drafts.csswg.org/css-multicol/#the-multi-column-model"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": "17.4"
+     }
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.column-count",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/column-count",
+    "source_file": "css/properties/column-count.json",
+    "spec_url": "https://drafts.csswg.org/css-multicol/#cc",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "12"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "12"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "52"
+      },
+      {
+       "notes": "Before version 37, multiple columns didn't work with <code>display: table-caption</code> elements.",
+       "prefix": "-moz-",
+       "version_added": "1.5",
+       "version_last": "73",
+       "version_removed": "74"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "52"
+      },
+      {
+       "notes": "Before version 37, multiple columns didn't work with <code>display: table-caption</code> elements.",
+       "prefix": "-moz-",
+       "version_added": "4",
+       "version_last": "68",
+       "version_removed": "79"
+      }
+     ],
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "37"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "37"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.column-count.auto",
+   "compat": {
+    "source_file": "css/properties/column-count.json",
+    "spec_url": "https://drafts.csswg.org/css-multicol/#valdef-column-count-auto",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.column-gap",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/column-gap",
+    "source_file": "css/properties/column-gap.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css-align/#column-row-gap",
+     "https://drafts.csswg.org/css-grid/#gutters",
+     "https://drafts.csswg.org/css-multicol/#column-gap"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "11.1"
+     },
+     "opera_android": {
+      "version_added": "11.1"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.column-gap.multicol_context",
+   "compat": {
+    "description": "Supported in Multi-column Layout",
+    "source_file": "css/properties/column-gap.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css-align/#column-row-gap",
+     "https://drafts.csswg.org/css-grid/#gutters",
+     "https://drafts.csswg.org/css-multicol/#column-gap"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "12"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "12"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "52"
+      },
+      {
+       "notes": "Before Firefox 3, the default value for the <code>normal</code> keyword was <code>0</code> and not <code>1em</code>.",
+       "prefix": "-moz-",
+       "version_added": "1.5",
+       "version_last": "73",
+       "version_removed": "74"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "52"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "4"
+      }
+     ],
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "37"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "37"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      },
+      {
+       "version_added": "11.1",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "10"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "10"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "10"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.column-gap.multicol_context.calc_values",
+   "compat": {
+    "description": "<code>calc()</code> values",
+    "source_file": "css/properties/column-gap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "61"
+     },
+     "firefox_android": {
+      "version_added": "61"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.column-gap.multicol_context.percentage_values",
+   "compat": {
+    "description": "<code>&lt;percentage&gt;</code> values",
+    "source_file": "css/properties/column-gap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "61"
+     },
+     "firefox_android": {
+      "version_added": "61"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "12"
+     },
+     "safari_ios": {
+      "version_added": "12"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "12"
+     }
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.column-gap.normal",
+   "compat": {
+    "source_file": "css/properties/column-gap.json",
+    "spec_url": "https://drafts.csswg.org/css-align/#valdef-row-gap-normal",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "11.1"
+     },
+     "opera_android": {
+      "version_added": "11.1"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.column-rule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/column-rule",
+    "source_file": "css/properties/column-rule.json",
+    "spec_url": "https://drafts.csswg.org/css-multicol/#column-rule",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "12"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "12"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "52"
+      },
+      {
+       "notes": "Before Firefox 3, the default value for the <code>normal</code> keyword was <code>0</code> and not <code>1em</code>.",
+       "prefix": "-moz-",
+       "version_added": "3.5",
+       "version_last": "73",
+       "version_removed": "74"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "52"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "4"
+      }
+     ],
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "11.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "11.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.column-rule-color",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/column-rule-color",
+    "source_file": "css/properties/column-rule-color.json",
+    "spec_url": "https://drafts.csswg.org/css-multicol/#crc",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "12"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "12"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "52"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "3.5",
+       "version_last": "73",
+       "version_removed": "74"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "52"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "4"
+      }
+     ],
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "11.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "11.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.column-rule-style",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/column-rule-style",
+    "source_file": "css/properties/column-rule-style.json",
+    "spec_url": "https://drafts.csswg.org/css-multicol/#crs",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "12"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "12"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "52"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "3.5",
+       "version_last": "73",
+       "version_removed": "74"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "52"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "4"
+      }
+     ],
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "11.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "11.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.column-rule-width",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/column-rule-width",
+    "source_file": "css/properties/column-rule-width.json",
+    "spec_url": "https://drafts.csswg.org/css-multicol/#crw",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "12"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "12"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "52"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "3.5",
+       "version_last": "73",
+       "version_removed": "74"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "52"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "4"
+      }
+     ],
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "11.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "11.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.column-width",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/column-width",
+    "source_file": "css/properties/column-width.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css-sizing/#column-sizing",
+     "https://drafts.csswg.org/css-multicol/#cw"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "12"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "12"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "50"
+      },
+      {
+       "notes": "Before version 37, multiple columns didn't work with <code>display: table-caption</code> elements.",
+       "prefix": "-moz-",
+       "version_added": "1.5",
+       "version_last": "73",
+       "version_removed": "74"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "notes": "Before version 37, multiple columns didn't work with <code>display: table-caption</code> elements.",
+       "prefix": "-moz-",
+       "version_added": "4"
+      }
+     ],
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "11.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "11.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.column-width.auto",
+   "compat": {
+    "source_file": "css/properties/column-width.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "2"
+     }
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.columns",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/columns",
+    "source_file": "css/properties/columns.json",
+    "spec_url": "https://drafts.csswg.org/css-multicol/#columns",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "50"
+      }
+     ],
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": [
+      {
+       "version_added": "12"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "12"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "52"
+      },
+      {
+       "notes": "Before version 37, multiple columns didn't work with <code>display: table-caption</code> elements.",
+       "prefix": "-moz-",
+       "version_added": "9",
+       "version_last": "73",
+       "version_removed": "74"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "52"
+      },
+      {
+       "notes": "Before version 37, multiple columns didn't work with <code>display: table-caption</code> elements.",
+       "prefix": "-moz-",
+       "version_added": "22"
+      }
+     ],
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "11.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "11.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "9"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.gap.multicol_context",
+   "compat": {
+    "description": "Supported in Multi-column Layout",
+    "source_file": "css/properties/gap.json",
+    "spec_url": "https://drafts.csswg.org/css-align/#gap-shorthand",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "61"
+     },
+     "firefox_android": {
+      "version_added": "61"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:multi-column"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "css"
+ ],
+ "baselineLowDateAsObject": "2017-03-07T00:00:00.000Z",
+ "baselineHighDateAsObject": "2019-09-07T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

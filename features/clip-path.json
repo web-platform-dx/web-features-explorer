@@ -1,0 +1,938 @@
+{
+ "compat_features": [
+  "api.SVGClipPathElement",
+  "api.SVGClipPathElement.clipPathUnits",
+  "api.SVGClipPathElement.transform",
+  "css.properties.clip-path",
+  "css.properties.clip-path.basic_shape",
+  "css.properties.clip-path.html_elements",
+  "css.properties.clip-path.path",
+  "css.properties.clip-path.svg_elements",
+  "svg.elements.clipPath",
+  "svg.elements.clipPath.clipPathUnits",
+  "svg.elements.clipPath.systemLanguage",
+  "svg.global_attributes.clip-path"
+ ],
+ "description": "The clip-path CSS property and SVG attribute set the visible area of an element. Everything outside the area will be hidden.",
+ "description_html": "The <code>clip-path</code> CSS property and SVG attribute set the visible area of an element. Everything outside the area will be hidden.",
+ "group": "clipping-shapes-masking",
+ "name": "clip-path",
+ "spec": [
+  {
+   "url": "https://drafts.fxtf.org/css-masking-1/#the-clip-path",
+   "seriesComposition": "full",
+   "shortname": "css-masking-1",
+   "series": {
+    "shortname": "css-masking",
+    "currentSpecification": "css-masking-1",
+    "title": "CSS Masking",
+    "shortTitle": "CSS Masking",
+    "releaseUrl": "https://www.w3.org/TR/css-masking/",
+    "nightlyUrl": "https://drafts.fxtf.org/css-masking/"
+   },
+   "seriesVersion": "1",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-masking-1/",
+    "status": "Candidate Recommendation Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.fxtf.org/css-masking-1/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/fxtf-drafts",
+    "sourcePath": "css-masking-1/Overview.bs",
+    "filename": "Overview.html"
+   },
+   "title": "CSS Masking Module Level 1",
+   "source": "w3c",
+   "shortTitle": "CSS Masking 1",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-masking"
+    ]
+   },
+   "fragment": "the-clip-path"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2023-07-21",
+  "baseline_low_date": "2021-01-21",
+  "support": {
+   "chrome": "88",
+   "chrome_android": "88",
+   "edge": "88",
+   "firefox": "71",
+   "firefox_android": "79",
+   "safari": "13.1",
+   "safari_ios": "13"
+  }
+ },
+ "id": "clip-path",
+ "groups": [
+  "clipping-shapes-masking"
+ ],
+ "groupPaths": [
+  [
+   "Clipping, shapes and masking"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "clip-path",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/clip-path"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.37655557,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/216"
+ },
+ "interop": [
+  {
+   "year": "2023",
+   "label": "interop-2023-cssmasking"
+  }
+ ],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.SVGClipPathElement",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SVGClipPathElement",
+    "source_file": "api/SVGClipPathElement.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#InterfaceSVGClipPathElement",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:clip-path"
+    ]
+   }
+  },
+  {
+   "key": "api.SVGClipPathElement.clipPathUnits",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SVGClipPathElement/clipPathUnits",
+    "source_file": "api/SVGClipPathElement.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#dom-svgclippathelement-clippathunits",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:clip-path"
+    ]
+   }
+  },
+  {
+   "key": "api.SVGClipPathElement.transform",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SVGClipPathElement/transform",
+    "source_file": "api/SVGClipPathElement.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#dom-svgclippathelement-transform",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:clip-path"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.clip-path",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/clip-path",
+    "source_file": "css/properties/clip-path.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#the-clip-path",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "55"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "23"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "55"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "25"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "notes": "Only supports clip paths defined by <code>url()</code>.",
+       "partial_implementation": true,
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "notes": "Only supports clip paths defined by <code>url()</code>.",
+      "partial_implementation": true,
+      "version_added": "10"
+     },
+     "oculus": [
+      {
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "42"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "42"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "9.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "9.3"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "6.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.5"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "55"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "9.3"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:clip-path"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.clip-path.basic_shape",
+   "compat": {
+    "description": "<code>&lt;basic-shape&gt;</code>",
+    "source_file": "css/properties/clip-path.json",
+    "spec_url": "https://drafts.csswg.org/css-shapes/#typedef-basic-shape",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "23"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "54"
+     },
+     "firefox_android": {
+      "version_added": "54"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:clip-path"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.clip-path.html_elements",
+   "compat": {
+    "description": "On HTML elements",
+    "source_file": "css/properties/clip-path.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "23"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "3.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:clip-path"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.clip-path.path",
+   "compat": {
+    "description": "<code>path()</code>",
+    "source_file": "css/properties/clip-path.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "88"
+     },
+     "chrome_android": {
+      "version_added": "88"
+     },
+     "edge": {
+      "version_added": "88"
+     },
+     "firefox": {
+      "version_added": "71"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "14.0"
+     },
+     "opera": {
+      "version_added": "74"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": [
+      {
+       "version_added": "13.1"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "10"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "13"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "10"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "88"
+     },
+     "webview_ios": [
+      {
+       "version_added": "13"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "10"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:clip-path"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.clip-path.svg_elements",
+   "compat": {
+    "description": "On SVG elements",
+    "source_file": "css/properties/clip-path.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "23"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:clip-path"
+    ]
+   }
+  },
+  {
+   "key": "svg.elements.clipPath",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/SVG/Reference/Element/clipPath",
+    "source_file": "svg/elements/clipPath.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#ClipPathElement",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "3"
+     }
+    },
+    "tags": [
+     "web-features:clip-path"
+    ]
+   }
+  },
+  {
+   "key": "svg.elements.clipPath.clipPathUnits",
+   "compat": {
+    "source_file": "svg/elements/clipPath.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3"
+     }
+    },
+    "tags": [
+     "web-features:clip-path"
+    ]
+   }
+  },
+  {
+   "key": "svg.elements.clipPath.systemLanguage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/systemLanguage",
+    "source_file": "svg/elements/clipPath.json",
+    "spec_url": "https://svgwg.org/svg2-draft/types.html#__svg__SVGTests__systemLanguage",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "12"
+     },
+     "firefox_android": {
+      "version_added": "14"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "3"
+     },
+     "safari_ios": {
+      "version_added": "3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "3"
+     },
+     "webview_ios": {
+      "version_added": "3"
+     }
+    },
+    "tags": [
+     "web-features:clip-path"
+    ]
+   }
+  },
+  {
+   "key": "svg.global_attributes.clip-path",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/clip-path",
+    "source_file": "svg/global_attributes.json",
+    "spec_url": "https://drafts.fxtf.org/css-masking/#the-clip-path",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "23"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": "10"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:clip-path"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "css",
+  "svg"
+ ],
+ "baselineLowDateAsObject": "2021-01-21T00:00:00.000Z",
+ "baselineHighDateAsObject": "2023-07-21T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

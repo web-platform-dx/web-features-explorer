@@ -1,0 +1,1124 @@
+{
+ "compat_features": [
+  "api.XRFrame.fillJointRadii",
+  "api.XRFrame.fillPoses",
+  "api.XRFrame.getJointPose",
+  "api.XRHand",
+  "api.XRHand.@@iterator",
+  "api.XRHand.entries",
+  "api.XRHand.forEach",
+  "api.XRHand.get",
+  "api.XRHand.keys",
+  "api.XRHand.size",
+  "api.XRHand.values",
+  "api.XRInputSource.hand",
+  "api.XRJointPose",
+  "api.XRJointPose.radius",
+  "api.XRJointSpace",
+  "api.XRJointSpace.jointName"
+ ],
+ "description": "An XRHand object, from the hand attribute of an XRInputSource object, represents a WebXR session's fully-articulated hand tracking model.",
+ "description_html": "An <code>XRHand</code> object, from the <code>hand</code> attribute of an <code>XRInputSource</code> object, represents a WebXR session's fully-articulated hand tracking model.",
+ "group": "webxr",
+ "name": "Hand input",
+ "spec": [
+  {
+   "url": "https://immersive-web.github.io/webxr-hand-input/",
+   "seriesComposition": "full",
+   "shortname": "webxr-hand-input-1",
+   "series": {
+    "shortname": "webxr-hand-input",
+    "currentSpecification": "webxr-hand-input-1",
+    "title": "WebXR Hand Input",
+    "shortTitle": "WebXR Hand Input",
+    "releaseUrl": "https://www.w3.org/TR/webxr-hand-input/",
+    "nightlyUrl": "https://immersive-web.github.io/webxr-hand-input/"
+   },
+   "seriesVersion": "1",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Immersive Web Working Group",
+     "url": "https://www.w3.org/immersive-web/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/webxr-hand-input-1/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://immersive-web.github.io/webxr-hand-input/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/immersive-web/webxr-hand-input",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "WebXR Hand Input Module - Level 1",
+   "source": "w3c",
+   "shortTitle": "WebXR Hand Input 1",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "webxr/hand-input"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "131",
+   "chrome_android": "131"
+  }
+ },
+ "id": "webxr-hand-input",
+ "groups": [
+  "webxr"
+ ],
+ "groupPaths": [
+  [
+   "WebXR"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "XRHand",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/XRHand"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/1070",
+   "position": "",
+   "concerns": []
+  },
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/395",
+   "position": "support",
+   "concerns": []
+  }
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.XRFrame.fillJointRadii",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRFrame/fillJointRadii",
+    "source_file": "api/XRFrame.json",
+    "spec_url": "https://immersive-web.github.io/webxr-hand-input/#dom-xrframe-filljointradii",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "15.1"
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRFrame.fillPoses",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRFrame/fillPoses",
+    "source_file": "api/XRFrame.json",
+    "spec_url": "https://immersive-web.github.io/webxr-hand-input/#dom-xrframe-fillposes",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "15.1"
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRFrame.getJointPose",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRFrame/getJointPose",
+    "source_file": "api/XRFrame.json",
+    "spec_url": "https://immersive-web.github.io/webxr-hand-input/#dom-xrframe-getjointpose",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "15.1"
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRHand",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRHand",
+    "source_file": "api/XRHand.json",
+    "spec_url": "https://immersive-web.github.io/webxr-hand-input/#xrhand-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "15.1"
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRHand.@@iterator",
+   "compat": {
+    "description": "[Symbol.iterator]",
+    "source_file": "api/XRHand.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRHand.entries",
+   "compat": {
+    "source_file": "api/XRHand.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRHand.forEach",
+   "compat": {
+    "source_file": "api/XRHand.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRHand.get",
+   "compat": {
+    "source_file": "api/XRHand.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRHand.keys",
+   "compat": {
+    "source_file": "api/XRHand.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRHand.size",
+   "compat": {
+    "source_file": "api/XRHand.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRHand.values",
+   "compat": {
+    "source_file": "api/XRHand.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRInputSource.hand",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRInputSource/hand",
+    "source_file": "api/XRInputSource.json",
+    "spec_url": "https://immersive-web.github.io/webxr-hand-input/#dom-xrinputsource-hand",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "15.1"
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRJointPose",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRJointPose",
+    "source_file": "api/XRJointPose.json",
+    "spec_url": "https://immersive-web.github.io/webxr-hand-input/#xrjointpose-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "15.1"
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRJointPose.radius",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRJointPose/radius",
+    "source_file": "api/XRJointPose.json",
+    "spec_url": "https://immersive-web.github.io/webxr-hand-input/#dom-xrjointpose-radius",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "15.1"
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRJointSpace",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRJointSpace",
+    "source_file": "api/XRJointSpace.json",
+    "spec_url": "https://immersive-web.github.io/webxr-hand-input/#xrhand-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "15.1"
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  },
+  {
+   "key": "api.XRJointSpace.jointName",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRJointSpace/jointName",
+    "source_file": "api/XRJointSpace.json",
+    "spec_url": "https://immersive-web.github.io/webxr-hand-input/#dom-xrjointspace-jointname",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "131"
+     },
+     "chrome_android": {
+      "version_added": "131"
+     },
+     "edge": {
+      "notes": "Hololens 2 only.",
+      "version_added": "93",
+      "version_last": "110",
+      "version_removed": "111"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "15.1"
+     },
+     "opera": {
+      "version_added": "116"
+     },
+     "opera_android": {
+      "version_added": "87"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "131"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-hand-input"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

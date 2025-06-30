@@ -1,0 +1,2243 @@
+{
+ "caniuse": "fullscreen",
+ "compat_features": [
+  "api.Document.exitFullscreen",
+  "api.Document.exitFullscreen.returns_promise",
+  "api.Document.fullscreenElement",
+  "api.Document.fullscreenEnabled",
+  "api.Document.fullscreenchange_event",
+  "api.Document.fullscreenerror_event",
+  "api.Element.fullscreenchange_event",
+  "api.Element.fullscreenerror_event",
+  "api.Element.requestFullscreen",
+  "api.Element.requestFullscreen.options_navigationUI_parameter",
+  "api.Element.requestFullscreen.returns_promise",
+  "api.HTMLIFrameElement.allowFullscreen",
+  "api.ShadowRoot.fullscreenElement",
+  "css.selectors.backdrop.fullscreen",
+  "css.selectors.fullscreen",
+  "css.selectors.fullscreen.all_elements",
+  "html.elements.iframe.allow.fullscreen",
+  "html.elements.iframe.allowfullscreen",
+  "http.headers.Permissions-Policy.fullscreen"
+ ],
+ "description": "The fullscreen API makes a specific element fill the whole screen and hides most browser UI.",
+ "description_html": "The fullscreen API makes a specific element fill the whole screen and hides most browser UI.",
+ "name": "Fullscreen API",
+ "spec": [
+  {
+   "url": "https://fullscreen.spec.whatwg.org/",
+   "seriesComposition": "full",
+   "shortname": "fullscreen",
+   "series": {
+    "shortname": "fullscreen",
+    "currentSpecification": "fullscreen",
+    "title": "Fullscreen API",
+    "shortTitle": "Fullscreen API",
+    "nightlyUrl": "https://fullscreen.spec.whatwg.org/"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "Fullscreen API Workstream",
+     "url": "https://fullscreen.spec.whatwg.org/"
+    }
+   ],
+   "nightly": {
+    "url": "https://fullscreen.spec.whatwg.org/",
+    "status": "Living Standard",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/fullscreen",
+    "sourcePath": "fullscreen.bs",
+    "filename": "index.html"
+   },
+   "title": "Fullscreen API",
+   "source": "whatwg",
+   "shortTitle": "Fullscreen API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "fullscreen"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "71",
+   "chrome_android": "71",
+   "edge": "79",
+   "firefox": "64",
+   "firefox_android": "64",
+   "safari": "16.4"
+  }
+ },
+ "id": "fullscreen",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Fullscreen API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Fullscreen_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.Document.exitFullscreen",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/exitFullscreen",
+    "source_file": "api/Document.json",
+    "spec_url": "https://fullscreen.spec.whatwg.org/#ref-for-dom-document-exitfullscreen①",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "15"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "12"
+      },
+      {
+       "version_added": "12",
+       "version_last": "13",
+       "version_removed": "14"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "64"
+      },
+      {
+       "alternative_name": "mozCancelFullScreen",
+       "version_added": "9"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "64"
+      },
+      {
+       "alternative_name": "mozCancelFullScreen",
+       "version_added": "9"
+      }
+     ],
+     "ie": {
+      "prefix": "ms",
+      "version_added": "11"
+     },
+     "oculus": [
+      {
+       "version_added": "6.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "58"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "15"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "14"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "16.4"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.1"
+      }
+     ],
+     "safari_ios": [
+      {
+       "notes": [
+        "Only available on iPad, not on iPhone.",
+        "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+       ],
+       "partial_implementation": true,
+       "version_added": "16.4"
+      },
+      {
+       "notes": "Only available on iPad, not on iPhone.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "12"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "10.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.exitFullscreen.returns_promise",
+   "compat": {
+    "description": "Returns a <code>Promise</code>",
+    "source_file": "api/Document.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "64"
+     },
+     "firefox_android": {
+      "version_added": "64"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.fullscreenElement",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/fullscreenElement",
+    "source_file": "api/Document.json",
+    "spec_url": "https://fullscreen.spec.whatwg.org/#ref-for-dom-document-fullscreenelement①",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "20"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "25"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "12"
+      },
+      {
+       "version_added": "12",
+       "version_last": "13",
+       "version_removed": "14"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "64"
+      },
+      {
+       "alternative_name": "mozFullScreenElement",
+       "version_added": "9"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "64"
+      },
+      {
+       "alternative_name": "mozFullScreenElement",
+       "version_added": "9"
+      }
+     ],
+     "ie": {
+      "prefix": "ms",
+      "version_added": "11"
+     },
+     "oculus": [
+      {
+       "version_added": "6.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "58"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "15"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "14"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "16.4"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "6"
+      }
+     ],
+     "safari_ios": [
+      {
+       "notes": [
+        "Only available on iPad, not on iPhone.",
+        "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+       ],
+       "partial_implementation": true,
+       "version_added": "16.4"
+      },
+      {
+       "notes": "Only available on iPad, not on iPhone.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "12"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "10.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "1.5"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": [
+      {
+       "notes": [
+        "Only available on iPad, not on iPhone.",
+        "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+       ],
+       "partial_implementation": true,
+       "version_added": "16.4"
+      },
+      {
+       "notes": "Only available on iPad, not on iPhone.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "12"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.fullscreenEnabled",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/fullscreenEnabled",
+    "source_file": "api/Document.json",
+    "spec_url": "https://fullscreen.spec.whatwg.org/#ref-for-dom-document-fullscreenenabled①",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "20"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "25"
+      }
+     ],
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "version_added": "64"
+      },
+      {
+       "alternative_name": "mozFullScreenEnabled",
+       "version_added": "10"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "64"
+      },
+      {
+       "alternative_name": "mozFullScreenEnabled",
+       "version_added": "10"
+      }
+     ],
+     "ie": {
+      "prefix": "ms",
+      "version_added": "11"
+     },
+     "oculus": [
+      {
+       "version_added": "6.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "58"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "15"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "14"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "16.4"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "6"
+      }
+     ],
+     "safari_ios": [
+      {
+       "notes": [
+        "Only available on iPad, not on iPhone.",
+        "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+       ],
+       "partial_implementation": true,
+       "version_added": "16.4"
+      },
+      {
+       "notes": "Only available on iPad, not on iPhone.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "12"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "10.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "1.5"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.fullscreenchange_event",
+   "compat": {
+    "description": "<code>fullscreenchange</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/fullscreenchange_event",
+    "source_file": "api/Document.json",
+    "spec_url": "https://fullscreen.spec.whatwg.org/#handler-document-onfullscreenchange",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "15"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "12"
+      },
+      {
+       "version_added": "12",
+       "version_last": "13",
+       "version_removed": "14"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "64"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "10"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "64"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "10"
+      }
+     ],
+     "ie": {
+      "alternative_name": "MSFullscreenChange",
+      "version_added": "11"
+     },
+     "oculus": [
+      {
+       "version_added": "6.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "58"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "15"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "14"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "16.4"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.1"
+      }
+     ],
+     "safari_ios": [
+      {
+       "notes": [
+        "Only available on iPad, not on iPhone.",
+        "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+       ],
+       "partial_implementation": true,
+       "version_added": "16.4"
+      },
+      {
+       "notes": "Only available on iPad, not on iPhone.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "12"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "10.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.fullscreenerror_event",
+   "compat": {
+    "description": "<code>fullscreenerror</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/fullscreenerror_event",
+    "source_file": "api/Document.json",
+    "spec_url": "https://fullscreen.spec.whatwg.org/#handler-document-onfullscreenerror",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "18"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "12"
+      },
+      {
+       "version_added": "12",
+       "version_last": "13",
+       "version_removed": "14"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "64"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "10"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "64"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "10"
+      }
+     ],
+     "ie": {
+      "alternative_name": "MSFullscreenError",
+      "version_added": "11"
+     },
+     "oculus": [
+      {
+       "version_added": "6.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "58"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "15"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "14"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "16.4"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "6"
+      }
+     ],
+     "safari_ios": [
+      {
+       "notes": [
+        "Only available on iPad, not on iPhone.",
+        "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+       ],
+       "partial_implementation": true,
+       "version_added": "16.4"
+      },
+      {
+       "notes": "Only available on iPad, not on iPhone.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "12"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "10.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "api.Element.fullscreenchange_event",
+   "compat": {
+    "description": "<code>fullscreenchange</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/fullscreenchange_event",
+    "source_file": "api/Element.json",
+    "spec_url": "https://fullscreen.spec.whatwg.org/#handler-document-onfullscreenchange",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "15"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "12"
+      },
+      {
+       "version_added": "12",
+       "version_last": "13",
+       "version_removed": "14"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "64"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "10"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "64"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "10"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": [
+      {
+       "version_added": "6.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "58"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "15"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "14"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "16.4"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.1"
+      }
+     ],
+     "safari_ios": [
+      {
+       "notes": [
+        "Only available on iPad, not on iPhone.",
+        "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+       ],
+       "partial_implementation": true,
+       "version_added": "16.4"
+      },
+      {
+       "notes": "Only available on iPad, not on iPhone.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "12"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "10.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "api.Element.fullscreenerror_event",
+   "compat": {
+    "description": "<code>fullscreenerror</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/fullscreenerror_event",
+    "source_file": "api/Element.json",
+    "spec_url": "https://fullscreen.spec.whatwg.org/#handler-document-onfullscreenerror",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "18"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "12"
+      },
+      {
+       "version_added": "12",
+       "version_last": "13",
+       "version_removed": "14"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "64"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "10"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "64"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "10"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": [
+      {
+       "version_added": "6.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "58"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "15"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "14"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "16.4"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "6"
+      }
+     ],
+     "safari_ios": [
+      {
+       "notes": [
+        "Only available on iPad, not on iPhone.",
+        "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+       ],
+       "partial_implementation": true,
+       "version_added": "16.4"
+      },
+      {
+       "notes": "Only available on iPad, not on iPhone.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "12"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "10.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "api.Element.requestFullscreen",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/requestFullscreen",
+    "source_file": "api/Element.json",
+    "spec_url": "https://fullscreen.spec.whatwg.org/#ref-for-dom-element-requestfullscreen①",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "15"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "12"
+      },
+      {
+       "version_added": "12",
+       "version_last": "13",
+       "version_removed": "14"
+      }
+     ],
+     "firefox": [
+      {
+       "version_added": "64"
+      },
+      {
+       "alternative_name": "mozRequestFullScreen",
+       "notes": "Before Firefox 44, Firefox incorrectly allowed elements inside a <code>&lt;frame&gt;</code> or <code>&lt;object&gt;</code> element to request, and to be granted, fullscreen. In Firefox 44 and onwards this has been fixed: only elements in the top-level document or in an <code>&lt;iframe&gt;</code> element with the <code>allowfullscreen</code> attribute can be displayed fullscreen.",
+       "version_added": "9"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "64"
+      },
+      {
+       "alternative_name": "mozRequestFullScreen",
+       "notes": "Before Firefox for Android 44, Firefox for Android incorrectly allowed elements inside a <code>&lt;frame&gt;</code> or <code>&lt;object&gt;</code> element to request, and to be granted, fullscreen. In Firefox for Android 44 and onwards this has been fixed: only elements in the top-level document or in an <code>&lt;iframe&gt;</code> element with the <code>allowfullscreen</code> attribute can be displayed fullscreen.",
+       "version_added": "9"
+      }
+     ],
+     "ie": {
+      "prefix": "ms",
+      "version_added": "11"
+     },
+     "oculus": [
+      {
+       "version_added": "6.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "58"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "15"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "14"
+      },
+      {
+       "version_added": "12.1",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "16.4"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.1"
+      }
+     ],
+     "safari_ios": [
+      {
+       "notes": [
+        "Only available on iPad, not on iPhone.",
+        "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+       ],
+       "partial_implementation": true,
+       "version_added": "16.4"
+      },
+      {
+       "notes": "Only available on iPad, not on iPhone. Shows an overlay button which can not be disabled.",
+       "partial_implementation": true,
+       "prefix": "webkit",
+       "version_added": "12"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "10.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "4.4"
+      }
+     ],
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "api.Element.requestFullscreen.options_navigationUI_parameter",
+   "compat": {
+    "description": "<code>options.navigationUI</code> parameter",
+    "source_file": "api/Element.json",
+    "spec_url": "https://fullscreen.spec.whatwg.org/#dom-fullscreenoptions-navigationui",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "71"
+     },
+     "chrome_android": {
+      "version_added": "71"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "58"
+     },
+     "opera_android": {
+      "version_added": "50"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "71"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "api.Element.requestFullscreen.returns_promise",
+   "compat": {
+    "description": "Returns a <code>Promise</code>",
+    "source_file": "api/Element.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "71"
+     },
+     "chrome_android": {
+      "version_added": "71"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "64"
+     },
+     "firefox_android": {
+      "version_added": "64"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "58"
+     },
+     "opera_android": {
+      "version_added": "50"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "71"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLIFrameElement.allowFullscreen",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLIFrameElement/allowFullscreen",
+    "source_file": "api/HTMLIFrameElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#dom-iframe-allowfullscreen",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "version_added": "22"
+      },
+      {
+       "alternative_name": "mozAllowFullScreen",
+       "version_added": "9",
+       "version_last": "17",
+       "version_removed": "18"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "22"
+      },
+      {
+       "alternative_name": "mozAllowFullScreen",
+       "version_added": "9",
+       "version_last": "17",
+       "version_removed": "18"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "notes": [
+       "Only available on iPad, not on iPhone.",
+       "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+      ],
+      "partial_implementation": true,
+      "version_added": "12"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "notes": [
+       "Only available on iPad, not on iPhone.",
+       "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+      ],
+      "partial_implementation": true,
+      "version_added": "12"
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "api.ShadowRoot.fullscreenElement",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ShadowRoot/fullscreenElement",
+    "source_file": "api/ShadowRoot.json",
+    "spec_url": "https://fullscreen.spec.whatwg.org/#ref-for-dom-document-fullscreenelement②",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "71"
+     },
+     "chrome_android": {
+      "version_added": "71"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": [
+      {
+       "version_added": "64"
+      },
+      {
+       "alternative_name": "mozFullScreenElement",
+       "version_added": "63"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "64"
+      },
+      {
+       "alternative_name": "mozFullScreenElement",
+       "version_added": "63"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "58"
+     },
+     "opera_android": {
+      "version_added": "50"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "notes": [
+       "Only available on iPad, not on iPhone.",
+       "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+      ],
+      "partial_implementation": true,
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "71"
+     },
+     "webview_ios": {
+      "notes": [
+       "Only available on iPad, not on iPhone.",
+       "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+      ],
+      "partial_implementation": true,
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.backdrop.fullscreen",
+   "compat": {
+    "description": "Fullscreen support",
+    "source_file": "css/selectors/backdrop.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "47"
+     },
+     "firefox_android": {
+      "version_added": "47"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.fullscreen",
+   "compat": {
+    "description": "<code>:fullscreen</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:fullscreen",
+    "source_file": "css/selectors/fullscreen.json",
+    "spec_url": [
+     "https://drafts.csswg.org/selectors/#selectordef-fullscreen",
+     "https://fullscreen.spec.whatwg.org/#css-pc-fullscreen"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "71"
+      },
+      {
+       "alternative_name": ":-webkit-full-screen",
+       "version_added": "15"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "alternative_name": ":-webkit-full-screen",
+       "version_added": "18"
+      }
+     ],
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "version_added": "64"
+      },
+      {
+       "alternative_name": ":-moz-full-screen",
+       "version_added": "9"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "64"
+      },
+      {
+       "alternative_name": ":-moz-full-screen",
+       "version_added": "9"
+      }
+     ],
+     "ie": {
+      "prefix": "-ms-",
+      "version_added": "11"
+     },
+     "oculus": [
+      {
+       "version_added": "6.0"
+      },
+      {
+       "alternative_name": ":-webkit-full-screen",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "version_added": "58"
+      },
+      {
+       "alternative_name": ":-webkit-full-screen",
+       "version_added": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "alternative_name": ":-webkit-full-screen",
+       "version_added": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "16.4"
+      },
+      {
+       "alternative_name": ":-webkit-full-screen",
+       "version_added": "6"
+      }
+     ],
+     "safari_ios": [
+      {
+       "notes": [
+        "Only available on iPad, not on iPhone.",
+        "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+       ],
+       "partial_implementation": true,
+       "version_added": "16.4"
+      },
+      {
+       "alternative_name": ":-webkit-full-screen",
+       "notes": "Only available on iPad, not on iPhone.",
+       "partial_implementation": true,
+       "version_added": "12"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "version_added": "10.0"
+      },
+      {
+       "alternative_name": ":-webkit-full-screen",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "71"
+      },
+      {
+       "alternative_name": ":-webkit-full-screen",
+       "version_added": "37"
+      }
+     ],
+     "webview_ios": [
+      {
+       "notes": [
+        "Only available on iPad, not on iPhone.",
+        "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+       ],
+       "partial_implementation": true,
+       "version_added": "16.4"
+      },
+      {
+       "alternative_name": ":-webkit-full-screen",
+       "notes": "Only available on iPad, not on iPhone.",
+       "partial_implementation": true,
+       "version_added": "12"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.fullscreen.all_elements",
+   "compat": {
+    "description": "Select all elements in the fullscreen stack",
+    "source_file": "css/selectors/fullscreen.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "12",
+      "version_last": "18",
+      "version_removed": "79"
+     },
+     "firefox": {
+      "version_added": "43"
+     },
+     "firefox_android": {
+      "version_added": "43"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.iframe.allow.fullscreen",
+   "compat": {
+    "source_file": "html/elements/iframe.json",
+    "spec_url": "https://fullscreen.spec.whatwg.org/#permissions-policy-integration",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "62"
+     },
+     "chrome_android": {
+      "version_added": "62"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "80"
+     },
+     "firefox_android": {
+      "version_added": "80"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "49"
+     },
+     "opera_android": {
+      "version_added": "46"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "62"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.iframe.allowfullscreen",
+   "compat": {
+    "source_file": "html/elements/iframe.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-allowfullscreen",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "38"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "17",
+       "version_last": "37",
+       "version_removed": "38"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "38"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "18",
+       "version_last": "37",
+       "version_removed": "38"
+      }
+     ],
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "version_added": "18"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "9",
+       "version_last": "17",
+       "version_removed": "18"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "18"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "9",
+       "version_last": "17",
+       "version_removed": "18"
+      }
+     ],
+     "ie": {
+      "prefix": "ms",
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "25"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "15",
+       "version_last": "24",
+       "version_removed": "25"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "25"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "14",
+       "version_last": "24",
+       "version_removed": "25"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "10.1"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "5.1"
+      }
+     ],
+     "safari_ios": {
+      "notes": [
+       "Only available on iPad, not on iPhone.",
+       "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+      ],
+      "partial_implementation": true,
+      "version_added": "12"
+     },
+     "samsunginternet_android": [
+      {
+       "version_added": "3.0"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "1.0",
+       "version_last": "2.1",
+       "version_removed": "3.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "38"
+      },
+      {
+       "prefix": "webkit",
+       "version_added": "4.4",
+       "version_last": "37",
+       "version_removed": "38"
+      }
+     ],
+     "webview_ios": {
+      "notes": [
+       "Only available on iPad, not on iPhone.",
+       "Shows an overlay button which can not be disabled. Swiping down exits fullscreen mode, making it unsuitable for some use cases like games."
+      ],
+      "partial_implementation": true,
+      "version_added": "12"
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Permissions-Policy.fullscreen",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen",
+    "source_file": "http/headers/Permissions-Policy.json",
+    "spec_url": "https://fullscreen.spec.whatwg.org/#permissions-policy-integration",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "88"
+     },
+     "chrome_android": {
+      "version_added": "88"
+     },
+     "edge": {
+      "version_added": "88"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "14.0"
+     },
+     "opera": {
+      "version_added": "74"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "88"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:fullscreen"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "css",
+  "html",
+  "http"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ },
+ "blockedOn": "Safari on iOS",
+ "monthsBlocked": 27,
+ "blockedSince": "March 2023"
+}

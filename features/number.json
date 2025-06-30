@@ -1,0 +1,5184 @@
+{
+ "compat_features": [
+  "javascript.builtins.Infinity",
+  "javascript.builtins.Math",
+  "javascript.builtins.Math.E",
+  "javascript.builtins.Math.LN10",
+  "javascript.builtins.Math.LN2",
+  "javascript.builtins.Math.LOG10E",
+  "javascript.builtins.Math.LOG2E",
+  "javascript.builtins.Math.PI",
+  "javascript.builtins.Math.SQRT1_2",
+  "javascript.builtins.Math.SQRT2",
+  "javascript.builtins.Math.abs",
+  "javascript.builtins.Math.acos",
+  "javascript.builtins.Math.acosh",
+  "javascript.builtins.Math.asin",
+  "javascript.builtins.Math.asinh",
+  "javascript.builtins.Math.atan",
+  "javascript.builtins.Math.atan2",
+  "javascript.builtins.Math.atanh",
+  "javascript.builtins.Math.cbrt",
+  "javascript.builtins.Math.ceil",
+  "javascript.builtins.Math.clz32",
+  "javascript.builtins.Math.cos",
+  "javascript.builtins.Math.cosh",
+  "javascript.builtins.Math.exp",
+  "javascript.builtins.Math.expm1",
+  "javascript.builtins.Math.floor",
+  "javascript.builtins.Math.fround",
+  "javascript.builtins.Math.hypot",
+  "javascript.builtins.Math.imul",
+  "javascript.builtins.Math.log",
+  "javascript.builtins.Math.log10",
+  "javascript.builtins.Math.log1p",
+  "javascript.builtins.Math.log2",
+  "javascript.builtins.Math.max",
+  "javascript.builtins.Math.min",
+  "javascript.builtins.Math.pow",
+  "javascript.builtins.Math.random",
+  "javascript.builtins.Math.round",
+  "javascript.builtins.Math.sign",
+  "javascript.builtins.Math.sin",
+  "javascript.builtins.Math.sinh",
+  "javascript.builtins.Math.sqrt",
+  "javascript.builtins.Math.tan",
+  "javascript.builtins.Math.tanh",
+  "javascript.builtins.Math.trunc",
+  "javascript.builtins.NaN",
+  "javascript.builtins.Number",
+  "javascript.builtins.Number.EPSILON",
+  "javascript.builtins.Number.MAX_SAFE_INTEGER",
+  "javascript.builtins.Number.MAX_VALUE",
+  "javascript.builtins.Number.MIN_SAFE_INTEGER",
+  "javascript.builtins.Number.MIN_VALUE",
+  "javascript.builtins.Number.NEGATIVE_INFINITY",
+  "javascript.builtins.Number.NaN",
+  "javascript.builtins.Number.Number",
+  "javascript.builtins.Number.POSITIVE_INFINITY",
+  "javascript.builtins.Number.isFinite",
+  "javascript.builtins.Number.isInteger",
+  "javascript.builtins.Number.isNaN",
+  "javascript.builtins.Number.isSafeInteger",
+  "javascript.builtins.Number.parseFloat",
+  "javascript.builtins.Number.parseInt",
+  "javascript.builtins.Number.toExponential",
+  "javascript.builtins.Number.toFixed",
+  "javascript.builtins.Number.toPrecision",
+  "javascript.builtins.Number.toString",
+  "javascript.builtins.Number.valueOf",
+  "javascript.builtins.isNaN",
+  "javascript.builtins.parseInt",
+  "javascript.builtins.parseInt.leading_zero_strings_as_decimal",
+  "javascript.grammar.binary_numeric_literals",
+  "javascript.grammar.decimal_numeric_literals",
+  "javascript.grammar.hexadecimal_numeric_literals",
+  "javascript.grammar.octal_numeric_literals"
+ ],
+ "description": "The number type (and Number object) represents floating-point numbers, such as 42 or -4.201, while the Math API contains mathematical functions and constants. JavaScript can also represent boundless negative and positive values as Infinity or not-a-number as NaN (as in 0 * Infinity).",
+ "description_html": "The number type (and <code>Number</code> object) represents floating-point numbers, such as 42 or -4.201, while the <code>Math</code> API contains mathematical functions and constants. JavaScript can also represent boundless negative and positive values as <code>Infinity</code> or not-a-number as <code>NaN</code> (as in <code>0 * Infinity</code>).",
+ "group": "primitive-types",
+ "name": "Math and numbers",
+ "spec": [
+  {
+   "url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number-objects",
+   "seriesComposition": "full",
+   "shortname": "ecmascript",
+   "series": {
+    "shortname": "ecmascript",
+    "currentSpecification": "ecmascript",
+    "title": "ECMAScript® 2026 Language Specification",
+    "shortTitle": "ECMAScript",
+    "nightlyUrl": "https://tc39.es/ecma262/multipage/"
+   },
+   "shortTitle": "ECMAScript",
+   "tests": {
+    "repository": "https://github.com/tc39/test262",
+    "testPaths": [
+     "test"
+    ],
+    "excludePaths": [
+     "test/intl402"
+    ]
+   },
+   "organization": "Ecma International",
+   "groups": [
+    {
+     "name": "TC39",
+     "url": "https://tc39.es/"
+    }
+   ],
+   "nightly": {
+    "url": "https://tc39.es/ecma262/multipage/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/tc39/ecma262",
+    "sourcePath": "spec.html",
+    "pages": [
+     "https://tc39.es/ecma262/multipage/scope.html",
+     "https://tc39.es/ecma262/multipage/conformance.html",
+     "https://tc39.es/ecma262/multipage/normative-references.html",
+     "https://tc39.es/ecma262/multipage/overview.html",
+     "https://tc39.es/ecma262/multipage/notational-conventions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html",
+     "https://tc39.es/ecma262/multipage/abstract-operations.html",
+     "https://tc39.es/ecma262/multipage/syntax-directed-operations.html",
+     "https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html",
+     "https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-source-code.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html",
+     "https://tc39.es/ecma262/multipage/error-handling-and-language-extensions.html",
+     "https://tc39.es/ecma262/multipage/ecmascript-standard-built-in-objects.html",
+     "https://tc39.es/ecma262/multipage/global-object.html",
+     "https://tc39.es/ecma262/multipage/fundamental-objects.html",
+     "https://tc39.es/ecma262/multipage/numbers-and-dates.html",
+     "https://tc39.es/ecma262/multipage/text-processing.html",
+     "https://tc39.es/ecma262/multipage/indexed-collections.html",
+     "https://tc39.es/ecma262/multipage/keyed-collections.html",
+     "https://tc39.es/ecma262/multipage/structured-data.html",
+     "https://tc39.es/ecma262/multipage/managing-memory.html",
+     "https://tc39.es/ecma262/multipage/control-abstraction-objects.html",
+     "https://tc39.es/ecma262/multipage/reflection.html",
+     "https://tc39.es/ecma262/multipage/memory-model.html",
+     "https://tc39.es/ecma262/multipage/grammar-summary.html",
+     "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html",
+     "https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html",
+     "https://tc39.es/ecma262/multipage/host-layering-points.html",
+     "https://tc39.es/ecma262/multipage/corrections-and-clarifications-in-ecmascript-2015-with-possible-compatibility-impact.html",
+     "https://tc39.es/ecma262/multipage/additions-and-changes-that-introduce-incompatibilities-with-prior-editions.html",
+     "https://tc39.es/ecma262/multipage/bibliography.html",
+     "https://tc39.es/ecma262/multipage/colophon.html",
+     "https://tc39.es/ecma262/multipage/copyright-and-software-license.html"
+    ],
+    "filename": "index.html"
+   },
+   "title": "ECMAScript® 2026 Language Specification",
+   "source": "spec",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": "sec-number-objects"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "1",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "1",
+   "firefox_android": "4",
+   "safari": "1",
+   "safari_ios": "1"
+  }
+ },
+ "id": "number",
+ "groups": [
+  "primitive-types"
+ ],
+ "groupPaths": [
+  [
+   "JavaScript",
+   "Primitive types"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Number",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "javascript.builtins.Infinity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "source_file": "javascript/builtins/globals.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/global-object.html#sec-value-properties-of-the-global-object-infinity",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "4"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math-object",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.E",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/E",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.e",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.LN10",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/LN10",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.ln10",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.LN2",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/LN2",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.ln2",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.LOG10E",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/LOG10E",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.log10e",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.LOG2E",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/LOG2E",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.log2e",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.PI",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/PI",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.pi",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.SQRT1_2",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.sqrt1_2",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.SQRT2",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/SQRT2",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.sqrt2",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.abs",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/abs",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.abs",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.acos",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/acos",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.acos",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.acosh",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/acosh",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.acosh",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.asin",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/asin",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.asin",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.asinh",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/asinh",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.asinh",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.atan",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/atan",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.atan",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.atan2",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.atan2",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.atanh",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/atanh",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.atanh",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.cbrt",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/cbrt",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.cbrt",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.ceil",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.ceil",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.clz32",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/clz32",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.clz32",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "31"
+     },
+     "firefox_android": {
+      "version_added": "31"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.cos",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/cos",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.cos",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.cosh",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/cosh",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.cosh",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.exp",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/exp",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.exp",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.expm1",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/expm1",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.expm1",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.floor",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.floor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.fround",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/fround",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.fround",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "26"
+     },
+     "firefox_android": {
+      "version_added": "26"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.hypot",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/hypot",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.hypot",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "27"
+     },
+     "firefox_android": {
+      "version_added": "27"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.imul",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/imul",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.imul",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "28"
+     },
+     "chrome_android": {
+      "version_added": "28"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "20"
+     },
+     "firefox_android": {
+      "version_added": "20"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "16"
+     },
+     "opera_android": {
+      "version_added": "15"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.log",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/log",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.log",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.log10",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/log10",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.log10",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.log1p",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/log1p",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.log1p",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.log2",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/log2",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.log2",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.max",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/max",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.max",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.min",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/min",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.min",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.pow",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/pow",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.pow",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.random",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.random",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.round",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/round",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.round",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.sign",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/sign",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.sign",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.sin",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/sin",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.sin",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.sinh",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/sinh",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.sinh",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.sqrt",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.sqrt",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.tan",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/tan",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.tan",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.tanh",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/tanh",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.tanh",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Math.trunc",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc",
+    "source_file": "javascript/builtins/Math.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.trunc",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "38"
+     },
+     "chrome_android": {
+      "version_added": "38"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "38"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.NaN",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "source_file": "javascript/builtins/globals.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/global-object.html#sec-value-properties-of-the-global-object-nan",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "4"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.EPSILON",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.epsilon",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "34"
+     },
+     "chrome_android": {
+      "version_added": "34"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "21"
+     },
+     "opera_android": {
+      "version_added": "21"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.MAX_SAFE_INTEGER",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.max_safe_integer",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "34"
+     },
+     "chrome_android": {
+      "version_added": "34"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "31"
+     },
+     "firefox_android": {
+      "version_added": "31"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "21"
+     },
+     "opera_android": {
+      "version_added": "21"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.MAX_VALUE",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.max_value",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.MIN_SAFE_INTEGER",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.min_safe_integer",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "34"
+     },
+     "chrome_android": {
+      "version_added": "34"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "31"
+     },
+     "firefox_android": {
+      "version_added": "31"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "21"
+     },
+     "opera_android": {
+      "version_added": "21"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.MIN_VALUE",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.min_value",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.NEGATIVE_INFINITY",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.negative_infinity",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.NaN",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.nan",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.Number",
+   "compat": {
+    "description": "<code>Number()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/Number",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number-constructor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.POSITIVE_INFINITY",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.positive_infinity",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.isFinite",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.isfinite",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "19"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "16"
+     },
+     "firefox_android": {
+      "version_added": "16"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.isInteger",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.isinteger",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "34"
+     },
+     "chrome_android": {
+      "version_added": "34"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "16"
+     },
+     "firefox_android": {
+      "version_added": "16"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "21"
+     },
+     "opera_android": {
+      "version_added": "21"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.isNaN",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.isnan",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "25"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.isSafeInteger",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.issafeinteger",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "34"
+     },
+     "chrome_android": {
+      "version_added": "34"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "32"
+     },
+     "firefox_android": {
+      "version_added": "32"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "21"
+     },
+     "opera_android": {
+      "version_added": "21"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.parseFloat",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/parseFloat",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.parsefloat",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "34"
+     },
+     "chrome_android": {
+      "version_added": "34"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "21"
+     },
+     "opera_android": {
+      "version_added": "21"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.parseInt",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.parseint",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "34"
+     },
+     "chrome_android": {
+      "version_added": "34"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "0.12.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "21"
+     },
+     "opera_android": {
+      "version_added": "21"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.toExponential",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.toexponential",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "5.5"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "7"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-3",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.toFixed",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.tofixed",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "5.5"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "7"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-3",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.toPrecision",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.toprecision",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "5.5"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "7"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-3",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.toString",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toString",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.tostring",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "4"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Number.valueOf",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/valueOf",
+    "source_file": "javascript/builtins/Number.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.valueof",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "4"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.isNaN",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/isNaN",
+    "source_file": "javascript/builtins/globals.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/global-object.html#sec-isnan-number",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.parseInt",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/parseInt",
+    "source_file": "javascript/builtins/globals.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/global-object.html#sec-parseint-string-radix",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.parseInt.leading_zero_strings_as_decimal",
+   "compat": {
+    "description": "Parses leading-zero strings as decimal, not octal",
+    "source_file": "javascript/builtins/globals.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "23"
+     },
+     "chrome_android": {
+      "version_added": "25"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "21"
+     },
+     "firefox_android": {
+      "version_added": "21"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.grammar.binary_numeric_literals",
+   "compat": {
+    "description": "Binary numeric literals (<code>0b</code>)",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Lexical_grammar#binary",
+    "source_file": "javascript/grammar.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#prod-BinaryIntegerLiteral",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "4.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.grammar.decimal_numeric_literals",
+   "compat": {
+    "description": "Decimal numeric literals (<code>1234567890</code>)",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Lexical_grammar#decimal",
+    "source_file": "javascript/grammar.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#prod-DecimalLiteral",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.grammar.hexadecimal_numeric_literals",
+   "compat": {
+    "description": "Hexadecimal numeric literals (<code>0xAF</code>)",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Lexical_grammar#hexadecimal",
+    "source_file": "javascript/grammar.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#prod-HexIntegerLiteral",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "3"
+     },
+     "nodejs": {
+      "version_added": "0.10.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-1",
+     "web-features:number"
+    ]
+   }
+  },
+  {
+   "key": "javascript.grammar.octal_numeric_literals",
+   "compat": {
+    "description": "Octal numeric literals (<code>0o</code>)",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Lexical_grammar#octal",
+    "source_file": "javascript/grammar.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#prod-OctalIntegerLiteral",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "25"
+     },
+     "firefox_android": {
+      "version_added": "25"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": "4.0.0"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "28"
+     },
+     "opera_android": {
+      "version_added": "28"
+     },
+     "safari": {
+      "version_added": "9"
+     },
+     "safari_ios": {
+      "version_added": "9"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": "9"
+     }
+    },
+    "tags": [
+     "web-features:snapshot:ecmascript-2015",
+     "web-features:number"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "javascript"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

@@ -1,0 +1,968 @@
+{
+ "caniuse": "css-text-box-trim",
+ "compat_features": [
+  "css.properties.text-box",
+  "css.properties.text-box-edge",
+  "css.properties.text-box-edge.auto",
+  "css.properties.text-box-trim",
+  "css.properties.text-box-trim.none",
+  "css.properties.text-box-trim.trim-both",
+  "css.properties.text-box-trim.trim-end",
+  "css.properties.text-box-trim.trim-start",
+  "css.properties.text-box.normal",
+  "css.types.text-edge",
+  "css.types.text-edge.alphabetic",
+  "css.types.text-edge.cap",
+  "css.types.text-edge.ex",
+  "css.types.text-edge.text"
+ ],
+ "description": "The text-box CSS property sets the spacing above and below text based on a font's typographic features. For example, text-box: trim-both ex alphabetic trims the top to the top of the letter x and the bottom to the bottom of most letters, without descenders.",
+ "description_html": "The <code>text-box</code> CSS property sets the spacing above and below text based on a font's typographic features. For example, <code>text-box: trim-both ex alphabetic</code> trims the top to the top of the letter x and the bottom to the bottom of most letters, without descenders.",
+ "group": "text",
+ "name": "text-box",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css-inline-3/#leading-trim",
+   "seriesComposition": "full",
+   "shortname": "css-inline-3",
+   "series": {
+    "shortname": "css-inline",
+    "currentSpecification": "css-inline-3",
+    "title": "CSS Inline Layout",
+    "shortTitle": "CSS Inline Layout",
+    "releaseUrl": "https://www.w3.org/TR/css-inline/",
+    "nightlyUrl": "https://drafts.csswg.org/css-inline/"
+   },
+   "seriesVersion": "3",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-inline-3/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-inline-3/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-inline-3/",
+     "https://w3c.github.io/csswg-drafts/css-inline/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-inline-3/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Inline Layout Module Level 3",
+   "source": "w3c",
+   "shortTitle": "CSS Inline Layout 3",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-inline"
+    ]
+   },
+   "fragment": "leading-trim"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "133",
+   "chrome_android": "133",
+   "edge": "133",
+   "safari": "18.2",
+   "safari_ios": "18.2"
+  }
+ },
+ "id": "text-box",
+ "groups": [
+  "text"
+ ],
+ "groupPaths": [
+  [
+   "CSS",
+   "Text"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "text-box",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/text-box"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/432",
+   "position": "support",
+   "concerns": []
+  }
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.00435252,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/318"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "css.properties.text-box",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/text-box",
+    "source_file": "css/properties/text-box.json",
+    "spec_url": "https://drafts.csswg.org/css-inline-3/#text-box-shorthand",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "133"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:text-box"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.text-box-edge",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/text-box-edge",
+    "source_file": "css/properties/text-box-edge.json",
+    "spec_url": "https://drafts.csswg.org/css-inline-3/#text-box-edge",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "133"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:text-box"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.text-box-edge.auto",
+   "compat": {
+    "source_file": "css/properties/text-box-edge.json",
+    "spec_url": "https://drafts.csswg.org/css-inline-3/#valdef-text-box-edge-auto",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "133"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:text-box"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.text-box-trim",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/text-box-trim",
+    "source_file": "css/properties/text-box-trim.json",
+    "spec_url": "https://drafts.csswg.org/css-inline-3/#text-box-trim",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "133"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:text-box"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.text-box-trim.none",
+   "compat": {
+    "source_file": "css/properties/text-box-trim.json",
+    "spec_url": "https://drafts.csswg.org/css-inline-3/#valdef-text-box-trim-none",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "133"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:text-box"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.text-box-trim.trim-both",
+   "compat": {
+    "source_file": "css/properties/text-box-trim.json",
+    "spec_url": "https://drafts.csswg.org/css-inline-3/#valdef-text-box-trim-trim-both",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "133"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:text-box"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.text-box-trim.trim-end",
+   "compat": {
+    "source_file": "css/properties/text-box-trim.json",
+    "spec_url": "https://drafts.csswg.org/css-inline-3/#valdef-text-box-trim-trim-end",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "133"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:text-box"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.text-box-trim.trim-start",
+   "compat": {
+    "source_file": "css/properties/text-box-trim.json",
+    "spec_url": "https://drafts.csswg.org/css-inline-3/#valdef-text-box-trim-trim-start",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "133"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:text-box"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.text-box.normal",
+   "compat": {
+    "source_file": "css/properties/text-box.json",
+    "spec_url": "https://drafts.csswg.org/css-inline-3/#valdef-text-box-normal",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "133"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:text-box"
+    ]
+   }
+  },
+  {
+   "key": "css.types.text-edge",
+   "compat": {
+    "description": "<code>&lt;text-edge&gt;</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/text-edge",
+    "source_file": "css/types/text-edge.json",
+    "spec_url": "https://drafts.csswg.org/css-inline-3/#typedef-text-edge",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "133"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:text-box"
+    ]
+   }
+  },
+  {
+   "key": "css.types.text-edge.alphabetic",
+   "compat": {
+    "source_file": "css/types/text-edge.json",
+    "spec_url": "https://drafts.csswg.org/css-inline-3/#valdef-line-fit-edge-alphabetic",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "133"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:text-box"
+    ]
+   }
+  },
+  {
+   "key": "css.types.text-edge.cap",
+   "compat": {
+    "source_file": "css/types/text-edge.json",
+    "spec_url": "https://drafts.csswg.org/css-inline-3/#valdef-line-fit-edge-cap",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "133"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:text-box"
+    ]
+   }
+  },
+  {
+   "key": "css.types.text-edge.ex",
+   "compat": {
+    "source_file": "css/types/text-edge.json",
+    "spec_url": "https://drafts.csswg.org/css-inline-3/#valdef-line-fit-edge-ex",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "133"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:text-box"
+    ]
+   }
+  },
+  {
+   "key": "css.types.text-edge.text",
+   "compat": {
+    "source_file": "css/types/text-edge.json",
+    "spec_url": "https://drafts.csswg.org/css-inline-3/#valdef-line-fit-edge-text",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "133"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:text-box"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "css"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ },
+ "blockedOn": "Firefox",
+ "monthsBlocked": 4,
+ "blockedSince": "February 2025"
+}

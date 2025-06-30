@@ -1,0 +1,6798 @@
+{
+ "caniuse": "serviceworkers",
+ "compat_features": [
+  "api.Cache",
+  "api.Cache.add",
+  "api.Cache.addAll",
+  "api.Cache.delete",
+  "api.Cache.keys",
+  "api.Cache.match",
+  "api.Cache.matchAll",
+  "api.Cache.put",
+  "api.Cache.worker_support",
+  "api.CacheStorage",
+  "api.CacheStorage.delete",
+  "api.CacheStorage.has",
+  "api.CacheStorage.keys",
+  "api.CacheStorage.match",
+  "api.CacheStorage.open",
+  "api.CacheStorage.secure_context_required",
+  "api.CacheStorage.worker_support",
+  "api.Client",
+  "api.Client.frameType",
+  "api.Client.id",
+  "api.Client.postMessage",
+  "api.Client.type",
+  "api.Client.url",
+  "api.Clients",
+  "api.Clients.claim",
+  "api.Clients.get",
+  "api.Clients.matchAll",
+  "api.Clients.matchAll.options_includeUncontrolled_parameter",
+  "api.Clients.openWindow",
+  "api.ExtendableEvent",
+  "api.ExtendableEvent.ExtendableEvent",
+  "api.ExtendableEvent.waitUntil",
+  "api.ExtendableEvent.waitUntil.async_waitUntil",
+  "api.ExtendableMessageEvent",
+  "api.ExtendableMessageEvent.ExtendableMessageEvent",
+  "api.ExtendableMessageEvent.data",
+  "api.ExtendableMessageEvent.lastEventId",
+  "api.ExtendableMessageEvent.origin",
+  "api.ExtendableMessageEvent.ports",
+  "api.ExtendableMessageEvent.source",
+  "api.FetchEvent",
+  "api.FetchEvent.FetchEvent",
+  "api.FetchEvent.clientId",
+  "api.FetchEvent.handled",
+  "api.FetchEvent.preloadResponse",
+  "api.FetchEvent.request",
+  "api.FetchEvent.respondWith",
+  "api.FetchEvent.respondWith.networkerror_on_same-origin_cors",
+  "api.FetchEvent.respondWith.resource_url",
+  "api.FetchEvent.resultingClientId",
+  "api.InstallEvent",
+  "api.InstallEvent.InstallEvent",
+  "api.InstallEvent.addRoutes",
+  "api.NavigationPreloadManager",
+  "api.NavigationPreloadManager.disable",
+  "api.NavigationPreloadManager.enable",
+  "api.NavigationPreloadManager.getState",
+  "api.NavigationPreloadManager.setHeaderValue",
+  "api.Navigator.serviceWorker",
+  "api.ServiceWorker",
+  "api.ServiceWorker.postMessage",
+  "api.ServiceWorker.scriptURL",
+  "api.ServiceWorker.state",
+  "api.ServiceWorker.statechange_event",
+  "api.ServiceWorkerContainer",
+  "api.ServiceWorkerContainer.controller",
+  "api.ServiceWorkerContainer.controllerchange_event",
+  "api.ServiceWorkerContainer.getRegistration",
+  "api.ServiceWorkerContainer.getRegistrations",
+  "api.ServiceWorkerContainer.message_event",
+  "api.ServiceWorkerContainer.ready",
+  "api.ServiceWorkerContainer.register",
+  "api.ServiceWorkerContainer.startMessages",
+  "api.ServiceWorkerContainer.worker_support",
+  "api.ServiceWorkerGlobalScope",
+  "api.ServiceWorkerGlobalScope.activate_event",
+  "api.ServiceWorkerGlobalScope.clients",
+  "api.ServiceWorkerGlobalScope.fetch_event",
+  "api.ServiceWorkerGlobalScope.install_event",
+  "api.ServiceWorkerGlobalScope.message_event",
+  "api.ServiceWorkerGlobalScope.registration",
+  "api.ServiceWorkerGlobalScope.serviceWorker",
+  "api.ServiceWorkerGlobalScope.skipWaiting",
+  "api.ServiceWorkerRegistration.active",
+  "api.ServiceWorkerRegistration.installing",
+  "api.ServiceWorkerRegistration.navigationPreload",
+  "api.ServiceWorkerRegistration.scope",
+  "api.ServiceWorkerRegistration.unregister",
+  "api.ServiceWorkerRegistration.update",
+  "api.ServiceWorkerRegistration.updateViaCache",
+  "api.ServiceWorkerRegistration.updatefound_event",
+  "api.ServiceWorkerRegistration.waiting",
+  "api.WindowClient",
+  "api.WindowClient.ancestorOrigins",
+  "api.WindowClient.focus",
+  "api.WindowClient.focused",
+  "api.WindowClient.navigate",
+  "api.WindowClient.visibilityState",
+  "api.WorkerNavigator.serviceWorker",
+  "api.caches",
+  "api.caches.secure_context_required",
+  "api.caches.worker_support",
+  "http.headers.Service-Worker-Navigation-Preload"
+ ],
+ "description": "The service worker of a website is a script that runs in its own thread and which acts as local proxy that intercepts network requests from the website. Use a service worker to implement advanced caching strategies, offline support, background tasks, or push notification support on your website.",
+ "description_html": "The service worker of a website is a script that runs in its own thread and which acts as local proxy that intercepts network requests from the website. Use a service worker to implement advanced caching strategies, offline support, background tasks, or push notification support on your website.",
+ "group": "workers",
+ "name": "Service workers",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/ServiceWorker/",
+   "seriesComposition": "full",
+   "shortname": "service-workers",
+   "series": {
+    "shortname": "service-workers",
+    "currentSpecification": "service-workers",
+    "title": "Service Workers",
+    "shortTitle": "Service Workers",
+    "releaseUrl": "https://www.w3.org/TR/service-workers/",
+    "nightlyUrl": "https://w3c.github.io/ServiceWorker/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Applications Working Group",
+     "url": "https://www.w3.org/groups/wg/webapps/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/service-workers/",
+    "status": "Candidate Recommendation Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/ServiceWorker/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/ServiceWorker",
+    "sourcePath": "docs/index.bs",
+    "filename": "index.html"
+   },
+   "title": "Service Workers",
+   "source": "w3c",
+   "shortTitle": "Service Workers",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "service-workers"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2020-10-30",
+  "baseline_low_date": "2018-04-30",
+  "support": {
+   "chrome": "45",
+   "chrome_android": "45",
+   "edge": "17",
+   "firefox": "44",
+   "firefox_android": "44",
+   "safari": "11.1",
+   "safari_ios": "11.3"
+  }
+ },
+ "id": "service-workers",
+ "groups": [
+  "workers"
+ ],
+ "groupPaths": [
+  [
+   "Workers"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Service Worker API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Service_Worker_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {
+   "not": [
+    "https://github.com/WebKit/standards-positions/issues/206"
+   ]
+  }
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Cache",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Cache",
+    "source_file": "api/Cache.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#cache-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Before version 43, only service workers are supported. From version 43, all worker types and the main thread are supported.",
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "notes": "Before version 43, only service workers are supported. From version 43, all worker types and the main thread are supported.",
+      "version_added": "40"
+     },
+     "deno": {
+      "version_added": "1.26"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Before version 5.0, only service workers are supported. From version 5.0, all worker types and the main thread are supported.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Before version 30, only service workers are supported. From version 30, all worker types and the main thread are supported.",
+      "version_added": "27"
+     },
+     "opera_android": {
+      "notes": "Before version 30, only service workers are supported. From version 30, all worker types and the main thread are supported.",
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "notes": "Before version 43, only service workers are supported. From version 43, all worker types and the main thread are supported.",
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Cache.add",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Cache/add",
+    "source_file": "api/Cache.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#cache-add",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Requires HTTPS from version 46.",
+      "version_added": "44"
+     },
+     "chrome_android": {
+      "notes": "Requires HTTPS from version 46.",
+      "version_added": "44"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Requires HTTPS from version 5.0.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Requires HTTPS from version 33.",
+      "version_added": "31"
+     },
+     "opera_android": {
+      "notes": "Requires HTTPS from version 33.",
+      "version_added": "32"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "notes": "Requires HTTPS from Samsung Internet 5.0.",
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "notes": "Requires HTTPS from version 46.",
+      "version_added": "44"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Cache.addAll",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Cache/addAll",
+    "source_file": "api/Cache.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#cache-addAll",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Requires HTTPS.",
+      "version_added": "46"
+     },
+     "chrome_android": {
+      "notes": "Requires HTTPS.",
+      "version_added": "46"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Requires HTTPS.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Requires HTTPS.",
+      "version_added": "33"
+     },
+     "opera_android": {
+      "notes": "Requires HTTPS.",
+      "version_added": "33"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "notes": "Requires HTTPS.",
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "notes": "Requires HTTPS.",
+      "version_added": "46"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Cache.delete",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Cache/delete",
+    "source_file": "api/Cache.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#cache-delete",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "deno": {
+      "notes": "Currently doesn't support query options",
+      "version_added": "1.26"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Cache.keys",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Cache/keys",
+    "source_file": "api/Cache.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#cache-keys",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Cache.match",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Cache/match",
+    "source_file": "api/Cache.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#cache-match",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "deno": {
+      "notes": "Currently doesn't support query options",
+      "version_added": "1.26"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Cache.matchAll",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Cache/matchAll",
+    "source_file": "api/Cache.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#cache-matchall",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "47"
+     },
+     "chrome_android": {
+      "version_added": "47"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Requires HTTPS.",
+      "version_added": "34"
+     },
+     "opera_android": {
+      "version_added": "34"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "47"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Cache.put",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Cache/put",
+    "source_file": "api/Cache.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#cache-put",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Requires HTTPS from version 46.",
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "notes": "Requires HTTPS from version 46.",
+      "version_added": "43"
+     },
+     "deno": {
+      "version_added": "1.26"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Requires HTTPS from version 5.0.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Requires HTTPS from version 33.",
+      "version_added": "30"
+     },
+     "opera_android": {
+      "notes": "Requires HTTPS from version 33.",
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "notes": "Requires HTTPS from Samsung Internet 5.0.",
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "notes": "Requires HTTPS from version 46.",
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Cache.worker_support",
+   "compat": {
+    "description": "Available in workers",
+    "source_file": "api/Cache.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Before version 43, only service workers are supported. From version 43, all worker types and the main thread are supported.",
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "notes": "Before version 43, only service workers are supported. From version 43, all worker types and the main thread are supported.",
+      "version_added": "40"
+     },
+     "deno": {
+      "version_added": "1.26"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Before version 5.0, only service workers are supported. From version 5.0, all worker types and the main thread are supported.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Before version 30, only service workers are supported. From version 30, all worker types and the main thread are supported.",
+      "version_added": "27"
+     },
+     "opera_android": {
+      "notes": "Before version 30, only service workers are supported. From version 30, all worker types and the main thread are supported.",
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "notes": "Before version 43, only service workers are supported. From version 43, all worker types and the main thread are supported.",
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.CacheStorage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CacheStorage",
+    "source_file": "api/CacheStorage.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#cachestorage-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "43"
+      },
+      {
+       "notes": "Only available in service workers.",
+       "partial_implementation": true,
+       "version_added": "40",
+       "version_last": "42",
+       "version_removed": "43"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "43"
+      },
+      {
+       "notes": "Only available in service workers.",
+       "partial_implementation": true,
+       "version_added": "40",
+       "version_last": "42",
+       "version_removed": "43"
+      }
+     ],
+     "deno": {
+      "version_added": "1.26"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "30"
+      },
+      {
+       "notes": "Only available in service workers.",
+       "partial_implementation": true,
+       "version_added": "27",
+       "version_last": "29",
+       "version_removed": "30"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "30"
+      },
+      {
+       "notes": "Only available in service workers.",
+       "partial_implementation": true,
+       "version_added": "27",
+       "version_last": "29",
+       "version_removed": "30"
+      }
+     ],
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": [
+      {
+       "version_added": "43"
+      },
+      {
+       "notes": "Only available in service workers.",
+       "partial_implementation": true,
+       "version_added": "40",
+       "version_last": "42",
+       "version_removed": "43"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.CacheStorage.delete",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CacheStorage/delete",
+    "source_file": "api/CacheStorage.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#cache-storage-delete",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "deno": {
+      "version_added": "1.26"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.CacheStorage.has",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CacheStorage/has",
+    "source_file": "api/CacheStorage.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#cache-storage-has",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "deno": {
+      "version_added": "1.26"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.CacheStorage.keys",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CacheStorage/keys",
+    "source_file": "api/CacheStorage.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#cache-storage-keys",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.CacheStorage.match",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CacheStorage/match",
+    "source_file": "api/CacheStorage.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#cache-storage-match",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "54"
+      },
+      {
+       "notes": "The options parameter only supports <code>ignoreSearch</code>, and <code>cacheName</code>.",
+       "partial_implementation": true,
+       "version_added": "40",
+       "version_last": "53",
+       "version_removed": "54"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "54"
+      },
+      {
+       "notes": "The options parameter only supports <code>ignoreSearch</code>, and <code>cacheName</code>.",
+       "partial_implementation": true,
+       "version_added": "40",
+       "version_last": "53",
+       "version_removed": "54"
+      }
+     ],
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "41"
+      },
+      {
+       "notes": "The options parameter only supports <code>ignoreSearch</code>, and <code>cacheName</code>.",
+       "partial_implementation": true,
+       "version_added": "27",
+       "version_last": "40",
+       "version_removed": "41"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "41"
+      },
+      {
+       "notes": "The options parameter only supports <code>ignoreSearch</code>, and <code>cacheName</code>.",
+       "partial_implementation": true,
+       "version_added": "27",
+       "version_last": "37",
+       "version_removed": "41"
+      }
+     ],
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": [
+      {
+       "version_added": "6.0"
+      },
+      {
+       "notes": "The options parameter only supports <code>ignoreSearch</code>, and <code>cacheName</code>.",
+       "partial_implementation": true,
+       "version_added": "4.0",
+       "version_last": "5.4",
+       "version_removed": "6.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "54"
+      },
+      {
+       "notes": "The options parameter only supports <code>ignoreSearch</code>, and <code>cacheName</code>.",
+       "partial_implementation": true,
+       "version_added": "40",
+       "version_last": "53",
+       "version_removed": "54"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.CacheStorage.open",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CacheStorage/open",
+    "source_file": "api/CacheStorage.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#cache-storage-open",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "deno": {
+      "version_added": "1.26"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.CacheStorage.secure_context_required",
+   "compat": {
+    "description": "Secure context required",
+    "source_file": "api/CacheStorage.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "65"
+     },
+     "chrome_android": {
+      "version_added": "65"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "52"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "65"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.CacheStorage.worker_support",
+   "compat": {
+    "description": "Available in workers",
+    "source_file": "api/CacheStorage.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "43"
+      },
+      {
+       "notes": "Only available in service workers.",
+       "partial_implementation": true,
+       "version_added": "40",
+       "version_last": "42",
+       "version_removed": "43"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "43"
+      },
+      {
+       "notes": "Only available in service workers.",
+       "partial_implementation": true,
+       "version_added": "40",
+       "version_last": "42",
+       "version_removed": "43"
+      }
+     ],
+     "deno": {
+      "version_added": "1.26"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "30"
+      },
+      {
+       "notes": "Only available in service workers.",
+       "partial_implementation": true,
+       "version_added": "27",
+       "version_last": "29",
+       "version_removed": "30"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "30"
+      },
+      {
+       "notes": "Only available in service workers.",
+       "partial_implementation": true,
+       "version_added": "27",
+       "version_last": "29",
+       "version_removed": "30"
+      }
+     ],
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": [
+      {
+       "version_added": "43"
+      },
+      {
+       "notes": "Only available in service workers.",
+       "partial_implementation": true,
+       "version_added": "40",
+       "version_last": "42",
+       "version_removed": "43"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Client",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Client",
+    "source_file": "api/Client.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#client-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Client.frameType",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Client/frameType",
+    "source_file": "api/Client.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#client-frametype",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Client.id",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Client/id",
+    "source_file": "api/Client.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#client-id",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Client.postMessage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Client/postMessage",
+    "source_file": "api/Client.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-client-postmessage-message-options",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Client.type",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Client/type",
+    "source_file": "api/Client.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#client-type",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "60"
+     },
+     "chrome_android": {
+      "version_added": "60"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "54"
+     },
+     "firefox_android": {
+      "version_added": "54"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "47"
+     },
+     "opera_android": {
+      "version_added": "44"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "60"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Client.url",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Client/url",
+    "source_file": "api/Client.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#client-url",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Clients",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Clients",
+    "source_file": "api/Clients.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#clients-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Clients.claim",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Clients/claim",
+    "source_file": "api/Clients.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#clients-claim",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Clients.get",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Clients/get",
+    "source_file": "api/Clients.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#clients-get",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "45"
+     },
+     "firefox_android": {
+      "version_added": "45"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Clients.matchAll",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Clients/matchAll",
+    "source_file": "api/Clients.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#clients-matchall",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "<code>Client</code> objects returned in most recent focus order.",
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "notes": "<code>Client</code> objects returned in most recent focus order.",
+      "version_added": "42"
+     },
+     "edge": {
+      "notes": "<code>Client</code> objects returned in most recent focus order.",
+      "version_added": "17"
+     },
+     "firefox": [
+      {
+       "version_added": "54"
+      },
+      {
+       "notes": "Before Firefox 54, <code>Client</code> objects were not returned in the most recent focus order as required by the specification.",
+       "partial_implementation": true,
+       "version_added": "44",
+       "version_last": "53",
+       "version_removed": "54"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "54"
+      },
+      {
+       "notes": "Before Firefox for Android 54, <code>Client</code> objects were not returned in the most recent focus order as required by the specification.",
+       "partial_implementation": true,
+       "version_added": "44",
+       "version_last": "53",
+       "version_removed": "54"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "<code>Client</code> objects returned in most recent focus order.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "notes": "<code>Client</code> objects returned in most recent focus order.",
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "notes": "<code>Client</code> objects returned in most recent focus order.",
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Clients.matchAll.options_includeUncontrolled_parameter",
+   "compat": {
+    "description": "<code>options.includeUncontrolled</code> parameter",
+    "source_file": "api/Clients.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-clientqueryoptions-includeuncontrolled",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "<code>Client</code> objects returned in most recent focus order.",
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "notes": "<code>Client</code> objects returned in most recent focus order.",
+      "version_added": "42"
+     },
+     "edge": {
+      "notes": "<code>Client</code> objects returned in most recent focus order.",
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "<code>Client</code> objects returned in most recent focus order.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "notes": "<code>Client</code> objects returned in most recent focus order.",
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "notes": "<code>Client</code> objects returned in most recent focus order.",
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Clients.openWindow",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Clients/openWindow",
+    "source_file": "api/Clients.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#clients-openwindow",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": [
+       "Before Chrome 43, this method could only open URLs on the same origin.",
+       "Since Chrome 51, URLs may open inside an existing browsing context provided by a standalone web app."
+      ],
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "notes": [
+       "Before Chrome Android 43, this method could only open URLs on the same origin.",
+       "Since Chrome Android 51, URLs may open inside an existing browsing context provided by a standalone web app."
+      ],
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": [
+       "Before Quest Browser 5.0, this method could only open URLs on the same origin.",
+       "Since Quest Browser 5.0, URLs may open inside an existing browsing context provided by a standalone web app."
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "notes": [
+       "Before Samsung Internet 4.0, this method could only open URLs on the same origin.",
+       "Since Samsung Internet 5.0, URLs may open inside an existing browsing context provided by a standalone web app."
+      ],
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "notes": [
+       "Before WebView Android 43, this method could only open URLs on the same origin.",
+       "Since WebView Android 51, URLs may open inside an existing browsing context provided by a standalone web app."
+      ],
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ExtendableEvent",
+    "source_file": "api/ExtendableEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#extendableevent-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableEvent.ExtendableEvent",
+   "compat": {
+    "description": "<code>ExtendableEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ExtendableEvent/ExtendableEvent",
+    "source_file": "api/ExtendableEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-extendableevent-extendableevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableEvent.waitUntil",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ExtendableEvent/waitUntil",
+    "source_file": "api/ExtendableEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-extendableevent-waituntil",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableEvent.waitUntil.async_waitUntil",
+   "compat": {
+    "description": "<code>waitUntil</code> may be called asynchronously",
+    "source_file": "api/ExtendableEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "60"
+     },
+     "chrome_android": {
+      "version_added": "60"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "47"
+     },
+     "opera_android": {
+      "version_added": "44"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "60"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableMessageEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ExtendableMessageEvent",
+    "source_file": "api/ExtendableMessageEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#extendablemessageevent-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableMessageEvent.ExtendableMessageEvent",
+   "compat": {
+    "description": "<code>ExtendableMessageEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ExtendableMessageEvent/ExtendableMessageEvent",
+    "source_file": "api/ExtendableMessageEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-extendablemessageevent-extendablemessageevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableMessageEvent.data",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ExtendableMessageEvent/data",
+    "source_file": "api/ExtendableMessageEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#extendablemessage-event-data",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableMessageEvent.lastEventId",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ExtendableMessageEvent/lastEventId",
+    "source_file": "api/ExtendableMessageEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#extendablemessage-event-lasteventid",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableMessageEvent.origin",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ExtendableMessageEvent/origin",
+    "source_file": "api/ExtendableMessageEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#extendablemessage-event-origin",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableMessageEvent.ports",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ExtendableMessageEvent/ports",
+    "source_file": "api/ExtendableMessageEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#extendablemessage-event-ports",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableMessageEvent.source",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ExtendableMessageEvent/source",
+    "source_file": "api/ExtendableMessageEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#extendablemessage-event-source",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.FetchEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FetchEvent",
+    "source_file": "api/FetchEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#fetchevent-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.FetchEvent.FetchEvent",
+   "compat": {
+    "description": "<code>FetchEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FetchEvent/FetchEvent",
+    "source_file": "api/FetchEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-fetchevent-fetchevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "44"
+     },
+     "chrome_android": {
+      "version_added": "44"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "31"
+     },
+     "opera_android": {
+      "version_added": "32"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "44"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.FetchEvent.clientId",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FetchEvent/clientId",
+    "source_file": "api/FetchEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#fetch-event-clientid",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "45"
+     },
+     "firefox_android": {
+      "version_added": "45"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "49"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.FetchEvent.handled",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FetchEvent/handled",
+    "source_file": "api/FetchEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-fetchevent-handled",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "86"
+     },
+     "chrome_android": {
+      "version_added": "86"
+     },
+     "edge": {
+      "version_added": "86"
+     },
+     "firefox": {
+      "version_added": "84"
+     },
+     "firefox_android": {
+      "version_added": "84"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "12.0"
+     },
+     "opera": {
+      "version_added": "72"
+     },
+     "opera_android": {
+      "version_added": "61"
+     },
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "86"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.FetchEvent.preloadResponse",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FetchEvent/preloadResponse",
+    "source_file": "api/FetchEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#fetch-event-preloadresponse",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "59"
+     },
+     "chrome_android": {
+      "version_added": "59"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "99"
+     },
+     "firefox_android": {
+      "version_added": "99"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "46"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "59"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.FetchEvent.request",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FetchEvent/request",
+    "source_file": "api/FetchEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#fetch-event-request",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.FetchEvent.respondWith",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FetchEvent/respondWith",
+    "source_file": "api/FetchEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#fetch-event-respondwith",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.FetchEvent.respondWith.networkerror_on_same-origin_cors",
+   "compat": {
+    "description": "<code>NetworkError</code> thrown if the request mode is <code>same-origin</code> and the response type is <code>cors</code>",
+    "source_file": "api/FetchEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "59"
+     },
+     "firefox_android": {
+      "version_added": "59"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.FetchEvent.respondWith.resource_url",
+   "compat": {
+    "description": "Change in behavior when specifying the final URL of a resource.",
+    "source_file": "api/FetchEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "59"
+     },
+     "firefox_android": {
+      "version_added": "59"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.FetchEvent.resultingClientId",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FetchEvent/resultingClientId",
+    "source_file": "api/FetchEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#fetch-event-resultingclientid",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "72"
+     },
+     "chrome_android": {
+      "version_added": "72"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "65"
+     },
+     "firefox_android": {
+      "version_added": "65"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "60"
+     },
+     "opera_android": {
+      "version_added": "50"
+     },
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16"
+     },
+     "samsunginternet_android": {
+      "version_added": "11.0"
+     },
+     "webview_android": {
+      "version_added": "72"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.InstallEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/InstallEvent",
+    "source_file": "api/InstallEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#installevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.InstallEvent.InstallEvent",
+   "compat": {
+    "description": "<code>InstallEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/InstallEvent/InstallEvent",
+    "source_file": "api/InstallEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-installevent-installevent",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.InstallEvent.addRoutes",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/InstallEvent/addRoutes",
+    "source_file": "api/InstallEvent.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#register-router-method",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1855580",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1855580",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/269893",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/269893",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/269893",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.NavigationPreloadManager",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/NavigationPreloadManager",
+    "source_file": "api/NavigationPreloadManager.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#navigation-preload-manager",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "59"
+     },
+     "chrome_android": {
+      "version_added": "59"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "99"
+     },
+     "firefox_android": {
+      "version_added": "99"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "46"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "59"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.NavigationPreloadManager.disable",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/NavigationPreloadManager/disable",
+    "source_file": "api/NavigationPreloadManager.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-navigationpreloadmanager-disable",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "59"
+     },
+     "chrome_android": {
+      "version_added": "59"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "99"
+     },
+     "firefox_android": {
+      "version_added": "99"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "46"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "59"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.NavigationPreloadManager.enable",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/NavigationPreloadManager/enable",
+    "source_file": "api/NavigationPreloadManager.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-navigationpreloadmanager-enable",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "59"
+     },
+     "chrome_android": {
+      "version_added": "59"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "99"
+     },
+     "firefox_android": {
+      "version_added": "99"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "46"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "59"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.NavigationPreloadManager.getState",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/NavigationPreloadManager/getState",
+    "source_file": "api/NavigationPreloadManager.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-navigationpreloadmanager-getstate",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "59"
+     },
+     "chrome_android": {
+      "version_added": "59"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "99"
+     },
+     "firefox_android": {
+      "version_added": "99"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "46"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "59"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.NavigationPreloadManager.setHeaderValue",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/NavigationPreloadManager/setHeaderValue",
+    "source_file": "api/NavigationPreloadManager.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-navigationpreloadmanager-setheadervalue",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "59"
+     },
+     "chrome_android": {
+      "version_added": "59"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "99"
+     },
+     "firefox_android": {
+      "version_added": "99"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "46"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "59"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.Navigator.serviceWorker",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/serviceWorker",
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#navigator-service-worker-attribute",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "notes": "In Firefox private windows, the <code>serviceWorker</code> object is <code>undefined</code>. See <a href=\"https://bugzil.la/1320796\">bug 1320796</a>.",
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "notes": "In Firefox for Android private windows, the <code>serviceWorker</code> object is <code>undefined</code>. See <a href=\"https://bugzil.la/1320796\">bug 1320796</a>.",
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorker",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorker",
+    "source_file": "api/ServiceWorker.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#serviceworker-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorker.postMessage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorker/postMessage",
+    "source_file": "api/ServiceWorker.json",
+    "spec_url": [
+     "https://w3c.github.io/ServiceWorker/#dom-serviceworker-postmessage",
+     "https://w3c.github.io/ServiceWorker/#dom-serviceworker-postmessage-message-options"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorker.scriptURL",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorker/scriptURL",
+    "source_file": "api/ServiceWorker.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#service-worker-url",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorker.state",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorker/state",
+    "source_file": "api/ServiceWorker.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#service-worker-state",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorker.statechange_event",
+   "compat": {
+    "description": "<code>statechange</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorker/statechange_event",
+    "source_file": "api/ServiceWorker.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-serviceworker-onstatechange",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerContainer",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer",
+    "source_file": "api/ServiceWorkerContainer.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#serviceworkercontainer-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerContainer.controller",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/controller",
+    "source_file": "api/ServiceWorkerContainer.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#navigator-service-worker-controller",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerContainer.controllerchange_event",
+   "compat": {
+    "description": "<code>controllerchange</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/controllerchange_event",
+    "source_file": "api/ServiceWorkerContainer.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-oncontrollerchange",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerContainer.getRegistration",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/getRegistration",
+    "source_file": "api/ServiceWorkerContainer.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#navigator-service-worker-getRegistration",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerContainer.getRegistrations",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/getRegistrations",
+    "source_file": "api/ServiceWorkerContainer.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#navigator-service-worker-getRegistrations",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "45"
+     },
+     "chrome_android": {
+      "version_added": "45"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerContainer.message_event",
+   "compat": {
+    "description": "<code>message</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/message_event",
+    "source_file": "api/ServiceWorkerContainer.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-onmessage",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerContainer.ready",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/ready",
+    "source_file": "api/ServiceWorkerContainer.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#navigator-service-worker-ready",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerContainer.register",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/register",
+    "source_file": "api/ServiceWorkerContainer.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#navigator-service-worker-register",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerContainer.startMessages",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/startMessages",
+    "source_file": "api/ServiceWorkerContainer.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#navigator-service-worker-startMessages",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "74"
+     },
+     "chrome_android": {
+      "version_added": "74"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "64"
+     },
+     "firefox_android": {
+      "version_added": "64"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "62"
+     },
+     "opera_android": {
+      "version_added": "50"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "11.0"
+     },
+     "webview_android": {
+      "version_added": "74"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerContainer.worker_support",
+   "compat": {
+    "description": "Available in workers",
+    "source_file": "api/ServiceWorkerContainer.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "edge": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "133"
+     },
+     "firefox_android": {
+      "version_added": "133"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "opera": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#serviceworkerglobalscope-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope.activate_event",
+   "compat": {
+    "description": "<code>activate</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/activate_event",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": [
+     "https://w3c.github.io/ServiceWorker/#service-worker-global-scope-activate-event",
+     "https://w3c.github.io/ServiceWorker/#dom-serviceworkerglobalscope-onactivate"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope.clients",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/clients",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#service-worker-global-scope-clients",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope.fetch_event",
+   "compat": {
+    "description": "<code>fetch</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/fetch_event",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-serviceworkerglobalscope-onfetch",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope.install_event",
+   "compat": {
+    "description": "<code>install</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/install_event",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-serviceworkerglobalscope-oninstall",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope.message_event",
+   "compat": {
+    "description": "<code>message</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/message_event",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": [
+     "https://w3c.github.io/ServiceWorker/#eventdef-serviceworkerglobalscope-message",
+     "https://w3c.github.io/ServiceWorker/#dom-serviceworkerglobalscope-onmessage"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope.registration",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/registration",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#service-worker-global-scope-registration",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "26"
+     },
+     "opera_android": {
+      "version_added": "26"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope.serviceWorker",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/serviceWorker",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-serviceworkerglobalscope-serviceworker",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "79"
+     },
+     "chrome_android": {
+      "version_added": "79"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "8.0"
+     },
+     "opera": {
+      "version_added": "66"
+     },
+     "opera_android": {
+      "version_added": "57"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "79"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope.skipWaiting",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#service-worker-global-scope-skipwaiting",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "41"
+     },
+     "chrome_android": {
+      "version_added": "41"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "25"
+     },
+     "opera_android": {
+      "version_added": "25"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "41"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.active",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/active",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#navigator-service-worker-active",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.installing",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/installing",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#navigator-service-worker-installing",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.navigationPreload",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/navigationPreload",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#service-worker-registration-navigationpreload",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "59"
+     },
+     "chrome_android": {
+      "version_added": "59"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "99"
+     },
+     "firefox_android": {
+      "version_added": "99"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "46"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "59"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.scope",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/scope",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#service-worker-registration-scope",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.unregister",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/unregister",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#navigator-service-worker-unregister",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.update",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/update",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#service-worker-registration-update",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": [
+       "Starting with Chrome 46, update() returns a promise that resolves with 'undefined' if the operation completed successfully or there was no update, and rejects if update failed. If the new worker ran but installation failed, the promise still resolves. Formerly, it raised an exception.",
+       "Before Chrome 48, this method always bypassed the browser cache. Starting with Chrome 48, it only bypasses the cache when the previous service worker check was more than twenty-four hours ago."
+      ],
+      "version_added": "45"
+     },
+     "chrome_android": {
+      "notes": [
+       "Starting with Chrome Android 46, update() returns a promise that resolves with 'undefined' if the operation completed successfully or there was no update, and rejects if update failed. If the new worker ran but installation failed, the promise still resolves. Formerly, it raised an exception.",
+       "Before Chrome Android 48, this method always bypassed the browser cache. Starting with Chrome Android 48, it only bypasses the cache when the previous service worker check was more than twenty-four hours ago."
+      ],
+      "version_added": "45"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": [
+       "Starting with Quest Browser 5.0, update() returns a promise that resolves with 'undefined' if the operation completed successfully or there was no update, and rejects if update failed. If the new worker ran but installation failed, the promise still resolves. Formerly, it raised an exception.",
+       "Before Quest Browser 5.0, this method always bypassed the browser cache. Starting with Quest Browser 5.0, it only bypasses the cache when the previous service worker check was more than twenty-four hours ago."
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": [
+       "Starting with Opera 33, update() returns a promise that resolves with 'undefined' if the operation completed successfully or there was no update, and rejects if update failed. If the new worker ran but installation failed, the promise still resolves. Formerly, it raised an exception.",
+       "Before Opera 35, this method always bypassed the browser cache. Starting with Opera 35, it only bypasses the cache when the previous service worker check was more than twenty-four hours ago."
+      ],
+      "version_added": "32"
+     },
+     "opera_android": {
+      "notes": [
+       "Starting with Opera Android 33, update() returns a promise that resolves with 'undefined' if the operation completed successfully or there was no update, and rejects if update failed. If the new worker ran but installation failed, the promise still resolves. Formerly, it raised an exception.",
+       "Before Opera Android 35, this method always bypassed the browser cache. Starting with Opera Android 35, it only bypasses the cache when the previous service worker check was more than twenty-four hours ago."
+      ],
+      "version_added": "32"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "notes": [
+       "Starting with Samsung Internet 5.0, update() returns a promise that resolves with 'undefined' if the operation completed successfully or there was no update, and rejects if update failed. If the new worker ran but installation failed, the promise still resolves. Formerly, it raised an exception.",
+       "Before Samsung Internet 5.0, this method always bypassed the browser cache. Starting with Samsung Internet 5.0, it only bypasses the cache when the previous service worker check was more than twenty-four hours ago."
+      ],
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "notes": [
+       "Starting with WebView Android 46, update() returns a promise that resolves with 'undefined' if the operation completed successfully or there was no update, and rejects if update failed. If the new worker ran but installation failed, the promise still resolves. Formerly, it raised an exception.",
+       "Before WebView Android 48, this method always bypassed the browser cache. Starting with WebView Android 48, it only bypasses the cache when the previous service worker check was more than twenty-four hours ago."
+      ],
+      "version_added": "45"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.updateViaCache",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/updateViaCache",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#service-worker-registration-updateviacache",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "68"
+     },
+     "chrome_android": {
+      "version_added": "68"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "57"
+     },
+     "firefox_android": {
+      "version_added": "57"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "55"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "68"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.updatefound_event",
+   "compat": {
+    "description": "<code>updatefound</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/updatefound_event",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#dom-serviceworkerregistration-onupdatefound",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.waiting",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/waiting",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#navigator-service-worker-waiting",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.WindowClient",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WindowClient",
+    "source_file": "api/WindowClient.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#windowclient",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.WindowClient.ancestorOrigins",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WindowClient/ancestorOrigins",
+    "source_file": "api/WindowClient.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#client-ancestororigins",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.WindowClient.focus",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WindowClient/focus",
+    "source_file": "api/WindowClient.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#client-focus",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.WindowClient.focused",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WindowClient/focused",
+    "source_file": "api/WindowClient.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#client-focused",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.WindowClient.navigate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WindowClient/navigate",
+    "source_file": "api/WindowClient.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#client-navigate",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": [
+      {
+       "version_added": "16"
+      },
+      {
+       "notes": "This method exists, but always throws <code>NotSupportedError</code>.",
+       "partial_implementation": true,
+       "version_added": "11.1",
+       "version_last": "15.6",
+       "version_removed": "16"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "notes": "This method exists, but always throws <code>NotSupportedError</code>.",
+       "partial_implementation": true,
+       "version_added": "11.3",
+       "version_last": "15.6",
+       "version_removed": "16"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.WindowClient.visibilityState",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WindowClient/visibilityState",
+    "source_file": "api/WindowClient.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#client-visibilitystate",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.WorkerNavigator.serviceWorker",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WorkerNavigator/serviceWorker",
+    "source_file": "api/WorkerNavigator.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#navigator-serviceworker",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "edge": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "133"
+     },
+     "firefox_android": {
+      "version_added": "133"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "opera": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40364838",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.caches",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/caches",
+    "source_file": "api/_globals/caches.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#self-caches",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "deno": {
+      "version_added": "1.26"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.caches.secure_context_required",
+   "compat": {
+    "description": "Secure context required",
+    "source_file": "api/_globals/caches.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "65"
+     },
+     "chrome_android": {
+      "version_added": "65"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "103"
+     },
+     "firefox_android": {
+      "version_added": "103"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "52"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "65"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.caches.worker_support",
+   "compat": {
+    "description": "Available in workers",
+    "source_file": "api/_globals/caches.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "deno": {
+      "version_added": "1.26"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Service-Worker-Navigation-Preload",
+   "compat": {
+    "description": "<code>Service-Worker-Navigation-Preload</code> request header",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Service-Worker-Navigation-Preload",
+    "source_file": "http/headers/Service-Worker-Navigation-Preload.json",
+    "spec_url": "https://w3c.github.io/ServiceWorker/#handle-fetch",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "59"
+     },
+     "chrome_android": {
+      "version_added": "59"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": [
+      {
+       "version_added": "preview"
+      },
+      {
+       "flags": [
+        {
+         "name": "dom.serviceWorkers.navigationPreload.enabled",
+         "type": "preference",
+         "value_to_set": "true"
+        }
+       ],
+       "version_added": "97"
+      }
+     ],
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "46"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "59"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:service-workers"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "http"
+ ],
+ "baselineLowDateAsObject": "2018-04-30T00:00:00.000Z",
+ "baselineHighDateAsObject": "2020-10-30T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [
+   "https://crbug.com/40364838"
+  ],
+  "chrome_android": [
+   "https://crbug.com/40364838"
+  ],
+  "edge": [
+   "https://crbug.com/40364838"
+  ],
+  "firefox": [
+   "https://bugzil.la/1855580"
+  ],
+  "firefox_android": [
+   "https://bugzil.la/1855580"
+  ],
+  "safari": [
+   "https://webkit.org/b/269893"
+  ],
+  "safari_ios": [
+   "https://webkit.org/b/269893"
+  ]
+ }
+}

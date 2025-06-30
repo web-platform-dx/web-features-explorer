@@ -1,0 +1,777 @@
+{
+ "compat_features": [
+  "api.CommandEvent",
+  "api.CommandEvent.CommandEvent",
+  "api.CommandEvent.command",
+  "api.CommandEvent.source",
+  "api.HTMLButtonElement.command",
+  "api.HTMLButtonElement.commandForElement",
+  "api.HTMLElement.command_event",
+  "html.elements.button.command",
+  "html.elements.button.commandfor"
+ ],
+ "description": "The command and commandfor attributes for the <button> HTML element dispatch an action to an element when the button is invoked (by click or keystroke), as a declarative alternative to addEventListener() calls or onclick attribute handlers.",
+ "description_html": "The <code>command</code> and <code>commandfor</code> attributes for the <code>&#x3C;button></code> HTML element dispatch an action to an element when the button is invoked (by click or keystroke), as a declarative alternative to <code>addEventListener()</code> calls or <code>onclick</code> attribute handlers.",
+ "name": "Invoker commands",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/form-elements.html#attr-button-command",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "attr-button-command"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "135",
+   "chrome_android": "135",
+   "edge": "135"
+  }
+ },
+ "id": "invoker-commands",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Invoker Commands API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Invoker_Commands_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.CommandEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CommandEvent",
+    "source_file": "api/CommandEvent.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/interaction.html#commandevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "135"
+     },
+     "chrome_android": {
+      "version_added": "135"
+     },
+     "edge": {
+      "version_added": "135"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.element.invokers.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "preview"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "120"
+     },
+     "opera_android": {
+      "version_added": "89"
+     },
+     "safari": {
+      "version_added": "preview"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "135"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:invoker-commands"
+    ]
+   }
+  },
+  {
+   "key": "api.CommandEvent.CommandEvent",
+   "compat": {
+    "description": "<code>CommandEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CommandEvent/CommandEvent",
+    "source_file": "api/CommandEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "135"
+     },
+     "chrome_android": {
+      "version_added": "135"
+     },
+     "edge": {
+      "version_added": "135"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.element.invokers.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "preview"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "120"
+     },
+     "opera_android": {
+      "version_added": "89"
+     },
+     "safari": {
+      "version_added": "preview"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "135"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:invoker-commands"
+    ]
+   }
+  },
+  {
+   "key": "api.CommandEvent.command",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CommandEvent/command",
+    "source_file": "api/CommandEvent.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/interaction.html#dom-commandevent-command",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "135"
+     },
+     "chrome_android": {
+      "version_added": "135"
+     },
+     "edge": {
+      "version_added": "135"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.element.invokers.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "preview"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "120"
+     },
+     "opera_android": {
+      "version_added": "89"
+     },
+     "safari": {
+      "version_added": "preview"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "135"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:invoker-commands"
+    ]
+   }
+  },
+  {
+   "key": "api.CommandEvent.source",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CommandEvent/source",
+    "source_file": "api/CommandEvent.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/interaction.html#dom-commandevent-source",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "135"
+     },
+     "chrome_android": {
+      "version_added": "135"
+     },
+     "edge": {
+      "version_added": "135"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.element.invokers.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "preview"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "120"
+     },
+     "opera_android": {
+      "version_added": "89"
+     },
+     "safari": {
+      "version_added": "preview"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "135"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:invoker-commands"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLButtonElement.command",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/command",
+    "source_file": "api/HTMLButtonElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-elements.html#dom-button-command",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "135"
+     },
+     "chrome_android": {
+      "version_added": "135"
+     },
+     "edge": {
+      "version_added": "135"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.element.invokers.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "preview"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "120"
+     },
+     "opera_android": {
+      "version_added": "89"
+     },
+     "safari": {
+      "version_added": "preview"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "135"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:invoker-commands"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLButtonElement.commandForElement",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/commandForElement",
+    "source_file": "api/HTMLButtonElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-elements.html#dom-button-commandforelement",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "135"
+     },
+     "chrome_android": {
+      "version_added": "135"
+     },
+     "edge": {
+      "version_added": "135"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.element.invokers.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "preview"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "120"
+     },
+     "opera_android": {
+      "version_added": "89"
+     },
+     "safari": {
+      "version_added": "preview"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "135"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:invoker-commands"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLElement.command_event",
+   "compat": {
+    "description": "<code>command</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/command_event",
+    "source_file": "api/HTMLElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-command",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "135"
+     },
+     "chrome_android": {
+      "version_added": "135"
+     },
+     "edge": {
+      "version_added": "135"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.element.invokers.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "preview"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "120"
+     },
+     "opera_android": {
+      "version_added": "89"
+     },
+     "safari": {
+      "version_added": "preview"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "135"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:invoker-commands"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.button.command",
+   "compat": {
+    "source_file": "html/elements/button.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-elements.html#attr-button-command",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "135"
+     },
+     "chrome_android": {
+      "version_added": "135"
+     },
+     "edge": {
+      "version_added": "135"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.element.invokers.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "preview"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "120"
+     },
+     "opera_android": {
+      "version_added": "89"
+     },
+     "safari": {
+      "version_added": "preview"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "135"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:invoker-commands"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.button.commandfor",
+   "compat": {
+    "source_file": "html/elements/button.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/form-elements.html#attr-button-commandfor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "135"
+     },
+     "chrome_android": {
+      "version_added": "135"
+     },
+     "edge": {
+      "version_added": "135"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.element.invokers.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "preview"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "120"
+     },
+     "opera_android": {
+      "version_added": "89"
+     },
+     "safari": {
+      "version_added": "preview"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "135"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:invoker-commands"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "html"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

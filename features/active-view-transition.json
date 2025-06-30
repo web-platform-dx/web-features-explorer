@@ -1,0 +1,979 @@
+{
+ "compat_features": [
+  "api.ViewTransition.types",
+  "api.ViewTransitionTypeSet",
+  "api.ViewTransitionTypeSet.@@iterator",
+  "api.ViewTransitionTypeSet.add",
+  "api.ViewTransitionTypeSet.clear",
+  "api.ViewTransitionTypeSet.delete",
+  "api.ViewTransitionTypeSet.entries",
+  "api.ViewTransitionTypeSet.forEach",
+  "api.ViewTransitionTypeSet.has",
+  "api.ViewTransitionTypeSet.keys",
+  "api.ViewTransitionTypeSet.size",
+  "api.ViewTransitionTypeSet.values",
+  "css.selectors.active-view-transition",
+  "css.selectors.active-view-transition-type"
+ ],
+ "description": "The :active-view-transition CSS pseudo-class matches the root element when a view transition is active. The :active-view-transition-type() CSS pseudo-class matches only when the active view transition was started with the specified type.",
+ "description_html": "The <code>:active-view-transition</code> CSS pseudo-class matches the root element when a view transition is active. The <code>:active-view-transition-type()</code> CSS pseudo-class matches only when the active view transition was started with the specified type.",
+ "group": [
+  "view-transitions",
+  "selectors"
+ ],
+ "name": "Active view transition",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css-view-transitions-2/#the-active-view-transition-pseudo",
+   "seriesComposition": "delta",
+   "shortname": "css-view-transitions-2",
+   "series": {
+    "shortname": "css-view-transitions",
+    "currentSpecification": "css-view-transitions-1",
+    "title": "CSS View Transitions Module",
+    "shortTitle": "CSS View Transitions",
+    "releaseUrl": "https://www.w3.org/TR/css-view-transitions/",
+    "nightlyUrl": "https://drafts.csswg.org/css-view-transitions/"
+   },
+   "seriesVersion": "2",
+   "seriesPrevious": "css-view-transitions-1",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-view-transitions-2/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-view-transitions-2/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-view-transitions-2/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-view-transitions-2/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS View Transitions Module Level 2",
+   "source": "w3c",
+   "shortTitle": "CSS View Transitions 2",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-view-transitions"
+    ]
+   },
+   "fragment": "the-active-view-transition-pseudo"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "125",
+   "chrome_android": "125",
+   "edge": "125",
+   "safari": "18.2",
+   "safari_ios": "18.2"
+  }
+ },
+ "id": "active-view-transition",
+ "groups": [
+  "view-transitions",
+  "selectors"
+ ],
+ "groupPaths": [
+  [
+   "View Transitions"
+  ],
+  [
+   "CSS",
+   "Selectors"
+  ]
+ ],
+ "mdnUrls": [],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/266",
+   "position": "support",
+   "concerns": []
+  }
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.00028454,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/217"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.ViewTransition.types",
+   "compat": {
+    "source_file": "api/ViewTransition.json",
+    "spec_url": "https://drafts.csswg.org/css-view-transitions-2/#dom-viewtransition-types",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": "125"
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1860854",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1860854",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "125"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:active-view-transition"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTransitionTypeSet",
+   "compat": {
+    "source_file": "api/ViewTransitionTypeSet.json",
+    "spec_url": "https://drafts.csswg.org/css-view-transitions-2/#viewtransitiontypeset",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": "125"
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1860854",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1860854",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "125"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:active-view-transition"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTransitionTypeSet.@@iterator",
+   "compat": {
+    "description": "[Symbol.iterator]",
+    "source_file": "api/ViewTransitionTypeSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": "125"
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "125"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:active-view-transition"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTransitionTypeSet.add",
+   "compat": {
+    "source_file": "api/ViewTransitionTypeSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": "125"
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "125"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:active-view-transition"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTransitionTypeSet.clear",
+   "compat": {
+    "source_file": "api/ViewTransitionTypeSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": "125"
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "125"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:active-view-transition"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTransitionTypeSet.delete",
+   "compat": {
+    "source_file": "api/ViewTransitionTypeSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": "125"
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "125"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:active-view-transition"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTransitionTypeSet.entries",
+   "compat": {
+    "source_file": "api/ViewTransitionTypeSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": "125"
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "125"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:active-view-transition"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTransitionTypeSet.forEach",
+   "compat": {
+    "source_file": "api/ViewTransitionTypeSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": "125"
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "125"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:active-view-transition"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTransitionTypeSet.has",
+   "compat": {
+    "source_file": "api/ViewTransitionTypeSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": "125"
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "125"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:active-view-transition"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTransitionTypeSet.keys",
+   "compat": {
+    "source_file": "api/ViewTransitionTypeSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": "125"
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "125"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:active-view-transition"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTransitionTypeSet.size",
+   "compat": {
+    "source_file": "api/ViewTransitionTypeSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": "125"
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "125"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:active-view-transition"
+    ]
+   }
+  },
+  {
+   "key": "api.ViewTransitionTypeSet.values",
+   "compat": {
+    "source_file": "api/ViewTransitionTypeSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "version_added": "125"
+     },
+     "edge": {
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "111"
+     },
+     "opera_android": {
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "125"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:active-view-transition"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.active-view-transition",
+   "compat": {
+    "description": "<code>:active-view-transition</code>",
+    "source_file": "css/selectors/active-view-transition.json",
+    "spec_url": "https://drafts.csswg.org/css-view-transitions-2/#the-active-view-transition-pseudo",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "impl_url": "https://crbug.com/40276317",
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40276317",
+      "version_added": "125"
+     },
+     "edge": {
+      "impl_url": "https://crbug.com/40276317",
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "impl_url": "https://crbug.com/40276317",
+      "version_added": "111"
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40276317",
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18"
+     },
+     "safari_ios": {
+      "version_added": "18"
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40276317",
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40276317",
+      "version_added": "125"
+     },
+     "webview_ios": {
+      "version_added": "18"
+     }
+    },
+    "tags": [
+     "web-features:active-view-transition"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.active-view-transition-type",
+   "compat": {
+    "description": "<code>:active-view-transition-type()</code>",
+    "source_file": "css/selectors/active-view-transition-type.json",
+    "spec_url": "https://drafts.csswg.org/css-view-transitions-2/#the-active-view-transition-type-pseudo",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "impl_url": "https://crbug.com/40276317",
+      "version_added": "125"
+     },
+     "chrome_android": {
+      "impl_url": "https://crbug.com/40276317",
+      "version_added": "125"
+     },
+     "edge": {
+      "impl_url": "https://crbug.com/40276317",
+      "version_added": "125"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "impl_url": "https://crbug.com/40276317",
+      "version_added": "111"
+     },
+     "opera_android": {
+      "impl_url": "https://crbug.com/40276317",
+      "version_added": "83"
+     },
+     "safari": {
+      "version_added": "18.2"
+     },
+     "safari_ios": {
+      "version_added": "18.2"
+     },
+     "samsunginternet_android": {
+      "impl_url": "https://crbug.com/40276317",
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40276317",
+      "version_added": "125"
+     },
+     "webview_ios": {
+      "version_added": "18.2"
+     }
+    },
+    "tags": [
+     "web-features:active-view-transition"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "css"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [
+   "https://bugzil.la/1860854"
+  ],
+  "firefox_android": [
+   "https://bugzil.la/1860854"
+  ],
+  "safari": [],
+  "safari_ios": []
+ },
+ "blockedOn": "Firefox",
+ "monthsBlocked": 6,
+ "blockedSince": "December 2024"
+}

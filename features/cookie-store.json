@@ -1,0 +1,1890 @@
+{
+ "caniuse": "cookie-store-api",
+ "compat_features": [
+  "api.CookieChangeEvent",
+  "api.CookieChangeEvent.CookieChangeEvent",
+  "api.CookieChangeEvent.changed",
+  "api.CookieChangeEvent.deleted",
+  "api.CookieStore",
+  "api.CookieStore.change_event",
+  "api.CookieStore.delete",
+  "api.CookieStore.get",
+  "api.CookieStore.get.domain_return_property",
+  "api.CookieStore.get.expires_return_property",
+  "api.CookieStore.get.name_return_property",
+  "api.CookieStore.get.path_return_property",
+  "api.CookieStore.get.sameSite_return_property",
+  "api.CookieStore.get.secure_return_property",
+  "api.CookieStore.get.value_return_property",
+  "api.CookieStore.getAll",
+  "api.CookieStore.set",
+  "api.CookieStoreManager",
+  "api.CookieStoreManager.getSubscriptions",
+  "api.CookieStoreManager.subscribe",
+  "api.CookieStoreManager.unsubscribe",
+  "api.ExtendableCookieChangeEvent",
+  "api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent",
+  "api.ExtendableCookieChangeEvent.changed",
+  "api.ExtendableCookieChangeEvent.deleted",
+  "api.ServiceWorkerGlobalScope.cookieStore",
+  "api.ServiceWorkerGlobalScope.cookiechange_event",
+  "api.ServiceWorkerRegistration.cookies",
+  "api.Window.cookieStore"
+ ],
+ "description": "The CookieStore interface is an asynchronous and promise-based API for managing cookies. It does not rely on document and so is available to service workers as well.",
+ "description_html": "The <code>CookieStore</code> interface is an asynchronous and promise-based API for managing cookies. It does not rely on document and so is available to service workers as well.",
+ "name": "Cookie store",
+ "spec": [
+  {
+   "url": "https://wicg.github.io/cookie-store/",
+   "seriesComposition": "full",
+   "shortname": "cookie-store",
+   "series": {
+    "shortname": "cookie-store",
+    "currentSpecification": "cookie-store",
+    "title": "Cookie Store API",
+    "shortTitle": "Cookie Store API",
+    "nightlyUrl": "https://wicg.github.io/cookie-store/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Platform Incubator Community Group",
+     "url": "https://www.w3.org/community/wicg/"
+    }
+   ],
+   "nightly": {
+    "url": "https://wicg.github.io/cookie-store/",
+    "status": "Draft Community Group Report",
+    "alternateUrls": [],
+    "repository": "https://github.com/WICG/cookie-store",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Cookie Store API",
+   "source": "spec",
+   "shortTitle": "Cookie Store API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "cookie-store"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "87",
+   "chrome_android": "87",
+   "edge": "87"
+  }
+ },
+ "id": "cookie-store",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Cookie Store API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Cookie_Store_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/94",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/36",
+   "position": "blocked",
+   "concerns": [
+    "complexity",
+    "integration",
+    "API design"
+   ]
+  }
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.03016864,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/283"
+ },
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.CookieChangeEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CookieChangeEvent",
+    "source_file": "api/CookieChangeEvent.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#CookieChangeEvent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieChangeEvent.CookieChangeEvent",
+   "compat": {
+    "description": "<code>CookieChangeEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CookieChangeEvent/CookieChangeEvent",
+    "source_file": "api/CookieChangeEvent.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookiechangeevent-cookiechangeevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieChangeEvent.changed",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CookieChangeEvent/changed",
+    "source_file": "api/CookieChangeEvent.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookiechangeevent-changed",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieChangeEvent.deleted",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CookieChangeEvent/deleted",
+    "source_file": "api/CookieChangeEvent.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookiechangeevent-deleted",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CookieStore",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#CookieStore",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/231750",
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/231750",
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/231750",
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore.change_event",
+   "compat": {
+    "description": "<code>change</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CookieStore/change_event",
+    "source_file": "api/CookieStore.json",
+    "spec_url": [
+     "https://wicg.github.io/cookie-store/#intro-monitor",
+     "https://wicg.github.io/cookie-store/#dom-cookiestore-onchange"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore.delete",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CookieStore/delete",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookiestore-delete",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore.get",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CookieStore/get",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookiestore-get",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore.get.domain_return_property",
+   "compat": {
+    "description": "<code>domain</code> in return value",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookielistitem-domain",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore.get.expires_return_property",
+   "compat": {
+    "description": "<code>expires</code> in return value",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookielistitem-expires",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore.get.name_return_property",
+   "compat": {
+    "description": "<code>name</code> in return value",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookielistitem-name",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore.get.path_return_property",
+   "compat": {
+    "description": "<code>path</code> in return value",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookielistitem-path",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore.get.sameSite_return_property",
+   "compat": {
+    "description": "<code>sameSite</code> in return value",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookielistitem-samesite",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore.get.secure_return_property",
+   "compat": {
+    "description": "<code>secure</code> in return value",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookielistitem-secure",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore.get.value_return_property",
+   "compat": {
+    "description": "<code>value</code> in return value",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookielistitem-value",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore.getAll",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CookieStore/getAll",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookiestore-getall",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStore.set",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CookieStore/set",
+    "source_file": "api/CookieStore.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookiestore-set",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStoreManager",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CookieStoreManager",
+    "source_file": "api/CookieStoreManager.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#cookiestoremanager",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStoreManager.getSubscriptions",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CookieStoreManager/getSubscriptions",
+    "source_file": "api/CookieStoreManager.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookiestoremanager-getsubscriptions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStoreManager.subscribe",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CookieStoreManager/subscribe",
+    "source_file": "api/CookieStoreManager.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookiestoremanager-subscribe",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.CookieStoreManager.unsubscribe",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CookieStoreManager/unsubscribe",
+    "source_file": "api/CookieStoreManager.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-cookiestoremanager-unsubscribe",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableCookieChangeEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ExtendableCookieChangeEvent",
+    "source_file": "api/ExtendableCookieChangeEvent.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#ExtendableCookieChangeEvent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent",
+   "compat": {
+    "description": "<code>ExtendableCookieChangeEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ExtendableCookieChangeEvent/ExtendableCookieChangeEvent",
+    "source_file": "api/ExtendableCookieChangeEvent.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-extendablecookiechangeevent-extendablecookiechangeevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableCookieChangeEvent.changed",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ExtendableCookieChangeEvent/changed",
+    "source_file": "api/ExtendableCookieChangeEvent.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-extendablecookiechangeevent-changed",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.ExtendableCookieChangeEvent.deleted",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ExtendableCookieChangeEvent/deleted",
+    "source_file": "api/ExtendableCookieChangeEvent.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-extendablecookiechangeevent-deleted",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope.cookieStore",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/cookieStore",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-serviceworkerglobalscope-cookiestore",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope.cookiechange_event",
+   "compat": {
+    "description": "<code>cookiechange</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/cookiechange_event",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-serviceworkerglobalscope-oncookiechange",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.cookies",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/cookies",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-serviceworkerregistration-cookies",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  },
+  {
+   "key": "api.Window.cookieStore",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/cookieStore",
+    "source_file": "api/Window.json",
+    "spec_url": "https://wicg.github.io/cookie-store/#dom-window-cookiestore",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "87"
+     },
+     "chrome_android": {
+      "version_added": "87"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "87"
+     },
+     "firefox": {
+      "version_added": "140"
+     },
+     "firefox_android": {
+      "version_added": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "13.0"
+     },
+     "opera": {
+      "version_added": "73"
+     },
+     "opera_android": {
+      "version_added": "62"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "87"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:cookie-store"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

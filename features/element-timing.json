@@ -1,0 +1,833 @@
+{
+ "compat_features": [
+  "api.Element.elementTiming",
+  "api.PerformanceElementTiming",
+  "api.PerformanceElementTiming.element",
+  "api.PerformanceElementTiming.id",
+  "api.PerformanceElementTiming.identifier",
+  "api.PerformanceElementTiming.intersectionRect",
+  "api.PerformanceElementTiming.loadTime",
+  "api.PerformanceElementTiming.naturalHeight",
+  "api.PerformanceElementTiming.naturalWidth",
+  "api.PerformanceElementTiming.renderTime",
+  "api.PerformanceElementTiming.toJSON",
+  "api.PerformanceElementTiming.url"
+ ],
+ "description": "The element performance entry and the PerformanceElementTiming API measures the time to render elements that have the elementtiming attribute.",
+ "description_html": "The <code>element</code> performance entry and the <code>PerformanceElementTiming</code> API measures the time to render elements that have the <code>elementtiming</code> attribute.",
+ "group": "performance",
+ "name": "Element timing",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/element-timing/",
+   "seriesComposition": "full",
+   "shortname": "element-timing",
+   "series": {
+    "shortname": "element-timing",
+    "currentSpecification": "element-timing",
+    "title": "Element Timing API",
+    "shortTitle": "Element Timing API",
+    "nightlyUrl": "https://w3c.github.io/element-timing/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Performance Working Group",
+     "url": "https://www.w3.org/groups/wg/webperf/"
+    }
+   ],
+   "nightly": {
+    "url": "https://w3c.github.io/element-timing/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/element-timing",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Element Timing API",
+   "source": "spec",
+   "shortTitle": "Element Timing API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "77",
+   "chrome_android": "77",
+   "edge": "79"
+  }
+ },
+ "id": "element-timing",
+ "groups": [
+  "performance"
+ ],
+ "groupPaths": [
+  [
+   "Performance"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Element: elementTiming property",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Element/elementTiming"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/192",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/84",
+   "position": "",
+   "concerns": []
+  }
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Element.elementTiming",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/elementTiming",
+    "source_file": "api/Element.json",
+    "spec_url": "https://w3c.github.io/element-timing/#dom-element-elementtiming",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:element-timing"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceElementTiming",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceElementTiming",
+    "source_file": "api/PerformanceElementTiming.json",
+    "spec_url": "https://w3c.github.io/element-timing/#sec-performance-element-timing",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:element-timing"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceElementTiming.element",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceElementTiming/element",
+    "source_file": "api/PerformanceElementTiming.json",
+    "spec_url": "https://w3c.github.io/element-timing/#ref-for-dom-performanceelementtiming-element",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:element-timing"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceElementTiming.id",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceElementTiming/id",
+    "source_file": "api/PerformanceElementTiming.json",
+    "spec_url": "https://w3c.github.io/element-timing/#ref-for-dom-performanceelementtiming-id",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:element-timing"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceElementTiming.identifier",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceElementTiming/identifier",
+    "source_file": "api/PerformanceElementTiming.json",
+    "spec_url": "https://w3c.github.io/element-timing/#ref-for-dom-performanceelementtiming-identifier",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:element-timing"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceElementTiming.intersectionRect",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceElementTiming/intersectionRect",
+    "source_file": "api/PerformanceElementTiming.json",
+    "spec_url": "https://w3c.github.io/element-timing/#ref-for-dom-performanceelementtiming-intersectionrect",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:element-timing"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceElementTiming.loadTime",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceElementTiming/loadTime",
+    "source_file": "api/PerformanceElementTiming.json",
+    "spec_url": "https://w3c.github.io/element-timing/#ref-for-dom-performanceelementtiming-loadtime①",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:element-timing"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceElementTiming.naturalHeight",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceElementTiming/naturalHeight",
+    "source_file": "api/PerformanceElementTiming.json",
+    "spec_url": "https://w3c.github.io/element-timing/#ref-for-dom-performanceelementtiming-naturalheight",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:element-timing"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceElementTiming.naturalWidth",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceElementTiming/naturalWidth",
+    "source_file": "api/PerformanceElementTiming.json",
+    "spec_url": "https://w3c.github.io/element-timing/#ref-for-dom-performanceelementtiming-naturalwidth",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:element-timing"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceElementTiming.renderTime",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceElementTiming/renderTime",
+    "source_file": "api/PerformanceElementTiming.json",
+    "spec_url": "https://w3c.github.io/element-timing/#ref-for-dom-performanceelementtiming-rendertime①",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:element-timing"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceElementTiming.toJSON",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceElementTiming/toJSON",
+    "source_file": "api/PerformanceElementTiming.json",
+    "spec_url": "https://w3c.github.io/element-timing/#dom-performanceelementtiming-tojson",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:element-timing"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceElementTiming.url",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceElementTiming/url",
+    "source_file": "api/PerformanceElementTiming.json",
+    "spec_url": "https://w3c.github.io/element-timing/#ref-for-dom-performanceelementtiming-url",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:element-timing"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

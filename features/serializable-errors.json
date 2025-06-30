@@ -1,0 +1,723 @@
+{
+ "compat_features": [
+  "api.DOMException.serializable_object",
+  "javascript.builtins.Error.serializable_object",
+  "javascript.builtins.EvalError.serializable_object",
+  "javascript.builtins.RangeError.serializable_object",
+  "javascript.builtins.ReferenceError.serializable_object",
+  "javascript.builtins.SyntaxError.serializable_object",
+  "javascript.builtins.TypeError.serializable_object",
+  "javascript.builtins.URIError.serializable_object"
+ ],
+ "description": "The DOMException, Error, EvalError, RangeError, ReferenceError, SyntaxError, TypeError, and URIError objects are serializable. You can call structuredClone() on an error object or pass it to a worker using postMessage().",
+ "description_html": "The <code>DOMException</code>, <code>Error</code>, <code>EvalError</code>, <code>RangeError</code>, <code>ReferenceError</code>, <code>SyntaxError</code>, <code>TypeError</code>, and <code>URIError</code> objects are serializable. You can call <code>structuredClone()</code> on an error object or pass it to a worker using <code>postMessage()</code>.",
+ "name": "Serializable errors",
+ "spec": [
+  {
+   "url": "https://webidl.spec.whatwg.org/#idl-DOMException",
+   "seriesComposition": "full",
+   "shortname": "webidl",
+   "series": {
+    "shortname": "webidl",
+    "currentSpecification": "webidl",
+    "title": "Web IDL",
+    "shortTitle": "Web IDL",
+    "nightlyUrl": "https://webidl.spec.whatwg.org/"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "Web IDL Workstream",
+     "url": "https://webidl.spec.whatwg.org/"
+    }
+   ],
+   "nightly": {
+    "url": "https://webidl.spec.whatwg.org/",
+    "status": "Living Standard",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/webidl",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Web IDL",
+   "source": "whatwg",
+   "shortTitle": "Web IDL",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "webidl"
+    ]
+   },
+   "fragment": "idl-DOMException"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "77",
+   "chrome_android": "77",
+   "edge": "79",
+   "firefox": "103",
+   "firefox_android": "103"
+  }
+ },
+ "id": "serializable-errors",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Window: structuredClone() method",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Window/structuredClone"
+  },
+  {
+   "title": "WorkerGlobalScope: structuredClone() method",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/structuredClone"
+  },
+  {
+   "title": "Window: postMessage() method",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Window/postMessage"
+  },
+  {
+   "title": "Worker: postMessage() method",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Worker/postMessage"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.DOMException.serializable_object",
+   "compat": {
+    "description": "<code>DOMException</code> is serializable",
+    "source_file": "api/DOMException.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/structured-data.html#serializable-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "101"
+     },
+     "firefox_android": {
+      "version_added": "101"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:serializable-errors"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.Error.serializable_object",
+   "compat": {
+    "description": "<code>Error</code> is serializable",
+    "mdn_url": "https://developer.mozilla.org/docs/Glossary/Serializable_object",
+    "source_file": "javascript/builtins/Error.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/structured-data.html#serializable-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "notes": [
+       "Version 103 serialized properties: <code>name</code>, <code>message</code>, <code>cause</code>, <code>fileName</code>, <code>lineNumber</code> and <code>columnNumber</code>.",
+       "Version 104 adds serialization of <code>stack</code> in the main thread (<a href=\"https://developer.mozilla.org/docs/Web/API/Window/postMessage\"><code>window.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>).",
+       "Version 110 adds serialization of <code>stack</code> in workers (<a href=\"https://developer.mozilla.org/docs/Web/API/Worker/postMessage\"><code>worker.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>)."
+      ],
+      "version_added": "103"
+     },
+     "firefox_android": {
+      "notes": [
+       "Version 103 serialized properties: <code>name</code>, <code>message</code>, <code>cause</code>, <code>fileName</code>, <code>lineNumber</code> and <code>columnNumber</code>.",
+       "Version 104 adds serialization of <code>stack</code> in the main thread (<a href=\"https://developer.mozilla.org/docs/Web/API/Window/postMessage\"><code>window.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>).",
+       "Version 110 adds serialization of <code>stack</code> in workers (<a href=\"https://developer.mozilla.org/docs/Web/API/Worker/postMessage\"><code>worker.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>)."
+      ],
+      "version_added": "103"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:serializable-errors"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.EvalError.serializable_object",
+   "compat": {
+    "description": "<code>EvalError</code> is serializable",
+    "mdn_url": "https://developer.mozilla.org/docs/Glossary/Serializable_object",
+    "source_file": "javascript/builtins/EvalError.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/structured-data.html#serializable-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "notes": [
+       "Version 103 serializable properties: <code>name</code>, <code>message</code>, <code>cause</code>, <code>fileName</code>, <code>lineNumber</code> and <code>columnNumber</code>.",
+       "Version 104 also serializes <code>stack</code> in the main thread (<a href=\"https://developer.mozilla.org/docs/Web/API/Window/postMessage\"><code>window.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>).",
+       "Version 110 also serializes <code>stack</code> in workers (<a href=\"https://developer.mozilla.org/docs/Web/API/Worker/postMessage\"><code>worker.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>)."
+      ],
+      "version_added": "103"
+     },
+     "firefox_android": {
+      "notes": [
+       "Version 103 serializable properties: <code>name</code>, <code>message</code>, <code>cause</code>, <code>fileName</code>, <code>lineNumber</code> and <code>columnNumber</code>.",
+       "Version 104 also serializes <code>stack</code> in the main thread (<a href=\"https://developer.mozilla.org/docs/Web/API/Window/postMessage\"><code>window.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>).",
+       "Version 110 also serializes <code>stack</code> in workers (<a href=\"https://developer.mozilla.org/docs/Web/API/Worker/postMessage\"><code>worker.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>)."
+      ],
+      "version_added": "103"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:serializable-errors"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.RangeError.serializable_object",
+   "compat": {
+    "description": "<code>RangeError</code> is serializable",
+    "mdn_url": "https://developer.mozilla.org/docs/Glossary/Serializable_object",
+    "source_file": "javascript/builtins/RangeError.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/structured-data.html#serializable-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "notes": [
+       "Version 103 serializable properties: <code>name</code>, <code>message</code>, <code>cause</code>, <code>fileName</code>, <code>lineNumber</code> and <code>columnNumber</code>.",
+       "Version 104 also serializes <code>stack</code> in the main thread (<a href=\"https://developer.mozilla.org/docs/Web/API/Window/postMessage\"><code>window.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>).",
+       "Version 110 also serializes <code>stack</code> in workers (<a href=\"https://developer.mozilla.org/docs/Web/API/Worker/postMessage\"><code>worker.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>)."
+      ],
+      "version_added": "103"
+     },
+     "firefox_android": {
+      "notes": [
+       "Version 103 serializable properties: <code>name</code>, <code>message</code>, <code>cause</code>, <code>fileName</code>, <code>lineNumber</code> and <code>columnNumber</code>.",
+       "Version 104 also serializes <code>stack</code> in the main thread (<a href=\"https://developer.mozilla.org/docs/Web/API/Window/postMessage\"><code>window.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>).",
+       "Version 110 also serializes <code>stack</code> in workers (<a href=\"https://developer.mozilla.org/docs/Web/API/Worker/postMessage\"><code>worker.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>)."
+      ],
+      "version_added": "103"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:serializable-errors"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.ReferenceError.serializable_object",
+   "compat": {
+    "description": "<code>ReferenceError</code> is serializable",
+    "mdn_url": "https://developer.mozilla.org/docs/Glossary/Serializable_object",
+    "source_file": "javascript/builtins/ReferenceError.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/structured-data.html#serializable-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "notes": [
+       "Version 103 serializable properties: <code>name</code>, <code>message</code>, <code>cause</code>, <code>fileName</code>, <code>lineNumber</code> and <code>columnNumber</code>.",
+       "Version 104 also serializes <code>stack</code> in the main thread (<a href=\"https://developer.mozilla.org/docs/Web/API/Window/postMessage\"><code>window.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>).",
+       "Version 110 also serializes <code>stack</code> in workers (<a href=\"https://developer.mozilla.org/docs/Web/API/Worker/postMessage\"><code>worker.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>)."
+      ],
+      "version_added": "103"
+     },
+     "firefox_android": {
+      "notes": [
+       "Version 103 serializable properties: <code>name</code>, <code>message</code>, <code>cause</code>, <code>fileName</code>, <code>lineNumber</code> and <code>columnNumber</code>.",
+       "Version 104 also serializes <code>stack</code> in the main thread (<a href=\"https://developer.mozilla.org/docs/Web/API/Window/postMessage\"><code>window.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>).",
+       "Version 110 also serializes <code>stack</code> in workers (<a href=\"https://developer.mozilla.org/docs/Web/API/Worker/postMessage\"><code>worker.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>)."
+      ],
+      "version_added": "103"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:serializable-errors"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.SyntaxError.serializable_object",
+   "compat": {
+    "description": "<code>SyntaxError</code> is serializable",
+    "mdn_url": "https://developer.mozilla.org/docs/Glossary/Serializable_object",
+    "source_file": "javascript/builtins/SyntaxError.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/structured-data.html#serializable-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "notes": [
+       "Version 103 serializable properties: <code>name</code>, <code>message</code>, <code>cause</code>, <code>fileName</code>, <code>lineNumber</code> and <code>columnNumber</code>.",
+       "Version 104 also serializes <code>stack</code> in the main thread (<a href=\"https://developer.mozilla.org/docs/Web/API/Window/postMessage\"><code>window.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>).",
+       "Version 110 also serializes <code>stack</code> in workers (<a href=\"https://developer.mozilla.org/docs/Web/API/Worker/postMessage\"><code>worker.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>)."
+      ],
+      "version_added": "103"
+     },
+     "firefox_android": {
+      "notes": [
+       "Version 103 serializable properties: <code>name</code>, <code>message</code>, <code>cause</code>, <code>fileName</code>, <code>lineNumber</code> and <code>columnNumber</code>.",
+       "Version 104 also serializes <code>stack</code> in the main thread (<a href=\"https://developer.mozilla.org/docs/Web/API/Window/postMessage\"><code>window.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>).",
+       "Version 110 also serializes <code>stack</code> in workers (<a href=\"https://developer.mozilla.org/docs/Web/API/Worker/postMessage\"><code>worker.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>)."
+      ],
+      "version_added": "103"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:serializable-errors"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.TypeError.serializable_object",
+   "compat": {
+    "description": "<code>TypeError</code> is serializable",
+    "mdn_url": "https://developer.mozilla.org/docs/Glossary/Serializable_object",
+    "source_file": "javascript/builtins/TypeError.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/structured-data.html#serializable-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "notes": [
+       "Version 103 serializable properties: <code>name</code>, <code>message</code>, <code>cause</code>, <code>fileName</code>, <code>lineNumber</code> and <code>columnNumber</code>.",
+       "Version 104 also serializes <code>stack</code> in the main thread (<a href=\"https://developer.mozilla.org/docs/Web/API/Window/postMessage\"><code>window.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>).",
+       "Version 110 also serializes <code>stack</code> in workers (<a href=\"https://developer.mozilla.org/docs/Web/API/Worker/postMessage\"><code>worker.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>)."
+      ],
+      "version_added": "103"
+     },
+     "firefox_android": {
+      "notes": [
+       "Version 103 serializable properties: <code>name</code>, <code>message</code>, <code>cause</code>, <code>fileName</code>, <code>lineNumber</code> and <code>columnNumber</code>.",
+       "Version 104 also serializes <code>stack</code> in the main thread (<a href=\"https://developer.mozilla.org/docs/Web/API/Window/postMessage\"><code>window.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>).",
+       "Version 110 also serializes <code>stack</code> in workers (<a href=\"https://developer.mozilla.org/docs/Web/API/Worker/postMessage\"><code>worker.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>)."
+      ],
+      "version_added": "103"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:serializable-errors"
+    ]
+   }
+  },
+  {
+   "key": "javascript.builtins.URIError.serializable_object",
+   "compat": {
+    "description": "<code>URIError</code> is serializable",
+    "mdn_url": "https://developer.mozilla.org/docs/Glossary/Serializable_object",
+    "source_file": "javascript/builtins/URIError.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/structured-data.html#serializable-objects",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "77"
+     },
+     "chrome_android": {
+      "version_added": "77"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "notes": [
+       "Version 103 serializable properties: <code>name</code>, <code>message</code>, <code>cause</code>, <code>fileName</code>, <code>lineNumber</code> and <code>columnNumber</code>.",
+       "Version 104 also serializes <code>stack</code> in the main thread (<a href=\"https://developer.mozilla.org/docs/Web/API/Window/postMessage\"><code>window.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>).",
+       "Version 110 also serializes <code>stack</code> in workers (<a href=\"https://developer.mozilla.org/docs/Web/API/Worker/postMessage\"><code>worker.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>)."
+      ],
+      "version_added": "103"
+     },
+     "firefox_android": {
+      "notes": [
+       "Version 103 serializable properties: <code>name</code>, <code>message</code>, <code>cause</code>, <code>fileName</code>, <code>lineNumber</code> and <code>columnNumber</code>.",
+       "Version 104 also serializes <code>stack</code> in the main thread (<a href=\"https://developer.mozilla.org/docs/Web/API/Window/postMessage\"><code>window.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>).",
+       "Version 110 also serializes <code>stack</code> in workers (<a href=\"https://developer.mozilla.org/docs/Web/API/Worker/postMessage\"><code>worker.postMessage()</code></a> and <a href=\"https://developer.mozilla.org/docs/Web/API/structuredClone\"><code>structuredClone()</code></a>)."
+      ],
+      "version_added": "103"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "64"
+     },
+     "opera_android": {
+      "version_added": "55"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "77"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:serializable-errors"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "javascript"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ },
+ "blockedOn": "Safari",
+ "monthsBlocked": 35,
+ "blockedSince": "July 2022"
+}

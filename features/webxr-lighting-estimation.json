@@ -1,0 +1,782 @@
+{
+ "compat_features": [
+  "api.XRFrame.getLightEstimate",
+  "api.XRLightEstimate",
+  "api.XRLightEstimate.primaryLightDirection",
+  "api.XRLightEstimate.primaryLightIntensity",
+  "api.XRLightEstimate.sphericalHarmonicsCoefficients",
+  "api.XRLightProbe",
+  "api.XRLightProbe.probeSpace",
+  "api.XRLightProbe.reflectionchange_event",
+  "api.XRSession.preferredReflectionFormat",
+  "api.XRSession.requestLightProbe",
+  "api.XRWebGLBinding.getReflectionCubeMap"
+ ],
+ "description": "The XRLightProbe and XRLightEstimate objects represent real-world environmental lighting conditions during a WebXR session.",
+ "description_html": "The <code>XRLightProbe</code> and <code>XRLightEstimate</code> objects represent real-world environmental lighting conditions during a WebXR session.",
+ "group": "webxr",
+ "name": "Lighting estimation",
+ "spec": [
+  {
+   "url": "https://immersive-web.github.io/lighting-estimation/",
+   "seriesComposition": "full",
+   "shortname": "webxr-lighting-estimation-1",
+   "series": {
+    "shortname": "webxr-lighting-estimation",
+    "currentSpecification": "webxr-lighting-estimation-1",
+    "title": "WebXR Lighting Estimation API",
+    "shortTitle": "WebXR Lighting Estimation API",
+    "releaseUrl": "https://www.w3.org/TR/webxr-lighting-estimation/",
+    "nightlyUrl": "https://immersive-web.github.io/lighting-estimation/"
+   },
+   "seriesVersion": "1",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Immersive Web Working Group",
+     "url": "https://www.w3.org/immersive-web/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/webxr-lighting-estimation-1/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://immersive-web.github.io/lighting-estimation/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/immersive-web/lighting-estimation",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "WebXR Lighting Estimation API Level 1",
+   "source": "w3c",
+   "shortTitle": "WebXR Lighting Estimation API 1",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "90",
+   "chrome_android": "90",
+   "edge": "90"
+  }
+ },
+ "id": "webxr-lighting-estimation",
+ "groups": [
+  "webxr"
+ ],
+ "groupPaths": [
+  [
+   "WebXR"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "XRLightProbe",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/XRLightProbe"
+  },
+  {
+   "title": "XRLightEstimate",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/XRLightEstimate"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.XRFrame.getLightEstimate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRFrame/getLightEstimate",
+    "source_file": "api/XRFrame.json",
+    "spec_url": "https://immersive-web.github.io/lighting-estimation/#dom-xrframe-getlightestimate",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-lighting-estimation"
+    ]
+   }
+  },
+  {
+   "key": "api.XRLightEstimate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRLightEstimate",
+    "source_file": "api/XRLightEstimate.json",
+    "spec_url": "https://immersive-web.github.io/lighting-estimation/#xrlightestimate-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40652382",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-lighting-estimation"
+    ]
+   }
+  },
+  {
+   "key": "api.XRLightEstimate.primaryLightDirection",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRLightEstimate/primaryLightDirection",
+    "source_file": "api/XRLightEstimate.json",
+    "spec_url": "https://immersive-web.github.io/lighting-estimation/#dom-xrlightestimate-primarylightdirection",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-lighting-estimation"
+    ]
+   }
+  },
+  {
+   "key": "api.XRLightEstimate.primaryLightIntensity",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRLightEstimate/primaryLightIntensity",
+    "source_file": "api/XRLightEstimate.json",
+    "spec_url": "https://immersive-web.github.io/lighting-estimation/#dom-xrlightestimate-primarylightintensity",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-lighting-estimation"
+    ]
+   }
+  },
+  {
+   "key": "api.XRLightEstimate.sphericalHarmonicsCoefficients",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRLightEstimate/sphericalHarmonicsCoefficients",
+    "source_file": "api/XRLightEstimate.json",
+    "spec_url": "https://immersive-web.github.io/lighting-estimation/#dom-xrlightestimate-sphericalharmonicscoefficients",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-lighting-estimation"
+    ]
+   }
+  },
+  {
+   "key": "api.XRLightProbe",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRLightProbe",
+    "source_file": "api/XRLightProbe.json",
+    "spec_url": "https://immersive-web.github.io/lighting-estimation/#xrlightprobe-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40652382",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-lighting-estimation"
+    ]
+   }
+  },
+  {
+   "key": "api.XRLightProbe.probeSpace",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRLightProbe/probeSpace",
+    "source_file": "api/XRLightProbe.json",
+    "spec_url": "https://immersive-web.github.io/lighting-estimation/#dom-xrlightprobe-probespace",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-lighting-estimation"
+    ]
+   }
+  },
+  {
+   "key": "api.XRLightProbe.reflectionchange_event",
+   "compat": {
+    "description": "<code>reflectionchange</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRLightProbe/reflectionchange_event",
+    "source_file": "api/XRLightProbe.json",
+    "spec_url": [
+     "https://immersive-web.github.io/lighting-estimation/#eventdef-xrlightprobe-reflectionchange",
+     "https://immersive-web.github.io/lighting-estimation/#dom-xrlightprobe-onreflectionchange"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-lighting-estimation"
+    ]
+   }
+  },
+  {
+   "key": "api.XRSession.preferredReflectionFormat",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRSession/preferredReflectionFormat",
+    "source_file": "api/XRSession.json",
+    "spec_url": "https://immersive-web.github.io/lighting-estimation/#dom-xrsession-preferredreflectionformat",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-lighting-estimation"
+    ]
+   }
+  },
+  {
+   "key": "api.XRSession.requestLightProbe",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRSession/requestLightProbe",
+    "source_file": "api/XRSession.json",
+    "spec_url": "https://immersive-web.github.io/lighting-estimation/#dom-xrsession-requestlightprobe",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-lighting-estimation"
+    ]
+   }
+  },
+  {
+   "key": "api.XRWebGLBinding.getReflectionCubeMap",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/XRWebGLBinding/getReflectionCubeMap",
+    "source_file": "api/XRWebGLBinding.json",
+    "spec_url": "https://immersive-web.github.io/lighting-estimation/#dom-xrwebglbinding-getreflectioncubemap",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webxr-lighting-estimation"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

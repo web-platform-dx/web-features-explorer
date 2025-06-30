@@ -1,0 +1,2876 @@
+{
+ "caniuse": "webauthn",
+ "compat_features": [
+  "api.AuthenticatorAssertionResponse",
+  "api.AuthenticatorAssertionResponse.authenticatorData",
+  "api.AuthenticatorAssertionResponse.signature",
+  "api.AuthenticatorAssertionResponse.userHandle",
+  "api.AuthenticatorAttestationResponse",
+  "api.AuthenticatorAttestationResponse.attestationObject",
+  "api.AuthenticatorAttestationResponse.getTransports",
+  "api.AuthenticatorResponse",
+  "api.AuthenticatorResponse.clientDataJSON",
+  "api.CredentialsContainer.create.publicKey_option",
+  "api.CredentialsContainer.create.publicKey_option.attestation",
+  "api.CredentialsContainer.create.publicKey_option.attestation.direct",
+  "api.CredentialsContainer.create.publicKey_option.attestation.enterprise",
+  "api.CredentialsContainer.create.publicKey_option.attestation.indirect",
+  "api.CredentialsContainer.create.publicKey_option.attestation.none",
+  "api.CredentialsContainer.create.publicKey_option.extensions",
+  "api.CredentialsContainer.create.publicKey_option.extensions.appidExclude",
+  "api.CredentialsContainer.create.publicKey_option.extensions.credProps",
+  "api.CredentialsContainer.create.publicKey_option.extensions.credProtect",
+  "api.CredentialsContainer.create.publicKey_option.extensions.largeBlob",
+  "api.CredentialsContainer.create.publicKey_option.extensions.minPinLength",
+  "api.CredentialsContainer.create.publicKey_option.extensions.payment",
+  "api.CredentialsContainer.create.publicKey_option.requireResidentKey",
+  "api.CredentialsContainer.create.publicKey_option.residentKey",
+  "api.CredentialsContainer.get.publicKey_option",
+  "api.CredentialsContainer.get.publicKey_option.extensions",
+  "api.CredentialsContainer.get.publicKey_option.extensions.appid",
+  "api.CredentialsContainer.get.publicKey_option.extensions.largeBlob",
+  "api.PublicKeyCredential",
+  "api.PublicKeyCredential.authenticatorAttachment",
+  "api.PublicKeyCredential.getClientCapabilities_static",
+  "api.PublicKeyCredential.getClientExtensionResults",
+  "api.PublicKeyCredential.isConditionalMediationAvailable_static",
+  "api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable_static",
+  "api.PublicKeyCredential.parseCreationOptionsFromJSON_static",
+  "api.PublicKeyCredential.parseRequestOptionsFromJSON_static",
+  "api.PublicKeyCredential.rawId",
+  "api.PublicKeyCredential.response",
+  "api.PublicKeyCredential.toJSON",
+  "html.elements.iframe.allow.publickey-credentials-create",
+  "html.elements.iframe.allow.publickey-credentials-get",
+  "http.headers.Permissions-Policy.publickey-credentials-create",
+  "http.headers.Permissions-Policy.publickey-credentials-get"
+ ],
+ "description": "The web authentication API allows you to create public key-based credentials and use them for authentication, such as when signing in. Also known as WebAuthn.",
+ "description_html": "The web authentication API allows you to create public key-based credentials and use them for authentication, such as when signing in. Also known as WebAuthn.",
+ "name": "Web authentication",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/webauthn/",
+   "seriesComposition": "full",
+   "shortname": "webauthn-3",
+   "series": {
+    "shortname": "webauthn",
+    "currentSpecification": "webauthn-3",
+    "title": "Web Authentication",
+    "shortTitle": "Web Authentication",
+    "releaseUrl": "https://www.w3.org/TR/webauthn/",
+    "nightlyUrl": "https://w3c.github.io/webauthn/"
+   },
+   "seriesVersion": "3",
+   "shortTitle": "Web Authentication",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Authentication Working Group",
+     "url": "https://www.w3.org/groups/wg/webauthn/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/webauthn-3/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/webauthn/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/webauthn",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Web Authentication: An API for accessing Public Key Credentials - Level 3",
+   "source": "w3c",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "webauthn"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2024-03-07",
+  "baseline_low_date": "2021-09-07",
+  "support": {
+   "chrome": "67",
+   "chrome_android": "70",
+   "edge": "18",
+   "firefox": "60",
+   "firefox_android": "92",
+   "safari": "13",
+   "safari_ios": "13"
+  }
+ },
+ "id": "webauthn",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Web Authentication API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Web_Authentication_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/163",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.AuthenticatorAssertionResponse",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AuthenticatorAssertionResponse",
+    "source_file": "api/AuthenticatorAssertionResponse.json",
+    "spec_url": "https://w3c.github.io/webauthn/#iface-authenticatorassertionresponse",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "notes": "Only supports USB U2F tokens.",
+      "version_added": "60"
+     },
+     "firefox_android": [
+      {
+       "version_added": "92"
+      },
+      {
+       "notes": "Only supports USB U2F tokens.",
+       "partial_implementation": true,
+       "version_added": "60",
+       "version_last": "91",
+       "version_removed": "92"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.AuthenticatorAssertionResponse.authenticatorData",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AuthenticatorAssertionResponse/authenticatorData",
+    "source_file": "api/AuthenticatorAssertionResponse.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-authenticatorassertionresponse-authenticatordata",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "notes": "Only supports USB U2F tokens.",
+      "version_added": "60"
+     },
+     "firefox_android": [
+      {
+       "version_added": "92"
+      },
+      {
+       "notes": "Only supports USB U2F tokens.",
+       "partial_implementation": true,
+       "version_added": "60",
+       "version_last": "91",
+       "version_removed": "92"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.AuthenticatorAssertionResponse.signature",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AuthenticatorAssertionResponse/signature",
+    "source_file": "api/AuthenticatorAssertionResponse.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-authenticatorassertionresponse-signature",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "notes": "Only supports USB U2F tokens.",
+      "version_added": "60"
+     },
+     "firefox_android": [
+      {
+       "version_added": "92"
+      },
+      {
+       "notes": "Only supports USB U2F tokens.",
+       "partial_implementation": true,
+       "version_added": "60",
+       "version_last": "91",
+       "version_removed": "92"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.AuthenticatorAssertionResponse.userHandle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AuthenticatorAssertionResponse/userHandle",
+    "source_file": "api/AuthenticatorAssertionResponse.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-authenticatorassertionresponse-userhandle",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "notes": "Only supports USB U2F tokens.",
+      "version_added": "60"
+     },
+     "firefox_android": [
+      {
+       "version_added": "92"
+      },
+      {
+       "notes": "Only supports USB U2F tokens.",
+       "partial_implementation": true,
+       "version_added": "60",
+       "version_last": "91",
+       "version_removed": "92"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.AuthenticatorAttestationResponse",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AuthenticatorAttestationResponse",
+    "source_file": "api/AuthenticatorAttestationResponse.json",
+    "spec_url": "https://w3c.github.io/webauthn/#authenticatorattestationresponse",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "notes": "Only supports USB U2F tokens.",
+      "version_added": "60"
+     },
+     "firefox_android": [
+      {
+       "version_added": "92"
+      },
+      {
+       "notes": "Only supports USB U2F tokens.",
+       "partial_implementation": true,
+       "version_added": "60",
+       "version_last": "91",
+       "version_removed": "92"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.AuthenticatorAttestationResponse.attestationObject",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AuthenticatorAttestationResponse/attestationObject",
+    "source_file": "api/AuthenticatorAttestationResponse.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-authenticatorattestationresponse-attestationobject",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "notes": "Only supports USB U2F tokens.",
+      "version_added": "60"
+     },
+     "firefox_android": [
+      {
+       "version_added": "92"
+      },
+      {
+       "notes": "Only supports USB U2F tokens.",
+       "partial_implementation": true,
+       "version_added": "60",
+       "version_last": "91",
+       "version_removed": "92"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.AuthenticatorAttestationResponse.getTransports",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AuthenticatorAttestationResponse/getTransports",
+    "source_file": "api/AuthenticatorAttestationResponse.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-authenticatorattestationresponse-gettransports",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "74"
+     },
+     "chrome_android": {
+      "version_added": "74"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "119"
+     },
+     "firefox_android": {
+      "version_added": "119"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "62"
+     },
+     "opera_android": {
+      "version_added": "53"
+     },
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16"
+     },
+     "samsunginternet_android": {
+      "version_added": "11.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "16"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.AuthenticatorResponse",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AuthenticatorResponse",
+    "source_file": "api/AuthenticatorResponse.json",
+    "spec_url": "https://w3c.github.io/webauthn/#authenticatorresponse",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "notes": "Only supports USB U2F tokens.",
+      "version_added": "60"
+     },
+     "firefox_android": [
+      {
+       "version_added": "92"
+      },
+      {
+       "notes": "Only supports USB U2F tokens.",
+       "partial_implementation": true,
+       "version_added": "60",
+       "version_last": "91",
+       "version_removed": "92"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.AuthenticatorResponse.clientDataJSON",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AuthenticatorResponse/clientDataJSON",
+    "source_file": "api/AuthenticatorResponse.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-authenticatorresponse-clientdatajson",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "notes": "Only supports USB U2F tokens.",
+      "version_added": "60"
+     },
+     "firefox_android": [
+      {
+       "version_added": "92"
+      },
+      {
+       "notes": "Only supports USB U2F tokens.",
+       "partial_implementation": true,
+       "version_added": "60",
+       "version_last": "91",
+       "version_removed": "92"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option",
+   "compat": {
+    "description": "<code>publicKey</code> option",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#sctn-credentialcreationoptions-extension",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option.attestation",
+   "compat": {
+    "description": "<code>attestation</code> option",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestation",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option.attestation.direct",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredentialCreationOptions#direct",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-attestationconveyancepreference-direct",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "notes": "<code>credentialCreationData.attestationConveyancePreferenceOption</code> value \"direct\" is not supported. See <a href=\"https://bugzil.la/1550164\">https://bugzil.la/1550164</a>",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option.attestation.enterprise",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredentialCreationOptions#enterprise",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-attestationconveyancepreference-enterprise",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "notes": "<code>credentialCreationData.attestationConveyancePreferenceOption</code> value \"enterprise\" is not supported. See <a href=\"https://bugzil.la/1550164\">https://bugzil.la/1550164</a>",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option.attestation.indirect",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredentialCreationOptions#indirect",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-attestationconveyancepreference-indirect",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option.attestation.none",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredentialCreationOptions#none",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-attestationconveyancepreference-none",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option.extensions",
+   "compat": {
+    "description": "<code>create()</code> extensions",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Web_Authentication_API/WebAuthn_extensions",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-extensions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option.extensions.appidExclude",
+   "compat": {
+    "description": "<code>appidExclude</code> extension",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#appidexclude",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#sctn-appid-exclude-extension",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option.extensions.credProps",
+   "compat": {
+    "description": "<code>credProps</code> extension",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#credprops",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#sctn-authenticator-credential-properties-extension",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": "108"
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": "119"
+     },
+     "firefox_android": {
+      "version_added": "119"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": "73"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option.extensions.credProtect",
+   "compat": {
+    "description": "<code>credProtect</code> extension",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#credprotect",
+    "source_file": "api/CredentialsContainer.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "76"
+     },
+     "chrome_android": {
+      "version_added": "76"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "139"
+     },
+     "firefox_android": {
+      "version_added": "139"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "63"
+     },
+     "opera_android": {
+      "version_added": "54"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option.extensions.largeBlob",
+   "compat": {
+    "description": "<code>largeBlob</code> extension",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#largeblob",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#sctn-large-blob-extension",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "113"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "113"
+     },
+     "firefox": {
+      "version_added": "139"
+     },
+     "firefox_android": {
+      "version_added": "139"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "99"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "17"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option.extensions.minPinLength",
+   "compat": {
+    "description": "<code>minPinLength</code> extension",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#minpinlength",
+    "source_file": "api/CredentialsContainer.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "98"
+     },
+     "chrome_android": {
+      "version_added": "98"
+     },
+     "edge": {
+      "version_added": "98"
+     },
+     "firefox": {
+      "version_added": "120"
+     },
+     "firefox_android": {
+      "version_added": "120"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "84"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option.extensions.payment",
+   "compat": {
+    "description": "<code>payment</code> extension",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#payment",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/secure-payment-confirmation/#sctn-payment-extension-registration",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "95"
+     },
+     "chrome_android": {
+      "version_added": "95"
+     },
+     "edge": {
+      "version_added": "95"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "18.0"
+     },
+     "opera": {
+      "version_added": "81"
+     },
+     "opera_android": {
+      "version_added": "67"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "17.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option.requireResidentKey",
+   "compat": {
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-requireresidentkey",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": "108"
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": "73"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.create.publicKey_option.residentKey",
+   "compat": {
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-residentkey",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "89"
+     },
+     "chrome_android": {
+      "version_added": "108"
+     },
+     "edge": {
+      "version_added": "89"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "128"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "75"
+     },
+     "opera_android": {
+      "version_added": "73"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.get.publicKey_option",
+   "compat": {
+    "description": "<code>publicKey</code> option",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#sctn-credentialrequestoptions-extension",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.get.publicKey_option.extensions",
+   "compat": {
+    "description": "<code>get()</code> extensions",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Web_Authentication_API/WebAuthn_extensions",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-extensions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.get.publicKey_option.extensions.appid",
+   "compat": {
+    "description": "<code>appid</code> extension",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#sctn-appid-extension",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "60"
+     },
+     "firefox_android": {
+      "version_added": "60"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.CredentialsContainer.get.publicKey_option.extensions.largeBlob",
+   "compat": {
+    "description": "<code>largeBlob</code> extension",
+    "source_file": "api/CredentialsContainer.json",
+    "spec_url": "https://w3c.github.io/webauthn/#sctn-large-blob-extension",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "113"
+     },
+     "chrome_android": {
+      "version_added": "113"
+     },
+     "edge": {
+      "version_added": "113"
+     },
+     "firefox": {
+      "version_added": "139"
+     },
+     "firefox_android": {
+      "version_added": "139"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "99"
+     },
+     "opera_android": {
+      "version_added": "76"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "23.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.PublicKeyCredential",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredential",
+    "source_file": "api/PublicKeyCredential.json",
+    "spec_url": "https://w3c.github.io/webauthn/#iface-pkcredential",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "notes": "Only supports USB U2F tokens.",
+      "version_added": "60"
+     },
+     "firefox_android": [
+      {
+       "version_added": "92"
+      },
+      {
+       "notes": "Only supports USB U2F tokens.",
+       "partial_implementation": true,
+       "version_added": "60",
+       "version_last": "91",
+       "version_removed": "92"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.PublicKeyCredential.authenticatorAttachment",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredential/authenticatorAttachment",
+    "source_file": "api/PublicKeyCredential.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-publickeycredential-authenticatorattachment",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "98"
+     },
+     "chrome_android": {
+      "version_added": "98"
+     },
+     "edge": {
+      "version_added": "98"
+     },
+     "firefox": {
+      "version_added": "120"
+     },
+     "firefox_android": {
+      "version_added": "120"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "20.0"
+     },
+     "opera": {
+      "version_added": "84"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": "15.5"
+     },
+     "safari_ios": {
+      "version_added": "15.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "15.5"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.PublicKeyCredential.getClientCapabilities_static",
+   "compat": {
+    "description": "<code>getClientCapabilities()</code> static method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredential/getClientCapabilities_static",
+    "source_file": "api/PublicKeyCredential.json",
+    "spec_url": "https://w3c.github.io/webauthn/#sctn-getClientCapabilities",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "133"
+     },
+     "chrome_android": {
+      "version_added": "133"
+     },
+     "edge": {
+      "version_added": "133"
+     },
+     "firefox": {
+      "version_added": "135"
+     },
+     "firefox_android": {
+      "version_added": "135"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "118"
+     },
+     "opera_android": {
+      "version_added": "88"
+     },
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "17.4"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.PublicKeyCredential.getClientExtensionResults",
+   "compat": {
+    "description": "<code>getClientExtensionResults()</code> method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredential/getClientExtensionResults",
+    "source_file": "api/PublicKeyCredential.json",
+    "spec_url": "https://w3c.github.io/webauthn/#ref-for-dom-publickeycredential-getclientextensionresults",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "notes": "Only supports USB U2F tokens.",
+      "version_added": "60"
+     },
+     "firefox_android": [
+      {
+       "version_added": "92"
+      },
+      {
+       "notes": "Only supports USB U2F tokens.",
+       "partial_implementation": true,
+       "version_added": "60",
+       "version_last": "91",
+       "version_removed": "92"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.PublicKeyCredential.isConditionalMediationAvailable_static",
+   "compat": {
+    "description": "<code>isConditionalMediationAvailable()</code> static method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredential/isConditionalMediationAvailable_static",
+    "source_file": "api/PublicKeyCredential.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-publickeycredential-isconditionalmediationavailable",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "108"
+     },
+     "chrome_android": {
+      "version_added": "108"
+     },
+     "edge": {
+      "version_added": "108"
+     },
+     "firefox": {
+      "version_added": "119"
+     },
+     "firefox_android": {
+      "version_added": "119"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "94"
+     },
+     "opera_android": {
+      "version_added": "73"
+     },
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "16"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable_static",
+   "compat": {
+    "description": "<code>isUserVerifyingPlatformAuthenticatorAvailable()</code> static method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable_static",
+    "source_file": "api/PublicKeyCredential.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-publickeycredential-isuserverifyingplatformauthenticatoravailable",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "notes": "Only supports USB U2F tokens.",
+      "version_added": "60"
+     },
+     "firefox_android": [
+      {
+       "version_added": "92"
+      },
+      {
+       "notes": "Only supports USB U2F tokens.",
+       "partial_implementation": true,
+       "version_added": "60",
+       "version_last": "91",
+       "version_removed": "92"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.PublicKeyCredential.parseCreationOptionsFromJSON_static",
+   "compat": {
+    "description": "<code>parseCreationOptionsFromJSON()</code> static method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredential/parseCreationOptionsFromJSON_static",
+    "source_file": "api/PublicKeyCredential.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-publickeycredential-parsecreationoptionsfromjson",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "version_added": "129"
+     },
+     "edge": {
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": "119"
+     },
+     "firefox_android": {
+      "version_added": "119"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.PublicKeyCredential.parseRequestOptionsFromJSON_static",
+   "compat": {
+    "description": "<code>parseRequestOptionsFromJSON()</code> static method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredential/parseRequestOptionsFromJSON_static",
+    "source_file": "api/PublicKeyCredential.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-publickeycredential-parserequestoptionsfromjson",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "version_added": "129"
+     },
+     "edge": {
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": "119"
+     },
+     "firefox_android": {
+      "version_added": "119"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.PublicKeyCredential.rawId",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredential/rawId",
+    "source_file": "api/PublicKeyCredential.json",
+    "spec_url": "https://w3c.github.io/webauthn/#ref-for-dom-publickeycredential-rawid",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "notes": "Only supports USB U2F tokens.",
+      "version_added": "60"
+     },
+     "firefox_android": [
+      {
+       "version_added": "92"
+      },
+      {
+       "notes": "Only supports USB U2F tokens.",
+       "partial_implementation": true,
+       "version_added": "60",
+       "version_last": "91",
+       "version_removed": "92"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.PublicKeyCredential.response",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredential/response",
+    "source_file": "api/PublicKeyCredential.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-publickeycredential-response",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "67"
+     },
+     "chrome_android": {
+      "version_added": "70"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "notes": "Only supports USB U2F tokens.",
+      "version_added": "60"
+     },
+     "firefox_android": [
+      {
+       "version_added": "92"
+      },
+      {
+       "notes": "Only supports USB U2F tokens.",
+       "partial_implementation": true,
+       "version_added": "60",
+       "version_last": "91",
+       "version_removed": "92"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "54"
+     },
+     "opera_android": {
+      "version_added": "49"
+     },
+     "safari": {
+      "version_added": "13"
+     },
+     "safari_ios": {
+      "version_added": "13"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "api.PublicKeyCredential.toJSON",
+   "compat": {
+    "description": "<code>toJSON()</code> method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PublicKeyCredential/toJSON",
+    "source_file": "api/PublicKeyCredential.json",
+    "spec_url": "https://w3c.github.io/webauthn/#dom-publickeycredential-tojson",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "version_added": "129"
+     },
+     "edge": {
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": "119"
+     },
+     "firefox_android": {
+      "version_added": "119"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.iframe.allow.publickey-credentials-create",
+   "compat": {
+    "source_file": "html/elements/iframe.json",
+    "spec_url": "https://w3c.github.io/webauthn/#sctn-permissions-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "123"
+     },
+     "firefox_android": {
+      "version_added": "123"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.iframe.allow.publickey-credentials-get",
+   "compat": {
+    "source_file": "html/elements/iframe.json",
+    "spec_url": "https://w3c.github.io/webauthn/#sctn-permissions-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "84"
+     },
+     "chrome_android": {
+      "version_added": "84"
+     },
+     "edge": {
+      "version_added": "84"
+     },
+     "firefox": {
+      "version_added": "118"
+     },
+     "firefox_android": {
+      "version_added": "118"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "11.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "84"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Permissions-Policy.publickey-credentials-create",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-create",
+    "source_file": "http/headers/Permissions-Policy.json",
+    "spec_url": "https://w3c.github.io/webauthn/#sctn-permissions-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "88"
+     },
+     "chrome_android": {
+      "version_added": "88"
+     },
+     "edge": {
+      "version_added": "88"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "14.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "88"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Permissions-Policy.publickey-credentials-get",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-get",
+    "source_file": "http/headers/Permissions-Policy.json",
+    "spec_url": "https://w3c.github.io/webauthn/#sctn-permissions-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "88"
+     },
+     "chrome_android": {
+      "version_added": "88"
+     },
+     "edge": {
+      "version_added": "88"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "14.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "88"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webauthn"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "html",
+  "http"
+ ],
+ "baselineLowDateAsObject": "2021-09-07T00:00:00.000Z",
+ "baselineHighDateAsObject": "2024-03-07T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

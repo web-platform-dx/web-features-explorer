@@ -1,0 +1,2354 @@
+{
+ "caniuse": "trusted-types",
+ "compat_features": [
+  "api.Element.innerHTML.accepts_TrustedHTML",
+  "api.HTMLElement.innerText.scripts_accept_TrustedScript",
+  "api.HTMLScriptElement.src.accepts_TrustedScriptURL",
+  "api.HTMLScriptElement.text.accepts_TrustedScript",
+  "api.Node.textContent.scripts_accept_TrustedScript",
+  "api.ShadowRoot.innerHTML.accepts_TrustedHTML",
+  "api.TrustedHTML",
+  "api.TrustedHTML.toJSON",
+  "api.TrustedHTML.toString",
+  "api.TrustedScript",
+  "api.TrustedScript.toJSON",
+  "api.TrustedScript.toString",
+  "api.TrustedScriptURL",
+  "api.TrustedScriptURL.toJSON",
+  "api.TrustedScriptURL.toString",
+  "api.TrustedTypePolicy",
+  "api.TrustedTypePolicy.createHTML",
+  "api.TrustedTypePolicy.createScript",
+  "api.TrustedTypePolicy.createScriptURL",
+  "api.TrustedTypePolicy.name",
+  "api.TrustedTypePolicyFactory",
+  "api.TrustedTypePolicyFactory.createPolicy",
+  "api.TrustedTypePolicyFactory.defaultPolicy",
+  "api.TrustedTypePolicyFactory.emptyHTML",
+  "api.TrustedTypePolicyFactory.emptyScript",
+  "api.TrustedTypePolicyFactory.getAttributeType",
+  "api.TrustedTypePolicyFactory.getPropertyType",
+  "api.TrustedTypePolicyFactory.isHTML",
+  "api.TrustedTypePolicyFactory.isScript",
+  "api.TrustedTypePolicyFactory.isScriptURL",
+  "api.setInterval.code_param_accepts_trustedScript",
+  "api.setTimeout.code_param_accepts_trustedScript",
+  "api.trustedTypes",
+  "http.headers.Content-Security-Policy.require-trusted-types-for",
+  "http.headers.Content-Security-Policy.trusted-types"
+ ],
+ "description": "Trusted types allow you to lock down insecure parts of the DOM API and prevent client-side cross-site scripting (XSS) attacks.",
+ "description_html": "Trusted types allow you to lock down insecure parts of the DOM API and prevent client-side cross-site scripting (XSS) attacks.",
+ "group": "security",
+ "name": "Trusted types",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/trusted-types/dist/spec/",
+   "seriesComposition": "full",
+   "shortname": "trusted-types",
+   "series": {
+    "shortname": "trusted-types",
+    "currentSpecification": "trusted-types",
+    "title": "Trusted Types",
+    "shortTitle": "Trusted Types",
+    "releaseUrl": "https://www.w3.org/TR/trusted-types/",
+    "nightlyUrl": "https://w3c.github.io/trusted-types/dist/spec/"
+   },
+   "release": {
+    "url": "https://www.w3.org/TR/trusted-types/",
+    "status": "Working Draft",
+    "filename": "index.html"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Application Security Working Group",
+     "url": "https://www.w3.org/groups/wg/webappsec/"
+    }
+   ],
+   "nightly": {
+    "url": "https://w3c.github.io/trusted-types/dist/spec/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/trusted-types",
+    "sourcePath": "spec/index.bs",
+    "filename": "index.html"
+   },
+   "title": "Trusted Types",
+   "source": "w3c",
+   "shortTitle": "Trusted Types",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "trusted-types"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "83",
+   "chrome_android": "83",
+   "edge": "83"
+  }
+ },
+ "id": "trusted-types",
+ "groups": [
+  "security"
+ ],
+ "groupPaths": [
+  [
+   "Security"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Trusted Types API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Trusted_Types_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/20",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/186",
+   "position": "support",
+   "concerns": [
+    "complexity"
+   ]
+  }
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.Element.innerHTML.accepts_TrustedHTML",
+   "compat": {
+    "description": "Can be set with a <code>TrustedHTML</code> instance",
+    "source_file": "api/Element.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-xss-injection-sinks",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.trusted_types.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "135"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLElement.innerText.scripts_accept_TrustedScript",
+   "compat": {
+    "description": "Can be set with <code>TrustedScript</code> instances in <code>HTMLScriptElement</code>.",
+    "source_file": "api/HTMLElement.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-htmlscriptelement-innertext",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.trusted_types.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "135"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLScriptElement.src.accepts_TrustedScriptURL",
+   "compat": {
+    "description": "Can be set with a <code>TrustedScriptURL</code> instance",
+    "source_file": "api/HTMLScriptElement.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-htmlscriptelement-src",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.trusted_types.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "135"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLScriptElement.text.accepts_TrustedScript",
+   "compat": {
+    "description": "Can be set with a <code>TrustedScript</code> instance",
+    "source_file": "api/HTMLScriptElement.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-htmlscriptelement-text",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.trusted_types.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "135"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.Node.textContent.scripts_accept_TrustedScript",
+   "compat": {
+    "description": "Can be set with <code>TrustedScript</code> instances in <code>HTMLScriptElement</code>.",
+    "source_file": "api/Node.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-htmlscriptelement-textcontent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.trusted_types.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "135"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.ShadowRoot.innerHTML.accepts_TrustedHTML",
+   "compat": {
+    "description": "Can be set with a <code>TrustedHTML</code> instance",
+    "source_file": "api/ShadowRoot.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-xss-injection-sinks",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.trusted_types.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "135"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedHTML",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedHTML",
+    "source_file": "api/TrustedHTML.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#trusted-html",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1508286",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1508286",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedHTML.toJSON",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedHTML/toJSON",
+    "source_file": "api/TrustedHTML.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedhtml-tojson",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedHTML.toString",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedHTML/toString",
+    "source_file": "api/TrustedHTML.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#trustedhtml-stringification-behavior",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedScript",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedScript",
+    "source_file": "api/TrustedScript.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#trusted-script",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1508286",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1508286",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedScript.toJSON",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedScript/toJSON",
+    "source_file": "api/TrustedScript.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedscript-tojson",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedScript.toString",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedScript/toString",
+    "source_file": "api/TrustedScript.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#trustedscripturl-stringification-behavior",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedScriptURL",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedScriptURL",
+    "source_file": "api/TrustedScriptURL.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#trused-script-url",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1508286",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1508286",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedScriptURL.toJSON",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedScriptURL/toJSON",
+    "source_file": "api/TrustedScriptURL.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedscripturl-tojson",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedScriptURL.toString",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedScriptURL/toString",
+    "source_file": "api/TrustedScriptURL.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#trustedscripturl-stringification-behavior",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicy",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicy",
+    "source_file": "api/TrustedTypePolicy.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#trusted-type-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1508286",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1508286",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicy.createHTML",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicy/createHTML",
+    "source_file": "api/TrustedTypePolicy.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedtypepolicy-createhtml",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicy.createScript",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicy/createScript",
+    "source_file": "api/TrustedTypePolicy.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedtypepolicy-createscript",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicy.createScriptURL",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicy/createScriptURL",
+    "source_file": "api/TrustedTypePolicy.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedtypepolicy-createscripturl",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicy.name",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicy/name",
+    "source_file": "api/TrustedTypePolicy.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedtypepolicy-name",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicyFactory",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory",
+    "source_file": "api/TrustedTypePolicyFactory.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#trusted-type-policy-factory",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.trusted_types.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "impl_url": "https://bugzil.la/1508286",
+      "version_added": "133"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicyFactory.createPolicy",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/createPolicy",
+    "source_file": "api/TrustedTypePolicyFactory.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedtypepolicyfactory-createpolicy",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicyFactory.defaultPolicy",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/defaultPolicy",
+    "source_file": "api/TrustedTypePolicyFactory.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedtypepolicyfactory-defaultpolicy",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicyFactory.emptyHTML",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/emptyHTML",
+    "source_file": "api/TrustedTypePolicyFactory.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedtypepolicyfactory-emptyhtml",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicyFactory.emptyScript",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/emptyScript",
+    "source_file": "api/TrustedTypePolicyFactory.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedtypepolicyfactory-emptyscript",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicyFactory.getAttributeType",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/getAttributeType",
+    "source_file": "api/TrustedTypePolicyFactory.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedtypepolicyfactory-getattributetype",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.trusted_types.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "133"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicyFactory.getPropertyType",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/getPropertyType",
+    "source_file": "api/TrustedTypePolicyFactory.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedtypepolicyfactory-getpropertytype",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.trusted_types.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "133"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicyFactory.isHTML",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/isHTML",
+    "source_file": "api/TrustedTypePolicyFactory.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedtypepolicyfactory-ishtml",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicyFactory.isScript",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/isScript",
+    "source_file": "api/TrustedTypePolicyFactory.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedtypepolicyfactory-isscript",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.TrustedTypePolicyFactory.isScriptURL",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TrustedTypePolicyFactory/isScriptURL",
+    "source_file": "api/TrustedTypePolicyFactory.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-trustedtypepolicyfactory-isscripturl",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.setInterval.code_param_accepts_trustedScript",
+   "compat": {
+    "description": "<code>code</code> parameter can be set with a <code>TrustedScript</code> instance",
+    "source_file": "api/_globals/setInterval.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-xss-injection-sinks",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.trusted_types.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "135"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.setTimeout.code_param_accepts_trustedScript",
+   "compat": {
+    "description": "<code>code</code> parameter can be set with a <code>TrustedScript</code> instance",
+    "source_file": "api/_globals/setTimeout.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#dom-xss-injection-sinks",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.trusted_types.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "135"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "api.trustedTypes",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/trustedTypes",
+    "source_file": "api/_globals/trustedTypes.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#extensions-to-the-windoworworkerglobalscope-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.trusted_types.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "impl_url": "https://bugzil.la/1508286",
+      "version_added": "135"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.require-trusted-types-for",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#require-trusted-types-for-csp-directive",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1508286",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1508286",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": "59"
+     },
+     "safari": {
+      "version_added": "preview"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Content-Security-Policy.trusted-types",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types",
+    "source_file": "http/headers/Content-Security-Policy.json",
+    "spec_url": "https://w3c.github.io/trusted-types/dist/spec/#trusted-types-csp-directive",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "83"
+     },
+     "chrome_android": {
+      "version_added": "83"
+     },
+     "edge": {
+      "version_added": "83"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1508286",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1508286",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "10.0"
+     },
+     "opera": {
+      "version_added": "69"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "preview"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "83"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:trusted-types"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "http"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [
+   "https://bugzil.la/1508286"
+  ],
+  "firefox_android": [
+   "https://bugzil.la/1508286"
+  ],
+  "safari": [],
+  "safari_ios": []
+ }
+}

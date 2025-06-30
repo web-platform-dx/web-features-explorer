@@ -1,0 +1,671 @@
+{
+ "compat_features": [
+  "api.PerformanceLongTaskTiming",
+  "api.PerformanceLongTaskTiming.attribution",
+  "api.PerformanceLongTaskTiming.toJSON",
+  "api.TaskAttributionTiming",
+  "api.TaskAttributionTiming.containerId",
+  "api.TaskAttributionTiming.containerName",
+  "api.TaskAttributionTiming.containerSrc",
+  "api.TaskAttributionTiming.containerType",
+  "api.TaskAttributionTiming.toJSON"
+ ],
+ "description": "The longtask performance event type and the PerformanceLongTaskTiming API provides information about tasks that occupy the UI thread for 50 milliseconds or more, a metric for input latency, delayed animations, and other sources of \"jank.\"",
+ "description_html": "The <code>longtask</code> performance event type and the <code>PerformanceLongTaskTiming</code> API provides information about tasks that occupy the UI thread for 50 milliseconds or more, a metric for input latency, delayed animations, and other sources of \"jank.\"",
+ "group": "performance",
+ "name": "Long tasks",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/longtasks/",
+   "seriesComposition": "full",
+   "shortname": "longtasks-1",
+   "series": {
+    "shortname": "longtasks",
+    "currentSpecification": "longtasks-1",
+    "title": "Long Tasks API",
+    "shortTitle": "Long Tasks API",
+    "releaseUrl": "https://www.w3.org/TR/longtasks/",
+    "nightlyUrl": "https://w3c.github.io/longtasks/"
+   },
+   "seriesVersion": "1",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Performance Working Group",
+     "url": "https://www.w3.org/groups/wg/webperf/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/longtasks-1/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/longtasks/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/longtasks",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Long Tasks API",
+   "source": "w3c",
+   "shortTitle": "Long Tasks API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "longtask-timing"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "58",
+   "chrome_android": "58",
+   "edge": "79"
+  }
+ },
+ "id": "longtasks",
+ "groups": [
+  "performance"
+ ],
+ "groupPaths": [
+  [
+   "Performance"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "PerformanceLongTaskTiming",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/PerformanceLongTaskTiming"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/171",
+   "position": "",
+   "concerns": []
+  },
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/52",
+   "position": "",
+   "concerns": []
+  }
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.PerformanceLongTaskTiming",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceLongTaskTiming",
+    "source_file": "api/PerformanceLongTaskTiming.json",
+    "spec_url": "https://w3c.github.io/longtasks/#sec-PerformanceLongTaskTiming",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "58"
+     },
+     "chrome_android": {
+      "version_added": "58"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1348405",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1348405",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "45"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "58"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:longtasks"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceLongTaskTiming.attribution",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceLongTaskTiming/attribution",
+    "source_file": "api/PerformanceLongTaskTiming.json",
+    "spec_url": "https://w3c.github.io/longtasks/#dom-performancelongtasktiming-attribution",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "58"
+     },
+     "chrome_android": {
+      "version_added": "58"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "45"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "58"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:longtasks"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformanceLongTaskTiming.toJSON",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceLongTaskTiming/toJSON",
+    "source_file": "api/PerformanceLongTaskTiming.json",
+    "spec_url": "https://w3c.github.io/longtasks/#dom-performancelongtasktiming-tojson",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "58"
+     },
+     "chrome_android": {
+      "version_added": "58"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "45"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "58"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:longtasks"
+    ]
+   }
+  },
+  {
+   "key": "api.TaskAttributionTiming",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TaskAttributionTiming",
+    "source_file": "api/TaskAttributionTiming.json",
+    "spec_url": "https://w3c.github.io/longtasks/#sec-TaskAttributionTiming",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "58"
+     },
+     "chrome_android": {
+      "version_added": "58"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1348405",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1348405",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "45"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "58"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:longtasks"
+    ]
+   }
+  },
+  {
+   "key": "api.TaskAttributionTiming.containerId",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TaskAttributionTiming/containerId",
+    "source_file": "api/TaskAttributionTiming.json",
+    "spec_url": "https://w3c.github.io/longtasks/#dom-taskattributiontiming-containerid",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "58"
+     },
+     "chrome_android": {
+      "version_added": "58"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "45"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "58"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:longtasks"
+    ]
+   }
+  },
+  {
+   "key": "api.TaskAttributionTiming.containerName",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TaskAttributionTiming/containerName",
+    "source_file": "api/TaskAttributionTiming.json",
+    "spec_url": "https://w3c.github.io/longtasks/#dom-taskattributiontiming-containername",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "58"
+     },
+     "chrome_android": {
+      "version_added": "58"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "45"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "58"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:longtasks"
+    ]
+   }
+  },
+  {
+   "key": "api.TaskAttributionTiming.containerSrc",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TaskAttributionTiming/containerSrc",
+    "source_file": "api/TaskAttributionTiming.json",
+    "spec_url": "https://w3c.github.io/longtasks/#dom-taskattributiontiming-containersrc",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "58"
+     },
+     "chrome_android": {
+      "version_added": "58"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "45"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "58"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:longtasks"
+    ]
+   }
+  },
+  {
+   "key": "api.TaskAttributionTiming.containerType",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TaskAttributionTiming/containerType",
+    "source_file": "api/TaskAttributionTiming.json",
+    "spec_url": "https://w3c.github.io/longtasks/#dom-taskattributiontiming-containertype",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "58"
+     },
+     "chrome_android": {
+      "version_added": "58"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "45"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "58"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:longtasks"
+    ]
+   }
+  },
+  {
+   "key": "api.TaskAttributionTiming.toJSON",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/TaskAttributionTiming/toJSON",
+    "source_file": "api/TaskAttributionTiming.json",
+    "spec_url": "https://w3c.github.io/longtasks/#dom-taskattributiontiming-tojson",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "58"
+     },
+     "chrome_android": {
+      "version_added": "58"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "45"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "58"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:longtasks"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [
+   "https://bugzil.la/1348405"
+  ],
+  "firefox_android": [
+   "https://bugzil.la/1348405"
+  ],
+  "safari": [],
+  "safari_ios": []
+ }
+}

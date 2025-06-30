@@ -1,0 +1,753 @@
+{
+ "compat_features": [
+  "api.CSS.registerProperty_static",
+  "api.CSSPropertyRule",
+  "api.CSSPropertyRule.inherits",
+  "api.CSSPropertyRule.initialValue",
+  "api.CSSPropertyRule.name",
+  "api.CSSPropertyRule.syntax",
+  "css.at-rules.property",
+  "css.at-rules.property.inherits",
+  "css.at-rules.property.initial-value",
+  "css.at-rules.property.syntax"
+ ],
+ "description": "The CSS.registerProperty() static method and the @property CSS at-rule register custom properties for which types and behaviors can be defined.",
+ "description_html": "The <code>CSS.registerProperty()</code> static method and the <code>@property</code> CSS at-rule register custom properties for which types and behaviors can be defined.",
+ "name": "Registered custom properties",
+ "spec": [
+  {
+   "url": "https://drafts.css-houdini.org/css-properties-values-api-1/",
+   "seriesComposition": "full",
+   "shortname": "css-properties-values-api-1",
+   "series": {
+    "shortname": "css-properties-values-api",
+    "currentSpecification": "css-properties-values-api-1",
+    "title": "CSS Properties and Values API",
+    "shortTitle": "CSS Properties and Values API",
+    "releaseUrl": "https://www.w3.org/TR/css-properties-values-api/",
+    "nightlyUrl": "https://drafts.css-houdini.org/css-properties-values-api/"
+   },
+   "seriesVersion": "1",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-properties-values-api-1/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.css-houdini.org/css-properties-values-api-1/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/css-houdini-drafts",
+    "sourcePath": "css-properties-values-api/Overview.bs",
+    "filename": "Overview.html"
+   },
+   "title": "CSS Properties and Values API Level 1",
+   "source": "w3c",
+   "shortTitle": "CSS Properties and Values API 1",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-properties-values-api"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": "low",
+  "baseline_low_date": "2024-07-09",
+  "support": {
+   "chrome": "85",
+   "chrome_android": "85",
+   "edge": "85",
+   "firefox": "128",
+   "firefox_android": "128",
+   "safari": "16.4",
+   "safari_ios": "16.4"
+  }
+ },
+ "id": "registered-custom-properties",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "CSS: registerProperty() static method",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/CSS/registerProperty_static"
+  },
+  {
+   "title": "@property",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/@property"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "stateOfSurveys": [
+  {
+   "name": "State of CSS 2024",
+   "link": "https://2024.stateofcss.com/en-US/features/#reading_list",
+   "question": "reading_list",
+   "subQuestion": "reading_list",
+   "path": "dataAPI.surveys.state_of_css.css2024.reading_list.reading_list.responses.currentEdition.buckets.18.entity"
+  },
+  {
+   "name": "State of CSS 2024",
+   "link": "https://2024.stateofcss.com/en-US/features/#all_features",
+   "question": "features",
+   "subQuestion": "all_features",
+   "path": "dataAPI.surveys.state_of_css.css2024.features.all_features.51.entity"
+  }
+ ],
+ "useCounters": {
+  "percentageOfPageLoad": 0.03830805,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/146"
+ },
+ "interop": [
+  {
+   "year": "2023",
+   "label": "interop-2023-property"
+  },
+  {
+   "year": "2024",
+   "label": "interop-2023-property"
+  }
+ ],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.CSS.registerProperty_static",
+   "compat": {
+    "description": "<code>registerProperty()</code> static method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSS/registerProperty_static",
+    "source_file": "api/CSS.json",
+    "spec_url": "https://drafts.css-houdini.org/css-properties-values-api/#the-registerproperty-function",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "78"
+     },
+     "chrome_android": {
+      "version_added": "78"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "128"
+     },
+     "firefox_android": {
+      "version_added": "128"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "8.0"
+     },
+     "opera": {
+      "version_added": "65"
+     },
+     "opera_android": {
+      "version_added": "56"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "78"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:registered-custom-properties"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPropertyRule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPropertyRule",
+    "source_file": "api/CSSPropertyRule.json",
+    "spec_url": "https://drafts.css-houdini.org/css-properties-values-api/#the-css-property-rule-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "85"
+     },
+     "chrome_android": {
+      "version_added": "85"
+     },
+     "edge": {
+      "version_added": "85"
+     },
+     "firefox": {
+      "version_added": "128"
+     },
+     "firefox_android": {
+      "version_added": "128"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "12.0"
+     },
+     "opera": {
+      "version_added": "71"
+     },
+     "opera_android": {
+      "version_added": "60"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "85"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:registered-custom-properties"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPropertyRule.inherits",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPropertyRule/inherits",
+    "source_file": "api/CSSPropertyRule.json",
+    "spec_url": "https://drafts.css-houdini.org/css-properties-values-api/#dom-csspropertyrule-inherits",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "85"
+     },
+     "chrome_android": {
+      "version_added": "85"
+     },
+     "edge": {
+      "version_added": "85"
+     },
+     "firefox": {
+      "version_added": "128"
+     },
+     "firefox_android": {
+      "version_added": "128"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "12.0"
+     },
+     "opera": {
+      "version_added": "71"
+     },
+     "opera_android": {
+      "version_added": "60"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "85"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:registered-custom-properties"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPropertyRule.initialValue",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPropertyRule/initialValue",
+    "source_file": "api/CSSPropertyRule.json",
+    "spec_url": "https://drafts.css-houdini.org/css-properties-values-api/#dom-csspropertyrule-initialvalue",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "85"
+     },
+     "chrome_android": {
+      "version_added": "85"
+     },
+     "edge": {
+      "version_added": "85"
+     },
+     "firefox": {
+      "version_added": "128"
+     },
+     "firefox_android": {
+      "version_added": "128"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "12.0"
+     },
+     "opera": {
+      "version_added": "71"
+     },
+     "opera_android": {
+      "version_added": "60"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "85"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:registered-custom-properties"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPropertyRule.name",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPropertyRule/name",
+    "source_file": "api/CSSPropertyRule.json",
+    "spec_url": "https://drafts.css-houdini.org/css-properties-values-api/#dom-csspropertyrule-name",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "85"
+     },
+     "chrome_android": {
+      "version_added": "85"
+     },
+     "edge": {
+      "version_added": "85"
+     },
+     "firefox": {
+      "version_added": "128"
+     },
+     "firefox_android": {
+      "version_added": "128"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "12.0"
+     },
+     "opera": {
+      "version_added": "71"
+     },
+     "opera_android": {
+      "version_added": "60"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "85"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:registered-custom-properties"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSPropertyRule.syntax",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSPropertyRule/syntax",
+    "source_file": "api/CSSPropertyRule.json",
+    "spec_url": "https://drafts.css-houdini.org/css-properties-values-api/#dom-csspropertyrule-syntax",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "85"
+     },
+     "chrome_android": {
+      "version_added": "85"
+     },
+     "edge": {
+      "version_added": "85"
+     },
+     "firefox": {
+      "version_added": "128"
+     },
+     "firefox_android": {
+      "version_added": "128"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "12.0"
+     },
+     "opera": {
+      "version_added": "71"
+     },
+     "opera_android": {
+      "version_added": "60"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "85"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:registered-custom-properties"
+    ]
+   }
+  },
+  {
+   "key": "css.at-rules.property",
+   "compat": {
+    "description": "<code>@property</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/@property",
+    "source_file": "css/at-rules/property.json",
+    "spec_url": "https://drafts.css-houdini.org/css-properties-values-api/#at-property-rule",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "85"
+     },
+     "chrome_android": {
+      "version_added": "85"
+     },
+     "edge": {
+      "version_added": "85"
+     },
+     "firefox": {
+      "version_added": "128"
+     },
+     "firefox_android": {
+      "version_added": "128"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "12.0"
+     },
+     "opera": {
+      "version_added": "71"
+     },
+     "opera_android": {
+      "version_added": "60"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "85"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:registered-custom-properties"
+    ]
+   }
+  },
+  {
+   "key": "css.at-rules.property.inherits",
+   "compat": {
+    "description": "<code>inherits</code> descriptor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/@property/inherits",
+    "source_file": "css/at-rules/property.json",
+    "spec_url": "https://drafts.css-houdini.org/css-properties-values-api/#inherits-descriptor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "85"
+     },
+     "chrome_android": {
+      "version_added": "85"
+     },
+     "edge": {
+      "version_added": "85"
+     },
+     "firefox": {
+      "version_added": "128"
+     },
+     "firefox_android": {
+      "version_added": "128"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "12.0"
+     },
+     "opera": {
+      "version_added": "71"
+     },
+     "opera_android": {
+      "version_added": "60"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "85"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:registered-custom-properties"
+    ]
+   }
+  },
+  {
+   "key": "css.at-rules.property.initial-value",
+   "compat": {
+    "description": "<code>initial-value</code> descriptor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/@property/initial-value",
+    "source_file": "css/at-rules/property.json",
+    "spec_url": "https://drafts.css-houdini.org/css-properties-values-api/#initial-value-descriptor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "85"
+     },
+     "chrome_android": {
+      "version_added": "85"
+     },
+     "edge": {
+      "version_added": "85"
+     },
+     "firefox": {
+      "version_added": "128"
+     },
+     "firefox_android": {
+      "version_added": "128"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "12.0"
+     },
+     "opera": {
+      "version_added": "71"
+     },
+     "opera_android": {
+      "version_added": "60"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "85"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:registered-custom-properties"
+    ]
+   }
+  },
+  {
+   "key": "css.at-rules.property.syntax",
+   "compat": {
+    "description": "<code>syntax</code> descriptor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/@property/syntax",
+    "source_file": "css/at-rules/property.json",
+    "spec_url": "https://drafts.css-houdini.org/css-properties-values-api/#the-syntax-descriptor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "85"
+     },
+     "chrome_android": {
+      "version_added": "85"
+     },
+     "edge": {
+      "version_added": "85"
+     },
+     "firefox": {
+      "version_added": "128"
+     },
+     "firefox_android": {
+      "version_added": "128"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "12.0"
+     },
+     "opera": {
+      "version_added": "71"
+     },
+     "opera_android": {
+      "version_added": "60"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "14.0"
+     },
+     "webview_android": {
+      "version_added": "85"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:registered-custom-properties"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "css"
+ ],
+ "baselineLowDateAsObject": "2024-07-09T00:00:00.000Z",
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

@@ -1,0 +1,3026 @@
+{
+ "caniuse": "eme",
+ "compat_features": [
+  "api.HTMLMediaElement.encrypted_event",
+  "api.HTMLMediaElement.mediaKeys",
+  "api.HTMLMediaElement.setMediaKeys",
+  "api.HTMLMediaElement.waitingforkey_event",
+  "api.MediaCapabilities.decodingInfo.configuration_keySystemConfiguration_parameter",
+  "api.MediaEncryptedEvent",
+  "api.MediaEncryptedEvent.MediaEncryptedEvent",
+  "api.MediaEncryptedEvent.initData",
+  "api.MediaEncryptedEvent.initDataType",
+  "api.MediaKeyMessageEvent",
+  "api.MediaKeyMessageEvent.MediaKeyMessageEvent",
+  "api.MediaKeyMessageEvent.message",
+  "api.MediaKeyMessageEvent.messageType",
+  "api.MediaKeySession",
+  "api.MediaKeySession.close",
+  "api.MediaKeySession.closed",
+  "api.MediaKeySession.expiration",
+  "api.MediaKeySession.generateRequest",
+  "api.MediaKeySession.keyStatuses",
+  "api.MediaKeySession.keystatuseschange_event",
+  "api.MediaKeySession.load",
+  "api.MediaKeySession.message_event",
+  "api.MediaKeySession.remove",
+  "api.MediaKeySession.sessionId",
+  "api.MediaKeySession.update",
+  "api.MediaKeyStatusMap",
+  "api.MediaKeyStatusMap.@@iterator",
+  "api.MediaKeyStatusMap.entries",
+  "api.MediaKeyStatusMap.forEach",
+  "api.MediaKeyStatusMap.get",
+  "api.MediaKeyStatusMap.has",
+  "api.MediaKeyStatusMap.keys",
+  "api.MediaKeyStatusMap.size",
+  "api.MediaKeyStatusMap.values",
+  "api.MediaKeySystemAccess",
+  "api.MediaKeySystemAccess.createMediaKeys",
+  "api.MediaKeySystemAccess.getConfiguration",
+  "api.MediaKeySystemAccess.keySystem",
+  "api.MediaKeys",
+  "api.MediaKeys.createSession",
+  "api.MediaKeys.getStatusForPolicy",
+  "api.MediaKeys.setServerCertificate",
+  "api.Navigator.requestMediaKeySystemAccess",
+  "html.elements.iframe.allow.encrypted-media",
+  "http.headers.Permissions-Policy.encrypted-media"
+ ],
+ "description": "The mediaKeys property of HTMLMediaElement and the navigator.requestMediaKeySystemAccess() method control the playback of content subject to digital rights management. Also known as EME.",
+ "description_html": "The <code>mediaKeys</code> property of <code>HTMLMediaElement</code> and the <code>navigator.requestMediaKeySystemAccess()</code> method control the playback of content subject to digital rights management. Also known as EME.",
+ "name": "Encrypted media extensions",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/encrypted-media/",
+   "seriesComposition": "full",
+   "shortname": "encrypted-media-2",
+   "series": {
+    "shortname": "encrypted-media",
+    "currentSpecification": "encrypted-media-2",
+    "title": "Encrypted Media Extensions",
+    "shortTitle": "Encrypted Media Extensions",
+    "releaseUrl": "https://www.w3.org/TR/encrypted-media/",
+    "nightlyUrl": "https://w3c.github.io/encrypted-media/"
+   },
+   "seriesVersion": "2",
+   "nightly": {
+    "url": "https://w3c.github.io/encrypted-media/",
+    "status": "Editor's Draft",
+    "sourcePath": "encrypted-media-respec.html",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/encrypted-media",
+    "filename": "index.html"
+   },
+   "formerNames": [
+    "encrypted-media"
+   ],
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Media Working Group",
+     "url": "https://www.w3.org/media-wg/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/encrypted-media-2/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "title": "Encrypted Media Extensions",
+   "source": "w3c",
+   "shortTitle": "Encrypted Media Extensions",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "encrypted-media"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2021-09-25",
+  "baseline_low_date": "2019-03-25",
+  "support": {
+   "chrome": "42",
+   "chrome_android": "42",
+   "edge": "13",
+   "firefox": "38",
+   "firefox_android": "38",
+   "safari": "12.1",
+   "safari_ios": "12.2"
+  }
+ },
+ "id": "encrypted-media-extensions",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Encrypted Media Extensions API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Encrypted_Media_Extensions_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.HTMLMediaElement.encrypted_event",
+   "compat": {
+    "description": "<code>encrypted</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/encrypted_event",
+    "source_file": "api/HTMLMediaElement.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-htmlmediaelement-onencrypted",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLMediaElement.mediaKeys",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/mediaKeys",
+    "source_file": "api/HTMLMediaElement.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-htmlmediaelement-mediakeys",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLMediaElement.setMediaKeys",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/setMediaKeys",
+    "source_file": "api/HTMLMediaElement.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-htmlmediaelement-setmediakeys",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLMediaElement.waitingforkey_event",
+   "compat": {
+    "description": "<code>waitingforkey</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/waitingforkey_event",
+    "source_file": "api/HTMLMediaElement.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-htmlmediaelement-onwaitingforkey",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "55"
+     },
+     "chrome_android": {
+      "version_added": "55"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": [
+      {
+       "version_added": "133"
+      },
+      {
+       "notes": "The <code>onwaitingforkey</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "52",
+       "version_last": "132",
+       "version_removed": "133"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "133"
+      },
+      {
+       "notes": "The <code>onwaitingforkey</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "52",
+       "version_last": "132",
+       "version_removed": "133"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "42"
+     },
+     "opera_android": {
+      "version_added": "42"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "55"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaCapabilities.decodingInfo.configuration_keySystemConfiguration_parameter",
+   "compat": {
+    "description": "<code>configuration.keySystemConfiguration</code> parameter",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaCapabilities/decodingInfo#keysystemconfiguration",
+    "source_file": "api/MediaCapabilities.json",
+    "spec_url": "https://w3c.github.io/media-capabilities/#dom-mediadecodingconfiguration-keysystemconfiguration",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": "80"
+     },
+     "edge": {
+      "version_added": "80"
+     },
+     "firefox": {
+      "version_added": "129"
+     },
+     "firefox_android": {
+      "version_added": "129"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "9.0"
+     },
+     "opera": {
+      "version_added": "67"
+     },
+     "opera_android": {
+      "version_added": "57"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "80"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaEncryptedEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaEncryptedEvent",
+    "source_file": "api/MediaEncryptedEvent.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#mediaencryptedevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaEncryptedEvent.MediaEncryptedEvent",
+   "compat": {
+    "description": "<code>MediaEncryptedEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaEncryptedEvent/MediaEncryptedEvent",
+    "source_file": "api/MediaEncryptedEvent.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediaencryptedevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaEncryptedEvent.initData",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaEncryptedEvent/initData",
+    "source_file": "api/MediaEncryptedEvent.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediaencryptedevent-initdata",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaEncryptedEvent.initDataType",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaEncryptedEvent/initDataType",
+    "source_file": "api/MediaEncryptedEvent.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediaencryptedevent-initdatatype",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeyMessageEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeyMessageEvent",
+    "source_file": "api/MediaKeyMessageEvent.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#mediakeymessageevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeyMessageEvent.MediaKeyMessageEvent",
+   "compat": {
+    "description": "<code>MediaKeyMessageEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeyMessageEvent/MediaKeyMessageEvent",
+    "source_file": "api/MediaKeyMessageEvent.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeymessageevent-constructor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeyMessageEvent.message",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeyMessageEvent/message",
+    "source_file": "api/MediaKeyMessageEvent.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeymessageevent-message",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeyMessageEvent.messageType",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeyMessageEvent/messageType",
+    "source_file": "api/MediaKeyMessageEvent.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeymessageevent-messagetype",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "42"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySession",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySession",
+    "source_file": "api/MediaKeySession.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#mediakeysession-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySession.close",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySession/close",
+    "source_file": "api/MediaKeySession.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-close",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySession.closed",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySession/closed",
+    "source_file": "api/MediaKeySession.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-closed",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySession.expiration",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySession/expiration",
+    "source_file": "api/MediaKeySession.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-expiration",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySession.generateRequest",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySession/generateRequest",
+    "source_file": "api/MediaKeySession.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-generaterequest",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySession.keyStatuses",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySession/keyStatuses",
+    "source_file": "api/MediaKeySession.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-keystatuses",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySession.keystatuseschange_event",
+   "compat": {
+    "description": "<code>keystatuseschange</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySession/keystatuseschange_event",
+    "source_file": "api/MediaKeySession.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-onkeystatuseschange",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "55"
+      },
+      {
+       "notes": "The <code>onkeystatuseschange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "42",
+       "version_last": "54",
+       "version_removed": "55"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "55"
+      },
+      {
+       "notes": "The <code>onkeystatuseschange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "42",
+       "version_last": "54",
+       "version_removed": "55"
+      }
+     ],
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "42"
+      },
+      {
+       "notes": "The <code>onkeystatuseschange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "29",
+       "version_last": "41",
+       "version_removed": "42"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "42"
+      },
+      {
+       "notes": "The <code>onkeystatuseschange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "29",
+       "version_last": "41",
+       "version_removed": "42"
+      }
+     ],
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": [
+      {
+       "version_added": "6.0"
+      },
+      {
+       "notes": "The <code>onkeystatuseschange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "4.0",
+       "version_last": "5.4",
+       "version_removed": "6.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "55"
+      },
+      {
+       "notes": "The <code>onkeystatuseschange</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "43",
+       "version_last": "54",
+       "version_removed": "55"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySession.load",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySession/load",
+    "source_file": "api/MediaKeySession.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-load",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySession.message_event",
+   "compat": {
+    "description": "<code>message</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySession/message_event",
+    "source_file": "api/MediaKeySession.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-onmessage",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "55"
+      },
+      {
+       "notes": "The <code>onmessage</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "42",
+       "version_last": "54",
+       "version_removed": "55"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "55"
+      },
+      {
+       "notes": "The <code>onmessage</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "42",
+       "version_last": "54",
+       "version_removed": "55"
+      }
+     ],
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "52"
+     },
+     "firefox_android": {
+      "version_added": "52"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": [
+      {
+       "version_added": "42"
+      },
+      {
+       "notes": "The <code>onmessage</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "29",
+       "version_last": "41",
+       "version_removed": "42"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "42"
+      },
+      {
+       "notes": "The <code>onmessage</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "29",
+       "version_last": "41",
+       "version_removed": "42"
+      }
+     ],
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": [
+      {
+       "version_added": "6.0"
+      },
+      {
+       "notes": "The <code>onmessage</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "4.0",
+       "version_last": "5.4",
+       "version_removed": "6.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "55"
+      },
+      {
+       "notes": "The <code>onmessage</code> event handler property is not supported.",
+       "partial_implementation": true,
+       "version_added": "43",
+       "version_last": "54",
+       "version_removed": "55"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySession.remove",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySession/remove",
+    "source_file": "api/MediaKeySession.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-remove",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySession.sessionId",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySession/sessionId",
+    "source_file": "api/MediaKeySession.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-sessionid",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySession.update",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySession/update",
+    "source_file": "api/MediaKeySession.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-update",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeyStatusMap",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeyStatusMap",
+    "source_file": "api/MediaKeyStatusMap.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#mediakeystatusmap-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeyStatusMap.@@iterator",
+   "compat": {
+    "description": "[Symbol.iterator]",
+    "source_file": "api/MediaKeyStatusMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "45"
+     },
+     "firefox_android": {
+      "version_added": "45"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeyStatusMap.entries",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeyStatusMap/entries",
+    "source_file": "api/MediaKeyStatusMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeyStatusMap.forEach",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeyStatusMap/forEach",
+    "source_file": "api/MediaKeyStatusMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "47"
+     },
+     "firefox_android": {
+      "version_added": "47"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeyStatusMap.get",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeyStatusMap/get",
+    "source_file": "api/MediaKeyStatusMap.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeystatusmap-get",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "45"
+     },
+     "firefox_android": {
+      "version_added": "45"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeyStatusMap.has",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeyStatusMap/has",
+    "source_file": "api/MediaKeyStatusMap.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeystatusmap-has",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "45"
+     },
+     "firefox_android": {
+      "version_added": "45"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeyStatusMap.keys",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeyStatusMap/keys",
+    "source_file": "api/MediaKeyStatusMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeyStatusMap.size",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeyStatusMap/size",
+    "source_file": "api/MediaKeyStatusMap.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeystatusmap-size",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeyStatusMap.values",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeyStatusMap/values",
+    "source_file": "api/MediaKeyStatusMap.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySystemAccess",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySystemAccess",
+    "source_file": "api/MediaKeySystemAccess.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#mediakeysystemaccess-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySystemAccess.createMediaKeys",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySystemAccess/createMediaKeys",
+    "source_file": "api/MediaKeySystemAccess.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemaccess-createmediakeys",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySystemAccess.getConfiguration",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySystemAccess/getConfiguration",
+    "source_file": "api/MediaKeySystemAccess.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemaccess-getconfiguration",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "notes": "Before Firefox 50, the returned object has neither a <code>distinctiveIdentifier</code> nor a <code>persistentState</code> property.",
+      "version_added": "43"
+     },
+     "firefox_android": {
+      "notes": "Before Firefox for Android 50, the returned object has neither a <code>distinctiveIdentifier</code> nor a <code>persistentState</code> property.",
+      "version_added": "43"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeySystemAccess.keySystem",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeySystemAccess/keySystem",
+    "source_file": "api/MediaKeySystemAccess.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemaccess-keysystem",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeys",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeys",
+    "source_file": "api/MediaKeys.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#mediakeys-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeys.createSession",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeys/createSession",
+    "source_file": "api/MediaKeys.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeys-createsession",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeys.getStatusForPolicy",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeys/getStatusForPolicy",
+    "source_file": "api/MediaKeys.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeys-getstatusforpolicy",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "73"
+     },
+     "chrome_android": {
+      "version_added": "73"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "128"
+     },
+     "firefox_android": {
+      "version_added": "128"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "60"
+     },
+     "opera_android": {
+      "version_added": "52"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "11.0"
+     },
+     "webview_android": {
+      "version_added": "73"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.MediaKeys.setServerCertificate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/MediaKeys/setServerCertificate",
+    "source_file": "api/MediaKeys.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#dom-mediakeys-setservercertificate",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "api.Navigator.requestMediaKeySystemAccess",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/requestMediaKeySystemAccess",
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#navigator-extension-requestmediakeysystemaccess",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": [
+       "The spec requires that the passed <code>supportedConfigurations</code> option contain at least one of <code>audioCapabilities</code> or <code>videoCapabilities</code>, and that said parameters include a codec string.",
+       "The function does not exist in insecure contexts. This was not enforced until Chrome 58."
+      ],
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "notes": [
+       "The spec requires that the passed <code>supportedConfigurations</code> option contain at least one of <code>audioCapabilities</code> or <code>videoCapabilities</code>, and that said parameters include a codec string.",
+       "The function does not exist in insecure contexts. This was not enforced until Chrome Android 58."
+      ],
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "13"
+     },
+     "firefox": {
+      "notes": [
+       "Starting in Firefox 55, if neither <code>audioCapabilities</code> nor <code>videoCapabilities</code> is specified in <code>supportedConfigurations</code>, a warning is output to the web console.",
+       "In addition, starting in Firefox 55, if in <code>supportedConfigurations</code>, either <code>audioCapabilities</code>'s or <code>videoCapabilities</code>'s <code>contentType</code> value doesn't specify a <code>\"codecs\"</code> substring to define allowed codecs within the media wrapper, a warning is output to the web console. See note below table for example and correction.",
+       "In the future, if neither <code>audioCapabilities</code> nor <code>videoCapabilities</code> is specified in the <code>supportedConfigurations</code>, a <code>NotSupported</code> exception will be thrown."
+      ],
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "notes": [
+       "Starting in Firefox for Android 55, if neither <code>audioCapabilities</code> nor <code>videoCapabilities</code> is specified in <code>supportedConfigurations</code>, a warning is output to the web console.",
+       "In addition, starting in Firefox for Android 55, if in <code>supportedConfigurations</code>, either <code>audioCapabilities</code>'s or <code>videoCapabilities</code>'s <code>contentType</code> value doesn't specify a <code>\"codecs\"</code> substring to define allowed codecs within the media wrapper, a warning is output to the web console. See note below table for example and correction.",
+       "In the future, if neither <code>audioCapabilities</code> nor <code>videoCapabilities</code> is specified in the <code>supportedConfigurations</code>, a <code>NotSupported</code> exception will be thrown."
+      ],
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": [
+       "The spec requires that the passed <code>supportedConfigurations</code> option contain at least one of <code>audioCapabilities</code> or <code>videoCapabilities</code>, and that said parameters include a codec string.",
+       "The function does not exist in insecure contexts. This was not enforced until Quest Browser 5.0."
+      ],
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": [
+       "The spec requires that the passed <code>supportedConfigurations</code> option contain at least one of <code>audioCapabilities</code> or <code>videoCapabilities</code>, and that said parameters include a codec string.",
+       "The function does not exist in insecure contexts. This was not enforced until Opera 45."
+      ],
+      "version_added": "29"
+     },
+     "opera_android": {
+      "notes": [
+       "The spec requires that the passed <code>supportedConfigurations</code> option contain at least one of <code>audioCapabilities</code> or <code>videoCapabilities</code>, and that said parameters include a codec string.",
+       "The function does not exist in insecure contexts. This was not enforced until Opera 45."
+      ],
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "12.1"
+     },
+     "safari_ios": {
+      "version_added": "12.2"
+     },
+     "samsunginternet_android": {
+      "notes": [
+       "The spec requires that the passed <code>supportedConfigurations</code> option contain at least one of <code>audioCapabilities</code> or <code>videoCapabilities</code>, and that said parameters include a codec string.",
+       "The function does not exist in insecure contexts. This was not enforced until Samsung Internet 7.0."
+      ],
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "notes": [
+       "The spec requires that the passed <code>supportedConfigurations</code> option contain at least one of <code>audioCapabilities</code> or <code>videoCapabilities</code>, and that said parameters include a codec string.",
+       "The function does not exist in insecure contexts. This was not enforced until version 58."
+      ],
+      "version_added": "43"
+     },
+     "webview_ios": {
+      "version_added": "12.2"
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.iframe.allow.encrypted-media",
+   "compat": {
+    "source_file": "html/elements/iframe.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#permissions-policy-integration",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "64"
+     },
+     "chrome_android": {
+      "version_added": "64"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "74"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "64"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Permissions-Policy.encrypted-media",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Permissions-Policy/encrypted-media",
+    "source_file": "http/headers/Permissions-Policy.json",
+    "spec_url": "https://w3c.github.io/encrypted-media/#permissions-policy-integration",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "88"
+     },
+     "chrome_android": {
+      "version_added": "88"
+     },
+     "edge": {
+      "version_added": "88"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "14.0"
+     },
+     "opera": {
+      "version_added": "74"
+     },
+     "opera_android": {
+      "version_added": "63"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "88"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:encrypted-media-extensions"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "html",
+  "http"
+ ],
+ "baselineLowDateAsObject": "2019-03-25T00:00:00.000Z",
+ "baselineHighDateAsObject": "2021-09-25T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

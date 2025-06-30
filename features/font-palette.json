@@ -1,0 +1,974 @@
+{
+ "caniuse": "css-font-palette",
+ "compat_features": [
+  "api.CSSFontPaletteValuesRule",
+  "api.CSSFontPaletteValuesRule.basePalette",
+  "api.CSSFontPaletteValuesRule.fontFamily",
+  "api.CSSFontPaletteValuesRule.name",
+  "api.CSSFontPaletteValuesRule.overrideColors",
+  "css.at-rules.font-palette-values",
+  "css.at-rules.font-palette-values.base-palette",
+  "css.at-rules.font-palette-values.font-family",
+  "css.at-rules.font-palette-values.override-colors",
+  "css.properties.font-palette",
+  "css.properties.font-palette.dark",
+  "css.properties.font-palette.light",
+  "css.properties.font-palette.normal"
+ ],
+ "description": "The font-palette CSS property selects a color palette from the font, optionally overriding individual colors in the @font-palette-values at-rule.",
+ "description_html": "The <code>font-palette</code> CSS property selects a color palette from the font, optionally overriding individual colors in the <code>@font-palette-values</code> at-rule.",
+ "group": "fonts",
+ "name": "font-palette",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css-fonts-4/#font-palette-prop",
+   "seriesComposition": "full",
+   "shortname": "css-fonts-4",
+   "series": {
+    "shortname": "css-fonts",
+    "currentSpecification": "css-fonts-4",
+    "title": "CSS Fonts",
+    "shortTitle": "CSS Fonts",
+    "releaseUrl": "https://www.w3.org/TR/css-fonts/",
+    "nightlyUrl": "https://drafts.csswg.org/css-fonts/"
+   },
+   "seriesVersion": "4",
+   "seriesNext": "css-fonts-5",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-fonts-4/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-fonts-4/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-fonts-4/",
+     "https://w3c.github.io/csswg-drafts/css-fonts/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-fonts-4/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Fonts Module Level 4",
+   "source": "w3c",
+   "shortTitle": "CSS Fonts 4",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-fonts"
+    ]
+   },
+   "fragment": "font-palette-prop"
+  },
+  {
+   "url": "https://drafts.csswg.org/css-fonts-4/#font-palette-values",
+   "seriesComposition": "full",
+   "shortname": "css-fonts-4",
+   "series": {
+    "shortname": "css-fonts",
+    "currentSpecification": "css-fonts-4",
+    "title": "CSS Fonts",
+    "shortTitle": "CSS Fonts",
+    "releaseUrl": "https://www.w3.org/TR/css-fonts/",
+    "nightlyUrl": "https://drafts.csswg.org/css-fonts/"
+   },
+   "seriesVersion": "4",
+   "seriesNext": "css-fonts-5",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-fonts-4/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-fonts-4/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-fonts-4/",
+     "https://w3c.github.io/csswg-drafts/css-fonts/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-fonts-4/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Fonts Module Level 4",
+   "source": "w3c",
+   "shortTitle": "CSS Fonts 4",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-fonts"
+    ]
+   },
+   "fragment": "font-palette-values"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2025-05-15",
+  "baseline_low_date": "2022-11-15",
+  "support": {
+   "chrome": "101",
+   "chrome_android": "101",
+   "edge": "101",
+   "firefox": "107",
+   "firefox_android": "107",
+   "safari": "15.4",
+   "safari_ios": "15.4"
+  }
+ },
+ "id": "font-palette",
+ "groups": [
+  "fonts"
+ ],
+ "groupPaths": [
+  [
+   "CSS",
+   "Fonts"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "font-palette",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/font-palette"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/617",
+   "position": "positive",
+   "concerns": []
+  },
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.00044945,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/32"
+ },
+ "interop": [
+  {
+   "year": "2023",
+   "label": "interop-2023-fonts"
+  }
+ ],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.CSSFontPaletteValuesRule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSFontPaletteValuesRule",
+    "source_file": "api/CSSFontPaletteValuesRule.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#om-fontpalettevalues",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "107"
+     },
+     "firefox_android": {
+      "version_added": "107"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:font-palette"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSFontPaletteValuesRule.basePalette",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSFontPaletteValuesRule/basePalette",
+    "source_file": "api/CSSFontPaletteValuesRule.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#dom-cssfontpalettevaluesrule-basepalette",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "107"
+     },
+     "firefox_android": {
+      "version_added": "107"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:font-palette"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSFontPaletteValuesRule.fontFamily",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSFontPaletteValuesRule/fontFamily",
+    "source_file": "api/CSSFontPaletteValuesRule.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#dom-cssfontpalettevaluesrule-fontfamily",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "107"
+     },
+     "firefox_android": {
+      "version_added": "107"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:font-palette"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSFontPaletteValuesRule.name",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSFontPaletteValuesRule/name",
+    "source_file": "api/CSSFontPaletteValuesRule.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#dom-cssfontpalettevaluesrule-name",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "107"
+     },
+     "firefox_android": {
+      "version_added": "107"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:font-palette"
+    ]
+   }
+  },
+  {
+   "key": "api.CSSFontPaletteValuesRule.overrideColors",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CSSFontPaletteValuesRule/overrideColors",
+    "source_file": "api/CSSFontPaletteValuesRule.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#dom-cssfontpalettevaluesrule-overridecolors",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "107"
+     },
+     "firefox_android": {
+      "version_added": "107"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:font-palette"
+    ]
+   }
+  },
+  {
+   "key": "css.at-rules.font-palette-values",
+   "compat": {
+    "description": "<code>@font-palette-values</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/@font-palette-values",
+    "source_file": "css/at-rules/font-palette-values.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#at-ruledef-font-palette-values",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "107"
+     },
+     "firefox_android": {
+      "version_added": "107"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:font-palette"
+    ]
+   }
+  },
+  {
+   "key": "css.at-rules.font-palette-values.base-palette",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/@font-palette-values/base-palette",
+    "source_file": "css/at-rules/font-palette-values.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#base-palette-desc",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "107"
+     },
+     "firefox_android": {
+      "version_added": "107"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:font-palette"
+    ]
+   }
+  },
+  {
+   "key": "css.at-rules.font-palette-values.font-family",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/@font-palette-values/font-family",
+    "source_file": "css/at-rules/font-palette-values.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#font-family-2-desc",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "107"
+     },
+     "firefox_android": {
+      "version_added": "107"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:font-palette"
+    ]
+   }
+  },
+  {
+   "key": "css.at-rules.font-palette-values.override-colors",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/@font-palette-values/override-colors",
+    "source_file": "css/at-rules/font-palette-values.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#override-color",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "107"
+     },
+     "firefox_android": {
+      "version_added": "107"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:font-palette"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.font-palette",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/font-palette",
+    "source_file": "css/properties/font-palette.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#font-palette-prop",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "107"
+     },
+     "firefox_android": {
+      "version_added": "107"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:font-palette"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.font-palette.dark",
+   "compat": {
+    "source_file": "css/properties/font-palette.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#valdef-font-palette-dark",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "107"
+     },
+     "firefox_android": {
+      "version_added": "107"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:font-palette"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.font-palette.light",
+   "compat": {
+    "source_file": "css/properties/font-palette.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#valdef-font-palette-light",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "107"
+     },
+     "firefox_android": {
+      "version_added": "107"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:font-palette"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.font-palette.normal",
+   "compat": {
+    "source_file": "css/properties/font-palette.json",
+    "spec_url": "https://drafts.csswg.org/css-fonts/#valdef-font-palette-normal",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "101"
+     },
+     "chrome_android": {
+      "version_added": "101"
+     },
+     "edge": {
+      "version_added": "101"
+     },
+     "firefox": {
+      "version_added": "107"
+     },
+     "firefox_android": {
+      "version_added": "107"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "22.0"
+     },
+     "opera": {
+      "version_added": "87"
+     },
+     "opera_android": {
+      "version_added": "70"
+     },
+     "safari": {
+      "version_added": "15.4"
+     },
+     "safari_ios": {
+      "version_added": "15.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "19.0"
+     },
+     "webview_android": {
+      "version_added": "101"
+     },
+     "webview_ios": {
+      "version_added": "15.4"
+     }
+    },
+    "tags": [
+     "web-features:font-palette"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "css"
+ ],
+ "baselineLowDateAsObject": "2022-11-15T00:00:00.000Z",
+ "baselineHighDateAsObject": "2025-05-15T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

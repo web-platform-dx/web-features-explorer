@@ -1,0 +1,1101 @@
+{
+ "caniuse": "border-image",
+ "compat_features": [
+  "css.properties.border-image",
+  "css.properties.border-image-outset",
+  "css.properties.border-image-repeat",
+  "css.properties.border-image-repeat.repeat",
+  "css.properties.border-image-repeat.round",
+  "css.properties.border-image-repeat.space",
+  "css.properties.border-image-repeat.stretch",
+  "css.properties.border-image-slice",
+  "css.properties.border-image-source",
+  "css.properties.border-image-width",
+  "css.properties.border-image-width.auto",
+  "css.properties.border-image.fill",
+  "css.properties.border-image.gradient",
+  "css.properties.border-image.optional_border_image_slice"
+ ],
+ "description": "The border-image CSS property draws an image around an element.",
+ "description_html": "The <code>border-image</code> CSS property draws an image around an element.",
+ "group": "borders-outlines",
+ "name": "Border images",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css-backgrounds-3/#border-images",
+   "seriesComposition": "full",
+   "shortname": "css-backgrounds-3",
+   "series": {
+    "shortname": "css-backgrounds",
+    "currentSpecification": "css-backgrounds-3",
+    "title": "CSS Backgrounds and Borders",
+    "shortTitle": "CSS Backgrounds",
+    "releaseUrl": "https://www.w3.org/TR/css-backgrounds/",
+    "nightlyUrl": "https://drafts.csswg.org/css-backgrounds/"
+   },
+   "seriesVersion": "3",
+   "shortTitle": "CSS Backgrounds 3",
+   "seriesNext": "css-backgrounds-4",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-backgrounds-3/",
+    "status": "Candidate Recommendation Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-backgrounds-3/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-backgrounds-3/",
+     "https://w3c.github.io/csswg-drafts/css-backgrounds/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-backgrounds-3/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Backgrounds and Borders Module Level 3",
+   "source": "w3c",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-backgrounds"
+    ]
+   },
+   "fragment": "border-images"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2019-08-01",
+  "baseline_low_date": "2017-02-01",
+  "support": {
+   "chrome": "56",
+   "chrome_android": "56",
+   "edge": "12",
+   "firefox": "50",
+   "firefox_android": "50",
+   "safari": "9.1",
+   "safari_ios": "9.3"
+  }
+ },
+ "id": "border-image",
+ "groups": [
+  "borders-outlines"
+ ],
+ "groupPaths": [
+  [
+   "CSS",
+   "Borders and outlines"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "border-image",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/border-image"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.05558976,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/13"
+ },
+ "interop": [
+  {
+   "year": "2023",
+   "label": "interop-2023-cssborderimage"
+  }
+ ],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "css.properties.border-image",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-image",
+    "source_file": "css/properties/border-image.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds/#the-border-image",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "notes": "Before Chrome 112, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+       "version_added": "16"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "7"
+      }
+     ],
+     "chrome_android": [
+      {
+       "notes": "Before Chrome Android 112, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+       "version_added": "18"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "18"
+      }
+     ],
+     "edge": [
+      {
+       "notes": "Before Edge 112, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+       "version_added": "12"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "12"
+      }
+     ],
+     "firefox": [
+      {
+       "notes": [
+        "Small SVGs are incorrectly stretched, because percentages in <a href=\"https://developer.mozilla.org/docs/Web/CSS/border-image-slice\"><code>border-image-slice</code></a> are computed to integers instead of floats (<a href=\"https://bugzil.la/1284797\">bug 1284797</a>).",
+        "Until Firefox 47, SVGs without viewport were not sliced correctly (<a href=\"https://bugzil.la/619500\">bug 619500</a>).",
+        "From Firefox 48 until Firefox 49, SVGs without viewport are displayed the same as SVGs with viewport, but if the slices are not exactly 50%, they are incorrectly stretched (<a href=\"https://bugzil.la/1264809\">bug 1264809</a>).",
+        "Until Firefox 57, an issue persisted for SVGs without viewport when <a href=\"https://wiki.mozilla.org/Electrolysis\">e10s</a> was disabled (<a href=\"https://bugzil.la/1290782\">bug 1290782</a>)."
+       ],
+       "version_added": "15"
+      },
+      {
+       "notes": "Before Firefox 15, an earlier version of the specification was implemented, prefixed.",
+       "prefix": "-moz-",
+       "version_added": "3.5"
+      }
+     ],
+     "firefox_android": [
+      {
+       "notes": [
+        "Small SVGs are incorrectly stretched, because percentages in <a href=\"https://developer.mozilla.org/docs/Web/CSS/border-image-slice\"><code>border-image-slice</code></a> are computed to integers instead of floats (<a href=\"https://bugzil.la/1284797\">bug 1284797</a>).",
+        "Until Firefox for Android 47, SVGs without viewport were not sliced correctly (<a href=\"https://bugzil.la/619500\">bug 619500</a>).",
+        "From Firefox for Android 48 until Firefox for Android 49, SVGs without viewport are displayed the same as SVGs with viewport, but if the slices are not exactly 50%, they are incorrectly stretched (<a href=\"https://bugzil.la/1264809\">bug 1264809</a>).",
+        "Until Firefox for Android 57, an issue persisted for SVGs without viewport when <a href=\"https://wiki.mozilla.org/Electrolysis\">e10s</a> was disabled (<a href=\"https://bugzil.la/1290782\">bug 1290782</a>)."
+       ],
+       "version_added": "15"
+      },
+      {
+       "notes": "Before Firefox for Android 15, an earlier version of the specification was implemented, prefixed.",
+       "prefix": "-moz-",
+       "version_added": "4"
+      }
+     ],
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": [
+      {
+       "notes": "Before Quest Browser false, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+       "version_added": "5.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "5.0"
+      }
+     ],
+     "opera": [
+      {
+       "notes": "Before Opera 98, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+       "version_added": "11"
+      },
+      {
+       "prefix": "-o-",
+       "version_added": "10.5",
+       "version_last": "12.1",
+       "version_removed": "15"
+      }
+     ],
+     "opera_android": [
+      {
+       "notes": "A border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+       "version_added": "11"
+      },
+      {
+       "prefix": "-o-",
+       "version_added": "11",
+       "version_last": "12.1",
+       "version_removed": "14"
+      }
+     ],
+     "safari": [
+      {
+       "version_added": "6"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "6"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ],
+     "samsunginternet_android": [
+      {
+       "notes": "Before Samsung Internet 23.0, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+       "version_added": "1.0"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "1.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "notes": "Before WebView 112, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+       "version_added": "4.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "2"
+      }
+     ],
+     "webview_ios": [
+      {
+       "version_added": "6"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "3.2"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:border-image"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.border-image-outset",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-image-outset",
+    "source_file": "css/properties/border-image-outset.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds/#the-border-image-outset",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "15"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:border-image"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.border-image-repeat",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-image-repeat",
+    "source_file": "css/properties/border-image-repeat.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds/#the-border-image-repeat",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "15"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:border-image"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.border-image-repeat.repeat",
+   "compat": {
+    "source_file": "css/properties/border-image-repeat.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds/#valdef-border-image-repeat-repeat",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "15"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:border-image"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.border-image-repeat.round",
+   "compat": {
+    "source_file": "css/properties/border-image-repeat.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds/#valdef-border-image-repeat-round",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "30"
+     },
+     "chrome_android": {
+      "version_added": "30"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "17"
+     },
+     "opera_android": {
+      "version_added": "18"
+     },
+     "safari": {
+      "version_added": "9.1"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:border-image"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.border-image-repeat.space",
+   "compat": {
+    "source_file": "css/properties/border-image-repeat.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds/#valdef-border-image-repeat-space",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "56"
+     },
+     "chrome_android": {
+      "version_added": "56"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "50"
+     },
+     "firefox_android": {
+      "version_added": "50"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "43"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "9.1"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "56"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:border-image"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.border-image-repeat.stretch",
+   "compat": {
+    "source_file": "css/properties/border-image-repeat.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds/#valdef-border-image-repeat-stretch",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "15"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "9.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "9.3"
+     }
+    },
+    "tags": [
+     "web-features:border-image"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.border-image-slice",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-image-slice",
+    "source_file": "css/properties/border-image-slice.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds/#the-border-image-slice",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "15"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": [
+       "Small SVGs are incorrectly stretched, because percentages in <a href=\"https://developer.mozilla.org/docs/Web/CSS/border-image-slice\"><code>border-image-slice</code></a> are computed to integers instead of floats (<a href=\"https://bugzil.la/1284797\">bug 1284797</a>).",
+       "Until Firefox 47, SVGs without viewport were not sliced correctly (<a href=\"https://bugzil.la/619500\">bug 619500</a>).",
+       "From Firefox 48 until Firefox 49, SVGs without viewport are displayed the same as SVGs with viewport, but if the slices are not exactly 50%, they are incorrectly stretched (<a href=\"https://bugzil.la/1264809\">bug 1264809</a>).",
+       "Until Firefox 57, an issue persisted for SVGs without viewport when <a href=\"https://wiki.mozilla.org/Electrolysis\">e10s</a> was disabled (<a href=\"https://bugzil.la/1290782\">bug 1290782</a>)."
+      ],
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "notes": [
+       "Small SVGs are incorrectly stretched, because percentages in <a href=\"https://developer.mozilla.org/docs/Web/CSS/border-image-slice\"><code>border-image-slice</code></a> are computed to integers instead of floats (<a href=\"https://bugzil.la/1284797\">bug 1284797</a>).",
+       "Until Firefox for Android 47, SVGs without viewport were not sliced correctly (<a href=\"https://bugzil.la/619500\">bug 619500</a>).",
+       "From Firefox for Android 48 until Firefox for Android 49, SVGs without viewport are displayed the same as SVGs with viewport, but if the slices are not exactly 50%, they are incorrectly stretched (<a href=\"https://bugzil.la/1264809\">bug 1264809</a>).",
+       "Until Firefox for Android 57, an issue persisted for SVGs without viewport when <a href=\"https://wiki.mozilla.org/Electrolysis\">e10s</a> was disabled (<a href=\"https://bugzil.la/1290782\">bug 1290782</a>)."
+      ],
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": [
+      {
+       "version_added": "4.4"
+      },
+      {
+       "prefix": "-webkit-",
+       "version_added": "4"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:border-image"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.border-image-source",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-image-source",
+    "source_file": "css/properties/border-image-source.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds/#the-border-image-source",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "15"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:border-image"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.border-image-width",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-image-width",
+    "source_file": "css/properties/border-image-width.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds/#the-border-image-width",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Before Chrome 112, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+      "version_added": "16"
+     },
+     "chrome_android": {
+      "notes": "Before Chrome Android 112, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+      "version_added": "18"
+     },
+     "edge": {
+      "notes": "Before Edge 112, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "13"
+     },
+     "firefox_android": {
+      "version_added": "14"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "notes": "Before Quest Browser false, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Before Opera 98, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+      "version_added": "15"
+     },
+     "opera_android": {
+      "notes": "Before Opera Android 75, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "notes": "Before Samsung Internet 23.0, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "notes": "Before WebView Android 112, a border image's absolute or percentage length width may not take precedence over a narrower <code>border-width</code> (<a href=\"https://crbug.com/40541033\">bug 40541033</a>).",
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:border-image"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.border-image-width.auto",
+   "compat": {
+    "source_file": "css/properties/border-image-width.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds/#valdef-border-image-width-auto",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "16"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:border-image"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.border-image.fill",
+   "compat": {
+    "source_file": "css/properties/border-image.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "16"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:border-image"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.border-image.gradient",
+   "compat": {
+    "description": "<code>&lt;gradient&gt;</code>",
+    "source_file": "css/properties/border-image.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "7"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "29"
+     },
+     "firefox_android": {
+      "version_added": "29"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "4"
+     },
+     "safari_ios": {
+      "version_added": "3.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "3.2"
+     }
+    },
+    "tags": [
+     "web-features:border-image"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.border-image.optional_border_image_slice",
+   "compat": {
+    "description": "optional <code>&lt;border-image-slice&gt;</code>",
+    "source_file": "css/properties/border-image.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "16"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "6"
+     },
+     "safari_ios": {
+      "version_added": "6"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "6"
+     }
+    },
+    "tags": [
+     "web-features:border-image"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "css"
+ ],
+ "baselineLowDateAsObject": "2017-02-01T00:00:00.000Z",
+ "baselineHighDateAsObject": "2019-08-01T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

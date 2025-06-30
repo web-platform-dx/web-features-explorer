@@ -1,0 +1,2624 @@
+{
+ "caniuse": "font-loading",
+ "compat_features": [
+  "api.Document.fonts",
+  "api.FontFace",
+  "api.FontFace.FontFace",
+  "api.FontFace.display",
+  "api.FontFace.family",
+  "api.FontFace.featureSettings",
+  "api.FontFace.load",
+  "api.FontFace.loaded",
+  "api.FontFace.status",
+  "api.FontFace.stretch",
+  "api.FontFace.style",
+  "api.FontFace.unicodeRange",
+  "api.FontFace.variant",
+  "api.FontFace.variationSettings",
+  "api.FontFace.weight",
+  "api.FontFace.worker_support",
+  "api.FontFaceSet",
+  "api.FontFaceSet.@@iterator",
+  "api.FontFaceSet.add",
+  "api.FontFaceSet.check",
+  "api.FontFaceSet.clear",
+  "api.FontFaceSet.delete",
+  "api.FontFaceSet.entries",
+  "api.FontFaceSet.forEach",
+  "api.FontFaceSet.has",
+  "api.FontFaceSet.keys",
+  "api.FontFaceSet.load",
+  "api.FontFaceSet.loading_event",
+  "api.FontFaceSet.loadingdone_event",
+  "api.FontFaceSet.loadingerror_event",
+  "api.FontFaceSet.ready",
+  "api.FontFaceSet.size",
+  "api.FontFaceSet.status",
+  "api.FontFaceSet.values",
+  "api.FontFaceSet.worker_support",
+  "api.FontFaceSetLoadEvent",
+  "api.FontFaceSetLoadEvent.FontFaceSetLoadEvent",
+  "api.FontFaceSetLoadEvent.fontfaces",
+  "api.FontFaceSetLoadEvent.worker_support",
+  "api.WorkerGlobalScope.fonts"
+ ],
+ "description": "The document.fonts API dynamically loads custom fonts and tracks when fonts are loading or ready to use.",
+ "description_html": "The <code>document.fonts</code> API dynamically loads custom fonts and tracks when fonts are loading or ready to use.",
+ "name": "Font loading",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css-font-loading-3/",
+   "seriesComposition": "full",
+   "shortname": "css-font-loading-3",
+   "series": {
+    "shortname": "css-font-loading",
+    "currentSpecification": "css-font-loading-3",
+    "title": "CSS Font Loading Module",
+    "shortTitle": "CSS Font Loading",
+    "releaseUrl": "https://www.w3.org/TR/css-font-loading/",
+    "nightlyUrl": "https://drafts.csswg.org/css-font-loading/"
+   },
+   "seriesVersion": "3",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-font-loading-3/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-font-loading-3/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-font-loading-3/",
+     "https://w3c.github.io/csswg-drafts/css-font-loading/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-font-loading-3/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Font Loading Module Level 3",
+   "source": "w3c",
+   "shortTitle": "CSS Font Loading 3",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-font-loading"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2022-07-15",
+  "baseline_low_date": "2020-01-15",
+  "support": {
+   "chrome": "35",
+   "chrome_android": "35",
+   "edge": "79",
+   "firefox": "41",
+   "firefox_android": "41",
+   "safari": "10",
+   "safari_ios": "10"
+  }
+ },
+ "id": "font-loading",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "CSS Font Loading API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/CSS_Font_Loading_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Document.fonts",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/fonts",
+    "source_file": "api/Document.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#FontFaceSet-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFace",
+    "source_file": "api/FontFace.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#fontface-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace.FontFace",
+   "compat": {
+    "description": "<code>FontFace()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFace/FontFace",
+    "source_file": "api/FontFace.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#font-face-constructor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace.display",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFace/display",
+    "source_file": "api/FontFace.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontface-display",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "60"
+     },
+     "chrome_android": {
+      "version_added": "60"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "58"
+     },
+     "firefox_android": {
+      "version_added": "58"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "47"
+     },
+     "opera_android": {
+      "version_added": "44"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "60"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace.family",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFace/family",
+    "source_file": "api/FontFace.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontface-family",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace.featureSettings",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFace/featureSettings",
+    "source_file": "api/FontFace.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontface-featuresettings",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace.load",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFace/load",
+    "source_file": "api/FontFace.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#font-face-load",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace.loaded",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFace/loaded",
+    "source_file": "api/FontFace.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontface-loaded",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "37"
+     },
+     "chrome_android": {
+      "version_added": "37"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace.status",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFace/status",
+    "source_file": "api/FontFace.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontface-status",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace.stretch",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFace/stretch",
+    "source_file": "api/FontFace.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontface-stretch",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace.style",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFace/style",
+    "source_file": "api/FontFace.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontface-style",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace.unicodeRange",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFace/unicodeRange",
+    "source_file": "api/FontFace.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontface-unicoderange",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace.variant",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFace/variant",
+    "source_file": "api/FontFace.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": false
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10",
+      "version_last": "13",
+      "version_removed": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "10",
+      "version_last": "13",
+      "version_removed": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10",
+      "version_last": "13",
+      "version_removed": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace.variationSettings",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFace/variationSettings",
+    "source_file": "api/FontFace.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontfacedescriptors-variationsettings",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "62"
+     },
+     "firefox_android": {
+      "version_added": "62"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace.weight",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFace/weight",
+    "source_file": "api/FontFace.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontface-weight",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFace.worker_support",
+   "compat": {
+    "description": "Available in workers",
+    "source_file": "api/FontFace.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "15"
+     },
+     "safari_ios": {
+      "version_added": "15"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "15"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet",
+    "source_file": "api/FontFaceSet.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#FontFaceSet-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Chrome does not expose the <code>FontFaceSet</code> interface directly, and is only available through <a href=\"https://developer.mozilla.org/docs/Web/API/Document/fonts\"><code>Document.fonts</code></a> or <a href=\"https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/fonts\"><code>WorkerGlobalScope.fonts</code></a>.",
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "notes": "Chrome Android does not expose the <code>FontFaceSet</code> interface directly, and is only available through <a href=\"https://developer.mozilla.org/docs/Web/API/Document/fonts\"><code>Document.fonts</code></a> or <a href=\"https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/fonts\"><code>WorkerGlobalScope.fonts</code></a>.",
+      "version_added": "35"
+     },
+     "edge": {
+      "notes": "Edge does not expose the <code>FontFaceSet</code> interface directly, and is only available through <a href=\"https://developer.mozilla.org/docs/Web/API/Document/fonts\"><code>Document.fonts</code></a> or <a href=\"https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/fonts\"><code>WorkerGlobalScope.fonts</code></a>.",
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Quest Browser does not expose the <code>FontFaceSet</code> interface directly, and is only available through <a href=\"https://developer.mozilla.org/docs/Web/API/Document/fonts\"><code>Document.fonts</code></a> or <a href=\"https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/fonts\"><code>WorkerGlobalScope.fonts</code></a>.",
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "Opera does not expose the <code>FontFaceSet</code> interface directly, and is only available through <a href=\"https://developer.mozilla.org/docs/Web/API/Document/fonts\"><code>Document.fonts</code></a> or <a href=\"https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/fonts\"><code>WorkerGlobalScope.fonts</code></a>.",
+      "version_added": "22"
+     },
+     "opera_android": {
+      "notes": "Opera Android does not expose the <code>FontFaceSet</code> interface directly, and is only available through <a href=\"https://developer.mozilla.org/docs/Web/API/Document/fonts\"><code>Document.fonts</code></a> or <a href=\"https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/fonts\"><code>WorkerGlobalScope.fonts</code></a>.",
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "notes": "Samsung Internet does not expose the <code>FontFaceSet</code> interface directly, and is only available through <a href=\"https://developer.mozilla.org/docs/Web/API/Document/fonts\"><code>Document.fonts</code></a> or <a href=\"https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/fonts\"><code>WorkerGlobalScope.fonts</code></a>.",
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "notes": "WebView Android does not expose the <code>FontFaceSet</code> interface directly, and is only available through <a href=\"https://developer.mozilla.org/docs/Web/API/Document/fonts\"><code>Document.fonts</code></a> or <a href=\"https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/fonts\"><code>WorkerGlobalScope.fonts</code></a>.",
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.@@iterator",
+   "compat": {
+    "description": "[Symbol.iterator]",
+    "source_file": "api/FontFaceSet.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#fontfaceset",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "48"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.add",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/add",
+    "source_file": "api/FontFaceSet.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontfaceset-add",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.check",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/check",
+    "source_file": "api/FontFaceSet.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontfaceset-check",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "120"
+      },
+      {
+       "notes": "Prior to version 120, this method returned <code>false</code> instead of <code>true</code> for nonexistent or locally installed fonts. See <a href=\"https://crbug.com/40893726\">bug 40893726</a>.",
+       "partial_implementation": true,
+       "version_added": "35",
+       "version_last": "119",
+       "version_removed": "120"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "notes": "Prior to version 120, this method returned <code>false</code> instead of <code>true</code> for nonexistent or locally installed fonts. See <a href=\"https://crbug.com/40893726\">bug 40893726</a>.",
+       "partial_implementation": true,
+       "version_added": "35",
+       "version_last": "119",
+       "version_removed": "120"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "120"
+      },
+      {
+       "notes": "Prior to version 120, this method returned <code>false</code> instead of <code>true</code> for nonexistent or locally installed fonts. See <a href=\"https://crbug.com/40893726\">bug 40893726</a>.",
+       "partial_implementation": true,
+       "version_added": "79",
+       "version_last": "119",
+       "version_removed": "120"
+      }
+     ],
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Prior to version false, this method returned <code>false</code> instead of <code>true</code> for nonexistent or locally installed fonts. See <a href=\"https://crbug.com/40893726\">bug 40893726</a>.",
+      "partial_implementation": true,
+      "version_added": "5.0",
+      "version_removed": false
+     },
+     "opera": [
+      {
+       "version_added": "106"
+      },
+      {
+       "notes": "Prior to version 106, this method returned <code>false</code> instead of <code>true</code> for nonexistent or locally installed fonts. See <a href=\"https://crbug.com/40893726\">bug 40893726</a>.",
+       "partial_implementation": true,
+       "version_added": "22",
+       "version_last": "105",
+       "version_removed": "106"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "80"
+      },
+      {
+       "notes": "Prior to version 80, this method returned <code>false</code> instead of <code>true</code> for nonexistent or locally installed fonts. See <a href=\"https://crbug.com/40893726\">bug 40893726</a>.",
+       "partial_implementation": true,
+       "version_added": "22",
+       "version_last": "79",
+       "version_removed": "80"
+      }
+     ],
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": [
+      {
+       "version_added": "25.0"
+      },
+      {
+       "notes": "Prior to version 25.0, this method returned <code>false</code> instead of <code>true</code> for nonexistent or locally installed fonts. See <a href=\"https://crbug.com/40893726\">bug 40893726</a>.",
+       "partial_implementation": true,
+       "version_added": "3.0",
+       "version_last": "24.0",
+       "version_removed": "25.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "120"
+      },
+      {
+       "notes": "Prior to version 120, this method returned <code>false</code> instead of <code>true</code> for nonexistent or locally installed fonts. See <a href=\"https://crbug.com/40893726\">bug 40893726</a>.",
+       "partial_implementation": true,
+       "version_added": "37",
+       "version_last": "119",
+       "version_removed": "120"
+      }
+     ],
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.clear",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/clear",
+    "source_file": "api/FontFaceSet.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontfaceset-clear",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.delete",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/delete",
+    "source_file": "api/FontFaceSet.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontfaceset-delete",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.entries",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/entries",
+    "source_file": "api/FontFaceSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "48"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.forEach",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/forEach",
+    "source_file": "api/FontFaceSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.has",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/has",
+    "source_file": "api/FontFaceSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.keys",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/keys",
+    "source_file": "api/FontFaceSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "48"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.load",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/load",
+    "source_file": "api/FontFaceSet.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontfaceset-load",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.loading_event",
+   "compat": {
+    "description": "<code>loading</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/loading_event",
+    "source_file": "api/FontFaceSet.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontfaceset-onloading",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.loadingdone_event",
+   "compat": {
+    "description": "<code>loadingdone</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/loadingdone_event",
+    "source_file": "api/FontFaceSet.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontfaceset-onloadingdone",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.loadingerror_event",
+   "compat": {
+    "description": "<code>loadingerror</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/loadingerror_event",
+    "source_file": "api/FontFaceSet.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontfaceset-onloadingerror",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.ready",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/ready",
+    "source_file": "api/FontFaceSet.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontfaceset-ready",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.size",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/size",
+    "source_file": "api/FontFaceSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.status",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/status",
+    "source_file": "api/FontFaceSet.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontfaceset-status",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.values",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSet/values",
+    "source_file": "api/FontFaceSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": {
+      "version_added": "10"
+     },
+     "safari_ios": {
+      "version_added": "10"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "48"
+     },
+     "webview_ios": {
+      "version_added": "10"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSet.worker_support",
+   "compat": {
+    "description": "Available in workers",
+    "source_file": "api/FontFaceSet.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "15"
+     },
+     "safari_ios": {
+      "version_added": "15"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "15"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSetLoadEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSetLoadEvent",
+    "source_file": "api/FontFaceSetLoadEvent.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#fontfacesetloadevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSetLoadEvent.FontFaceSetLoadEvent",
+   "compat": {
+    "description": "<code>FontFaceSetLoadEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSetLoadEvent/FontFaceSetLoadEvent",
+    "source_file": "api/FontFaceSetLoadEvent.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontfacesetloadevent-fontfacesetloadevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "57"
+     },
+     "chrome_android": {
+      "version_added": "57"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "44"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "7.0"
+     },
+     "webview_android": {
+      "version_added": "57"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSetLoadEvent.fontfaces",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/FontFaceSetLoadEvent/fontfaces",
+    "source_file": "api/FontFaceSetLoadEvent.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontfacesetloadevent-fontfaces",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "35"
+     },
+     "chrome_android": {
+      "version_added": "35"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "22"
+     },
+     "opera_android": {
+      "version_added": "22"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "3.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.FontFaceSetLoadEvent.worker_support",
+   "compat": {
+    "description": "Available in workers",
+    "source_file": "api/FontFaceSetLoadEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  },
+  {
+   "key": "api.WorkerGlobalScope.fonts",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/fonts",
+    "source_file": "api/WorkerGlobalScope.json",
+    "spec_url": "https://drafts.csswg.org/css-font-loading/#dom-fontfacesource-fonts",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "15"
+     },
+     "safari_ios": {
+      "version_added": "15"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "15"
+     }
+    },
+    "tags": [
+     "web-features:font-loading"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2020-01-15T00:00:00.000Z",
+ "baselineHighDateAsObject": "2022-07-15T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

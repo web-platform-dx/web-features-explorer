@@ -1,0 +1,335 @@
+{
+ "compat_features": [
+  "api.SharedWorker.SharedWorker.ecmascript_modules",
+  "api.SharedWorker.SharedWorker.options_type_parameter"
+ ],
+ "description": "The SharedWorker() constructor accepts { type: \"module\" } to load scripts that use import and export. Also known as ECMAScript modules or ESM in shared workers.",
+ "description_html": "The <code>SharedWorker()</code> constructor accepts <code>{ type: \"module\" }</code> to load scripts that use <code>import</code> and <code>export</code>. Also known as ECMAScript modules or ESM in shared workers.",
+ "group": [
+  "js-modules",
+  "workers"
+ ],
+ "name": "JavaScript modules in shared workers",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/workers.html#shared-workers-and-the-sharedworker-interface:dom-sharedworker-2",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "shared-workers-and-the-sharedworker-interface:dom-sharedworker-2"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "80",
+   "edge": "80",
+   "firefox": "114",
+   "firefox_android": "114",
+   "safari": "16",
+   "safari_ios": "16"
+  }
+ },
+ "id": "js-modules-shared-workers",
+ "groups": [
+  "js-modules",
+  "workers"
+ ],
+ "groupPaths": [
+  [
+   "JavaScript modules"
+  ],
+  [
+   "Workers"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "SharedWorker",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/SharedWorker"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.00713768,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/109"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.SharedWorker.SharedWorker.ecmascript_modules",
+   "compat": {
+    "description": "Support for ECMAScript modules",
+    "source_file": "api/SharedWorker.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "80"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "notes": "ECMAScript modules are enabled for files ending with <code>.mjs</code> and for files ending with <code>.js</code> when the nearest parent <code>package.json</code> file contains a top-level field <code>\"type\"</code> with a value of <code>\"module\"</code>.",
+      "partial_implementation": true,
+      "version_added": "12.17.0"
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "67"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "notes": [
+       "Nested workers support was introduced in Safari 15.5.",
+       "Script loading in nested workers was introduced in Safari 16.4."
+      ],
+      "version_added": "15"
+     },
+     "safari_ios": {
+      "notes": [
+       "Nested workers support was introduced in Safari on iOS 15.5.",
+       "Script loading in nested workers was introduced in Safari on iOS 16.4."
+      ],
+      "version_added": "15"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "notes": [
+       "Nested workers support was introduced in WebView on iOS 15.5.",
+       "Script loading in nested workers was introduced in WebView on iOS 16.4."
+      ],
+      "version_added": "15"
+     }
+    },
+    "tags": [
+     "web-features:js-modules-shared-workers"
+    ]
+   }
+  },
+  {
+   "key": "api.SharedWorker.SharedWorker.options_type_parameter",
+   "compat": {
+    "description": "<code>options.type</code> parameter",
+    "source_file": "api/SharedWorker.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "deno": {
+      "notes": "Only supports <code>module</code>",
+      "version_added": "1.0"
+     },
+     "edge": {
+      "version_added": "80"
+     },
+     "firefox": {
+      "version_added": "114"
+     },
+     "firefox_android": {
+      "version_added": "114"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "67"
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "15"
+     },
+     "safari_ios": {
+      "version_added": "15"
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "15"
+     }
+    },
+    "tags": [
+     "web-features:js-modules-shared-workers"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ },
+ "blockedOn": "Chrome Android",
+ "monthsBlocked": 24,
+ "blockedSince": "June 2023"
+}

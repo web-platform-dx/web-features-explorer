@@ -1,0 +1,683 @@
+{
+ "compat_features": [
+  "api.HTMLElement.virtualKeyboardPolicy",
+  "api.Navigator.virtualKeyboard",
+  "api.VirtualKeyboard",
+  "api.VirtualKeyboard.boundingRect",
+  "api.VirtualKeyboard.geometrychange_event",
+  "api.VirtualKeyboard.hide",
+  "api.VirtualKeyboard.overlaysContent",
+  "api.VirtualKeyboard.show",
+  "html.global_attributes.virtualkeyboardpolicy"
+ ],
+ "description": "The navigator.virtualKeyboard API inspects and controls on-screen virtual keyboards. You can use it to programmatically hide or show a virtual keyboard or respond to the keyboard disappearing or appearing.",
+ "description_html": "The <code>navigator.virtualKeyboard</code> API inspects and controls on-screen virtual keyboards. You can use it to programmatically hide or show a virtual keyboard or respond to the keyboard disappearing or appearing.",
+ "name": "Virtual keyboard",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/virtual-keyboard/",
+   "seriesComposition": "full",
+   "shortname": "virtual-keyboard",
+   "series": {
+    "shortname": "virtual-keyboard",
+    "currentSpecification": "virtual-keyboard",
+    "title": "VirtualKeyboard API",
+    "shortTitle": "VirtualKeyboard API",
+    "releaseUrl": "https://www.w3.org/TR/virtual-keyboard/",
+    "nightlyUrl": "https://w3c.github.io/virtual-keyboard/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Editing Working Group",
+     "url": "https://www.w3.org/groups/wg/webediting/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/virtual-keyboard/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/virtual-keyboard/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/virtual-keyboard",
+    "sourcePath": "index.html",
+    "filename": "index.html"
+   },
+   "title": "VirtualKeyboard API",
+   "source": "w3c",
+   "shortTitle": "VirtualKeyboard API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "94",
+   "chrome_android": "94",
+   "edge": "94"
+  }
+ },
+ "id": "virtual-keyboard",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "VirtualKeyboard API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/VirtualKeyboard_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {
+   "url": "https://github.com/WebKit/standards-positions/issues/16",
+   "position": "",
+   "concerns": [
+    "device independence"
+   ]
+  }
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.00326669,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/264"
+ },
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.HTMLElement.virtualKeyboardPolicy",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/virtualKeyboardPolicy",
+    "source_file": "api/HTMLElement.json",
+    "spec_url": "https://w3c.github.io/virtual-keyboard/#dom-elementcontenteditable-virtualkeyboardpolicy",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "94"
+     },
+     "chrome_android": {
+      "version_added": "94"
+     },
+     "edge": {
+      "version_added": "94"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1730568",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1730568",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "18.0"
+     },
+     "opera": {
+      "version_added": "80"
+     },
+     "opera_android": {
+      "version_added": "66"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/230225",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/230225",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "17.0"
+     },
+     "webview_android": {
+      "version_added": "94"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/230225",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:virtual-keyboard"
+    ]
+   }
+  },
+  {
+   "key": "api.Navigator.virtualKeyboard",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/virtualKeyboard",
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://w3c.github.io/virtual-keyboard/#dom-navigator-virtualkeyboard",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "94"
+     },
+     "chrome_android": {
+      "version_added": "94"
+     },
+     "edge": {
+      "version_added": "94"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1730568",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1730568",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "18.0"
+     },
+     "opera": {
+      "version_added": "80"
+     },
+     "opera_android": {
+      "version_added": "66"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/230225",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/230225",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "17.0"
+     },
+     "webview_android": {
+      "version_added": "94"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/230225",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:virtual-keyboard"
+    ]
+   }
+  },
+  {
+   "key": "api.VirtualKeyboard",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VirtualKeyboard",
+    "source_file": "api/VirtualKeyboard.json",
+    "spec_url": "https://w3c.github.io/virtual-keyboard/#the-virtualkeyboard-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "94"
+     },
+     "chrome_android": {
+      "version_added": "94"
+     },
+     "edge": {
+      "version_added": "94"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1730568",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1730568",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "18.0"
+     },
+     "opera": {
+      "version_added": "80"
+     },
+     "opera_android": {
+      "version_added": "66"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/230225",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/230225",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "17.0"
+     },
+     "webview_android": {
+      "version_added": "94"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/230225",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:virtual-keyboard"
+    ]
+   }
+  },
+  {
+   "key": "api.VirtualKeyboard.boundingRect",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VirtualKeyboard/boundingRect",
+    "source_file": "api/VirtualKeyboard.json",
+    "spec_url": "https://w3c.github.io/virtual-keyboard/#dom-virtualkeyboard-boundingrect",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "94"
+     },
+     "chrome_android": {
+      "version_added": "94"
+     },
+     "edge": {
+      "version_added": "94"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "18.0"
+     },
+     "opera": {
+      "version_added": "80"
+     },
+     "opera_android": {
+      "version_added": "66"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "17.0"
+     },
+     "webview_android": {
+      "version_added": "94"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:virtual-keyboard"
+    ]
+   }
+  },
+  {
+   "key": "api.VirtualKeyboard.geometrychange_event",
+   "compat": {
+    "description": "<code>geometrychange</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VirtualKeyboard/geometrychange_event",
+    "source_file": "api/VirtualKeyboard.json",
+    "spec_url": "https://w3c.github.io/virtual-keyboard/#dom-virtualkeyboard-ongeometrychange",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "94"
+     },
+     "chrome_android": {
+      "version_added": "94"
+     },
+     "edge": {
+      "version_added": "94"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "18.0"
+     },
+     "opera": {
+      "version_added": "80"
+     },
+     "opera_android": {
+      "version_added": "66"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "17.0"
+     },
+     "webview_android": {
+      "version_added": "94"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:virtual-keyboard"
+    ]
+   }
+  },
+  {
+   "key": "api.VirtualKeyboard.hide",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VirtualKeyboard/hide",
+    "source_file": "api/VirtualKeyboard.json",
+    "spec_url": "https://w3c.github.io/virtual-keyboard/#dom-virtualkeyboard-hide",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "94"
+     },
+     "chrome_android": {
+      "version_added": "94"
+     },
+     "edge": {
+      "version_added": "94"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "18.0"
+     },
+     "opera": {
+      "version_added": "80"
+     },
+     "opera_android": {
+      "version_added": "66"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "17.0"
+     },
+     "webview_android": {
+      "version_added": "94"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:virtual-keyboard"
+    ]
+   }
+  },
+  {
+   "key": "api.VirtualKeyboard.overlaysContent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VirtualKeyboard/overlaysContent",
+    "source_file": "api/VirtualKeyboard.json",
+    "spec_url": "https://w3c.github.io/virtual-keyboard/#dom-virtualkeyboard-overlayscontent",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "94"
+     },
+     "chrome_android": {
+      "version_added": "94"
+     },
+     "edge": {
+      "version_added": "94"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "18.0"
+     },
+     "opera": {
+      "version_added": "80"
+     },
+     "opera_android": {
+      "version_added": "66"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "17.0"
+     },
+     "webview_android": {
+      "version_added": "94"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:virtual-keyboard"
+    ]
+   }
+  },
+  {
+   "key": "api.VirtualKeyboard.show",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/VirtualKeyboard/show",
+    "source_file": "api/VirtualKeyboard.json",
+    "spec_url": "https://w3c.github.io/virtual-keyboard/#dom-virtualkeyboard-show",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "94"
+     },
+     "chrome_android": {
+      "version_added": "94"
+     },
+     "edge": {
+      "version_added": "94"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "18.0"
+     },
+     "opera": {
+      "version_added": "80"
+     },
+     "opera_android": {
+      "version_added": "66"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "17.0"
+     },
+     "webview_android": {
+      "version_added": "94"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:virtual-keyboard"
+    ]
+   }
+  },
+  {
+   "key": "html.global_attributes.virtualkeyboardpolicy",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy",
+    "source_file": "html/global_attributes.json",
+    "spec_url": "https://w3c.github.io/virtual-keyboard/#dom-elementcontenteditable-virtualkeyboardpolicy",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "94"
+     },
+     "chrome_android": {
+      "version_added": "94"
+     },
+     "edge": {
+      "version_added": "94"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1730568",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1730568",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "18.0"
+     },
+     "opera": {
+      "version_added": "80"
+     },
+     "opera_android": {
+      "version_added": "66"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/230225",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/230225",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "17.0"
+     },
+     "webview_android": {
+      "version_added": "94"
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/230225",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:virtual-keyboard"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "html"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [
+   "https://bugzil.la/1730568"
+  ],
+  "firefox_android": [
+   "https://bugzil.la/1730568"
+  ],
+  "safari": [
+   "https://webkit.org/b/230225"
+  ],
+  "safari_ios": [
+   "https://webkit.org/b/230225"
+  ]
+ }
+}

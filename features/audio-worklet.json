@@ -1,0 +1,1288 @@
+{
+ "compat_features": [
+  "api.AudioWorklet",
+  "api.AudioWorkletGlobalScope",
+  "api.AudioWorkletGlobalScope.currentFrame",
+  "api.AudioWorkletGlobalScope.currentTime",
+  "api.AudioWorkletGlobalScope.port",
+  "api.AudioWorkletGlobalScope.registerProcessor",
+  "api.AudioWorkletGlobalScope.sampleRate",
+  "api.AudioWorkletNode",
+  "api.AudioWorkletNode.AudioWorkletNode",
+  "api.AudioWorkletNode.parameters",
+  "api.AudioWorkletNode.port",
+  "api.AudioWorkletNode.processorerror_event",
+  "api.AudioWorkletProcessor",
+  "api.AudioWorkletProcessor.AudioWorkletProcessor",
+  "api.AudioWorkletProcessor.port",
+  "api.BaseAudioContext.audioWorklet",
+  "api.Worklet",
+  "api.Worklet.addModule",
+  "api.WorkletGlobalScope"
+ ],
+ "description": "The AudioWorklet API runs module code in a separate thread, specifically for non-blocking, low latency audio processing.",
+ "description_html": "The <code>AudioWorklet</code> API runs module code in a separate thread, specifically for non-blocking, low latency audio processing.",
+ "group": [
+  "web-audio",
+  "workers"
+ ],
+ "name": "AudioWorklet",
+ "spec": [
+  {
+   "url": "https://webaudio.github.io/web-audio-api/#AudioWorklet",
+   "seriesComposition": "full",
+   "shortname": "webaudio-1.0",
+   "series": {
+    "shortname": "webaudio",
+    "currentSpecification": "webaudio-1.1",
+    "title": "Web Audio API",
+    "shortTitle": "Web Audio API",
+    "releaseUrl": "https://www.w3.org/TR/webaudio/",
+    "nightlyUrl": "https://webaudio.github.io/web-audio-api/"
+   },
+   "seriesVersion": "1.0",
+   "formerNames": [
+    "webaudio"
+   ],
+   "seriesNext": "webaudio-1.1",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Audio Working Group",
+     "url": "https://www.w3.org/groups/wg/audio/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/webaudio-1.0/",
+    "status": "Recommendation",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://webaudio.github.io/web-audio-api/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/WebAudio/web-audio-api",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Web Audio API",
+   "source": "w3c",
+   "shortTitle": "Web Audio API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "webaudio"
+    ]
+   },
+   "fragment": "AudioWorklet"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2023-10-26",
+  "baseline_low_date": "2021-04-26",
+  "support": {
+   "chrome": "66",
+   "chrome_android": "66",
+   "edge": "79",
+   "firefox": "76",
+   "firefox_android": "79",
+   "safari": "14.1",
+   "safari_ios": "14.5"
+  }
+ },
+ "id": "audio-worklet",
+ "groups": [
+  "web-audio",
+  "workers"
+ ],
+ "groupPaths": [
+  [
+   "Web Audio"
+  ],
+  [
+   "Workers"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "AudioWorklet",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/AudioWorklet"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.00161647,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/152"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.AudioWorklet",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorklet",
+    "source_file": "api/AudioWorklet.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#AudioWorklet",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioWorkletGlobalScope",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorkletGlobalScope",
+    "source_file": "api/AudioWorkletGlobalScope.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#AudioWorkletGlobalScope",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioWorkletGlobalScope.currentFrame",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorkletGlobalScope/currentFrame",
+    "source_file": "api/AudioWorkletGlobalScope.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audioworkletglobalscope-currentframe",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioWorkletGlobalScope.currentTime",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorkletGlobalScope/currentTime",
+    "source_file": "api/AudioWorkletGlobalScope.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audioworkletglobalscope-currenttime",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioWorkletGlobalScope.port",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorkletGlobalScope/port",
+    "source_file": "api/AudioWorkletGlobalScope.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audioworkletglobalscope-port",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": "138"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioWorkletGlobalScope.registerProcessor",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorkletGlobalScope/registerProcessor",
+    "source_file": "api/AudioWorkletGlobalScope.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audioworkletglobalscope-registerprocessor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioWorkletGlobalScope.sampleRate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorkletGlobalScope/sampleRate",
+    "source_file": "api/AudioWorkletGlobalScope.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audioworkletglobalscope-samplerate",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioWorkletNode",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorkletNode",
+    "source_file": "api/AudioWorkletNode.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#AudioWorkletNode",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioWorkletNode.AudioWorkletNode",
+   "compat": {
+    "description": "<code>AudioWorkletNode()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorkletNode/AudioWorkletNode",
+    "source_file": "api/AudioWorkletNode.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audioworkletnode-audioworkletnode",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioWorkletNode.parameters",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorkletNode/parameters",
+    "source_file": "api/AudioWorkletNode.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audioworkletnode-parameters",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioWorkletNode.port",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorkletNode/port",
+    "source_file": "api/AudioWorkletNode.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audioworkletnode-port",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioWorkletNode.processorerror_event",
+   "compat": {
+    "description": "<code>processorerror</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorkletNode/processorerror_event",
+    "source_file": "api/AudioWorkletNode.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audioworkletnode-onprocessorerror",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioWorkletProcessor",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorkletProcessor",
+    "source_file": "api/AudioWorkletProcessor.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#AudioWorkletProcessor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "64"
+     },
+     "chrome_android": {
+      "version_added": "64"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "51"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "64"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioWorkletProcessor.AudioWorkletProcessor",
+   "compat": {
+    "description": "<code>AudioWorkletProcessor()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorkletProcessor/AudioWorkletProcessor",
+    "source_file": "api/AudioWorkletProcessor.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audioworkletprocessor-audioworkletprocessor",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "64"
+     },
+     "chrome_android": {
+      "version_added": "64"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "51"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "64"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.AudioWorkletProcessor.port",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioWorkletProcessor/port",
+    "source_file": "api/AudioWorkletProcessor.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audioworkletprocessor-port",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "64"
+     },
+     "chrome_android": {
+      "version_added": "64"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "51"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "64"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.BaseAudioContext.audioWorklet",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/BaseAudioContext/audioWorklet",
+    "source_file": "api/BaseAudioContext.json",
+    "spec_url": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-audioworklet",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.Worklet",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Worklet",
+    "source_file": "api/Worklet.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/worklets.html#worklets-worklet",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "65"
+     },
+     "chrome_android": {
+      "version_added": "65"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "52"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "65"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.Worklet.addModule",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Worklet/addModule",
+    "source_file": "api/Worklet.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/worklets.html#dom-worklet-addmodule-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "65"
+     },
+     "chrome_android": {
+      "version_added": "65"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "52"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "65"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  },
+  {
+   "key": "api.WorkletGlobalScope",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WorkletGlobalScope",
+    "source_file": "api/WorkletGlobalScope.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/worklets.html#workletglobalscope",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "65"
+     },
+     "chrome_android": {
+      "version_added": "65"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "76"
+     },
+     "firefox_android": {
+      "version_added": "79"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "52"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "65"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:audio-worklet"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2021-04-26T00:00:00.000Z",
+ "baselineHighDateAsObject": "2023-10-26T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

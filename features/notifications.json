@@ -1,0 +1,2974 @@
+{
+ "compat_features": [
+  "api.Notification",
+  "api.Notification.Notification",
+  "api.Notification.actions",
+  "api.Notification.badge",
+  "api.Notification.body",
+  "api.Notification.click_event",
+  "api.Notification.close",
+  "api.Notification.close_event",
+  "api.Notification.data",
+  "api.Notification.dir",
+  "api.Notification.error_event",
+  "api.Notification.icon",
+  "api.Notification.image",
+  "api.Notification.lang",
+  "api.Notification.maxActions_static",
+  "api.Notification.permission_static",
+  "api.Notification.renotify",
+  "api.Notification.requestPermission_static",
+  "api.Notification.requestPermission_static.returns_promise",
+  "api.Notification.requireInteraction",
+  "api.Notification.secure_context_required",
+  "api.Notification.show_event",
+  "api.Notification.silent",
+  "api.Notification.tag",
+  "api.Notification.timestamp",
+  "api.Notification.title",
+  "api.Notification.vibrate",
+  "api.Notification.worker_support",
+  "api.NotificationEvent",
+  "api.NotificationEvent.NotificationEvent",
+  "api.NotificationEvent.action",
+  "api.NotificationEvent.notification",
+  "api.Permissions.permission_notifications",
+  "api.ServiceWorkerGlobalScope.notificationclick_event",
+  "api.ServiceWorkerGlobalScope.notificationclose_event",
+  "api.ServiceWorkerRegistration.getNotifications",
+  "api.ServiceWorkerRegistration.showNotification",
+  "api.ServiceWorkerRegistration.showNotification.options_actions_parameter",
+  "api.ServiceWorkerRegistration.showNotification.options_badge_parameter",
+  "api.ServiceWorkerRegistration.showNotification.options_data_parameter",
+  "api.ServiceWorkerRegistration.showNotification.options_image_parameter",
+  "api.ServiceWorkerRegistration.showNotification.options_renotify_parameter",
+  "api.ServiceWorkerRegistration.showNotification.options_requireInteraction_parameter",
+  "api.ServiceWorkerRegistration.showNotification.options_vibrate_parameter"
+ ],
+ "description": "The Notification() constructor shows a message to the user, typically using the notification system of the host operating system.",
+ "description_html": "The <code>Notification()</code> constructor shows a message to the user, typically using the notification system of the host operating system.",
+ "name": "Notifications",
+ "spec": [
+  {
+   "url": "https://notifications.spec.whatwg.org/",
+   "seriesComposition": "full",
+   "shortname": "notifications",
+   "series": {
+    "shortname": "notifications",
+    "currentSpecification": "notifications",
+    "title": "Notifications API",
+    "shortTitle": "Notifications API",
+    "nightlyUrl": "https://notifications.spec.whatwg.org/"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "Notifications API Workstream",
+     "url": "https://notifications.spec.whatwg.org/"
+    }
+   ],
+   "nightly": {
+    "url": "https://notifications.spec.whatwg.org/",
+    "status": "Living Standard",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/notifications",
+    "sourcePath": "notifications.bs",
+    "filename": "index.html"
+   },
+   "title": "Notifications API",
+   "source": "whatwg",
+   "shortTitle": "Notifications API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "notifications"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "20",
+   "edge": "14",
+   "firefox": "22",
+   "firefox_android": "22",
+   "safari": "7"
+  }
+ },
+ "id": "notifications",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Notifications API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Notifications_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Notification",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#api",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": [
+       "Starting in Chrome 49, notifications do not work in incognito mode.",
+       "Before Chrome 42, service worker additions were not supported."
+      ],
+      "version_added": "20"
+     },
+     "chrome_android": {
+      "notes": "A notification can only be sent from a service worker. To show a notification, see <a href='https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification'><code>ServiceWorkerRegistration.showNotification()</code></a>.",
+      "partial_implementation": true,
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": [
+      {
+       "version_added": "22"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "4"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "22"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "4"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "A notification can only be sent from a service worker. To show a notification, see <a href='https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification'><code>ServiceWorkerRegistration.showNotification()</code></a>.",
+      "partial_implementation": true,
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": [
+       "Starting in Opera 36, notifications do not work in incognito mode.",
+       "Before Opera 29, service worker additions were not supported."
+      ],
+      "version_added": "23"
+     },
+     "opera_android": {
+      "notes": [
+       "Notifications in Opera for Android are only available through service workers. To show notifications on Android, see <a href=\"https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification\"><code>ServiceWorkerRegistration.showNotification()</code></a>.",
+       "Starting in Opera for Android 36, notifications do not work in incognito mode."
+      ],
+      "partial_implementation": true,
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "notes": [
+       "The <code>Notification</code> interface is undefined, unless the page is a web app saved to the home screen. The app's manifest must have a non-default <code>display</code> value.",
+       "A notification can only be sent from a service worker. To show a notification, see <a href='https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification'><code>ServiceWorkerRegistration.showNotification()</code></a>."
+      ],
+      "partial_implementation": true,
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "notes": [
+       "Notifications in Samsung Internet are only available through service workers. To show notifications on Android, see <a href=\"https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification\"><code>ServiceWorkerRegistration.showNotification()</code></a>.",
+       "Starting in Samsung Internet 5.0, notifications do not work in incognito mode."
+      ],
+      "partial_implementation": true,
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.Notification",
+   "compat": {
+    "description": "<code>Notification()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/Notification",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-notification",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "20"
+     },
+     "chrome_android": {
+      "notes": [
+       "A notification can only be sent from a service worker. To show a notification, see <a href='https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification'><code>ServiceWorkerRegistration.showNotification()</code></a>.",
+       "This constructor always throws a <code>TypeError</code> exception."
+      ],
+      "partial_implementation": true,
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": [
+      {
+       "version_added": "22"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "4"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "22"
+      },
+      {
+       "prefix": "moz",
+       "version_added": "4"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": [
+       "A notification can only be sent from a service worker. To show a notification, see <a href='https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification'><code>ServiceWorkerRegistration.showNotification()</code></a>.",
+       "This constructor always throws a <code>TypeError</code> exception."
+      ],
+      "partial_implementation": true,
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "notes": [
+       "A notification can only be sent from a service worker. To show a notification, see <a href='https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification'><code>ServiceWorkerRegistration.showNotification()</code></a>.",
+       "This constructor always throws a <code>TypeError</code> exception."
+      ],
+      "partial_implementation": true,
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "notes": [
+       "This constructor throws a <code>ReferenceError</code> exception, unless the page is a web app saved to the home screen. The app's manifest must have a non-default <code>display</code> value.",
+       "A notification can only be sent from a service worker. To show a notification, see <a href='https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification'><code>ServiceWorkerRegistration.showNotification()</code></a>."
+      ],
+      "partial_implementation": true,
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "notes": [
+       "A notification can only be sent from a service worker. To show a notification, see <a href='https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification'><code>ServiceWorkerRegistration.showNotification()</code></a>.",
+       "This constructor always throws a <code>TypeError</code> exception."
+      ],
+      "partial_implementation": true,
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.actions",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/actions",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-actions",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": "preview"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "39"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.badge",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/badge",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-badge",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "39"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/280160",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/280160",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/280160",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.body",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/body",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-body",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "26"
+     },
+     "firefox_android": {
+      "version_added": "26"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "11"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.click_event",
+   "compat": {
+    "description": "<code>click</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/click_event",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-onclick",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "20"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "22"
+     },
+     "firefox_android": {
+      "version_added": "22"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.close",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/close",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-close",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "20"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "22"
+     },
+     "firefox_android": {
+      "version_added": "22"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.close_event",
+   "compat": {
+    "description": "<code>close</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/close_event",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-onclose",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "20"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "22"
+     },
+     "firefox_android": {
+      "version_added": "22"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.data",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/data",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-data",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "44"
+     },
+     "chrome_android": {
+      "version_added": "44"
+     },
+     "edge": {
+      "version_added": "16"
+     },
+     "firefox": {
+      "version_added": "34"
+     },
+     "firefox_android": {
+      "version_added": "34"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "31"
+     },
+     "opera_android": {
+      "version_added": "32"
+     },
+     "safari": {
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.dir",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/dir",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-dir",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "20"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "26"
+     },
+     "firefox_android": {
+      "version_added": "26"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.error_event",
+   "compat": {
+    "description": "<code>error</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/error_event",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-onerror",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "20"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "22"
+     },
+     "firefox_android": {
+      "version_added": "22"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.icon",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/icon",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-icon",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "26"
+     },
+     "firefox_android": {
+      "version_added": "26"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/280162",
+      "notes": "The property can be set, but has no effect.",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/280162",
+      "notes": "The property can be set, but has no effect.",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.image",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/image",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#image-resource",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "56"
+     },
+     "chrome_android": {
+      "version_added": "56"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "43"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.lang",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/lang",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-lang",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "26"
+     },
+     "firefox_android": {
+      "version_added": "26"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "11"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.maxActions_static",
+   "compat": {
+    "description": "<code>maxActions</code> static property",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/maxActions_static",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-maxactions",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": [
+      {
+       "version_added": "preview"
+      },
+      {
+       "version_added": "138",
+       "version_last": "139",
+       "version_removed": "140"
+      }
+     ],
+     "firefox_android": {
+      "version_added": "138",
+      "version_last": "139",
+      "version_removed": "140"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.permission_static",
+   "compat": {
+    "description": "<code>permission</code> static property",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/permission_static",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-permission",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "32"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "22"
+     },
+     "firefox_android": {
+      "version_added": "22"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "notes": "The parent <code>Notification</code> interface is undefined unless the page is a web app saved to the home screen. The app's manifest must have a non-default <code>display</code> value.",
+      "partial_implementation": true,
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.renotify",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/renotify",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-renotify",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.requestPermission_static",
+   "compat": {
+    "description": "<code>requestPermission()</code> static method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/requestPermission_static",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-requestpermission",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "20"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "notes": [
+       "From Firefox 70 onwards, cannot be called from a cross-origin <code>iframe</code>.",
+       "From Firefox 72 onwards, can only be called in response to a user gesture such as a <code>click</code> event."
+      ],
+      "version_added": "22"
+     },
+     "firefox_android": {
+      "notes": [
+       "From Firefox Android 79 onwards, cannot be called from a cross-origin <code>iframe</code>.",
+       "From Firefox Android 79 onwards, can only be called in response to a user gesture such as a <code>click</code> event."
+      ],
+      "version_added": "22"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": [
+      {
+       "version_added": "15"
+      },
+      {
+       "notes": "Only supported the deprecated callback syntax.",
+       "partial_implementation": true,
+       "version_added": "7",
+       "version_last": "14.1",
+       "version_removed": "15"
+      }
+     ],
+     "safari_ios": {
+      "notes": "The parent <code>Notification</code> interface is undefined unless the page is a web app saved to the home screen. The app's manifest must have a non-default <code>display</code> value.",
+      "partial_implementation": true,
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.requestPermission_static.returns_promise",
+   "compat": {
+    "description": "Returns a <code>Promise</code>",
+    "source_file": "api/Notification.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "47"
+     },
+     "chrome_android": {
+      "version_added": "47"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "46"
+     },
+     "firefox_android": {
+      "version_added": "46"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "34"
+     },
+     "opera_android": {
+      "version_added": "34"
+     },
+     "safari": {
+      "version_added": "15"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.requireInteraction",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/requireInteraction",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-requireinteraction",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "47"
+     },
+     "chrome_android": {
+      "version_added": "47"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": [
+      {
+       "notes": "Only supported on Windows. Behind a flag on other operating systems.",
+       "partial_implementation": true,
+       "version_added": "117"
+      },
+      {
+       "flags": [
+        {
+         "name": "dom.webnotifications.requireinteraction.enabled",
+         "type": "preference",
+         "value_to_set": "true"
+        }
+       ],
+       "version_added": "117"
+      }
+     ],
+     "firefox_android": {
+      "notes": "Only supported on Windows. Behind a flag on other operating systems.",
+      "partial_implementation": true,
+      "version_added": "117"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "34"
+     },
+     "opera_android": {
+      "version_added": "34"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.secure_context_required",
+   "compat": {
+    "description": "Secure context required",
+    "source_file": "api/Notification.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "62"
+     },
+     "chrome_android": {
+      "version_added": "62"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "67"
+     },
+     "firefox_android": {
+      "version_added": "67"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "49"
+     },
+     "opera_android": {
+      "version_added": "46"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.show_event",
+   "compat": {
+    "description": "<code>show</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/show_event",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-onshow",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "20"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "22"
+     },
+     "firefox_android": {
+      "version_added": "22"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.silent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/silent",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-silent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "132"
+     },
+     "firefox_android": {
+      "version_added": "132"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "16.6"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.tag",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/tag",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-tag",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "20"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "26"
+     },
+     "firefox_android": {
+      "version_added": "26"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/258922",
+      "notes": "The property can be set, but has no effect.",
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.timestamp",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/timestamp",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-timestamp",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.title",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/title",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-title",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "33"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "14"
+     },
+     "firefox": {
+      "version_added": "26"
+     },
+     "firefox_android": {
+      "version_added": "26"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "23"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": "11"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.vibrate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Notification/vibrate",
+    "source_file": "api/Notification.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-vibrate",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "40"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Notification.worker_support",
+   "compat": {
+    "description": "Available in workers",
+    "source_file": "api/Notification.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "version_added": "41"
+     },
+     "firefox_android": {
+      "version_added": "41"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.NotificationEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/NotificationEvent",
+    "source_file": "api/NotificationEvent.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#notificationevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "notes": "Notifications are supported on macOS Ventura and later.",
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "notes": "Notifications are supported in web apps saved to the home screen.",
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "notes": "Notifications are supported in web apps saved to the home screen.",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.NotificationEvent.NotificationEvent",
+   "compat": {
+    "description": "<code>NotificationEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/NotificationEvent/NotificationEvent",
+    "source_file": "api/NotificationEvent.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notificationevent-notificationevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "notes": "Notifications are supported on macOS Ventura and later.",
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "notes": "Notifications are supported in web apps saved to the home screen.",
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "notes": "Notifications are supported in web apps saved to the home screen.",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.NotificationEvent.action",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/NotificationEvent/action",
+    "source_file": "api/NotificationEvent.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-notification-actions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.NotificationEvent.notification",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/NotificationEvent/notification",
+    "source_file": "api/NotificationEvent.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#ref-for-dom-notificationevent-notification",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.Permissions.permission_notifications",
+   "compat": {
+    "description": "<code>notifications</code> permission",
+    "source_file": "api/Permissions.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "43"
+     },
+     "chrome_android": {
+      "version_added": "43"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "notes": "Alias for the <code>push</code> permission (returns the same value).",
+      "version_added": "46"
+     },
+     "firefox_android": {
+      "notes": "Alias for the <code>push</code> permission (returns the same value).",
+      "version_added": "46"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "30"
+     },
+     "opera_android": {
+      "version_added": "30"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope.notificationclick_event",
+   "compat": {
+    "description": "<code>notificationclick</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": [
+     "https://notifications.spec.whatwg.org/#activating-a-notification",
+     "https://notifications.spec.whatwg.org/#dom-serviceworkerglobalscope-onnotificationclick"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "notes": "Notifications are supported on macOS Ventura and later.",
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": "40"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope.notificationclose_event",
+   "compat": {
+    "description": "<code>notificationclose</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/notificationclose_event",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-serviceworkerglobalscope-onnotificationclose",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "34"
+     },
+     "opera_android": {
+      "version_added": "34"
+     },
+     "safari": {
+      "notes": "Notifications are supported on macOS Ventura and later.",
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "50"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.getNotifications",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/getNotifications",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-getnotifications",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "40"
+     },
+     "chrome_android": {
+      "version_added": "40"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "27"
+     },
+     "opera_android": {
+      "version_added": "27"
+     },
+     "safari": {
+      "notes": "Notifications are supported on macOS Ventura and later.",
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "notes": "Notifications are supported in web apps saved to the home screen.",
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "notes": "Notifications are supported in web apps saved to the home screen.",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.showNotification",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "spec_url": "https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-shownotification",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "42"
+     },
+     "chrome_android": {
+      "version_added": "42"
+     },
+     "edge": {
+      "version_added": "17"
+     },
+     "firefox": {
+      "version_added": "44"
+     },
+     "firefox_android": {
+      "version_added": "44"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "29"
+     },
+     "opera_android": {
+      "version_added": "29"
+     },
+     "safari": {
+      "notes": "Notifications are supported on macOS Ventura and later.",
+      "version_added": "16"
+     },
+     "safari_ios": {
+      "notes": "Notifications are supported in web apps saved to the home screen.",
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40443309",
+      "version_added": false
+     },
+     "webview_ios": {
+      "notes": "Notifications are supported in web apps saved to the home screen.",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.showNotification.options_actions_parameter",
+   "compat": {
+    "description": "<code>options.actions</code> parameter",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "18"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.showNotification.options_badge_parameter",
+   "compat": {
+    "description": "<code>options.badge</code> parameter",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "53"
+     },
+     "chrome_android": {
+      "version_added": "53"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "39"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/280160",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/280160",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/280160",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.showNotification.options_data_parameter",
+   "compat": {
+    "description": "<code>options.data</code> parameter",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "44"
+     },
+     "chrome_android": {
+      "version_added": "44"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "31"
+     },
+     "opera_android": {
+      "version_added": "32"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.showNotification.options_image_parameter",
+   "compat": {
+    "description": "<code>options.image</code> parameter",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "56"
+     },
+     "chrome_android": {
+      "version_added": "56"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "43"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.showNotification.options_renotify_parameter",
+   "compat": {
+    "description": "<code>options.renotify</code> parameter",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "50"
+     },
+     "chrome_android": {
+      "version_added": "50"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "37"
+     },
+     "opera_android": {
+      "version_added": "37"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.showNotification.options_requireInteraction_parameter",
+   "compat": {
+    "description": "<code>options.requireInteraction</code> parameter",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "47"
+     },
+     "chrome_android": {
+      "version_added": "47"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "34"
+     },
+     "opera_android": {
+      "version_added": "34"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.showNotification.options_vibrate_parameter",
+   "compat": {
+    "description": "<code>options.vibrate</code> parameter",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "45"
+     },
+     "chrome_android": {
+      "notes": "In Android Oreo and above, regardless of Chrome version, this parameter has no effect. See <a href='https://crbug.com/40630890'>bug 40630890</a>.",
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "In Android Oreo and above, regardless of Chrome version, this parameter has no effect. See <a href='https://crbug.com/40630890'>bug 40630890</a>.",
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "32"
+     },
+     "opera_android": {
+      "notes": "In Android Oreo and above, regardless of Chrome version, this parameter has no effect. See <a href='https://crbug.com/40630890'>bug 40630890</a>.",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "notes": "In Android Oreo and above, regardless of Chrome version, this parameter has no effect. See <a href='https://crbug.com/40630890'>bug 40630890</a>.",
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:notifications"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [
+   "https://webkit.org/b/280160",
+   "https://webkit.org/b/280162",
+   "https://webkit.org/b/258922"
+  ],
+  "safari_ios": [
+   "https://webkit.org/b/280160",
+   "https://webkit.org/b/280162"
+  ]
+ }
+}

@@ -1,0 +1,536 @@
+{
+ "compat_features": [
+  "api.Navigator.storage",
+  "api.Permissions.permission_persistent-storage",
+  "api.StorageManager",
+  "api.StorageManager.estimate",
+  "api.StorageManager.persist",
+  "api.StorageManager.persisted",
+  "api.WorkerNavigator.storage"
+ ],
+ "description": "The navigator.storage API provides information about the availability and persistence of the data that a site stores on the device, by using APIs such as the Cache API or the IndexedDB API.",
+ "description_html": "The <code>navigator.storage</code> API provides information about the availability and persistence of the data that a site stores on the device, by using APIs such as the Cache API or the IndexedDB API.",
+ "group": "storage",
+ "name": "Storage manager",
+ "spec": [
+  {
+   "url": "https://storage.spec.whatwg.org/",
+   "seriesComposition": "full",
+   "shortname": "storage",
+   "series": {
+    "shortname": "storage",
+    "currentSpecification": "storage",
+    "title": "Storage",
+    "shortTitle": "Storage",
+    "nightlyUrl": "https://storage.spec.whatwg.org/"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "Storage Workstream",
+     "url": "https://storage.spec.whatwg.org/"
+    }
+   ],
+   "nightly": {
+    "url": "https://storage.spec.whatwg.org/",
+    "status": "Living Standard",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/storage",
+    "sourcePath": "storage.bs",
+    "filename": "index.html"
+   },
+   "title": "Storage",
+   "source": "whatwg",
+   "shortTitle": "Storage",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "storage"
+    ],
+    "excludePaths": [
+     "storage/buckets"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": "low",
+  "baseline_low_date": "2023-09-18",
+  "support": {
+   "chrome": "61",
+   "chrome_android": "61",
+   "edge": "79",
+   "firefox": "57",
+   "firefox_android": "57",
+   "safari": "17",
+   "safari_ios": "17"
+  }
+ },
+ "id": "storage-manager",
+ "groups": [
+  "storage"
+ ],
+ "groupPaths": [
+  [
+   "Storage"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Storage API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Storage_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Navigator.storage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/storage",
+    "source_file": "api/Navigator.json",
+    "spec_url": "https://storage.spec.whatwg.org/#dom-navigatorstorage-storage",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "55"
+     },
+     "chrome_android": {
+      "version_added": "55"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "57"
+     },
+     "firefox_android": {
+      "version_added": "57"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "42"
+     },
+     "opera_android": {
+      "version_added": "42"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "55"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:storage-manager"
+    ]
+   }
+  },
+  {
+   "key": "api.Permissions.permission_persistent-storage",
+   "compat": {
+    "description": "<code>persistent-storage</code> permission",
+    "source_file": "api/Permissions.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "71"
+     },
+     "chrome_android": {
+      "version_added": "71"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "53"
+     },
+     "firefox_android": {
+      "version_added": "53"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "58"
+     },
+     "opera_android": {
+      "version_added": "50"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:storage-manager"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageManager",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StorageManager",
+    "source_file": "api/StorageManager.json",
+    "spec_url": "https://storage.spec.whatwg.org/#storagemanager",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "55"
+     },
+     "chrome_android": {
+      "version_added": "55"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "57"
+     },
+     "firefox_android": {
+      "version_added": "57"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "42"
+     },
+     "opera_android": {
+      "version_added": "42"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "55"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:storage-manager"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageManager.estimate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StorageManager/estimate",
+    "source_file": "api/StorageManager.json",
+    "spec_url": "https://storage.spec.whatwg.org/#ref-for-dom-storagemanager-estimate",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "61"
+     },
+     "chrome_android": {
+      "version_added": "61"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "57"
+     },
+     "firefox_android": {
+      "version_added": "57"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "48"
+     },
+     "opera_android": {
+      "version_added": "45"
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "61"
+     },
+     "webview_ios": {
+      "version_added": "17"
+     }
+    },
+    "tags": [
+     "web-features:storage-manager"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageManager.persist",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StorageManager/persist",
+    "source_file": "api/StorageManager.json",
+    "spec_url": "https://storage.spec.whatwg.org/#ref-for-dom-storagemanager-persist",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "55"
+     },
+     "chrome_android": {
+      "version_added": "55"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "57"
+     },
+     "firefox_android": {
+      "version_added": "57"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "42"
+     },
+     "opera_android": {
+      "version_added": "42"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "55"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:storage-manager"
+    ]
+   }
+  },
+  {
+   "key": "api.StorageManager.persisted",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/StorageManager/persisted",
+    "source_file": "api/StorageManager.json",
+    "spec_url": "https://storage.spec.whatwg.org/#dom-storagemanager-persisted",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "55"
+     },
+     "chrome_android": {
+      "version_added": "55"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "57"
+     },
+     "firefox_android": {
+      "version_added": "57"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "42"
+     },
+     "opera_android": {
+      "version_added": "42"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "55"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:storage-manager"
+    ]
+   }
+  },
+  {
+   "key": "api.WorkerNavigator.storage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/WorkerNavigator/storage",
+    "source_file": "api/WorkerNavigator.json",
+    "spec_url": "https://storage.spec.whatwg.org/#dom-navigatorstorage-storage",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "55"
+     },
+     "chrome_android": {
+      "version_added": "55"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "57"
+     },
+     "firefox_android": {
+      "version_added": "57"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "42"
+     },
+     "opera_android": {
+      "version_added": "42"
+     },
+     "safari": {
+      "version_added": "15.2"
+     },
+     "safari_ios": {
+      "version_added": "15.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "55"
+     },
+     "webview_ios": {
+      "version_added": "15.2"
+     }
+    },
+    "tags": [
+     "web-features:storage-manager"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2023-09-18T00:00:00.000Z",
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

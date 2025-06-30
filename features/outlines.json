@@ -1,0 +1,998 @@
+{
+ "compat_features": [
+  "css.properties.outline-color",
+  "css.properties.outline-offset",
+  "css.properties.outline-style",
+  "css.properties.outline-style.auto",
+  "css.properties.outline-style.dashed",
+  "css.properties.outline-style.dotted",
+  "css.properties.outline-style.double",
+  "css.properties.outline-style.groove",
+  "css.properties.outline-style.inset",
+  "css.properties.outline-style.none",
+  "css.properties.outline-style.outset",
+  "css.properties.outline-style.ridge",
+  "css.properties.outline-style.solid",
+  "css.properties.outline-width"
+ ],
+ "description": "The outline-color, outline-style, and outline-width and outline-offset CSS properties style a line around an element, outside of the border.",
+ "description_html": "The <code>outline-color</code>, <code>outline-style</code>, and <code>outline-width</code> and <code>outline-offset</code> CSS properties style a line around an element, outside of the border.",
+ "name": "Outlines",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css-ui-4/#outline",
+   "seriesComposition": "full",
+   "shortname": "css-ui-4",
+   "series": {
+    "shortname": "css-ui",
+    "currentSpecification": "css-ui-4",
+    "title": "CSS Basic User Interface",
+    "shortTitle": "CSS User Interface",
+    "releaseUrl": "https://www.w3.org/TR/css-ui/",
+    "nightlyUrl": "https://drafts.csswg.org/css-ui/"
+   },
+   "seriesVersion": "4",
+   "shortTitle": "CSS User Interface 4",
+   "seriesPrevious": "css-ui-3",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/css-ui-4/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://drafts.csswg.org/css-ui-4/",
+    "status": "Editor's Draft",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css-ui-4/",
+     "https://w3c.github.io/csswg-drafts/css-ui/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "sourcePath": "css-ui-4/Overview.bs",
+    "filename": "index.html"
+   },
+   "title": "CSS Basic User Interface Module Level 4",
+   "source": "w3c",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/css-ui"
+    ]
+   },
+   "fragment": "outline"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2019-10-05",
+  "baseline_low_date": "2017-04-05",
+  "support": {
+   "chrome": "1",
+   "chrome_android": "18",
+   "edge": "15",
+   "firefox": "1.5",
+   "firefox_android": "4",
+   "safari": "1.2",
+   "safari_ios": "1"
+  }
+ },
+ "id": "outlines",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "outline-color",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/outline-color"
+  },
+  {
+   "title": "outline-style",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/outline-style"
+  },
+  {
+   "title": "outline-width",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/outline-width"
+  },
+  {
+   "title": "outline-offset",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/outline-offset"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "css.properties.outline-color",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/outline-color",
+    "source_file": "css/properties/outline-color.json",
+    "spec_url": "https://drafts.csswg.org/css-ui/#outline-color",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "version_added": "1.5"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "1",
+       "version_last": "3.5",
+       "version_removed": "3.6"
+      }
+     ],
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "8"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "7"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:outlines"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.outline-offset",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/outline-offset",
+    "source_file": "css/properties/outline-offset.json",
+    "spec_url": "https://drafts.csswg.org/css-ui/#outline-offset",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "15"
+     },
+     "firefox": {
+      "notes": "Before Firefox 88, an outline does not follow the shape of <code>border-radius</code>.",
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "notes": "Before Firefox for Android 88, an outline does not follow the shape of <code>border-radius</code>.",
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "9.5"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:outlines"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.outline-style",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/outline-style",
+    "source_file": "css/properties/outline-style.json",
+    "spec_url": "https://drafts.csswg.org/css-ui/#outline-style",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "notes": "Before Firefox 88, an outline does not follow the shape of <code>border-radius</code>.",
+       "version_added": "1.5"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "1",
+       "version_last": "3.5",
+       "version_removed": "3.6"
+      }
+     ],
+     "firefox_android": {
+      "notes": "Before Firefox for Android 88, an outline does not follow the shape of <code>border-radius</code>.",
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "8"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "7"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "2"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:outlines"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.outline-style.auto",
+   "compat": {
+    "source_file": "css/properties/outline-style.json",
+    "spec_url": "https://drafts.csswg.org/css-ui/#outline-style",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:outlines"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.outline-style.dashed",
+   "compat": {
+    "source_file": "css/properties/outline-style.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds-3/#valdef-line-style-dashed",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:outlines"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.outline-style.dotted",
+   "compat": {
+    "source_file": "css/properties/outline-style.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds-3/#valdef-line-style-dotted",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:outlines"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.outline-style.double",
+   "compat": {
+    "source_file": "css/properties/outline-style.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds-3/#valdef-line-style-double",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:outlines"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.outline-style.groove",
+   "compat": {
+    "source_file": "css/properties/outline-style.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds-3/#valdef-line-style-groove",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:outlines"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.outline-style.inset",
+   "compat": {
+    "source_file": "css/properties/outline-style.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds-3/#valdef-line-style-inset",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:outlines"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.outline-style.none",
+   "compat": {
+    "source_file": "css/properties/outline-style.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds-3/#valdef-line-style-none",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:outlines"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.outline-style.outset",
+   "compat": {
+    "source_file": "css/properties/outline-style.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds-3/#valdef-line-style-outset",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:outlines"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.outline-style.ridge",
+   "compat": {
+    "source_file": "css/properties/outline-style.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds-3/#valdef-line-style-ridge",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:outlines"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.outline-style.solid",
+   "compat": {
+    "source_file": "css/properties/outline-style.json",
+    "spec_url": "https://drafts.csswg.org/css-backgrounds-3/#valdef-line-style-solid",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:outlines"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.outline-width",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/outline-width",
+    "source_file": "css/properties/outline-width.json",
+    "spec_url": "https://drafts.csswg.org/css-ui/#outline-width",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": [
+      {
+       "notes": "Before Firefox 88, an outline does not follow the shape of <code>border-radius</code>.",
+       "version_added": "1.5"
+      },
+      {
+       "prefix": "-moz-",
+       "version_added": "1",
+       "version_last": "3.5",
+       "version_removed": "3.6"
+      }
+     ],
+     "firefox_android": {
+      "notes": "Before Firefox for Android 88, an outline does not follow the shape of <code>border-radius</code>.",
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "8"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "7"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "37"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:outlines"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "css"
+ ],
+ "baselineLowDateAsObject": "2017-04-05T00:00:00.000Z",
+ "baselineHighDateAsObject": "2019-10-05T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

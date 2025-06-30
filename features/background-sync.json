@@ -1,0 +1,823 @@
+{
+ "compat_features": [
+  "api.Permissions.permission_background-sync",
+  "api.ServiceWorkerGlobalScope.sync_event",
+  "api.ServiceWorkerRegistration.sync",
+  "api.SyncEvent",
+  "api.SyncEvent.SyncEvent",
+  "api.SyncEvent.lastChance",
+  "api.SyncEvent.tag",
+  "api.SyncManager",
+  "api.SyncManager.getTags",
+  "api.SyncManager.register",
+  "api.SyncManager.worker_support"
+ ],
+ "description": "The background synchronization API registers a service worker callback to run only when the device is no longer offline. You can use this to let users continue using your app while offline and synchronize with a server after reconnecting.",
+ "description_html": "The background synchronization API registers a service worker callback to run only when the device is no longer offline. You can use this to let users continue using your app while offline and synchronize with a server after reconnecting.",
+ "name": "Background sync",
+ "spec": [
+  {
+   "url": "https://wicg.github.io/background-sync/spec/",
+   "seriesComposition": "full",
+   "shortname": "background-sync",
+   "series": {
+    "shortname": "background-sync",
+    "currentSpecification": "background-sync",
+    "title": "Web Background Synchronization",
+    "shortTitle": "Background Sync",
+    "nightlyUrl": "https://wicg.github.io/background-sync/spec/"
+   },
+   "shortTitle": "Background Sync",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Platform Incubator Community Group",
+     "url": "https://www.w3.org/community/wicg/"
+    }
+   ],
+   "nightly": {
+    "url": "https://wicg.github.io/background-sync/spec/",
+    "status": "Draft Community Group Report",
+    "alternateUrls": [],
+    "repository": "https://github.com/WICG/background-sync",
+    "sourcePath": "spec/index.bs",
+    "filename": "index.html"
+   },
+   "title": "Web Background Synchronization",
+   "source": "spec",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "background-sync"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "49",
+   "chrome_android": "49",
+   "edge": "79"
+  }
+ },
+ "id": "background-sync",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Background Synchronization API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Background_Synchronization_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/173",
+   "position": "negative",
+   "concerns": []
+  },
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Permissions.permission_background-sync",
+   "compat": {
+    "description": "<code>background-sync</code> permission",
+    "source_file": "api/Permissions.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "62"
+     },
+     "chrome_android": {
+      "version_added": "62"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "49"
+     },
+     "opera_android": {
+      "version_added": "46"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:background-sync"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope.sync_event",
+   "compat": {
+    "description": "<code>sync</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/sync_event",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": "https://wicg.github.io/background-sync/spec/#dom-serviceworkerglobalscope-onsync",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "24"
+     },
+     "opera_android": {
+      "version_added": "24"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40449796",
+      "version_added": false
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:background-sync"
+    ]
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.sync",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/sync",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "spec_url": "https://wicg.github.io/background-sync/spec/#dom-serviceworkerregistration-sync",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "4.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40449796",
+      "version_added": false
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:background-sync"
+    ]
+   }
+  },
+  {
+   "key": "api.SyncEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SyncEvent",
+    "source_file": "api/SyncEvent.json",
+    "spec_url": "https://wicg.github.io/background-sync/spec/#sync-event",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40449796",
+      "version_added": false
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:background-sync"
+    ]
+   }
+  },
+  {
+   "key": "api.SyncEvent.SyncEvent",
+   "compat": {
+    "description": "<code>SyncEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SyncEvent/SyncEvent",
+    "source_file": "api/SyncEvent.json",
+    "spec_url": "https://wicg.github.io/background-sync/spec/#dom-syncevent-syncevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40449796",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:background-sync"
+    ]
+   }
+  },
+  {
+   "key": "api.SyncEvent.lastChance",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SyncEvent/lastChance",
+    "source_file": "api/SyncEvent.json",
+    "spec_url": "https://wicg.github.io/background-sync/spec/#ref-for-dom-syncevent-lastchance③",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40449796",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:background-sync"
+    ]
+   }
+  },
+  {
+   "key": "api.SyncEvent.tag",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SyncEvent/tag",
+    "source_file": "api/SyncEvent.json",
+    "spec_url": "https://wicg.github.io/background-sync/spec/#ref-for-dom-syncevent-tag",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40449796",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:background-sync"
+    ]
+   }
+  },
+  {
+   "key": "api.SyncManager",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SyncManager",
+    "source_file": "api/SyncManager.json",
+    "spec_url": "https://wicg.github.io/background-sync/spec/#sync-manager-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     },
+     "safari_ios": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40449796",
+      "version_added": false
+     },
+     "webview_ios": {
+      "impl_url": "https://webkit.org/b/182565",
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:background-sync"
+    ]
+   }
+  },
+  {
+   "key": "api.SyncManager.getTags",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SyncManager/getTags",
+    "source_file": "api/SyncManager.json",
+    "spec_url": "https://wicg.github.io/background-sync/spec/#dom-syncmanager-gettags",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40449796",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:background-sync"
+    ]
+   }
+  },
+  {
+   "key": "api.SyncManager.register",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/SyncManager/register",
+    "source_file": "api/SyncManager.json",
+    "spec_url": "https://wicg.github.io/background-sync/spec/#dom-syncmanager-register",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "49"
+     },
+     "chrome_android": {
+      "version_added": "49"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "36"
+     },
+     "opera_android": {
+      "version_added": "36"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40449796",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:background-sync"
+    ]
+   }
+  },
+  {
+   "key": "api.SyncManager.worker_support",
+   "compat": {
+    "description": "Available in workers",
+    "source_file": "api/SyncManager.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "61"
+      },
+      {
+       "notes": "Only available in the <code>Window</code> and <code>ServiceWorker</code> global scopes.",
+       "partial_implementation": true,
+       "version_added": "49",
+       "version_last": "60",
+       "version_removed": "61"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "61"
+      },
+      {
+       "notes": "Only available in the <code>Window</code> and <code>ServiceWorker</code> global scopes.",
+       "partial_implementation": true,
+       "version_added": "49",
+       "version_last": "60",
+       "version_removed": "61"
+      }
+     ],
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": [
+      {
+       "version_added": "8.0"
+      },
+      {
+       "notes": "Only available in the <code>Window</code> and <code>ServiceWorker</code> global scopes.",
+       "partial_implementation": true,
+       "version_added": "5.0",
+       "version_last": "7.4",
+       "version_removed": "8.0"
+      }
+     ],
+     "webview_android": {
+      "impl_url": "https://crbug.com/40449796",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:background-sync"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [
+   "https://webkit.org/b/182565"
+  ],
+  "safari_ios": [
+   "https://webkit.org/b/182565"
+  ]
+ }
+}

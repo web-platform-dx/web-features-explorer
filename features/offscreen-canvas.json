@@ -1,0 +1,5101 @@
+{
+ "caniuse": "offscreencanvas",
+ "compat_features": [
+  "api.HTMLCanvasElement.transferControlToOffscreen",
+  "api.OffscreenCanvas",
+  "api.OffscreenCanvas.OffscreenCanvas",
+  "api.OffscreenCanvas.convertToBlob",
+  "api.OffscreenCanvas.convertToBlob.option_type_parameter_webp",
+  "api.OffscreenCanvas.getContext",
+  "api.OffscreenCanvas.getContext.2d_context",
+  "api.OffscreenCanvas.getContext.bitmaprenderer_context",
+  "api.OffscreenCanvas.getContext.webgl2_context",
+  "api.OffscreenCanvas.getContext.webgl_context",
+  "api.OffscreenCanvas.height",
+  "api.OffscreenCanvas.transferToImageBitmap",
+  "api.OffscreenCanvas.width",
+  "api.OffscreenCanvasRenderingContext2D",
+  "api.OffscreenCanvasRenderingContext2D.arc",
+  "api.OffscreenCanvasRenderingContext2D.arcTo",
+  "api.OffscreenCanvasRenderingContext2D.beginPath",
+  "api.OffscreenCanvasRenderingContext2D.bezierCurveTo",
+  "api.OffscreenCanvasRenderingContext2D.canvas",
+  "api.OffscreenCanvasRenderingContext2D.clearRect",
+  "api.OffscreenCanvasRenderingContext2D.clip",
+  "api.OffscreenCanvasRenderingContext2D.closePath",
+  "api.OffscreenCanvasRenderingContext2D.createImageData",
+  "api.OffscreenCanvasRenderingContext2D.createLinearGradient",
+  "api.OffscreenCanvasRenderingContext2D.createPattern",
+  "api.OffscreenCanvasRenderingContext2D.createRadialGradient",
+  "api.OffscreenCanvasRenderingContext2D.direction",
+  "api.OffscreenCanvasRenderingContext2D.drawImage",
+  "api.OffscreenCanvasRenderingContext2D.ellipse",
+  "api.OffscreenCanvasRenderingContext2D.fill",
+  "api.OffscreenCanvasRenderingContext2D.fillRect",
+  "api.OffscreenCanvasRenderingContext2D.fillStyle",
+  "api.OffscreenCanvasRenderingContext2D.fillText",
+  "api.OffscreenCanvasRenderingContext2D.filter",
+  "api.OffscreenCanvasRenderingContext2D.font",
+  "api.OffscreenCanvasRenderingContext2D.fontKerning",
+  "api.OffscreenCanvasRenderingContext2D.fontStretch",
+  "api.OffscreenCanvasRenderingContext2D.fontVariantCaps",
+  "api.OffscreenCanvasRenderingContext2D.getImageData",
+  "api.OffscreenCanvasRenderingContext2D.getLineDash",
+  "api.OffscreenCanvasRenderingContext2D.getTransform",
+  "api.OffscreenCanvasRenderingContext2D.globalAlpha",
+  "api.OffscreenCanvasRenderingContext2D.globalCompositeOperation",
+  "api.OffscreenCanvasRenderingContext2D.imageSmoothingEnabled",
+  "api.OffscreenCanvasRenderingContext2D.imageSmoothingQuality",
+  "api.OffscreenCanvasRenderingContext2D.isPointInPath",
+  "api.OffscreenCanvasRenderingContext2D.isPointInStroke",
+  "api.OffscreenCanvasRenderingContext2D.letterSpacing",
+  "api.OffscreenCanvasRenderingContext2D.lineCap",
+  "api.OffscreenCanvasRenderingContext2D.lineDashOffset",
+  "api.OffscreenCanvasRenderingContext2D.lineJoin",
+  "api.OffscreenCanvasRenderingContext2D.lineTo",
+  "api.OffscreenCanvasRenderingContext2D.lineWidth",
+  "api.OffscreenCanvasRenderingContext2D.measureText",
+  "api.OffscreenCanvasRenderingContext2D.miterLimit",
+  "api.OffscreenCanvasRenderingContext2D.moveTo",
+  "api.OffscreenCanvasRenderingContext2D.putImageData",
+  "api.OffscreenCanvasRenderingContext2D.quadraticCurveTo",
+  "api.OffscreenCanvasRenderingContext2D.rect",
+  "api.OffscreenCanvasRenderingContext2D.resetTransform",
+  "api.OffscreenCanvasRenderingContext2D.restore",
+  "api.OffscreenCanvasRenderingContext2D.rotate",
+  "api.OffscreenCanvasRenderingContext2D.save",
+  "api.OffscreenCanvasRenderingContext2D.scale",
+  "api.OffscreenCanvasRenderingContext2D.setLineDash",
+  "api.OffscreenCanvasRenderingContext2D.setTransform",
+  "api.OffscreenCanvasRenderingContext2D.shadowBlur",
+  "api.OffscreenCanvasRenderingContext2D.shadowColor",
+  "api.OffscreenCanvasRenderingContext2D.shadowOffsetX",
+  "api.OffscreenCanvasRenderingContext2D.shadowOffsetY",
+  "api.OffscreenCanvasRenderingContext2D.stroke",
+  "api.OffscreenCanvasRenderingContext2D.strokeRect",
+  "api.OffscreenCanvasRenderingContext2D.strokeStyle",
+  "api.OffscreenCanvasRenderingContext2D.strokeText",
+  "api.OffscreenCanvasRenderingContext2D.textAlign",
+  "api.OffscreenCanvasRenderingContext2D.textBaseline",
+  "api.OffscreenCanvasRenderingContext2D.textRendering",
+  "api.OffscreenCanvasRenderingContext2D.transform",
+  "api.OffscreenCanvasRenderingContext2D.translate",
+  "api.OffscreenCanvasRenderingContext2D.wordSpacing"
+ ],
+ "description": "The OffscreenCanvas API provides a canvas that can be drawn to off screen, with no dependencies on the DOM, which can be used to run heavy rendering operations inside a worker context.",
+ "description_html": "The <code>OffscreenCanvas</code> API provides a canvas that can be drawn to off screen, with no dependencies on the DOM, which can be used to run heavy rendering operations inside a worker context.",
+ "group": "canvas",
+ "name": "Offscreen canvas",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-interface",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "the-offscreencanvas-interface"
+  }
+ ],
+ "status": {
+  "baseline": "low",
+  "baseline_low_date": "2023-03-27",
+  "support": {
+   "chrome": "69",
+   "chrome_android": "69",
+   "edge": "79",
+   "firefox": "105",
+   "firefox_android": "105",
+   "safari": "16.4",
+   "safari_ios": "16.4"
+  }
+ },
+ "id": "offscreen-canvas",
+ "groups": [
+  "canvas"
+ ],
+ "groupPaths": [
+  [
+   "Canvas"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "OffscreenCanvas",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/OffscreenCanvas"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.05797873,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/49"
+ },
+ "interop": [
+  {
+   "year": "2023",
+   "label": "interop-2023-offscreencanvas"
+  }
+ ],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.HTMLCanvasElement.transferControlToOffscreen",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLCanvasElement/transferControlToOffscreen",
+    "source_file": "api/HTMLCanvasElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-canvas-transfercontroltooffscreen-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvas",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/OffscreenCanvas",
+    "source_file": "api/OffscreenCanvas.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvas.OffscreenCanvas",
+   "compat": {
+    "description": "<code>OffscreenCanvas()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/OffscreenCanvas/OffscreenCanvas",
+    "source_file": "api/OffscreenCanvas.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-offscreencanvas-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvas.convertToBlob",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/OffscreenCanvas/convertToBlob",
+    "source_file": "api/OffscreenCanvas.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-offscreencanvas-converttoblob-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": [
+      {
+       "version_added": "105"
+      },
+      {
+       "alternative_name": "toBlob",
+       "version_added": "105"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "105"
+      },
+      {
+       "alternative_name": "toBlob",
+       "version_added": "105"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvas.convertToBlob.option_type_parameter_webp",
+   "compat": {
+    "description": "<code>option.type</code> parameter supports <code>\"image/webp\"</code>",
+    "source_file": "api/OffscreenCanvas.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvas.getContext",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/OffscreenCanvas/getContext",
+    "source_file": "api/OffscreenCanvas.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-offscreencanvas-getcontext-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvas.getContext.2d_context",
+   "compat": {
+    "description": "<code>2d</code> context",
+    "source_file": "api/OffscreenCanvas.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvas.getContext.bitmaprenderer_context",
+   "compat": {
+    "description": "<code>bitmaprenderer</code> context",
+    "source_file": "api/OffscreenCanvas.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "76"
+     },
+     "chrome_android": {
+      "version_added": "76"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "7.0"
+     },
+     "opera": {
+      "version_added": "63"
+     },
+     "opera_android": {
+      "version_added": "54"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "12.0"
+     },
+     "webview_android": {
+      "version_added": "76"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvas.getContext.webgl2_context",
+   "compat": {
+    "description": "<code>webgl2</code> context",
+    "source_file": "api/OffscreenCanvas.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "17"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvas.getContext.webgl_context",
+   "compat": {
+    "description": "<code>webgl</code> context",
+    "source_file": "api/OffscreenCanvas.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "17"
+     },
+     "safari_ios": {
+      "version_added": "17"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "17"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvas.height",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/OffscreenCanvas/height",
+    "source_file": "api/OffscreenCanvas.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-offscreencanvas-height-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvas.transferToImageBitmap",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/OffscreenCanvas/transferToImageBitmap",
+    "source_file": "api/OffscreenCanvas.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-offscreencanvas-transfertoimagebitmap-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvas.width",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/OffscreenCanvas/width",
+    "source_file": "api/OffscreenCanvas.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-offscreencanvas-width-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/OffscreenCanvasRenderingContext2D",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#the-offscreen-2d-rendering-context",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.arc",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/arc",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-arc-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.arcTo",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/arcTo",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-arcto-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.beginPath",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/beginPath",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-beginpath-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.bezierCurveTo",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/bezierCurveTo",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-beziercurveto-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.canvas",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/canvas",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-canvas-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.clearRect",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/clearRect",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-clearrect-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.clip",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/clip",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-clip-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.closePath",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/closePath",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-closepath-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.createImageData",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/createImageData",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-createimagedata-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.createLinearGradient",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/createLinearGradient",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-createlineargradient-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.createPattern",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/createPattern",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-createpattern-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.createRadialGradient",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/createRadialGradient",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-createradialgradient-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.direction",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/direction",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-direction-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.drawImage",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/drawImage",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-drawimage-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.ellipse",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/ellipse",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-ellipse-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.fill",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fill",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-fill-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.fillRect",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fillRect",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-fillrect-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.fillStyle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fillStyle",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-fillstyle-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.fillText",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fillText",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-filltext-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.filter",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/filter",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-filter-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "116"
+     },
+     "firefox_android": {
+      "version_added": "116"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.font",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/font",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-font-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": [
+      {
+       "version_added": "18.4"
+      },
+      {
+       "notes": "The <code>font-weight</code> can be set, but is not reflected back (see <a href=\"https://webkit.org/b/284115\">bug 284115</a>).",
+       "partial_implementation": true,
+       "version_added": "16.4",
+       "version_last": "18.3",
+       "version_removed": "18.4"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "18.4"
+      },
+      {
+       "notes": "The <code>font-weight</code> can be set, but is not reflected back (see <a href=\"https://webkit.org/b/284115\">bug 284115</a>).",
+       "partial_implementation": true,
+       "version_added": "16.4",
+       "version_last": "18.3",
+       "version_removed": "18.4"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": [
+      {
+       "version_added": "18.4"
+      },
+      {
+       "notes": "The <code>font-weight</code> can be set, but is not reflected back (see <a href=\"https://webkit.org/b/284115\">bug 284115</a>).",
+       "partial_implementation": true,
+       "version_added": "16.4",
+       "version_last": "18.3",
+       "version_removed": "18.4"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.fontKerning",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fontKerning",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-fontkerning",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "99"
+     },
+     "chrome_android": {
+      "version_added": "99"
+     },
+     "edge": {
+      "version_added": "99"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "21.0"
+     },
+     "opera": {
+      "version_added": "85"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "99"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.fontStretch",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fontStretch",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-fontstretch",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "99"
+     },
+     "chrome_android": {
+      "version_added": "99"
+     },
+     "edge": {
+      "version_added": "99"
+     },
+     "firefox": {
+      "version_added": "117"
+     },
+     "firefox_android": {
+      "version_added": "117"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "21.0"
+     },
+     "opera": {
+      "version_added": "85"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "99"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.fontVariantCaps",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fontVariantCaps",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-fontvariantcaps",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "99"
+     },
+     "chrome_android": {
+      "version_added": "99"
+     },
+     "edge": {
+      "version_added": "99"
+     },
+     "firefox": {
+      "version_added": "117"
+     },
+     "firefox_android": {
+      "version_added": "117"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "21.0"
+     },
+     "opera": {
+      "version_added": "85"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "99"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.getImageData",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/getImageData",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-getimagedata-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.getLineDash",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/getLineDash",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-getlinedash-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.getTransform",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/getTransform",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-gettransform-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": "80"
+     },
+     "edge": {
+      "version_added": "80"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "9.0"
+     },
+     "opera": {
+      "version_added": "67"
+     },
+     "opera_android": {
+      "version_added": "57"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": "80"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.globalAlpha",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/globalAlpha",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-globalalpha-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.globalCompositeOperation",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-globalcompositeoperation-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.imageSmoothingEnabled",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-imagesmoothingenabled-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.imageSmoothingQuality",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/imageSmoothingQuality",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-imagesmoothingquality-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.isPointInPath",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/isPointInPath",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-ispointinpath-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.isPointInStroke",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/isPointInStroke",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-ispointinstroke-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.letterSpacing",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/letterSpacing",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-letterspacing",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "99"
+     },
+     "chrome_android": {
+      "version_added": "99"
+     },
+     "edge": {
+      "version_added": "99"
+     },
+     "firefox": {
+      "version_added": "115"
+     },
+     "firefox_android": {
+      "version_added": "115"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "21.0"
+     },
+     "opera": {
+      "version_added": "85"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "99"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.lineCap",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineCap",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-linecap-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.lineDashOffset",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineDashOffset",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-linedashoffset-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.lineJoin",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineJoin",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-linejoin-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.lineTo",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineTo",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-lineto-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.lineWidth",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineWidth",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-linewidth-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.measureText",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/measureText",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-measuretext-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.miterLimit",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/miterLimit",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-miterlimit-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.moveTo",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/moveTo",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-moveto-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.putImageData",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/putImageData",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-putimagedata-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.quadraticCurveTo",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/quadraticCurveTo",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-quadraticcurveto-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.rect",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/rect",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-rect-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.resetTransform",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/resetTransform",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-resettransform-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.restore",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/restore",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-restore-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.rotate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/rotate",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-rotate-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.save",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/save",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-save-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.scale",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/scale",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-scale-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.setLineDash",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-setlinedash-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.setTransform",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setTransform",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-settransform-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.shadowBlur",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/shadowBlur",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-shadowblur-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.shadowColor",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/shadowColor",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-shadowcolor-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.shadowOffsetX",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/shadowOffsetX",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-shadowoffsetx-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.shadowOffsetY",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/shadowOffsetY",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-shadowoffsety-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.stroke",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/stroke",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-stroke-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.strokeRect",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/strokeRect",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-strokerect-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.strokeStyle",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/strokeStyle",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-strokestyle-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.strokeText",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/strokeText",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-stroketext-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.textAlign",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/textAlign",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-textalign-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.textBaseline",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/textBaseline",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-textbaseline-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.textRendering",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/textRendering",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-textrendering",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "99"
+     },
+     "chrome_android": {
+      "version_added": "99"
+     },
+     "edge": {
+      "version_added": "99"
+     },
+     "firefox": {
+      "version_added": "116"
+     },
+     "firefox_android": {
+      "version_added": "116"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "21.0"
+     },
+     "opera": {
+      "version_added": "85"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "99"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.transform",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/transform",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-transform-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.translate",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/translate",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-translate-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "69"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "105"
+     },
+     "firefox_android": {
+      "version_added": "105"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "6.0"
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "48"
+     },
+     "safari": {
+      "version_added": "16.4"
+     },
+     "safari_ios": {
+      "version_added": "16.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "10.0"
+     },
+     "webview_android": {
+      "version_added": "69"
+     },
+     "webview_ios": {
+      "version_added": "16.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  },
+  {
+   "key": "api.OffscreenCanvasRenderingContext2D.wordSpacing",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/wordSpacing",
+    "source_file": "api/OffscreenCanvasRenderingContext2D.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-wordspacing",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "99"
+     },
+     "chrome_android": {
+      "version_added": "99"
+     },
+     "edge": {
+      "version_added": "99"
+     },
+     "firefox": {
+      "version_added": "115"
+     },
+     "firefox_android": {
+      "version_added": "115"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "21.0"
+     },
+     "opera": {
+      "version_added": "85"
+     },
+     "opera_android": {
+      "version_added": "68"
+     },
+     "safari": {
+      "version_added": "18.4"
+     },
+     "safari_ios": {
+      "version_added": "18.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "18.0"
+     },
+     "webview_android": {
+      "version_added": "99"
+     },
+     "webview_ios": {
+      "version_added": "18.4"
+     }
+    },
+    "tags": [
+     "web-features:offscreen-canvas"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2023-03-27T00:00:00.000Z",
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

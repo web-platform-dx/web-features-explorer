@@ -1,0 +1,1042 @@
+{
+ "compat_features": [
+  "api.CustomStateSet",
+  "api.CustomStateSet.@@iterator",
+  "api.CustomStateSet.add",
+  "api.CustomStateSet.clear",
+  "api.CustomStateSet.delete",
+  "api.CustomStateSet.entries",
+  "api.CustomStateSet.forEach",
+  "api.CustomStateSet.has",
+  "api.CustomStateSet.keys",
+  "api.CustomStateSet.size",
+  "api.CustomStateSet.values",
+  "api.ElementInternals.states",
+  "css.selectors.state"
+ ],
+ "description": "The :state() CSS pseudo-class matches custom elements based on their custom state, set through the ElementInternals.states API.",
+ "description_html": "The <code>:state()</code> CSS pseudo-class matches custom elements based on their custom state, set through the <code>ElementInternals.states</code> API.",
+ "group": "custom-elements",
+ "name": ":state()",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-state-pseudo-class",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "custom-state-pseudo-class"
+  }
+ ],
+ "status": {
+  "baseline": "low",
+  "baseline_low_date": "2024-05-17",
+  "support": {
+   "chrome": "125",
+   "chrome_android": "125",
+   "edge": "125",
+   "firefox": "126",
+   "firefox_android": "126",
+   "safari": "17.4",
+   "safari_ios": "17.4"
+  }
+ },
+ "id": "state",
+ "groups": [
+  "custom-elements"
+ ],
+ "groupPaths": [
+  [
+   "HTML",
+   "Custom elements"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": ":state()",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/:state"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.00218279,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/329"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.CustomStateSet",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CustomStateSet",
+    "source_file": "api/CustomStateSet.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/custom-elements.html#customstateset",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": "126"
+     },
+     "firefox_android": {
+      "version_added": "126"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "17.4"
+     }
+    },
+    "tags": [
+     "web-features:state"
+    ]
+   }
+  },
+  {
+   "key": "api.CustomStateSet.@@iterator",
+   "compat": {
+    "description": "[Symbol.iterator]",
+    "source_file": "api/CustomStateSet.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-state-pseudo-class",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": "126"
+     },
+     "firefox_android": {
+      "version_added": "126"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "17.4"
+     }
+    },
+    "tags": [
+     "web-features:state"
+    ]
+   }
+  },
+  {
+   "key": "api.CustomStateSet.add",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CustomStateSet/add",
+    "source_file": "api/CustomStateSet.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-state-pseudo-class",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": "126"
+     },
+     "firefox_android": {
+      "version_added": "126"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "17.4"
+     }
+    },
+    "tags": [
+     "web-features:state"
+    ]
+   }
+  },
+  {
+   "key": "api.CustomStateSet.clear",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CustomStateSet/clear",
+    "source_file": "api/CustomStateSet.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-state-pseudo-class",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": "126"
+     },
+     "firefox_android": {
+      "version_added": "126"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "17.4"
+     }
+    },
+    "tags": [
+     "web-features:state"
+    ]
+   }
+  },
+  {
+   "key": "api.CustomStateSet.delete",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CustomStateSet/delete",
+    "source_file": "api/CustomStateSet.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-state-pseudo-class",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": "126"
+     },
+     "firefox_android": {
+      "version_added": "126"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "17.4"
+     }
+    },
+    "tags": [
+     "web-features:state"
+    ]
+   }
+  },
+  {
+   "key": "api.CustomStateSet.entries",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CustomStateSet/entries",
+    "source_file": "api/CustomStateSet.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-state-pseudo-class",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": "126"
+     },
+     "firefox_android": {
+      "version_added": "126"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "17.4"
+     }
+    },
+    "tags": [
+     "web-features:state"
+    ]
+   }
+  },
+  {
+   "key": "api.CustomStateSet.forEach",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CustomStateSet/forEach",
+    "source_file": "api/CustomStateSet.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-state-pseudo-class",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": "126"
+     },
+     "firefox_android": {
+      "version_added": "126"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "17.4"
+     }
+    },
+    "tags": [
+     "web-features:state"
+    ]
+   }
+  },
+  {
+   "key": "api.CustomStateSet.has",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CustomStateSet/has",
+    "source_file": "api/CustomStateSet.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-state-pseudo-class",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": "126"
+     },
+     "firefox_android": {
+      "version_added": "126"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "17.4"
+     }
+    },
+    "tags": [
+     "web-features:state"
+    ]
+   }
+  },
+  {
+   "key": "api.CustomStateSet.keys",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CustomStateSet/keys",
+    "source_file": "api/CustomStateSet.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-state-pseudo-class",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": "126"
+     },
+     "firefox_android": {
+      "version_added": "126"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "17.4"
+     }
+    },
+    "tags": [
+     "web-features:state"
+    ]
+   }
+  },
+  {
+   "key": "api.CustomStateSet.size",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CustomStateSet/size",
+    "source_file": "api/CustomStateSet.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-state-pseudo-class",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": "126"
+     },
+     "firefox_android": {
+      "version_added": "126"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "17.4"
+     }
+    },
+    "tags": [
+     "web-features:state"
+    ]
+   }
+  },
+  {
+   "key": "api.CustomStateSet.values",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/CustomStateSet/values",
+    "source_file": "api/CustomStateSet.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-state-pseudo-class",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": "126"
+     },
+     "firefox_android": {
+      "version_added": "126"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "17.4"
+     }
+    },
+    "tags": [
+     "web-features:state"
+    ]
+   }
+  },
+  {
+   "key": "api.ElementInternals.states",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ElementInternals/states",
+    "source_file": "api/ElementInternals.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-state-pseudo-class",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "90"
+     },
+     "chrome_android": {
+      "version_added": "90"
+     },
+     "edge": {
+      "version_added": "90"
+     },
+     "firefox": {
+      "version_added": "126"
+     },
+     "firefox_android": {
+      "version_added": "126"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": "76"
+     },
+     "opera_android": {
+      "version_added": "64"
+     },
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "15.0"
+     },
+     "webview_android": {
+      "version_added": "90"
+     },
+     "webview_ios": {
+      "version_added": "17.4"
+     }
+    },
+    "tags": [
+     "web-features:state"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.state",
+   "compat": {
+    "description": "Custom state pseudo-class selector (<code>:state()</code>)",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:state",
+    "source_file": "css/selectors/state.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/semantics-other.html#selector-custom",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "125"
+      },
+      {
+       "notes": "Uses a dashed-ident (such as <code>:--foo</code>) instead of <code>:state()</code>.",
+       "partial_implementation": true,
+       "version_added": "90",
+       "version_last": "124",
+       "version_removed": "125"
+      }
+     ],
+     "chrome_android": [
+      {
+       "version_added": "125"
+      },
+      {
+       "notes": "Uses a dashed-ident (such as <code>:--foo</code>) instead of <code>:state()</code>.",
+       "partial_implementation": true,
+       "version_added": "90",
+       "version_last": "124",
+       "version_removed": "125"
+      }
+     ],
+     "edge": [
+      {
+       "version_added": "125"
+      },
+      {
+       "notes": "Uses a dashed-ident (such as <code>:--foo</code>) instead of <code>:state()</code>.",
+       "partial_implementation": true,
+       "version_added": "90",
+       "version_last": "124",
+       "version_removed": "125"
+      }
+     ],
+     "firefox": {
+      "version_added": "126"
+     },
+     "firefox_android": {
+      "version_added": "126"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Uses a dashed-ident (such as <code>:--foo</code>) instead of <code>:state()</code>.",
+      "partial_implementation": true,
+      "version_added": "16.0",
+      "version_removed": false
+     },
+     "opera": [
+      {
+       "version_added": "111"
+      },
+      {
+       "notes": "Uses a dashed-ident (such as <code>:--foo</code>) instead of <code>:state()</code>.",
+       "partial_implementation": true,
+       "version_added": "76",
+       "version_last": "110",
+       "version_removed": "111"
+      }
+     ],
+     "opera_android": [
+      {
+       "version_added": "83"
+      },
+      {
+       "notes": "Uses a dashed-ident (such as <code>:--foo</code>) instead of <code>:state()</code>.",
+       "partial_implementation": true,
+       "version_added": "64",
+       "version_last": "82",
+       "version_removed": "83"
+      }
+     ],
+     "safari": {
+      "version_added": "17.4"
+     },
+     "safari_ios": {
+      "version_added": "17.4"
+     },
+     "samsunginternet_android": [
+      {
+       "version_added": "27.0"
+      },
+      {
+       "notes": "Uses a dashed-ident (such as <code>:--foo</code>) instead of <code>:state()</code>.",
+       "partial_implementation": true,
+       "version_added": "15.0",
+       "version_last": "26.0",
+       "version_removed": "27.0"
+      }
+     ],
+     "webview_android": [
+      {
+       "version_added": "125"
+      },
+      {
+       "notes": "Uses a dashed-ident (such as <code>:--foo</code>) instead of <code>:state()</code>.",
+       "partial_implementation": true,
+       "version_added": "90",
+       "version_last": "124",
+       "version_removed": "125"
+      }
+     ],
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:state"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "css"
+ ],
+ "baselineLowDateAsObject": "2024-05-17T00:00:00.000Z",
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

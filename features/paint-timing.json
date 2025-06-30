@@ -1,0 +1,420 @@
+{
+ "compat_features": [
+  "api.PerformancePaintTiming",
+  "api.PerformancePaintTiming.first-contentful-paint",
+  "api.PerformancePaintTiming.first-paint"
+ ],
+ "description": "The paint performance entry and the PerformancePaintTiming API measures the duration of \"paint\" (also called \"render\") operations as a page loads. The API measures the time to First Paint (FP) and First Contentful Paint (FCP), common metrics for perceived loading times.",
+ "description_html": "The <code>paint</code> performance entry and the <code>PerformancePaintTiming</code> API measures the duration of \"paint\" (also called \"render\") operations as a page loads. The API measures the time to First Paint (FP) and First Contentful Paint (FCP), common metrics for perceived loading times.",
+ "group": "performance",
+ "name": "Paint timing",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/paint-timing/",
+   "seriesComposition": "full",
+   "shortname": "paint-timing",
+   "series": {
+    "shortname": "paint-timing",
+    "currentSpecification": "paint-timing",
+    "title": "Paint Timing",
+    "shortTitle": "Paint Timing",
+    "releaseUrl": "https://www.w3.org/TR/paint-timing/",
+    "nightlyUrl": "https://w3c.github.io/paint-timing/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Performance Working Group",
+     "url": "https://www.w3.org/groups/wg/webperf/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/paint-timing/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/paint-timing/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/paint-timing",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Paint Timing",
+   "source": "w3c",
+   "shortTitle": "Paint Timing",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "paint-timing"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {}
+ },
+ "id": "paint-timing",
+ "groups": [
+  "performance"
+ ],
+ "groupPaths": [
+  [
+   "Performance"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "PerformancePaintTiming",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/PerformancePaintTiming"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.PerformancePaintTiming",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformancePaintTiming",
+    "source_file": "api/PerformancePaintTiming.json",
+    "spec_url": "https://w3c.github.io/paint-timing/#sec-PerformancePaintTiming",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "60"
+     },
+     "chrome_android": {
+      "version_added": "60"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "84"
+     },
+     "firefox_android": {
+      "version_added": "84"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "47"
+     },
+     "opera_android": {
+      "version_added": "44"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0"
+     },
+     "webview_android": {
+      "version_added": "60"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:paint-timing"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformancePaintTiming.first-contentful-paint",
+   "compat": {
+    "description": "<code>first-contentful-paint</code> named entry",
+    "mdn_url": "https://developer.mozilla.org/docs/Glossary/First_contentful_paint",
+    "source_file": "api/PerformancePaintTiming.json",
+    "spec_url": "https://w3c.github.io/paint-timing/#first-contentful-paint",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "flags": [
+        {
+         "name": "--enable-blink-features",
+         "type": "runtime_flag",
+         "value_to_set": "SoftNavigationHeuristicsExposeFPAndFCP"
+        }
+       ],
+       "notes": "See <a href=\"https://crbug.com/40066208\">bug 40066208</a>.",
+       "version_added": "116"
+      },
+      {
+       "version_added": "60",
+       "version_last": "115",
+       "version_removed": "116"
+      }
+     ],
+     "chrome_android": [
+      {
+       "flags": [
+        {
+         "name": "--enable-blink-features",
+         "type": "runtime_flag",
+         "value_to_set": "SoftNavigationHeuristicsExposeFPAndFCP"
+        }
+       ],
+       "notes": "See <a href=\"https://crbug.com/40066208\">bug 40066208</a>.",
+       "version_added": "116"
+      },
+      {
+       "version_added": "60",
+       "version_last": "115",
+       "version_removed": "116"
+      }
+     ],
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "--enable-blink-features",
+         "type": "runtime_flag",
+         "value_to_set": "SoftNavigationHeuristicsExposeFPAndFCP"
+        }
+       ],
+       "notes": "See <a href=\"https://crbug.com/40066208\">bug 40066208</a>.",
+       "version_added": "116"
+      },
+      {
+       "version_added": "79",
+       "version_last": "115",
+       "version_removed": "116"
+      }
+     ],
+     "firefox": {
+      "version_added": "84"
+     },
+     "firefox_android": {
+      "version_added": "84"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0",
+      "version_removed": false
+     },
+     "opera": [
+      {
+       "flags": [
+        {
+         "name": "--enable-blink-features",
+         "type": "runtime_flag",
+         "value_to_set": "SoftNavigationHeuristicsExposeFPAndFCP"
+        }
+       ],
+       "notes": "See <a href=\"https://crbug.com/40066208\">bug 40066208</a>.",
+       "version_added": "102"
+      },
+      {
+       "version_added": "47",
+       "version_last": "101",
+       "version_removed": "102"
+      }
+     ],
+     "opera_android": {
+      "version_added": "44",
+      "version_last": "77",
+      "version_removed": "78"
+     },
+     "safari": {
+      "version_added": "14.1"
+     },
+     "safari_ios": {
+      "version_added": "14.5"
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0",
+      "version_last": "23.0",
+      "version_removed": "24.0"
+     },
+     "webview_android": {
+      "version_added": "60",
+      "version_last": "115",
+      "version_removed": "116"
+     },
+     "webview_ios": {
+      "version_added": "14.5"
+     }
+    },
+    "tags": [
+     "web-features:paint-timing"
+    ]
+   }
+  },
+  {
+   "key": "api.PerformancePaintTiming.first-paint",
+   "compat": {
+    "description": "<code>first-paint</code> named entry",
+    "mdn_url": "https://developer.mozilla.org/docs/Glossary/First_paint",
+    "source_file": "api/PerformancePaintTiming.json",
+    "spec_url": "https://w3c.github.io/paint-timing/#first-paint",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "flags": [
+        {
+         "name": "--enable-blink-features",
+         "type": "runtime_flag",
+         "value_to_set": "SoftNavigationHeuristicsExposeFPAndFCP"
+        }
+       ],
+       "notes": "See <a href=\"https://crbug.com/40066208\">bug 40066208</a>.",
+       "version_added": "116"
+      },
+      {
+       "version_added": "60",
+       "version_last": "115",
+       "version_removed": "116"
+      }
+     ],
+     "chrome_android": [
+      {
+       "flags": [
+        {
+         "name": "--enable-blink-features",
+         "type": "runtime_flag",
+         "value_to_set": "SoftNavigationHeuristicsExposeFPAndFCP"
+        }
+       ],
+       "notes": "See <a href=\"https://crbug.com/40066208\">bug 40066208</a>.",
+       "version_added": "116"
+      },
+      {
+       "version_added": "60",
+       "version_last": "115",
+       "version_removed": "116"
+      }
+     ],
+     "edge": [
+      {
+       "flags": [
+        {
+         "name": "--enable-blink-features",
+         "type": "runtime_flag",
+         "value_to_set": "SoftNavigationHeuristicsExposeFPAndFCP"
+        }
+       ],
+       "notes": "See <a href=\"https://crbug.com/40066208\">bug 40066208</a>.",
+       "version_added": "116"
+      },
+      {
+       "version_added": "79",
+       "version_last": "115",
+       "version_removed": "116"
+      }
+     ],
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0",
+      "version_removed": false
+     },
+     "opera": [
+      {
+       "flags": [
+        {
+         "name": "--enable-blink-features",
+         "type": "runtime_flag",
+         "value_to_set": "SoftNavigationHeuristicsExposeFPAndFCP"
+        }
+       ],
+       "notes": "See <a href=\"https://crbug.com/40066208\">bug 40066208</a>.",
+       "version_added": "102"
+      },
+      {
+       "version_added": "47",
+       "version_last": "101",
+       "version_removed": "102"
+      }
+     ],
+     "opera_android": {
+      "version_added": "44",
+      "version_last": "77",
+      "version_removed": "78"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "8.0",
+      "version_last": "23.0",
+      "version_removed": "24.0"
+     },
+     "webview_android": {
+      "version_added": "60",
+      "version_last": "115",
+      "version_removed": "116"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:paint-timing"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

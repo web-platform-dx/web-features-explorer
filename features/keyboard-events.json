@@ -1,0 +1,1792 @@
+{
+ "compat_features": [
+  "api.Element.keydown_event",
+  "api.Element.keyup_event",
+  "api.KeyboardEvent",
+  "api.KeyboardEvent.KeyboardEvent",
+  "api.KeyboardEvent.altKey",
+  "api.KeyboardEvent.code",
+  "api.KeyboardEvent.ctrlKey",
+  "api.KeyboardEvent.getModifierState",
+  "api.KeyboardEvent.getModifierState.key_parameter_alt",
+  "api.KeyboardEvent.getModifierState.key_parameter_altgraph",
+  "api.KeyboardEvent.getModifierState.key_parameter_capslock",
+  "api.KeyboardEvent.getModifierState.key_parameter_control",
+  "api.KeyboardEvent.getModifierState.key_parameter_fn",
+  "api.KeyboardEvent.getModifierState.key_parameter_meta",
+  "api.KeyboardEvent.getModifierState.key_parameter_numlock",
+  "api.KeyboardEvent.getModifierState.key_parameter_scrolllock",
+  "api.KeyboardEvent.getModifierState.key_parameter_shift",
+  "api.KeyboardEvent.getModifierState.key_parameter_symbol",
+  "api.KeyboardEvent.isComposing",
+  "api.KeyboardEvent.key",
+  "api.KeyboardEvent.key.dead_key",
+  "api.KeyboardEvent.key.non_printable_keys",
+  "api.KeyboardEvent.key.printable_key",
+  "api.KeyboardEvent.location",
+  "api.KeyboardEvent.metaKey",
+  "api.KeyboardEvent.repeat",
+  "api.KeyboardEvent.shiftKey"
+ ],
+ "description": "The keydown and keyup events fire for each key press (or, with modifier keys, a combination of key presses) on a keyboard.",
+ "description_html": "The <code>keydown</code> and <code>keyup</code> events fire for each key press (or, with modifier keys, a combination of key presses) on a keyboard.",
+ "name": "Keyboard events",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/uievents/#events-keyboardevents",
+   "seriesComposition": "full",
+   "shortname": "uievents",
+   "series": {
+    "shortname": "uievents",
+    "currentSpecification": "uievents",
+    "title": "UI Events",
+    "shortTitle": "UI Events",
+    "releaseUrl": "https://www.w3.org/TR/uievents/",
+    "nightlyUrl": "https://w3c.github.io/uievents/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Applications Working Group",
+     "url": "https://www.w3.org/groups/wg/webapps/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/uievents/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/uievents/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/uievents",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "UI Events",
+   "source": "w3c",
+   "shortTitle": "UI Events",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "uievents"
+    ]
+   },
+   "fragment": "events-keyboardevents"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "1",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "6",
+   "firefox_android": "6",
+   "safari": "1.2",
+   "safari_ios": "1"
+  }
+ },
+ "id": "keyboard-events",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Element: keydown event",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Element/keydown_event"
+  },
+  {
+   "title": "Element: keyup event",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Element/keyup_event"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Element.keydown_event",
+   "compat": {
+    "description": "<code>keydown</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/keydown_event",
+    "source_file": "api/Element.json",
+    "spec_url": [
+     "https://w3c.github.io/uievents/#event-type-keydown",
+     "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "6"
+     },
+     "firefox_android": {
+      "version_added": "6"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.Element.keyup_event",
+   "compat": {
+    "description": "<code>keyup</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/keyup_event",
+    "source_file": "api/Element.json",
+    "spec_url": [
+     "https://w3c.github.io/uievents/#event-type-keyup",
+     "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeyup"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "6"
+     },
+     "firefox_android": {
+      "version_added": "6"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/KeyboardEvent",
+    "source_file": "api/KeyboardEvent.json",
+    "spec_url": "https://w3c.github.io/uievents/#interface-keyboardevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.KeyboardEvent",
+   "compat": {
+    "description": "<code>KeyboardEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/KeyboardEvent/KeyboardEvent",
+    "source_file": "api/KeyboardEvent.json",
+    "spec_url": "https://w3c.github.io/uievents/#dom-keyboardevent-keyboardevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "26"
+     },
+     "chrome_android": {
+      "version_added": "26"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "31"
+     },
+     "firefox_android": {
+      "version_added": "31"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "7"
+     },
+     "safari_ios": {
+      "version_added": "7"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.5"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "7"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.altKey",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/KeyboardEvent/altKey",
+    "source_file": "api/KeyboardEvent.json",
+    "spec_url": "https://w3c.github.io/uievents/#dom-keyboardevent-altkey",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.code",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/KeyboardEvent/code",
+    "source_file": "api/KeyboardEvent.json",
+    "spec_url": "https://w3c.github.io/uievents/#dom-keyboardevent-code",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "notes": "The value is always empty.",
+      "partial_implementation": true,
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "38"
+     },
+     "firefox_android": {
+      "notes": "The value is always empty.",
+      "partial_implementation": true,
+      "version_added": "38"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "The value is always empty.",
+      "partial_implementation": true,
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "notes": "The value is always empty.",
+      "partial_implementation": true,
+      "version_added": "35"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "notes": "The value is always empty.",
+      "partial_implementation": true,
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "notes": "The value is always empty.",
+      "partial_implementation": true,
+      "version_added": "48"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.ctrlKey",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/KeyboardEvent/ctrlKey",
+    "source_file": "api/KeyboardEvent.json",
+    "spec_url": "https://w3c.github.io/uievents/#dom-keyboardevent-ctrlkey",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.getModifierState",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/KeyboardEvent/getModifierState",
+    "source_file": "api/KeyboardEvent.json",
+    "spec_url": "https://w3c.github.io/uievents/#dom-keyboardevent-getmodifierstate",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "30"
+     },
+     "chrome_android": {
+      "version_added": "30"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "17"
+     },
+     "opera_android": {
+      "version_added": "18"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.getModifierState.key_parameter_alt",
+   "compat": {
+    "description": "<code>\"Alt\"</code> as <code>key</code> parameter",
+    "source_file": "api/KeyboardEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "30"
+     },
+     "chrome_android": {
+      "version_added": "30"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "17"
+     },
+     "opera_android": {
+      "version_added": "18"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.getModifierState.key_parameter_altgraph",
+   "compat": {
+    "description": "<code>\"AltGraph\"</code> as <code>key</code> parameter",
+    "source_file": "api/KeyboardEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "48"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.getModifierState.key_parameter_capslock",
+   "compat": {
+    "description": "<code>\"CapsLock\"</code> as <code>key</code> parameter",
+    "source_file": "api/KeyboardEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "48"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.getModifierState.key_parameter_control",
+   "compat": {
+    "description": "<code>\"Control\"</code> as <code>key</code> parameter",
+    "source_file": "api/KeyboardEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "30"
+     },
+     "chrome_android": {
+      "version_added": "30"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "17"
+     },
+     "opera_android": {
+      "version_added": "18"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.getModifierState.key_parameter_fn",
+   "compat": {
+    "description": "<code>\"Fn\"</code> as <code>key</code> parameter",
+    "source_file": "api/KeyboardEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "48"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.getModifierState.key_parameter_meta",
+   "compat": {
+    "description": "<code>\"Meta\"</code> as <code>key</code> parameter",
+    "source_file": "api/KeyboardEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "30"
+     },
+     "chrome_android": {
+      "version_added": "30"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "17"
+     },
+     "opera_android": {
+      "version_added": "18"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.getModifierState.key_parameter_numlock",
+   "compat": {
+    "description": "<code>\"NumLock\"</code> as <code>key</code> parameter",
+    "source_file": "api/KeyboardEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "48"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.getModifierState.key_parameter_scrolllock",
+   "compat": {
+    "description": "<code>\"ScrollLock\"</code> as <code>key</code> parameter",
+    "source_file": "api/KeyboardEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": [
+      {
+       "version_added": "79"
+      },
+      {
+       "alternative_name": "Scroll",
+       "version_added": "12",
+       "version_last": "18",
+       "version_removed": "79"
+      }
+     ],
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "alternative_name": "Scroll",
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "48"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.getModifierState.key_parameter_shift",
+   "compat": {
+    "description": "<code>\"Shift\"</code> as <code>key</code> parameter",
+    "source_file": "api/KeyboardEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "30"
+     },
+     "chrome_android": {
+      "version_added": "30"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "17"
+     },
+     "opera_android": {
+      "version_added": "18"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.getModifierState.key_parameter_symbol",
+   "compat": {
+    "description": "<code>\"Symbol\"</code> as <code>key</code> parameter",
+    "source_file": "api/KeyboardEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "48"
+     },
+     "chrome_android": {
+      "version_added": "48"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "35"
+     },
+     "opera_android": {
+      "version_added": "35"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "48"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.isComposing",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/KeyboardEvent/isComposing",
+    "source_file": "api/KeyboardEvent.json",
+    "spec_url": "https://w3c.github.io/uievents/#dom-keyboardevent-iscomposing",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "56"
+     },
+     "chrome_android": {
+      "version_added": "56"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "31"
+     },
+     "firefox_android": {
+      "version_added": "31"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "43"
+     },
+     "opera_android": {
+      "version_added": "43"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "6.0"
+     },
+     "webview_android": {
+      "version_added": "56"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.key",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/KeyboardEvent/key",
+    "source_file": "api/KeyboardEvent.json",
+    "spec_url": "https://w3c.github.io/uievents/#dom-keyboardevent-key",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "23"
+     },
+     "firefox_android": {
+      "version_added": "23"
+     },
+     "ie": {
+      "notes": "IE's implementation does not completely match the current spec because it is based on an older version of the spec.",
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.key.dead_key",
+   "compat": {
+    "description": "Dead key",
+    "source_file": "api/KeyboardEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "≤79"
+     },
+     "firefox": {
+      "version_added": "37"
+     },
+     "firefox_android": {
+      "version_added": "37"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.key.non_printable_keys",
+   "compat": {
+    "description": "Non-printable keys",
+    "source_file": "api/KeyboardEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "23"
+     },
+     "firefox_android": {
+      "version_added": "23"
+     },
+     "ie": {
+      "notes": "IE's implementation does not completely match the current spec because it is based on an older version of the spec.",
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.key.printable_key",
+   "compat": {
+    "description": "Printable keys",
+    "source_file": "api/KeyboardEvent.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "51"
+     },
+     "chrome_android": {
+      "version_added": "51"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "29"
+     },
+     "firefox_android": {
+      "version_added": "29"
+     },
+     "ie": {
+      "notes": "IE's implementation does not completely match the current spec because it is based on an older version of the spec.",
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "38"
+     },
+     "opera_android": {
+      "version_added": "41"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "5.0"
+     },
+     "webview_android": {
+      "version_added": "51"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.location",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/KeyboardEvent/location",
+    "source_file": "api/KeyboardEvent.json",
+    "spec_url": "https://w3c.github.io/uievents/#dom-keyboardevent-location",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "30"
+     },
+     "chrome_android": {
+      "version_added": "30"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "15"
+     },
+     "firefox_android": {
+      "version_added": "15"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "17"
+     },
+     "opera_android": {
+      "version_added": "18"
+     },
+     "safari": {
+      "version_added": "8"
+     },
+     "safari_ios": {
+      "version_added": "8"
+     },
+     "samsunginternet_android": {
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "8"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.metaKey",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/KeyboardEvent/metaKey",
+    "source_file": "api/KeyboardEvent.json",
+    "spec_url": "https://w3c.github.io/uievents/#dom-keyboardevent-metakey",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "notes": "Since Firefox 48, the Windows key is no longer treated as a <code>meta</code> key.",
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "notes": "Since Firefox for Android 48, the Windows key is no longer treated as a <code>meta</code> key.",
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.repeat",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/KeyboardEvent/repeat",
+    "source_file": "api/KeyboardEvent.json",
+    "spec_url": "https://w3c.github.io/uievents/#dom-keyboardevent-repeat",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "On Windows and Linux, if multiple keys are held down, a <code>keydown</code> event for the most recently pressed key will trigger with <code>repeat</code> incorrectly set to <code>false</code>. See <a href=\"https://crbug.com/40940886\">bug 40940886</a>.",
+      "partial_implementation": true,
+      "version_added": "32"
+     },
+     "chrome_android": {
+      "notes": "On Windows and Linux, if multiple keys are held down, a <code>keydown</code> event for the most recently pressed key will trigger with <code>repeat</code> incorrectly set to <code>false</code>. See <a href=\"https://crbug.com/40940886\">bug 40940886</a>.",
+      "partial_implementation": true,
+      "version_added": "32"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "28"
+     },
+     "firefox_android": {
+      "version_added": "28"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "notes": "On Windows and Linux, if multiple keys are held down, a <code>keydown</code> event for the most recently pressed key will trigger with <code>repeat</code> incorrectly set to <code>false</code>. See <a href=\"https://crbug.com/40940886\">bug 40940886</a>.",
+      "partial_implementation": true,
+      "version_added": "5.0"
+     },
+     "opera": {
+      "notes": "On Windows and Linux, if multiple keys are held down, a <code>keydown</code> event for the most recently pressed key will trigger with <code>repeat</code> incorrectly set to <code>false</code>. See <a href=\"https://crbug.com/40940886\">bug 40940886</a>.",
+      "partial_implementation": true,
+      "version_added": "19"
+     },
+     "opera_android": {
+      "notes": "On Windows and Linux, if multiple keys are held down, a <code>keydown</code> event for the most recently pressed key will trigger with <code>repeat</code> incorrectly set to <code>false</code>. See <a href=\"https://crbug.com/40940886\">bug 40940886</a>.",
+      "partial_implementation": true,
+      "version_added": "19"
+     },
+     "safari": {
+      "version_added": "10.1"
+     },
+     "safari_ios": {
+      "version_added": "10.3"
+     },
+     "samsunginternet_android": {
+      "notes": "On Windows and Linux, if multiple keys are held down, a <code>keydown</code> event for the most recently pressed key will trigger with <code>repeat</code> incorrectly set to <code>false</code>. See <a href=\"https://crbug.com/40940886\">bug 40940886</a>.",
+      "partial_implementation": true,
+      "version_added": "2.0"
+     },
+     "webview_android": {
+      "notes": "On Windows and Linux, if multiple keys are held down, a <code>keydown</code> event for the most recently pressed key will trigger with <code>repeat</code> incorrectly set to <code>false</code>. See <a href=\"https://crbug.com/40940886\">bug 40940886</a>.",
+      "partial_implementation": true,
+      "version_added": "4.4.3"
+     },
+     "webview_ios": {
+      "version_added": "10.3"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  },
+  {
+   "key": "api.KeyboardEvent.shiftKey",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/KeyboardEvent/shiftKey",
+    "source_file": "api/KeyboardEvent.json",
+    "spec_url": "https://w3c.github.io/uievents/#dom-keyboardevent-shiftkey",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1.5"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "9"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "≤12.1"
+     },
+     "opera_android": {
+      "version_added": "≤12.1"
+     },
+     "safari": {
+      "version_added": "1.2"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:keyboard-events"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

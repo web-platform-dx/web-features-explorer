@@ -1,0 +1,527 @@
+{
+ "compat_features": [
+  "webassembly.api.Module.Module.compile_options",
+  "webassembly.api.compileStreaming_static.compile_options",
+  "webassembly.api.compile_static.compile_options",
+  "webassembly.api.instantiateStreaming_static.compile_options",
+  "webassembly.api.instantiate_static.compile_options",
+  "webassembly.api.validate_static.compile_options",
+  "webassembly.jsStringBuiltins"
+ ],
+ "description": "The WebAssembly builtin string functions mirror a subset of the JavaScript String API and adapt it to be efficiently callable without JavaScript glue code.",
+ "description_html": "The WebAssembly builtin string functions mirror a subset of the JavaScript <code>String</code> API and adapt it to be efficiently callable without JavaScript glue code.",
+ "group": "webassembly",
+ "name": "String builtins (WebAssembly)",
+ "spec": [
+  {
+   "url": "https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md"
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "130",
+   "chrome_android": "130",
+   "edge": "130",
+   "firefox": "134",
+   "firefox_android": "134"
+  }
+ },
+ "id": "wasm-string-builtins",
+ "groups": [
+  "webassembly"
+ ],
+ "groupPaths": [
+  [
+   "WebAssembly"
+  ]
+ ],
+ "mdnUrls": [],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [
+  {
+   "year": "2025",
+   "label": "interop-2025-webassembly"
+  }
+ ],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "webassembly.api.Module.Module.compile_options",
+   "compat": {
+    "description": "<code>compileOptions</code> parameter",
+    "source_file": "webassembly/api/Module.json",
+    "spec_url": "https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#:~:text=dictionary-,webassemblycompileoptions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "130"
+     },
+     "chrome_android": {
+      "version_added": "130"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "130"
+     },
+     "firefox": {
+      "version_added": "134"
+     },
+     "firefox_android": {
+      "version_added": "134"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "130"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:wasm-string-builtins"
+    ]
+   }
+  },
+  {
+   "key": "webassembly.api.compileStreaming_static.compile_options",
+   "compat": {
+    "description": "<code>compileOptions</code> parameter",
+    "source_file": "webassembly/api.json",
+    "spec_url": "https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#:~:text=dictionary-,webassemblycompileoptions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "130"
+     },
+     "chrome_android": {
+      "version_added": "130"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "130"
+     },
+     "firefox": {
+      "version_added": "134"
+     },
+     "firefox_android": {
+      "version_added": "134"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "130"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:wasm-string-builtins"
+    ]
+   }
+  },
+  {
+   "key": "webassembly.api.compile_static.compile_options",
+   "compat": {
+    "description": "<code>compileOptions</code> parameter",
+    "source_file": "webassembly/api.json",
+    "spec_url": "https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#:~:text=dictionary-,webassemblycompileoptions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "130"
+     },
+     "chrome_android": {
+      "version_added": "130"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "130"
+     },
+     "firefox": {
+      "version_added": "134"
+     },
+     "firefox_android": {
+      "version_added": "134"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "130"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:wasm-string-builtins"
+    ]
+   }
+  },
+  {
+   "key": "webassembly.api.instantiateStreaming_static.compile_options",
+   "compat": {
+    "description": "<code>compileOptions</code> parameter",
+    "source_file": "webassembly/api.json",
+    "spec_url": "https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#:~:text=dictionary-,webassemblycompileoptions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "130"
+     },
+     "chrome_android": {
+      "version_added": "130"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "130"
+     },
+     "firefox": {
+      "version_added": "134"
+     },
+     "firefox_android": {
+      "version_added": "134"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "130"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:wasm-string-builtins"
+    ]
+   }
+  },
+  {
+   "key": "webassembly.api.instantiate_static.compile_options",
+   "compat": {
+    "description": "<code>compileOptions</code> parameter",
+    "source_file": "webassembly/api.json",
+    "spec_url": "https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#:~:text=dictionary-,webassemblycompileoptions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "130"
+     },
+     "chrome_android": {
+      "version_added": "130"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "130"
+     },
+     "firefox": {
+      "version_added": "134"
+     },
+     "firefox_android": {
+      "version_added": "134"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "130"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:wasm-string-builtins"
+    ]
+   }
+  },
+  {
+   "key": "webassembly.api.validate_static.compile_options",
+   "compat": {
+    "description": "<code>compileOptions</code> parameter",
+    "source_file": "webassembly/api.json",
+    "spec_url": "https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#:~:text=dictionary-,webassemblycompileoptions",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "130"
+     },
+     "chrome_android": {
+      "version_added": "130"
+     },
+     "deno": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": "130"
+     },
+     "firefox": {
+      "version_added": "134"
+     },
+     "firefox_android": {
+      "version_added": "134"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "130"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:wasm-string-builtins"
+    ]
+   }
+  },
+  {
+   "key": "webassembly.jsStringBuiltins",
+   "compat": {
+    "source_file": "webassembly/jsStringBuiltins.json",
+    "spec_url": "https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "130"
+     },
+     "chrome_android": {
+      "version_added": "130"
+     },
+     "edge": {
+      "version_added": "130"
+     },
+     "firefox": {
+      "version_added": "134"
+     },
+     "firefox_android": {
+      "version_added": "134"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "130"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:wasm-string-builtins"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "webassembly"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ },
+ "blockedOn": "Safari",
+ "monthsBlocked": 5,
+ "blockedSince": "January 2025"
+}

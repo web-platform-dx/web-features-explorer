@@ -1,0 +1,1457 @@
+{
+ "caniuse": "picture-in-picture",
+ "compat_features": [
+  "api.Document.exitPictureInPicture",
+  "api.Document.pictureInPictureElement",
+  "api.Document.pictureInPictureEnabled",
+  "api.HTMLVideoElement.disablePictureInPicture",
+  "api.HTMLVideoElement.enterpictureinpicture_event",
+  "api.HTMLVideoElement.leavepictureinpicture_event",
+  "api.HTMLVideoElement.requestPictureInPicture",
+  "api.PictureInPictureEvent",
+  "api.PictureInPictureEvent.PictureInPictureEvent",
+  "api.PictureInPictureEvent.pictureInPictureWindow",
+  "api.PictureInPictureWindow",
+  "api.PictureInPictureWindow.height",
+  "api.PictureInPictureWindow.resize_event",
+  "api.PictureInPictureWindow.width",
+  "api.ShadowRoot.pictureInPictureElement",
+  "css.selectors.picture-in-picture",
+  "html.elements.iframe.allow.picture-in-picture",
+  "html.elements.video.disablepictureinpicture",
+  "http.headers.Permissions-Policy.picture-in-picture"
+ ],
+ "description": "The picture-in-picture API allow websites to create a floating, always-on-top video window. Also known as PiP or pop-out video.",
+ "description_html": "The picture-in-picture API allow websites to create a floating, always-on-top video window. Also known as PiP or pop-out video.",
+ "name": "Picture-in-picture (video)",
+ "spec": [
+  {
+   "url": "https://w3c.github.io/picture-in-picture/",
+   "seriesComposition": "full",
+   "shortname": "picture-in-picture",
+   "series": {
+    "shortname": "picture-in-picture",
+    "currentSpecification": "picture-in-picture",
+    "title": "Picture-in-Picture",
+    "shortTitle": "Picture-in-Picture",
+    "releaseUrl": "https://www.w3.org/TR/picture-in-picture/",
+    "nightlyUrl": "https://w3c.github.io/picture-in-picture/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Media Working Group",
+     "url": "https://www.w3.org/media-wg/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/picture-in-picture/",
+    "status": "Working Draft",
+    "filename": "Overview.html"
+   },
+   "nightly": {
+    "url": "https://w3c.github.io/picture-in-picture/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/w3c/picture-in-picture",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Picture-in-Picture",
+   "source": "w3c",
+   "shortTitle": "Picture-in-Picture",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "picture-in-picture"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "69",
+   "chrome_android": "105",
+   "edge": "79",
+   "safari": "13.1",
+   "safari_ios": "13.4"
+  }
+ },
+ "id": "picture-in-picture",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Picture-in-Picture API",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/API/Picture-in-Picture_API"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {
+   "url": "https://github.com/mozilla/standards-positions/issues/187",
+   "position": "",
+   "concerns": []
+  },
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {
+  "percentageOfPageLoad": 0.00012924,
+  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/51"
+ },
+ "interop": [],
+ "wpt": true,
+ "bcdData": [
+  {
+   "key": "api.Document.exitPictureInPicture",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/exitPictureInPicture",
+    "source_file": "api/Document.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#ref-for-dom-document-exitpictureinpicture",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.pictureInPictureElement",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/pictureInPictureElement",
+    "source_file": "api/Document.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#ref-for-dom-documentorshadowroot-pictureinpictureelement①⑤",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "api.Document.pictureInPictureEnabled",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/pictureInPictureEnabled",
+    "source_file": "api/Document.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#ref-for-dom-document-pictureinpictureenabled",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLVideoElement.disablePictureInPicture",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLVideoElement/disablePictureInPicture",
+    "source_file": "api/HTMLVideoElement.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#dom-htmlvideoelement-disablepictureinpicture",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": [
+      {
+       "notes": "When this property is set to <code>true</code>, the overlay button to disable picture-in-picture (PiP) is hidden, but the user can still enable PiP.",
+       "partial_implementation": true,
+       "version_added": "122"
+      },
+      {
+       "notes": [
+        "This property is undefined, but still has an effect if set to a value.",
+        "When this property is set to <code>true</code>, the overlay button to disable picture-in-picture (PiP) is hidden, but the user can still enable PiP."
+       ],
+       "partial_implementation": true,
+       "version_added": "116",
+       "version_last": "121",
+       "version_removed": "122"
+      }
+     ],
+     "firefox_android": [
+      {
+       "notes": "When this property is set to <code>true</code>, the overlay button to disable picture-in-picture (PiP) is hidden, but the user can still enable PiP.",
+       "partial_implementation": true,
+       "version_added": "122"
+      },
+      {
+       "notes": [
+        "This property is undefined, but still has an effect if set to a value.",
+        "When this property is set to <code>true</code>, the overlay button to disable picture-in-picture (PiP) is hidden, but the user can still enable PiP."
+       ],
+       "partial_implementation": true,
+       "version_added": "116",
+       "version_last": "121",
+       "version_removed": "122"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLVideoElement.enterpictureinpicture_event",
+   "compat": {
+    "description": "<code>enterpictureinpicture</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLVideoElement/enterpictureinpicture_event",
+    "source_file": "api/HTMLVideoElement.json",
+    "spec_url": [
+     "https://w3c.github.io/picture-in-picture/#eventdef-htmlvideoelement-enterpictureinpicture",
+     "https://w3c.github.io/picture-in-picture/#dom-htmlvideoelement-onenterpictureinpicture"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLVideoElement.leavepictureinpicture_event",
+   "compat": {
+    "description": "<code>leavepictureinpicture</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event",
+    "source_file": "api/HTMLVideoElement.json",
+    "spec_url": [
+     "https://w3c.github.io/picture-in-picture/#eventdef-htmlvideoelement-leavepictureinpicture",
+     "https://w3c.github.io/picture-in-picture/#dom-htmlvideoelement-onleavepictureinpicture"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "api.HTMLVideoElement.requestPictureInPicture",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLVideoElement/requestPictureInPicture",
+    "source_file": "api/HTMLVideoElement.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#request-pip",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "api.PictureInPictureEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PictureInPictureEvent",
+    "source_file": "api/PictureInPictureEvent.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#event-types",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "85"
+      },
+      {
+       "alternative_name": "EnterPictureInPictureEvent",
+       "version_added": "69",
+       "version_last": "84",
+       "version_removed": "85"
+      }
+     ],
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": [
+      {
+       "version_added": "85"
+      },
+      {
+       "alternative_name": "EnterPictureInPictureEvent",
+       "version_added": "79",
+       "version_last": "84",
+       "version_removed": "85"
+      }
+     ],
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": [
+      {
+       "version_added": "71"
+      },
+      {
+       "alternative_name": "EnterPictureInPictureEvent",
+       "version_added": "56",
+       "version_last": "70",
+       "version_removed": "71"
+      }
+     ],
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": [
+      {
+       "version_added": "16"
+      },
+      {
+       "alternative_name": "EnterPictureInPictureEvent",
+       "version_added": "13.1"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "alternative_name": "EnterPictureInPictureEvent",
+       "version_added": "13.4"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "alternative_name": "EnterPictureInPictureEvent",
+       "version_added": "13.4"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "api.PictureInPictureEvent.PictureInPictureEvent",
+   "compat": {
+    "description": "<code>PictureInPictureEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PictureInPictureEvent/PictureInPictureEvent",
+    "source_file": "api/PictureInPictureEvent.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#dom-pictureinpictureevent-pictureinpictureevent",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": [
+      {
+       "version_added": "85"
+      },
+      {
+       "alternative_name": "EnterPictureInPictureEvent",
+       "version_added": "69",
+       "version_last": "84",
+       "version_removed": "85"
+      }
+     ],
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": [
+      {
+       "version_added": "85"
+      },
+      {
+       "alternative_name": "EnterPictureInPictureEvent",
+       "version_added": "79",
+       "version_last": "84",
+       "version_removed": "85"
+      }
+     ],
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": [
+      {
+       "version_added": "71"
+      },
+      {
+       "alternative_name": "EnterPictureInPictureEvent",
+       "version_added": "56",
+       "version_last": "70",
+       "version_removed": "71"
+      }
+     ],
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": [
+      {
+       "version_added": "16"
+      },
+      {
+       "alternative_name": "EnterPictureInPictureEvent",
+       "version_added": "13.1"
+      }
+     ],
+     "safari_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "alternative_name": "EnterPictureInPictureEvent",
+       "version_added": "13.4"
+      }
+     ],
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": [
+      {
+       "version_added": "16"
+      },
+      {
+       "alternative_name": "EnterPictureInPictureEvent",
+       "version_added": "13.4"
+      }
+     ]
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "api.PictureInPictureEvent.pictureInPictureWindow",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PictureInPictureEvent/pictureInPictureWindow",
+    "source_file": "api/PictureInPictureEvent.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#dom-pictureinpictureevent-pictureinpicturewindow",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "api.PictureInPictureWindow",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PictureInPictureWindow",
+    "source_file": "api/PictureInPictureWindow.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#interface-picture-in-picture-window",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "api.PictureInPictureWindow.height",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PictureInPictureWindow/height",
+    "source_file": "api/PictureInPictureWindow.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#ref-for-dom-pictureinpicturewindow-height",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "api.PictureInPictureWindow.resize_event",
+   "compat": {
+    "description": "<code>resize</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PictureInPictureWindow/resize_event",
+    "source_file": "api/PictureInPictureWindow.json",
+    "spec_url": [
+     "https://w3c.github.io/picture-in-picture/#eventdef-pictureinpicturewindow-resize",
+     "https://w3c.github.io/picture-in-picture/#dom-pictureinpicturewindow-onresize"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "api.PictureInPictureWindow.width",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PictureInPictureWindow/width",
+    "source_file": "api/PictureInPictureWindow.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#ref-for-dom-pictureinpicturewindow-width",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "api.ShadowRoot.pictureInPictureElement",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ShadowRoot/pictureInPictureElement",
+    "source_file": "api/ShadowRoot.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#ref-for-dom-documentorshadowroot-pictureinpictureelement①⑤",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": "105"
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "css.selectors.picture-in-picture",
+   "compat": {
+    "description": "<code>:picture-in-picture</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/:picture-in-picture",
+    "source_file": "css/selectors/picture-in-picture.json",
+    "spec_url": "https://drafts.csswg.org/selectors/#pip-state",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "110"
+     },
+     "chrome_android": {
+      "version_added": "110"
+     },
+     "edge": {
+      "version_added": "110"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "96"
+     },
+     "opera_android": {
+      "version_added": "74"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "21.0"
+     },
+     "webview_android": {
+      "version_added": "110"
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.iframe.allow.picture-in-picture",
+   "compat": {
+    "source_file": "html/elements/iframe.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#permissions-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": "105"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "html.elements.video.disablepictureinpicture",
+   "compat": {
+    "source_file": "html/elements/video.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#dom-htmlvideoelement-disablepictureinpicture",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "69"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": [
+      {
+       "notes": "When this attribute is set, the overlay button to disable picture-in-picture (PiP) is hidden, but the user can still enable PiP.",
+       "partial_implementation": true,
+       "version_added": "122"
+      },
+      {
+       "notes": "When this attribute is set, the overlay button to disable picture-in-picture (PiP) is hidden, but the user can still enable PiP.",
+       "partial_implementation": true,
+       "version_added": "116",
+       "version_last": "121",
+       "version_removed": "122"
+      }
+     ],
+     "firefox_android": [
+      {
+       "notes": "When this attribute is set, the overlay button to disable picture-in-picture (PiP) is hidden, but the user can still enable PiP.",
+       "partial_implementation": true,
+       "version_added": "122"
+      },
+      {
+       "notes": "When this attribute is set, the overlay button to disable picture-in-picture (PiP) is hidden, but the user can still enable PiP.",
+       "partial_implementation": true,
+       "version_added": "116",
+       "version_last": "121",
+       "version_removed": "122"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "56"
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": "13.1"
+     },
+     "safari_ios": {
+      "version_added": "13.4"
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": "13.4"
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  },
+  {
+   "key": "http.headers.Permissions-Policy.picture-in-picture",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture",
+    "source_file": "http/headers/Permissions-Policy.json",
+    "spec_url": "https://w3c.github.io/picture-in-picture/#permissions-policy",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "88"
+     },
+     "chrome_android": {
+      "version_added": "105"
+     },
+     "edge": {
+      "version_added": "88"
+     },
+     "firefox": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "firefox_android": {
+      "impl_url": "https://bugzil.la/1463402",
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": "72"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "20.0"
+     },
+     "webview_android": {
+      "version_added": "105"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:picture-in-picture"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "css",
+  "html",
+  "http"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [
+   "https://bugzil.la/1463402"
+  ],
+  "firefox_android": [
+   "https://bugzil.la/1463402"
+  ],
+  "safari": [],
+  "safari_ios": []
+ },
+ "blockedOn": "Firefox",
+ "monthsBlocked": 33,
+ "blockedSince": "September 2022"
+}

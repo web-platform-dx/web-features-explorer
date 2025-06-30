@@ -1,0 +1,337 @@
+{
+ "compat_features": [
+  "javascript.grammar.trailing_commas.trailing_commas_in_dynamic_import",
+  "javascript.statements.import.import_attributes.type_json"
+ ],
+ "description": "Module import … with { type: \"json\" } statements load JSON data. Also known as JSON module scripts.",
+ "description_html": "Module <code>import … with { type: \"json\" }</code> statements load JSON data. Also known as JSON module scripts.",
+ "group": "json",
+ "name": "JSON import attributes",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/webappapis.html#json-module-script",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "json-module-script"
+  }
+ ],
+ "status": {
+  "baseline": "low",
+  "baseline_low_date": "2025-04-29",
+  "support": {
+   "chrome": "123",
+   "chrome_android": "123",
+   "edge": "123",
+   "firefox": "138",
+   "firefox_android": "138",
+   "safari": "17.2",
+   "safari_ios": "17.2"
+  }
+ },
+ "id": "json-modules",
+ "groups": [
+  "json"
+ ],
+ "groupPaths": [
+  [
+   "JavaScript",
+   "JSON"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "Import attributes",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import/with"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [
+  {
+   "year": "2025",
+   "label": "interop-2025-modules"
+  }
+ ],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "javascript.grammar.trailing_commas.trailing_commas_in_dynamic_import",
+   "compat": {
+    "description": "Trailing comma in dynamic import",
+    "source_file": "javascript/grammar.json",
+    "spec_url": "https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-import-call-runtime-semantics-evaluation",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "91"
+     },
+     "chrome_android": {
+      "version_added": "91"
+     },
+     "deno": {
+      "version_added": "1.17"
+     },
+     "edge": {
+      "version_added": "91"
+     },
+     "firefox": {
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": "138"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": [
+      {
+       "version_added": "17.5.0"
+      },
+      {
+       "version_added": "16.15.0",
+       "version_last": "16.17.0",
+       "version_removed": "17.0.0"
+      },
+      {
+       "notes": "The second parameter no longer throws a parser error, but the <code>--experimental-json-modules</code> flag is still needed to load JSON modules.",
+       "partial_implementation": true,
+       "version_added": "16.14.0",
+       "version_last": "16.14.0",
+       "version_removed": "16.15.0"
+      }
+     ],
+     "oculus": {
+      "version_added": "16.0"
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": "15"
+     },
+     "safari_ios": {
+      "version_added": "15"
+     },
+     "samsunginternet_android": {
+      "version_added": "16.0"
+     },
+     "webview_android": {
+      "version_added": "91"
+     },
+     "webview_ios": {
+      "version_added": "15"
+     }
+    },
+    "tags": [
+     "web-features:json-modules"
+    ]
+   }
+  },
+  {
+   "key": "javascript.statements.import.import_attributes.type_json",
+   "compat": {
+    "description": "<code>with {type: 'json'}</code>",
+    "source_file": "javascript/statements.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "123"
+     },
+     "chrome_android": {
+      "version_added": "123"
+     },
+     "deno": {
+      "version_added": "1.37"
+     },
+     "edge": {
+      "version_added": "123"
+     },
+     "firefox": {
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": "138"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "nodejs": [
+      {
+       "version_added": "20.10.0"
+      },
+      {
+       "version_added": "18.20.0",
+       "version_last": "18.20.0",
+       "version_removed": "19.0.0"
+      }
+     ],
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "109"
+     },
+     "opera_android": {
+      "version_added": "82"
+     },
+     "safari": {
+      "version_added": "17.2"
+     },
+     "safari_ios": {
+      "version_added": "17.2"
+     },
+     "samsunginternet_android": {
+      "version_added": "27.0"
+     },
+     "webview_android": {
+      "version_added": "123"
+     },
+     "webview_ios": {
+      "version_added": "17.2"
+     }
+    },
+    "tags": [
+     "web-features:json-modules"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "javascript"
+ ],
+ "baselineLowDateAsObject": "2025-04-29T00:00:00.000Z",
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}

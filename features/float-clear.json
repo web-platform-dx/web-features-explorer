@@ -1,0 +1,721 @@
+{
+ "compat_features": [
+  "css.properties.clear",
+  "css.properties.clear.both",
+  "css.properties.clear.left",
+  "css.properties.clear.right",
+  "css.properties.float",
+  "css.properties.float.left",
+  "css.properties.float.none",
+  "css.properties.float.right"
+ ],
+ "description": "The float CSS property aligns an element to either side of its container, allowing text and inline elements to flow around it. The clear CSS property sets whether an element is moved below floating elements that proceed it.",
+ "description_html": "The <code>float</code> CSS property aligns an element to either side of its container, allowing text and inline elements to flow around it. The <code>clear</code> CSS property sets whether an element is moved below floating elements that proceed it.",
+ "group": "css",
+ "name": "float and clear",
+ "spec": [
+  {
+   "url": "https://drafts.csswg.org/css2/#propdef-float",
+   "seriesComposition": "full",
+   "shortname": "CSS2",
+   "series": {
+    "shortname": "CSS",
+    "currentSpecification": "CSS2",
+    "title": "Cascading Style Sheets",
+    "shortTitle": "CSS",
+    "releaseUrl": "https://www.w3.org/TR/CSS2/",
+    "nightlyUrl": "https://drafts.csswg.org/css2/"
+   },
+   "seriesVersion": "2",
+   "formerNames": [
+    "CSS21",
+    "CSS22"
+   ],
+   "nightly": {
+    "url": "https://drafts.csswg.org/css2/",
+    "status": "Editor's Draft",
+    "sourcePath": "css2/Overview.bs",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css2/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "filename": "index.html"
+   },
+   "title": "Cascading Style Sheets Level 2",
+   "shortTitle": "CSS 2",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/CSS2/",
+    "status": "Recommendation",
+    "pages": [
+     "https://www.w3.org/TR/CSS2/about.html",
+     "https://www.w3.org/TR/CSS2/intro.html",
+     "https://www.w3.org/TR/CSS2/conform.html",
+     "https://www.w3.org/TR/CSS2/syndata.html",
+     "https://www.w3.org/TR/CSS2/selector.html",
+     "https://www.w3.org/TR/CSS2/cascade.html",
+     "https://www.w3.org/TR/CSS2/media.html",
+     "https://www.w3.org/TR/CSS2/box.html",
+     "https://www.w3.org/TR/CSS2/visuren.html",
+     "https://www.w3.org/TR/CSS2/visudet.html",
+     "https://www.w3.org/TR/CSS2/visufx.html",
+     "https://www.w3.org/TR/CSS2/generate.html",
+     "https://www.w3.org/TR/CSS2/page.html",
+     "https://www.w3.org/TR/CSS2/colors.html",
+     "https://www.w3.org/TR/CSS2/fonts.html",
+     "https://www.w3.org/TR/CSS2/text.html",
+     "https://www.w3.org/TR/CSS2/tables.html",
+     "https://www.w3.org/TR/CSS2/ui.html",
+     "https://www.w3.org/TR/CSS2/aural.html",
+     "https://www.w3.org/TR/CSS2/refs.html",
+     "https://www.w3.org/TR/CSS2/changes.html",
+     "https://www.w3.org/TR/CSS2/sample.html",
+     "https://www.w3.org/TR/CSS2/zindex.html",
+     "https://www.w3.org/TR/CSS2/propidx.html",
+     "https://www.w3.org/TR/CSS2/grammar.html",
+     "https://www.w3.org/TR/CSS2/indexlist.html"
+    ],
+    "filename": "Overview.html"
+   },
+   "source": "w3c",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/CSS2"
+    ]
+   },
+   "fragment": "propdef-float"
+  },
+  {
+   "url": "https://drafts.csswg.org/css2/#propdef-clear",
+   "seriesComposition": "full",
+   "shortname": "CSS2",
+   "series": {
+    "shortname": "CSS",
+    "currentSpecification": "CSS2",
+    "title": "Cascading Style Sheets",
+    "shortTitle": "CSS",
+    "releaseUrl": "https://www.w3.org/TR/CSS2/",
+    "nightlyUrl": "https://drafts.csswg.org/css2/"
+   },
+   "seriesVersion": "2",
+   "formerNames": [
+    "CSS21",
+    "CSS22"
+   ],
+   "nightly": {
+    "url": "https://drafts.csswg.org/css2/",
+    "status": "Editor's Draft",
+    "sourcePath": "css2/Overview.bs",
+    "alternateUrls": [
+     "https://w3c.github.io/csswg-drafts/css2/"
+    ],
+    "repository": "https://github.com/w3c/csswg-drafts",
+    "filename": "index.html"
+   },
+   "title": "Cascading Style Sheets Level 2",
+   "shortTitle": "CSS 2",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Cascading Style Sheets (CSS) Working Group",
+     "url": "https://www.w3.org/Style/CSS/"
+    }
+   ],
+   "release": {
+    "url": "https://www.w3.org/TR/CSS2/",
+    "status": "Recommendation",
+    "pages": [
+     "https://www.w3.org/TR/CSS2/about.html",
+     "https://www.w3.org/TR/CSS2/intro.html",
+     "https://www.w3.org/TR/CSS2/conform.html",
+     "https://www.w3.org/TR/CSS2/syndata.html",
+     "https://www.w3.org/TR/CSS2/selector.html",
+     "https://www.w3.org/TR/CSS2/cascade.html",
+     "https://www.w3.org/TR/CSS2/media.html",
+     "https://www.w3.org/TR/CSS2/box.html",
+     "https://www.w3.org/TR/CSS2/visuren.html",
+     "https://www.w3.org/TR/CSS2/visudet.html",
+     "https://www.w3.org/TR/CSS2/visufx.html",
+     "https://www.w3.org/TR/CSS2/generate.html",
+     "https://www.w3.org/TR/CSS2/page.html",
+     "https://www.w3.org/TR/CSS2/colors.html",
+     "https://www.w3.org/TR/CSS2/fonts.html",
+     "https://www.w3.org/TR/CSS2/text.html",
+     "https://www.w3.org/TR/CSS2/tables.html",
+     "https://www.w3.org/TR/CSS2/ui.html",
+     "https://www.w3.org/TR/CSS2/aural.html",
+     "https://www.w3.org/TR/CSS2/refs.html",
+     "https://www.w3.org/TR/CSS2/changes.html",
+     "https://www.w3.org/TR/CSS2/sample.html",
+     "https://www.w3.org/TR/CSS2/zindex.html",
+     "https://www.w3.org/TR/CSS2/propidx.html",
+     "https://www.w3.org/TR/CSS2/grammar.html",
+     "https://www.w3.org/TR/CSS2/indexlist.html"
+    ],
+    "filename": "Overview.html"
+   },
+   "source": "w3c",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "css/CSS2"
+    ]
+   },
+   "fragment": "propdef-clear"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "1",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "1",
+   "firefox_android": "4",
+   "safari": "1",
+   "safari_ios": "1"
+  }
+ },
+ "id": "float-clear",
+ "groups": [
+  "css"
+ ],
+ "groupPaths": [
+  [
+   "CSS"
+  ]
+ ],
+ "mdnUrls": [
+  {
+   "title": "float",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/float"
+  },
+  {
+   "title": "clear",
+   "anchor": null,
+   "url": "https://developer.mozilla.org/docs/Web/CSS/clear"
+  }
+ ],
+ "standardPositions": {
+  "mozilla": {},
+  "webkit": {}
+ },
+ "originTrials": [],
+ "useCounters": {},
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "css.properties.clear",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/clear",
+    "source_file": "css/properties/clear.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css2/#propdef-clear",
+     "https://drafts.csswg.org/css-logical/#float-clear"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "3.5"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:float-clear"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.clear.both",
+   "compat": {
+    "source_file": "css/properties/clear.json",
+    "spec_url": "https://drafts.csswg.org/css2/#valdef-clear-both",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:float-clear"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.clear.left",
+   "compat": {
+    "source_file": "css/properties/clear.json",
+    "spec_url": "https://drafts.csswg.org/css2/#valdef-clear-left",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:float-clear"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.clear.right",
+   "compat": {
+    "source_file": "css/properties/clear.json",
+    "spec_url": "https://drafts.csswg.org/css2/#valdef-clear-right",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:float-clear"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.float",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/float",
+    "source_file": "css/properties/float.json",
+    "spec_url": [
+     "https://drafts.csswg.org/css2/#propdef-float",
+     "https://drafts.csswg.org/css-logical/#float-clear"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "4"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "7"
+     },
+     "opera_android": {
+      "version_added": "10.1"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:float-clear"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.float.left",
+   "compat": {
+    "source_file": "css/properties/float.json",
+    "spec_url": "https://drafts.csswg.org/css2/#valdef-float-left",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:float-clear"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.float.none",
+   "compat": {
+    "source_file": "css/properties/float.json",
+    "spec_url": "https://drafts.csswg.org/css2/#valdef-float-none",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:float-clear"
+    ]
+   }
+  },
+  {
+   "key": "css.properties.float.right",
+   "compat": {
+    "source_file": "css/properties/float.json",
+    "spec_url": "https://drafts.csswg.org/css2/#valdef-float-right",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "1"
+     },
+     "chrome_android": {
+      "version_added": "18"
+     },
+     "edge": {
+      "version_added": "12"
+     },
+     "firefox": {
+      "version_added": "1"
+     },
+     "firefox_android": {
+      "version_added": "4"
+     },
+     "ie": {
+      "version_added": "≤11"
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "15"
+     },
+     "opera_android": {
+      "version_added": "14"
+     },
+     "safari": {
+      "version_added": "1"
+     },
+     "safari_ios": {
+      "version_added": "1"
+     },
+     "samsunginternet_android": {
+      "version_added": "1.0"
+     },
+     "webview_android": {
+      "version_added": "4.4"
+     },
+     "webview_ios": {
+      "version_added": "1"
+     }
+    },
+    "tags": [
+     "web-features:float-clear"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "css"
+ ],
+ "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
+ "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}
