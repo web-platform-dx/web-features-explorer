@@ -5,8 +5,7 @@
   "api.HTMLStyleElement.blocking",
   "html.elements.link.blocking",
   "html.elements.script.blocking",
-  "html.elements.style.blocking",
-  "http.headers.Link.blocking"
+  "html.elements.style.blocking"
  ],
  "description": "The blocking=\"render\" attribute for <link>, <script>, and <style> elements blocks rendering until the external script or stylesheet has been loaded. For <link rel=\"expect\">, rendering is blocked until a specific element is in the DOM.",
  "description_html": "The <code>blocking=\"render\"</code> attribute for <code>&#x3C;link></code>, <code>&#x3C;script></code>, and <code>&#x3C;style></code> elements blocks rendering until the external script or stylesheet has been loaded. For <code>&#x3C;link rel=\"expect\"></code>, rendering is blocked until a specific element is in the DOM.",
@@ -130,7 +129,13 @@
  ],
  "status": {
   "baseline": false,
-  "support": {}
+  "support": {
+   "chrome": "105",
+   "chrome_android": "105",
+   "edge": "105",
+   "safari": "18.2",
+   "safari_ios": "18.2"
+  }
  },
  "id": "blocking-render",
  "groups": [
@@ -587,5 +592,8 @@
   ],
   "safari": [],
   "safari_ios": []
- }
+ },
+ "blockedOn": "Firefox",
+ "monthsBlocked": 7,
+ "blockedSince": "December 2024"
 }
