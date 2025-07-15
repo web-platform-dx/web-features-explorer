@@ -13,6 +13,11 @@ import useCounters from "./additional-data/use-counters.json" with { type: "json
 import interop from "./additional-data/interop.json" with { type: "json" };
 import wpt from "./additional-data/wpt.json" with { type: "json" };
 
+// Number of months after Baseline low that Baseline high happens.
+// Keep in sync with definition at:
+// https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md#wider-support-high-status
+const BASELINE_LOW_TO_HIGH_DURATION = 30;
+
 const BROWSER_BUG_TRACKERS = {
   chrome: "issues.chromium.org",
   chrome_android: "issues.chromium.org",
@@ -227,6 +232,22 @@ function augmentFeatureData(id, feature) {
   feature.baselineHighDateAsObject = feature.status.baseline && feature.status.baseline === "high"
     ? new Date(stripLessThan(feature.status.baseline_high_date))
     : null;
+
+  // Add expected baseline high date, if applicable.
+  if (feature.status.baseline === "low") {
+    // If the feature is baseline low, then we expect it to become baseline high
+    // in BASELINE_LOW_TO_HIGH_DURATION months.
+    const baselineLowDate = feature.baselineLowDateAsObject;
+    if (baselineLowDate) {
+      const expectedBaselineHighDate = new Date(baselineLowDate);
+      expectedBaselineHighDate.setMonth(
+        expectedBaselineHighDate.getMonth() + BASELINE_LOW_TO_HIGH_DURATION
+      );
+      feature.expectedBaselineHighDate = expectedBaselineHighDate.toISOString().substring(0, 10);
+    } else {
+      feature.expectedBaselineHighDate = null;
+    }
+  }
 
   // Add impl_url links, if any, per browser.
   const browserImplUrls = Object.keys(browsers).reduce((acc, browserId) => {

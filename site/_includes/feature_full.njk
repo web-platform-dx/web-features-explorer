@@ -1,15 +1,32 @@
 <div id="{{ feature.id }}" class="feature full baseline-{{ feature.status.baseline }}{% if feature.discouraged %} discouraged{% endif %}">
   <div class="header">
     <h1 data-pagefind-body>{% prettyFeatureName feature.name %}</h1>
-    {% include "baseline.njk" %}
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="{{ feature.id }}" data-len="{{ feature.id | length }}"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  {% include "tags.njk" %}
 
   {% include "discouraged.njk" %}
 
   <p class="description" data-pagefind-body>
     {{ feature.description_html | safe }}
   </p>
+
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    {% include "baseline.njk" %}
+    {% if feature.expectedBaselineHighDate %}
+      <p>This feature is expected to reach Baseline Widely Available status on: {{ feature.expectedBaselineHighDate }}
+    {% endif %}
+  </div>
 
   {% include "docs.njk" %}
 
