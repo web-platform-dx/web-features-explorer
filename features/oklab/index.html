@@ -34,35 +34,18 @@
   <div id="oklab" class="feature full baseline-low">
   <div class="header">
     <h1 data-pagefind-body="">Oklab and Oklch</h1>
-    <div class="availability">
-  
-    
-    Newly available since 2023-05-09
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="oklab" data-len="5"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">css</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          CSS  &gt; 
-        
-          Color types 
-        
-      </span>
-    
-  
-</div>
-
 
   
 
@@ -70,8 +53,22 @@
     The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. Oklch is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS <code>color()</code>, <code>oklab()</code>, and <code>oklch()</code> functions.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    
+    Baseline Newly Available (since 2023-05-09)
+    
+  
+</div>
+    
+      <p>This feature is expected to reach Baseline Widely Available status on: 2025-11-09
+    
+  </p></div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       
@@ -211,7 +208,7 @@
   
   <div class="use-counters feature-box">
     <h3>Usage <span class="subtext">(according to <a href="https://chromestatus.com/metrics/webfeature/popularity">Chrome Platform Status</a>)</span></h3>
-    <p>~1.892% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/170">More data at chromestatus</a>.</p>
+    <p>~1.928% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/170">More data at chromestatus</a>.</p>
   </div>
 
 

@@ -34,41 +34,18 @@
   <div id="js-modules-service-workers" class="feature full baseline-false">
   <div class="header">
     <h1 data-pagefind-body="">JavaScript modules in service workers</h1>
-    <div class="availability">
-  
-    Limited availability
-    
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="js-modules-service-workers" data-len="26"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-      <span class="tag">javascript</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          JavaScript modules 
-        
-      </span>
-    
-      <span class="tag">
-        
-          Workers 
-        
-      </span>
-    
-  
-</div>
-
 
   
 
@@ -76,8 +53,20 @@
     The <code>navigator.serviceWorker.register()</code> method accepts <code>{ type: "module" }</code> to load scripts that use <code>import</code> and <code>export</code>. Also known as ECMAScript modules or ESM in service workers.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    Limited availability
+    
+    
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

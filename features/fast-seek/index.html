@@ -34,35 +34,18 @@
   <div id="fast-seek" class="feature full baseline-false">
   <div class="header">
     <h1 data-pagefind-body="">fastSeek()</h1>
-    <div class="availability">
-  
-    Limited availability
-    
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="fast-seek" data-len="9"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          HTML  &gt; 
-        
-          Media elements 
-        
-      </span>
-    
-  
-</div>
-
 
   
 
@@ -70,8 +53,20 @@
     The <code>fastSeek()</code> method seeks an <code>&#x3C;audio></code> or <code>&#x3C;video></code> element as fast as possible, by seeking to a keyframe instead of exactly the requested time.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    Limited availability
+    
+    
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

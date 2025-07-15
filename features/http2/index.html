@@ -34,19 +34,18 @@
   <div id="http2" class="feature full baseline-high">
   <div class="header">
     <h1 data-pagefind-body="">HTTP/2</h1>
-    <div class="availability">
-  
-    
-    
-    Widely available since 2018-03-30
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="http2" data-len="5"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-  
-</div>
-
 
   
 
@@ -54,8 +53,20 @@
     The HTTP/2 protocol is a major revision of the HTTP network protocol, providing improved performance and efficiency by using a single TCP connection to send multiple streams of data at once.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    
+    
+    Baseline Widely Available (since 2018-03-30)
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

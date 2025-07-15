@@ -34,31 +34,18 @@
   <div id="overflow-overlay" class="feature full baseline-false discouraged">
   <div class="header">
     <h1 data-pagefind-body="">overflow: overlay</h1>
-    <div class="availability">
-  
-    Discouraged
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="overflow-overlay" data-len="16"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">css</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          CSS 
-        
-      </span>
-    
-  
-</div>
-
 
   
   <div class="discouraged-info">
@@ -86,8 +73,18 @@
     The <code>overflow: overlay</code> CSS declaration is an alias to <code>overflow: auto</code>. Historically, it caused non-standard behavior, allowing scrollbars to overlay content without taking up layout space.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    Discouraged
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

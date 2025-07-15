@@ -34,35 +34,18 @@
   <div id="app-launch-handler" class="feature full baseline-false">
   <div class="header">
     <h1 data-pagefind-body="">Launch handler</h1>
-    <div class="availability">
-  
-    Limited availability
-    
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="app-launch-handler" data-len="18"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-      <span class="tag">manifests</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          Progressive web app 
-        
-      </span>
-    
-  
-</div>
-
 
   
 
@@ -70,8 +53,20 @@
     The <code>launch_handler</code> web app manifest member, with the <code>client_mode</code> property, configure how web app launches behave when an instance of the app is already open. For example, you can choose to focus the existing app instance instead of launching a new one.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    Limited availability
+    
+    
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       
@@ -201,7 +196,7 @@
   
   <div class="use-counters feature-box">
     <h3>Usage <span class="subtext">(according to <a href="https://chromestatus.com/metrics/webfeature/popularity">Chrome Platform Status</a>)</span></h3>
-    <p>~1.069% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/309">More data at chromestatus</a>.</p>
+    <p>~1.080% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/309">More data at chromestatus</a>.</p>
   </div>
 
 

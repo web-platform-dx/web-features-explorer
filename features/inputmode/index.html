@@ -34,26 +34,18 @@
   <div id="inputmode" class="feature full baseline-high">
   <div class="header">
     <h1 data-pagefind-body="">inputmode</h1>
-    <div class="availability">
-  
-    
-    
-    Widely available since 2024-06-07
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="inputmode" data-len="9"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-      <span class="tag">html</span>
-    
-  
-  
-</div>
-
 
   
 
@@ -61,8 +53,20 @@
     The <code>inputmode</code> global HTML attribute gives a hint about what type of data is to be entered into an <code>&#x3C;input></code> element, such as <code>text</code>, <code>numeric</code>, or <code>email</code>, so the browser may help the user enter data using an adapted input mechanism, such as an on-screen virtual keyboard.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    
+    
+    Baseline Widely Available (since 2024-06-07)
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

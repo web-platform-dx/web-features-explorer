@@ -34,26 +34,18 @@
   <div id="savedata" class="feature full baseline-false">
   <div class="header">
     <h1 data-pagefind-body="">Save-Data</h1>
-    <div class="availability">
-  
-    Limited availability
-    
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="savedata" data-len="8"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-      <span class="tag">http</span>
-    
-  
-  
-</div>
-
 
   
 
@@ -61,8 +53,20 @@
     Browsers send the <code>Save-Data</code> HTTP request header when the user turns on a data-saving mode. It is a hint to reduce data sent to the browser. Servers should respond with alternative content, such as smaller images and videos, or different markup and styling.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    Limited availability
+    
+    
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <strong>No MDN documentation found.</strong>
     

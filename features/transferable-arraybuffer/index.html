@@ -34,24 +34,18 @@
   <div id="transferable-arraybuffer" class="feature full baseline-low">
   <div class="header">
     <h1 data-pagefind-body="">Transferable ArrayBuffer</h1>
-    <div class="availability">
-  
-    
-    Newly available since 2024-03-05
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="transferable-arraybuffer" data-len="24"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">javascript</span>
-    
-  
-  
-</div>
-
 
   
 
@@ -59,8 +53,22 @@
     The <code>transfer()</code> and <code>transferToFixedLength()</code> methods of <code>ArrayBuffer</code> move a buffer from one context to another (for example, to a worker).
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    
+    Baseline Newly Available (since 2024-03-05)
+    
+  
+</div>
+    
+      <p>This feature is expected to reach Baseline Widely Available status on: 2026-09-05
+    
+  </p></div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       
@@ -177,7 +185,7 @@
   
   <div class="use-counters feature-box">
     <h3>Usage <span class="subtext">(according to <a href="https://chromestatus.com/metrics/webfeature/popularity">Chrome Platform Status</a>)</span></h3>
-    <p>~0.000% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/241">More data at chromestatus</a>.</p>
+    <p>~0.030% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/241">More data at chromestatus</a>.</p>
   </div>
 
 

@@ -34,39 +34,18 @@
   <div id="speak-as" class="feature full baseline-false">
   <div class="header">
     <h1 data-pagefind-body="">speak-as</h1>
-    <div class="availability">
-  
-    Limited availability
-    
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="speak-as" data-len="8"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">css</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          Speech 
-        
-      </span>
-    
-      <span class="tag">
-        
-          CSS 
-        
-      </span>
-    
-  
-</div>
-
 
   
 
@@ -74,8 +53,20 @@
     The <code>speak-as</code> CSS property sets how any element's content is spoken. Not to be confused with the <code>speak-as</code> descriptor of <code>@counter-style</code> at-rules.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    Limited availability
+    
+    
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

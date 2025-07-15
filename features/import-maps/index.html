@@ -34,24 +34,18 @@
   <div id="import-maps" class="feature full baseline-low">
   <div class="header">
     <h1 data-pagefind-body="">Import maps</h1>
-    <div class="availability">
-  
-    
-    Newly available since 2023-03-27
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="import-maps" data-len="11"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">html</span>
-    
-  
-  
-</div>
-
 
   
 
@@ -59,8 +53,22 @@
     A <code>&#x3C;script type="importmap"></code> HTML element provides an import map as a JSON string. An import map controls how the browser should resolve module specifiers when importing JavaScript modules.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    
+    Baseline Newly Available (since 2023-03-27)
+    
+  
+</div>
+    
+      <p>This feature is expected to reach Baseline Widely Available status on: 2025-09-27
+    
+  </p></div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       
@@ -169,7 +177,7 @@
   
   <div class="use-counters feature-box">
     <h3>Usage <span class="subtext">(according to <a href="https://chromestatus.com/metrics/webfeature/popularity">Chrome Platform Status</a>)</span></h3>
-    <p>~0.508% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/42">More data at chromestatus</a>.</p>
+    <p>~0.519% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/42">More data at chromestatus</a>.</p>
   </div>
 
 

@@ -34,31 +34,18 @@
   <div id="mutation-events" class="feature full baseline-false discouraged">
   <div class="header">
     <h1 data-pagefind-body="">Mutation events</h1>
-    <div class="availability">
-  
-    Discouraged
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="mutation-events" data-len="15"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          DOM 
-        
-      </span>
-    
-  
-</div>
-
 
   
   <div class="discouraged-info">
@@ -86,8 +73,18 @@
     Mutation events like <code>DOMSubtreeModified</code>, <code>DOMNodeInserted</code>, or <code>DOMNodeRemoved</code> fire when DOM changes occur.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    Discouraged
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

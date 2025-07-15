@@ -34,26 +34,18 @@
   <div id="ua-client-hints" class="feature full baseline-false">
   <div class="header">
     <h1 data-pagefind-body="">User agent client hints</h1>
-    <div class="availability">
-  
-    Limited availability
-    
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="ua-client-hints" data-len="15"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-      <span class="tag">http</span>
-    
-  
-  
-</div>
-
 
   
 
@@ -61,8 +53,20 @@
     The <code>Sec-CH-UA</code> HTTP request header and the <code>navigator.userAgentData</code> API expose browser and platform information used to vary responses and application logic. User agent client hints are similar to user agent strings but more privacy-preserving and safer to parse.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    Limited availability
+    
+    
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       
@@ -241,7 +245,7 @@
   
   <div class="use-counters feature-box">
     <h3>Usage <span class="subtext">(according to <a href="https://chromestatus.com/metrics/webfeature/popularity">Chrome Platform Status</a>)</span></h3>
-    <p>~74.836% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/341">More data at chromestatus</a>.</p>
+    <p>~75.077% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/341">More data at chromestatus</a>.</p>
   </div>
 
 

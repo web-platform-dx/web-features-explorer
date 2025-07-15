@@ -34,33 +34,18 @@
   <div id="dom" class="feature full baseline-high">
   <div class="header">
     <h1 data-pagefind-body="">DOM</h1>
-    <div class="availability">
-  
-    
-    
-    Widely available since 2018-01-29
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="dom" data-len="3"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          DOM 
-        
-      </span>
-    
-  
-</div>
-
 
   
 
@@ -68,8 +53,20 @@
     The DOM (Document Object Model) API represents HTML and XML documents as trees of nodes. You can use the API to inspect and modify the structure and content of a document.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    
+    
+    Baseline Widely Available (since 2018-01-29)
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

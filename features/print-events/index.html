@@ -34,33 +34,18 @@
   <div id="print-events" class="feature full baseline-high">
   <div class="header">
     <h1 data-pagefind-body="">Print events</h1>
-    <div class="availability">
-  
-    
-    
-    Widely available since 2022-03-19
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="print-events" data-len="12"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          Print media 
-        
-      </span>
-    
-  
-</div>
-
 
   
 
@@ -68,8 +53,20 @@
     An alternative to <code>@media print</code> queries, the <code>beforeprint</code> and <code>afterprint</code> events allow you to change the page for printing and and restore the page after printing.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    
+    
+    Baseline Widely Available (since 2022-03-19)
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

@@ -34,24 +34,18 @@
   <div id="url-canparse" class="feature full baseline-low">
   <div class="header">
     <h1 data-pagefind-body="">URL.canParse()</h1>
-    <div class="availability">
-  
-    
-    Newly available since 2023-12-07
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="url-canparse" data-len="12"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-  
-  
-</div>
-
 
   
 
@@ -59,8 +53,22 @@
     The <code>URL.canParse()</code> static method checks whether a URL can be parsed into a valid <code>URL</code> object. It's an alternative to calling <code>new URL()</code> in a <code>try … catch</code> statement.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    
+    Baseline Newly Available (since 2023-12-07)
+    
+  
+</div>
+    
+      <p>This feature is expected to reach Baseline Widely Available status on: 2026-06-07
+    
+  </p></div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       
@@ -169,7 +177,7 @@
   
   <div class="use-counters feature-box">
     <h3>Usage <span class="subtext">(according to <a href="https://chromestatus.com/metrics/webfeature/popularity">Chrome Platform Status</a>)</span></h3>
-    <p>~4.588% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/261">More data at chromestatus</a>.</p>
+    <p>~4.641% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/261">More data at chromestatus</a>.</p>
   </div>
 
 

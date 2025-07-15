@@ -34,26 +34,18 @@
   <div id="translate" class="feature full baseline-low">
   <div class="header">
     <h1 data-pagefind-body="">translate</h1>
-    <div class="availability">
-  
-    
-    Newly available since 2023-03-14
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="translate" data-len="9"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-      <span class="tag">html</span>
-    
-  
-  
-</div>
-
 
   
 
@@ -61,8 +53,22 @@
     The <code>translate</code> HTML attribute marks whether an element's text should be translated.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    
+    Baseline Newly Available (since 2023-03-14)
+    
+  
+</div>
+    
+      <p>This feature is expected to reach Baseline Widely Available status on: 2025-09-14
+    
+  </p></div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

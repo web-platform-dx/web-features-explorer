@@ -34,24 +34,18 @@
   <div id="events" class="feature full baseline-high">
   <div class="header">
     <h1 data-pagefind-body="">Events</h1>
-    <div class="availability">
-  
-    
-    
-    Widely available since 2018-01-29
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="events" data-len="6"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-  
-  
-</div>
-
 
   
 
@@ -59,8 +53,20 @@
     The <code>Event</code> API and the <code>addEventListener()</code> method on objects that receive events (event targets) represent and handle significant things happening on a page. Many APIs fire events for a wide range of situations relating to those APIs, such as an image loading, a user clicking, or a value changing.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    
+    
+    Baseline Widely Available (since 2018-01-29)
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

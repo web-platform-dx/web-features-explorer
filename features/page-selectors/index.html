@@ -34,41 +34,18 @@
   <div id="page-selectors" class="feature full baseline-false">
   <div class="header">
     <h1 data-pagefind-body="">Page selectors</h1>
-    <div class="availability">
-  
-    Limited availability
-    
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="page-selectors" data-len="14"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">css</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          CSS  &gt; 
-        
-          Selectors 
-        
-      </span>
-    
-      <span class="tag">
-        
-          Print media 
-        
-      </span>
-    
-  
-</div>
-
 
   
 
@@ -76,8 +53,20 @@
     The <code>:first</code>, <code>:left</code>, and <code>:right</code> pseudo-classes select pages based on their position in sequence after pagination. They're often used with the <code>page</code> CSS property, to choose a print layout defined by the <code>@page</code> rule.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    Limited availability
+    
+    
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

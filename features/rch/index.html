@@ -34,35 +34,18 @@
   <div id="rch" class="feature full baseline-false">
   <div class="header">
     <h1 data-pagefind-body="">rch unit</h1>
-    <div class="availability">
-  
-    Limited availability
-    
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="rch" data-len="3"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">css</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          CSS  &gt; 
-        
-          Units 
-        
-      </span>
-    
-  
-</div>
-
 
   
 
@@ -70,8 +53,20 @@
     The <code>rch</code> CSS length unit is a font-relative length equal to the value of the <code>ch</code> unit on the root element. <code>ch</code> length is based on the width of the zero (0) character.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    Limited availability
+    
+    
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

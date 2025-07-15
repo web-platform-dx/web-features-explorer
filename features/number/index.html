@@ -34,35 +34,18 @@
   <div id="number" class="feature full baseline-high">
   <div class="header">
     <h1 data-pagefind-body="">Math and numbers</h1>
-    <div class="availability">
-  
-    
-    
-    Widely available since 2018-01-29
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="number" data-len="6"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">javascript</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          JavaScript  &gt; 
-        
-          Primitive types 
-        
-      </span>
-    
-  
-</div>
-
 
   
 
@@ -70,8 +53,20 @@
     The number type (and <code>Number</code> object) represents floating-point numbers, such as 42 or -4.201, while the <code>Math</code> API contains mathematical functions and constants. JavaScript can also represent boundless negative and positive values as <code>Infinity</code> or not-a-number as <code>NaN</code> (as in <code>0 * Infinity</code>).
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    
+    
+    Baseline Widely Available (since 2018-01-29)
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

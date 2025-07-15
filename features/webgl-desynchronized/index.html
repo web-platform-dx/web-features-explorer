@@ -34,33 +34,18 @@
   <div id="webgl-desynchronized" class="feature full baseline-false">
   <div class="header">
     <h1 data-pagefind-body="">Desynchronized WebGL canvas</h1>
-    <div class="availability">
-  
-    Limited availability
-    
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="webgl-desynchronized" data-len="20"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          WebGL 
-        
-      </span>
-    
-  
-</div>
-
 
   
 
@@ -68,8 +53,20 @@
     The optional <code>desynchronized</code> parameter of a canvas's <code>getContext()</code> method permits the browser to draw a WebGL canvas independently of the event loop. This can reduce drawing latency.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    Limited availability
+    
+    
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <strong>No MDN documentation found.</strong>
     

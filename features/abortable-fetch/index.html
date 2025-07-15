@@ -34,24 +34,18 @@
   <div id="abortable-fetch" class="feature full baseline-high">
   <div class="header">
     <h1 data-pagefind-body="">Abortable fetch</h1>
-    <div class="availability">
-  
-    
-    
-    Widely available since 2021-09-25
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="abortable-fetch" data-len="15"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-  
-  
-</div>
-
 
   
 
@@ -59,8 +53,20 @@
     If you construct a fetch request with an <code>AbortSignal</code>, you can cancel the request.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    
+    
+    Baseline Widely Available (since 2021-09-25)
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

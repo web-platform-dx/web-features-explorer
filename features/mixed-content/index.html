@@ -34,33 +34,18 @@
   <div id="mixed-content" class="feature full baseline-high">
   <div class="header">
     <h1 data-pagefind-body="">Mixed content handling</h1>
-    <div class="availability">
-  
-    
-    
-    Widely available since 2022-07-15
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="mixed-content" data-len="13"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">http</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          Security 
-        
-      </span>
-    
-  
-</div>
-
 
   
 
@@ -68,8 +53,20 @@
     When a document is loaded over HTTPS, browsers ensure that none of the document's resources are loaded over an insecure protocol. Instead, resources that the document attempts to load over an insecure protocol are either loaded over HTTPS or are blocked.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    
+    
+    Baseline Widely Available (since 2022-07-15)
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

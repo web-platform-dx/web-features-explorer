@@ -34,33 +34,18 @@
   <div id="meta-application-title" class="feature full baseline-false">
   <div class="header">
     <h1 data-pagefind-body="">&lt;meta name="application-title"&gt;</h1>
-    <div class="availability">
-  
-    Limited availability
-    
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="meta-application-title" data-len="22"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">html</span>
-    
-  
-  
-    Groups:
-    
-      <span class="tag">
-        
-          Progressive web app 
-        
-      </span>
-    
-  
-</div>
-
 
   
 
@@ -68,8 +53,20 @@
     The <code>name="application-title"</code> attribute for the <code>&#x3C;meta></code> HTML element sets an installed web application's title bar text.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    Limited availability
+    
+    
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       

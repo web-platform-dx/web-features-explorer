@@ -34,26 +34,18 @@
   <div id="virtual-keyboard" class="feature full baseline-false">
   <div class="header">
     <h1 data-pagefind-body="">Virtual keyboard</h1>
-    <div class="availability">
-  
-    Limited availability
-    
-    
-  
-</div>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="virtual-keyboard" data-len="16"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
   </div>
-  <div class="tags">
-  
-    Tags:
-    
-      <span class="tag">api</span>
-    
-      <span class="tag">html</span>
-    
-  
-  
-</div>
-
 
   
 
@@ -61,8 +53,20 @@
     The <code>navigator.virtualKeyboard</code> API inspects and controls on-screen virtual keyboards. You can use it to programmatically hide or show a virtual keyboard or respond to the keyboard disappearing or appearing.
   </p>
 
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    Limited availability
+    
+    
+  
+</div>
+    
+  </div>
+
   <div class="docs feature-box">
-  <h3>Learn more</h3>
+  <h3>MDN documentation</h3>
   
     <ul data-pagefind-body="">
       
@@ -235,7 +239,7 @@
   
   <div class="use-counters feature-box">
     <h3>Usage <span class="subtext">(according to <a href="https://chromestatus.com/metrics/webfeature/popularity">Chrome Platform Status</a>)</span></h3>
-    <p>~0.303% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/264">More data at chromestatus</a>.</p>
+    <p>~0.340% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/264">More data at chromestatus</a>.</p>
   </div>
 
 
