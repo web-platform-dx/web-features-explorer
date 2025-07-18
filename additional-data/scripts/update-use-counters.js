@@ -37,14 +37,30 @@ function prepareUseCounterMapping() {
 prepareUseCounterMapping();
 
 async function getWebFeaturesThatMapToUseCounters() {
-  const response = await fetch(
-    "https://chromestatus.com/data/blink/webfeatureprops"
-  );
-  const data = await response.json();
+  // Get the latest chromium source file which contains all use counters.
+  const response = await fetch("https://raw.githubusercontent.com/chromium/chromium/refs/heads/main/third_party/blink/public/mojom/use_counter/metrics/webdx_feature.mojom");
+  const sourceText = await response.text();
+
+  // Parse the source text to extract all use counters.
+  // The lines that we are interested in look like this:
+  // kSomeUseCounterName = number,
+  const useCounterLines = sourceText.match(/k([A-Z][a-zA-Z0-9_]+) = (\d+),\n/g);
+  if (!useCounterLines) {
+    throw new Error("Failed to parse use counters from the source file.");
+  }
 
   const ret = {};
 
-  for (const [ucId, ucName] of data) {
+  for (const line of useCounterLines) {
+    // Extract the use counter ID and name from the line.
+    const match = line.match(/k([A-Z][a-zA-Z0-9_]+) = (\d+),/);
+    if (!match) {
+      console.warn(`Failed to parse line: ${line}`);
+      continue;
+    }
+    const ucName = match[1];
+    const ucId = parseInt(match[2], 10);
+
     // Some useCounters are drafts. This happens when the
     // corresponding web-feature is not yet in web-features.
     // In theory, we ignore them, but we also check if there
