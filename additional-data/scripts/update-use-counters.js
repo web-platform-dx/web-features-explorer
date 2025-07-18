@@ -17,33 +17,24 @@ import path from "path";
 
 const OUTPUT_FILE = path.join(import.meta.dirname, "../use-counters.json");
 
-// Some useCounter names do not follow the rule for dash-to-camelCase conversion.
-// Mapping them manually here.
-const UCNAME_TO_WFID_SPECIAL_CASES = {
-  "Float16array": "float16array",
-  "LaunchHandler": "app-launch-handler",
-  "MoveBeforeAPI": "move-before"
-};
-
-// Some useCounter names don't seem to have corresponding web-features IDs.
-// Ignoring them for now.
-const UCNAME_TO_IGNORE = [
-  "PageVisits",
-  "WebAppManifestUpdateToken"
-];
-
-function convertUseCounterIdToWebFeatureId(id) {
-  // Some special cases.
-  if (UCNAME_TO_WFID_SPECIAL_CASES[id]) {
-    return UCNAME_TO_WFID_SPECIAL_CASES[id];
-  }
-
-  // Otherwise convert with camelcase to dash.
-  // Use counter IDs are camelcased.
-  // So, split by capitalized words, and then join with dashes.
-  // Example AbortsignalAny -> abortsignal-any
-  return id.replace(/([a-z])([A-Z0-9])/g, "$1-$2").toLowerCase();
+// UC names can be derived from web-feature IDs, but not the other way around.
+// The chromestatus API we use to get the list of use-counters returns UC names.
+// So, this function first converts all web-feature IDs to expected UC names,
+// and then reverses the map. This way, when we query the API, we can lookup
+// the UC names the API returns and get the web-feature IDs from them.
+let UCNAMES_TO_WFIDS = {};
+function prepareUseCounterMapping() {
+  // See the rule which Chromium uses at:
+  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/public/mojom/use_counter/metrics/webdx_feature.mojom;l=35-47;drc=af140c76c416302ecadb5e7cf3f989d6293ba5ec
+  // In short, uppercase the first letter in each sequence of letters and remove hyphens.
+  Object.keys(features).forEach(id => {
+    const expectedUCName = id
+      .replace(/[a-z]+/g, (m) => m[0].toUpperCase() + m.substring(1))
+      .replaceAll("-", "");
+    UCNAMES_TO_WFIDS[expectedUCName] = id;
+  });
 }
+prepareUseCounterMapping();
 
 async function getWebFeaturesThatMapToUseCounters() {
   const response = await fetch(
@@ -53,47 +44,44 @@ async function getWebFeaturesThatMapToUseCounters() {
 
   const ret = {};
 
-  for (const [useCounterNum, useCounterId] of data) {
+  for (const [ucId, ucName] of data) {
     // Some useCounters are drafts. This happens when the
     // corresponding web-feature is not yet in web-features.
     // In theory, we ignore them, but we also check if there
     // is a feature by that name anyway.
-    if (useCounterId.startsWith("DRAFT_")) {
+    if (ucName.startsWith("DRAFT_")) {
       // Check, just in case, if the feature is now in web-features.
-      const nonDraftName = useCounterId.replace("DRAFT_", "");
-      const wfid = convertUseCounterIdToWebFeatureId(nonDraftName);
+      const wfid = UCNAMES_TO_WFIDS[ucName.replace("DRAFT_", "")];
       if (features[wfid]) {
         console.warn(
-          `Use-counter ${useCounterId} is a draft, but the feature ${wfid} exists in web-features.`
+          `Use-counter ${ucName} is a draft, but the feature ${wfid} exists in web-features.`
         );
       }
 
-      console.log(`Ignoring use-counter: ${useCounterId} since it's a draft.`);
+      console.log(`Ignoring use-counter: ${ucName} since it's a draft.`);
       continue;
     }
 
     // Some useCounters are obsolete. We ignore them.
-    if (useCounterId.startsWith("OBSOLETE_")) {
-      console.log(`Ignoring use-counter: ${useCounterId} since it's an obsolete counter.`);
+    if (ucName.startsWith("OBSOLETE_")) {
+      console.log(`Ignoring use-counter: ${ucName} since it's an obsolete counter.`);
       continue;
     }
 
-    // Some useCounters are just not in web-features, not sure why.
-    // Ignore them for now.
-    if (UCNAME_TO_IGNORE.includes(useCounterId)) {
-      console.warn(`Ignoring use-counter: ${useCounterId} since we can't find an equivalent.`);
+    const webFeatureId = UCNAMES_TO_WFIDS[ucName];
+    if (!webFeatureId) {
+      console.warn(`No web-feature ID found for use-counter: ${ucName}`);
       continue;
     }
 
-    const webFeatureId = convertUseCounterIdToWebFeatureId(useCounterId);
-    ret[webFeatureId] = { useCounterNum, useCounterId };
+    ret[webFeatureId] = { ucId, ucName };
   }
 
   return ret;
 }
 
-async function getFeatureUsageInPercentageOfPageLoads(useCounterNum) {
-  const response = await fetch(`https://chromestatus.com/data/timeline/webfeaturepopularity?bucket_id=${useCounterNum}`);
+async function getFeatureUsageInPercentageOfPageLoads(ucId) {
+  const response = await fetch(`https://chromestatus.com/data/timeline/webfeaturepopularity?bucket_id=${ucId}`);
   const data = await response.json();
   // The API returns data for a few months, but it seems like the older the data, the less granular it is.
   // We don't care much for historical data here, so just return the last day.
@@ -101,7 +89,7 @@ async function getFeatureUsageInPercentageOfPageLoads(useCounterNum) {
 }
 
 async function main() {
-  // First, add any missing feature ID to the useCounters object.
+  // First, add any missing feature IDs to the useCounters object.
   for (const id in features) {
     if (!useCounters[id]) {
       useCounters[id] = {};
@@ -110,16 +98,16 @@ async function main() {
 
   // Now find the use-counters that map to web-features.
   const wfToUcMapping = await getWebFeaturesThatMapToUseCounters();
-  
+
   // For each, get the usage stats.
   for (const wfId in wfToUcMapping) {
     console.log(`Getting usage for ${wfId}...`);
-    const { useCounterNum } = wfToUcMapping[wfId];
-    const usage = await getFeatureUsageInPercentageOfPageLoads(useCounterNum);
+    const { ucId } = wfToUcMapping[wfId];
+    const usage = await getFeatureUsageInPercentageOfPageLoads(ucId);
     if (usage) {
       useCounters[wfId] = {
         percentageOfPageLoad: usage,
-        chromeStatusUrl: `https://chromestatus.com/metrics/webfeature/timeline/popularity/${useCounterNum}`
+        chromeStatusUrl: `https://chromestatus.com/metrics/webfeature/timeline/popularity/${ucId}`
       };
     }
   }
