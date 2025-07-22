@@ -194,6 +194,9 @@ function augmentFeatureData(id, feature) {
 
   // Add standard positions.
   feature.standardPositions = standardPositions[id];
+  feature.hasNegativeStandardPosition = 
+      feature?.standardPositions?.mozilla?.position === "negative" ||
+      feature?.standardPositions?.webkit?.position === "oppose";
 
   // Add origin trials.
   feature.originTrials = originTrials[id];

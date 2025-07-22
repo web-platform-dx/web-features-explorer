@@ -26,6 +26,9 @@
     {% if feature.expectedBaselineHighDate %}
       <p>This feature is expected to reach Baseline Widely Available status on: {{ feature.expectedBaselineHighDate }}
     {% endif %}
+    {% if not feature.status.baseline and feature.hasNegativeStandardPosition %}
+      <p>This feature received a negative standards position from at least one browser vendor. It's very unlikely to ever become Baseline in this current form.</p>
+    {% endif %}
   </div>
 
   {% include "docs.njk" %}

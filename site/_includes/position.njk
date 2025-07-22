@@ -3,6 +3,8 @@
     <a href="{{ position.url }}">Vendor position</a>
     {% if position.position %}
       <span>: {{ position.position }}</span>
+    {% else %}
+      <span>: unknown</span>
     {% endif %}
     {% if position.concerns.length > 0 %}
       <span>(concerns: {{ position.concerns | join(", ") }})</span>
