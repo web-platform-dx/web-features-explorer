@@ -1,0 +1,486 @@
+{
+ "compat_features": [
+  "api.HTMLCanvasElement.getContext.bitmaprenderer_context",
+  "api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter",
+  "api.ImageBitmapRenderingContext",
+  "api.ImageBitmapRenderingContext.canvas",
+  "api.ImageBitmapRenderingContext.transferFromImageBitmap"
+ ],
+ "description": "The ImageBitmapRenderingContext API is the \"bitmaprenderer\" rendering context for the <canvas> element. It is commonly used to transfer frames from an OffscreenCanvas to a user-visible <canvas> element.",
+ "description_html": "The <code>ImageBitmapRenderingContext</code> API is the <code>\"bitmaprenderer\"</code> rendering context for the <code>&#x3C;canvas></code> element. It is commonly used to transfer frames from an <code>OffscreenCanvas</code> to a user-visible <code>&#x3C;canvas></code> element.",
+ "name": "ImageBitmapRenderingContext",
+ "spec": [
+  {
+   "url": "https://html.spec.whatwg.org/multipage/canvas.html#the-imagebitmaprenderingcontext-interface",
+   "seriesComposition": "full",
+   "shortname": "html",
+   "series": {
+    "shortname": "html",
+    "currentSpecification": "html",
+    "title": "HTML",
+    "shortTitle": "HTML",
+    "nightlyUrl": "https://html.spec.whatwg.org/multipage/"
+   },
+   "nightly": {
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "status": "Living Standard",
+    "sourcePath": "source",
+    "alternateUrls": [],
+    "repository": "https://github.com/whatwg/html",
+    "pages": [
+     "https://html.spec.whatwg.org/multipage/introduction.html",
+     "https://html.spec.whatwg.org/multipage/infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+     "https://html.spec.whatwg.org/multipage/urls-and-fetching.html",
+     "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html",
+     "https://html.spec.whatwg.org/multipage/structured-data.html",
+     "https://html.spec.whatwg.org/multipage/dom.html",
+     "https://html.spec.whatwg.org/multipage/semantics.html",
+     "https://html.spec.whatwg.org/multipage/sections.html",
+     "https://html.spec.whatwg.org/multipage/grouping-content.html",
+     "https://html.spec.whatwg.org/multipage/text-level-semantics.html",
+     "https://html.spec.whatwg.org/multipage/links.html",
+     "https://html.spec.whatwg.org/multipage/edits.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content.html",
+     "https://html.spec.whatwg.org/multipage/images.html",
+     "https://html.spec.whatwg.org/multipage/iframe-embed-object.html",
+     "https://html.spec.whatwg.org/multipage/media.html",
+     "https://html.spec.whatwg.org/multipage/image-maps.html",
+     "https://html.spec.whatwg.org/multipage/embedded-content-other.html",
+     "https://html.spec.whatwg.org/multipage/tables.html",
+     "https://html.spec.whatwg.org/multipage/forms.html",
+     "https://html.spec.whatwg.org/multipage/input.html",
+     "https://html.spec.whatwg.org/multipage/form-elements.html",
+     "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+     "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+     "https://html.spec.whatwg.org/multipage/scripting.html",
+     "https://html.spec.whatwg.org/multipage/canvas.html",
+     "https://html.spec.whatwg.org/multipage/custom-elements.html",
+     "https://html.spec.whatwg.org/multipage/semantics-other.html",
+     "https://html.spec.whatwg.org/multipage/microdata.html",
+     "https://html.spec.whatwg.org/multipage/interaction.html",
+     "https://html.spec.whatwg.org/multipage/dnd.html",
+     "https://html.spec.whatwg.org/multipage/popover.html",
+     "https://html.spec.whatwg.org/multipage/browsers.html",
+     "https://html.spec.whatwg.org/multipage/nav-history-apis.html",
+     "https://html.spec.whatwg.org/multipage/document-sequences.html",
+     "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+     "https://html.spec.whatwg.org/multipage/document-lifecycle.html",
+     "https://html.spec.whatwg.org/multipage/webappapis.html",
+     "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html",
+     "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html",
+     "https://html.spec.whatwg.org/multipage/system-state.html",
+     "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html",
+     "https://html.spec.whatwg.org/multipage/comms.html",
+     "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+     "https://html.spec.whatwg.org/multipage/web-messaging.html",
+     "https://html.spec.whatwg.org/multipage/workers.html",
+     "https://html.spec.whatwg.org/multipage/worklets.html",
+     "https://html.spec.whatwg.org/multipage/webstorage.html",
+     "https://html.spec.whatwg.org/multipage/syntax.html",
+     "https://html.spec.whatwg.org/multipage/parsing.html",
+     "https://html.spec.whatwg.org/multipage/named-characters.html",
+     "https://html.spec.whatwg.org/multipage/xhtml.html",
+     "https://html.spec.whatwg.org/multipage/rendering.html",
+     "https://html.spec.whatwg.org/multipage/obsolete.html",
+     "https://html.spec.whatwg.org/multipage/iana.html",
+     "https://html.spec.whatwg.org/multipage/indices.html",
+     "https://html.spec.whatwg.org/multipage/references.html",
+     "https://html.spec.whatwg.org/multipage/acknowledgements.html"
+    ],
+    "filename": "index.html"
+   },
+   "organization": "WHATWG",
+   "groups": [
+    {
+     "name": "HTML Workstream",
+     "url": "https://html.spec.whatwg.org/multipage/"
+    }
+   ],
+   "title": "HTML",
+   "source": "whatwg",
+   "shortTitle": "HTML",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "custom-elements",
+     "eventsource",
+     "html",
+     "imagebitmap-renderingcontext",
+     "webmessaging",
+     "webstorage",
+     "workers",
+     "worklets",
+     "x-frame-options"
+    ],
+    "excludePaths": [
+     "html/cross-origin-embedder-policy/credentialless",
+     "html/cross-origin-embedder-policy/credentialless"
+    ]
+   },
+   "fragment": "the-imagebitmaprenderingcontext-interface"
+  }
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2022-07-15",
+  "baseline_low_date": "2020-01-15",
+  "support": {
+   "chrome": "66",
+   "chrome_android": "66",
+   "edge": "79",
+   "firefox": "50",
+   "firefox_android": "50",
+   "safari": "11.1",
+   "safari_ios": "11.3"
+  }
+ },
+ "id": "imagebitmaprenderingcontext",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "ImageBitmapRenderingContext",
+   "url": "https://developer.mozilla.org/docs/Web/API/ImageBitmapRenderingContext"
+  },
+  {
+   "title": "ImageBitmapRenderingContext: canvas property",
+   "url": "https://developer.mozilla.org/docs/Web/API/ImageBitmapRenderingContext/canvas"
+  },
+  {
+   "title": "ImageBitmapRenderingContext: transferFromImageBitmap() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/ImageBitmapRenderingContext/transferFromImageBitmap"
+  }
+ ],
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.HTMLCanvasElement.getContext.bitmaprenderer_context",
+   "compat": {
+    "description": "<code>bitmaprenderer</code> context",
+    "source_file": "api/HTMLCanvasElement.json",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "46"
+     },
+     "firefox_android": {
+      "version_added": "46"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    }
+   }
+  },
+  {
+   "key": "api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter",
+   "compat": {
+    "description": "<code>options.alpha</code> parameter",
+    "source_file": "api/HTMLCanvasElement.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-imagebitmaprenderingcontextsettings-alpha",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    }
+   }
+  },
+  {
+   "key": "api.ImageBitmapRenderingContext",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ImageBitmapRenderingContext",
+    "source_file": "api/ImageBitmapRenderingContext.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#the-imagebitmaprenderingcontext-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "46"
+     },
+     "firefox_android": {
+      "version_added": "46"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:createimagebitmap"
+    ]
+   }
+  },
+  {
+   "key": "api.ImageBitmapRenderingContext.canvas",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ImageBitmapRenderingContext/canvas",
+    "source_file": "api/ImageBitmapRenderingContext.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-imagebitmaprenderingcontext-canvas-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": {
+      "version_added": "97"
+     },
+     "firefox_android": {
+      "version_added": "97"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:createimagebitmap"
+    ]
+   }
+  },
+  {
+   "key": "api.ImageBitmapRenderingContext.transferFromImageBitmap",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ImageBitmapRenderingContext/transferFromImageBitmap",
+    "source_file": "api/ImageBitmapRenderingContext.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-imagebitmaprenderingcontext-transferfromimagebitmap-dev",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "66"
+     },
+     "chrome_android": {
+      "version_added": "66"
+     },
+     "edge": {
+      "version_added": "79"
+     },
+     "firefox": [
+      {
+       "version_added": "50"
+      },
+      {
+       "alternative_name": "transferImageBitmap",
+       "version_added": "46",
+       "version_last": "51",
+       "version_removed": "52"
+      }
+     ],
+     "firefox_android": [
+      {
+       "version_added": "50"
+      },
+      {
+       "alternative_name": "transferImageBitmap",
+       "version_added": "46",
+       "version_last": "51",
+       "version_removed": "52"
+      }
+     ],
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "5.0"
+     },
+     "opera": {
+      "version_added": "53"
+     },
+     "opera_android": {
+      "version_added": "47"
+     },
+     "safari": {
+      "version_added": "11.1"
+     },
+     "safari_ios": {
+      "version_added": "11.3"
+     },
+     "samsunginternet_android": {
+      "version_added": "9.0"
+     },
+     "webview_android": {
+      "version_added": "66"
+     },
+     "webview_ios": {
+      "version_added": "11.3"
+     }
+    },
+    "tags": [
+     "web-features:createimagebitmap"
+    ]
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": "2020-01-15T00:00:00.000Z",
+ "baselineHighDateAsObject": "2022-07-15T00:00:00.000Z",
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}
