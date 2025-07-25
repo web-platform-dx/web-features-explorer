@@ -23,10 +23,10 @@
 // Always check the new position URLs added by the script (for mozilla only for now) to make sure they are correct.
 // Add "not" entries if any of the URLs are not relevant to a feature.
 
-import { features } from "web-features";
 import fs from "fs/promises";
-import positions from "../standard-positions.json" with { type: "json" };
 import path from "path";
+import { features } from "../../features.js";
+import positions from "../standard-positions.json" with { type: "json" };
 
 const OUTPUT_FILE = path.join(import.meta.dirname, "../standard-positions.json");
 const MOZILLA_DATA_FILE =

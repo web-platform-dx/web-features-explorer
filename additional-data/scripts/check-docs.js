@@ -4,11 +4,11 @@
 // This script does not map features to MDN URLs on its own. Mapping MDN URLs
 // is done manually.
 
-import { features } from "web-features";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
 import * as fs from "fs/promises";
-import mdnDocsOverrides from "../mdn-docs.json" with { type: "json" };
 import path from "path";
+import { features } from "../../features.js";
+import mdnDocsOverrides from "../mdn-docs.json" with { type: "json" };
 
 const FILE = path.join(import.meta.dirname, "../mdn-docs.json");
 

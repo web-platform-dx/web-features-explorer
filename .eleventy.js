@@ -1,17 +1,18 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import feedPlugin from "@11ty/eleventy-plugin-rss";
-import YAML from 'yaml';
-import { browsers, features, groups } from "web-features";
+import mdnInventory from "@ddbeck/mdn-content-inventory";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
 import specs from "browser-specs" with { type: "json" };
-import mdnInventory from "@ddbeck/mdn-content-inventory";
+import { browsers, groups } from "web-features";
+import YAML from 'yaml';
+import interop from "./additional-data/interop.json" with { type: "json" };
 import mdnDocsOverrides from "./additional-data/mdn-docs.json" with { type: "json" };
-import standardPositions from "./additional-data/standard-positions.json" with { type: "json" };
 import originTrials from "./additional-data/origin-trials.json" with { type: "json" };
+import standardPositions from "./additional-data/standard-positions.json" with { type: "json" };
 import stateOfSurveys from "./additional-data/state-of-surveys.json" with { type: "json" };
 import useCounters from "./additional-data/use-counters.json" with { type: "json" };
-import interop from "./additional-data/interop.json" with { type: "json" };
 import wpt from "./additional-data/wpt.json" with { type: "json" };
+import { features } from "./features.js";
 
 // Number of months after Baseline low that Baseline high happens.
 // Keep in sync with definition at:

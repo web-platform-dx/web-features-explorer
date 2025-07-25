@@ -24,10 +24,10 @@
 // For Edge, see https://developer.microsoft.com/en-us/microsoft-edge/origin-trials/trials
 // For Firefox, see https://wiki.mozilla.org/Origin_Trials
 
-import { features } from "web-features";
 import fs from "fs/promises";
-import trials from "../origin-trials.json" with { type: "json" };
 import path from "path";
+import { features } from "../../features.js";
+import trials from "../origin-trials.json" with { type: "json" };
 
 const OUTPUT_FILE = path.join(import.meta.dirname, "../origin-trials.json");
 
