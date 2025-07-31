@@ -73,13 +73,16 @@
   "api.RTCStatsReport.type_inbound-rtp.codecId",
   "api.RTCStatsReport.type_inbound-rtp.concealedSamples",
   "api.RTCStatsReport.type_inbound-rtp.concealmentEvents",
+  "api.RTCStatsReport.type_inbound-rtp.estimatedPlayoutTimestamp",
   "api.RTCStatsReport.type_inbound-rtp.fecPacketsDiscarded",
   "api.RTCStatsReport.type_inbound-rtp.fecPacketsReceived",
   "api.RTCStatsReport.type_inbound-rtp.frameHeight",
   "api.RTCStatsReport.type_inbound-rtp.frameWidth",
+  "api.RTCStatsReport.type_inbound-rtp.framesAssembledFromMultiplePackets",
   "api.RTCStatsReport.type_inbound-rtp.framesDecoded",
   "api.RTCStatsReport.type_inbound-rtp.framesPerSecond",
   "api.RTCStatsReport.type_inbound-rtp.framesReceived",
+  "api.RTCStatsReport.type_inbound-rtp.freezeCount",
   "api.RTCStatsReport.type_inbound-rtp.headerBytesReceived",
   "api.RTCStatsReport.type_inbound-rtp.id",
   "api.RTCStatsReport.type_inbound-rtp.insertedSamplesForDeceleration",
@@ -96,6 +99,7 @@
   "api.RTCStatsReport.type_inbound-rtp.packetsDiscarded",
   "api.RTCStatsReport.type_inbound-rtp.packetsLost",
   "api.RTCStatsReport.type_inbound-rtp.packetsReceived",
+  "api.RTCStatsReport.type_inbound-rtp.pauseCount",
   "api.RTCStatsReport.type_inbound-rtp.playoutId",
   "api.RTCStatsReport.type_inbound-rtp.qpSum",
   "api.RTCStatsReport.type_inbound-rtp.remoteId",
@@ -103,9 +107,12 @@
   "api.RTCStatsReport.type_inbound-rtp.silentConcealedSamples",
   "api.RTCStatsReport.type_inbound-rtp.ssrc",
   "api.RTCStatsReport.type_inbound-rtp.timestamp",
+  "api.RTCStatsReport.type_inbound-rtp.totalAssemblyTime",
   "api.RTCStatsReport.type_inbound-rtp.totalAudioEnergy",
   "api.RTCStatsReport.type_inbound-rtp.totalDecodeTime",
+  "api.RTCStatsReport.type_inbound-rtp.totalFreezesDuration",
   "api.RTCStatsReport.type_inbound-rtp.totalInterFrameDelay",
+  "api.RTCStatsReport.type_inbound-rtp.totalPausesDuration",
   "api.RTCStatsReport.type_inbound-rtp.totalProcessingDelay",
   "api.RTCStatsReport.type_inbound-rtp.totalSamplesDuration",
   "api.RTCStatsReport.type_inbound-rtp.totalSamplesReceived",
@@ -4915,6 +4922,66 @@
    }
   },
   {
+   "key": "api.RTCStatsReport.type_inbound-rtp.estimatedPlayoutTimestamp",
+   "compat": {
+    "description": "<code>estimatedPlayoutTimestamp</code> in 'inbound-rtp' stats",
+    "source_file": "api/RTCStatsReport.json",
+    "spec_url": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-estimatedplayouttimestamp",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "142"
+     },
+     "firefox_android": {
+      "version_added": "142"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webrtc-stats"
+    ]
+   }
+  },
+  {
    "key": "api.RTCStatsReport.type_inbound-rtp.fecPacketsDiscarded",
    "compat": {
     "description": "<code>fecPacketsDiscarded</code> in 'inbound-rtp' stats",
@@ -5157,6 +5224,66 @@
    }
   },
   {
+   "key": "api.RTCStatsReport.type_inbound-rtp.framesAssembledFromMultiplePackets",
+   "compat": {
+    "description": "<code>framesAssembledFromMultiplePackets</code> in 'inbound-rtp' stats",
+    "source_file": "api/RTCStatsReport.json",
+    "spec_url": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-framesassembledfrommultiplepackets",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "142"
+     },
+     "firefox_android": {
+      "version_added": "142"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webrtc-stats"
+    ]
+   }
+  },
+  {
    "key": "api.RTCStatsReport.type_inbound-rtp.framesDecoded",
    "compat": {
     "description": "<code>framesDecoded</code> in 'inbound-rtp' stats",
@@ -5333,6 +5460,66 @@
      },
      "webview_android": {
       "version_added": "86"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webrtc-stats"
+    ]
+   }
+  },
+  {
+   "key": "api.RTCStatsReport.type_inbound-rtp.freezeCount",
+   "compat": {
+    "description": "<code>freezeCount</code> in 'inbound-rtp' stats",
+    "source_file": "api/RTCStatsReport.json",
+    "spec_url": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-freezecount",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "142"
+     },
+     "firefox_android": {
+      "version_added": "142"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
      },
      "webview_ios": {
       "version_added": false
@@ -6311,6 +6498,66 @@
    }
   },
   {
+   "key": "api.RTCStatsReport.type_inbound-rtp.pauseCount",
+   "compat": {
+    "description": "<code>pauseCount</code> in 'inbound-rtp' stats",
+    "source_file": "api/RTCStatsReport.json",
+    "spec_url": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-pausecount",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "142"
+     },
+     "firefox_android": {
+      "version_added": "142"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webrtc-stats"
+    ]
+   }
+  },
+  {
    "key": "api.RTCStatsReport.type_inbound-rtp.playoutId",
    "compat": {
     "description": "<code>playoutId</code> in 'inbound-rtp' stats",
@@ -6734,6 +6981,66 @@
    }
   },
   {
+   "key": "api.RTCStatsReport.type_inbound-rtp.totalAssemblyTime",
+   "compat": {
+    "description": "<code>totalAssemblyTime</code> in 'inbound-rtp' stats",
+    "source_file": "api/RTCStatsReport.json",
+    "spec_url": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-totalassemblytime",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "142"
+     },
+     "firefox_android": {
+      "version_added": "142"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webrtc-stats"
+    ]
+   }
+  },
+  {
    "key": "api.RTCStatsReport.type_inbound-rtp.totalAudioEnergy",
    "compat": {
     "description": "<code>totalAudioEnergy</code> in 'inbound-rtp' stats",
@@ -6854,6 +7161,66 @@
    }
   },
   {
+   "key": "api.RTCStatsReport.type_inbound-rtp.totalFreezesDuration",
+   "compat": {
+    "description": "<code>totalFreezesDuration</code> in 'inbound-rtp' stats",
+    "source_file": "api/RTCStatsReport.json",
+    "spec_url": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-totalfreezesduration",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "142"
+     },
+     "firefox_android": {
+      "version_added": "142"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webrtc-stats"
+    ]
+   }
+  },
+  {
    "key": "api.RTCStatsReport.type_inbound-rtp.totalInterFrameDelay",
    "compat": {
     "description": "<code>totalInterFrameDelay</code> in 'inbound-rtp' stats",
@@ -6903,6 +7270,66 @@
      },
      "webview_android": {
       "version_added": "79"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    },
+    "tags": [
+     "web-features:webrtc-stats"
+    ]
+   }
+  },
+  {
+   "key": "api.RTCStatsReport.type_inbound-rtp.totalPausesDuration",
+   "compat": {
+    "description": "<code>totalPausesDuration</code> in 'inbound-rtp' stats",
+    "source_file": "api/RTCStatsReport.json",
+    "spec_url": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-totalpausesduration",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "142"
+     },
+     "firefox_android": {
+      "version_added": "142"
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
      },
      "webview_ios": {
       "version_added": false

@@ -1,0 +1,1053 @@
+{
+ "compat_features": [
+  "api.Document.parseHTML_static",
+  "api.Element.setHTML",
+  "api.Sanitizer",
+  "api.Sanitizer.Sanitizer",
+  "api.Sanitizer.allowAttribute",
+  "api.Sanitizer.allowElement",
+  "api.Sanitizer.get",
+  "api.Sanitizer.removeAttribute",
+  "api.Sanitizer.removeElement",
+  "api.Sanitizer.removeUnsafe",
+  "api.Sanitizer.replaceElementWithChildren",
+  "api.Sanitizer.setComments",
+  "api.Sanitizer.setDataAttributes",
+  "api.ShadowRoot.setHTML"
+ ],
+ "description": "The parseHTML() method for the Document interface and the setHTML() methods for the Element and ShadowRoot interfaces parse and insert HTML into the DOM in a way that can prevent cross-site scripting attacks. The Sanitizer API can customize the sanitization process.",
+ "description_html": "The <code>parseHTML()</code> method for the <code>Document</code> interface and the <code>setHTML()</code> methods for the <code>Element</code> and <code>ShadowRoot</code> interfaces parse and insert HTML into the DOM in a way that can prevent cross-site scripting attacks. The <code>Sanitizer</code> API can customize the sanitization process.",
+ "name": "Sanitizer API",
+ "spec": [
+  {
+   "url": "https://wicg.github.io/sanitizer-api/",
+   "seriesComposition": "full",
+   "shortname": "sanitizer-api",
+   "series": {
+    "shortname": "sanitizer-api",
+    "currentSpecification": "sanitizer-api",
+    "title": "HTML Sanitizer API",
+    "shortTitle": "HTML Sanitizer API",
+    "nightlyUrl": "https://wicg.github.io/sanitizer-api/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Platform Incubator Community Group",
+     "url": "https://www.w3.org/community/wicg/"
+    }
+   ],
+   "nightly": {
+    "url": "https://wicg.github.io/sanitizer-api/",
+    "status": "Draft Community Group Report",
+    "alternateUrls": [],
+    "repository": "https://github.com/WICG/sanitizer-api",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "HTML Sanitizer API",
+   "source": "spec",
+   "shortTitle": "HTML Sanitizer API",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "sanitizer-api"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {}
+ },
+ "id": "sanitizer",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "Document: parseHTML() static method",
+   "url": "https://developer.mozilla.org/docs/Web/API/Document/parseHTML_static"
+  },
+  {
+   "title": "Element: setHTML() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/Element/setHTML"
+  },
+  {
+   "title": "Sanitizer",
+   "url": "https://developer.mozilla.org/docs/Web/API/Sanitizer"
+  },
+  {
+   "title": "Sanitizer: Sanitizer() constructor",
+   "url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/Sanitizer"
+  },
+  {
+   "title": "Sanitizer: allowAttribute() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/allowAttribute"
+  },
+  {
+   "title": "Sanitizer: allowElement() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/allowElement"
+  },
+  {
+   "title": "Sanitizer: get() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/get"
+  },
+  {
+   "title": "Sanitizer: removeAttribute() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/removeAttribute"
+  },
+  {
+   "title": "Sanitizer: removeElement() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/removeElement"
+  },
+  {
+   "title": "Sanitizer: removeUnsafe() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/removeUnsafe"
+  },
+  {
+   "title": "Sanitizer: replaceElementWithChildren() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/replaceElementWithChildren"
+  },
+  {
+   "title": "Sanitizer: setComments() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/setComments"
+  },
+  {
+   "title": "Sanitizer: setDataAttributes() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/setDataAttributes"
+  },
+  {
+   "title": "ShadowRoot: setHTML() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/ShadowRoot/setHTML"
+  }
+ ],
+ "hasNegativeStandardPosition": false,
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.Document.parseHTML_static",
+   "compat": {
+    "description": "<code>parseHTML</code> static method",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/parseHTML_static",
+    "source_file": "api/Document.json",
+    "spec_url": "https://wicg.github.io/sanitizer-api/#dom-document-parsehtml",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.sanitizer.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "139"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.Element.setHTML",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/setHTML",
+    "source_file": "api/Element.json",
+    "spec_url": "https://wicg.github.io/sanitizer-api/#dom-element-sethtml",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Chrome 105 to Chrome 118 (inclusive) supported this method with a significantly different specification.",
+      "version_added": false
+     },
+     "chrome_android": {
+      "notes": "Chrome Android 105 to Chrome Android 118 (inclusive) supported this method with a significantly different specification.",
+      "version_added": false
+     },
+     "edge": {
+      "notes": "Edge 105 to Edge 118 (inclusive) supported this method with a significantly different specification.",
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.sanitizer.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Quest Browser false to Quest Browser false (inclusive) supported this method with a significantly different specification.",
+      "version_added": false
+     },
+     "opera": {
+      "notes": "Opera 91 to Opera 104 (inclusive) supported this method with a significantly different specification.",
+      "version_added": false
+     },
+     "opera_android": {
+      "notes": "Opera Android 72 to Opera Android 79 (inclusive) supported this method with a significantly different specification.",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "notes": "Samsung Internet 20.0 to Samsung Internet 25.0 (inclusive) supported this method with a significantly different specification.",
+      "version_added": false
+     },
+     "webview_android": {
+      "notes": "WebView Android 105 to WebView Android 118 (inclusive) supported this method with a significantly different specification.",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.Sanitizer",
+   "compat": {
+    "source_file": "api/Sanitizer.json",
+    "spec_url": "https://wicg.github.io/sanitizer-api/#sanitizer",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "Chrome 105 to Chrome 118 (inclusive) supported this interface name with a significantly different specification.",
+      "version_added": false
+     },
+     "chrome_android": {
+      "notes": "Chrome Android 105 to Chrome Android 118 (inclusive) supported this interface name with a significantly different specification.",
+      "version_added": false
+     },
+     "edge": {
+      "notes": "Edge 105 to Edge 118 (inclusive) supported this interface name with a significantly different specification.",
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.sanitizer.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "notes": "Quest Browser false to Quest Browser false (inclusive) supported this interface name with a significantly different specification.",
+      "version_added": false
+     },
+     "opera": {
+      "notes": "Opera 91 to Opera 104 (inclusive) supported this interface name with a significantly different specification.",
+      "version_added": false
+     },
+     "opera_android": {
+      "notes": "Opera Android 72 to Opera Android 79 (inclusive) supported this interface name with a significantly different specification.",
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "notes": "Samsung Internet 20.0 to Samsung Internet 25.0 (inclusive) supported this interface name with a significantly different specification.",
+      "version_added": false
+     },
+     "webview_android": {
+      "notes": "WebView Android 105 to WebView Android 118 (inclusive) supported this interface name with a significantly different specification.",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.Sanitizer.Sanitizer",
+   "compat": {
+    "description": "<code>Sanitizer()</code> constructor",
+    "source_file": "api/Sanitizer.json",
+    "spec_url": "https://wicg.github.io/sanitizer-api/#dom-sanitizer-sanitizer",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.sanitizer.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.Sanitizer.allowAttribute",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/allowAttribute",
+    "source_file": "api/Sanitizer.json",
+    "spec_url": "https://wicg.github.io/sanitizer-api/#dom-sanitizer-allowattribute",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.sanitizer.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.Sanitizer.allowElement",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/allowElement",
+    "source_file": "api/Sanitizer.json",
+    "spec_url": "https://wicg.github.io/sanitizer-api/#dom-sanitizer-allowelement",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.sanitizer.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.Sanitizer.get",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/get",
+    "source_file": "api/Sanitizer.json",
+    "spec_url": "https://wicg.github.io/sanitizer-api/#dom-sanitizer-get",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.sanitizer.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.Sanitizer.removeAttribute",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/removeAttribute",
+    "source_file": "api/Sanitizer.json",
+    "spec_url": "https://wicg.github.io/sanitizer-api/#dom-sanitizer-removeattribute",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.sanitizer.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.Sanitizer.removeElement",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/removeElement",
+    "source_file": "api/Sanitizer.json",
+    "spec_url": "https://wicg.github.io/sanitizer-api/#dom-sanitizer-removeelement",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.sanitizer.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.Sanitizer.removeUnsafe",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/removeUnsafe",
+    "source_file": "api/Sanitizer.json",
+    "spec_url": "https://wicg.github.io/sanitizer-api/#dom-sanitizer-removeunsafe",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.sanitizer.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.Sanitizer.replaceElementWithChildren",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/replaceElementWithChildren",
+    "source_file": "api/Sanitizer.json",
+    "spec_url": "https://wicg.github.io/sanitizer-api/#dom-sanitizer-replaceelementwithchildren",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.sanitizer.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.Sanitizer.setComments",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/setComments",
+    "source_file": "api/Sanitizer.json",
+    "spec_url": "https://wicg.github.io/sanitizer-api/#dom-sanitizer-setcomments",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.sanitizer.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.Sanitizer.setDataAttributes",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Sanitizer/setDataAttributes",
+    "source_file": "api/Sanitizer.json",
+    "spec_url": "https://wicg.github.io/sanitizer-api/#dom-sanitizer-setdataattributes",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "flags": [
+       {
+        "name": "dom.security.sanitizer.enabled",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "138"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.ShadowRoot.setHTML",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ShadowRoot/setHTML",
+    "source_file": "api/ShadowRoot.json",
+    "spec_url": "https://wicg.github.io/sanitizer-api/#dom-shadowroot-sethtml",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": false
+     },
+     "chrome_android": {
+      "version_added": false
+     },
+     "edge": {
+      "version_added": false
+     },
+     "firefox": {
+      "version_added": "preview"
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": false
+     },
+     "opera_android": {
+      "version_added": false
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}
