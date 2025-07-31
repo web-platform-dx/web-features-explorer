@@ -10,10 +10,10 @@
 // }
 //
 
-import { features } from "web-features";
 import fs from "fs/promises";
-import useCounters from "../use-counters.json" with { type: "json" };
 import path from "path";
+import { features } from "../../features.js";
+import useCounters from "../use-counters.json" with { type: "json" };
 
 const OUTPUT_FILE = path.join(import.meta.dirname, "../use-counters.json");
 

@@ -1,5 +1,5 @@
 import fs from 'fs/promises';
-import { features } from "web-features";
+import { features } from './features';
 
 const FILE = 'site/_data/featureCatalog.yml';
 
