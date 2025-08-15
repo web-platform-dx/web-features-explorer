@@ -10,9 +10,10 @@
  * uncertainties in stats.
  */
 
-import { features, browsers } from "web-features";
 import fs from "node:fs/promises";
 import path from "node:path";
+import { browsers } from "web-features";
+import { features } from "./features.js";
 
 const OUTPUT_TIMELINE = path.join(import.meta.dirname, "site", "assets", "timeline-number.json");
 const OUTPUT_DURATIONS = path.join(import.meta.dirname, "site", "assets", "timeline-durations.json");
