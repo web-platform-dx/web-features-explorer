@@ -126,7 +126,7 @@
  "hasNegativeStandardPosition": false,
  "originTrials": [],
  "useCounters": {
-  "percentageOfPageLoad": 0.00190786,
+  "percentageOfPageLoad": 0.0024121,
   "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/2"
  },
  "interop": [
@@ -1330,12 +1330,22 @@
      "edge": {
       "version_added": "137"
      },
-     "firefox": {
-      "impl_url": "https://bugzil.la/1956141",
-      "version_added": false
-     },
+     "firefox": [
+      {
+       "version_added": "preview"
+      },
+      {
+       "flags": [
+        {
+         "name": "dom.viewTransitions.enabled",
+         "type": "preference",
+         "value_to_set": "true"
+        }
+       ],
+       "version_added": "142"
+      }
+     ],
      "firefox_android": {
-      "impl_url": "https://bugzil.la/1956141",
       "version_added": false
      },
      "ie": {
@@ -1748,13 +1758,11 @@
   "edge": [],
   "firefox": [
    "https://bugzil.la/1860854",
-   "https://bugzil.la/1881438",
-   "https://bugzil.la/1956141"
+   "https://bugzil.la/1881438"
   ],
   "firefox_android": [
    "https://bugzil.la/1860854",
-   "https://bugzil.la/1881438",
-   "https://bugzil.la/1956141"
+   "https://bugzil.la/1881438"
   ],
   "safari": [],
   "safari_ios": []
