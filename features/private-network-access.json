@@ -1,10 +1,18 @@
 {
  "compat_features": [
-  "api.Request.targetAddressSpace",
   "http.mixed-content.private_network_access"
  ],
  "description": "The Access-Control-Request-Private-Network: true and Access-Control-Allow-Private-Network: true HTTP request and response headers establish permission for websites to make requests to internal networks, such as to routers.",
  "description_html": "The <code>Access-Control-Request-Private-Network: true</code> and <code>Access-Control-Allow-Private-Network: true</code> HTTP request and response headers establish permission for websites to make requests to internal networks, such as to routers.",
+ "discouraged": {
+  "according_to": [
+   "https://github.com/WICG/local-network-access?tab=readme-ov-file#local-network-access",
+   "https://developer.chrome.com/blog/pna-on-hold"
+  ],
+  "alternatives": [
+   "local-network-access"
+  ]
+ },
  "name": "Private network access",
  "spec": [
   {
@@ -71,115 +79,6 @@
  "interop": [],
  "wpt": false,
  "bcdData": [
-  {
-   "key": "api.Request.targetAddressSpace",
-   "compat": {
-    "source_file": "api/Request.json",
-    "spec_url": "https://wicg.github.io/private-network-access/#dom-request-targetaddressspace",
-    "status": {
-     "deprecated": false,
-     "experimental": true,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": [
-      {
-       "flags": [
-        {
-         "name": "#local-network-access-check",
-         "type": "preference",
-         "value_to_set": "Enabled"
-        }
-       ],
-       "version_added": "138"
-      },
-      {
-       "version_added": "124",
-       "version_last": "137",
-       "version_removed": "138"
-      }
-     ],
-     "chrome_android": [
-      {
-       "flags": [
-        {
-         "name": "#local-network-access-check",
-         "type": "preference",
-         "value_to_set": "Enabled"
-        }
-       ],
-       "version_added": "138"
-      },
-      {
-       "version_added": "124",
-       "version_last": "137",
-       "version_removed": "138"
-      }
-     ],
-     "deno": {
-      "version_added": false
-     },
-     "edge": [
-      {
-       "flags": [
-        {
-         "name": "#local-network-access-check",
-         "type": "preference",
-         "value_to_set": "Enabled"
-        }
-       ],
-       "version_added": "138"
-      },
-      {
-       "version_added": "124",
-       "version_last": "137",
-       "version_removed": "138"
-      }
-     ],
-     "firefox": {
-      "version_added": false
-     },
-     "firefox_android": {
-      "version_added": false
-     },
-     "ie": {
-      "version_added": false
-     },
-     "nodejs": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "110"
-     },
-     "opera_android": {
-      "version_added": "82"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "version_added": "27.0"
-     },
-     "webview_android": {
-      "version_added": "124",
-      "version_last": "137",
-      "version_removed": "138"
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:private-network-access"
-    ]
-   }
-  },
   {
    "key": "http.mixed-content.private_network_access",
    "compat": {
@@ -259,7 +158,9 @@
       "version_added": "110"
      },
      "opera_android": {
-      "version_added": "82"
+      "version_added": "82",
+      "version_last": "90",
+      "version_removed": "91"
      },
      "safari": {
       "version_added": false
@@ -286,7 +187,6 @@
   }
  ],
  "bcdTags": [
-  "api",
   "http"
  ],
  "baselineLowDateAsObject": null,
