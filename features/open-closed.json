@@ -1,12 +1,11 @@
 {
  "compat_features": [
-  "css.selectors.closed",
   "css.selectors.open"
  ],
- "description": "The :open and :closed CSS pseudo-classes match elements that have open and closed states, like <details, <dialog>, or <select>, based on their state.",
- "description_html": "The <code>:open</code> and <code>:closed</code> CSS pseudo-classes match elements that have open and closed states, like <code>&#x3C;details</code>, <code>&#x3C;dialog></code>, or <code>&#x3C;select></code>, based on their state.",
+ "description": "The :open CSS pseudo-class matches elements that have open states, like <details, <dialog>, or <select>, based on their state.",
+ "description_html": "The <code>:open</code> CSS pseudo-class matches elements that have open states, like <code>&#x3C;details</code>, <code>&#x3C;dialog></code>, or <code>&#x3C;select></code>, based on their state.",
  "group": "selectors",
- "name": "Open and closed selectors",
+ "name": ":open",
  "spec": [
   {
    "url": "https://drafts.csswg.org/selectors-4/#open-state",
@@ -64,7 +63,13 @@
  ],
  "status": {
   "baseline": false,
-  "support": {}
+  "support": {
+   "chrome": "133",
+   "chrome_android": "133",
+   "edge": "133",
+   "firefox": "136",
+   "firefox_android": "136"
+  }
  },
  "id": "open-closed",
  "groups": [
@@ -101,94 +106,6 @@
  "interop": [],
  "wpt": false,
  "bcdData": [
-  {
-   "key": "css.selectors.closed",
-   "compat": {
-    "description": "<code>:closed</code>",
-    "source_file": "css/selectors/closed.json",
-    "spec_url": "https://drafts.csswg.org/selectors-4/#open-state",
-    "status": {
-     "deprecated": false,
-     "experimental": true,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "notes": "The selector is recognized, but has no effect.",
-      "partial_implementation": true,
-      "version_added": "114",
-      "version_last": "121",
-      "version_removed": "122"
-     },
-     "chrome_android": {
-      "notes": "The selector is recognized, but has no effect.",
-      "partial_implementation": true,
-      "version_added": "114",
-      "version_last": "121",
-      "version_removed": "122"
-     },
-     "edge": {
-      "notes": "The selector is recognized, but has no effect.",
-      "partial_implementation": true,
-      "version_added": "114",
-      "version_last": "121",
-      "version_removed": "122"
-     },
-     "firefox": {
-      "version_added": false
-     },
-     "firefox_android": {
-      "version_added": false
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "notes": "The selector is recognized, but has no effect.",
-      "partial_implementation": true,
-      "version_added": "100",
-      "version_last": "107",
-      "version_removed": "108"
-     },
-     "opera_android": {
-      "notes": "The selector is recognized, but has no effect.",
-      "partial_implementation": true,
-      "version_added": "76",
-      "version_last": "80",
-      "version_removed": "81"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "notes": "The selector is recognized, but has no effect.",
-      "partial_implementation": true,
-      "version_added": "23.0",
-      "version_last": "25.0",
-      "version_removed": "26.0"
-     },
-     "webview_android": {
-      "notes": "The selector is recognized, but has no effect.",
-      "partial_implementation": true,
-      "version_added": "114",
-      "version_last": "121",
-      "version_removed": "122"
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:open-closed"
-    ]
-   }
-  },
   {
    "key": "css.selectors.open",
    "compat": {
@@ -325,5 +242,8 @@
   "firefox_android": [],
   "safari": [],
   "safari_ios": []
- }
+ },
+ "blockedOn": "Safari",
+ "monthsBlocked": 5,
+ "blockedSince": "March 2025"
 }
