@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Web platform features explorer - isInputPending()</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
+    <link href="/web-features-explorer/assets/favicon.png" rel="icon" sizes="64x64" type="image/png">
+    <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
+  </head>
+  <body>
+
+    <header>
+      <a href="/web-features-explorer/">Web platform features explorer</a>
+
+      <nav>
+        <ul>
+          <li><a href="/web-features-explorer/release-notes/august-2025">Release notes</a></li>
+          <li><a href="/web-features-explorer/features">Explore all features</a></li>
+          <li><a href="/web-features-explorer/about">About</a></li>
+        </ul>
+        <search>
+          <form>
+            <input type="search" id="search" placeholder="Search">
+          </form>
+        </search>
+      </nav>
+
+      <output for="search"></output>
+    </header>
+
+    
+<main class="feature-page">
+  <div id="is-input-pending" class="feature full baseline-false discouraged">
+  <div class="header">
+    <h1 data-pagefind-body="">isInputPending()</h1>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="is-input-pending" data-len="16"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
+  </div>
+
+  
+  <div class="discouraged-info">
+    <p>
+      This feature is discouraged.
+      
+        Consider using
+          
+            <a href="/web-features-explorer/features/scheduler">Scheduler API</a>
+            
+          
+        instead.
+      
+      For the rationale, see:
+    </p>
+    <ul>
+      
+        <li><a href="https://web.dev/articles/optimize-long-tasks#isinputpending">https://web.dev/articles/optimize-long-tasks#isinputpending</a></li>
+      
+    </ul>
+  </div>
+
+
+  <p class="description" data-pagefind-body="">
+    The <code>navigator.scheduling.isInputPending()</code> method checks if there are pending input events, such as touch or mouse events. This allows you to yield from long-running scripts that might be blocking user interaction.
+  </p>
+
+  <div class="baseline feature-box">
+    <h3>Status</h3>
+    <div class="availability">
+  
+    Discouraged
+  
+</div>
+    
+    
+  </div>
+
+  <div class="docs feature-box">
+  <h3>MDN documentation</h3>
+  
+    <ul data-pagefind-body="">
+      
+        <li>
+          <a href="https://developer.mozilla.org/docs/Web/API/Navigator/scheduling">
+            
+              Navigator: scheduling property
+            
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://developer.mozilla.org/docs/Web/API/Scheduling">
+            
+              Scheduling
+            
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://developer.mozilla.org/docs/Web/API/Scheduling/isInputPending">
+            
+              Scheduling: isInputPending() method
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</div>
+
+  
+  <div class="specs feature-box" data-pagefind-body="">
+    <h3>Specifications</h3>
+    <ul data-pagefind-body="">
+      
+        <li>
+          
+            <a href="https://wicg.github.io/is-input-pending/">Early detection of input events</a>,
+            from <a href="https://www.w3.org/community/wicg/">Web Platform Incubator Community Group</a> (W3C).
+          
+        </li>
+      
+    </ul>
+  </div>
+
+  
+  <div class="compat-table feature-box">
+    <h3>Browser support</h3>
+    <ul class="compat compat-full">
+  
+    <li class="browser browser-chrome supported">
+      <span class="name">Chrome</span>
+      
+      
+        <span class="version">87</span>
+        <span class="date">Released on 2020-11-17</span>
+      
+    </li>
+  
+    <li class="browser browser-chrome_android supported">
+      <span class="name">Chrome Android</span>
+      
+      
+        <span class="version">87</span>
+        <span class="date">Released on 2020-11-17</span>
+      
+    </li>
+  
+    <li class="browser browser-edge supported">
+      <span class="name">Edge</span>
+      
+      
+        <span class="version">87</span>
+        <span class="date">Released on 2020-11-19</span>
+      
+    </li>
+  
+    <li class="browser browser-firefox">
+      <span class="name">Firefox</span>
+      
+      
+        <span class="version">❌</span>
+        
+        
+  
+  
+
+
+      
+    </li>
+  
+    <li class="browser browser-firefox_android">
+      <span class="name">Firefox for Android</span>
+      
+      
+        <span class="version">❌</span>
+        
+        
+  
+  
+
+
+      
+    </li>
+  
+    <li class="browser browser-safari">
+      <span class="name">Safari</span>
+      
+      
+        <span class="version">❌</span>
+        
+        
+  
+  
+
+
+      
+    </li>
+  
+    <li class="browser browser-safari_ios">
+      <span class="name">Safari on iOS</span>
+      
+      
+        <span class="version">❌</span>
+        
+        
+  
+  
+
+
+      
+    </li>
+  
+</ul>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <p class="edit-links">
+    <a href="../is-input-pending.json">View as JSON</a>
+    |
+    <a href="https://github.com/web-platform-dx/web-features/edit/main/features/is-input-pending.yml">Edit this feature</a>
+    |
+    <a href="https://github.com/web-platform-dx/web-features/issues/new?title=[is-input-pending] Issue title&body=Please describe the issue here...">Report an issue</a>
+    |    
+    Web-features entry:
+    <a href="https://github.com/web-platform-dx/web-features/blob/main/features/is-input-pending.yml">source</a>,
+    <a href="https://github.com/web-platform-dx/web-features/blob/main/features/is-input-pending.yml.dist">dist</a>
+  </p>
+</div>
+
+</main>
+    
+    <script src="/web-features-explorer/assets/search.js" defer=""></script>
+  </body>
+</html>
