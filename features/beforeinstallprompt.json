@@ -8,13 +8,13 @@
   "api.Window.appinstalled_event",
   "api.Window.beforeinstallprompt_event"
  ],
- "description": "The beforeinstallprompt event fires when a Progressive Web App (PWA) is installable, usually on page load in browsers that support installing PWAs. You can use this event to prevent the install prompt from appearing until after the user interacts with an element on the page.",
- "description_html": "The <code>beforeinstallprompt</code> event fires when a Progressive Web App (PWA) is installable, usually on page load in browsers that support installing PWAs. You can use this event to prevent the install prompt from appearing until after the user interacts with an element on the page.",
+ "description": "The beforeinstallprompt event fires when a Progressive Web App (PWA) is installable. You can cancel the event and later call event.prompt() to control when the installation prompt is shown. The appinstalled event fires when the PWA is successfully installed.",
+ "description_html": "The <code>beforeinstallprompt</code> event fires when a Progressive Web App (PWA) is installable. You can cancel the event and later call <code>event.prompt()</code> to control when the installation prompt is shown. The <code>appinstalled</code> event fires when the PWA is successfully installed.",
  "group": "progressive-web-app",
  "name": "beforeinstallprompt",
  "spec": [
   {
-   "url": "https://wicg.github.io/manifest-incubations/",
+   "url": "https://wicg.github.io/manifest-incubations/#installation-events",
    "seriesComposition": "full",
    "shortname": "manifest-incubations",
    "series": {
@@ -46,7 +46,7 @@
     "browser"
    ],
    "standing": "good",
-   "fragment": null
+   "fragment": "installation-events"
   }
  ],
  "status": {
