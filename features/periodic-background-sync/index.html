@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Web platform features explorer - Speculation rules</title>
+    <title>Web platform features explorer - Periodic background sync</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     <link href="/web-features-explorer/assets/favicon.png" rel="icon" sizes="64x64" type="image/png">
@@ -31,10 +31,10 @@
 
     
 <main class="feature-page">
-  <div id="speculation-rules" class="feature full baseline-false">
+  <div id="periodic-background-sync" class="feature full baseline-false">
   <div class="header">
-    <h1 data-pagefind-body="">Speculation rules</h1>
-    <span class="feature-copyable-id"><input id="feature-id" type="text" value="speculation-rules" data-len="17"><button id="copy-feature-id">Copy ID</button></span>
+    <h1 data-pagefind-body="">Periodic background sync</h1>
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="periodic-background-sync" data-len="24"><button id="copy-feature-id">Copy ID</button></span>
     <script>
       (function() {
         const button = document.querySelector("#copy-feature-id");
@@ -50,7 +50,7 @@
   
 
   <p class="description" data-pagefind-body="">
-    Speculation rules are hints to the browser to proactively download pages in the background so they appear instantly when the user navigates to them.
+    The periodic background synchronization API fires a recurring <code>periodicsync</code> event in a service worker. You can use this to update data in the background at regular intervals.
   </p>
 
   <div class="baseline feature-box">
@@ -72,9 +72,73 @@
     <ul data-pagefind-body="">
       
         <li>
-          <a href="https://developer.mozilla.org/docs/Web/API/Speculation_Rules_API">
+          <a href="https://developer.mozilla.org/docs/Web/API/PeriodicSyncEvent">
             
-              Speculation Rules API
+              PeriodicSyncEvent
+            
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://developer.mozilla.org/docs/Web/API/PeriodicSyncEvent/PeriodicSyncEvent">
+            
+              PeriodicSyncEvent: PeriodicSyncEvent() constructor
+            
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://developer.mozilla.org/docs/Web/API/PeriodicSyncEvent/tag">
+            
+              PeriodicSyncEvent: tag property
+            
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://developer.mozilla.org/docs/Web/API/PeriodicSyncManager">
+            
+              PeriodicSyncManager
+            
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://developer.mozilla.org/docs/Web/API/PeriodicSyncManager/getTags">
+            
+              PeriodicSyncManager: getTags() method
+            
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://developer.mozilla.org/docs/Web/API/PeriodicSyncManager/register">
+            
+              PeriodicSyncManager: register() method
+            
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://developer.mozilla.org/docs/Web/API/PeriodicSyncManager/unregister">
+            
+              PeriodicSyncManager: unregister() method
+            
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/periodicsync_event">
+            
+              ServiceWorkerGlobalScope: periodicsync event
+            
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/periodicSync">
+            
+              ServiceWorkerRegistration: periodicSync property
             
           </a>
         </li>
@@ -90,13 +154,7 @@
       
         <li>
           
-            <a href="https://wicg.github.io/nav-speculation/speculation-rules.html">https://wicg.github.io/nav-speculation/speculation-rules.html</a>
-          
-        </li>
-      
-        <li>
-          
-            <a href="https://wicg.github.io/nav-speculation/prerendering.html">Prerendering Revamped</a>,
+            <a href="https://wicg.github.io/periodic-background-sync/">Web Periodic Background Synchronization</a>,
             from <a href="https://www.w3.org/community/wicg/">Web Platform Incubator Community Group</a> (W3C).
           
         </li>
@@ -113,8 +171,8 @@
       <span class="name">Chrome</span>
       
       
-        <span class="version">109</span>
-        <span class="date">Released on 2023-01-10</span>
+        <span class="version">80</span>
+        <span class="date">Released on 2020-02-04</span>
       
     </li>
   
@@ -122,8 +180,8 @@
       <span class="name">Chrome Android</span>
       
       
-        <span class="version">109</span>
-        <span class="date">Released on 2023-01-10</span>
+        <span class="version">80</span>
+        <span class="date">Released on 2020-02-04</span>
       
     </li>
   
@@ -131,8 +189,8 @@
       <span class="name">Edge</span>
       
       
-        <span class="version">109</span>
-        <span class="date">Released on 2023-01-12</span>
+        <span class="version">80</span>
+        <span class="date">Released on 2020-02-07</span>
       
     </li>
   
@@ -145,16 +203,6 @@
         
   
   
-  <span class="position position-neutral">
-    <a href="https://github.com/mozilla/standards-positions/issues/620">Vendor position</a>
-    
-      <span>: neutral</span>
-    
-    
-      <span>(concerns: complexity)</span>
-    
-  </span>
-
 
 
       
@@ -169,16 +217,6 @@
         
   
   
-  <span class="position position-neutral">
-    <a href="https://github.com/mozilla/standards-positions/issues/620">Vendor position</a>
-    
-      <span>: neutral</span>
-    
-    
-      <span>(concerns: complexity)</span>
-    
-  </span>
-
 
 
       
@@ -216,47 +254,25 @@
   </div>
 
   
-  <div class="origin-trials feature-box">
-    <h3>Origin trials</h3>
-    <p>Origin trials let you try experimental features on your production website and give feedback to browser vendors. This feature currently has the following origin trials available:</p>
-    <ul>
-      
-        <li>
-          <strong>SpeculationRulesTargetHint</strong> on Chrome 135 to 140. <a href="https://developer.chrome.com/origintrials/#/register_trial/1858297796243750913">Register for this origin trial</a>. <a href="https://github.com/WICG/nav-speculation/issues">Provide feedback about this origin trial</a>.
-        </li>
-      
-    </ul>
-  </div>
-
 
   
 
   
-  <div class="use-counters feature-box">
-    <h3>Usage <span class="subtext">(according to <a href="https://chromestatus.com/metrics/webfeature/popularity">Chrome Platform Status</a>)</span></h3>
-    <p>~11.882% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/317">More data at chromestatus</a>.</p>
-  </div>
-
 
   
 
   
-  <div class="wpt feature-box">
-    <h3>Web Platform Tests (WPT)</h3>
-    <a href="https://wpt.fyi/results/?q=feature:speculation-rules">View the latest WPT test results for this feature</a>
-  </div>
-
 
   <p class="edit-links">
-    <a href="../speculation-rules.json">View as JSON</a>
+    <a href="../periodic-background-sync.json">View as JSON</a>
     |
-    <a href="https://github.com/web-platform-dx/web-features/edit/main/features/speculation-rules.yml">Edit this feature</a>
+    <a href="https://github.com/web-platform-dx/web-features/edit/main/features/periodic-background-sync.yml">Edit this feature</a>
     |
-    <a href="https://github.com/web-platform-dx/web-features/issues/new?title=[speculation-rules] Issue title&body=Please describe the issue here...">Report an issue</a>
+    <a href="https://github.com/web-platform-dx/web-features/issues/new?title=[periodic-background-sync] Issue title&body=Please describe the issue here...">Report an issue</a>
     |    
     Web-features entry:
-    <a href="https://github.com/web-platform-dx/web-features/blob/main/features/speculation-rules.yml">source</a>,
-    <a href="https://github.com/web-platform-dx/web-features/blob/main/features/speculation-rules.yml.dist">dist</a>
+    <a href="https://github.com/web-platform-dx/web-features/blob/main/features/periodic-background-sync.yml">source</a>,
+    <a href="https://github.com/web-platform-dx/web-features/blob/main/features/periodic-background-sync.yml.dist">dist</a>
   </p>
 </div>
 

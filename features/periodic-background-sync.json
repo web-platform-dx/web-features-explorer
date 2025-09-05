@@ -1,0 +1,649 @@
+{
+ "compat_features": [
+  "api.PeriodicSyncEvent",
+  "api.PeriodicSyncEvent.PeriodicSyncEvent",
+  "api.PeriodicSyncEvent.tag",
+  "api.PeriodicSyncManager",
+  "api.PeriodicSyncManager.getTags",
+  "api.PeriodicSyncManager.register",
+  "api.PeriodicSyncManager.unregister",
+  "api.ServiceWorkerGlobalScope.periodicsync_event",
+  "api.ServiceWorkerRegistration.periodicSync"
+ ],
+ "description": "The periodic background synchronization API fires a recurring periodicsync event in a service worker. You can use this to update data in the background at regular intervals.",
+ "description_html": "The periodic background synchronization API fires a recurring <code>periodicsync</code> event in a service worker. You can use this to update data in the background at regular intervals.",
+ "name": "Periodic background sync",
+ "spec": [
+  {
+   "url": "https://wicg.github.io/periodic-background-sync/",
+   "seriesComposition": "full",
+   "shortname": "periodic-background-sync",
+   "series": {
+    "shortname": "periodic-background-sync",
+    "currentSpecification": "periodic-background-sync",
+    "title": "Web Periodic Background Synchronization",
+    "shortTitle": "Web Periodic Background Synchronization",
+    "nightlyUrl": "https://wicg.github.io/periodic-background-sync/"
+   },
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "Web Platform Incubator Community Group",
+     "url": "https://www.w3.org/community/wicg/"
+    }
+   ],
+   "nightly": {
+    "url": "https://wicg.github.io/periodic-background-sync/",
+    "status": "Draft Community Group Report",
+    "alternateUrls": [],
+    "repository": "https://github.com/WICG/periodic-background-sync",
+    "sourcePath": "index.bs",
+    "filename": "index.html"
+   },
+   "title": "Web Periodic Background Synchronization",
+   "source": "spec",
+   "shortTitle": "Web Periodic Background Synchronization",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "tests": {
+    "repository": "https://github.com/web-platform-tests/wpt",
+    "testPaths": [
+     "periodic-background-sync"
+    ]
+   },
+   "fragment": null
+  }
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "80",
+   "chrome_android": "80",
+   "edge": "80"
+  }
+ },
+ "id": "periodic-background-sync",
+ "groups": [],
+ "groupPaths": [],
+ "mdnUrls": [
+  {
+   "title": "PeriodicSyncEvent",
+   "url": "https://developer.mozilla.org/docs/Web/API/PeriodicSyncEvent"
+  },
+  {
+   "title": "PeriodicSyncEvent: PeriodicSyncEvent() constructor",
+   "url": "https://developer.mozilla.org/docs/Web/API/PeriodicSyncEvent/PeriodicSyncEvent"
+  },
+  {
+   "title": "PeriodicSyncEvent: tag property",
+   "url": "https://developer.mozilla.org/docs/Web/API/PeriodicSyncEvent/tag"
+  },
+  {
+   "title": "PeriodicSyncManager",
+   "url": "https://developer.mozilla.org/docs/Web/API/PeriodicSyncManager"
+  },
+  {
+   "title": "PeriodicSyncManager: getTags() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/PeriodicSyncManager/getTags"
+  },
+  {
+   "title": "PeriodicSyncManager: register() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/PeriodicSyncManager/register"
+  },
+  {
+   "title": "PeriodicSyncManager: unregister() method",
+   "url": "https://developer.mozilla.org/docs/Web/API/PeriodicSyncManager/unregister"
+  },
+  {
+   "title": "ServiceWorkerGlobalScope: periodicsync event",
+   "url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/periodicsync_event"
+  },
+  {
+   "title": "ServiceWorkerRegistration: periodicSync property",
+   "url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/periodicSync"
+  }
+ ],
+ "hasNegativeStandardPosition": false,
+ "interop": [],
+ "wpt": false,
+ "bcdData": [
+  {
+   "key": "api.PeriodicSyncEvent",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PeriodicSyncEvent",
+    "source_file": "api/PeriodicSyncEvent.json",
+    "spec_url": "https://wicg.github.io/periodic-background-sync/#periodicsync-event",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": "80"
+     },
+     "edge": {
+      "version_added": "80"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "9.0"
+     },
+     "opera": {
+      "version_added": "67"
+     },
+     "opera_android": {
+      "version_added": "57"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40151529",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.PeriodicSyncEvent.PeriodicSyncEvent",
+   "compat": {
+    "description": "<code>PeriodicSyncEvent()</code> constructor",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PeriodicSyncEvent/PeriodicSyncEvent",
+    "source_file": "api/PeriodicSyncEvent.json",
+    "spec_url": "https://wicg.github.io/periodic-background-sync/#dom-periodicsyncevent-periodicsyncevent",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": "80"
+     },
+     "edge": {
+      "version_added": "80"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "9.0"
+     },
+     "opera": {
+      "version_added": "67"
+     },
+     "opera_android": {
+      "version_added": "57"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.PeriodicSyncEvent.tag",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PeriodicSyncEvent/tag",
+    "source_file": "api/PeriodicSyncEvent.json",
+    "spec_url": "https://wicg.github.io/periodic-background-sync/#dom-periodicsyncevent-tag",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": "80"
+     },
+     "edge": {
+      "version_added": "80"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "9.0"
+     },
+     "opera": {
+      "version_added": "67"
+     },
+     "opera_android": {
+      "version_added": "57"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.PeriodicSyncManager",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PeriodicSyncManager",
+    "source_file": "api/PeriodicSyncManager.json",
+    "spec_url": "https://wicg.github.io/periodic-background-sync/#periodicsyncmanager-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": "80"
+     },
+     "edge": {
+      "version_added": "80"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "9.0"
+     },
+     "opera": {
+      "version_added": "67"
+     },
+     "opera_android": {
+      "version_added": "57"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40151529",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.PeriodicSyncManager.getTags",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PeriodicSyncManager/getTags",
+    "source_file": "api/PeriodicSyncManager.json",
+    "spec_url": "https://wicg.github.io/periodic-background-sync/#dom-periodicsyncmanager-gettags",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": "80"
+     },
+     "edge": {
+      "version_added": "80"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "9.0"
+     },
+     "opera": {
+      "version_added": "67"
+     },
+     "opera_android": {
+      "version_added": "57"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.PeriodicSyncManager.register",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PeriodicSyncManager/register",
+    "source_file": "api/PeriodicSyncManager.json",
+    "spec_url": "https://wicg.github.io/periodic-background-sync/#dom-periodicsyncmanager-register",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": "80"
+     },
+     "edge": {
+      "version_added": "80"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "9.0"
+     },
+     "opera": {
+      "version_added": "67"
+     },
+     "opera_android": {
+      "version_added": "57"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.PeriodicSyncManager.unregister",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/PeriodicSyncManager/unregister",
+    "source_file": "api/PeriodicSyncManager.json",
+    "spec_url": "https://wicg.github.io/periodic-background-sync/#dom-periodicsyncmanager-unregister",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": "80"
+     },
+     "edge": {
+      "version_added": "80"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "9.0"
+     },
+     "opera": {
+      "version_added": "67"
+     },
+     "opera_android": {
+      "version_added": "57"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.ServiceWorkerGlobalScope.periodicsync_event",
+   "compat": {
+    "description": "<code>periodicsync</code> event",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/periodicsync_event",
+    "source_file": "api/ServiceWorkerGlobalScope.json",
+    "spec_url": [
+     "https://wicg.github.io/periodic-background-sync/#periodicsync-event",
+     "https://wicg.github.io/periodic-background-sync/#dom-serviceworkerglobalscope-onperiodicsync"
+    ],
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": "80"
+     },
+     "edge": {
+      "version_added": "80"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "9.0"
+     },
+     "opera": {
+      "version_added": "67"
+     },
+     "opera_android": {
+      "version_added": "57"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40151529",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.ServiceWorkerRegistration.periodicSync",
+   "compat": {
+    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/periodicSync",
+    "source_file": "api/ServiceWorkerRegistration.json",
+    "spec_url": "https://wicg.github.io/periodic-background-sync/#dom-serviceworkerregistration-periodicsync",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "80"
+     },
+     "chrome_android": {
+      "version_added": "80"
+     },
+     "edge": {
+      "version_added": "80"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": "9.0"
+     },
+     "opera": {
+      "version_added": "67"
+     },
+     "opera_android": {
+      "version_added": "57"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": "13.0"
+     },
+     "webview_android": {
+      "impl_url": "https://crbug.com/40151529",
+      "version_added": false
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  }
+ ],
+ "bcdTags": [
+  "api"
+ ],
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null,
+ "implUrls": {
+  "chrome": [],
+  "chrome_android": [],
+  "edge": [],
+  "firefox": [],
+  "firefox_android": [],
+  "safari": [],
+  "safari_ios": []
+ }
+}
