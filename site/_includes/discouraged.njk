@@ -5,7 +5,7 @@
       {% if feature.discouraged.alternatives %}
         Consider using
           {% for alternative in feature.discouraged.alternatives %}
-            <a href="/features/{{ alternative }}">{{ features[alternative].name }}</a>
+            <a href="/features/{{ alternative }}">{{ allFeaturesAsObject[alternative].name }}</a>
             {% if not loop.last %}, {% endif %}
           {% endfor %}
         instead.

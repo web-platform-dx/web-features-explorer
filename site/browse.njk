@@ -21,12 +21,12 @@ function isGroup(item) {
                 {% if not features[featureId].discouraged %}
                   <li>
                     <span class="name">
-                      <a href="/features/{{ features[featureId].id | slugify }}/">
-                        {% prettyFeatureName features[featureId].name %}
+                      <a href="/features/{{ allFeaturesAsObject[featureId].id | slugify }}/">
+                        {% prettyFeatureName allFeaturesAsObject[featureId].name %}
                       </a>
                     </span>
                     <span class="description">
-                      {{ features[featureId].description }}
+                      {{ allFeaturesAsObject[featureId].description }}
                     </span>
                   </li>
                 {% endif %}

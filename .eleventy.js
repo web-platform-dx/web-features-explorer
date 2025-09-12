@@ -1,7 +1,7 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import feedPlugin from "@11ty/eleventy-plugin-rss";
 import YAML from 'yaml';
-import { browsers, features, groups } from "web-features";
+import { browsers, features as webFeaturesFeatures, groups } from "web-features";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
 import specs from "browser-specs" with { type: "json" };
 import mdnInventory from "@ddbeck/mdn-content-inventory";
@@ -69,10 +69,7 @@ function stripLessThan(dateStr) {
   return dateStr;
 }
 
-function augmentFeatureData(id, feature) {
-  // Add the id.
-  feature.id = id;
-
+function augmentFeatureData(feature) {
   // Make groups always an array.
   feature.groups = [];
   if (feature.group && !Array.isArray(feature.group)) {
@@ -153,9 +150,9 @@ function augmentFeatureData(id, feature) {
   // Add MDN doc links, if any.
   const mdnUrls = [];
 
-  if (mdnDocsOverrides[id] && mdnDocsOverrides[id].length) {
+  if (mdnDocsOverrides[feature.id] && mdnDocsOverrides[feature.id].length) {
     // If the feature has a doc override, use that.
-    for (const slug of mdnDocsOverrides[id]) {
+    for (const slug of mdnDocsOverrides[feature.id]) {
       const slugParts = slug.split("#");
       const hasAnchor = slugParts.length > 1;
 
@@ -193,26 +190,26 @@ function augmentFeatureData(id, feature) {
   feature.mdnUrls = mdnUrls;
 
   // Add standard positions.
-  feature.standardPositions = standardPositions[id];
+  feature.standardPositions = standardPositions[feature.id];
   feature.hasNegativeStandardPosition = 
       feature?.standardPositions?.mozilla?.position === "negative" ||
       feature?.standardPositions?.webkit?.position === "oppose";
 
   // Add origin trials.
-  feature.originTrials = originTrials[id];
+  feature.originTrials = originTrials[feature.id];
 
   // Add state of surveys data.
-  feature.stateOfSurveys = stateOfSurveys[id];
+  feature.stateOfSurveys = stateOfSurveys[feature.id];
 
   // Add use counter data.
-  feature.useCounters = useCounters[id];
+  feature.useCounters = useCounters[feature.id];
 
   // Add interop data.
   feature.interop = [];
   for (const interopYear in interop) {
     for (const interopLabel in interop[interopYear]) {
       const interopFeatures = interop[interopYear][interopLabel];
-      if (interopFeatures.includes(id)) {
+      if (interopFeatures.includes(feature.id)) {
         feature.interop.push({
           year: interopYear,
           label: interopLabel,
@@ -222,7 +219,7 @@ function augmentFeatureData(id, feature) {
   }
 
   // Add WPT data, if any.
-  feature.wpt = wpt.includes(id);
+  feature.wpt = wpt.includes(feature.id);
 
   // Add the BCD data to the feature.
   feature.bcdData = bcdKeysData;
@@ -273,9 +270,25 @@ function augmentFeatureData(id, feature) {
 }
 
 // Massage the web-features data so it's more directly useful in our 11ty templates.
-for (const id in features) {
-  const feature = features[id];
-  augmentFeatureData(id, feature);
+const features = {};
+const unordinaryFeatures = {};
+
+for (const id in webFeaturesFeatures) {
+  const feature = webFeaturesFeatures[id];
+  // Add the id to the object.
+  feature.id = id;
+
+  // Only add our custom data to each feature for ordinary features.
+  // Skip kind:split and kind:moved. These are handled differently in the templates.
+  if (feature.kind === "feature") {
+    augmentFeatureData(feature);
+
+    // Store the newly augmented feature data.
+    features[id] = feature;
+  } else {
+    // Store unordinary features separately.
+    unordinaryFeatures[id] = feature;
+  }
 }
 
 function getBrowserVersionReleaseDate(browser, version) {
@@ -511,16 +524,26 @@ export default function (eleventyConfig) {
       });
   });
 
-  eleventyConfig.addGlobalData("features", () => {
+  eleventyConfig.addGlobalData("allFeaturesAsObject", () => {
     return features;
   });
-
 
   eleventyConfig.addGlobalData("allFeatures", () => {
     const all = [];
 
     for (const id in features) {
       const feature = features[id];
+      all.push(feature);
+    }
+
+    return all;
+  });
+
+  eleventyConfig.addGlobalData("allUnordinaryFeatures", () => {
+    const all = [];
+
+    for (const id in unordinaryFeatures) {
+      const feature = unordinaryFeatures[id];
       all.push(feature);
     }
 
