@@ -1,0 +1,36 @@
+---
+layout: layout.njk
+pagination:
+  data: allUnordinaryFeatures
+  size: 1
+  alias: feature
+permalink: "features/{{ feature.id | slugify }}/"
+eleventyComputed:
+  title: "{{ feature.id }}"
+---
+
+<main class="feature-page">
+  <div id="{{ feature.id }}" class="feature full">
+    {% if feature.kind == "moved" %}
+      <div class="header">
+        <h1>This feature has moved</h1>
+      </div>
+      <p>See
+        <a href="/features/{{ feature.redirect_target | slugify }}">{% prettyFeatureName allFeaturesAsObject[feature.redirect_target].name %}</a>
+        instead.
+      </p>
+    {% elif feature.kind == "split" %}
+      <div class="header">
+        <h1>This feature has been split</h1>
+      </div>
+      <p>See the following features instead:</p>
+      <ul>
+        {% for target in feature.redirect_targets %}
+          <li>
+            <a href="/features/{{ target | slugify }}">{% prettyFeatureName allFeaturesAsObject[target].name %}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</main>
