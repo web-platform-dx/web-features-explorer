@@ -1,10 +1,15 @@
 {
+ "compat_features": [
+  "css.selectors.column",
+  "css.selectors.column.nested_scroll-marker"
+ ],
  "description": "The ::column CSS pseudo-element represents the individual columns of a multi-column layout container. Columns can only be styled with scroll snap CSS properties and can also have a ::scroll-marker pseudo-element, which scrolls to the column when activated.",
  "description_html": "The <code>::column</code> CSS pseudo-element represents the individual columns of a multi-column layout container. Columns can only be styled with scroll snap CSS properties and can also have a <code>::scroll-marker</code> pseudo-element, which scrolls to the column when activated.",
  "group": [
   "multi-column",
   "scrolling"
  ],
+ "kind": "feature",
  "name": "::column",
  "spec": [
   {
@@ -61,7 +66,11 @@
  ],
  "status": {
   "baseline": false,
-  "support": {}
+  "support": {
+   "chrome": "135",
+   "chrome_android": "135",
+   "edge": "135"
+  }
  },
  "id": "column-pseudo",
  "groups": [
@@ -78,7 +87,12 @@
    "Scrolling"
   ]
  ],
- "mdnUrls": [],
+ "mdnUrls": [
+  {
+   "title": "::column",
+   "url": "https://developer.mozilla.org/docs/Web/CSS/::column"
+  }
+ ],
  "standardPositions": {
   "mozilla": {},
   "webkit": {}
@@ -91,8 +105,125 @@
  },
  "interop": [],
  "wpt": false,
- "bcdData": [],
- "bcdTags": [],
+ "bcdData": [
+  {
+   "key": "css.selectors.column",
+   "compat": {
+    "description": "<code>::column</code>",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/::column",
+    "source_file": "css/selectors/column.json",
+    "spec_url": "https://drafts.csswg.org/css-multicol-2/#column-pseudo",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "135"
+     },
+     "chrome_android": {
+      "version_added": "135"
+     },
+     "edge": {
+      "version_added": "135"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "120"
+     },
+     "opera_android": {
+      "version_added": "89"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "135"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "css.selectors.column.nested_scroll-marker",
+   "compat": {
+    "description": "<code>::column::scroll-marker</code> nested pseudo-elements",
+    "source_file": "css/selectors/column.json",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "135"
+     },
+     "chrome_android": {
+      "version_added": "135"
+     },
+     "edge": {
+      "version_added": "135"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "120"
+     },
+     "opera_android": {
+      "version_added": "89"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "135"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  }
+ ],
+ "bcdTags": [
+  "css"
+ ],
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null,
  "implUrls": {

@@ -6,6 +6,7 @@
  ],
  "description": "The Document.parseHTMLUnsafe() static method parses HTML into a DOM tree, while the setHTMLUnsafe() method of Element and ShadowRoot parses and inserts HTML into an existing tree. No sanitization applies to these methods, so never call them with user-provided HTML strings.",
  "description_html": "The <code>Document.parseHTMLUnsafe()</code> static method parses HTML into a DOM tree, while the <code>setHTMLUnsafe()</code> method of <code>Element</code> and <code>ShadowRoot</code> parses and inserts HTML into an existing tree. No sanitization applies to these methods, so never call them with user-provided HTML strings.",
+ "kind": "feature",
  "name": "Unsanitized HTML parsing methods",
  "spec": [
   {
@@ -126,13 +127,16 @@
   }
  ],
  "status": {
-  "baseline": false,
+  "baseline": "low",
+  "baseline_low_date": "2025-09-15",
   "support": {
    "chrome": "124",
    "chrome_android": "124",
    "edge": "124",
    "firefox": "128",
-   "firefox_android": "128"
+   "firefox_android": "128",
+   "safari": "26",
+   "safari_ios": "26"
   }
  },
  "id": "parse-html-unsafe",
@@ -465,8 +469,9 @@
  "bcdTags": [
   "api"
  ],
- "baselineLowDateAsObject": null,
+ "baselineLowDateAsObject": "2025-09-15T00:00:00.000Z",
  "baselineHighDateAsObject": null,
+ "expectedBaselineHighDate": "2028-03-15",
  "implUrls": {
   "chrome": [],
   "chrome_android": [],
@@ -475,8 +480,5 @@
   "firefox_android": [],
   "safari": [],
   "safari_ios": []
- },
- "blockedOn": "Safari",
- "monthsBlocked": 14,
- "blockedSince": "July 2024"
+ }
 }

@@ -41,8 +41,28 @@
         <ul>
           
             <li>
+              <strong><a href="/web-features-explorer/features/content-visibility/">content-visibility</a></strong>:
+              The <code>content-visibility</code> CSS property delays rendering an element, including layout and painting, until it is needed.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/link-rel-dns-prefetch/">&lt;link rel="dns-prefetch"&gt;</a></strong>:
+              The <code>rel="dns-prefetch"</code> attribute for the <code>&#x3C;link></code> HTML element is a hint to the browser that the page or user is likely to request resources from another domain, so the browser should preemptively resolve DNS for the <code>href</code> value's domain.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/parse-html-unsafe/">Unsanitized HTML parsing methods</a></strong>:
+              The <code>Document.parseHTMLUnsafe()</code> static method parses HTML into a DOM tree, while the <code>setHTMLUnsafe()</code> method of <code>Element</code> and <code>ShadowRoot</code> parses and inserts HTML into an existing tree. No sanitization applies to these methods, so never call them with user-provided HTML strings.
+            </li>
+          
+            <li>
               <strong><a href="/web-features-explorer/features/uint8array-base64-hex/">Uint8Array base64 and hex conversion</a></strong>:
               The <code>Uint8Array</code> object methods <code>fromBase64()</code>, <code>toBase64()</code>, and <code>setFromBase64()</code> convert to and from base64 strings. The <code>fromHex()</code>, <code>toHex()</code>, and <code>setFromHex()</code> methods convert to and from hex strings.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/urlpattern/">URLPattern</a></strong>:
+              The <code>URLPattern</code> API creates patterns that can be matched against URLs or URL components.
             </li>
           
         </ul>
@@ -50,6 +70,29 @@
     
 
     
+      <section class="baseline-high">
+        <h2>Widely available</h2>
+        <p>The following features are now widely available:</p>
+        <ul>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/font-variant-alternates/">font-variant-alternates</a></strong>:
+              The <code>font-variant-alternates</code> CSS property, along with the <code>@font-feature-values</code> at-rule, chooses when to use a font's alternate glyphs.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/translate/">translate</a></strong>:
+              The <code>translate</code> HTML attribute marks whether an element's text should be translated.
+            </li>
+          
+            <li>
+              <strong><a href="/web-features-explorer/features/trig-functions/">sin(), cos(), tan(), asin(), acos(), atan(), and atan2() (CSS)</a></strong>:
+              The <code>sin()</code>, <code>cos()</code>, <code>tan()</code>, <code>asin()</code>, <code>acos()</code>, <code>atan()</code>, and <code>atan2()</code> CSS functions compute various trigonometric functions.
+            </li>
+          
+        </ul>
+      </section>
+    
 
     
       
@@ -63,7 +106,123 @@
       
     
       
+        <section class="baseline-false safari">
+          <h2>New in Safari</h2>
+          <p>The following features are now available in Safari:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/anchor-positioning/">Anchor positioning</a></strong>:
+                Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/contrast-color/">contrast-color()</a></strong>:
+                The <code>contrast-color()</code> CSS function picks a color that has guaranteed contrast against a specified foreground or background color.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scoped-custom-element-registries/">Scoped custom element registries</a></strong>:
+                The <code>CustomElementRegistry()</code> constructor creates a new custom element registry that's separate from the global <code>window.customElements</code> registry. Creating more than one registry is useful for multiple custom elements that have the same tag name to coexist.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scroll-driven-animations/">Scroll-driven animations</a></strong>:
+                The <code>animation-timeline</code>, <code>scroll-timeline</code>, and <code>view-timeline</code> CSS properties advance animations based on the user's scroll position.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-pretty/">text-wrap: pretty</a></strong>:
+                The <code>text-wrap: pretty</code> CSS declaration prioritizes better layout over speed when text is broken into multiple lines.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-style/">text-wrap-style</a></strong>:
+                The <code>text-wrap-style</code> CSS property sets how lines break in text that overflows the container. It can also be set with the <code>text-wrap</code> shorthand.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/trusted-types/">Trusted types</a></strong>:
+                Trusted types allow you to lock down insecure parts of the DOM API and prevent client-side cross-site scripting (XSS) attacks.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webauthn-signals/">Web authentication signal methods</a></strong>:
+                The <code>signalUnknownCredential()</code>, <code>signalAllAcceptedCredentials()</code>, and <code>signalCurrentUserDetails()</code> methods of <code>PublicKeyCredential</code> inform authenticators of the state of public key credentials, so that incorrect or revoked credentials may be updated, removed, or hidden.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webcodecs/">WebCodecs</a></strong>:
+                The WebCodecs API provides low-level access to individual video frames and chunks of audio samples, for full control over the way media is processed.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webgpu/">WebGPU</a></strong>:
+                The <code>navigator.gpu</code> API performs operations such as rendering and computation on dedicated graphics hardware (also known as a Graphics Processing Unit).
+              </li>
+            
+          </ul>
+        </section>
+      
     
+      
+        <section class="baseline-false safari_ios">
+          <h2>New in Safari on iOS</h2>
+          <p>The following features are now available in Safari on iOS:</p>
+          <ul>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/anchor-positioning/">Anchor positioning</a></strong>:
+                Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/contrast-color/">contrast-color()</a></strong>:
+                The <code>contrast-color()</code> CSS function picks a color that has guaranteed contrast against a specified foreground or background color.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scoped-custom-element-registries/">Scoped custom element registries</a></strong>:
+                The <code>CustomElementRegistry()</code> constructor creates a new custom element registry that's separate from the global <code>window.customElements</code> registry. Creating more than one registry is useful for multiple custom elements that have the same tag name to coexist.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/scroll-driven-animations/">Scroll-driven animations</a></strong>:
+                The <code>animation-timeline</code>, <code>scroll-timeline</code>, and <code>view-timeline</code> CSS properties advance animations based on the user's scroll position.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-pretty/">text-wrap: pretty</a></strong>:
+                The <code>text-wrap: pretty</code> CSS declaration prioritizes better layout over speed when text is broken into multiple lines.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/text-wrap-style/">text-wrap-style</a></strong>:
+                The <code>text-wrap-style</code> CSS property sets how lines break in text that overflows the container. It can also be set with the <code>text-wrap</code> shorthand.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/trusted-types/">Trusted types</a></strong>:
+                Trusted types allow you to lock down insecure parts of the DOM API and prevent client-side cross-site scripting (XSS) attacks.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webauthn-signals/">Web authentication signal methods</a></strong>:
+                The <code>signalUnknownCredential()</code>, <code>signalAllAcceptedCredentials()</code>, and <code>signalCurrentUserDetails()</code> methods of <code>PublicKeyCredential</code> inform authenticators of the state of public key credentials, so that incorrect or revoked credentials may be updated, removed, or hidden.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webcodecs/">WebCodecs</a></strong>:
+                The WebCodecs API provides low-level access to individual video frames and chunks of audio samples, for full control over the way media is processed.
+              </li>
+            
+              <li>
+                <strong><a href="/web-features-explorer/features/webgpu/">WebGPU</a></strong>:
+                The <code>navigator.gpu</code> API performs operations such as rendering and computation on dedicated graphics hardware (also known as a Graphics Processing Unit).
+              </li>
+            
+          </ul>
+        </section>
       
     
   </div>

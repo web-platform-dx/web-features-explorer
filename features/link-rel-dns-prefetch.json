@@ -1,10 +1,13 @@
 {
- "caniuse": "link-rel-dns-prefetch",
+ "caniuse": [
+  "link-rel-dns-prefetch"
+ ],
  "compat_features": [
   "html.elements.link.rel.dns-prefetch"
  ],
  "description": "The rel=\"dns-prefetch\" attribute for the <link> HTML element is a hint to the browser that the page or user is likely to request resources from another domain, so the browser should preemptively resolve DNS for the href value's domain.",
  "description_html": "The <code>rel=\"dns-prefetch\"</code> attribute for the <code>&#x3C;link></code> HTML element is a hint to the browser that the page or user is likely to request resources from another domain, so the browser should preemptively resolve DNS for the <code>href</code> value's domain.",
+ "kind": "feature",
  "name": "<link rel=\"dns-prefetch\">",
  "spec": [
   {
@@ -125,14 +128,16 @@
   }
  ],
  "status": {
-  "baseline": false,
+  "baseline": "low",
+  "baseline_low_date": "2025-09-15",
   "support": {
    "chrome": "46",
    "chrome_android": "46",
    "edge": "79",
    "firefox": "127",
    "firefox_android": "127",
-   "safari": "5"
+   "safari": "5",
+   "safari_ios": "26"
   }
  },
  "id": "link-rel-dns-prefetch",
@@ -238,8 +243,9 @@
  "bcdTags": [
   "html"
  ],
- "baselineLowDateAsObject": null,
+ "baselineLowDateAsObject": "2025-09-15T00:00:00.000Z",
  "baselineHighDateAsObject": null,
+ "expectedBaselineHighDate": "2028-03-15",
  "implUrls": {
   "chrome": [],
   "chrome_android": [],
@@ -248,8 +254,5 @@
   "firefox_android": [],
   "safari": [],
   "safari_ios": []
- },
- "blockedOn": "Safari on iOS",
- "monthsBlocked": 15,
- "blockedSince": "June 2024"
+ }
 }
