@@ -70,13 +70,8 @@ function stripLessThan(dateStr) {
 }
 
 function augmentFeatureData(feature) {
-  // Make groups always an array.
-  feature.groups = [];
-  if (feature.group && !Array.isArray(feature.group)) {
-    feature.groups = [feature.group];
-  } else if (feature.group) {
-    feature.groups = feature.group;
-  }
+  // Make rename group to groups, makes more sense since it's always an array.
+  feature.groups = feature.group || [];
 
   // Create group paths. The groups that a feature belongs to might be
   // nested in parent groups.
@@ -94,13 +89,6 @@ function augmentFeatureData(feature) {
       currentGroupId = parentId;
     }
     feature.groupPaths.push(path);
-  }
-
-  // Make the spec always an array.
-  if (!feature.spec) {
-    feature.spec = [];
-  } else if (!Array.isArray(feature.spec)) {
-    feature.spec = [feature.spec];
   }
 
   // Add spec data from browser-specs, when possible.
