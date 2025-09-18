@@ -22,6 +22,7 @@ async function main() {
   // Convert features to an array and pretend all dates are exact 
   const simplifiedFeatures = Object.entries(features)
     .map(([id, feature]) => Object.assign({ id }, feature))
+    .filter(feature => feature.kind === "feature")
     .map(feature => {
       if (feature.status.baseline_low_date &&
           feature.status.baseline_low_date.startsWith("≤")) {
