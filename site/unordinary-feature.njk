@@ -15,10 +15,9 @@ eleventyComputed:
       <div class="header">
         <h1>This feature has moved</h1>
       </div>
-      <p>See
-        <a href="/features/{{ feature.redirect_target | slugify }}">{% prettyFeatureName allFeaturesAsObject[feature.redirect_target].name %}</a>
-        instead.
+      <p> You're being redirected to <a href="/features/{{ feature.redirect_target | slugify }}">{% prettyFeatureName allFeaturesAsObject[feature.redirect_target].name %}</a> instead.
       </p>
+      <meta http-equiv="refresh" content="3;url=/features/{{ feature.redirect_target | slugify }}" />
     {% elif feature.kind == "split" %}
       <div class="header">
         <h1>This feature has been split</h1>
