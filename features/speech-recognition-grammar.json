@@ -130,10 +130,11 @@
    "compat": {
     "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammar",
     "source_file": "api/SpeechGrammar.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#speechreco-speechgrammar",
     "status": {
      "deprecated": true,
      "experimental": false,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -148,17 +149,29 @@
       "prefix": "webkit",
       "version_added": "79"
      },
-     "firefox": {
-      "flags": [
-       {
-        "name": "media.webspeech.recognition.enable",
-        "type": "preference",
-        "value_to_set": "true"
-       }
-      ],
-      "notes": "Note that currently only the speech synthesis part is available in Firefox Desktop - the speech recognition part will be available soon, once the required internal permissions are sorted out.",
-      "version_added": "44"
-     },
+     "firefox": [
+      {
+       "flags": [
+        {
+         "name": "media.webspeech.recognition.enable",
+         "type": "preference",
+         "value_to_set": "true"
+        }
+       ],
+       "version_added": "142"
+      },
+      {
+       "flags": [
+        {
+         "name": "media.webspeech.recognition.enable",
+         "type": "preference",
+         "value_to_set": "true"
+        }
+       ],
+       "prefix": "webkit",
+       "version_added": "142"
+      }
+     ],
      "firefox_android": {
       "version_added": false
      },
@@ -204,10 +217,11 @@
    "compat": {
     "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammar/src",
     "source_file": "api/SpeechGrammar.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechgrammar-src",
     "status": {
      "deprecated": true,
      "experimental": false,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -227,8 +241,7 @@
         "value_to_set": "true"
        }
       ],
-      "notes": "Note that currently only the speech synthesis part is available in Firefox Desktop - the speech recognition part will be available soon, once the required internal permissions are sorted out.",
-      "version_added": "44"
+      "version_added": "142"
      },
      "firefox_android": {
       "version_added": false
@@ -271,10 +284,11 @@
    "compat": {
     "mdn_url": "https://developer.mozilla.org/docs/Web/API/SpeechGrammar/weight",
     "source_file": "api/SpeechGrammar.json",
+    "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechgrammar-weight",
     "status": {
      "deprecated": true,
      "experimental": false,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -294,8 +308,7 @@
         "value_to_set": "true"
        }
       ],
-      "notes": "Note that currently only the speech synthesis part is available in Firefox Desktop - the speech recognition part will be available soon, once the required internal permissions are sorted out.",
-      "version_added": "44"
+      "version_added": "142"
      },
      "firefox_android": {
       "version_added": false
@@ -340,8 +353,8 @@
     "source_file": "api/SpeechGrammarList.json",
     "spec_url": "https://webaudio.github.io/web-speech-api/#speechgrammarlist",
     "status": {
-     "deprecated": false,
-     "experimental": true,
+     "deprecated": true,
+     "experimental": false,
      "standard_track": true
     },
     "support": {
@@ -372,9 +385,29 @@
        "version_added": "79"
       }
      ],
-     "firefox": {
-      "version_added": false
-     },
+     "firefox": [
+      {
+       "flags": [
+        {
+         "name": "media.webspeech.recognition.enable",
+         "type": "preference",
+         "value_to_set": "true"
+        }
+       ],
+       "version_added": "142"
+      },
+      {
+       "flags": [
+        {
+         "name": "media.webspeech.recognition.enable",
+         "type": "preference",
+         "value_to_set": "true"
+        }
+       ],
+       "prefix": "webkit",
+       "version_added": "142"
+      }
+     ],
      "firefox_android": {
       "version_added": false
      },
@@ -427,8 +460,8 @@
     "source_file": "api/SpeechGrammarList.json",
     "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechgrammarlist-speechgrammarlist",
     "status": {
-     "deprecated": false,
-     "experimental": true,
+     "deprecated": true,
+     "experimental": false,
      "standard_track": true
     },
     "support": {
@@ -459,9 +492,29 @@
        "version_added": "79"
       }
      ],
-     "firefox": {
-      "version_added": false
-     },
+     "firefox": [
+      {
+       "flags": [
+        {
+         "name": "media.webspeech.recognition.enable",
+         "type": "preference",
+         "value_to_set": "true"
+        }
+       ],
+       "version_added": "142"
+      },
+      {
+       "flags": [
+        {
+         "name": "media.webspeech.recognition.enable",
+         "type": "preference",
+         "value_to_set": "true"
+        }
+       ],
+       "prefix": "webkit",
+       "version_added": "142"
+      }
+     ],
      "firefox_android": {
       "version_added": false
      },
@@ -513,8 +566,8 @@
     "source_file": "api/SpeechGrammarList.json",
     "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechgrammarlist-addfromstring",
     "status": {
-     "deprecated": false,
-     "experimental": true,
+     "deprecated": true,
+     "experimental": false,
      "standard_track": true
     },
     "support": {
@@ -528,7 +581,14 @@
       "version_added": "79"
      },
      "firefox": {
-      "version_added": false
+      "flags": [
+       {
+        "name": "media.webspeech.recognition.enable",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "142"
      },
      "firefox_android": {
       "version_added": false
@@ -573,8 +633,8 @@
     "source_file": "api/SpeechGrammarList.json",
     "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechgrammarlist-addfromuri",
     "status": {
-     "deprecated": false,
-     "experimental": true,
+     "deprecated": true,
+     "experimental": false,
      "standard_track": true
     },
     "support": {
@@ -588,7 +648,14 @@
       "version_added": "79"
      },
      "firefox": {
-      "version_added": false
+      "flags": [
+       {
+        "name": "media.webspeech.recognition.enable",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "142"
      },
      "firefox_android": {
       "version_added": false
@@ -633,8 +700,8 @@
     "source_file": "api/SpeechGrammarList.json",
     "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechgrammarlist-item",
     "status": {
-     "deprecated": false,
-     "experimental": true,
+     "deprecated": true,
+     "experimental": false,
      "standard_track": true
     },
     "support": {
@@ -648,7 +715,14 @@
       "version_added": "79"
      },
      "firefox": {
-      "version_added": false
+      "flags": [
+       {
+        "name": "media.webspeech.recognition.enable",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "142"
      },
      "firefox_android": {
       "version_added": false
@@ -693,8 +767,8 @@
     "source_file": "api/SpeechGrammarList.json",
     "spec_url": "https://webaudio.github.io/web-speech-api/#dom-speechgrammarlist-length",
     "status": {
-     "deprecated": false,
-     "experimental": true,
+     "deprecated": true,
+     "experimental": false,
      "standard_track": true
     },
     "support": {
@@ -708,7 +782,14 @@
       "version_added": "79"
      },
      "firefox": {
-      "version_added": false
+      "flags": [
+       {
+        "name": "media.webspeech.recognition.enable",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "142"
      },
      "firefox_android": {
       "version_added": false
@@ -768,7 +849,14 @@
       "version_added": "79"
      },
      "firefox": {
-      "version_added": false
+      "flags": [
+       {
+        "name": "media.webspeech.recognition.enable",
+        "type": "preference",
+        "value_to_set": "true"
+       }
+      ],
+      "version_added": "143"
      },
      "firefox_android": {
       "version_added": false
