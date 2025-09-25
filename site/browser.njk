@@ -5,6 +5,8 @@ pagination:
   size: 1
   alias: browser
 permalink: "browsers/{{ browser.id | slugify }}/"
+eleventyComputed:
+  title: "New features in {{ browser.name }} {{ release.version }}"
 ---
 
 <main class="explore-features">

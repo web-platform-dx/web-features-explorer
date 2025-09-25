@@ -28,6 +28,25 @@ const BROWSER_BUG_TRACKERS = {
   safari_ios: "bugs.webkit.org",
 };
 
+const BROWSERS_BY_VENDORS = [
+  {
+    id: "chrome",
+    browers: ["chrome", "chrome_android"]
+  },
+  {
+    id: "edge",
+    browers: ["edge"]
+  },
+  {
+    id: "firefox",
+    browers: ["firefox", "firefox_android"]
+  },
+  {
+    id: "safari",
+    browers: ["safari", "safari_ios"]
+  }
+]
+
 const MDN_URL_ROOT = "https://developer.mozilla.org/docs/";
 
 function getAllBCDKeys() {
@@ -667,6 +686,44 @@ export default function (eleventyConfig) {
       unmapped,
       percentage: ((mapped.length / (mapped.length + unmapped.length)) * 100).toFixed(0),
     };
+  });
+
+  eleventyConfig.addGlobalData("onlyOneBrowserFeatures", () => {
+    const onlyOne = {};
+
+    for (const id in features) {
+      const feature = features[id];
+      const support = feature.status.support;
+
+      const browsersWithSupport = Object.keys(support).filter((browserId) => {
+        return !!support[browserId];
+      });
+      
+      const byVendors = browsersWithSupport.reduce((acc, browserId) => {
+        // Group by browser vendors instead.
+        // We don't want lists of features that are only in Chrome, and not in Chrome for Android for example.
+        for (const vendorData of BROWSERS_BY_VENDORS) {
+          if (vendorData.browers.includes(browserId)) {
+            if (!acc.includes(vendorData.id)) {
+              acc.push(vendorData.id);
+            }
+            break;
+          }
+        }
+        return acc;
+      }, []);
+
+      if (byVendors.length === 1) {
+        const browserId = byVendors[0];
+        if (!onlyOne[browserId]) {
+          onlyOne[browserId] = [];
+        }
+        
+        onlyOne[browserId].push(feature);
+      }
+    }
+
+    return onlyOne;
   });
 
   eleventyConfig.addGlobalData("missingOneBrowserFeatures", () => {

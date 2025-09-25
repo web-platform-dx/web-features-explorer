@@ -1,0 +1,27 @@
+---
+title: Features implemented in only one browser engine
+layout: layout.njk
+pagination:
+  data: browsers
+  size: 1
+  alias: browser
+permalink: "only-in/browsers/{{ browser.id | slugify }}/"
+eleventyComputed:
+  title: "Features implemented only in {{ browser.name }}"
+---
+
+<main class="explore-features">
+  {% include "feature_list_views.njk" %}
+
+  <h1>{{ title }}</h1>
+
+  <p>The following features are only implemented in {{ browser.name }}.</p>
+
+  <ul class="features">
+    {% for feature in onlyOneBrowserFeatures[browser.id] %}
+      <li>
+        {% include "feature_short.njk" %}
+      </li>
+    {% endfor %}
+  </ul>
+</main>
