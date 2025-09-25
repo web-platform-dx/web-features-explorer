@@ -1,6 +1,6 @@
 <div id="{{ feature.id }}" class="feature full baseline-{{ feature.status.baseline }}{% if feature.discouraged %} discouraged{% endif %}">
   <div class="header">
-    <h1 data-pagefind-body>{% prettyFeatureName feature.name %}</h1>
+    <h1 data-pagefind-body>{% nameAsHTML feature.name %}</h1>
     <span class="feature-copyable-id"><input id="feature-id" type="text" value="{{ feature.id }}" data-len="{{ feature.id | length }}"><button id="copy-feature-id">Copy ID</button></span>
     <script>
       (function() {

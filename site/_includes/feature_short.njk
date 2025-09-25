@@ -1,6 +1,6 @@
 <div id="{{ feature.id }}" class="feature short baseline-{{ feature.status.baseline }}{% if feature.discouraged %} discouraged{% endif %}">
   <div class="header">
-    <h2><a href="/features/{{ feature.id | slugify }}/">{% prettyFeatureName feature.name %}</a></h2>
+    <h2><a href="/features/{{ feature.id | slugify }}/">{% nameAsHTML feature.name %}</a></h2>
     {% include "baseline.njk" %}
   </div>
 

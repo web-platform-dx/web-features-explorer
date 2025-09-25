@@ -27,12 +27,12 @@
 
   {% for feature in newlyAvailableFeatures %}
     <entry>
-      <title>{% prettyFeatureName feature.name %}</title>
+      <title>{% nameAsHTML feature.name %}</title>
       <link href="{{ metadata.url + 'features/' + feature.id | slugify }}"/>
       <updated>{{ feature.baselineLowDateAsObject | dateToRfc3339 }}</updated>
       <id>{{ metadata.url + 'features/' + feature.id | slugify }}</id>
       <content xml:lang="{{ metadata.language }}" type="html"><![CDATA[
-        <h1><a href="{{ metadata.url + 'features/' + feature.id | slugify }}">{% prettyFeatureName feature.name %}</a></h1>
+        <h1><a href="{{ metadata.url + 'features/' + feature.id | slugify }}">{% nameAsHTML feature.name %}</a></h1>
         <p>{{ feature.description_html | safe }}</p>
       ]]></content>
     </entry>

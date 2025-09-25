@@ -15,7 +15,7 @@ eleventyComputed:
       <div class="header">
         <h1>This feature has moved</h1>
       </div>
-      <p> You're being redirected to <a href="/features/{{ feature.redirect_target | slugify }}">{% prettyFeatureName allFeaturesAsObject[feature.redirect_target].name %}</a> instead.
+      <p> You're being redirected to <a href="/features/{{ feature.redirect_target | slugify }}">{% nameAsHTML allFeaturesAsObject[feature.redirect_target].name %}</a> instead.
       </p>
       <meta http-equiv="refresh" content="3;url=/features/{{ feature.redirect_target | slugify }}" />
     {% elif feature.kind == "split" %}
@@ -26,7 +26,7 @@ eleventyComputed:
       <ul>
         {% for target in feature.redirect_targets %}
           <li>
-            <a href="/features/{{ target | slugify }}">{% prettyFeatureName allFeaturesAsObject[target].name %}</a>
+            <a href="/features/{{ target | slugify }}">{% nameAsHTML allFeaturesAsObject[target].name %}</a>
           </li>
         {% endfor %}
       </ul>

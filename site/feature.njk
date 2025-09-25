@@ -6,7 +6,7 @@ pagination:
   alias: feature
 permalink: "features/{{ feature.id | slugify }}/"
 eleventyComputed:
-  title: "{% prettyFeatureName feature.name %}"
+  title: "{% nameAsHTML feature.name %}"
 ---
 
 <main class="feature-page">

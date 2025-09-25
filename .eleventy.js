@@ -311,12 +311,21 @@ export default function (eleventyConfig) {
     }
   );
 
-  eleventyConfig.addShortcode("prettyFeatureName", function (name) {
-    if (name.startsWith("`") && name.endsWith("`")) {
-      return `<code>${name.substring(1, name.length - 1)}</code>`;
+  eleventyConfig.addShortcode("nameAsHTML", function (name) {
+    // Escape HTML angle brackets.
+    name = name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+    // If there are backticks, convert to <code> tags.
+    if (name.includes("`")) {
+      const parts = name.split("`");
+      name = parts
+        .map((part, index) => {
+          return index % 2 === 1 ? `<code>${part}</code>` : part;
+        })
+        .join("");
     }
 
-    return name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    return name;
   });
 
   eleventyConfig.addShortcode("escapeJSON", function (name) {

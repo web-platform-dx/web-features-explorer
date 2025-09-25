@@ -19,7 +19,7 @@ layout: layout.njk
       {% for feature in allFeatures %}
         <tr class="baseline-{{ feature.status.baseline }}">
           <td>{{ feature.id }}</td>
-          <td>{% prettyFeatureName feature.name %}</td>
+          <td>{% nameAsHTML feature.name %}</td>
           <td>{{ feature.description }}</td>
           <td>
             <ul>

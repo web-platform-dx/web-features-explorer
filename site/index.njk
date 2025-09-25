@@ -12,7 +12,7 @@ layout: layout.njk
     <ul>
       {% for feature in latest.latestBaselineLow %}
         <li>
-          <strong><a href="/features/{{ feature.id | slugify }}/">{% prettyFeatureName feature.name %}</a></strong>:
+          <strong><a href="/features/{{ feature.id | slugify }}/">{% nameAsHTML feature.name %}</a></strong>:
           {{ feature.description_html | safe }}
         </li>
       {% endfor %}
@@ -24,7 +24,7 @@ layout: layout.njk
     <ul>
       {% for feature in latest.latestBaselineHigh %}
         <li>
-          <strong><a href="/features/{{ feature.id | slugify }}/">{% prettyFeatureName feature.name %}</a></strong>:
+          <strong><a href="/features/{{ feature.id | slugify }}/">{% nameAsHTML feature.name %}</a></strong>:
           {{ feature.description_html | safe }}
         </li>
       {% endfor %}
