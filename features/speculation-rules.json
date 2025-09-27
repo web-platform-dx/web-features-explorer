@@ -111,10 +111,11 @@
    "compat": {
     "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/prerendering",
     "source_file": "api/Document.json",
+    "spec_url": "https://wicg.github.io/nav-speculation/prerendering.html#dom-document-prerendering",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -234,10 +235,11 @@
    "compat": {
     "mdn_url": "https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming/activationStart",
     "source_file": "api/PerformanceNavigationTiming.json",
+    "spec_url": "https://wicg.github.io/nav-speculation/prerendering.html#performance-navigation-timing-extension",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -294,10 +296,11 @@
     "description": "<code>type=\"speculationrules\"</code>",
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type/speculationrules",
     "source_file": "html/elements/script.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/speculative-loading.html#speculative-loading",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": [
@@ -392,9 +395,18 @@
        "version_removed": "21.0"
       }
      ],
-     "webview_android": {
-      "version_added": false
-     },
+     "webview_android": [
+      {
+       "version_added": "109"
+      },
+      {
+       "notes": "Initial support included same-origin prerendering only.",
+       "partial_implementation": true,
+       "version_added": "103",
+       "version_last": "108",
+       "version_removed": "109"
+      }
+     ],
      "webview_ios": {
       "version_added": false
      }
@@ -410,10 +422,11 @@
     "description": "<code>eagerness</code> key",
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type/speculationrules#eagerness",
     "source_file": "html/elements/script.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/speculative-loading.html#speculation-rule-eagerness",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -453,7 +466,7 @@
       "version_added": "25.0"
      },
      "webview_android": {
-      "version_added": false
+      "version_added": "121"
      },
      "webview_ios": {
       "version_added": false
@@ -470,10 +483,11 @@
     "description": "<code>expects_no_vary_search</code> key",
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type/speculationrules#expects_no_vary_search",
     "source_file": "html/elements/script.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/speculative-loading.html#valid-speculation-rule:~:text=%22expects_no_vary_search%22%20key",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": [
@@ -566,9 +580,18 @@
        "version_removed": "28.0"
       }
      ],
-     "webview_android": {
-      "version_added": false
-     },
+     "webview_android": [
+      {
+       "version_added": "127"
+      },
+      {
+       "notes": "Supported for <code>prefetch</code> only.",
+       "partial_implementation": true,
+       "version_added": "121",
+       "version_last": "126",
+       "version_removed": "127"
+      }
+     ],
      "webview_ios": {
       "version_added": false
      }
@@ -584,10 +607,11 @@
     "description": "<code>prefetch</code> key",
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type/speculationrules#prefetch",
     "source_file": "html/elements/script.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/speculative-loading.html#speculation-rule-set-authoring-requirements:~:text=keys%20%22tag%22%2C-,%22prefetch%22,-and%20%22prerender",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -600,9 +624,11 @@
       "version_added": "110"
      },
      "firefox": {
+      "impl_url": "https://bugzil.la/1969396",
       "version_added": false
      },
      "firefox_android": {
+      "impl_url": "https://bugzil.la/1969396",
       "version_added": false
      },
      "ie": {
@@ -618,18 +644,21 @@
       "version_added": "71"
      },
      "safari": {
+      "impl_url": "https://webkit.org/b/295193",
       "version_added": false
      },
      "safari_ios": {
+      "impl_url": "https://webkit.org/b/295193",
       "version_added": false
      },
      "samsunginternet_android": {
       "version_added": "20.0"
      },
      "webview_android": {
-      "version_added": false
+      "version_added": "103"
      },
      "webview_ios": {
+      "impl_url": "https://webkit.org/b/295193",
       "version_added": false
      }
     },
@@ -644,10 +673,11 @@
     "description": "<code>prerender</code> key",
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type/speculationrules#prerender",
     "source_file": "html/elements/script.json",
+    "spec_url": "https://wicg.github.io/nav-speculation/prerendering.html#speculation-rules",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -660,9 +690,11 @@
       "version_added": "105"
      },
      "firefox": {
+      "impl_url": "https://bugzil.la/1969838",
       "version_added": false
      },
      "firefox_android": {
+      "impl_url": "https://bugzil.la/1969838",
       "version_added": false
      },
      "ie": {
@@ -687,6 +719,7 @@
       "version_added": "20.0"
      },
      "webview_android": {
+      "impl_url": "https://crbug.com/41490450",
       "version_added": false
      },
      "webview_ios": {
@@ -704,10 +737,11 @@
     "description": "<code>referrer_policy</code> key",
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type/speculationrules#referrer_policy",
     "source_file": "html/elements/script.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/speculative-loading.html#valid-speculation-rule:~:text=%22referrer_policy%22%20key",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -747,7 +781,7 @@
       "version_added": "22.0"
      },
      "webview_android": {
-      "version_added": false
+      "version_added": "111"
      },
      "webview_ios": {
       "version_added": false
@@ -764,10 +798,11 @@
     "description": "<code>relative_to</code> key",
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type/speculationrules#relative_to_2",
     "source_file": "html/elements/script.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/speculative-loading.html#valid-speculation-rule:~:text=%20to%20the%20%22relative_to%22%20key",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -807,7 +842,7 @@
       "version_added": "25.0"
      },
      "webview_android": {
-      "version_added": false
+      "version_added": "121"
      },
      "webview_ios": {
       "version_added": false
@@ -824,10 +859,11 @@
     "description": "<code>requires</code> key",
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type/speculationrules#requires",
     "source_file": "html/elements/script.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/speculative-loading.html#speculation-rule-requirement",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -867,7 +903,7 @@
       "version_added": "20.0"
      },
      "webview_android": {
-      "version_added": false
+      "version_added": "103"
      },
      "webview_ios": {
       "version_added": false
@@ -884,10 +920,11 @@
     "description": "<code>anonymous-client-ip-when-cross-origin</code> value",
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type/speculationrules#anonymous-client-ip-when-cross-origin",
     "source_file": "html/elements/script.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/speculative-loading.html#speculation-rule-requirement",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -927,7 +964,7 @@
       "version_added": false
      },
      "webview_android": {
-      "version_added": false
+      "version_added": "103"
      },
      "webview_ios": {
       "version_added": false
@@ -944,10 +981,11 @@
     "description": "<code>source</code> key is optional",
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type/speculationrules#source",
     "source_file": "html/elements/script.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/speculative-loading.html#valid-speculation-rule:~:text=%22source%22%20key",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -987,7 +1025,7 @@
       "version_added": "26.0"
      },
      "webview_android": {
-      "version_added": false
+      "version_added": "122"
      },
      "webview_ios": {
       "version_added": false
@@ -1004,10 +1042,11 @@
     "description": "<code>tag</code> key",
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type/speculationrules#tag",
     "source_file": "html/elements/script.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/speculative-loading.html#speculation-rule-tag",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -1047,7 +1086,7 @@
       "version_added": false
      },
      "webview_android": {
-      "version_added": false
+      "version_added": "136"
      },
      "webview_ios": {
       "version_added": false
@@ -1064,10 +1103,11 @@
     "description": "<code>target_hint</code> key",
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type/speculationrules#target_hint",
     "source_file": "html/elements/script.json",
+    "spec_url": "https://wicg.github.io/nav-speculation/prerendering.html#:~:text=Let-,targetHint,-be%20null.",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -1117,7 +1157,9 @@
       "version_added": false
      },
      "webview_android": {
-      "version_added": false
+      "notes": "Only <code>&quot;_blank&quot;</code> and <code>&quot;_self&quot;</code> are supported and only for prefetch.",
+      "partial_implementation": true,
+      "version_added": "138"
      },
      "webview_ios": {
       "version_added": false
@@ -1132,11 +1174,13 @@
    "key": "html.elements.script.type.speculationrules.urls",
    "compat": {
     "description": "<code>urls</code> key",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type/speculationrules#urls",
     "source_file": "html/elements/script.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/speculative-loading.html#valid-speculation-rule:~:text=%22urls%22%20key",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -1176,7 +1220,7 @@
       "version_added": "20.0"
      },
      "webview_android": {
-      "version_added": false
+      "version_added": "103"
      },
      "webview_ios": {
       "version_added": false
@@ -1191,11 +1235,13 @@
    "key": "html.elements.script.type.speculationrules.where",
    "compat": {
     "description": "<code>where</code> key",
+    "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script/type/speculationrules#where",
     "source_file": "html/elements/script.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/speculative-loading.html#valid-document-rule-predicate",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -1235,7 +1281,7 @@
       "version_added": "25.0"
      },
      "webview_android": {
-      "version_added": false
+      "version_added": "121"
      },
      "webview_ios": {
       "version_added": false
@@ -1254,7 +1300,7 @@
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -1312,7 +1358,7 @@
     "source_file": "http/headers/Sec-Purpose.json",
     "status": {
      "deprecated": false,
-     "experimental": false,
+     "experimental": true,
      "standard_track": true
     },
     "support": {
@@ -1369,10 +1415,11 @@
    "compat": {
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Sec-Speculation-Tags",
     "source_file": "http/headers/Sec-Speculation-Tags.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/speculative-loading.html#the-sec-speculation-tags-header",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -1428,10 +1475,11 @@
    "compat": {
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Speculation-Rules",
     "source_file": "http/headers/Speculation-Rules.json",
+    "spec_url": "https://html.spec.whatwg.org/multipage/speculative-loading.html#the-speculation-rules-header",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -1487,10 +1535,11 @@
    "compat": {
     "mdn_url": "https://developer.mozilla.org/docs/Web/HTTP/Reference/Headers/Supports-Loading-Mode",
     "source_file": "http/headers/Supports-Loading-Mode.json",
+    "spec_url": "https://wicg.github.io/nav-speculation/prerendering.html#supports-loading-mode",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -1546,10 +1595,11 @@
    "compat": {
     "description": "<code>credentialed-prerender</code> directive",
     "source_file": "http/headers/Supports-Loading-Mode.json",
+    "spec_url": "https://wicg.github.io/nav-speculation/prerendering.html#supports-loading-mode-credentialed-prerender",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -1605,10 +1655,11 @@
    "compat": {
     "description": "<code>fenced-frame</code> directive",
     "source_file": "http/headers/Supports-Loading-Mode.json",
+    "spec_url": "https://wicg.github.io/fenced-frame/#supports-loading-mode-fenced-frame",
     "status": {
      "deprecated": false,
      "experimental": true,
-     "standard_track": false
+     "standard_track": true
     },
     "support": {
      "chrome": {
@@ -1671,9 +1722,19 @@
   "chrome": [],
   "chrome_android": [],
   "edge": [],
-  "firefox": [],
-  "firefox_android": [],
-  "safari": [],
-  "safari_ios": []
+  "firefox": [
+   "https://bugzil.la/1969396",
+   "https://bugzil.la/1969838"
+  ],
+  "firefox_android": [
+   "https://bugzil.la/1969396",
+   "https://bugzil.la/1969838"
+  ],
+  "safari": [
+   "https://webkit.org/b/295193"
+  ],
+  "safari_ios": [
+   "https://webkit.org/b/295193"
+  ]
  }
 }
