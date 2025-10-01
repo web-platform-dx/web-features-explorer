@@ -1,4 +1,18 @@
 {
+ "compat_features": [
+  "api.CSSFunctionDeclarations",
+  "api.CSSFunctionDeclarations.style",
+  "api.CSSFunctionDescriptors",
+  "api.CSSFunctionDescriptors.result",
+  "api.CSSFunctionRule",
+  "api.CSSFunctionRule.getParameters",
+  "api.CSSFunctionRule.name",
+  "api.CSSFunctionRule.returnType",
+  "css.at-rules.function",
+  "css.at-rules.function.result",
+  "css.types.dashed-function",
+  "css.types.type"
+ ],
  "description": "The @function CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value. It can be based on conditional logic such as by using the @media at-rule.",
  "description_html": "The <code>@function</code> CSS at-rule defines a custom function that takes CSS values or custom properties as arguments, and returns a CSS value. It can be based on conditional logic such as by using the <code>@media</code> at-rule.",
  "group": [
@@ -61,7 +75,11 @@
  ],
  "status": {
   "baseline": false,
-  "support": {}
+  "support": {
+   "chrome": "139",
+   "chrome_android": "139",
+   "edge": "139"
+  }
  },
  "id": "function",
  "groups": [
@@ -101,8 +119,688 @@
  },
  "interop": [],
  "wpt": true,
- "bcdData": [],
- "bcdTags": [],
+ "bcdData": [
+  {
+   "key": "api.CSSFunctionDeclarations",
+   "compat": {
+    "source_file": "api/CSSFunctionDeclarations.json",
+    "spec_url": "https://drafts.csswg.org/css-mixins/#the-function-declarations-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "139"
+     },
+     "chrome_android": {
+      "version_added": "139"
+     },
+     "edge": {
+      "version_added": "139"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "123"
+     },
+     "opera_android": {
+      "version_added": "91"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "139"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.CSSFunctionDeclarations.style",
+   "compat": {
+    "source_file": "api/CSSFunctionDeclarations.json",
+    "spec_url": "https://drafts.csswg.org/css-mixins/#dom-cssfunctiondeclarations-style",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "139"
+     },
+     "chrome_android": {
+      "version_added": "139"
+     },
+     "edge": {
+      "version_added": "139"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "123"
+     },
+     "opera_android": {
+      "version_added": "91"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "139"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.CSSFunctionDescriptors",
+   "compat": {
+    "source_file": "api/CSSFunctionDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/css-mixins/#cssfunctiondescriptors",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "139"
+     },
+     "chrome_android": {
+      "version_added": "139"
+     },
+     "edge": {
+      "version_added": "139"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "123"
+     },
+     "opera_android": {
+      "version_added": "91"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "139"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.CSSFunctionDescriptors.result",
+   "compat": {
+    "source_file": "api/CSSFunctionDescriptors.json",
+    "spec_url": "https://drafts.csswg.org/css-mixins/#dom-cssfunctiondescriptors-result",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "139"
+     },
+     "chrome_android": {
+      "version_added": "139"
+     },
+     "edge": {
+      "version_added": "139"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "123"
+     },
+     "opera_android": {
+      "version_added": "91"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "139"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.CSSFunctionRule",
+   "compat": {
+    "source_file": "api/CSSFunctionRule.json",
+    "spec_url": "https://drafts.csswg.org/css-mixins/#the-function-interface",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "139"
+     },
+     "chrome_android": {
+      "version_added": "139"
+     },
+     "edge": {
+      "version_added": "139"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "123"
+     },
+     "opera_android": {
+      "version_added": "91"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "139"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.CSSFunctionRule.getParameters",
+   "compat": {
+    "source_file": "api/CSSFunctionRule.json",
+    "spec_url": "https://drafts.csswg.org/css-mixins/#dom-cssfunctionrule-getparameters",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "139"
+     },
+     "chrome_android": {
+      "version_added": "139"
+     },
+     "edge": {
+      "version_added": "139"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "123"
+     },
+     "opera_android": {
+      "version_added": "91"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "139"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.CSSFunctionRule.name",
+   "compat": {
+    "source_file": "api/CSSFunctionRule.json",
+    "spec_url": "https://drafts.csswg.org/css-mixins/#dom-cssfunctionrule-name",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "139"
+     },
+     "chrome_android": {
+      "version_added": "139"
+     },
+     "edge": {
+      "version_added": "139"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "123"
+     },
+     "opera_android": {
+      "version_added": "91"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "139"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "api.CSSFunctionRule.returnType",
+   "compat": {
+    "source_file": "api/CSSFunctionRule.json",
+    "spec_url": "https://drafts.csswg.org/css-mixins/#dom-cssfunctionrule-returntype",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "139"
+     },
+     "chrome_android": {
+      "version_added": "139"
+     },
+     "edge": {
+      "version_added": "139"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "123"
+     },
+     "opera_android": {
+      "version_added": "91"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "139"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "css.at-rules.function",
+   "compat": {
+    "description": "<code>@function</code>",
+    "source_file": "css/at-rules/function.json",
+    "spec_url": "https://drafts.csswg.org/css-mixins-1/#function-rule",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "139"
+     },
+     "chrome_android": {
+      "version_added": "139"
+     },
+     "edge": {
+      "version_added": "139"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "123"
+     },
+     "opera_android": {
+      "version_added": "91"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "139"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "css.at-rules.function.result",
+   "compat": {
+    "description": "<code>result</code> descriptor",
+    "source_file": "css/at-rules/function.json",
+    "spec_url": "https://drafts.csswg.org/css-mixins-1/#the-result-descriptor",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "139"
+     },
+     "chrome_android": {
+      "version_added": "139"
+     },
+     "edge": {
+      "version_added": "139"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "123"
+     },
+     "opera_android": {
+      "version_added": "91"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "139"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "css.types.dashed-function",
+   "compat": {
+    "description": "<code>&lt;dashed-function&gt;</code>",
+    "source_file": "css/types/dashed-function.json",
+    "spec_url": "https://drafts.csswg.org/css-mixins-1/#using-custom-functions",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "139"
+     },
+     "chrome_android": {
+      "version_added": "139"
+     },
+     "edge": {
+      "version_added": "139"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "123"
+     },
+     "opera_android": {
+      "version_added": "91"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "139"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  },
+  {
+   "key": "css.types.type",
+   "compat": {
+    "description": "<code>type()</code>",
+    "source_file": "css/types/type.json",
+    "spec_url": "https://drafts.csswg.org/css-mixins-1/#funcdef-function-type",
+    "status": {
+     "deprecated": false,
+     "experimental": true,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "139"
+     },
+     "chrome_android": {
+      "version_added": "139"
+     },
+     "edge": {
+      "version_added": "139"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "123"
+     },
+     "opera_android": {
+      "version_added": "91"
+     },
+     "safari": {
+      "version_added": false
+     },
+     "safari_ios": {
+      "version_added": false
+     },
+     "samsunginternet_android": {
+      "version_added": false
+     },
+     "webview_android": {
+      "version_added": "139"
+     },
+     "webview_ios": {
+      "version_added": false
+     }
+    }
+   }
+  }
+ ],
+ "bcdTags": [
+  "api",
+  "css"
+ ],
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null,
  "implUrls": {
