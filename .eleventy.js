@@ -1,137 +1,52 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import feedPlugin from "@11ty/eleventy-plugin-rss";
 import YAML from 'yaml';
-import { browsers, features as webFeaturesFeatures, groups } from "web-features";
+import { browsers, features as initialFeatures, groups } from "web-features";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
-import specs from "browser-specs" with { type: "json" };
-import mdnInventory from "@ddbeck/mdn-content-inventory";
-import mdnDocsOverrides from "./additional-data/mdn-docs.json" with { type: "json" };
-import standardPositions from "./additional-data/standard-positions.json" with { type: "json" };
-import originTrials from "./additional-data/origin-trials.json" with { type: "json" };
-import stateOfSurveys from "./additional-data/state-of-surveys.json" with { type: "json" };
-import useCounters from "./additional-data/use-counters.json" with { type: "json" };
-import interop from "./additional-data/interop.json" with { type: "json" };
-import wpt from "./additional-data/wpt.json" with { type: "json" };
 
-// Number of months after Baseline low that Baseline high happens.
-// Keep in sync with definition at:
-// https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md#wider-support-high-status
-const BASELINE_LOW_TO_HIGH_DURATION = 30;
+import { getAllBCDKeys, stripLessThan, getBrowserVersionReleaseDate, getAugmentedSpecData, getExpectedBaselineHighDate, nameAsHTML } from "./utils.js";
+import { BROWSERS_BY_ENGINE, WEB_FEATURES_MAPPINGS_URL } from "./consts.js";
 
-const BROWSER_BUG_TRACKERS = {
-  chrome: "issues.chromium.org",
-  chrome_android: "issues.chromium.org",
-  edge: "issues.chromium.org",
-  firefox: "bugzilla.mozilla.org",
-  firefox_android: "bugzilla.mozilla.org",
-  safari: "bugs.webkit.org",
-  safari_ios: "bugs.webkit.org",
-};
-
-const BROWSERS_BY_VENDORS = [
-  {
-    id: "chrome",
-    browers: ["chrome", "chrome_android"]
-  },
-  {
-    id: "edge",
-    browers: ["edge"]
-  },
-  {
-    id: "firefox",
-    browers: ["firefox", "firefox_android"]
-  },
-  {
-    id: "safari",
-    browers: ["safari", "safari_ios"]
-  }
-]
-
-const MDN_URL_ROOT = "https://developer.mozilla.org/docs/";
-
-function getAllBCDKeys() {
-  function walk(root, acc, keyPrefix = "") {
-    for (const key in root) {
-      if (!keyPrefix && (key === "__meta" || key === "browsers" || key === "webextensions")) {
-        continue;
-      }
-
-      if (key === "__compat") {
-        acc.push({ key: keyPrefix, status: root[key].status });
-      }
-
-      if (key !== "__compat" && typeof root[key] === "object") {
-        const bcdKey = keyPrefix ? `${keyPrefix}.${key}` : key;
-        walk(root[key], acc, bcdKey);
-      }
-    }
-  }
-
-  const keys = [];
-  walk(bcd, keys);
-
-  return keys;
-}
-
-function findParentGroupId(group) {
-  if (!group.parent) {
-    return null;
-  }
-
-  return group.parent;
-}
-
-function stripLessThan(dateStr) {
-  if (dateStr.startsWith("≤")) {
-    return dateStr.substring(1);
-  }
-  return dateStr;
-}
-
-function augmentFeatureData(feature) {
-  // Make rename group to groups, makes more sense since it's always an array.
+function augmentFeatureData(feature, webFeaturesMappingsData) {
+  // Rename group and spec to group*s* and spec*s*, since they're always arrays.
   feature.groups = feature.group || [];
+  feature.specs = feature.spec || [];
 
-  // Create group paths. The groups that a feature belongs to might be
-  // nested in parent groups.
-  feature.groupPaths = [];
-  for (const groupId of feature.groups) {
-    const path = [groups[groupId].name];
-    let currentGroupId = groupId;
+  // Add more data about the specs, by using the browser-specs package, when possible.
+  feature.specs = getAugmentedSpecData(feature.specs);
+  
+  // Augment the feature object with the additional data from web-features-mappings.
+  const featureMappings = webFeaturesMappingsData[feature.id] || {};
+  feature.mdnUrls = featureMappings["mdn-docs"] || [];
+  feature.standardPositions = featureMappings["standards-positions"] || [];
+  feature.hasNegativeStandardPosition = feature.standardPositions.some(pos => {
+    return pos.position === "negative" || pos.position === "oppose";
+  });
+  feature.stateOfSurveys = featureMappings["state-of-surveys"] || [];
+  feature.chromeUseCounters = featureMappings["chrome-use-counters"] || {};
+  feature.interop = featureMappings["interop"]|| [];
+  feature.wpt = featureMappings["wpt"] || null;
 
-    while (true) {
-      const parentId = findParentGroupId(groups[currentGroupId]);
-      if (!parentId) {
-        break;
-      }
-      path.unshift(groups[parentId].name);
-      currentGroupId = parentId;
-    }
-    feature.groupPaths.push(path);
+  // Add the baseline low and high dates as JS objects, so that templates
+  // can format them as needed.
+  feature.baselineLowDateAsObject = feature.status.baseline
+    ? new Date(stripLessThan(feature.status.baseline_low_date))
+    : null;
+  feature.baselineHighDateAsObject = feature.status.baseline && feature.status.baseline === "high"
+    ? new Date(stripLessThan(feature.status.baseline_high_date))
+    : null;
+
+  // Add expected baseline high date, if applicable.
+  if (feature.status.baseline === "low") {
+    const expectedHighDate = getExpectedBaselineHighDate(feature);
+    feature.expectedBaselineHighDate = expectedHighDate ? expectedHighDate.toISOString().substring(0, 10) : null;
   }
 
-  // Add spec data from browser-specs, when possible.
-  feature.spec = feature.spec.map((spec) => {
-    if (!spec) {
-      return null;
-    }
+  // The rest of the code below could be simplified to one line of code if the
+  // web-features-mappings data mapped to bugs.
+  // See https://github.com/web-platform-dx/web-features-mappings/issues/16
 
-    const fragment = spec.includes("#") ? spec.split("#")[1] : null;
-    // Look for the spec URL in the browser-specs data.
-    const specData = specs.find((specData) => {
-      return (
-        specData.url === spec ||
-        spec.startsWith(specData.url) ||
-        (specData.nightly && spec.startsWith(specData.nightly.url))
-      );
-    });
-    return specData ? { ...specData, url: spec, fragment } : { url: spec };
-  }).filter((spec) => !!spec);
-
-  // Get the first part of each BCD key in the feature (e.g. css, javascript, html, api, ...)
-  // to use as tags.
-  const bcdTags = [];
-
+  // Get BCD data for each of the feature's compat_features keys.
   const bcdKeysData = (feature.compat_features || [])
     .map((key) => {
       // Find the BCD entry for this key.
@@ -148,113 +63,9 @@ function augmentFeatureData(feature) {
         data = data[part];
       }
 
-      bcdTags.push(keyParts[0]);
-
       return data && data.__compat ? { key, compat: data.__compat } : null;
     })
     .filter((data) => !!data);
-
-  // Add MDN doc links, if any.
-  const mdnUrls = [];
-
-  if (mdnDocsOverrides[feature.id] && mdnDocsOverrides[feature.id].length) {
-    // If the feature has a doc override, use that.
-    for (const slug of mdnDocsOverrides[feature.id]) {
-      const slugParts = slug.split("#");
-      const hasAnchor = slugParts.length > 1;
-
-      const mdnArticleData = mdnInventory.inventory.find((item) => {
-        return item.frontmatter.slug === (hasAnchor ? slugParts[0] : slug);
-      });
-      if (mdnArticleData) {
-        mdnUrls.push({
-          title: mdnArticleData.frontmatter.title,
-          anchor: hasAnchor ? slugParts[1] : null,
-          url: MDN_URL_ROOT + mdnArticleData.frontmatter.slug + (hasAnchor ? `#${slugParts[1]}` : ""),
-        });
-      }
-    }
-  } else {
-    // Otherwise, compute a list of MDN docs based on BCD keys.
-    for (const { key, mdn_url } of bcdKeysData) {
-      const mdnArticleData = mdnInventory.inventory.find((item) => {
-        return item.frontmatter["browser-compat"] === key;
-      });
-      if (mdnArticleData) {
-        mdnUrls.push({
-          title: mdnArticleData.frontmatter.title,
-          url: MDN_URL_ROOT + mdnArticleData.frontmatter.slug,
-        });
-      } else if (mdn_url) {
-        mdnUrls.push({
-          url: mdn_url,
-          title: mdn_url,
-        });
-      }
-    }
-  }
-
-  feature.mdnUrls = mdnUrls;
-
-  // Add standard positions.
-  feature.standardPositions = standardPositions[feature.id];
-  feature.hasNegativeStandardPosition = 
-      feature?.standardPositions?.mozilla?.position === "negative" ||
-      feature?.standardPositions?.webkit?.position === "oppose";
-
-  // Add origin trials.
-  feature.originTrials = originTrials[feature.id];
-
-  // Add state of surveys data.
-  feature.stateOfSurveys = stateOfSurveys[feature.id];
-
-  // Add use counter data.
-  feature.useCounters = useCounters[feature.id];
-
-  // Add interop data.
-  feature.interop = [];
-  for (const interopYear in interop) {
-    for (const interopLabel in interop[interopYear]) {
-      const interopFeatures = interop[interopYear][interopLabel];
-      if (interopFeatures.includes(feature.id)) {
-        feature.interop.push({
-          year: interopYear,
-          label: interopLabel,
-        });
-      }
-    }
-  }
-
-  // Add WPT data, if any.
-  feature.wpt = wpt.includes(feature.id);
-
-  // Add the BCD data to the feature.
-  feature.bcdData = bcdKeysData;
-  feature.bcdTags = [...new Set(bcdTags)];
-
-  // Add the baseline low and high dates as JS objects too.
-  feature.baselineLowDateAsObject = feature.status.baseline
-    ? new Date(stripLessThan(feature.status.baseline_low_date))
-    : null;
-  feature.baselineHighDateAsObject = feature.status.baseline && feature.status.baseline === "high"
-    ? new Date(stripLessThan(feature.status.baseline_high_date))
-    : null;
-
-  // Add expected baseline high date, if applicable.
-  if (feature.status.baseline === "low") {
-    // If the feature is baseline low, then we expect it to become baseline high
-    // in BASELINE_LOW_TO_HIGH_DURATION months.
-    const baselineLowDate = feature.baselineLowDateAsObject;
-    if (baselineLowDate) {
-      const expectedBaselineHighDate = new Date(baselineLowDate);
-      expectedBaselineHighDate.setMonth(
-        expectedBaselineHighDate.getMonth() + BASELINE_LOW_TO_HIGH_DURATION
-      );
-      feature.expectedBaselineHighDate = expectedBaselineHighDate.toISOString().substring(0, 10);
-    } else {
-      feature.expectedBaselineHighDate = null;
-    }
-  }
 
   // Add impl_url links, if any, per browser.
   const browserImplUrls = Object.keys(browsers).reduce((acc, browserId) => {
@@ -276,43 +87,41 @@ function augmentFeatureData(feature) {
   feature.implUrls = browserImplUrls;
 }
 
-// Massage the web-features data so it's more directly useful in our 11ty templates.
-const features = {};
-const unordinaryFeatures = {};
+export default async function (eleventyConfig) {
+  // Retrieve the web-features-mappings data.
+  const response = await fetch(WEB_FEATURES_MAPPINGS_URL);
+  const webFeaturesMappingsData = await response.json();
 
-for (const id in webFeaturesFeatures) {
-  const feature = webFeaturesFeatures[id];
-  // Add the id to the object.
-  feature.id = id;
+  // Massage the web-features data so it's more directly useful in our 11ty templates.
+  // Here we go over the initialFeatures (from the web-features package) and split them
+  // into ordinary features (kind:feature) and unordinary features (kind:split, kind:moved).
+  // We also "augment" the ordinary features with additional data from various sources.
+  // Unordinary features are left as-is and handled differently in the templates.
+  const features = {};
+  const unordinaryFeatures = {};
 
-  // Only add our custom data to each feature for ordinary features.
-  // Skip kind:split and kind:moved. These are handled differently in the templates.
-  if (feature.kind === "feature") {
-    augmentFeatureData(feature);
+  for (const id in initialFeatures) {
+    const feature = initialFeatures[id];
 
-    // Store the newly augmented feature data.
-    features[id] = feature;
-  } else {
-    // Store unordinary features separately.
-    unordinaryFeatures[id] = feature;
+    // Add the id to the feature object.
+    feature.id = id;
+
+    // Only add our custom data to each feature for ordinary features.
+    if (feature.kind === "feature") {
+      await augmentFeatureData(feature, webFeaturesMappingsData);
+
+      // Store the newly augmented feature data.
+      features[id] = feature;
+    } else {
+      // Store unordinary features separately.
+      unordinaryFeatures[id] = feature;
+    }
   }
-}
 
-function getBrowserVersionReleaseDate(browser, version) {
-  const isBeforeThan = version.startsWith("≤");
-  const cleanVersion = isBeforeThan ? version.substring(1) : version;
-  const date = browser.releases.find(
-    (release) => release.version === cleanVersion
-  ).date;
-
-  return {
-    isBeforeThan,
-    date
-  };
-}
-
-export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+  eleventyConfig.addPlugin(feedPlugin);
+
+  eleventyConfig.addLiquidFilter("dateToRfc3339", feedPlugin.dateToRfc3339);
 
   eleventyConfig.addPassthroughCopy("site/assets");
   eleventyConfig.addPassthroughCopy({ "node_modules/apexcharts/dist/apexcharts.css": "assets/apexcharts.css" });
@@ -330,22 +139,7 @@ export default function (eleventyConfig) {
     }
   );
 
-  eleventyConfig.addShortcode("nameAsHTML", function (name) {
-    // Escape HTML angle brackets.
-    name = name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-
-    // If there are backticks, convert to <code> tags.
-    if (name.includes("`")) {
-      const parts = name.split("`");
-      name = parts
-        .map((part, index) => {
-          return index % 2 === 1 ? `<code>${part}</code>` : part;
-        })
-        .join("");
-    }
-
-    return name;
-  });
+  eleventyConfig.addShortcode("nameAsHTML", nameAsHTML);
 
   eleventyConfig.addShortcode("escapeJSON", function (name) {
     return name.replace(/"/g, "\\\"");
@@ -391,8 +185,7 @@ export default function (eleventyConfig) {
           // Add the status of the release from BCD (current, retired, beta, nightly).
           release.status = bcd.browsers[browserId].releases[release.version].status;
           return release;
-        }),
-        bugTracker: BROWSER_BUG_TRACKERS[browserId],
+        })
       };
     });
   });
@@ -672,7 +465,7 @@ export default function (eleventyConfig) {
 
     const unmapped = [];
     let lastKeyContext = null;
-    getAllBCDKeys().forEach(({ key, status }) => {
+    getAllBCDKeys(bcd).forEach(({ key, status }) => {
       if (!mapped.includes(key)) {
         const keyContent = key.split(".").slice(0, 2).join(".");
         unmapped.push({ key, status, isNewGroup: keyContent !== lastKeyContext });
@@ -698,14 +491,14 @@ export default function (eleventyConfig) {
       const browsersWithSupport = Object.keys(support).filter((browserId) => {
         return !!support[browserId];
       });
-      
-      const byVendors = browsersWithSupport.reduce((acc, browserId) => {
-        // Group by browser vendors instead.
+
+      const byEngines = browsersWithSupport.reduce((acc, browserId) => {
+        // Group by browser engine instead.
         // We don't want lists of features that are only in Chrome, and not in Chrome for Android for example.
-        for (const vendorData of BROWSERS_BY_VENDORS) {
-          if (vendorData.browers.includes(browserId)) {
-            if (!acc.includes(vendorData.id)) {
-              acc.push(vendorData.id);
+        for (const engineData of BROWSERS_BY_ENGINE) {
+          if (engineData.browers.includes(browserId)) {
+            if (!acc.includes(engineData.name)) {
+              acc.push(engineData.name);
             }
             break;
           }
@@ -713,17 +506,22 @@ export default function (eleventyConfig) {
         return acc;
       }, []);
 
-      if (byVendors.length === 1) {
-        const browserId = byVendors[0];
-        if (!onlyOne[browserId]) {
-          onlyOne[browserId] = [];
+      if (byEngines.length === 1) {
+        const engineName = byEngines[0];
+        if (!onlyOne[engineName]) {
+          onlyOne[engineName] = [];
         }
-        
-        onlyOne[browserId].push(feature);
+
+        onlyOne[engineName].push(feature);
       }
     }
 
-    return onlyOne;
+    return Object.keys(onlyOne).map(engineName => {
+      return {
+        name: engineName,
+        features: onlyOne[engineName]
+      };
+    });
   });
 
   eleventyConfig.addGlobalData("missingOneBrowserFeatures", () => {
@@ -814,10 +612,6 @@ export default function (eleventyConfig) {
       return a.monthsBlocked - b.monthsBlocked;
     });
   });
-
-  // RSS Feed Plugin
-  eleventyConfig.addPlugin(feedPlugin);
-  eleventyConfig.addLiquidFilter("dateToRfc3339", feedPlugin.dateToRfc3339);
 
   return {
     dir: {

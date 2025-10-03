@@ -1,8 +1,8 @@
-{% if feature.spec.length %}
+{% if feature.specs.length %}
   <div class="specs feature-box" data-pagefind-body>
     <h3>Specifications</h3>
     <ul data-pagefind-body>
-      {% for spec in feature.spec %}
+      {% for spec in feature.specs %}
         <li>
           {% if spec.title %}
             <a href="{{ spec.url }}">{{ spec.title }}{% if spec.fragment %} (#{{ spec.fragment }}){% endif %}</a>,
