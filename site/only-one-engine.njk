@@ -2,12 +2,12 @@
 title: Features implemented in only one browser engine
 layout: layout.njk
 pagination:
-  data: browsers
+  data: onlyOneBrowserFeatures
   size: 1
-  alias: browser
-permalink: "only-in/browsers/{{ browser.id | slugify }}/"
+  alias: perEngine
+permalink: "only-in/browsers/{{ perEngine.name | slugify }}/"
 eleventyComputed:
-  title: "Features implemented only in {{ browser.name }}"
+  title: "Features implemented only in {{ perEngine.name }}"
 ---
 
 <main class="explore-features">
@@ -15,10 +15,10 @@ eleventyComputed:
 
   <h1>{{ title }}</h1>
 
-  <p>The following features are only implemented in {{ browser.name }}.</p>
+  <p>The following features are only implemented in {{ perEngine.name }}.</p>
 
   <ul class="features">
-    {% for feature in onlyOneBrowserFeatures[browser.id] %}
+    {% for feature in perEngine.features %}
       <li>
         {% include "feature_short.njk" %}
       </li>

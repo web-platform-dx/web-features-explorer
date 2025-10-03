@@ -9,15 +9,9 @@
 </ul>
 <ul class="views">
   <li>Features only in:</li>
-  {% for browserId, features in onlyOneBrowserFeatures %}
+  {% for perEngine in onlyOneBrowserFeatures %}
     <li>
-      <a href="/only-in/browsers/{{ browserId | slugify }}/">
-        {% for browser in browsers %}
-          {% if browser.id === browserId %}
-            {{ browser.name }}
-          {% endif %}
-        {% endfor %}
-      </a>
+      <a href="/only-in/browsers/{{ perEngine.name | slugify }}/">{{ perEngine.name }}</a>
     </li>
   {% endfor %}
 </ul>
