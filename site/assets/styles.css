@@ -523,14 +523,47 @@ main {
   grid-template-columns: 1fr 13rem;
 }
 
+.release-notes.mini {
+  grid-template-columns: 1fr 1fr;
+}
+
 .release-notes h1 {
   grid-column: span 2;
+}
+
+.release-notes.mini .footer {
+  text-align: center;
+  grid-column: span 2;
+}
+
+@media (max-width: 850px) {
+  .release-notes.mini {
+    grid-template-columns: 1fr;
+  }
+
+  .release-notes.mini h1 {
+    grid-column: span 1;
+  }
+
+  .release-notes.mini .footer {
+    grid-column: span 1;
+  }
+}
+
+.release-notes.mini h1 {
+  text-align: center;
+  background-image: url(logo.png);
+  background-size: 2rem;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding-block-start: 3rem;
 }
 
 .release-notes section {
   padding: var(--margin);
   border-radius: 0.5rem;
   margin-block-end: var(--margin);
+  align-self: start;
 }
 
 .release-notes .baseline-low {
@@ -590,7 +623,7 @@ main {
   background-image: url(./edge.svg);
 }
 
-.release-notes section ul {
+.release-notes:not(.mini) section ul {
   column-gap: calc(var(--margin) / 2);
   column-width: 20rem;
 }
@@ -599,6 +632,10 @@ main {
   break-inside: avoid;
   margin: 0 0 var(--margin) 1rem;
   list-style: disc;
+}
+
+.release-notes section li {
+	margin: 0 0 1rem 1rem;
 }
 
 .release-notes aside {

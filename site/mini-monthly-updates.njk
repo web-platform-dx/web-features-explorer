@@ -1,0 +1,51 @@
+---
+layout: layout.njk
+pagination:
+  data: perMonth
+  size: 1
+  alias: month
+permalink: "release-notes/mini/{{ month.date | slugify }}/"
+eleventyComputed:
+  title: "What's Baseline in {{ month.date }}"
+hideHeader: true
+---
+
+<main class="release-notes mini">
+  <h1>
+    {{ title }}
+    <br>
+    {% if pagination.href.next %}<a href="{{ pagination.href.next }}">&laquo; previous month</a>{% endif %}
+    {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">next month &raquo;</a>{% endif %}
+  </h1>
+
+  <section class="baseline-low">
+    <h2>Newly available</h2>
+    {% if month.features.low.length === 0 %}
+      <p>There are no newly available features this month</p>
+    {% endif %}
+    <ul>
+      {% for feature in month.features.low %}
+        <li>
+          <strong><a href="/features/{{ feature.id | slugify }}/">{% nameAsHTML feature.name %}</a></strong>:
+          {{ feature.description_html | safe }}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <section class="baseline-high">
+    <h2>Widely available</h2>
+    {% if month.features.high.length === 0 %}
+      <p>There are no widely available features this month</p>
+    {% endif %}
+    <ul>
+      {% for feature in month.features.high %}
+        <li>
+          <strong><a href="/features/{{ feature.id | slugify }}/">{% nameAsHTML feature.name %}</a></strong>:
+          {{ feature.description_html | safe }}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <p class="footer"><a href="/">{{ siteTitle }}</a></p>
+</main>
