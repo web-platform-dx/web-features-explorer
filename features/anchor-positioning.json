@@ -146,7 +146,11 @@
   "css.properties.position-area.left",
   "css.properties.position-area.none",
   "css.properties.position-area.right",
+  "css.properties.position-area.self-block-end",
+  "css.properties.position-area.self-block-start",
   "css.properties.position-area.self-end",
+  "css.properties.position-area.self-inline-end",
+  "css.properties.position-area.self-inline-start",
   "css.properties.position-area.self-start",
   "css.properties.position-area.span-all",
   "css.properties.position-area.span-block-end",
@@ -155,11 +159,21 @@
   "css.properties.position-area.span-end",
   "css.properties.position-area.span-inline-end",
   "css.properties.position-area.span-inline-start",
+  "css.properties.position-area.span-self-block-end",
+  "css.properties.position-area.span-self-block-start",
+  "css.properties.position-area.span-self-end",
+  "css.properties.position-area.span-self-inline-end",
+  "css.properties.position-area.span-self-inline-start",
+  "css.properties.position-area.span-self-start",
   "css.properties.position-area.span-start",
   "css.properties.position-area.span-top",
   "css.properties.position-area.span-x-end",
+  "css.properties.position-area.span-x-self-end",
+  "css.properties.position-area.span-x-self-start",
   "css.properties.position-area.span-x-start",
   "css.properties.position-area.span-y-end",
+  "css.properties.position-area.span-y-self-end",
+  "css.properties.position-area.span-y-self-start",
   "css.properties.position-area.span-y-start",
   "css.properties.position-area.start",
   "css.properties.position-area.top",
@@ -9892,6 +9906,146 @@
    }
   },
   {
+   "key": "css.properties.position-area.self-block-end",
+   "compat": {
+    "source_file": "css/properties/position-area.json",
+    "spec_url": "https://drafts.csswg.org/css-anchor-position/#valdef-position-area-self-block-end",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "When <code>self-block-end</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "notes": "When <code>self-block-end</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "edge": {
+      "notes": "When <code>self-block-end</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "notes": "When <code>self-block-end</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "115"
+     },
+     "opera_android": {
+      "notes": "When <code>self-block-end</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "notes": "When <code>self-block-end</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "notes": "When <code>self-block-end</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    }
+   }
+  },
+  {
+   "key": "css.properties.position-area.self-block-start",
+   "compat": {
+    "source_file": "css/properties/position-area.json",
+    "spec_url": "https://drafts.csswg.org/css-anchor-position/#valdef-position-area-self-block-start",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "When <code>self-block-start</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "notes": "When <code>self-block-start</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "edge": {
+      "notes": "When <code>self-block-start</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "notes": "When <code>self-block-start</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "115"
+     },
+     "opera_android": {
+      "notes": "When <code>self-block-start</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "notes": "When <code>self-block-start</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "notes": "When <code>self-block-start</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    }
+   }
+  },
+  {
    "key": "css.properties.position-area.self-end",
    "compat": {
     "source_file": "css/properties/position-area.json",
@@ -9964,6 +10118,146 @@
     "tags": [
      "web-features:anchor-positioning"
     ]
+   }
+  },
+  {
+   "key": "css.properties.position-area.self-inline-end",
+   "compat": {
+    "source_file": "css/properties/position-area.json",
+    "spec_url": "https://drafts.csswg.org/css-anchor-position/#valdef-position-area-self-inline-end",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "When <code>self-inline-end</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "notes": "When <code>self-inline-end</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "edge": {
+      "notes": "When <code>self-inline-end</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "notes": "When <code>self-inline-end</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "115"
+     },
+     "opera_android": {
+      "notes": "When <code>self-inline-end</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "notes": "When <code>self-inline-end</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "notes": "When <code>self-inline-end</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    }
+   }
+  },
+  {
+   "key": "css.properties.position-area.self-inline-start",
+   "compat": {
+    "source_file": "css/properties/position-area.json",
+    "spec_url": "https://drafts.csswg.org/css-anchor-position/#valdef-position-area-self-inline-start",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "notes": "When <code>self-inline-start</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "notes": "When <code>self-inline-start</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "edge": {
+      "notes": "When <code>self-inline-start</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "notes": "When <code>self-inline-start</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "115"
+     },
+     "opera_android": {
+      "notes": "When <code>self-inline-start</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "notes": "When <code>self-inline-start</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "notes": "When <code>self-inline-start</code> is used as a single keyword, or alongside <code>span-all</code>, it unexpectedly allows the anchored box to overflow the viewport, obscuring content. Use <code>place-self: anchor-center</code> as a workaround. See <a href=\"https://crbug.com/438334710\">bug 438334710</a>.",
+      "partial_implementation": true,
+      "version_added": "129"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    }
    }
   },
   {
@@ -10483,6 +10777,342 @@
    }
   },
   {
+   "key": "css.properties.position-area.span-self-block-end",
+   "compat": {
+    "source_file": "css/properties/position-area.json",
+    "spec_url": "https://drafts.csswg.org/css-anchor-position/#valdef-position-area-span-self-block-end",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "version_added": "129"
+     },
+     "edge": {
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "129"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    }
+   }
+  },
+  {
+   "key": "css.properties.position-area.span-self-block-start",
+   "compat": {
+    "source_file": "css/properties/position-area.json",
+    "spec_url": "https://drafts.csswg.org/css-anchor-position/#valdef-position-area-span-self-block-start",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "version_added": "129"
+     },
+     "edge": {
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "129"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    }
+   }
+  },
+  {
+   "key": "css.properties.position-area.span-self-end",
+   "compat": {
+    "source_file": "css/properties/position-area.json",
+    "spec_url": "https://drafts.csswg.org/css-anchor-position/#valdef-position-area-span-self-end",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "version_added": "129"
+     },
+     "edge": {
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "129"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    }
+   }
+  },
+  {
+   "key": "css.properties.position-area.span-self-inline-end",
+   "compat": {
+    "source_file": "css/properties/position-area.json",
+    "spec_url": "https://drafts.csswg.org/css-anchor-position/#valdef-position-area-span-self-inline-end",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "version_added": "129"
+     },
+     "edge": {
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "129"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    }
+   }
+  },
+  {
+   "key": "css.properties.position-area.span-self-inline-start",
+   "compat": {
+    "source_file": "css/properties/position-area.json",
+    "spec_url": "https://drafts.csswg.org/css-anchor-position/#valdef-position-area-span-self-inline-start",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "version_added": "129"
+     },
+     "edge": {
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "129"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    }
+   }
+  },
+  {
+   "key": "css.properties.position-area.span-self-start",
+   "compat": {
+    "source_file": "css/properties/position-area.json",
+    "spec_url": "https://drafts.csswg.org/css-anchor-position/#valdef-position-area-span-self-start",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "version_added": "129"
+     },
+     "edge": {
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "129"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    }
+   }
+  },
+  {
    "key": "css.properties.position-area.span-start",
    "compat": {
     "source_file": "css/properties/position-area.json",
@@ -10666,6 +11296,118 @@
    }
   },
   {
+   "key": "css.properties.position-area.span-x-self-end",
+   "compat": {
+    "source_file": "css/properties/position-area.json",
+    "spec_url": "https://drafts.csswg.org/css-anchor-position/#valdef-position-area-span-x-self-end",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "version_added": "129"
+     },
+     "edge": {
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "129"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    }
+   }
+  },
+  {
+   "key": "css.properties.position-area.span-x-self-start",
+   "compat": {
+    "source_file": "css/properties/position-area.json",
+    "spec_url": "https://drafts.csswg.org/css-anchor-position/#valdef-position-area-span-x-self-start",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "version_added": "129"
+     },
+     "edge": {
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "129"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    }
+   }
+  },
+  {
    "key": "css.properties.position-area.span-x-start",
    "compat": {
     "source_file": "css/properties/position-area.json",
@@ -10785,6 +11527,118 @@
     "tags": [
      "web-features:anchor-positioning"
     ]
+   }
+  },
+  {
+   "key": "css.properties.position-area.span-y-self-end",
+   "compat": {
+    "source_file": "css/properties/position-area.json",
+    "spec_url": "https://drafts.csswg.org/css-anchor-position/#valdef-position-area-span-y-self-end",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "version_added": "129"
+     },
+     "edge": {
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "129"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    }
+   }
+  },
+  {
+   "key": "css.properties.position-area.span-y-self-start",
+   "compat": {
+    "source_file": "css/properties/position-area.json",
+    "spec_url": "https://drafts.csswg.org/css-anchor-position/#valdef-position-area-span-y-self-start",
+    "status": {
+     "deprecated": false,
+     "experimental": false,
+     "standard_track": true
+    },
+    "support": {
+     "chrome": {
+      "version_added": "129"
+     },
+     "chrome_android": {
+      "version_added": "129"
+     },
+     "edge": {
+      "version_added": "129"
+     },
+     "firefox": {
+      "version_added": false
+     },
+     "firefox_android": {
+      "version_added": false
+     },
+     "ie": {
+      "version_added": false
+     },
+     "oculus": {
+      "version_added": false
+     },
+     "opera": {
+      "version_added": "115"
+     },
+     "opera_android": {
+      "version_added": "86"
+     },
+     "safari": {
+      "version_added": "26"
+     },
+     "safari_ios": {
+      "version_added": "26"
+     },
+     "samsunginternet_android": {
+      "version_added": "28.0"
+     },
+     "webview_android": {
+      "version_added": "129"
+     },
+     "webview_ios": {
+      "version_added": "26"
+     }
+    }
    }
   },
   {
