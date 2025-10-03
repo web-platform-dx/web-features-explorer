@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Web platform features explorer - What&#39;s Baseline in September 2024</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
+    <link href="/web-features-explorer/assets/favicon.png" rel="icon" sizes="64x64" type="image/png">
+    <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
+  </head>
+  <body>
+
+    
+
+    
+<main class="release-notes mini">
+  <h1>
+    What&#39;s Baseline in September 2024
+    <br>
+    <a href="/web-features-explorer/release-notes/mini/august-2024/">&laquo; previous month</a>
+    <a href="/web-features-explorer/release-notes/mini/october-2024/">next month &raquo;</a>
+  </h1>
+
+  <section class="baseline-low">
+    <h2>Newly available</h2>
+    
+    <ul>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/backdrop-filter/">backdrop-filter</a></strong>:
+          The <code>backdrop-filter</code> CSS property applies graphical effects such as blurring or color shifting to the area behind an element.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/canvas-2d-willreadfrequently/">willReadFrequently</a></strong>:
+          The optional <code>willReadFrequently</code> parameter of a canvas's <code>getContext()</code> method permits the browser to optimize for frequent <code>getImageData()</code> calls by avoiding hardware acceleration. Also known as multiple readback.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/cookie-enabled/">cookieEnabled</a></strong>:
+          The <code>navigator.cookieEnabled</code> property is a boolean for whether the browser accepts or ignores attempts to write cookie data.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/details-name/">Mutually exclusive &lt;details&gt; elements</a></strong>:
+          Multiple <code>&#x3C;details></code> elements which use the same <code>name</code> attribute are mutually exclusive. When one member of the group is opened, all other members are closed.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/gethtml/">getHTML()</a></strong>:
+          The <code>getHTML()</code> method of <code>Element</code> and <code>ShadowRoot</code> objects serializes an element's DOM to an HTML string.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/http3/">HTTP/3</a></strong>:
+          HTTP/3 is a major revision of the HTTP network protocol, providing improved performance and efficiency by using QUIC as the underlying transport protocol.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/relative-color/">Relative colors</a></strong>:
+          The <code>from</code> keyword for color functions (<code>color()</code>, <code>hsl()</code>, <code>oklch()</code>, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS).
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/wasm-typed-fun-refs/">Typed function references (WebAssembly)</a></strong>:
+          A typed function reference can be called directly.
+        </li>
+      
+    </ul>
+  </section>
+  <section class="baseline-high">
+    <h2>Widely available</h2>
+    
+    <ul>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/appearance/">appearance</a></strong>:
+          The <code>appearance</code> CSS property controls the appearance of form controls. Using <code>appearance: none</code> disables any default native appearance and allows the elements to be styled with CSS.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/array-at/">Array at()</a></strong>:
+          The <code>at()</code> method of arrays and typed arrays returns the item at an index, including negative indices for getting items relative to the end of an array. Also known as the relative indexing method.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/backdrop/">::backdrop</a></strong>:
+          The <code>::backdrop</code> CSS pseudo-element is a box underneath an element in the top layer, such as a <code>&#x3C;dialog></code>. It can be used to create obscuring effects distinguishing a modal element from the elements underneath.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/background-attachment/">background-attachment</a></strong>:
+          The <code>background-attachment</code> CSS property sets whether an element's background image or gradient moves as the element scrolls.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/broadcast-channel/">BroadcastChannel</a></strong>:
+          The <code>BroadcastChannel</code> API allows you to send messages between same-origin browsing contexts, such as between the same page loaded in multiple tabs.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/cascade-layers/">Cascade layers</a></strong>:
+          The <code>@layer</code> CSS at-rule avoids specificity conflicts by providing priority levels for different groups of CSS rules, such as low-priority styles like resets, and high-priority styles like UI components.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/contain/">contain</a></strong>:
+          The <code>contain</code> CSS property sets limits to the scope of styles, layout, and paint rendering for speed and efficiency. The <code>none</code> keyword value disables containment, <code>strict</code> is equivalent to <code>contain: size layout style paint</code>, and <code>content</code> is equivalent to <code>contain: layout style paint</code>.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/contain-layout/">Layout containment</a></strong>:
+          The <code>contain: layout</code> CSS declaration isolates the inside of an element such that it cannot affect the layout of the rest of the page or be affected by the rest of the page. This permits the browser to avoid slower layout calculations.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/contain-paint/">Paint containment</a></strong>:
+          The <code>contain: paint</code> CSS declaration prevents an element's descendants from being drawn outside the boundaries of the containing element, with any overflow clipped. This permits the browser to avoid slower painting calculations.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/contain-size/">Size containment</a></strong>:
+          The <code>contain: size</code> CSS declaration sets an element's dimensions exclusively by its <code>height</code> and <code>width</code> properties, ignoring its contents and descendants. This permits the browser to avoid slower layout calculations.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/dialog/">&lt;dialog&gt;</a></strong>:
+          The <code>&#x3C;dialog></code> HTML element represents a modal or non-modal dialog box, such as a confirmation prompt or a subwindow used to enter data.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/focus-visible/">:focus-visible</a></strong>:
+          The <code>:focus-visible</code> CSS pseudo-class selects elements that match the <code>:focus</code> pseudo-class and meets the browser's criteria for visually emphasizing focused elements.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/hardware-concurrency/">hardwareConcurrency</a></strong>:
+          The <code>navigator.hardwareConcurrency</code> property is the number of logical processors available to run threads on the user's computer.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/object-hasown/">Object.hasOwn()</a></strong>:
+          The <code>Object.hasOwn()</code> static method checks whether an object has a given property. It's a more robust alternative to the <code>Object.prototype.hasOwnProperty()</code> method.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/scroll-behavior/">scroll-behavior</a></strong>:
+          The <code>scroll-behavior</code> CSS property controls whether scrolling is smooth or snaps, for scroll actions not performed by the user such as those triggered by navigation.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/string-at/">String at()</a></strong>:
+          The <code>at()</code> method of strings returns the character (one UTF-16 code unit) at an index, including negative indices for getting the character relative to the end of the string. Also known as the relative indexing method.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/structured-clone/">structuredClone()</a></strong>:
+          The <code>structuredClone()</code> global method creates a deep copy of an object. Values that cannot be cloned can instead be transferred, making the original value no longer usable.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/text-combine-upright/">text-combine-upright</a></strong>:
+          The <code>text-combine-upright</code> CSS property displays multiple characters in the space of a single character in vertical text. This is used in East Asian documents to display Latin-based strings such as components of a date or letters of an initialism.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/text-emphasis/">text-emphasis</a></strong>:
+          The <code>text-emphasis</code> CSS property sets position and style for text emphasis marks, especially for East Asian languages.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/transforms3d/">3D transforms</a></strong>:
+          The <code>transform</code> CSS property and its 3D transform functions allow rotations and other transforms in three dimensions, including perspective transforms.
+        </li>
+      
+        <li>
+          <strong><a href="/web-features-explorer/features/web-locks/">Locks</a></strong>:
+          The <code>navigator.locks</code> API coordinates work with shared resources through mutually exclusive ownership of a resource's name. Also known as web locks.
+        </li>
+      
+    </ul>
+  </section>
+
+  <p class="footer"><a href="/web-features-explorer/">Web platform features explorer</a></p>
+</main>
+
+
+    
+  </body>
+</html>
