@@ -17,6 +17,27 @@
  "kind": "feature",
  "name": "Mixed content handling",
  "spec": [
+  "https://w3c.github.io/webappsec-mixed-content/"
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2022-07-15",
+  "baseline_low_date": "2020-01-15",
+  "support": {
+   "chrome": "≤79",
+   "chrome_android": "≤79",
+   "edge": "79",
+   "firefox": "≤23",
+   "firefox_android": "≤23",
+   "safari": "≤9.1",
+   "safari_ios": "≤9.3"
+  }
+ },
+ "id": "mixed-content",
+ "groups": [
+  "security"
+ ],
+ "specs": [
   {
    "url": "https://w3c.github.io/webappsec-mixed-content/",
    "seriesComposition": "full",
@@ -65,563 +86,35 @@
    "fragment": null
   }
  ],
- "status": {
-  "baseline": "high",
-  "baseline_high_date": "2022-07-15",
-  "baseline_low_date": "2020-01-15",
-  "support": {
-   "chrome": "≤79",
-   "chrome_android": "≤79",
-   "edge": "79",
-   "firefox": "≤23",
-   "firefox_android": "≤23",
-   "safari": "≤9.1",
-   "safari_ios": "≤9.3"
-  }
- },
- "id": "mixed-content",
- "groups": [
-  "security"
- ],
- "groupPaths": [
-  [
-   "Security"
-  ]
- ],
  "mdnUrls": [
   {
+   "slug": "Web/Security/Mixed_content",
    "title": "Mixed content",
    "anchor": null,
    "url": "https://developer.mozilla.org/docs/Web/Security/Mixed_content"
   }
  ],
- "standardPositions": {
-  "mozilla": {
+ "standardPositions": [
+  {
+   "vendor": "mozilla",
    "url": "https://github.com/mozilla/standards-positions/issues/668",
    "position": "positive",
    "concerns": []
   },
-  "webkit": {
+  {
+   "vendor": "webkit",
    "url": "https://github.com/WebKit/standards-positions/issues/124",
    "position": "support",
    "concerns": []
   }
- },
+ ],
  "hasNegativeStandardPosition": false,
- "originTrials": [],
- "useCounters": {},
+ "stateOfSurveys": [],
+ "chromeUseCounters": {},
  "interop": [],
- "wpt": true,
- "bcdData": [
-  {
-   "key": "http.mixed-content",
-   "compat": {
-    "description": "Blocks some or all insecure mixed content.",
-    "mdn_url": "https://developer.mozilla.org/docs/Web/Security/Mixed_content",
-    "source_file": "http/mixed-content.json",
-    "spec_url": "https://w3c.github.io/webappsec-mixed-content/#intro",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "≤79"
-     },
-     "chrome_android": {
-      "version_added": "≤79"
-     },
-     "edge": {
-      "version_added": "79"
-     },
-     "firefox": {
-      "version_added": "≤23"
-     },
-     "firefox_android": {
-      "version_added": "≤23"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "≤8.0"
-     },
-     "opera": {
-      "version_added": "≤66"
-     },
-     "opera_android": {
-      "version_added": "≤57"
-     },
-     "safari": {
-      "version_added": "≤9.1"
-     },
-     "safari_ios": {
-      "version_added": "≤9.3"
-     },
-     "samsunginternet_android": {
-      "version_added": "≤12.0"
-     },
-     "webview_android": {
-      "version_added": "≤79"
-     },
-     "webview_ios": {
-      "version_added": "≤9.3"
-     }
-    },
-    "tags": [
-     "web-features:mixed-content"
-    ]
-   }
-  },
-  {
-   "key": "http.mixed-content.allow_file_urls",
-   "compat": {
-    "description": "Allow mixed content from <code>file:</code> URLs.",
-    "source_file": "http/mixed-content.json",
-    "spec_url": "https://w3c.github.io/webappsec-mixed-content/#intro",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "≤79"
-     },
-     "chrome_android": {
-      "version_added": "≤79"
-     },
-     "edge": {
-      "version_added": "79"
-     },
-     "firefox": {
-      "version_added": "≤23"
-     },
-     "firefox_android": {
-      "version_added": "≤23"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "≤8.0"
-     },
-     "opera": {
-      "version_added": "≤66"
-     },
-     "opera_android": {
-      "version_added": "≤57"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "version_added": "≤12.0"
-     },
-     "webview_android": {
-      "version_added": "≤79"
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:mixed-content"
-    ]
-   }
-  },
-  {
-   "key": "http.mixed-content.allow_localhost_url",
-   "compat": {
-    "description": "Allow mixed content from localhost addresses (<code>http://localhost/</code> and <code>http://*.localhost/</code>).",
-    "source_file": "http/mixed-content.json",
-    "spec_url": "https://w3c.github.io/webappsec-mixed-content/#intro",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "≤79"
-     },
-     "chrome_android": {
-      "version_added": "≤79"
-     },
-     "edge": {
-      "version_added": "79"
-     },
-     "firefox": {
-      "version_added": "84"
-     },
-     "firefox_android": {
-      "version_added": "84"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "≤8.0"
-     },
-     "opera": {
-      "version_added": "≤66"
-     },
-     "opera_android": {
-      "version_added": "≤57"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "version_added": "≤12.0"
-     },
-     "webview_android": {
-      "version_added": "≤79"
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:mixed-content"
-    ]
-   }
-  },
-  {
-   "key": "http.mixed-content.allow_loopback_url",
-   "compat": {
-    "description": "Allow mixed content from loopback address (<code>http://127.0.0.1/</code>).",
-    "source_file": "http/mixed-content.json",
-    "spec_url": "https://w3c.github.io/webappsec-mixed-content/#intro",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "≤79"
-     },
-     "chrome_android": {
-      "version_added": "≤79"
-     },
-     "edge": {
-      "version_added": "79"
-     },
-     "firefox": {
-      "version_added": "55"
-     },
-     "firefox_android": {
-      "version_added": "55"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "≤8.0"
-     },
-     "opera": {
-      "version_added": "≤66"
-     },
-     "opera_android": {
-      "version_added": "≤57"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "version_added": "≤12.0"
-     },
-     "webview_android": {
-      "version_added": "≤79"
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:mixed-content"
-    ]
-   }
-  },
-  {
-   "key": "http.mixed-content.auto_upgrade_images",
-   "compat": {
-    "description": "Upgradable image mixed content by default.",
-    "source_file": "http/mixed-content.json",
-    "spec_url": "https://w3c.github.io/webappsec-mixed-content/#category-upgradeable",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "86"
-     },
-     "chrome_android": {
-      "version_added": "86"
-     },
-     "edge": {
-      "version_added": "86"
-     },
-     "firefox": {
-      "notes": [
-       "Set <code>security.mixed_content.upgrade_display_content</code> preference to <code>true</code> to allow HTTP fetching and display of upgradable content.",
-       "Set <code>security.mixed_content.block_display_content</code> preference to <code>true</code> to block all mixed content."
-      ],
-      "version_added": "127"
-     },
-     "firefox_android": {
-      "notes": [
-       "Set <code>security.mixed_content.upgrade_display_content</code> preference to <code>true</code> to allow HTTP fetching and display of upgradable content.",
-       "Set <code>security.mixed_content.block_display_content</code> preference to <code>true</code> to block all mixed content."
-      ],
-      "version_added": "127"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "12.0"
-     },
-     "opera": {
-      "version_added": "72"
-     },
-     "opera_android": {
-      "version_added": "61"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "version_added": "14.0"
-     },
-     "webview_android": {
-      "version_added": "86"
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:mixed-content"
-    ]
-   }
-  },
-  {
-   "key": "http.mixed-content.auto_upgrade_video_audio",
-   "compat": {
-    "description": "Upgrade video and audio content by default.",
-    "source_file": "http/mixed-content.json",
-    "spec_url": "https://w3c.github.io/webappsec-mixed-content/#category-upgradeable",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "80"
-     },
-     "chrome_android": {
-      "version_added": "80"
-     },
-     "edge": {
-      "version_added": "80"
-     },
-     "firefox": {
-      "notes": [
-       "Set <code>security.mixed_content.upgrade_display_content</code> preference to <code>true</code> to allow HTTP fetching and display of upgradable content.",
-       "Set <code>security.mixed_content.block_display_content</code> preference to <code>true</code> to block all mixed content."
-      ],
-      "version_added": "127"
-     },
-     "firefox_android": {
-      "notes": [
-       "Set <code>security.mixed_content.upgrade_display_content</code> preference to <code>true</code> to allow HTTP fetching and display of upgradable content.",
-       "Set <code>security.mixed_content.block_display_content</code> preference to <code>true</code> to block all mixed content."
-      ],
-      "version_added": "127"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "9.0"
-     },
-     "opera": {
-      "version_added": "67"
-     },
-     "opera_android": {
-      "version_added": "57"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "version_added": "13.0"
-     },
-     "webview_android": {
-      "version_added": "80"
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:mixed-content"
-    ]
-   }
-  },
-  {
-   "key": "http.mixed-content.block_mixed_downloads",
-   "compat": {
-    "description": "Block mixed downloads.",
-    "source_file": "http/mixed-content.json",
-    "spec_url": "https://w3c.github.io/webappsec-mixed-content/#mixed-download",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "92"
-     },
-     "chrome_android": {
-      "version_added": "92"
-     },
-     "edge": {
-      "version_added": "92"
-     },
-     "firefox": {
-      "version_added": "90"
-     },
-     "firefox_android": {
-      "version_added": "90"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "17.0"
-     },
-     "opera": {
-      "version_added": "78"
-     },
-     "opera_android": {
-      "version_added": "65"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "version_added": "16.0"
-     },
-     "webview_android": {
-      "version_added": "92"
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:mixed-content"
-    ]
-   }
-  },
-  {
-   "key": "http.mixed-content.blockable_mixed_content",
-   "compat": {
-    "description": "Block 'blockable' mixed content.",
-    "source_file": "http/mixed-content.json",
-    "spec_url": "https://w3c.github.io/webappsec-mixed-content/#category-blockable",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "notes": "From version 79 blocks iframes, scripts, and stylesheets.",
-      "version_added": "79"
-     },
-     "chrome_android": {
-      "notes": "From version 79 blocks iframes, scripts, and stylesheets.",
-      "version_added": "79"
-     },
-     "edge": {
-      "notes": "From version 79 blocks iframes, scripts, and stylesheets.",
-      "version_added": "79"
-     },
-     "firefox": {
-      "version_added": "23"
-     },
-     "firefox_android": {
-      "version_added": "23"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "notes": "From version 8.0 blocks iframes, scripts, and stylesheets.",
-      "version_added": "8.0"
-     },
-     "opera": {
-      "notes": "From version 66 blocks iframes, scripts, and stylesheets.",
-      "version_added": "66"
-     },
-     "opera_android": {
-      "notes": "From version 57 blocks iframes, scripts, and stylesheets.",
-      "version_added": "57"
-     },
-     "safari": {
-      "version_added": "≤9.1"
-     },
-     "safari_ios": {
-      "version_added": "≤9.3"
-     },
-     "samsunginternet_android": {
-      "notes": "From version 12.0 blocks iframes, scripts, and stylesheets.",
-      "version_added": "12.0"
-     },
-     "webview_android": {
-      "notes": "From version 79 blocks iframes, scripts, and stylesheets.",
-      "version_added": "79"
-     },
-     "webview_ios": {
-      "version_added": "≤9.3"
-     }
-    },
-    "tags": [
-     "web-features:mixed-content"
-    ]
-   }
-  }
- ],
- "bcdTags": [
-  "http"
- ],
+ "wpt": {
+  "url": "https://wpt.fyi/results?q=feature:mixed-content"
+ },
  "baselineLowDateAsObject": "2020-01-15T00:00:00.000Z",
  "baselineHighDateAsObject": "2022-07-15T00:00:00.000Z",
  "implUrls": {

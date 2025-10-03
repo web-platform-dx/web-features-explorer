@@ -16,6 +16,28 @@
  "kind": "feature",
  "name": "<input type=\"range\">",
  "spec": [
+  "https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)"
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2019-09-16",
+  "baseline_low_date": "2017-03-16",
+  "support": {
+   "chrome": "4",
+   "chrome_android": "57",
+   "edge": "12",
+   "firefox": "23",
+   "firefox_android": "52",
+   "safari": "3.1",
+   "safari_ios": "5"
+  }
+ },
+ "id": "input-range",
+ "groups": [
+  "forms",
+  "html-elements"
+ ],
+ "specs": [
   {
    "url": "https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)",
    "seriesComposition": "full",
@@ -133,360 +155,20 @@
    "fragment": "range-state-(type=range)"
   }
  ],
- "status": {
-  "baseline": "high",
-  "baseline_high_date": "2019-09-16",
-  "baseline_low_date": "2017-03-16",
-  "support": {
-   "chrome": "4",
-   "chrome_android": "57",
-   "edge": "12",
-   "firefox": "23",
-   "firefox_android": "52",
-   "safari": "3.1",
-   "safari_ios": "5"
-  }
- },
- "id": "input-range",
- "groups": [
-  "forms",
-  "html-elements"
- ],
- "groupPaths": [
-  [
-   "HTML",
-   "Forms"
-  ],
-  [
-   "HTML",
-   "HTML elements"
-  ]
- ],
  "mdnUrls": [
   {
+   "slug": "Web/HTML/Reference/Elements/input/range",
    "title": "<input type=\"range\">",
    "anchor": null,
    "url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input/range"
   }
  ],
- "standardPositions": {
-  "mozilla": {},
-  "webkit": {}
- },
+ "standardPositions": [],
  "hasNegativeStandardPosition": false,
- "originTrials": [],
- "useCounters": {},
+ "stateOfSurveys": [],
+ "chromeUseCounters": {},
  "interop": [],
- "wpt": false,
- "bcdData": [
-  {
-   "key": "html.elements.input.type_range",
-   "compat": {
-    "description": "<code>type=\"range\"</code>",
-    "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input/range",
-    "source_file": "html/elements/input/range.json",
-    "spec_url": "https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "4"
-     },
-     "chrome_android": {
-      "version_added": "57"
-     },
-     "edge": {
-      "version_added": "12"
-     },
-     "firefox": {
-      "version_added": "23"
-     },
-     "firefox_android": {
-      "version_added": "52"
-     },
-     "ie": {
-      "version_added": "10"
-     },
-     "oculus": {
-      "version_added": "5.0"
-     },
-     "opera": {
-      "version_added": "11"
-     },
-     "opera_android": {
-      "version_added": "11"
-     },
-     "safari": {
-      "version_added": "3.1"
-     },
-     "safari_ios": {
-      "version_added": "5"
-     },
-     "samsunginternet_android": {
-      "version_added": "7.0"
-     },
-     "webview_android": [
-      {
-       "version_added": "4.4"
-      },
-      {
-       "notes": "Pre-Chromium Android WebView recognizes the <code>range</code> type, but doesn't implement a range-specific control.",
-       "partial_implementation": true,
-       "version_added": "2",
-       "version_last": "4",
-       "version_removed": "4.4"
-      }
-     ],
-     "webview_ios": {
-      "version_added": "5"
-     }
-    },
-    "tags": [
-     "web-features:input-range"
-    ]
-   }
-  },
-  {
-   "key": "html.elements.input.type_range.tick_marks",
-   "compat": {
-    "description": "Tick mark support",
-    "source_file": "html/elements/input/range.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "≤67"
-     },
-     "chrome_android": {
-      "version_added": "≤67"
-     },
-     "edge": {
-      "version_added": "79"
-     },
-     "firefox": {
-      "version_added": "109"
-     },
-     "firefox_android": {
-      "version_added": "109"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "≤6.0"
-     },
-     "opera": {
-      "version_added": "≤54"
-     },
-     "opera_android": {
-      "version_added": "≤48"
-     },
-     "safari": {
-      "version_added": "12.1"
-     },
-     "safari_ios": {
-      "version_added": "12.2"
-     },
-     "samsunginternet_android": {
-      "version_added": "≤9.0"
-     },
-     "webview_android": {
-      "version_added": "≤67"
-     },
-     "webview_ios": {
-      "version_added": "12.2"
-     }
-    },
-    "tags": [
-     "web-features:input-range"
-    ]
-   }
-  },
-  {
-   "key": "html.elements.input.type_range.vertical_orientation",
-   "compat": {
-    "description": "Vertically-oriented range sliders",
-    "source_file": "html/elements/input/range.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": [
-      {
-       "notes": "Vertical orientation available via the <code>writing-mode</code> property (see <a href=\"https://developer.mozilla.org/docs/Web/CSS/CSS_writing_modes/Vertical_controls\">Creating vertical controls</a>).",
-       "version_added": "124"
-      },
-      {
-       "notes": "Vertical orientation available by setting the non-standard <code>-webkit-appearance: slider-vertical</code> style on the <code>input</code> element. You shouldn't use this, since it's proprietary, unless you include appropriate fallbacks for users of other browsers.",
-       "partial_implementation": true,
-       "version_added": "≤67",
-       "version_last": "123",
-       "version_removed": "124"
-      }
-     ],
-     "chrome_android": [
-      {
-       "notes": "Vertical orientation available via the <code>writing-mode</code> property (see <a href=\"https://developer.mozilla.org/docs/Web/CSS/CSS_writing_modes/Vertical_controls\">Creating vertical controls</a>).",
-       "version_added": "124"
-      },
-      {
-       "notes": "Vertical orientation available by setting the non-standard <code>-webkit-appearance: slider-vertical</code> style on the <code>input</code> element. You shouldn't use this, since it's proprietary, unless you include appropriate fallbacks for users of other browsers.",
-       "partial_implementation": true,
-       "version_added": "≤67",
-       "version_last": "123",
-       "version_removed": "124"
-      }
-     ],
-     "edge": {
-      "notes": "Vertical orientation available by setting the <code>writing-mode: bt-lr</code> style on the <code>input</code> element.",
-      "version_added": "12"
-     },
-     "firefox": [
-      {
-       "notes": "Vertical orientation available via the <code>writing-mode</code> property (see <a href=\"https://developer.mozilla.org/docs/Web/CSS/CSS_writing_modes/Vertical_controls\">Creating vertical controls</a>).",
-       "version_added": "120"
-      },
-      {
-       "impl_url": "https://bugzil.la/840820",
-       "notes": "Supported using the non-standard <code>orient=\"vertical\"</code> attribute.",
-       "partial_implementation": true,
-       "version_added": "23",
-       "version_last": "119",
-       "version_removed": "120"
-      }
-     ],
-     "firefox_android": [
-      {
-       "notes": "Vertical orientation available via the <code>writing-mode</code> property (see <a href=\"https://developer.mozilla.org/docs/Web/CSS/CSS_writing_modes/Vertical_controls\">Creating vertical controls</a>).",
-       "version_added": "120"
-      },
-      {
-       "impl_url": "https://bugzil.la/840820",
-       "notes": "Supported using the non-standard <code>orient=\"vertical\"</code> attribute.",
-       "partial_implementation": true,
-       "version_added": "52",
-       "version_last": "119",
-       "version_removed": "120"
-      }
-     ],
-     "ie": {
-      "notes": "Vertical orientation available by setting the <code>writing-mode: bt-lr</code> style on the <code>input</code> element.",
-      "version_added": "10"
-     },
-     "oculus": {
-      "notes": "Vertical orientation available by setting the non-standard <code>-webkit-appearance: slider-vertical</code> style on the <code>input</code> element. You shouldn't use this, since it's proprietary, unless you include appropriate fallbacks for users of other browsers.",
-      "partial_implementation": true,
-      "version_added": "≤6.0"
-     },
-     "opera": [
-      {
-       "notes": "Vertical orientation available via the <code>writing-mode</code> property (see <a href=\"https://developer.mozilla.org/docs/Web/CSS/CSS_writing_modes/Vertical_controls\">Creating vertical controls</a>).",
-       "version_added": "110"
-      },
-      {
-       "notes": "Vertical orientation available by setting the non-standard <code>-webkit-appearance: slider-vertical</code> style on the <code>input</code> element. You shouldn't use this, since it's proprietary, unless you include appropriate fallbacks for users of other browsers.",
-       "partial_implementation": true,
-       "version_added": "≤54",
-       "version_last": "109",
-       "version_removed": "110"
-      }
-     ],
-     "opera_android": [
-      {
-       "notes": "Vertical orientation available via the <code>writing-mode</code> property (see <a href=\"https://developer.mozilla.org/docs/Web/CSS/CSS_writing_modes/Vertical_controls\">Creating vertical controls</a>).",
-       "version_added": "82"
-      },
-      {
-       "notes": "Vertical orientation available by setting the non-standard <code>-webkit-appearance: slider-vertical</code> style on the <code>input</code> element. You shouldn't use this, since it's proprietary, unless you include appropriate fallbacks for users of other browsers.",
-       "partial_implementation": true,
-       "version_added": "≤48",
-       "version_last": "81",
-       "version_removed": "82"
-      }
-     ],
-     "safari": [
-      {
-       "notes": "Vertical orientation available via the <code>writing-mode</code> property (see <a href=\"https://developer.mozilla.org/docs/Web/CSS/CSS_writing_modes/Vertical_controls\">Creating vertical controls</a>).",
-       "version_added": "16.5"
-      },
-      {
-       "notes": "Vertical orientation available by setting the non-standard <code>-webkit-appearance: slider-vertical</code> style on the <code>input</code> element. You shouldn't use this, since it's proprietary, unless you include appropriate fallbacks for users of other browsers.",
-       "partial_implementation": true,
-       "version_added": "3.1",
-       "version_last": "16.4",
-       "version_removed": "16.5"
-      }
-     ],
-     "safari_ios": [
-      {
-       "notes": "Vertical orientation available via the <code>writing-mode</code> property (see <a href=\"https://developer.mozilla.org/docs/Web/CSS/CSS_writing_modes/Vertical_controls\">Creating vertical controls</a>).",
-       "version_added": "16.5"
-      },
-      {
-       "notes": "Vertical orientation available by setting the non-standard <code>-webkit-appearance: slider-vertical</code> style on the <code>input</code> element. You shouldn't use this, since it's proprietary, unless you include appropriate fallbacks for users of other browsers.",
-       "partial_implementation": true,
-       "version_added": "5",
-       "version_last": "16.4",
-       "version_removed": "16.5"
-      }
-     ],
-     "samsunginternet_android": [
-      {
-       "notes": "Vertical orientation available via the <code>writing-mode</code> property (see <a href=\"https://developer.mozilla.org/docs/Web/CSS/CSS_writing_modes/Vertical_controls\">Creating vertical controls</a>).",
-       "version_added": "27.0"
-      },
-      {
-       "notes": "Vertical orientation available by setting the non-standard <code>-webkit-appearance: slider-vertical</code> style on the <code>input</code> element. You shouldn't use this, since it's proprietary, unless you include appropriate fallbacks for users of other browsers.",
-       "partial_implementation": true,
-       "version_added": "≤9.0",
-       "version_last": "26.0",
-       "version_removed": "27.0"
-      }
-     ],
-     "webview_android": [
-      {
-       "notes": "Vertical orientation available via the <code>writing-mode</code> property (see <a href=\"https://developer.mozilla.org/docs/Web/CSS/CSS_writing_modes/Vertical_controls\">Creating vertical controls</a>).",
-       "version_added": "124"
-      },
-      {
-       "notes": "Vertical orientation available by setting the non-standard <code>-webkit-appearance: slider-vertical</code> style on the <code>input</code> element. You shouldn't use this, since it's proprietary, unless you include appropriate fallbacks for users of other browsers.",
-       "partial_implementation": true,
-       "version_added": "≤67",
-       "version_last": "123",
-       "version_removed": "124"
-      }
-     ],
-     "webview_ios": [
-      {
-       "notes": "Vertical orientation available via the <code>writing-mode</code> property (see <a href=\"https://developer.mozilla.org/docs/Web/CSS/CSS_writing_modes/Vertical_controls\">Creating vertical controls</a>).",
-       "version_added": "16.5"
-      },
-      {
-       "notes": "Vertical orientation available by setting the non-standard <code>-webkit-appearance: slider-vertical</code> style on the <code>input</code> element. You shouldn't use this, since it's proprietary, unless you include appropriate fallbacks for users of other browsers.",
-       "partial_implementation": true,
-       "version_added": "5",
-       "version_last": "16.4",
-       "version_removed": "16.5"
-      }
-     ]
-    },
-    "tags": [
-     "web-features:input-range"
-    ]
-   }
-  }
- ],
- "bcdTags": [
-  "html"
- ],
+ "wpt": null,
  "baselineLowDateAsObject": "2017-03-16T00:00:00.000Z",
  "baselineHighDateAsObject": "2019-09-16T00:00:00.000Z",
  "implUrls": {

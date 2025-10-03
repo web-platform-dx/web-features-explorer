@@ -15,6 +15,17 @@
  "kind": "feature",
  "name": "display: contents",
  "spec": [
+  "https://drafts.csswg.org/css-display-3/#box-generation"
+ ],
+ "status": {
+  "baseline": false,
+  "support": {}
+ },
+ "id": "display-contents",
+ "groups": [
+  "css"
+ ],
+ "specs": [
   {
    "url": "https://drafts.csswg.org/css-display-3/#box-generation",
    "seriesComposition": "full",
@@ -68,263 +79,50 @@
    "fragment": "box-generation"
   }
  ],
- "status": {
-  "baseline": false,
-  "support": {}
- },
- "id": "display-contents",
- "groups": [
-  "css"
- ],
- "groupPaths": [
-  [
-   "CSS"
-  ]
- ],
  "mdnUrls": [
   {
+   "slug": "Web/CSS/display#contents",
    "title": "display",
    "anchor": "contents",
    "url": "https://developer.mozilla.org/docs/Web/CSS/display#contents"
   }
  ],
- "standardPositions": {
-  "mozilla": {
+ "standardPositions": [
+  {
+   "vendor": "mozilla",
    "url": "https://github.com/mozilla/standards-positions/issues/772",
    "position": "positive",
    "concerns": []
   },
-  "webkit": {
+  {
+   "vendor": "webkit",
    "url": "https://github.com/WebKit/standards-positions/issues/164",
    "position": "neutral",
    "concerns": [
     "accessibility"
    ]
   }
- },
+ ],
  "hasNegativeStandardPosition": false,
- "originTrials": [],
  "stateOfSurveys": [
   {
    "name": "State of CSS 2025",
-   "link": "https://2025.stateofcss.com/en-US/features/#reading_list",
+   "url": "https://2025.stateofcss.com/en-US/features/#reading_list",
    "question": "reading_list",
    "subQuestion": "reading_list",
    "path": "dataAPI.surveys.state_of_css.css2025.reading_list.reading_list.combined.allEditions.1.buckets.14.entity"
   },
   {
    "name": "State of CSS 2025",
-   "link": "https://2025.stateofcss.com/en-US/features/#all_features",
+   "url": "https://2025.stateofcss.com/en-US/features/#all_features",
    "question": "features",
    "subQuestion": "all_features",
    "path": "dataAPI.surveys.state_of_css.css2025.features.all_features.58.entity"
   }
  ],
- "useCounters": {},
+ "chromeUseCounters": {},
  "interop": [],
- "wpt": false,
- "bcdData": [
-  {
-   "key": "css.properties.display.contents",
-   "compat": {
-    "source_file": "css/properties/display.json",
-    "spec_url": "https://drafts.csswg.org/css-display/#valdef-display-contents",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "65"
-     },
-     "chrome_android": {
-      "version_added": "65"
-     },
-     "edge": {
-      "version_added": "79"
-     },
-     "firefox": {
-      "version_added": "37"
-     },
-     "firefox_android": {
-      "version_added": "37"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "5.0"
-     },
-     "opera": {
-      "version_added": "52"
-     },
-     "opera_android": {
-      "version_added": "47"
-     },
-     "safari": {
-      "version_added": "11.1"
-     },
-     "safari_ios": {
-      "version_added": "11.3"
-     },
-     "samsunginternet_android": {
-      "version_added": "9.0"
-     },
-     "webview_android": {
-      "version_added": "65"
-     },
-     "webview_ios": {
-      "version_added": "11.3"
-     }
-    },
-    "tags": [
-     "web-features:display-contents"
-    ]
-   }
-  },
-  {
-   "key": "css.properties.display.contents.contents_unusual",
-   "compat": {
-    "description": "Specific behavior of unusual elements when <code>display: contents</code> is applied to them",
-    "source_file": "css/properties/display.json",
-    "spec_url": "https://drafts.csswg.org/css-display/#unbox",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "65"
-     },
-     "chrome_android": {
-      "version_added": "65"
-     },
-     "edge": {
-      "version_added": "79"
-     },
-     "firefox": {
-      "version_added": "59"
-     },
-     "firefox_android": {
-      "version_added": "59"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "5.0"
-     },
-     "opera": {
-      "version_added": "52"
-     },
-     "opera_android": {
-      "version_added": "47"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "version_added": "9.0"
-     },
-     "webview_android": {
-      "version_added": "65"
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:display-contents"
-    ]
-   }
-  },
-  {
-   "key": "css.properties.display.contents.focusable_elements",
-   "compat": {
-    "description": "Elements with <code>display: contents</code> are focusable",
-    "source_file": "css/properties/display.json",
-    "status": {
-     "deprecated": false,
-     "experimental": true,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "impl_url": "https://crbug.com/40866683",
-      "version_added": false
-     },
-     "chrome_android": {
-      "impl_url": "https://crbug.com/40866683",
-      "version_added": false
-     },
-     "edge": {
-      "impl_url": "https://crbug.com/40866683",
-      "version_added": false
-     },
-     "firefox": {
-      "impl_url": [
-       "https://bugzil.la/1791648",
-       "https://bugzil.la/1553549"
-      ],
-      "version_added": false
-     },
-     "firefox_android": {
-      "impl_url": [
-       "https://bugzil.la/1791648",
-       "https://bugzil.la/1553549"
-      ],
-      "version_added": false
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "impl_url": "https://crbug.com/40866683",
-      "version_added": false
-     },
-     "opera": {
-      "impl_url": "https://crbug.com/40866683",
-      "version_added": false
-     },
-     "opera_android": {
-      "impl_url": "https://crbug.com/40866683",
-      "version_added": false
-     },
-     "safari": {
-      "impl_url": "https://webkit.org/b/255149",
-      "version_added": false
-     },
-     "safari_ios": {
-      "impl_url": "https://webkit.org/b/255149",
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "impl_url": "https://crbug.com/40866683",
-      "version_added": false
-     },
-     "webview_android": {
-      "impl_url": "https://crbug.com/40866683",
-      "version_added": false
-     },
-     "webview_ios": {
-      "impl_url": "https://webkit.org/b/255149",
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:display-contents"
-    ]
-   }
-  }
- ],
- "bcdTags": [
-  "css"
- ],
+ "wpt": null,
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null,
  "implUrls": {

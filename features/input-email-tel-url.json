@@ -16,6 +16,30 @@
  "kind": "feature",
  "name": "Email, telephone, and URL <input> types",
  "spec": [
+  "https://html.spec.whatwg.org/multipage/input.html#email-state-(type=email)",
+  "https://html.spec.whatwg.org/multipage/input.html#telephone-state-(type=tel)",
+  "https://html.spec.whatwg.org/multipage/input.html#url-state-(type=url)"
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2018-01-29",
+  "baseline_low_date": "2015-07-29",
+  "support": {
+   "chrome": "5",
+   "chrome_android": "18",
+   "edge": "12",
+   "firefox": "4",
+   "firefox_android": "4",
+   "safari": "5",
+   "safari_ios": "3"
+  }
+ },
+ "id": "input-email-tel-url",
+ "groups": [
+  "forms",
+  "html-elements"
+ ],
+ "specs": [
   {
    "url": "https://html.spec.whatwg.org/multipage/input.html#email-state-(type=email)",
    "seriesComposition": "full",
@@ -365,261 +389,32 @@
    "fragment": "url-state-(type=url)"
   }
  ],
- "status": {
-  "baseline": "high",
-  "baseline_high_date": "2018-01-29",
-  "baseline_low_date": "2015-07-29",
-  "support": {
-   "chrome": "5",
-   "chrome_android": "18",
-   "edge": "12",
-   "firefox": "4",
-   "firefox_android": "4",
-   "safari": "5",
-   "safari_ios": "3"
-  }
- },
- "id": "input-email-tel-url",
- "groups": [
-  "forms",
-  "html-elements"
- ],
- "groupPaths": [
-  [
-   "HTML",
-   "Forms"
-  ],
-  [
-   "HTML",
-   "HTML elements"
-  ]
- ],
  "mdnUrls": [
   {
+   "slug": "Web/HTML/Reference/Elements/input/email",
    "title": "<input type=\"email\">",
    "anchor": null,
    "url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input/email"
   },
   {
+   "slug": "Web/HTML/Reference/Elements/input/tel",
    "title": "<input type=\"tel\">",
    "anchor": null,
    "url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input/tel"
   },
   {
+   "slug": "Web/HTML/Reference/Elements/input/url",
    "title": "<input type=\"url\">",
    "anchor": null,
    "url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input/url"
   }
  ],
- "standardPositions": {
-  "mozilla": {},
-  "webkit": {}
- },
+ "standardPositions": [],
  "hasNegativeStandardPosition": false,
- "originTrials": [],
- "useCounters": {},
+ "stateOfSurveys": [],
+ "chromeUseCounters": {},
  "interop": [],
- "wpt": false,
- "bcdData": [
-  {
-   "key": "html.elements.input.type_email",
-   "compat": {
-    "description": "<code>type=\"email\"</code>",
-    "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input/email",
-    "source_file": "html/elements/input/email.json",
-    "spec_url": "https://html.spec.whatwg.org/multipage/input.html#email-state-(type=email)",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "5"
-     },
-     "chrome_android": {
-      "version_added": "18"
-     },
-     "edge": {
-      "version_added": "12"
-     },
-     "firefox": {
-      "version_added": "1"
-     },
-     "firefox_android": {
-      "version_added": "4"
-     },
-     "ie": {
-      "version_added": "10"
-     },
-     "oculus": {
-      "version_added": "5.0"
-     },
-     "opera": {
-      "version_added": "11"
-     },
-     "opera_android": {
-      "version_added": "11"
-     },
-     "safari": {
-      "version_added": "5"
-     },
-     "safari_ios": {
-      "notes": [
-       "Doesn't do validation, but instead offers a custom 'email' keyboard, which is designed to make entering email addresses easier.",
-       "The custom 'email' keyboard does not provide a comma key, so users cannot enter multiple email addresses.",
-       "Automatically applies a default style of <code>opacity: 0.4</code> to disable textual <code>&lt;input&gt;</code> elements, including those of type 'email'. Other major browsers don't currently share this particular default style."
-      ],
-      "version_added": "3"
-     },
-     "samsunginternet_android": {
-      "version_added": "1.0"
-     },
-     "webview_android": {
-      "version_added": "4.4"
-     },
-     "webview_ios": {
-      "notes": [
-       "Doesn't do validation, but instead offers a custom 'email' keyboard, which is designed to make entering email addresses easier.",
-       "The custom 'email' keyboard does not provide a comma key, so users cannot enter multiple email addresses.",
-       "Automatically applies a default style of <code>opacity: 0.4</code> to disable textual <code>&lt;input&gt;</code> elements, including those of type 'email'. Other major browsers don't currently share this particular default style."
-      ],
-      "version_added": "3"
-     }
-    },
-    "tags": [
-     "web-features:input-email-tel-url"
-    ]
-   }
-  },
-  {
-   "key": "html.elements.input.type_tel",
-   "compat": {
-    "description": "<code>type=\"tel\"</code>",
-    "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input/tel",
-    "source_file": "html/elements/input/tel.json",
-    "spec_url": "https://html.spec.whatwg.org/multipage/input.html#telephone-state-(type=tel)",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "notes": "The field type doesn't demonstrate any special behavior.",
-      "version_added": "3"
-     },
-     "chrome_android": {
-      "version_added": "18"
-     },
-     "edge": {
-      "version_added": "12"
-     },
-     "firefox": {
-      "version_added": "4"
-     },
-     "firefox_android": {
-      "version_added": "4"
-     },
-     "ie": {
-      "version_added": "10"
-     },
-     "oculus": {
-      "version_added": "5.0"
-     },
-     "opera": {
-      "version_added": "11"
-     },
-     "opera_android": {
-      "version_added": "11"
-     },
-     "safari": {
-      "notes": "The field type doesn't demonstrate any special behavior.",
-      "version_added": "4"
-     },
-     "safari_ios": {
-      "version_added": "3"
-     },
-     "samsunginternet_android": {
-      "version_added": "1.0"
-     },
-     "webview_android": {
-      "version_added": "4.4"
-     },
-     "webview_ios": {
-      "version_added": "3"
-     }
-    },
-    "tags": [
-     "web-features:input-email-tel-url"
-    ]
-   }
-  },
-  {
-   "key": "html.elements.input.type_url",
-   "compat": {
-    "description": "<code>type=\"url\"</code>",
-    "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input/url",
-    "source_file": "html/elements/input/url.json",
-    "spec_url": "https://html.spec.whatwg.org/multipage/input.html#url-state-(type=url)",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "1"
-     },
-     "chrome_android": {
-      "version_added": "18"
-     },
-     "edge": {
-      "version_added": "12"
-     },
-     "firefox": {
-      "version_added": "1"
-     },
-     "firefox_android": {
-      "version_added": "4"
-     },
-     "ie": {
-      "version_added": "10"
-     },
-     "oculus": {
-      "version_added": "5.0"
-     },
-     "opera": {
-      "version_added": "11"
-     },
-     "opera_android": {
-      "version_added": "14"
-     },
-     "safari": {
-      "version_added": "1"
-     },
-     "safari_ios": {
-      "version_added": "1"
-     },
-     "samsunginternet_android": {
-      "version_added": "1.0"
-     },
-     "webview_android": {
-      "version_added": "4.4"
-     },
-     "webview_ios": {
-      "version_added": "1"
-     }
-    },
-    "tags": [
-     "web-features:input-email-tel-url"
-    ]
-   }
-  }
- ],
- "bcdTags": [
-  "html"
- ],
+ "wpt": null,
  "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
  "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z",
  "implUrls": {

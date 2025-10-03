@@ -21,6 +21,27 @@
   "ecmascript-2020"
  ],
  "spec": [
+  "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-bigint-objects"
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2023-03-16",
+  "baseline_low_date": "2020-09-16",
+  "support": {
+   "chrome": "67",
+   "chrome_android": "67",
+   "edge": "79",
+   "firefox": "68",
+   "firefox_android": "68",
+   "safari": "14",
+   "safari_ios": "14"
+  }
+ },
+ "id": "bigint",
+ "groups": [
+  "javascript"
+ ],
+ "specs": [
   {
    "url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-bigint-objects",
    "seriesComposition": "full",
@@ -106,475 +127,27 @@
    "fragment": "sec-bigint-objects"
   }
  ],
- "status": {
-  "baseline": "high",
-  "baseline_high_date": "2023-03-16",
-  "baseline_low_date": "2020-09-16",
-  "support": {
-   "chrome": "67",
-   "chrome_android": "67",
-   "edge": "79",
-   "firefox": "68",
-   "firefox_android": "68",
-   "safari": "14",
-   "safari_ios": "14"
-  }
- },
- "id": "bigint",
- "groups": [
-  "javascript"
- ],
- "groupPaths": [
-  [
-   "JavaScript"
-  ]
- ],
  "mdnUrls": [
   {
+   "slug": "Web/JavaScript/Reference/Global_Objects/BigInt",
    "title": "BigInt",
    "anchor": null,
    "url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/BigInt"
   }
  ],
- "standardPositions": {
-  "mozilla": {
+ "standardPositions": [
+  {
+   "vendor": "mozilla",
    "url": "https://github.com/mozilla/standards-positions/issues/65",
    "position": "neutral",
    "concerns": []
-  },
-  "webkit": {}
- },
- "hasNegativeStandardPosition": false,
- "originTrials": [],
- "useCounters": {},
- "interop": [],
- "wpt": false,
- "bcdData": [
-  {
-   "key": "javascript.builtins.BigInt",
-   "compat": {
-    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/BigInt",
-    "source_file": "javascript/builtins/BigInt.json",
-    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-bigint-objects",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "bun": {
-      "version_added": "1.0.0"
-     },
-     "chrome": {
-      "version_added": "67"
-     },
-     "chrome_android": {
-      "version_added": "67"
-     },
-     "deno": {
-      "version_added": "1.0"
-     },
-     "edge": {
-      "version_added": "79"
-     },
-     "firefox": {
-      "version_added": "68"
-     },
-     "firefox_android": {
-      "version_added": "68"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "nodejs": {
-      "version_added": "10.4.0"
-     },
-     "oculus": {
-      "version_added": "6.0"
-     },
-     "opera": {
-      "version_added": "54"
-     },
-     "opera_android": {
-      "version_added": "48"
-     },
-     "safari": {
-      "version_added": "14"
-     },
-     "safari_ios": {
-      "version_added": "14"
-     },
-     "samsunginternet_android": {
-      "version_added": "9.0"
-     },
-     "webview_android": {
-      "version_added": "67"
-     },
-     "webview_ios": {
-      "version_added": "14"
-     }
-    },
-    "tags": [
-     "web-features:snapshot:ecmascript-2020",
-     "web-features:bigint"
-    ]
-   }
-  },
-  {
-   "key": "javascript.builtins.BigInt.BigInt",
-   "compat": {
-    "description": "<code>BigInt()</code> constructor",
-    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt",
-    "source_file": "javascript/builtins/BigInt.json",
-    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-bigint-constructor",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "bun": {
-      "version_added": "1.0.0"
-     },
-     "chrome": {
-      "version_added": "67"
-     },
-     "chrome_android": {
-      "version_added": "67"
-     },
-     "deno": {
-      "version_added": "1.0"
-     },
-     "edge": {
-      "version_added": "79"
-     },
-     "firefox": {
-      "version_added": "68"
-     },
-     "firefox_android": {
-      "version_added": "68"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "nodejs": {
-      "version_added": "10.4.0"
-     },
-     "oculus": {
-      "version_added": "6.0"
-     },
-     "opera": {
-      "version_added": "54"
-     },
-     "opera_android": {
-      "version_added": "48"
-     },
-     "safari": {
-      "version_added": "14"
-     },
-     "safari_ios": {
-      "version_added": "14"
-     },
-     "samsunginternet_android": {
-      "version_added": "9.0"
-     },
-     "webview_android": {
-      "version_added": "67"
-     },
-     "webview_ios": {
-      "version_added": "14"
-     }
-    },
-    "tags": [
-     "web-features:snapshot:ecmascript-2020",
-     "web-features:bigint"
-    ]
-   }
-  },
-  {
-   "key": "javascript.builtins.BigInt.asIntN",
-   "compat": {
-    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN",
-    "source_file": "javascript/builtins/BigInt.json",
-    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-bigint.asintn",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "bun": {
-      "version_added": "1.0.0"
-     },
-     "chrome": {
-      "version_added": "67"
-     },
-     "chrome_android": {
-      "version_added": "67"
-     },
-     "deno": {
-      "version_added": "1.0"
-     },
-     "edge": {
-      "version_added": "79"
-     },
-     "firefox": {
-      "version_added": "68"
-     },
-     "firefox_android": {
-      "version_added": "68"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "nodejs": {
-      "version_added": "10.4.0"
-     },
-     "oculus": {
-      "version_added": "6.0"
-     },
-     "opera": {
-      "version_added": "54"
-     },
-     "opera_android": {
-      "version_added": "48"
-     },
-     "safari": {
-      "version_added": "14"
-     },
-     "safari_ios": {
-      "version_added": "14"
-     },
-     "samsunginternet_android": {
-      "version_added": "9.0"
-     },
-     "webview_android": {
-      "version_added": "67"
-     },
-     "webview_ios": {
-      "version_added": "14"
-     }
-    },
-    "tags": [
-     "web-features:snapshot:ecmascript-2020",
-     "web-features:bigint"
-    ]
-   }
-  },
-  {
-   "key": "javascript.builtins.BigInt.asUintN",
-   "compat": {
-    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN",
-    "source_file": "javascript/builtins/BigInt.json",
-    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-bigint.asuintn",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "bun": {
-      "version_added": "1.0.0"
-     },
-     "chrome": {
-      "version_added": "67"
-     },
-     "chrome_android": {
-      "version_added": "67"
-     },
-     "deno": {
-      "version_added": "1.0"
-     },
-     "edge": {
-      "version_added": "79"
-     },
-     "firefox": {
-      "version_added": "68"
-     },
-     "firefox_android": {
-      "version_added": "68"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "nodejs": {
-      "version_added": "10.4.0"
-     },
-     "oculus": {
-      "version_added": "6.0"
-     },
-     "opera": {
-      "version_added": "54"
-     },
-     "opera_android": {
-      "version_added": "48"
-     },
-     "safari": {
-      "version_added": "14"
-     },
-     "safari_ios": {
-      "version_added": "14"
-     },
-     "samsunginternet_android": {
-      "version_added": "9.0"
-     },
-     "webview_android": {
-      "version_added": "67"
-     },
-     "webview_ios": {
-      "version_added": "14"
-     }
-    },
-    "tags": [
-     "web-features:snapshot:ecmascript-2020",
-     "web-features:bigint"
-    ]
-   }
-  },
-  {
-   "key": "javascript.builtins.BigInt.toString",
-   "compat": {
-    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString",
-    "source_file": "javascript/builtins/BigInt.json",
-    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-bigint.prototype.tostring",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "bun": {
-      "version_added": "1.0.0"
-     },
-     "chrome": {
-      "version_added": "67"
-     },
-     "chrome_android": {
-      "version_added": "67"
-     },
-     "deno": {
-      "version_added": "1.0"
-     },
-     "edge": {
-      "version_added": "79"
-     },
-     "firefox": {
-      "version_added": "68"
-     },
-     "firefox_android": {
-      "version_added": "68"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "nodejs": {
-      "version_added": "10.4.0"
-     },
-     "oculus": {
-      "version_added": "6.0"
-     },
-     "opera": {
-      "version_added": "54"
-     },
-     "opera_android": {
-      "version_added": "48"
-     },
-     "safari": {
-      "version_added": "14"
-     },
-     "safari_ios": {
-      "version_added": "14"
-     },
-     "samsunginternet_android": {
-      "version_added": "9.0"
-     },
-     "webview_android": {
-      "version_added": "67"
-     },
-     "webview_ios": {
-      "version_added": "14"
-     }
-    },
-    "tags": [
-     "web-features:snapshot:ecmascript-2020",
-     "web-features:bigint"
-    ]
-   }
-  },
-  {
-   "key": "javascript.builtins.BigInt.valueOf",
-   "compat": {
-    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/BigInt/valueOf",
-    "source_file": "javascript/builtins/BigInt.json",
-    "spec_url": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-bigint.prototype.valueof",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "bun": {
-      "version_added": "1.0.0"
-     },
-     "chrome": {
-      "version_added": "67"
-     },
-     "chrome_android": {
-      "version_added": "67"
-     },
-     "deno": {
-      "version_added": "1.0"
-     },
-     "edge": {
-      "version_added": "79"
-     },
-     "firefox": {
-      "version_added": "68"
-     },
-     "firefox_android": {
-      "version_added": "68"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "nodejs": {
-      "version_added": "10.4.0"
-     },
-     "oculus": {
-      "version_added": "6.0"
-     },
-     "opera": {
-      "version_added": "54"
-     },
-     "opera_android": {
-      "version_added": "48"
-     },
-     "safari": {
-      "version_added": "14"
-     },
-     "safari_ios": {
-      "version_added": "14"
-     },
-     "samsunginternet_android": {
-      "version_added": "9.0"
-     },
-     "webview_android": {
-      "version_added": "67"
-     },
-     "webview_ios": {
-      "version_added": "14"
-     }
-    },
-    "tags": [
-     "web-features:snapshot:ecmascript-2020",
-     "web-features:bigint"
-    ]
-   }
   }
  ],
- "bcdTags": [
-  "javascript"
- ],
+ "hasNegativeStandardPosition": false,
+ "stateOfSurveys": [],
+ "chromeUseCounters": {},
+ "interop": [],
+ "wpt": null,
  "baselineLowDateAsObject": "2020-09-16T00:00:00.000Z",
  "baselineHighDateAsObject": "2023-03-16T00:00:00.000Z",
  "implUrls": {

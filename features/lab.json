@@ -16,6 +16,26 @@
  "kind": "feature",
  "name": "Lab and LCH",
  "spec": [
+  "https://drafts.csswg.org/css-color-4/#cie-lab"
+ ],
+ "status": {
+  "baseline": "low",
+  "baseline_low_date": "2023-05-09",
+  "support": {
+   "chrome": "111",
+   "chrome_android": "111",
+   "edge": "111",
+   "firefox": "113",
+   "firefox_android": "113",
+   "safari": "15",
+   "safari_ios": "15"
+  }
+ },
+ "id": "lab",
+ "groups": [
+  "color-types"
+ ],
+ "specs": [
   {
    "url": "https://drafts.csswg.org/css-color-4/#cie-lab",
    "seriesComposition": "full",
@@ -70,307 +90,42 @@
    "fragment": "cie-lab"
   }
  ],
- "status": {
-  "baseline": "low",
-  "baseline_low_date": "2023-05-09",
-  "support": {
-   "chrome": "111",
-   "chrome_android": "111",
-   "edge": "111",
-   "firefox": "113",
-   "firefox_android": "113",
-   "safari": "15",
-   "safari_ios": "15"
-  }
- },
- "id": "lab",
- "groups": [
-  "color-types"
- ],
- "groupPaths": [
-  [
-   "CSS",
-   "Color types"
-  ]
- ],
  "mdnUrls": [
   {
+   "slug": "Web/CSS/color_value/lab",
    "title": "lab()",
    "anchor": null,
    "url": "https://developer.mozilla.org/docs/Web/CSS/color_value/lab"
   },
   {
+   "slug": "Web/CSS/color_value/lch",
    "title": "lch()",
    "anchor": null,
    "url": "https://developer.mozilla.org/docs/Web/CSS/color_value/lch"
   }
  ],
- "standardPositions": {
-  "mozilla": {},
-  "webkit": {}
- },
+ "standardPositions": [],
  "hasNegativeStandardPosition": false,
- "originTrials": [],
- "useCounters": {
-  "percentageOfPageLoad": 0.00417228,
-  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/171"
+ "stateOfSurveys": [],
+ "chromeUseCounters": {
+  "percentageOfPageLoad": 0.00382004,
+  "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/171"
  },
  "interop": [
   {
-   "year": "2022",
-   "label": "interop-2022-color"
+   "year": 2022,
+   "label": "interop-2022-color",
+   "url": "https://wpt.fyi/interop-2022?feature=interop-2022-color"
   },
   {
-   "year": "2023",
-   "label": "interop-2023-color"
+   "year": 2023,
+   "label": "interop-2023-color",
+   "url": "https://wpt.fyi/interop-2023?feature=interop-2023-color"
   }
  ],
- "wpt": true,
- "bcdData": [
-  {
-   "key": "css.types.color.lab",
-   "compat": {
-    "description": "<code>lab()</code> (Lab color model)",
-    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/color_value/lab",
-    "source_file": "css/types/color.json",
-    "spec_url": "https://drafts.csswg.org/css-color/#lab-colors",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "111"
-     },
-     "chrome_android": {
-      "version_added": "111"
-     },
-     "edge": {
-      "version_added": "111"
-     },
-     "firefox": {
-      "version_added": "113"
-     },
-     "firefox_android": {
-      "version_added": "113"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "97"
-     },
-     "opera_android": {
-      "version_added": "75"
-     },
-     "safari": {
-      "version_added": "15"
-     },
-     "safari_ios": {
-      "version_added": "15"
-     },
-     "samsunginternet_android": {
-      "version_added": "22.0"
-     },
-     "webview_android": {
-      "version_added": "111"
-     },
-     "webview_ios": {
-      "version_added": "15"
-     }
-    },
-    "tags": [
-     "web-features:lab"
-    ]
-   }
-  },
-  {
-   "key": "css.types.color.lab.mixed_type_parameters",
-   "compat": {
-    "description": "Mix <code>&lt;percentage&gt;</code> and <code>&lt;number&gt;</code> in parameters",
-    "source_file": "css/types/color.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "116"
-     },
-     "chrome_android": {
-      "version_added": "116"
-     },
-     "edge": {
-      "version_added": "116"
-     },
-     "firefox": {
-      "version_added": "113"
-     },
-     "firefox_android": {
-      "version_added": "113"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "102"
-     },
-     "opera_android": {
-      "version_added": "78"
-     },
-     "safari": {
-      "version_added": "16.2"
-     },
-     "safari_ios": {
-      "version_added": "16.2"
-     },
-     "samsunginternet_android": {
-      "version_added": "24.0"
-     },
-     "webview_android": {
-      "version_added": "116"
-     },
-     "webview_ios": {
-      "version_added": "16.2"
-     }
-    },
-    "tags": [
-     "web-features:lab"
-    ]
-   }
-  },
-  {
-   "key": "css.types.color.lch",
-   "compat": {
-    "description": "<code>lch()</code> (LCH color model)",
-    "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/color_value/lch",
-    "source_file": "css/types/color.json",
-    "spec_url": "https://drafts.csswg.org/css-color/#lab-colors",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "111"
-     },
-     "chrome_android": {
-      "version_added": "111"
-     },
-     "edge": {
-      "version_added": "111"
-     },
-     "firefox": {
-      "version_added": "113"
-     },
-     "firefox_android": {
-      "version_added": "113"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "97"
-     },
-     "opera_android": {
-      "version_added": "75"
-     },
-     "safari": {
-      "version_added": "15"
-     },
-     "safari_ios": {
-      "version_added": "15"
-     },
-     "samsunginternet_android": {
-      "version_added": "22.0"
-     },
-     "webview_android": {
-      "version_added": "111"
-     },
-     "webview_ios": {
-      "version_added": "15"
-     }
-    },
-    "tags": [
-     "web-features:lab"
-    ]
-   }
-  },
-  {
-   "key": "css.types.color.lch.mixed_type_parameters",
-   "compat": {
-    "description": "Mix <code>&lt;percentage&gt;</code> and <code>&lt;number&gt;</code> in parameters",
-    "source_file": "css/types/color.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "116"
-     },
-     "chrome_android": {
-      "version_added": "116"
-     },
-     "edge": {
-      "version_added": "116"
-     },
-     "firefox": {
-      "version_added": "113"
-     },
-     "firefox_android": {
-      "version_added": "113"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "102"
-     },
-     "opera_android": {
-      "version_added": "78"
-     },
-     "safari": {
-      "version_added": "16.2"
-     },
-     "safari_ios": {
-      "version_added": "16.2"
-     },
-     "samsunginternet_android": {
-      "version_added": "24.0"
-     },
-     "webview_android": {
-      "version_added": "116"
-     },
-     "webview_ios": {
-      "version_added": "16.2"
-     }
-    },
-    "tags": [
-     "web-features:lab"
-    ]
-   }
-  }
- ],
- "bcdTags": [
-  "css"
- ],
+ "wpt": {
+  "url": "https://wpt.fyi/results?q=feature:lab"
+ },
  "baselineLowDateAsObject": "2023-05-09T00:00:00.000Z",
  "baselineHighDateAsObject": null,
  "expectedBaselineHighDate": "2025-11-09",

@@ -9,6 +9,24 @@
  "kind": "feature",
  "name": "Unsanitized HTML parsing methods",
  "spec": [
+  "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#unsafe-html-parsing-methods"
+ ],
+ "status": {
+  "baseline": "low",
+  "baseline_low_date": "2025-09-15",
+  "support": {
+   "chrome": "124",
+   "chrome_android": "124",
+   "edge": "124",
+   "firefox": "128",
+   "firefox_android": "128",
+   "safari": "26",
+   "safari_ios": "26"
+  }
+ },
+ "id": "parse-html-unsafe",
+ "groups": [],
+ "specs": [
   {
    "url": "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#unsafe-html-parsing-methods",
    "seriesComposition": "full",
@@ -126,349 +144,54 @@
    "fragment": "unsafe-html-parsing-methods"
   }
  ],
- "status": {
-  "baseline": "low",
-  "baseline_low_date": "2025-09-15",
-  "support": {
-   "chrome": "124",
-   "chrome_android": "124",
-   "edge": "124",
-   "firefox": "128",
-   "firefox_android": "128",
-   "safari": "26",
-   "safari_ios": "26"
-  }
- },
- "id": "parse-html-unsafe",
- "groups": [],
- "groupPaths": [],
  "mdnUrls": [
   {
+   "slug": "Web/API/Document/parseHTMLUnsafe_static",
    "title": "Document: parseHTMLUnsafe() static method",
    "anchor": null,
    "url": "https://developer.mozilla.org/docs/Web/API/Document/parseHTMLUnsafe_static"
   }
  ],
- "standardPositions": {
-  "mozilla": {},
-  "webkit": {}
- },
+ "standardPositions": [],
  "hasNegativeStandardPosition": false,
- "originTrials": [],
  "stateOfSurveys": [
   {
+   "name": "State of HTML 2025",
+   "url": "https://2025.stateofhtml.com/en-US/features/#reading_list",
+   "question": "reading_list",
+   "subQuestion": "reading_list",
+   "path": "dataAPI.surveys.state_of_html.html2025.reading_list.reading_list.combined.allEditions.0.buckets.9.entity"
+  },
+  {
    "name": "State of HTML 2024",
-   "link": "https://2024.stateofhtml.com/en-US/features/#reading_list",
+   "url": "https://2024.stateofhtml.com/en-US/features/#reading_list",
    "question": "reading_list",
    "subQuestion": "reading_list",
    "path": "dataAPI.surveys.state_of_html.html2024.reading_list.reading_list.combined.allEditions.1.buckets.9.entity"
   },
   {
    "name": "State of HTML 2024",
-   "link": "https://2024.stateofhtml.com/en-US/features/#all_features",
+   "url": "https://2024.stateofhtml.com/en-US/features/#all_features",
    "question": "features",
    "subQuestion": "all_features",
    "path": "dataAPI.surveys.state_of_html.html2024.features.all_features.24.entity"
   },
   {
    "name": "State of HTML 2024",
-   "link": "https://2024.stateofhtml.com/en-US/content/#content_features",
+   "url": "https://2024.stateofhtml.com/en-US/content/#content_features",
    "question": "content",
    "subQuestion": "content_features",
    "path": "dataAPI.surveys.state_of_html.html2024.content.content_features.9.entity"
   }
  ],
- "useCounters": {
-  "percentageOfPageLoad": 0.00014596,
-  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/122"
+ "chromeUseCounters": {
+  "percentageOfPageLoad": 0.00014949,
+  "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/122"
  },
  "interop": [],
- "wpt": true,
- "bcdData": [
-  {
-   "key": "api.Document.parseHTMLUnsafe_static",
-   "compat": {
-    "description": "<code>parseHTMLUnsafe()</code> static method",
-    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/parseHTMLUnsafe_static",
-    "source_file": "api/Document.json",
-    "spec_url": "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsehtmlunsafe",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "124"
-     },
-     "chrome_android": {
-      "version_added": "124"
-     },
-     "edge": {
-      "version_added": "124"
-     },
-     "firefox": [
-      {
-       "version_added": "128"
-      },
-      {
-       "notes": "Throws error <code>NS_ERROR_UNEXPECTED</code> (<a href=\"https://bugzil.la/1887817\">bug 1887817</a>.)",
-       "partial_implementation": true,
-       "version_added": "123",
-       "version_last": "126",
-       "version_removed": "127"
-      }
-     ],
-     "firefox_android": [
-      {
-       "version_added": "128"
-      },
-      {
-       "notes": "Throws error <code>NS_ERROR_UNEXPECTED</code> (<a href=\"https://bugzil.la/1887817\">bug 1887817</a>.)",
-       "partial_implementation": true,
-       "version_added": "123",
-       "version_last": "126",
-       "version_removed": "127"
-      }
-     ],
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "110"
-     },
-     "opera_android": {
-      "version_added": "82"
-     },
-     "safari": [
-      {
-       "version_added": "26"
-      },
-      {
-       "notes": "If there are custom elements in a declarative shadow root in the parsed HTML, then the elements' constructors and <code>connectedCallback()</code> methods are not called (<a href=\"https://webkit.org/b/296420\">bug 296420</a>).",
-       "partial_implementation": true,
-       "version_added": "17.4",
-       "version_last": "18.6",
-       "version_removed": "26"
-      }
-     ],
-     "safari_ios": [
-      {
-       "version_added": "26"
-      },
-      {
-       "notes": "If there are custom elements in a declarative shadow root in the parsed HTML, then the elements' constructors and <code>connectedCallback()</code> methods are not called (<a href=\"https://webkit.org/b/296420\">bug 296420</a>).",
-       "partial_implementation": true,
-       "version_added": "17.4",
-       "version_last": "18.6",
-       "version_removed": "26"
-      }
-     ],
-     "samsunginternet_android": {
-      "version_added": "27.0"
-     },
-     "webview_android": {
-      "version_added": "124"
-     },
-     "webview_ios": [
-      {
-       "version_added": "26"
-      },
-      {
-       "notes": "If there are custom elements in a declarative shadow root in the parsed HTML, then the elements' constructors and <code>connectedCallback()</code> methods are not called (<a href=\"https://webkit.org/b/296420\">bug 296420</a>).",
-       "partial_implementation": true,
-       "version_added": "17.4",
-       "version_last": "18.6",
-       "version_removed": "26"
-      }
-     ]
-    },
-    "tags": [
-     "web-features:parse-html-unsafe"
-    ]
-   }
-  },
-  {
-   "key": "api.Element.setHTMLUnsafe",
-   "compat": {
-    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/setHTMLUnsafe",
-    "source_file": "api/Element.json",
-    "spec_url": "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-element-sethtmlunsafe",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "124"
-     },
-     "chrome_android": {
-      "version_added": "124"
-     },
-     "edge": {
-      "version_added": "124"
-     },
-     "firefox": {
-      "version_added": "123"
-     },
-     "firefox_android": {
-      "version_added": "123"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "110"
-     },
-     "opera_android": {
-      "version_added": "82"
-     },
-     "safari": [
-      {
-       "version_added": "26"
-      },
-      {
-       "notes": "If there are custom elements in a declarative shadow root in the parsed HTML, then the elements' constructors and <code>connectedCallback()</code> methods are not called (<a href=\"https://webkit.org/b/296420\">bug 296420</a>).",
-       "partial_implementation": true,
-       "version_added": "17.4",
-       "version_last": "18.6",
-       "version_removed": "26"
-      }
-     ],
-     "safari_ios": [
-      {
-       "version_added": "26"
-      },
-      {
-       "notes": "If there are custom elements in a declarative shadow root in the parsed HTML, then the elements' constructors and <code>connectedCallback()</code> methods are not called (<a href=\"https://webkit.org/b/296420\">bug 296420</a>).",
-       "partial_implementation": true,
-       "version_added": "17.4",
-       "version_last": "18.6",
-       "version_removed": "26"
-      }
-     ],
-     "samsunginternet_android": {
-      "version_added": "27.0"
-     },
-     "webview_android": {
-      "version_added": "124"
-     },
-     "webview_ios": [
-      {
-       "version_added": "26"
-      },
-      {
-       "notes": "If there are custom elements in a declarative shadow root in the parsed HTML, then the elements' constructors and <code>connectedCallback()</code> methods are not called (<a href=\"https://webkit.org/b/296420\">bug 296420</a>).",
-       "partial_implementation": true,
-       "version_added": "17.4",
-       "version_last": "18.6",
-       "version_removed": "26"
-      }
-     ]
-    },
-    "tags": [
-     "web-features:parse-html-unsafe"
-    ]
-   }
-  },
-  {
-   "key": "api.ShadowRoot.setHTMLUnsafe",
-   "compat": {
-    "mdn_url": "https://developer.mozilla.org/docs/Web/API/ShadowRoot/setHTMLUnsafe",
-    "source_file": "api/ShadowRoot.json",
-    "spec_url": "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-shadowroot-sethtmlunsafe",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "124"
-     },
-     "chrome_android": {
-      "version_added": "124"
-     },
-     "edge": {
-      "version_added": "124"
-     },
-     "firefox": {
-      "version_added": "123"
-     },
-     "firefox_android": {
-      "version_added": "123"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "110"
-     },
-     "opera_android": {
-      "version_added": "82"
-     },
-     "safari": [
-      {
-       "version_added": "26"
-      },
-      {
-       "notes": "If there are custom elements in a declarative shadow root in the parsed HTML, then the elements' constructors and <code>connectedCallback()</code> methods are not called (<a href=\"https://webkit.org/b/296420\">bug 296420</a>).",
-       "partial_implementation": true,
-       "version_added": "17.4",
-       "version_last": "18.6",
-       "version_removed": "26"
-      }
-     ],
-     "safari_ios": [
-      {
-       "version_added": "26"
-      },
-      {
-       "notes": "If there are custom elements in a declarative shadow root in the parsed HTML, then the elements' constructors and <code>connectedCallback()</code> methods are not called (<a href=\"https://webkit.org/b/296420\">bug 296420</a>).",
-       "partial_implementation": true,
-       "version_added": "17.4",
-       "version_last": "18.6",
-       "version_removed": "26"
-      }
-     ],
-     "samsunginternet_android": {
-      "version_added": "27.0"
-     },
-     "webview_android": {
-      "version_added": "124"
-     },
-     "webview_ios": [
-      {
-       "version_added": "26"
-      },
-      {
-       "notes": "If there are custom elements in a declarative shadow root in the parsed HTML, then the elements' constructors and <code>connectedCallback()</code> methods are not called (<a href=\"https://webkit.org/b/296420\">bug 296420</a>).",
-       "partial_implementation": true,
-       "version_added": "17.4",
-       "version_last": "18.6",
-       "version_removed": "26"
-      }
-     ]
-    },
-    "tags": [
-     "web-features:parse-html-unsafe"
-    ]
-   }
-  }
- ],
- "bcdTags": [
-  "api"
- ],
+ "wpt": {
+  "url": "https://wpt.fyi/results?q=feature:parse-html-unsafe"
+ },
  "baselineLowDateAsObject": "2025-09-15T00:00:00.000Z",
  "baselineHighDateAsObject": null,
  "expectedBaselineHighDate": "2028-03-15",

@@ -14,6 +14,27 @@
  "kind": "feature",
  "name": "JavaScript modules in workers",
  "spec": [
+  "https://html.spec.whatwg.org/multipage/workers.html#dom-worker-dev"
+ ],
+ "status": {
+  "baseline": "low",
+  "baseline_low_date": "2023-06-06",
+  "support": {
+   "chrome": "80",
+   "chrome_android": "80",
+   "edge": "80",
+   "firefox": "114",
+   "firefox_android": "114",
+   "safari": "15",
+   "safari_ios": "15"
+  }
+ },
+ "id": "js-modules-workers",
+ "groups": [
+  "js-modules",
+  "workers"
+ ],
+ "specs": [
   {
    "url": "https://html.spec.whatwg.org/multipage/workers.html#dom-worker-dev",
    "seriesComposition": "full",
@@ -131,350 +152,31 @@
    "fragment": "dom-worker-dev"
   }
  ],
- "status": {
-  "baseline": "low",
-  "baseline_low_date": "2023-06-06",
-  "support": {
-   "chrome": "80",
-   "chrome_android": "80",
-   "edge": "80",
-   "firefox": "114",
-   "firefox_android": "114",
-   "safari": "15",
-   "safari_ios": "15"
-  }
- },
- "id": "js-modules-workers",
- "groups": [
-  "js-modules",
-  "workers"
- ],
- "groupPaths": [
-  [
-   "JavaScript modules"
-  ],
-  [
-   "Workers"
-  ]
- ],
  "mdnUrls": [
   {
+   "slug": "Web/API/Worker/Worker#type",
    "title": "Worker: Worker() constructor",
    "anchor": "type",
    "url": "https://developer.mozilla.org/docs/Web/API/Worker/Worker#type"
   }
  ],
- "standardPositions": {
-  "mozilla": {},
-  "webkit": {}
- },
+ "standardPositions": [],
  "hasNegativeStandardPosition": false,
- "originTrials": [],
- "useCounters": {
-  "percentageOfPageLoad": 0.00861873,
-  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/110"
+ "stateOfSurveys": [],
+ "chromeUseCounters": {
+  "percentageOfPageLoad": 0.00843901,
+  "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/110"
  },
  "interop": [
   {
-   "year": "2023",
-   "label": "interop-2023-modules"
+   "year": 2023,
+   "label": "interop-2023-modules",
+   "url": "https://wpt.fyi/interop-2023?feature=interop-2023-modules"
   }
  ],
- "wpt": true,
- "bcdData": [
-  {
-   "key": "api.Worker.Worker.ecmascript_modules",
-   "compat": {
-    "description": "Support for ECMAScript modules",
-    "source_file": "api/Worker.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "80"
-     },
-     "chrome_android": {
-      "version_added": "80"
-     },
-     "deno": {
-      "version_added": "1.0"
-     },
-     "edge": {
-      "version_added": "80"
-     },
-     "firefox": {
-      "version_added": "114"
-     },
-     "firefox_android": {
-      "version_added": "114"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "nodejs": {
-      "notes": "ECMAScript modules are enabled for files ending with <code>.mjs</code> and for files ending with <code>.js</code> when the nearest parent <code>package.json</code> file contains a top-level field <code>\"type\"</code> with a value of <code>\"module\"</code>.",
-      "partial_implementation": true,
-      "version_added": "12.17.0"
-     },
-     "oculus": {
-      "version_added": "9.0"
-     },
-     "opera": {
-      "version_added": "67"
-     },
-     "opera_android": {
-      "version_added": "57"
-     },
-     "safari": {
-      "notes": [
-       "Nested workers support was introduced in Safari 15.5.",
-       "Script loading in nested workers was introduced in Safari 16.4."
-      ],
-      "version_added": "15"
-     },
-     "safari_ios": {
-      "notes": [
-       "Nested workers support was introduced in Safari on iOS 15.5.",
-       "Script loading in nested workers was introduced in Safari on iOS 16.4."
-      ],
-      "version_added": "15"
-     },
-     "samsunginternet_android": {
-      "version_added": "13.0"
-     },
-     "webview_android": {
-      "version_added": "80"
-     },
-     "webview_ios": {
-      "notes": [
-       "Nested workers support was introduced in WebView on iOS 15.5.",
-       "Script loading in nested workers was introduced in WebView on iOS 16.4."
-      ],
-      "version_added": "15"
-     }
-    },
-    "tags": [
-     "web-features:js-modules-workers"
-    ]
-   }
-  },
-  {
-   "key": "api.Worker.Worker.options_type_parameter",
-   "compat": {
-    "description": "<code>options.type</code> parameter",
-    "source_file": "api/Worker.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "80"
-     },
-     "chrome_android": {
-      "version_added": "80"
-     },
-     "deno": {
-      "notes": "Only supports <code>module</code>",
-      "version_added": "1.0"
-     },
-     "edge": {
-      "version_added": "80"
-     },
-     "firefox": {
-      "version_added": "114"
-     },
-     "firefox_android": {
-      "version_added": "114"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "nodejs": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "9.0"
-     },
-     "opera": {
-      "version_added": "67"
-     },
-     "opera_android": {
-      "version_added": "57"
-     },
-     "safari": {
-      "version_added": "15"
-     },
-     "safari_ios": {
-      "version_added": "15"
-     },
-     "samsunginternet_android": {
-      "version_added": "13.0"
-     },
-     "webview_android": {
-      "version_added": "80"
-     },
-     "webview_ios": {
-      "version_added": "15"
-     }
-    },
-    "tags": [
-     "web-features:js-modules-workers"
-    ]
-   }
-  },
-  {
-   "key": "javascript.operators.import.worker_support",
-   "compat": {
-    "description": "Available in workers",
-    "source_file": "javascript/operators/import.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "bun": {
-      "version_added": "1.0.0"
-     },
-     "chrome": {
-      "version_added": "80"
-     },
-     "chrome_android": {
-      "version_added": "80"
-     },
-     "deno": {
-      "version_added": "1.0"
-     },
-     "edge": {
-      "version_added": "80"
-     },
-     "firefox": {
-      "version_added": "114"
-     },
-     "firefox_android": {
-      "version_added": "114"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "nodejs": [
-      {
-       "version_added": "13.2.0"
-      },
-      {
-       "version_added": "12.17.0",
-       "version_last": "12.19.0",
-       "version_removed": "13.0.0"
-      }
-     ],
-     "oculus": {
-      "version_added": "9.0"
-     },
-     "opera": {
-      "version_added": "67"
-     },
-     "opera_android": {
-      "version_added": "57"
-     },
-     "safari": {
-      "version_added": "15"
-     },
-     "safari_ios": {
-      "version_added": "15"
-     },
-     "samsunginternet_android": {
-      "version_added": "13.0"
-     },
-     "webview_android": {
-      "version_added": "80"
-     },
-     "webview_ios": {
-      "version_added": "15"
-     }
-    },
-    "tags": [
-     "web-features:js-modules-workers"
-    ]
-   }
-  },
-  {
-   "key": "javascript.statements.import.worker_support",
-   "compat": {
-    "description": "Available in workers",
-    "source_file": "javascript/statements.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "bun": {
-      "version_added": "1.0.0"
-     },
-     "chrome": {
-      "version_added": "80"
-     },
-     "chrome_android": {
-      "version_added": "80"
-     },
-     "deno": {
-      "version_added": "1.0"
-     },
-     "edge": {
-      "version_added": "80"
-     },
-     "firefox": {
-      "version_added": "114"
-     },
-     "firefox_android": {
-      "version_added": "114"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "nodejs": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "9.0"
-     },
-     "opera": {
-      "version_added": "67"
-     },
-     "opera_android": {
-      "version_added": "57"
-     },
-     "safari": {
-      "version_added": "15"
-     },
-     "safari_ios": {
-      "version_added": "15"
-     },
-     "samsunginternet_android": {
-      "version_added": "13.0"
-     },
-     "webview_android": {
-      "version_added": "80"
-     },
-     "webview_ios": {
-      "version_added": "15"
-     }
-    },
-    "tags": [
-     "web-features:js-modules-workers"
-    ]
-   }
-  }
- ],
- "bcdTags": [
-  "api",
-  "javascript"
- ],
+ "wpt": {
+  "url": "https://wpt.fyi/results?q=feature:js-modules-workers"
+ },
  "baselineLowDateAsObject": "2023-06-06T00:00:00.000Z",
  "baselineHighDateAsObject": null,
  "expectedBaselineHighDate": "2025-12-06",

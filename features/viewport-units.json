@@ -16,6 +16,27 @@
  "kind": "feature",
  "name": "Viewport units",
  "spec": [
+  "https://drafts.csswg.org/css-values-4/#viewport-relative-lengths"
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2020-04-17",
+  "baseline_low_date": "2017-10-17",
+  "support": {
+   "chrome": "26",
+   "chrome_android": "26",
+   "edge": "16",
+   "firefox": "19",
+   "firefox_android": "19",
+   "safari": "7",
+   "safari_ios": "7"
+  }
+ },
+ "id": "viewport-units",
+ "groups": [
+  "units"
+ ],
+ "specs": [
   {
    "url": "https://drafts.csswg.org/css-values-4/#viewport-relative-lengths",
    "seriesComposition": "full",
@@ -70,316 +91,35 @@
    "fragment": "viewport-relative-lengths"
   }
  ],
- "status": {
-  "baseline": "high",
-  "baseline_high_date": "2020-04-17",
-  "baseline_low_date": "2017-10-17",
-  "support": {
-   "chrome": "26",
-   "chrome_android": "26",
-   "edge": "16",
-   "firefox": "19",
-   "firefox_android": "19",
-   "safari": "7",
-   "safari_ios": "7"
-  }
- },
- "id": "viewport-units",
- "groups": [
-  "units"
- ],
- "groupPaths": [
-  [
-   "CSS",
-   "Units"
-  ]
- ],
  "mdnUrls": [
   {
+   "slug": "Web/CSS/length#relative_length_units_based_on_viewport",
    "title": "<length>",
    "anchor": "relative_length_units_based_on_viewport",
    "url": "https://developer.mozilla.org/docs/Web/CSS/length#relative_length_units_based_on_viewport"
   }
  ],
- "standardPositions": {
-  "mozilla": {
+ "standardPositions": [
+  {
+   "vendor": "mozilla",
    "url": "https://github.com/mozilla/standards-positions/issues/605",
    "position": "",
    "concerns": []
-  },
-  "webkit": {}
- },
+  }
+ ],
  "hasNegativeStandardPosition": false,
- "originTrials": [],
- "useCounters": {},
+ "stateOfSurveys": [],
+ "chromeUseCounters": {},
  "interop": [
   {
-   "year": "2022",
-   "label": "interop-2022-viewport"
+   "year": 2022,
+   "label": "interop-2022-viewport",
+   "url": "https://wpt.fyi/interop-2022?feature=interop-2022-viewport"
   }
  ],
- "wpt": false,
- "bcdData": [
-  {
-   "key": "css.types.length.vh",
-   "compat": {
-    "description": "<code>vh</code> unit",
-    "source_file": "css/types/length.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "20"
-     },
-     "chrome_android": {
-      "version_added": "25"
-     },
-     "edge": {
-      "version_added": "12"
-     },
-     "firefox": {
-      "notes": "Starting with version 21, viewport-percentage lengths are invalid in <code>@page</code>.",
-      "version_added": "19"
-     },
-     "firefox_android": {
-      "notes": "Starting with version 21, viewport-percentage lengths are invalid in <code>@page</code>.",
-      "version_added": "19"
-     },
-     "ie": {
-      "version_added": "9"
-     },
-     "oculus": {
-      "version_added": "5.0"
-     },
-     "opera": {
-      "version_added": "20"
-     },
-     "opera_android": {
-      "version_added": "14"
-     },
-     "safari": {
-      "version_added": "6"
-     },
-     "safari_ios": {
-      "version_added": "6"
-     },
-     "samsunginternet_android": {
-      "version_added": "1.5"
-     },
-     "webview_android": {
-      "version_added": "4.4"
-     },
-     "webview_ios": {
-      "version_added": "6"
-     }
-    },
-    "tags": [
-     "web-features:viewport-units"
-    ]
-   }
-  },
-  {
-   "key": "css.types.length.vmax",
-   "compat": {
-    "description": "<code>vmax</code> unit",
-    "source_file": "css/types/length.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "26"
-     },
-     "chrome_android": {
-      "version_added": "26"
-     },
-     "edge": {
-      "version_added": "16"
-     },
-     "firefox": {
-      "notes": "Starting with version 21, viewport-percentage lengths are invalid in <code>@page</code>.",
-      "version_added": "19"
-     },
-     "firefox_android": {
-      "notes": "Starting with version 21, viewport-percentage lengths are invalid in <code>@page</code>.",
-      "version_added": "19"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "5.0"
-     },
-     "opera": {
-      "version_added": "15"
-     },
-     "opera_android": {
-      "version_added": "14"
-     },
-     "safari": {
-      "version_added": "7"
-     },
-     "safari_ios": {
-      "version_added": "7"
-     },
-     "samsunginternet_android": {
-      "version_added": "1.5"
-     },
-     "webview_android": {
-      "version_added": "1.5"
-     },
-     "webview_ios": {
-      "version_added": "7"
-     }
-    },
-    "tags": [
-     "web-features:viewport-units"
-    ]
-   }
-  },
-  {
-   "key": "css.types.length.vmin",
-   "compat": {
-    "description": "<code>vmin</code> unit",
-    "source_file": "css/types/length.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "26"
-     },
-     "chrome_android": {
-      "version_added": "26"
-     },
-     "edge": [
-      {
-       "version_added": "12"
-      },
-      {
-       "alternative_name": "vm",
-       "version_added": "12"
-      }
-     ],
-     "firefox": {
-      "notes": "Starting with version 21, viewport-percentage lengths are invalid in <code>@page</code>.",
-      "version_added": "19"
-     },
-     "firefox_android": {
-      "notes": "Starting with version 21, viewport-percentage lengths are invalid in <code>@page</code>.",
-      "version_added": "19"
-     },
-     "ie": [
-      {
-       "version_added": "10"
-      },
-      {
-       "alternative_name": "vm",
-       "version_added": "9"
-      }
-     ],
-     "oculus": {
-      "version_added": "5.0"
-     },
-     "opera": {
-      "version_added": "15"
-     },
-     "opera_android": {
-      "version_added": "14"
-     },
-     "safari": {
-      "version_added": "7"
-     },
-     "safari_ios": {
-      "version_added": "7"
-     },
-     "samsunginternet_android": {
-      "version_added": "1.5"
-     },
-     "webview_android": {
-      "version_added": "4.4"
-     },
-     "webview_ios": {
-      "version_added": "7"
-     }
-    },
-    "tags": [
-     "web-features:viewport-units"
-    ]
-   }
-  },
-  {
-   "key": "css.types.length.vw",
-   "compat": {
-    "description": "<code>vw</code> unit",
-    "source_file": "css/types/length.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "20"
-     },
-     "chrome_android": {
-      "version_added": "25"
-     },
-     "edge": {
-      "version_added": "12"
-     },
-     "firefox": {
-      "notes": "Starting with version 21, viewport-percentage lengths are invalid in <code>@page</code>.",
-      "version_added": "19"
-     },
-     "firefox_android": {
-      "notes": "Starting with version 21, viewport-percentage lengths are invalid in <code>@page</code>.",
-      "version_added": "19"
-     },
-     "ie": {
-      "version_added": "9"
-     },
-     "oculus": {
-      "version_added": "5.0"
-     },
-     "opera": {
-      "version_added": "20"
-     },
-     "opera_android": {
-      "version_added": "14"
-     },
-     "safari": {
-      "version_added": "6"
-     },
-     "safari_ios": {
-      "version_added": "6"
-     },
-     "samsunginternet_android": {
-      "version_added": "1.5"
-     },
-     "webview_android": {
-      "version_added": "4.4"
-     },
-     "webview_ios": {
-      "version_added": "6"
-     }
-    },
-    "tags": [
-     "web-features:viewport-units"
-    ]
-   }
-  }
- ],
- "bcdTags": [
-  "css"
- ],
+ "wpt": {
+  "url": "https://wpt.fyi/results?q=feature:viewport-units"
+ },
  "baselineLowDateAsObject": "2017-10-17T00:00:00.000Z",
  "baselineHighDateAsObject": "2020-04-17T00:00:00.000Z",
  "implUrls": {

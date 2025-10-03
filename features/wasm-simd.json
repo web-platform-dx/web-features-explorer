@@ -13,6 +13,27 @@
  "kind": "feature",
  "name": "Fixed-width SIMD (WebAssembly)",
  "spec": [
+  "https://webassembly.github.io/spec/core/bikeshed/#vector-instructions"
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2025-09-27",
+  "baseline_low_date": "2023-03-27",
+  "support": {
+   "chrome": "91",
+   "chrome_android": "91",
+   "edge": "91",
+   "firefox": "89",
+   "firefox_android": "89",
+   "safari": "16.4",
+   "safari_ios": "16.4"
+  }
+ },
+ "id": "wasm-simd",
+ "groups": [
+  "webassembly"
+ ],
+ "specs": [
   {
    "url": "https://webassembly.github.io/spec/core/bikeshed/#vector-instructions",
    "seriesComposition": "full",
@@ -73,110 +94,25 @@
    "fragment": "vector-instructions"
   }
  ],
- "status": {
-  "baseline": "high",
-  "baseline_high_date": "2025-09-27",
-  "baseline_low_date": "2023-03-27",
-  "support": {
-   "chrome": "91",
-   "chrome_android": "91",
-   "edge": "91",
-   "firefox": "89",
-   "firefox_android": "89",
-   "safari": "16.4",
-   "safari_ios": "16.4"
-  }
- },
- "id": "wasm-simd",
- "groups": [
-  "webassembly"
- ],
- "groupPaths": [
-  [
-   "WebAssembly"
-  ]
- ],
  "mdnUrls": [],
- "standardPositions": {
-  "mozilla": {
+ "standardPositions": [
+  {
+   "vendor": "mozilla",
    "url": "https://github.com/mozilla/standards-positions/issues/491",
    "position": "positive",
    "concerns": []
-  },
-  "webkit": {}
- },
- "hasNegativeStandardPosition": false,
- "originTrials": [],
- "useCounters": {
-  "percentageOfPageLoad": 0.00214783,
-  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/347"
- },
- "interop": [],
- "wpt": true,
- "bcdData": [
-  {
-   "key": "webassembly.fixed-width-SIMD",
-   "compat": {
-    "source_file": "webassembly/fixed-width-SIMD.json",
-    "spec_url": "https://github.com/WebAssembly/spec/blob/main/proposals/simd/SIMD.md",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "91"
-     },
-     "chrome_android": {
-      "version_added": "91"
-     },
-     "edge": {
-      "version_added": "91"
-     },
-     "firefox": {
-      "version_added": "89"
-     },
-     "firefox_android": {
-      "version_added": "89"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "16.0"
-     },
-     "opera": {
-      "version_added": "77"
-     },
-     "opera_android": {
-      "version_added": "64"
-     },
-     "safari": {
-      "version_added": "16.4"
-     },
-     "safari_ios": {
-      "version_added": "16.4"
-     },
-     "samsunginternet_android": {
-      "version_added": "16.0"
-     },
-     "webview_android": {
-      "version_added": "91"
-     },
-     "webview_ios": {
-      "version_added": "16.4"
-     }
-    },
-    "tags": [
-     "web-features:wasm-simd"
-    ]
-   }
   }
  ],
- "bcdTags": [
-  "webassembly"
- ],
+ "hasNegativeStandardPosition": false,
+ "stateOfSurveys": [],
+ "chromeUseCounters": {
+  "percentageOfPageLoad": 0.00213897,
+  "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/347"
+ },
+ "interop": [],
+ "wpt": {
+  "url": "https://wpt.fyi/results?q=feature:wasm-simd"
+ },
  "baselineLowDateAsObject": "2023-03-27T00:00:00.000Z",
  "baselineHighDateAsObject": "2025-09-27T00:00:00.000Z",
  "implUrls": {

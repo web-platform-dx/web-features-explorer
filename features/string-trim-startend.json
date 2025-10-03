@@ -11,6 +11,27 @@
  "kind": "feature",
  "name": "String trimStart() and trimEnd()",
  "spec": [
+  "https://tc39.es/ecma262/multipage/text-processing.html#sec-string-objects"
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2022-07-15",
+  "baseline_low_date": "2020-01-15",
+  "support": {
+   "chrome": "66",
+   "chrome_android": "66",
+   "edge": "79",
+   "firefox": "61",
+   "firefox_android": "61",
+   "safari": "12",
+   "safari_ios": "12"
+  }
+ },
+ "id": "string-trim-startend",
+ "groups": [
+  "string"
+ ],
+ "specs": [
   {
    "url": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string-objects",
    "seriesComposition": "full",
@@ -96,341 +117,26 @@
    "fragment": "sec-string-objects"
   }
  ],
- "status": {
-  "baseline": "high",
-  "baseline_high_date": "2022-07-15",
-  "baseline_low_date": "2020-01-15",
-  "support": {
-   "chrome": "66",
-   "chrome_android": "66",
-   "edge": "79",
-   "firefox": "61",
-   "firefox_android": "61",
-   "safari": "12",
-   "safari_ios": "12"
-  }
- },
- "id": "string-trim-startend",
- "groups": [
-  "string"
- ],
- "groupPaths": [
-  [
-   "JavaScript",
-   "Primitive types",
-   "Strings"
-  ]
- ],
  "mdnUrls": [
   {
+   "slug": "Web/JavaScript/Reference/Global_Objects/String/trimEnd",
    "title": "String.prototype.trimEnd()",
    "anchor": null,
    "url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd"
   },
   {
+   "slug": "Web/JavaScript/Reference/Global_Objects/String/trimStart",
    "title": "String.prototype.trimStart()",
    "anchor": null,
    "url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart"
   }
  ],
- "standardPositions": {
-  "mozilla": {},
-  "webkit": {}
- },
+ "standardPositions": [],
  "hasNegativeStandardPosition": false,
- "originTrials": [],
- "useCounters": {},
+ "stateOfSurveys": [],
+ "chromeUseCounters": {},
  "interop": [],
- "wpt": false,
- "bcdData": [
-  {
-   "key": "javascript.builtins.String.trimEnd",
-   "compat": {
-    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd",
-    "source_file": "javascript/builtins/String.json",
-    "spec_url": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.trimend",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "bun": {
-      "version_added": "1.0.0"
-     },
-     "chrome": [
-      {
-       "version_added": "66"
-      },
-      {
-       "alternative_name": "trimRight",
-       "version_added": "4"
-      }
-     ],
-     "chrome_android": [
-      {
-       "version_added": "66"
-      },
-      {
-       "alternative_name": "trimRight",
-       "version_added": "18"
-      }
-     ],
-     "deno": [
-      {
-       "version_added": "1.0"
-      },
-      {
-       "alternative_name": "trimRight",
-       "version_added": "1.0"
-      }
-     ],
-     "edge": [
-      {
-       "version_added": "79"
-      },
-      {
-       "alternative_name": "trimRight",
-       "version_added": "12"
-      }
-     ],
-     "firefox": [
-      {
-       "version_added": "61"
-      },
-      {
-       "alternative_name": "trimRight",
-       "version_added": "3.5"
-      }
-     ],
-     "firefox_android": [
-      {
-       "version_added": "61"
-      },
-      {
-       "alternative_name": "trimRight",
-       "version_added": "4"
-      }
-     ],
-     "ie": {
-      "version_added": false
-     },
-     "nodejs": [
-      {
-       "version_added": "10.0.0"
-      },
-      {
-       "alternative_name": "trimRight",
-       "version_added": "0.12.0"
-      }
-     ],
-     "oculus": [
-      {
-       "version_added": "5.0"
-      },
-      {
-       "alternative_name": "trimRight",
-       "version_added": "5.0"
-      }
-     ],
-     "opera": [
-      {
-       "version_added": "53"
-      },
-      {
-       "alternative_name": "trimRight",
-       "version_added": "15"
-      }
-     ],
-     "opera_android": [
-      {
-       "version_added": "47"
-      },
-      {
-       "alternative_name": "trimRight",
-       "version_added": "14"
-      }
-     ],
-     "safari": {
-      "version_added": "12"
-     },
-     "safari_ios": {
-      "version_added": "12"
-     },
-     "samsunginternet_android": [
-      {
-       "version_added": "9.0"
-      },
-      {
-       "alternative_name": "trimRight",
-       "version_added": "1.0"
-      }
-     ],
-     "webview_android": [
-      {
-       "version_added": "66"
-      },
-      {
-       "alternative_name": "trimRight",
-       "version_added": "4.4"
-      }
-     ],
-     "webview_ios": {
-      "version_added": "12"
-     }
-    },
-    "tags": [
-     "web-features:snapshot:ecmascript-2019",
-     "web-features:string-trim-startend"
-    ]
-   }
-  },
-  {
-   "key": "javascript.builtins.String.trimStart",
-   "compat": {
-    "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart",
-    "source_file": "javascript/builtins/String.json",
-    "spec_url": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.trimstart",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "bun": {
-      "version_added": "1.0.0"
-     },
-     "chrome": [
-      {
-       "version_added": "66"
-      },
-      {
-       "alternative_name": "trimLeft",
-       "version_added": "4"
-      }
-     ],
-     "chrome_android": [
-      {
-       "version_added": "66"
-      },
-      {
-       "alternative_name": "trimLeft",
-       "version_added": "18"
-      }
-     ],
-     "deno": [
-      {
-       "version_added": "1.0"
-      },
-      {
-       "alternative_name": "trimLeft",
-       "version_added": "1.0"
-      }
-     ],
-     "edge": [
-      {
-       "version_added": "79"
-      },
-      {
-       "alternative_name": "trimLeft",
-       "version_added": "12"
-      }
-     ],
-     "firefox": [
-      {
-       "version_added": "61"
-      },
-      {
-       "alternative_name": "trimLeft",
-       "version_added": "3.5"
-      }
-     ],
-     "firefox_android": [
-      {
-       "version_added": "61"
-      },
-      {
-       "alternative_name": "trimLeft",
-       "version_added": "4"
-      }
-     ],
-     "ie": {
-      "version_added": false
-     },
-     "nodejs": [
-      {
-       "version_added": "10.0.0"
-      },
-      {
-       "alternative_name": "trimLeft",
-       "version_added": "0.12.0"
-      }
-     ],
-     "oculus": [
-      {
-       "version_added": "5.0"
-      },
-      {
-       "alternative_name": "trimLeft",
-       "version_added": "5.0"
-      }
-     ],
-     "opera": [
-      {
-       "version_added": "53"
-      },
-      {
-       "alternative_name": "trimLeft",
-       "version_added": "15"
-      }
-     ],
-     "opera_android": [
-      {
-       "version_added": "47"
-      },
-      {
-       "alternative_name": "trimLeft",
-       "version_added": "14"
-      }
-     ],
-     "safari": {
-      "version_added": "12"
-     },
-     "safari_ios": {
-      "version_added": "12"
-     },
-     "samsunginternet_android": [
-      {
-       "version_added": "9.0"
-      },
-      {
-       "alternative_name": "trimLeft",
-       "version_added": "1.0"
-      }
-     ],
-     "webview_android": [
-      {
-       "version_added": "66"
-      },
-      {
-       "alternative_name": "trimLeft",
-       "version_added": "4.4"
-      }
-     ],
-     "webview_ios": {
-      "version_added": "12"
-     }
-    },
-    "tags": [
-     "web-features:snapshot:ecmascript-2019",
-     "web-features:string-trim-startend"
-    ]
-   }
-  }
- ],
- "bcdTags": [
-  "javascript"
- ],
+ "wpt": null,
  "baselineLowDateAsObject": "2020-01-15T00:00:00.000Z",
  "baselineHighDateAsObject": "2022-07-15T00:00:00.000Z",
  "implUrls": {

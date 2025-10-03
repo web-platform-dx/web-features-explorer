@@ -14,6 +14,26 @@
  "kind": "feature",
  "name": "Small, large, and dynamic viewport units",
  "spec": [
+  "https://drafts.csswg.org/css-values-4/#viewport-variants",
+  "https://drafts.csswg.org/css-values-4/#viewport-relative-lengths"
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2025-06-05",
+  "baseline_low_date": "2022-12-05",
+  "support": {
+   "chrome": "108",
+   "chrome_android": "108",
+   "edge": "108",
+   "firefox": "101",
+   "firefox_android": "101",
+   "safari": "15.4",
+   "safari_ios": "15.4"
+  }
+ },
+ "id": "viewport-unit-variants",
+ "groups": [],
+ "specs": [
   {
    "url": "https://drafts.csswg.org/css-values-4/#viewport-variants",
    "seriesComposition": "full",
@@ -121,352 +141,33 @@
    "fragment": "viewport-relative-lengths"
   }
  ],
- "status": {
-  "baseline": "high",
-  "baseline_high_date": "2025-06-05",
-  "baseline_low_date": "2022-12-05",
-  "support": {
-   "chrome": "108",
-   "chrome_android": "108",
-   "edge": "108",
-   "firefox": "101",
-   "firefox_android": "101",
-   "safari": "15.4",
-   "safari_ios": "15.4"
-  }
- },
- "id": "viewport-unit-variants",
- "groups": [],
- "groupPaths": [],
  "mdnUrls": [],
- "standardPositions": {
-  "mozilla": {},
-  "webkit": {}
- },
+ "standardPositions": [],
  "hasNegativeStandardPosition": false,
- "originTrials": [],
  "stateOfSurveys": [
   {
    "name": "State of CSS 2025",
-   "link": "https://2025.stateofcss.com/en-US/features/#all_features",
+   "url": "https://2025.stateofcss.com/en-US/features/#all_features",
    "question": "features",
    "subQuestion": "all_features",
    "path": "dataAPI.surveys.state_of_css.css2025.features.all_features.4.entity"
   },
   {
    "name": "State of CSS 2024",
-   "link": "https://2024.stateofcss.com/en-US/features/#all_features",
+   "url": "https://2024.stateofcss.com/en-US/features/#all_features",
    "question": "features",
    "subQuestion": "all_features",
    "path": "dataAPI.surveys.state_of_css.css2024.features.all_features.4.entity"
   }
  ],
- "useCounters": {
-  "percentageOfPageLoad": 0.14275617,
-  "chromeStatusUrl": "https://chromestatus.com/metrics/webfeature/timeline/popularity/250"
+ "chromeUseCounters": {
+  "percentageOfPageLoad": 0.14518085,
+  "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/250"
  },
  "interop": [],
- "wpt": true,
- "bcdData": [
-  {
-   "key": "css.types.length.vb",
-   "compat": {
-    "description": "<code>vb</code> unit",
-    "source_file": "css/types/length.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "108"
-     },
-     "chrome_android": {
-      "version_added": "108"
-     },
-     "edge": {
-      "version_added": "108"
-     },
-     "firefox": {
-      "version_added": "101"
-     },
-     "firefox_android": {
-      "version_added": "101"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "94"
-     },
-     "opera_android": {
-      "version_added": "73"
-     },
-     "safari": {
-      "version_added": "15.4"
-     },
-     "safari_ios": {
-      "version_added": "15.4"
-     },
-     "samsunginternet_android": {
-      "version_added": "21.0"
-     },
-     "webview_android": {
-      "version_added": "108"
-     },
-     "webview_ios": {
-      "version_added": "15.4"
-     }
-    },
-    "tags": [
-     "web-features:viewport-unit-variants"
-    ]
-   }
-  },
-  {
-   "key": "css.types.length.vi",
-   "compat": {
-    "description": "<code>vi</code> unit",
-    "source_file": "css/types/length.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "108"
-     },
-     "chrome_android": {
-      "version_added": "108"
-     },
-     "edge": {
-      "version_added": "108"
-     },
-     "firefox": {
-      "version_added": "101"
-     },
-     "firefox_android": {
-      "version_added": "101"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "94"
-     },
-     "opera_android": {
-      "version_added": "73"
-     },
-     "safari": {
-      "version_added": "15.4"
-     },
-     "safari_ios": {
-      "version_added": "15.4"
-     },
-     "samsunginternet_android": {
-      "version_added": "21.0"
-     },
-     "webview_android": {
-      "version_added": "108"
-     },
-     "webview_ios": {
-      "version_added": "15.4"
-     }
-    },
-    "tags": [
-     "web-features:viewport-unit-variants"
-    ]
-   }
-  },
-  {
-   "key": "css.types.length.viewport_percentage_units_dynamic",
-   "compat": {
-    "description": "<code>dvb</code>, <code>dvh</code>, <code>dvi</code>, <code>dvmax</code>, <code>dvmin</code>, <code>dvw</code> units",
-    "source_file": "css/types/length.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "108"
-     },
-     "chrome_android": {
-      "version_added": "108"
-     },
-     "edge": {
-      "version_added": "108"
-     },
-     "firefox": {
-      "version_added": "101"
-     },
-     "firefox_android": {
-      "version_added": "101"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "94"
-     },
-     "opera_android": {
-      "version_added": "73"
-     },
-     "safari": {
-      "version_added": "15.4"
-     },
-     "safari_ios": {
-      "version_added": "15.4"
-     },
-     "samsunginternet_android": {
-      "version_added": "21.0"
-     },
-     "webview_android": {
-      "version_added": "108"
-     },
-     "webview_ios": {
-      "version_added": "15.4"
-     }
-    },
-    "tags": [
-     "web-features:viewport-unit-variants"
-    ]
-   }
-  },
-  {
-   "key": "css.types.length.viewport_percentage_units_large",
-   "compat": {
-    "description": "<code>lvb</code>, <code>lvh</code>, <code>lvi</code>, <code>lvmax</code>, <code>lvmin</code>, <code>lvw</code> units",
-    "source_file": "css/types/length.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "108"
-     },
-     "chrome_android": {
-      "version_added": "108"
-     },
-     "edge": {
-      "version_added": "108"
-     },
-     "firefox": {
-      "version_added": "101"
-     },
-     "firefox_android": {
-      "version_added": "101"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "94"
-     },
-     "opera_android": {
-      "version_added": "73"
-     },
-     "safari": {
-      "version_added": "15.4"
-     },
-     "safari_ios": {
-      "version_added": "15.4"
-     },
-     "samsunginternet_android": {
-      "version_added": "21.0"
-     },
-     "webview_android": {
-      "version_added": "108"
-     },
-     "webview_ios": {
-      "version_added": "15.4"
-     }
-    },
-    "tags": [
-     "web-features:viewport-unit-variants"
-    ]
-   }
-  },
-  {
-   "key": "css.types.length.viewport_percentage_units_small",
-   "compat": {
-    "description": "<code>svb</code>, <code>svh</code>, <code>svi</code>, <code>svmax</code>, <code>svmin</code>, <code>svw</code> units",
-    "source_file": "css/types/length.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "108"
-     },
-     "chrome_android": {
-      "version_added": "108"
-     },
-     "edge": {
-      "version_added": "108"
-     },
-     "firefox": {
-      "version_added": "101"
-     },
-     "firefox_android": {
-      "version_added": "101"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "94"
-     },
-     "opera_android": {
-      "version_added": "73"
-     },
-     "safari": {
-      "version_added": "15.4"
-     },
-     "safari_ios": {
-      "version_added": "15.4"
-     },
-     "samsunginternet_android": {
-      "version_added": "21.0"
-     },
-     "webview_android": {
-      "version_added": "108"
-     },
-     "webview_ios": {
-      "version_added": "15.4"
-     }
-    },
-    "tags": [
-     "web-features:viewport-unit-variants"
-    ]
-   }
-  }
- ],
- "bcdTags": [
-  "css"
- ],
+ "wpt": {
+  "url": "https://wpt.fyi/results?q=feature:viewport-unit-variants"
+ },
  "baselineLowDateAsObject": "2022-12-05T00:00:00.000Z",
  "baselineHighDateAsObject": "2025-06-05T00:00:00.000Z",
  "implUrls": {

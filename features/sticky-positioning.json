@@ -14,6 +14,27 @@
  "kind": "feature",
  "name": "Sticky positioning",
  "spec": [
+  "https://drafts.csswg.org/css-position-3/#stickypos-insets"
+ ],
+ "status": {
+  "baseline": "high",
+  "baseline_high_date": "2022-03-19",
+  "baseline_low_date": "2019-09-19",
+  "support": {
+   "chrome": "56",
+   "chrome_android": "56",
+   "edge": "16",
+   "firefox": "59",
+   "firefox_android": "59",
+   "safari": "13",
+   "safari_ios": "13"
+  }
+ },
+ "id": "sticky-positioning",
+ "groups": [
+  "positioning"
+ ],
+ "specs": [
   {
    "url": "https://drafts.csswg.org/css-position-3/#stickypos-insets",
    "seriesComposition": "full",
@@ -67,222 +88,55 @@
    "fragment": "stickypos-insets"
   }
  ],
- "status": {
-  "baseline": "high",
-  "baseline_high_date": "2022-03-19",
-  "baseline_low_date": "2019-09-19",
-  "support": {
-   "chrome": "56",
-   "chrome_android": "56",
-   "edge": "16",
-   "firefox": "59",
-   "firefox_android": "59",
-   "safari": "13",
-   "safari_ios": "13"
-  }
- },
- "id": "sticky-positioning",
- "groups": [
-  "positioning"
- ],
- "groupPaths": [
-  [
-   "CSS",
-   "Layout",
-   "Positioning"
-  ]
- ],
  "mdnUrls": [
   {
+   "slug": "Web/CSS/position#sticky",
    "title": "position",
    "anchor": "sticky",
    "url": "https://developer.mozilla.org/docs/Web/CSS/position#sticky"
   }
  ],
- "standardPositions": {
-  "mozilla": {},
-  "webkit": {}
- },
+ "standardPositions": [],
  "hasNegativeStandardPosition": false,
- "originTrials": [],
  "stateOfSurveys": [
   {
    "name": "State of CSS 2025",
-   "link": "https://2025.stateofcss.com/en-US/usage/#css_missing_features",
+   "url": "https://2025.stateofcss.com/en-US/usage/#css_missing_features",
    "question": "usage",
    "subQuestion": "css_missing_features",
    "path": "dataAPI.surveys.state_of_css.css2025.usage.css_missing_features.freeform.allEditions.0.buckets.16.entity"
   },
   {
    "name": "State of CSS 2025",
-   "link": "https://2025.stateofcss.com/en-US/layout/#layout_pain_points",
+   "url": "https://2025.stateofcss.com/en-US/layout/#layout_pain_points",
    "question": "layout",
    "subQuestion": "layout_pain_points",
    "path": "dataAPI.surveys.state_of_css.css2025.layout.layout_pain_points.freeform.allEditions.0.buckets.11.entity"
   },
   {
    "name": "State of CSS 2024",
-   "link": "https://2024.stateofcss.com/en-US/usage/#css_missing_features",
+   "url": "https://2024.stateofcss.com/en-US/usage/#css_missing_features",
    "question": "usage",
    "subQuestion": "css_missing_features",
    "path": "dataAPI.surveys.state_of_css.css2024.usage.css_missing_features.freeform.currentEdition.buckets.16.entity"
   }
  ],
- "useCounters": {},
+ "chromeUseCounters": {},
  "interop": [
   {
-   "year": "2021",
-   "label": "interop-2021-position-sticky"
+   "year": 2021,
+   "label": "interop-2021-position-sticky",
+   "url": "https://wpt.fyi/interop-2021?feature=interop-2021-position-sticky"
   },
   {
-   "year": "2022",
-   "label": "interop-2021-position-sticky"
+   "year": 2022,
+   "label": "interop-2021-position-sticky",
+   "url": "https://wpt.fyi/interop-2022?feature=interop-2021-position-sticky"
   }
  ],
- "wpt": true,
- "bcdData": [
-  {
-   "key": "css.properties.position.position_sticky_table_elements",
-   "compat": {
-    "description": "Table elements as <code>sticky</code> positioning containers",
-    "source_file": "css/properties/position.json",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "56"
-     },
-     "chrome_android": {
-      "version_added": "56"
-     },
-     "edge": {
-      "version_added": "16"
-     },
-     "firefox": {
-      "notes": "Borders do not display on table headers if <a href=\"https://developer.mozilla.org/docs/Web/CSS/border-collapse\"><code>border-collapse</code></a> is set to <code>collapse</code> (<a href=\"https://bugzil.la/1727594\">bug 1727594</a>).",
-      "version_added": "59"
-     },
-     "firefox_android": {
-      "notes": "Borders do not display on table headers if <a href=\"https://developer.mozilla.org/docs/Web/CSS/border-collapse\"><code>border-collapse</code></a> is set to <code>collapse</code> (<a href=\"https://bugzil.la/1727594\">bug 1727594</a>).",
-      "version_added": "59"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "5.0"
-     },
-     "opera": {
-      "version_added": "43"
-     },
-     "opera_android": {
-      "version_added": "43"
-     },
-     "safari": {
-      "version_added": "8"
-     },
-     "safari_ios": {
-      "version_added": "8"
-     },
-     "samsunginternet_android": {
-      "version_added": "6.0"
-     },
-     "webview_android": {
-      "version_added": "56"
-     },
-     "webview_ios": {
-      "version_added": "8"
-     }
-    },
-    "tags": [
-     "web-features:sticky-positioning"
-    ]
-   }
-  },
-  {
-   "key": "css.properties.position.sticky",
-   "compat": {
-    "source_file": "css/properties/position.json",
-    "spec_url": "https://drafts.csswg.org/css-position/#valdef-position-sticky",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "56"
-     },
-     "chrome_android": {
-      "version_added": "56"
-     },
-     "edge": {
-      "version_added": "16"
-     },
-     "firefox": {
-      "version_added": "32"
-     },
-     "firefox_android": {
-      "version_added": "32"
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": "5.0"
-     },
-     "opera": {
-      "version_added": "43"
-     },
-     "opera_android": {
-      "version_added": "43"
-     },
-     "safari": [
-      {
-       "version_added": "13"
-      },
-      {
-       "prefix": "-webkit-",
-       "version_added": "7"
-      }
-     ],
-     "safari_ios": [
-      {
-       "version_added": "13"
-      },
-      {
-       "prefix": "-webkit-",
-       "version_added": "7"
-      }
-     ],
-     "samsunginternet_android": {
-      "version_added": "6.0"
-     },
-     "webview_android": {
-      "version_added": "56"
-     },
-     "webview_ios": [
-      {
-       "version_added": "13"
-      },
-      {
-       "prefix": "-webkit-",
-       "version_added": "7"
-      }
-     ]
-    },
-    "tags": [
-     "web-features:sticky-positioning"
-    ]
-   }
-  }
- ],
- "bcdTags": [
-  "css"
- ],
+ "wpt": {
+  "url": "https://wpt.fyi/results?q=feature:sticky-positioning"
+ },
  "baselineLowDateAsObject": "2019-09-19T00:00:00.000Z",
  "baselineHighDateAsObject": "2022-03-19T00:00:00.000Z",
  "implUrls": {

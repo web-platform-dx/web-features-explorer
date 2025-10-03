@@ -7,6 +7,19 @@
  "kind": "feature",
  "name": "Vibration",
  "spec": [
+  "https://w3c.github.io/vibration/"
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "32",
+   "chrome_android": "32",
+   "edge": "79"
+  }
+ },
+ "id": "vibration",
+ "groups": [],
+ "specs": [
   {
    "url": "https://w3c.github.io/vibration/",
    "seriesComposition": "full",
@@ -55,31 +68,23 @@
    "fragment": null
   }
  ],
- "status": {
-  "baseline": false,
-  "support": {
-   "chrome": "32",
-   "chrome_android": "32",
-   "edge": "79"
-  }
- },
- "id": "vibration",
- "groups": [],
- "groupPaths": [],
  "mdnUrls": [
   {
+   "slug": "Web/API/Navigator/vibrate",
    "title": "Navigator: vibrate() method",
    "anchor": null,
    "url": "https://developer.mozilla.org/docs/Web/API/Navigator/vibrate"
   }
  ],
- "standardPositions": {
-  "mozilla": {
+ "standardPositions": [
+  {
+   "vendor": "mozilla",
    "url": "https://github.com/mozilla/standards-positions/issues/907",
    "position": "",
    "concerns": []
   },
-  "webkit": {
+  {
+   "vendor": "webkit",
    "url": "https://github.com/WebKit/standards-positions/issues/267",
    "position": "oppose",
    "concerns": [
@@ -91,134 +96,14 @@
     "device independence"
    ]
   }
- },
+ ],
  "hasNegativeStandardPosition": true,
- "originTrials": [],
- "useCounters": {},
+ "stateOfSurveys": [],
+ "chromeUseCounters": {},
  "interop": [],
- "wpt": true,
- "bcdData": [
-  {
-   "key": "api.Navigator.vibrate",
-   "compat": {
-    "mdn_url": "https://developer.mozilla.org/docs/Web/API/Navigator/vibrate",
-    "source_file": "api/Navigator.json",
-    "spec_url": "https://w3c.github.io/vibration/#dom-navigator-vibrate",
-    "status": {
-     "deprecated": false,
-     "experimental": false,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "32"
-     },
-     "chrome_android": {
-      "notes": [
-       "Beginning in Chrome 55, this is not supported in cross-origin iframes.",
-       "Beginning in Chrome 60, this method requires a user gesture. Otherwise it returns <code>false</code>."
-      ],
-      "version_added": "32"
-     },
-     "edge": {
-      "version_added": "79"
-     },
-     "firefox": [
-      {
-       "notes": [
-        "Until Firefox 26 included, when the vibration pattern was too long or any of its elements too large, Firefox threw an exception instead of returning <code>false</code> (<a href=\"https://bugzil.la/884935\">bug 884935</a>).",
-        "From Firefox 32 onwards, when the vibration pattern is too long or any of its elements too large, it returns <code>true</code> but truncates the pattern (<a href=\"https://bugzil.la/1014581\">bug 1014581</a>).",
-        "Beginning in Firefox 72, this is not supported in cross-origin iframes."
-       ],
-       "version_added": "16",
-       "version_last": "128",
-       "version_removed": "129"
-      },
-      {
-       "prefix": "moz",
-       "version_added": "11",
-       "version_last": "15",
-       "version_removed": "16"
-      }
-     ],
-     "firefox_android": [
-      {
-       "notes": "Vibration is disabled. If the window is visible, then <code>navigator.vibrate()</code> returns <code>true</code>, but no vibration takes place (regardless of hardware support). Originally, the intent was to disable it for cross-origin frames only (<a href=\"https://bugzil.la/1591113\">bug 1591113</a>), but the feature was not re-enabled due to abuse concerns (<a href=\"https://bugzil.la/1653318\">bug 1653318</a>).",
-       "partial_implementation": true,
-       "version_added": "79"
-      },
-      {
-       "notes": [
-        "Until Firefox 26 included, when the vibration pattern was too long or any of its elements too large, Firefox threw an exception instead of returning <code>false</code> (<a href=\"https://bugzil.la/884935\">bug 884935</a>).",
-        "From Firefox 32 onwards, when the vibration pattern is too long or any of its elements too large, it returns <code>true</code> but truncates the pattern (<a href=\"https://bugzil.la/1014581\">bug 1014581</a>)."
-       ],
-       "version_added": "16",
-       "version_last": "68",
-       "version_removed": "79"
-      },
-      {
-       "prefix": "moz",
-       "version_added": "14",
-       "version_last": "15",
-       "version_removed": "16"
-      }
-     ],
-     "ie": {
-      "version_added": false
-     },
-     "nodejs": {
-      "version_added": false
-     },
-     "oculus": {
-      "notes": [
-       "Beginning in Chrome 55, this is not supported in cross-origin iframes.",
-       "Beginning in Chrome 60, this method requires a user gesture. Otherwise it returns <code>false</code>."
-      ],
-      "version_added": "5.0"
-     },
-     "opera": {
-      "version_added": "19"
-     },
-     "opera_android": {
-      "notes": [
-       "Beginning in Opera 42, this is not supported in cross-origin iframes.",
-       "Beginning in Opera 47, this method requires a user gesture. Otherwise it returns <code>false</code>."
-      ],
-      "version_added": "19"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "notes": [
-       "Beginning in Chrome 55, this is not supported in cross-origin iframes.",
-       "Beginning in Chrome 60, this method requires a user gesture. Otherwise it returns <code>false</code>."
-      ],
-      "version_added": "2.0"
-     },
-     "webview_android": {
-      "notes": [
-       "Beginning in version 55, this is not supported in cross-origin iframes.",
-       "Beginning in version 60, this method requires a user gesture. Otherwise it returns <code>false</code>."
-      ],
-      "version_added": "4.4.3"
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:vibration"
-    ]
-   }
-  }
- ],
- "bcdTags": [
-  "api"
- ],
+ "wpt": {
+  "url": "https://wpt.fyi/results?q=feature:vibration"
+ },
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null,
  "implUrls": {

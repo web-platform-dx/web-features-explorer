@@ -14,6 +14,21 @@
  "kind": "feature",
  "name": "Raw camera access for WebXR",
  "spec": [
+  "https://immersive-web.github.io/raw-camera-access/"
+ ],
+ "status": {
+  "baseline": false,
+  "support": {
+   "chrome": "107",
+   "chrome_android": "107",
+   "edge": "107"
+  }
+ },
+ "id": "webxr-camera",
+ "groups": [
+  "webxr"
+ ],
+ "specs": [
   {
    "url": "https://immersive-web.github.io/raw-camera-access/",
    "seriesComposition": "full",
@@ -50,350 +65,35 @@
    "fragment": null
   }
  ],
- "status": {
-  "baseline": false,
-  "support": {
-   "chrome": "107",
-   "chrome_android": "107",
-   "edge": "107"
-  }
- },
- "id": "webxr-camera",
- "groups": [
-  "webxr"
- ],
- "groupPaths": [
-  [
-   "WebXR"
-  ]
- ],
  "mdnUrls": [
   {
+   "slug": "Web/API/XRView",
    "title": "XRView",
    "anchor": null,
    "url": "https://developer.mozilla.org/docs/Web/API/XRView"
   }
  ],
- "standardPositions": {
-  "mozilla": {
+ "standardPositions": [
+  {
+   "vendor": "mozilla",
    "url": "https://github.com/mozilla/standards-positions/issues/667",
    "position": "defer",
    "concerns": []
   },
-  "webkit": {
+  {
+   "vendor": "webkit",
    "url": "https://github.com/WebKit/standards-positions/issues/37",
    "position": "oppose",
    "concerns": [
     "privacy"
    ]
   }
- },
+ ],
  "hasNegativeStandardPosition": true,
- "originTrials": [],
- "useCounters": {},
+ "stateOfSurveys": [],
+ "chromeUseCounters": {},
  "interop": [],
- "wpt": false,
- "bcdData": [
-  {
-   "key": "api.XRCamera",
-   "compat": {
-    "source_file": "api/XRCamera.json",
-    "spec_url": "https://immersive-web.github.io/raw-camera-access/#xrcamera",
-    "status": {
-     "deprecated": false,
-     "experimental": true,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "107"
-     },
-     "chrome_android": {
-      "version_added": "107"
-     },
-     "edge": {
-      "version_added": "107"
-     },
-     "firefox": {
-      "version_added": false
-     },
-     "firefox_android": {
-      "version_added": false
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "93"
-     },
-     "opera_android": {
-      "version_added": "73"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "version_added": "21.0"
-     },
-     "webview_android": {
-      "impl_url": "https://crbug.com/40652382",
-      "version_added": false
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:webxr-camera"
-    ]
-   }
-  },
-  {
-   "key": "api.XRCamera.height",
-   "compat": {
-    "source_file": "api/XRCamera.json",
-    "spec_url": "https://immersive-web.github.io/raw-camera-access/#dom-xrcamera-height",
-    "status": {
-     "deprecated": false,
-     "experimental": true,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "107"
-     },
-     "chrome_android": {
-      "version_added": "107"
-     },
-     "edge": {
-      "version_added": "107"
-     },
-     "firefox": {
-      "version_added": false
-     },
-     "firefox_android": {
-      "version_added": false
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "93"
-     },
-     "opera_android": {
-      "version_added": "73"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "version_added": "21.0"
-     },
-     "webview_android": {
-      "version_added": false
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:webxr-camera"
-    ]
-   }
-  },
-  {
-   "key": "api.XRCamera.width",
-   "compat": {
-    "source_file": "api/XRCamera.json",
-    "spec_url": "https://immersive-web.github.io/raw-camera-access/#dom-xrcamera-width",
-    "status": {
-     "deprecated": false,
-     "experimental": true,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "107"
-     },
-     "chrome_android": {
-      "version_added": "107"
-     },
-     "edge": {
-      "version_added": "107"
-     },
-     "firefox": {
-      "version_added": false
-     },
-     "firefox_android": {
-      "version_added": false
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "93"
-     },
-     "opera_android": {
-      "version_added": "73"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "version_added": "21.0"
-     },
-     "webview_android": {
-      "version_added": false
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:webxr-camera"
-    ]
-   }
-  },
-  {
-   "key": "api.XRView.camera",
-   "compat": {
-    "source_file": "api/XRView.json",
-    "spec_url": "https://immersive-web.github.io/raw-camera-access/#dom-xrview-camera",
-    "status": {
-     "deprecated": false,
-     "experimental": true,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "107"
-     },
-     "chrome_android": {
-      "version_added": "107"
-     },
-     "edge": {
-      "version_added": "107"
-     },
-     "firefox": {
-      "version_added": false
-     },
-     "firefox_android": {
-      "version_added": false
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "93"
-     },
-     "opera_android": {
-      "version_added": "73"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "version_added": "21.0"
-     },
-     "webview_android": {
-      "version_added": false
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:webxr-camera"
-    ]
-   }
-  },
-  {
-   "key": "api.XRWebGLBinding.getCameraImage",
-   "compat": {
-    "source_file": "api/XRWebGLBinding.json",
-    "spec_url": "https://immersive-web.github.io/raw-camera-access/#dom-xrwebglbinding-getcameraimage",
-    "status": {
-     "deprecated": false,
-     "experimental": true,
-     "standard_track": true
-    },
-    "support": {
-     "chrome": {
-      "version_added": "107"
-     },
-     "chrome_android": {
-      "version_added": "107"
-     },
-     "edge": {
-      "version_added": "107"
-     },
-     "firefox": {
-      "version_added": false
-     },
-     "firefox_android": {
-      "version_added": false
-     },
-     "ie": {
-      "version_added": false
-     },
-     "oculus": {
-      "version_added": false
-     },
-     "opera": {
-      "version_added": "93"
-     },
-     "opera_android": {
-      "version_added": "73"
-     },
-     "safari": {
-      "version_added": false
-     },
-     "safari_ios": {
-      "version_added": false
-     },
-     "samsunginternet_android": {
-      "version_added": "21.0"
-     },
-     "webview_android": {
-      "version_added": false
-     },
-     "webview_ios": {
-      "version_added": false
-     }
-    },
-    "tags": [
-     "web-features:webxr-camera"
-    ]
-   }
-  }
- ],
- "bcdTags": [
-  "api"
- ],
+ "wpt": null,
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null,
  "implUrls": {
