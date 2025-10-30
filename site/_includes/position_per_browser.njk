@@ -1,5 +1,5 @@
 {% for position in feature.standardPositions %}
-  {% if position.vendor === "webkit" and (browser.id === "safari" or browser.id === "safari_ios") %}
+  {% if position.vendor === "apple" and (browser.id === "safari" or browser.id === "safari_ios") %}
     {% include "position.njk" %}
   {% elif position.vendor === "mozilla" and (browser.id === "firefox" or browser.id === "firefox_android") %}
     {% include "position.njk" %}
