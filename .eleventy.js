@@ -26,6 +26,7 @@ function augmentFeatureData(feature, webFeaturesMappingsData) {
   feature.chromeUseCounters = featureMappings["chrome-use-counters"] || {};
   feature.interop = featureMappings["interop"]|| [];
   feature.wpt = featureMappings["wpt"] || null;
+  feature.developerSignals = featureMappings["developer-signals"] || null;
 
   // Add the baseline low and high dates as JS objects, so that templates
   // can format them as needed.
