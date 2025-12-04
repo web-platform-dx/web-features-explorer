@@ -124,6 +124,31 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addLiquidFilter("dateToRfc3339", feedPlugin.dateToRfc3339);
 
+  eleventyConfig.addFilter("prettyUrlForAdditionalDiscouragedInfo", function(value) {
+    const ghPrefix = "https://github.com/";
+    const w3cPrefix = "https://www.w3.org/";
+    const csswgDraftPrefix = "https://drafts.csswg.org/";
+    const htmlSpecPrefix = "https://html.spec.whatwg.org/multipage/";
+
+    if (value.startsWith(ghPrefix)) {
+      return value.substring(ghPrefix.length) + " (GitHub)";
+    }
+
+    if (value.startsWith(w3cPrefix)) {
+      return value.substring(w3cPrefix.length) + " (W3C)";
+    }
+
+    if (value.startsWith(csswgDraftPrefix)) {
+      return value.substring(csswgDraftPrefix.length) + " (CSSWG draft)";
+    }
+
+    if (value.startsWith(htmlSpecPrefix)) {
+      return value.substring(htmlSpecPrefix.length) + " (HTML spec)";
+    }
+
+    return value;
+  })
+
   eleventyConfig.addPassthroughCopy("site/assets");
   eleventyConfig.addPassthroughCopy({ "node_modules/apexcharts/dist/apexcharts.css": "assets/apexcharts.css" });
   eleventyConfig.addPassthroughCopy({ "node_modules/apexcharts/dist/apexcharts.min.js": "assets/apexcharts.js" });

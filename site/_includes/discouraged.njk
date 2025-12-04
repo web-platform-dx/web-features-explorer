@@ -1,21 +1,26 @@
 {% if feature.discouraged %}
   <div class="discouraged-info">
     <p>
-      This feature is discouraged.
-      {% if feature.discouraged.alternatives %}
-        Consider using
-          {% for alternative in feature.discouraged.alternatives %}
-            <a href="/features/{{ alternative }}">{{ allFeaturesAsObject[alternative].name }}</a>
-            {% if not loop.last %}, {% endif %}
-          {% endfor %}
-        instead.
+      <strong>This feature is discouraged</strong>
+      {% if feature.discouraged.reason %}
+        &mdash; {{ feature.discouraged.reason }}
       {% endif %}
-      For the rationale, see:
     </p>
-    <ul>
+    {% if feature.discouraged.alternatives %}
+      <p>
+        Consider using
+        {% for alternative in feature.discouraged.alternatives %}
+          <a href="/features/{{ alternative }}">{{ allFeaturesAsObject[alternative].name }}</a>
+          {% if not loop.last %}, {% endif %}
+        {% endfor %}
+        instead.
+      </p>
+    {% endif %}
+    <p>For more information, see:
       {% for rationale in feature.discouraged.according_to %}
-        <li><a href="{{ rationale }}">{{ rationale }}</a></li>
+        <a href="{{ rationale }}">{{ rationale | prettyUrlForAdditionalDiscouragedInfo }}</a>
+        {% if not loop.last %}, {% endif %}
       {% endfor %}
-    </ul>
+    </p>
   </div>
 {% endif %}
