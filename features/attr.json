@@ -3,15 +3,23 @@
   "css3-attr"
  ],
  "compat_features": [
-  "css.types.attr.fallback",
-  "css.types.attr.type-or-unit",
-  "css.types.attr.type-or-unit.angle",
-  "css.types.attr.type-or-unit.color",
-  "css.types.attr.type-or-unit.integer",
-  "css.types.attr.type-or-unit.length",
-  "css.types.attr.type-or-unit.number",
-  "css.types.attr.type-or-unit.percentage",
-  "css.types.attr.type-or-unit.time"
+  "css.types.attr.declaration-value",
+  "css.types.attr.type_function",
+  "css.types.attr.type_function.angle",
+  "css.types.attr.type_function.color",
+  "css.types.attr.type_function.custom-ident",
+  "css.types.attr.type_function.ident",
+  "css.types.attr.type_function.image",
+  "css.types.attr.type_function.integer",
+  "css.types.attr.type_function.length",
+  "css.types.attr.type_function.length-percentage",
+  "css.types.attr.type_function.number",
+  "css.types.attr.type_function.percentage",
+  "css.types.attr.type_function.resolution",
+  "css.types.attr.type_function.string",
+  "css.types.attr.type_function.time",
+  "css.types.attr.type_function.transform-function",
+  "css.types.attr.type_function.url"
  ],
  "description": "The attr() CSS function, in the context of any property, returns the value of an attribute of an HTML element, with the option to return it as a specific type or unit. You can set a default value for missing or invalid attributes.",
  "description_html": "The <code>attr()</code> CSS function, in the context of any property, returns the value of an attribute of an HTML element, with the option to return it as a specific type or unit. You can set a default value for missing or invalid attributes.",
@@ -26,7 +34,7 @@
  "status": {
   "baseline": false,
   "by_compat_key": {
-   "css.types.attr.fallback": {
+   "css.types.attr.declaration-value": {
     "baseline": "low",
     "baseline_low_date": "2025-03-31",
     "support": {
@@ -39,7 +47,7 @@
      "safari_ios": "18.4"
     }
    },
-   "css.types.attr.type-or-unit": {
+   "css.types.attr.type_function": {
     "baseline": false,
     "support": {
      "chrome": "133",
@@ -47,7 +55,7 @@
      "edge": "133"
     }
    },
-   "css.types.attr.type-or-unit.angle": {
+   "css.types.attr.type_function.angle": {
     "baseline": false,
     "support": {
      "chrome": "133",
@@ -55,7 +63,7 @@
      "edge": "133"
     }
    },
-   "css.types.attr.type-or-unit.color": {
+   "css.types.attr.type_function.color": {
     "baseline": false,
     "support": {
      "chrome": "133",
@@ -63,7 +71,7 @@
      "edge": "133"
     }
    },
-   "css.types.attr.type-or-unit.integer": {
+   "css.types.attr.type_function.custom-ident": {
     "baseline": false,
     "support": {
      "chrome": "133",
@@ -71,7 +79,15 @@
      "edge": "133"
     }
    },
-   "css.types.attr.type-or-unit.length": {
+   "css.types.attr.type_function.ident": {
+    "baseline": false,
+    "support": {}
+   },
+   "css.types.attr.type_function.image": {
+    "baseline": false,
+    "support": {}
+   },
+   "css.types.attr.type_function.integer": {
     "baseline": false,
     "support": {
      "chrome": "133",
@@ -79,7 +95,7 @@
      "edge": "133"
     }
    },
-   "css.types.attr.type-or-unit.number": {
+   "css.types.attr.type_function.length": {
     "baseline": false,
     "support": {
      "chrome": "133",
@@ -87,7 +103,11 @@
      "edge": "133"
     }
    },
-   "css.types.attr.type-or-unit.percentage": {
+   "css.types.attr.type_function.length-percentage": {
+    "baseline": false,
+    "support": {}
+   },
+   "css.types.attr.type_function.number": {
     "baseline": false,
     "support": {
      "chrome": "133",
@@ -95,7 +115,39 @@
      "edge": "133"
     }
    },
-   "css.types.attr.type-or-unit.time": {
+   "css.types.attr.type_function.percentage": {
+    "baseline": false,
+    "support": {
+     "chrome": "133",
+     "chrome_android": "133",
+     "edge": "133"
+    }
+   },
+   "css.types.attr.type_function.resolution": {
+    "baseline": false,
+    "support": {}
+   },
+   "css.types.attr.type_function.string": {
+    "baseline": false,
+    "support": {
+     "chrome": "133",
+     "chrome_android": "133",
+     "edge": "133"
+    }
+   },
+   "css.types.attr.type_function.time": {
+    "baseline": false,
+    "support": {
+     "chrome": "133",
+     "chrome_android": "133",
+     "edge": "133"
+    }
+   },
+   "css.types.attr.type_function.transform-function": {
+    "baseline": false,
+    "support": {}
+   },
+   "css.types.attr.type_function.url": {
     "baseline": false,
     "support": {
      "chrome": "133",
@@ -104,11 +156,7 @@
     }
    }
   },
-  "support": {
-   "chrome": "133",
-   "chrome_android": "133",
-   "edge": "133"
-  }
+  "support": {}
  },
  "id": "attr",
  "groups": [
@@ -257,9 +305,33 @@
   "chrome": [],
   "chrome_android": [],
   "edge": [],
-  "firefox": [],
-  "firefox_android": [],
-  "safari": [],
-  "safari_ios": []
+  "firefox": [
+   "https://bugzil.la/435426",
+   "https://bugzil.la/1871819",
+   "https://bugzil.la/1448251",
+   "https://bugzil.la/1871815",
+   "https://bugzil.la/1871818",
+   "https://bugzil.la/1871816",
+   "https://bugzil.la/1871817",
+   "https://bugzil.la/1871820",
+   "https://bugzil.la/1448252"
+  ],
+  "firefox_android": [
+   "https://bugzil.la/435426",
+   "https://bugzil.la/1871819",
+   "https://bugzil.la/1448251",
+   "https://bugzil.la/1871815",
+   "https://bugzil.la/1871818",
+   "https://bugzil.la/1871816",
+   "https://bugzil.la/1871817",
+   "https://bugzil.la/1871820",
+   "https://bugzil.la/1448252"
+  ],
+  "safari": [
+   "https://webkit.org/b/26609"
+  ],
+  "safari_ios": [
+   "https://webkit.org/b/26609"
+  ]
  }
 }
