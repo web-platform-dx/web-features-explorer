@@ -1,10 +1,16 @@
 {% if feature.stateOfSurveys.length %}
   <div class="surveys feature-box">
-    <h3>Developer signals</h3>
+    <h3>Surveys</h3>
     <ul>
       {% for survey in feature.stateOfSurveys %}
         <li>
-          {{ survey.name }}: <a href="{{ survey.url }}">{{ survey.question }}/{{ survey.subQuestion }} question</a>
+          <a href="{{ survey.url }}">
+            {{ survey.name }}
+            &gt;
+            {{ survey.question | replace("_", " ") }}
+            &gt;
+            {{ survey.subQuestion | replace("_", " ") }}
+          </a>
         </li>
       {% endfor %}
     </ul>
