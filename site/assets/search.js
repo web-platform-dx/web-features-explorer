@@ -9,8 +9,14 @@ addEventListener("DOMContentLoaded", () => {
     };
   }
 
+  const searchForm = document.querySelector("search form");
   const searchInput = document.querySelector("#search");
   const searchResults = document.querySelector("output");
+
+  // Submit doesn't do anything, so don't clear the input
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
 
   searchInput.addEventListener(
     "focus",
