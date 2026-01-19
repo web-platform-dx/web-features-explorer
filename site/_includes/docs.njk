@@ -6,7 +6,7 @@
         <li>
           <a href="{{ url.url }}">
             {% if url.anchor %}
-              {{ url.anchor | capitalize }}, in <em>{{ url.title }}</em>
+              {{ url.anchor | replace("_", " ") | capitalize }}, in <em>{{ url.title }}</em>
             {% else %}
               {{ url.title }}
             {% endif %}
