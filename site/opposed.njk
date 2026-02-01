@@ -1,0 +1,22 @@
+---
+title: Opposed features
+layout: layout.njk
+---
+
+<main class="explore-features">
+  {% include "feature_list_views.njk" %}
+
+  <h1>{{ title }}</h1>
+
+  <p>The following features have received negative standards positions from at least one browser vendor. They're very unlikely to ever become Baseline in their current forms.</p>
+
+  <ul class="features">
+    {% for feature in allFeatures %}
+      {% if feature.hasNegativeStandardPosition and not feature.discouraged and not feature.status.baseline %}
+        <li>
+          {% include "feature_short.njk" %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</main>
