@@ -27,6 +27,7 @@ function augmentFeatureData(feature, webFeaturesMappingsData) {
   feature.interop = featureMappings["interop"]|| [];
   feature.wpt = featureMappings["wpt"] || null;
   feature.developerSignals = featureMappings["developer-signals"] || null;
+  feature.bugs = featureMappings["bugs"] || {};
 
   // Add the baseline low and high dates as JS objects, so that templates
   // can format them as needed.
@@ -42,50 +43,6 @@ function augmentFeatureData(feature, webFeaturesMappingsData) {
     const expectedHighDate = getExpectedBaselineHighDate(feature);
     feature.expectedBaselineHighDate = expectedHighDate ? expectedHighDate.toISOString().substring(0, 10) : null;
   }
-
-  // The rest of the code below could be simplified to one line of code if the
-  // web-features-mappings data mapped to bugs.
-  // See https://github.com/web-platform-dx/web-features-mappings/issues/16
-
-  // Get BCD data for each of the feature's compat_features keys.
-  const bcdKeysData = (feature.compat_features || [])
-    .map((key) => {
-      // Find the BCD entry for this key.
-      const keyParts = key.split(".");
-
-      let data = bcd;
-      for (const part of keyParts) {
-        if (!data || !data[part]) {
-          console.warn(
-            `No BCD data for ${key}. Check if the web-features and browser-compat-data dependencies are in sync.`
-          );
-          return null;
-        }
-        data = data[part];
-      }
-
-      return data && data.__compat ? { key, compat: data.__compat } : null;
-    })
-    .filter((data) => !!data);
-
-  // Add impl_url links, if any, per browser.
-  const browserImplUrls = Object.keys(browsers).reduce((acc, browserId) => {
-    acc[browserId] = [];
-    return acc;
-  }, {});
-
-  for (const { compat } of bcdKeysData) {
-    for (const browserId in browsers) {
-      const browserSupport = compat.support[browserId];
-      if (!browserSupport.version_added && browserSupport.impl_url) {
-        browserImplUrls[browserId] = [
-          ...new Set([...browserImplUrls[browserId], browserSupport.impl_url]),
-        ];
-      }
-    }
-  }
-
-  feature.implUrls = browserImplUrls;
 }
 
 export default async function (eleventyConfig) {

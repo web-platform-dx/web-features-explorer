@@ -8,11 +8,11 @@
         <span class="date">{% browserVersionRelease browser, version %}</span>
       {% else %}
         <span class="version">❌</span>
-        {% if feature.implUrls[browser.id] and feature.implUrls[browser.id].length %}
+        {% if feature.bugs[browser.id] and feature.bugs[browser.id].length %}
           <span class="bug">
             See
-            {% for implUrl in feature.implUrls[browser.id] %}
-              <a href="{{ implUrl }}">{{ implUrl | replace("https://", "") }}</a>
+            {% for bug in feature.bugs[browser.id] %}
+              <a href="{{ bug }}">{{ bug | replace("https://", "") }}</a>
             {% endfor %}
           </span>
         {% endif %}
