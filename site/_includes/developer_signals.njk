@@ -1,9 +1,16 @@
 {% if feature.developerSignals %}
   <div class="developer-signals feature-box">
-    <h3>Developer signals</h3>
+    <h3>Developer votes</h3>
     <div class="votes">
-      Votes: <strong>{{ feature.developerSignals.votes }}</strong>
+      <a href="{{ feature.developerSignals.url }}">
+        <strong>
+          👍
+          <br>
+          {{ feature.developerSignals.votes }}
+        </strong>
+      </a>
     </div>
-    <p>If you want this feature to be available in all browsers, vote for it by adding a thumbs up reaction (👍) to <a href="{{ feature.developerSignals.url }}">this GitHub issue</a>, and leave a comment with more information.</p>
+    <p>Do you need this feature?<br>
+       Let us know by leaving a 👍 reaction on <a href="{{ feature.developerSignals.url }}">the feedback issue</a>. Don't forget to also leave a comment explaining your specific use case.</p>
   </div>
 {% endif %}
