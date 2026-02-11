@@ -1,6 +1,10 @@
 {
  "compat_features": [
-  "css.at-rules.media.display-mode"
+  "css.at-rules.media.display-mode",
+  "css.at-rules.media.display-mode.browser",
+  "css.at-rules.media.display-mode.fullscreen",
+  "css.at-rules.media.display-mode.minimal-ui",
+  "css.at-rules.media.display-mode.standalone"
  ],
  "description": "The display-mode CSS media query sets styles based on whether the web page is in an ordinary browser tab mode or another mode, such as fullscreen, standalone, or minimal-ui.",
  "description_html": "The <code>display-mode</code> CSS media query sets styles based on whether the web page is in an ordinary <code>browser</code> tab mode or another mode, such as <code>fullscreen</code>, <code>standalone</code>, or <code>minimal-ui</code>.",
@@ -13,8 +17,7 @@
   "https://drafts.csswg.org/mediaqueries-5/#display-modes"
  ],
  "status": {
-  "baseline": "low",
-  "baseline_low_date": "2023-08-01",
+  "baseline": false,
   "by_compat_key": {
    "css.at-rules.media.display-mode": {
     "baseline": "high",
@@ -29,16 +32,56 @@
      "safari": "13",
      "safari_ios": "12.2"
     }
+   },
+   "css.at-rules.media.display-mode.browser": {
+    "baseline": "high",
+    "baseline_high_date": "2026-02-01",
+    "baseline_low_date": "2023-08-01",
+    "support": {
+     "chrome": "42",
+     "chrome_android": "42",
+     "edge": "79",
+     "firefox": "47",
+     "firefox_android": "116",
+     "safari": "13",
+     "safari_ios": "12.2"
+    }
+   },
+   "css.at-rules.media.display-mode.fullscreen": {
+    "baseline": false,
+    "support": {
+     "chrome": "47",
+     "edge": "79",
+     "firefox_android": "116"
+    }
+   },
+   "css.at-rules.media.display-mode.minimal-ui": {
+    "baseline": false,
+    "support": {
+     "chrome": "42",
+     "chrome_android": "42",
+     "edge": "79",
+     "firefox": "57",
+     "firefox_android": "116",
+     "safari": "13"
+    }
+   },
+   "css.at-rules.media.display-mode.standalone": {
+    "baseline": false,
+    "support": {
+     "chrome": "42",
+     "chrome_android": "42",
+     "edge": "79",
+     "firefox": "57",
+     "firefox_android": "116",
+     "safari": "13"
+    }
    }
   },
   "support": {
-   "chrome": "42",
-   "chrome_android": "42",
+   "chrome": "47",
    "edge": "79",
-   "firefox": "47",
-   "firefox_android": "47",
-   "safari": "13",
-   "safari_ios": "12.2"
+   "firefox_android": "116"
   }
  },
  "id": "display-mode",
@@ -110,7 +153,7 @@
  "hasNegativeStandardPosition": false,
  "stateOfSurveys": [],
  "chromeUseCounters": {
-  "percentageOfPageLoad": 0.16379091,
+  "percentageOfPageLoad": 0.15313779,
   "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/199"
  },
  "interop": [],
@@ -118,8 +161,23 @@
   "url": "https://wpt.fyi/results?q=feature:display-mode"
  },
  "developerSignals": null,
- "bugs": {},
- "baselineLowDateAsObject": "2023-08-01T00:00:00.000Z",
- "baselineHighDateAsObject": null,
- "expectedBaselineHighDate": "2026-02-01"
+ "bugs": {
+  "chrome_android": [
+   "https://crbug.com/40831406"
+  ],
+  "oculus": [
+   "https://crbug.com/40831406"
+  ],
+  "opera_android": [
+   "https://crbug.com/40831406"
+  ],
+  "samsunginternet_android": [
+   "https://crbug.com/40831406"
+  ],
+  "webview_android": [
+   "https://crbug.com/40831406"
+  ]
+ },
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null
 }
