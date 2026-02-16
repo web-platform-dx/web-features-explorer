@@ -18,7 +18,7 @@ function isGroup(item) {
           {% else %}
             <ul class="features">
               {% for featureId in item %}
-                {% if not features[featureId].discouraged %}
+                {% if not features[featureId].discouraged and features[featureId].kind === "feature" %}
                   <li>
                     <span class="name">
                       <a href="/features/{{ allFeaturesAsObject[featureId].id | slugify }}/">
