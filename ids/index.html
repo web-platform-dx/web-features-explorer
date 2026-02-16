@@ -4303,6 +4303,23 @@
         </tr>
       
         <tr class="baseline-false">
+          <td>capture-handle</td>
+          <td>Capture Handle</td>
+          <td>The capture handle API allows you to share a custom handle (a string) from a web application being captured by getDisplayMedia() to the capturing web application.</td>
+          <td>
+            <ul>
+              
+                <li>api.MediaDevices.setCaptureHandleConfig</li>
+              
+                <li>api.MediaStreamTrack.capturehandlechange_event</li>
+              
+                <li>api.MediaStreamTrack.getCaptureHandle</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
           <td>capture-stream-audio-video</td>
           <td>captureStream() for &lt;audio&gt; and &lt;video&gt;</td>
           <td>The captureStream() method for &lt;audio&gt; and &lt;video&gt; elements returns a MediaStream for the media element&#39;s content. You can use this to record media or send it elsewhere, such as a canvas or WebRTC connection.</td>
@@ -7781,6 +7798,27 @@
                 <li>api.HTMLDialogElement.closedBy</li>
               
                 <li>html.elements.dialog.closedby</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
+          <td>digital-credentials</td>
+          <td>Digital credentials</td>
+          <td>The digital credentials API issues and requests digital credentials, such as driver&#39;s licenses or ID cards, with the browser or operating system. Digital credentials extend the navigator.credentials credential management API.</td>
+          <td>
+            <ul>
+              
+                <li>api.DigitalCredential</li>
+              
+                <li>api.DigitalCredential.data</li>
+              
+                <li>api.DigitalCredential.protocol</li>
+              
+                <li>api.DigitalCredential.toJSON</li>
+              
+                <li>api.DigitalCredential.userAgentAllowsProtocol_static</li>
               
             </ul>
           </td>
@@ -12635,7 +12673,7 @@
       
         <tr class="baseline-high">
           <td>geolocation</td>
-          <td>Geolocation</td>
+          <td>Geolocation API</td>
           <td>The navigator.geolocation API requests the user&#39;s latitude, longitude, heading, and speed.</td>
           <td>
             <ul>
@@ -12697,6 +12735,17 @@
                 <li>html.elements.iframe.allow.geolocation</li>
               
                 <li>http.headers.Permissions-Policy.geolocation</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
+          <td>geolocation-element</td>
+          <td>&lt;geolocation&gt;</td>
+          <td>The &lt;geolocation&gt; HTML element represents a button that, upon activation, prompts the user to choose whether to grant the page access to geolocation data.</td>
+          <td>
+            <ul>
               
             </ul>
           </td>
@@ -23644,6 +23693,19 @@
           </td>
         </tr>
       
+        <tr class="baseline-false">
+          <td>random-function</td>
+          <td>random()</td>
+          <td>The random() CSS function chooses a random numeric value within a specified range. This allows for dynamic, randomized styling using CSS.</td>
+          <td>
+            <ul>
+              
+                <li>css.types.random</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
         <tr class="baseline-low">
           <td>rcap</td>
           <td>rcap unit</td>
@@ -32188,6 +32250,22 @@
               
                 <li>css.properties.text-wrap</li>
               
+                <li>css.properties.text-wrap-mode</li>
+              
+                <li>css.properties.text-wrap-mode.nowrap</li>
+              
+                <li>css.properties.text-wrap-mode.wrap</li>
+              
+                <li>css.properties.text-wrap-style</li>
+              
+                <li>css.properties.text-wrap-style.auto</li>
+              
+                <li>css.properties.text-wrap-style.stable</li>
+              
+                <li>css.properties.text-wrap.nowrap</li>
+              
+                <li>css.properties.text-wrap.stable</li>
+              
                 <li>css.properties.text-wrap.wrap</li>
               
             </ul>
@@ -32201,37 +32279,9 @@
           <td>
             <ul>
               
+                <li>css.properties.text-wrap-style.balance</li>
+              
                 <li>css.properties.text-wrap.balance</li>
-              
-            </ul>
-          </td>
-        </tr>
-      
-        <tr class="baseline-low">
-          <td>text-wrap-mode</td>
-          <td>text-wrap-mode</td>
-          <td>The text-wrap-mode CSS property sets whether lines may wrap with the values wrap and nowrap. It is a longhand property for both white-space and text-wrap.</td>
-          <td>
-            <ul>
-              
-                <li>css.properties.text-wrap-mode</li>
-              
-                <li>css.properties.text-wrap-mode.nowrap</li>
-              
-                <li>css.properties.text-wrap-mode.wrap</li>
-              
-            </ul>
-          </td>
-        </tr>
-      
-        <tr class="baseline-low">
-          <td>text-wrap-nowrap</td>
-          <td>text-wrap: nowrap</td>
-          <td>The text-wrap: nowrap CSS declaration prevents text breaking into multiple lines. Text that doesn&#39;t fit overflows instead.</td>
-          <td>
-            <ul>
-              
-                <li>css.properties.text-wrap.nowrap</li>
               
             </ul>
           </td>
@@ -32244,41 +32294,9 @@
           <td>
             <ul>
               
-                <li>css.properties.text-wrap.pretty</li>
-              
-            </ul>
-          </td>
-        </tr>
-      
-        <tr class="baseline-low">
-          <td>text-wrap-stable</td>
-          <td>text-wrap: stable</td>
-          <td>The text-wrap: stable CSS declaration wraps text using the default algorithm, but does not change wrapping on earlier lines while the text is being edited.</td>
-          <td>
-            <ul>
-              
-                <li>css.properties.text-wrap.stable</li>
-              
-            </ul>
-          </td>
-        </tr>
-      
-        <tr class="baseline-false">
-          <td>text-wrap-style</td>
-          <td>text-wrap-style</td>
-          <td>The text-wrap-style CSS property sets how lines break in text that overflows the container. It can also be set with the text-wrap shorthand.</td>
-          <td>
-            <ul>
-              
-                <li>css.properties.text-wrap-style</li>
-              
-                <li>css.properties.text-wrap-style.auto</li>
-              
-                <li>css.properties.text-wrap-style.balance</li>
-              
                 <li>css.properties.text-wrap-style.pretty</li>
               
-                <li>css.properties.text-wrap-style.stable</li>
+                <li>css.properties.text-wrap.pretty</li>
               
             </ul>
           </td>
