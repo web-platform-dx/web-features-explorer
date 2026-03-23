@@ -1,5 +1,5 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
-import feedPlugin from "@11ty/eleventy-plugin-rss";
+import feedPlugin, { dateToRfc3339 } from "@11ty/eleventy-plugin-rss";
 import YAML from 'yaml';
 import { browsers, features as initialFeatures, groups } from "web-features";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
@@ -79,7 +79,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(feedPlugin);
 
-  eleventyConfig.addLiquidFilter("dateToRfc3339", feedPlugin.dateToRfc3339);
+  eleventyConfig.addLiquidFilter("dateToRfc3339", dateToRfc3339);
 
   eleventyConfig.addFilter("prettyUrlForAdditionalDiscouragedInfo", function(value) {
     const ghPrefix = "https://github.com/";
