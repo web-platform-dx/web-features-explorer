@@ -1186,6 +1186,21 @@
         </tr>
       
         <tr class="baseline-false">
+          <td>app-migration</td>
+          <td>Web app origin migration</td>
+          <td>The migrate_to and migrate_from web app manifest members move an installed app from one origin to another, within the same site. They preserve the user&#39;s installation settings on the device, like shortcuts.</td>
+          <td>
+            <ul>
+              
+                <li>manifests.webapp.migrate_from</li>
+              
+                <li>manifests.webapp.migrate_to</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
           <td>app-protocol-handlers</td>
           <td>Protocol handlers</td>
           <td>The protocol_handlers web app manifest member registers an installed web app as a handler for a specific protocol. When a user follows a link with the specified protocol, the installed app opens the link.</td>
@@ -7482,6 +7497,8 @@
               
                 <li>api.HTMLTemplateElement.shadowRootSerializable</li>
               
+                <li>api.HTMLTemplateElement.shadowRootSlotAssignment</li>
+              
                 <li>html.elements.template.shadowrootclonable</li>
               
                 <li>html.elements.template.shadowrootdelegatesfocus</li>
@@ -10488,8 +10505,6 @@
               
                 <li>api.Request.headers</li>
               
-                <li>api.Request.integrity</li>
-              
                 <li>api.Request.isHistoryNavigation</li>
               
                 <li>api.Request.json</li>
@@ -13377,6 +13392,8 @@
                 <li>css.properties.hanging-punctuation.allow-end</li>
               
                 <li>css.properties.hanging-punctuation.first</li>
+              
+                <li>css.properties.hanging-punctuation.force-end</li>
               
                 <li>css.properties.hanging-punctuation.last</li>
               
@@ -17225,8 +17242,6 @@
               
                 <li>api.HTMLLinkElement.hreflang</li>
               
-                <li>api.HTMLLinkElement.integrity</li>
-              
                 <li>api.HTMLLinkElement.media</li>
               
                 <li>api.HTMLLinkElement.rel</li>
@@ -17248,8 +17263,6 @@
                 <li>html.elements.link.href</li>
               
                 <li>html.elements.link.hreflang</li>
-              
-                <li>html.elements.link.integrity</li>
               
                 <li>html.elements.link.media</li>
               
@@ -19454,6 +19467,8 @@
           <td>The &lt;meta name=&quot;text-scale&quot; content=&quot;scale&quot; /&gt; HTML element allows the browser&#39;s initial font size to be affected by the operating system text scale settings. The &lt;meta name=&quot;text-scale&quot; content=&quot;legacy&quot; /&gt; element is the default behavior that respects only browser font-size settings.</td>
           <td>
             <ul>
+              
+                <li>html.elements.meta.name.text-scale</li>
               
             </ul>
           </td>
@@ -25722,8 +25737,6 @@
               
                 <li>api.HTMLScriptElement.defer</li>
               
-                <li>api.HTMLScriptElement.integrity</li>
-              
                 <li>api.HTMLScriptElement.src</li>
               
                 <li>api.HTMLScriptElement.supports_static</li>
@@ -25741,8 +25754,6 @@
                 <li>html.elements.script.crossorigin</li>
               
                 <li>html.elements.script.defer</li>
-              
-                <li>html.elements.script.integrity</li>
               
                 <li>html.elements.script.src</li>
               
@@ -28914,6 +28925,25 @@
                 <li>css.properties.grid-template-columns.subgrid</li>
               
                 <li>css.properties.grid-template-rows.subgrid</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-high">
+          <td>subresource-integrity</td>
+          <td>Subresource integrity</td>
+          <td>Subresource integrity verifies that a resource, such as script served from a content delivery network, matches a known cryptographic hash. Also known as SRI.</td>
+          <td>
+            <ul>
+              
+                <li>api.HTMLScriptElement.integrity</li>
+              
+                <li>api.Request.integrity</li>
+              
+                <li>html.elements.link.integrity</li>
+              
+                <li>html.elements.script.integrity</li>
               
             </ul>
           </td>
