@@ -4,16 +4,35 @@
  * @typedef {"1m" | "3m" | "6m" | "1y" | "all"} StatisticsRange
  */
 
+/**
+ * @typedef {object} Snapshot
+ * @property {string} date
+ * @property {number} bcdKeysUnmapped
+ * @property {number} caniuseIdsUnmapped
+ * @property {number} features
+ * @property {number} bcdCoveragePercent
+ * @property {number | null} standardNonDeprecatedBcdCoveragePercent
+ * @property {number} caniuseCoveragePercent
+ */
+
 const statisticsData = document.getElementById("statistics-data");
 const statisticsConfig = document.getElementById("statistics-config");
 const statisticsPage = document.querySelector(".statistics-page");
 const statisticsRanges = /** @type {const} */ (["1m", "3m", "6m", "1y", "all"]);
+
+const ranges = {
+  "1m": 1,
+  "3m": 3,
+  "6m": 6,
+  "1y": 12,
+};
 
 if (!statisticsData || !statisticsConfig || !statisticsPage) {
   throw new Error("Statistics page markup is incomplete.");
 }
 
 let statistics;
+/** @type { typeof import('../../site.config.js').default.strings.statistics } */
 let strings;
 
 try {
@@ -30,6 +49,7 @@ try {
 
 const snapshots = statistics.snapshots;
 const pageStyles = getComputedStyle(statisticsPage);
+// @ts-expect-error - ApexCharts is a global loaded via passthrough
 const ApexCharts = globalThis.ApexCharts;
 const colors = {
   bcdUnmapped: pageStyles.getPropertyValue("--statistics-bcd-unmapped").trim(),
@@ -150,6 +170,7 @@ const datasetDefinitions = [
 
 /**
  * @param {StatisticsRange} range
+ * @returns {Snapshot[]}
  */
 function getSnapshotsForRange(range) {
   if (range === "all") {
@@ -164,12 +185,7 @@ function getSnapshotsForRange(range) {
 
   const latestDate = new Date(latestSnapshot.date);
   const startDate = new Date(latestDate);
-  const ranges = {
-    "1m": 1,
-    "3m": 3,
-    "6m": 6,
-    "1y": 12,
-  };
+
   startDate.setMonth(startDate.getMonth() - ranges[range]);
 
   return snapshots.filter((/** @type {{ date: string }} */ snapshot) => {
@@ -208,10 +224,9 @@ function formatChangeValue(value, definition) {
     return "0";
   }
 
-  const formattedValue =
-    definition.changeSuffix
-      ? Math.abs(value).toFixed(2)
-      : formatNumber(Math.abs(value));
+  const formattedValue = definition.changeSuffix
+    ? Math.abs(value).toFixed(2)
+    : formatNumber(Math.abs(value));
   const sign = value > 0 ? "+" : "-";
   const suffix = definition.changeSuffix ?? "";
 
@@ -341,12 +356,11 @@ function getYAxisOptions(range) {
         style: {
           color: colors.chartText,
         },
-        text:
-          isFirstCountsAxis
-            ? strings.chart.axes.counts
-            : isFirstPercentAxis
-              ? strings.chart.axes.percent
-              : undefined,
+        text: isFirstCountsAxis
+          ? strings.chart.axes.counts
+          : isFirstPercentAxis
+            ? strings.chart.axes.percent
+            : undefined,
       },
     };
   });
@@ -420,11 +434,20 @@ const chart = new ApexCharts(chartContainer, {
     intersect: false,
     shared: true,
     x: {
+      /**
+       *
+       * @param {string} value
+       */
       formatter(value) {
         return new Date(value).toISOString().slice(0, 10);
       },
     },
     y: {
+      /**
+       *
+       * @param {Date} value
+       * @param {{ seriesIndex: number }} options
+       */
       formatter(value, options) {
         if (value === null || typeof value === "undefined") {
           return strings.chart.tooltipMissingValue;
