@@ -5,19 +5,27 @@
  */
 
 const statisticsData = document.getElementById("statistics-data");
+const statisticsConfig = document.getElementById("statistics-config");
 const statisticsPage = document.querySelector(".statistics-page");
 const statisticsRanges = /** @type {const} */ (["1m", "3m", "6m", "1y", "all"]);
 
-if (!statisticsData || !statisticsPage) {
+if (!statisticsData || !statisticsConfig || !statisticsPage) {
   throw new Error("Statistics page markup is incomplete.");
 }
 
 let statistics;
+let strings;
 
 try {
   statistics = JSON.parse(statisticsData.textContent ?? "{}");
 } catch (error) {
   throw new Error("Statistics data is malformed.", { cause: error });
+}
+
+try {
+  strings = JSON.parse(statisticsConfig.textContent ?? "{}");
+} catch (error) {
+  throw new Error("Statistics config is malformed.", { cause: error });
 }
 
 const snapshots = statistics.snapshots;
@@ -64,34 +72,36 @@ const coverageDefaults = {
 const summaryDefinitions = {
   features: {
     format: formatNumber,
-    changeLabel: "features",
-    valueLabel: "features on",
+    changeLabel: strings.summary.features.changeLabel,
+    valueLabel: strings.summary.features.valueLabel,
   },
   bcdKeysUnmapped: {
     format: formatNumber,
-    changeLabel: "keys",
-    valueLabel: "unmapped keys on",
+    changeLabel: strings.summary.bcdKeysUnmapped.changeLabel,
+    valueLabel: strings.summary.bcdKeysUnmapped.valueLabel,
   },
   bcdCoveragePercent: {
     format: formatPercent,
-    changeLabel: "points",
-    valueLabel: "coverage on",
+    changeLabel: strings.summary.bcdCoveragePercent.changeLabel,
+    valueLabel: strings.summary.bcdCoveragePercent.valueLabel,
+    changeSuffix: strings.summary.bcdCoveragePercent.changeSuffix,
   },
   caniuseIdsUnmapped: {
     format: formatNumber,
-    changeLabel: "IDs",
-    valueLabel: "unmapped IDs on",
+    changeLabel: strings.summary.caniuseIdsUnmapped.changeLabel,
+    valueLabel: strings.summary.caniuseIdsUnmapped.valueLabel,
   },
   caniuseCoveragePercent: {
     format: formatPercent,
-    changeLabel: "points",
-    valueLabel: "coverage on",
+    changeLabel: strings.summary.caniuseCoveragePercent.changeLabel,
+    valueLabel: strings.summary.caniuseCoveragePercent.valueLabel,
+    changeSuffix: strings.summary.caniuseCoveragePercent.changeSuffix,
   },
 };
 const datasetDefinitions = [
   {
     ...lineDefaults,
-    label: "Unmapped BCD keys",
+    label: strings.chart.datasets.bcdKeysUnmapped,
     getData: (/** @type {{ bcdKeysUnmapped: number }} */ snapshot) =>
       snapshot.bcdKeysUnmapped,
     borderColor: colors.bcdUnmapped,
@@ -102,7 +112,7 @@ const datasetDefinitions = [
   },
   {
     ...lineDefaults,
-    label: "Unmapped caniuse IDs",
+    label: strings.chart.datasets.caniuseIdsUnmapped,
     getData: (/** @type {{ caniuseIdsUnmapped: number }} */ snapshot) =>
       snapshot.caniuseIdsUnmapped,
     borderColor: colors.caniuseUnmapped,
@@ -113,7 +123,7 @@ const datasetDefinitions = [
   },
   {
     ...lineDefaults,
-    label: "Features",
+    label: strings.chart.datasets.features,
     getData: (/** @type {{ features: number }} */ snapshot) =>
       snapshot.features,
     borderColor: colors.features,
@@ -124,7 +134,7 @@ const datasetDefinitions = [
   },
   {
     ...coverageDefaults,
-    label: "BCD coverage",
+    label: strings.chart.datasets.bcdCoveragePercent,
     getData: (/** @type {{ bcdCoveragePercent: number }} */ snapshot) =>
       snapshot.bcdCoveragePercent,
     borderColor: colors.bcdCoverage,
@@ -136,7 +146,7 @@ const datasetDefinitions = [
   },
   {
     ...coverageDefaults,
-    label: "Standard non-deprecated BCD coverage",
+    label: strings.chart.datasets.standardNonDeprecatedBcdCoveragePercent,
     getData: (
       /** @type {{ standardNonDeprecatedBcdCoveragePercent: number | null }} */ snapshot,
     ) => snapshot.standardNonDeprecatedBcdCoveragePercent,
@@ -150,7 +160,7 @@ const datasetDefinitions = [
   },
   {
     ...coverageDefaults,
-    label: "caniuse coverage",
+    label: strings.chart.datasets.caniuseCoveragePercent,
     getData: (/** @type {{ caniuseCoveragePercent: number }} */ snapshot) =>
       snapshot.caniuseCoveragePercent,
     borderColor: colors.caniuseCoverage,
@@ -215,19 +225,19 @@ function formatPercent(value) {
 
 /**
  * @param {number} value
- * @param {string} label
+ * @param {{ changeLabel: string, changeSuffix?: string }} definition
  */
-function formatChangeValue(value, label) {
+function formatChangeValue(value, definition) {
   if (value === 0) {
     return "0";
   }
 
   const formattedValue =
-    label === "points"
+    definition.changeSuffix
       ? Math.abs(value).toFixed(2)
       : formatNumber(Math.abs(value));
   const sign = value > 0 ? "+" : "-";
-  const suffix = label === "points" ? " pp" : "";
+  const suffix = definition.changeSuffix ?? "";
 
   return `${sign}${formattedValue}${suffix}`;
 }
@@ -262,7 +272,7 @@ function updateSummary(filteredSnapshots) {
     const latestValue = Number(latestSnapshot[key]);
     const delta = latestValue - Number(firstSnapshot[key]);
 
-    value.textContent = formatChangeValue(delta, definition.changeLabel);
+    value.textContent = formatChangeValue(delta, definition);
     change.textContent = `${definition.format(latestValue)} ${definition.valueLabel} ${latestSnapshot.date}`;
     change.dataset.direction = delta > 0 ? "up" : delta < 0 ? "down" : "flat";
   });
@@ -322,11 +332,14 @@ const chart = new Chart(chartCanvas, {
       tooltip: {
         callbacks: {
           label(context) {
-            const suffix = context.dataset.yAxisID === "percent" ? "%" : "";
+            const suffix =
+              context.dataset.yAxisID === "percent"
+                ? strings.chart.percentSuffix
+                : "";
             const value = context.parsed.y;
 
             if (value === null) {
-              return `${context.dataset.label}: n/a`;
+              return `${context.dataset.label}: ${strings.chart.tooltipMissingValue}`;
             }
 
             return `${context.dataset.label}: ${value.toLocaleString("en-US")}${suffix}`;
@@ -343,7 +356,7 @@ const chart = new Chart(chartCanvas, {
         },
         title: {
           display: true,
-          text: "Count",
+          text: strings.chart.axes.counts,
           color: colors.chartText,
         },
         grid: {
@@ -360,7 +373,7 @@ const chart = new Chart(chartCanvas, {
         },
         title: {
           display: true,
-          text: "Coverage (%)",
+          text: strings.chart.axes.percent,
           color: colors.chartText,
         },
         grid: {

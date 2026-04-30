@@ -1,51 +1,54 @@
 ---
-title: Statistics
 layout: layout.njk
 stylesheet: /assets/statistics.css
+eleventyComputed:
+  title: "{{ siteConfig.strings.statistics.title }}"
 ---
 
+{% set statisticsStrings = siteConfig.strings.statistics %}
+
 <main class="statistics-page">
-  <h1>{{ title }}</h1>
+  <h1>{{ statisticsStrings.title }}</h1>
 
-  <p>This page tracks how web-features coverage changes over time for browser-compat-data keys and caniuse IDs.</p>
+  <p>{{ statisticsStrings.intro }}</p>
 
-  <ul class="statistics-summary" aria-label="Latest statistics">
+  <ul class="statistics-summary" aria-label="{{ statisticsStrings.summaryLabel }}">
     <li data-summary-card="features">
-      <span>Features</span>
+      <span>{{ statisticsStrings.summary.features.label }}</span>
       <strong data-summary-value>{{ statistics.latest.features | formatNumber }}</strong>
       <small data-summary-change></small>
     </li>
     <li data-summary-card="bcdKeysUnmapped">
-      <span>Unmapped BCD keys</span>
+      <span>{{ statisticsStrings.summary.bcdKeysUnmapped.label }}</span>
       <strong data-summary-value>{{ statistics.latest.bcdKeysUnmapped | formatNumber }}</strong>
       <small data-summary-change></small>
     </li>
     <li data-summary-card="bcdCoveragePercent">
-      <span>BCD coverage</span>
+      <span>{{ statisticsStrings.summary.bcdCoveragePercent.label }}</span>
       <strong data-summary-value>{{ statistics.latest.bcdCoveragePercent | formatPercent }}</strong>
       <small data-summary-change></small>
     </li>
     <li data-summary-card="caniuseIdsUnmapped">
-      <span>Unmapped caniuse IDs</span>
+      <span>{{ statisticsStrings.summary.caniuseIdsUnmapped.label }}</span>
       <strong data-summary-value>{{ statistics.latest.caniuseIdsUnmapped | formatNumber }}</strong>
       <small data-summary-change></small>
     </li>
     <li data-summary-card="caniuseCoveragePercent">
-      <span>caniuse coverage</span>
+      <span>{{ statisticsStrings.summary.caniuseCoveragePercent.label }}</span>
       <strong data-summary-value>{{ statistics.latest.caniuseCoveragePercent | formatPercent }}</strong>
       <small data-summary-change></small>
     </li>
   </ul>
 
   <section>
-    <h2>Coverage trends</h2>
+    <h2>{{ statisticsStrings.chart.heading }}</h2>
 
-    <div class="statistics-chart-controls" aria-label="Chart time range">
-      <button type="button" data-range="1m" aria-pressed="true">1 month</button>
-      <button type="button" data-range="3m" aria-pressed="false">3 months</button>
-      <button type="button" data-range="6m" aria-pressed="false">6 months</button>
-      <button type="button" data-range="1y" aria-pressed="false">1 year</button>
-      <button type="button" data-range="all" aria-pressed="false">All</button>
+    <div class="statistics-chart-controls" aria-label="{{ statisticsStrings.ranges.label }}">
+      <button type="button" data-range="1m" aria-pressed="true">{{ statisticsStrings.ranges["1m"] }}</button>
+      <button type="button" data-range="3m" aria-pressed="false">{{ statisticsStrings.ranges["3m"] }}</button>
+      <button type="button" data-range="6m" aria-pressed="false">{{ statisticsStrings.ranges["6m"] }}</button>
+      <button type="button" data-range="1y" aria-pressed="false">{{ statisticsStrings.ranges["1y"] }}</button>
+      <button type="button" data-range="all" aria-pressed="false">{{ statisticsStrings.ranges.all }}</button>
     </div>
 
     <div class="statistics-chart">
@@ -54,27 +57,27 @@ stylesheet: /assets/statistics.css
   </section>
 
   <details class="statistics-table-details">
-    <summary>Data table</summary>
+    <summary>{{ statisticsStrings.table.summary }}</summary>
 
     <section>
-      <h2>Data table</h2>
+      <h2>{{ statisticsStrings.table.heading }}</h2>
 
       <div class="statistics-table-scroll">
         <table class="statistics-table">
-          <caption>web-features coverage statistics over time</caption>
+          <caption>{{ statisticsStrings.table.caption }}</caption>
           <thead>
             <tr>
-              <th scope="col">Date</th>
-              <th scope="col">Features</th>
-              <th scope="col">Mapped BCD keys</th>
-              <th scope="col">Unmapped BCD keys</th>
-              <th scope="col">BCD coverage</th>
-              <th scope="col">Mapped standard non-deprecated BCD keys</th>
-              <th scope="col">Unmapped standard non-deprecated BCD keys</th>
-              <th scope="col">Standard non-deprecated BCD coverage</th>
-              <th scope="col">Mapped caniuse IDs</th>
-              <th scope="col">Unmapped caniuse IDs</th>
-              <th scope="col">caniuse coverage</th>
+              <th scope="col">{{ statisticsStrings.table.columns.date }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.features }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.bcdKeysMapped }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.bcdKeysUnmapped }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.bcdCoveragePercent }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.standardNonDeprecatedBcdKeysMapped }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.standardNonDeprecatedBcdKeysUnmapped }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.standardNonDeprecatedBcdCoveragePercent }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.caniuseIdsMapped }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.caniuseIdsUnmapped }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.caniuseCoveragePercent }}</th>
             </tr>
           </thead>
           <tbody>
@@ -82,13 +85,13 @@ stylesheet: /assets/statistics.css
               <tr>
                 <th scope="row">{{ snapshot.date }}</th>
                 <td>{{ snapshot.features | formatNumber }}</td>
-                <td>{{ snapshot.bcdKeysMapped | formatNumber }} of {{ snapshot.bcdKeysTotal | formatNumber }}</td>
+                <td>{{ snapshot.bcdKeysMapped | formatNumber }}{{ statisticsStrings.table.mappedCountSeparator }}{{ snapshot.bcdKeysTotal | formatNumber }}</td>
                 <td>{{ snapshot.bcdKeysUnmapped | formatNumber }}</td>
                 <td>{{ snapshot.bcdCoveragePercent | formatPercent }}</td>
-                <td>{{ snapshot.standardNonDeprecatedBcdKeysMapped | formatNumber }}{% if snapshot.standardNonDeprecatedBcdKeysTotal %} of {{ snapshot.standardNonDeprecatedBcdKeysTotal | formatNumber }}{% endif %}</td>
+                <td>{{ snapshot.standardNonDeprecatedBcdKeysMapped | formatNumber }}{% if snapshot.standardNonDeprecatedBcdKeysTotal %}{{ statisticsStrings.table.mappedCountSeparator }}{{ snapshot.standardNonDeprecatedBcdKeysTotal | formatNumber }}{% endif %}</td>
                 <td>{{ snapshot.standardNonDeprecatedBcdKeysUnmapped | formatNumber }}</td>
                 <td>{{ snapshot.standardNonDeprecatedBcdCoveragePercent | formatPercent }}</td>
-                <td>{{ snapshot.caniuseIdsMapped | formatNumber }} of {{ snapshot.caniuseIdsTotal | formatNumber }}</td>
+                <td>{{ snapshot.caniuseIdsMapped | formatNumber }}{{ statisticsStrings.table.mappedCountSeparator }}{{ snapshot.caniuseIdsTotal | formatNumber }}</td>
                 <td>{{ snapshot.caniuseIdsUnmapped | formatNumber }}</td>
                 <td>{{ snapshot.caniuseCoveragePercent | formatPercent }}</td>
               </tr>
@@ -99,9 +102,10 @@ stylesheet: /assets/statistics.css
     </section>
   </details>
 
-  <p class="statistics-source">The underlying data is available in <a href="/assets/statistics.json"><code>statistics.json</code></a>. Historical rows before this page was added were seeded from weekly report comments in <a href="https://github.com/web-platform-dx/web-features/issues/788">web-features issue #788</a>; new rows are generated from installed package data when the site rebuilds.</p>
+  <p class="statistics-source">{{ statisticsStrings.source.beforeLink }}<a href="/assets/statistics.json"><code>{{ statisticsStrings.source.linkText }}</code></a>{{ statisticsStrings.source.betweenLinks }}<a href="https://github.com/web-platform-dx/web-features/issues/788">{{ statisticsStrings.source.issueLinkText }}</a>{{ statisticsStrings.source.afterIssueLink }}</p>
 
   <script id="statistics-data" type="application/json">{{ statistics | stringify | safe }}</script>
+  <script id="statistics-config" type="application/json">{{ statisticsStrings | stringify | safe }}</script>
   <script src="/assets/chart.js"></script>
   <script src="/assets/statistics.js"></script>
 </main>
