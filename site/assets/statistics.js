@@ -30,9 +30,7 @@ try {
 
 const snapshots = statistics.snapshots;
 const pageStyles = getComputedStyle(statisticsPage);
-const Chart = /** @type {{ Chart: typeof import("chart.js").Chart }} */ (
-  /** @type {unknown} */ (globalThis)
-).Chart;
+const ApexCharts = globalThis.ApexCharts;
 const colors = {
   bcdUnmapped: pageStyles.getPropertyValue("--statistics-bcd-unmapped").trim(),
   caniuseUnmapped: pageStyles
@@ -58,16 +56,13 @@ function transparent(color) {
 }
 
 const lineDefaults = {
-  borderWidth: 3,
-  pointBorderWidth: 2,
-  pointRadius: 4,
-  pointHoverRadius: 8,
-  tension: 0,
+  strokeWidth: 3,
+  markerSize: 4,
+  markerShape: "circle",
 };
 const coverageDefaults = {
   ...lineDefaults,
-  pointRadius: 7,
-  pointHoverRadius: 11,
+  markerSize: 7,
 };
 const summaryDefinitions = {
   features: {
@@ -104,45 +99,33 @@ const datasetDefinitions = [
     label: strings.chart.datasets.bcdKeysUnmapped,
     getData: (/** @type {{ bcdKeysUnmapped: number }} */ snapshot) =>
       snapshot.bcdKeysUnmapped,
-    borderColor: colors.bcdUnmapped,
-    backgroundColor: transparent(colors.bcdUnmapped),
-    pointBorderColor: colors.bcdUnmapped,
-    pointBackgroundColor: transparent(colors.bcdUnmapped),
-    yAxisID: "counts",
+    color: colors.bcdUnmapped,
+    yAxis: "counts",
   },
   {
     ...lineDefaults,
     label: strings.chart.datasets.caniuseIdsUnmapped,
     getData: (/** @type {{ caniuseIdsUnmapped: number }} */ snapshot) =>
       snapshot.caniuseIdsUnmapped,
-    borderColor: colors.caniuseUnmapped,
-    backgroundColor: transparent(colors.caniuseUnmapped),
-    pointBorderColor: colors.caniuseUnmapped,
-    pointBackgroundColor: transparent(colors.caniuseUnmapped),
-    yAxisID: "counts",
+    color: colors.caniuseUnmapped,
+    yAxis: "counts",
   },
   {
     ...lineDefaults,
     label: strings.chart.datasets.features,
     getData: (/** @type {{ features: number }} */ snapshot) =>
       snapshot.features,
-    borderColor: colors.features,
-    backgroundColor: transparent(colors.features),
-    pointBorderColor: colors.features,
-    pointBackgroundColor: transparent(colors.features),
-    yAxisID: "counts",
+    color: colors.features,
+    yAxis: "counts",
   },
   {
     ...coverageDefaults,
     label: strings.chart.datasets.bcdCoveragePercent,
     getData: (/** @type {{ bcdCoveragePercent: number }} */ snapshot) =>
       snapshot.bcdCoveragePercent,
-    borderColor: colors.bcdCoverage,
-    backgroundColor: transparent(colors.bcdCoverage),
-    pointBorderColor: colors.bcdCoverage,
-    pointBackgroundColor: transparent(colors.bcdCoverage),
-    pointStyle: "rectRot",
-    yAxisID: "percent",
+    color: colors.bcdCoverage,
+    markerShape: "diamond",
+    yAxis: "percent",
   },
   {
     ...coverageDefaults,
@@ -150,25 +133,18 @@ const datasetDefinitions = [
     getData: (
       /** @type {{ standardNonDeprecatedBcdCoveragePercent: number | null }} */ snapshot,
     ) => snapshot.standardNonDeprecatedBcdCoveragePercent,
-    borderColor: colors.standardBcdCoverage,
-    backgroundColor: transparent(colors.standardBcdCoverage),
-    pointBorderColor: colors.standardBcdCoverage,
-    pointBackgroundColor: transparent(colors.standardBcdCoverage),
-    pointStyle: "triangle",
-    spanGaps: true,
-    yAxisID: "percent",
+    color: colors.standardBcdCoverage,
+    markerShape: "triangle",
+    yAxis: "percent",
   },
   {
     ...coverageDefaults,
     label: strings.chart.datasets.caniuseCoveragePercent,
     getData: (/** @type {{ caniuseCoveragePercent: number }} */ snapshot) =>
       snapshot.caniuseCoveragePercent,
-    borderColor: colors.caniuseCoverage,
-    backgroundColor: transparent(colors.caniuseCoverage),
-    pointBorderColor: colors.caniuseCoverage,
-    pointBackgroundColor: transparent(colors.caniuseCoverage),
-    pointStyle: "star",
-    yAxisID: "percent",
+    color: colors.caniuseCoverage,
+    markerShape: "star",
+    yAxis: "percent",
   },
 ];
 
@@ -281,119 +257,202 @@ function updateSummary(filteredSnapshots) {
 /**
  * @param {StatisticsRange} range
  */
-function getChartData(range) {
+function getChartSeries(range) {
   const filteredSnapshots = getSnapshotsForRange(range);
 
+  return datasetDefinitions.map((definition) => ({
+    name: definition.label,
+    data: filteredSnapshots.map((snapshot) => ({
+      x: snapshot.date,
+      y: definition.getData(snapshot),
+    })),
+  }));
+}
+
+/**
+ * @param {StatisticsRange} range
+ */
+function getXAxisRange(range) {
+  const filteredSnapshots = getSnapshotsForRange(range);
+  const firstSnapshot = filteredSnapshots[0];
+  const latestSnapshot = filteredSnapshots.at(-1);
+
+  if (!firstSnapshot || !latestSnapshot) {
+    return {};
+  }
+
   return {
-    labels: filteredSnapshots.map(
-      (/** @type {{ date: string }} */ snapshot) => snapshot.date,
-    ),
-    datasets: datasetDefinitions.map(({ getData, ...definition }) => {
-      return {
-        ...definition,
-        data: filteredSnapshots.map(getData),
-      };
-    }),
+    max: new Date(latestSnapshot.date).getTime(),
+    min: new Date(firstSnapshot.date).getTime(),
   };
 }
 
-const chartCanvas = /** @type {HTMLCanvasElement | null} */ (
+/**
+ * @param {number} value
+ */
+function getRoundedAxisMax(value) {
+  if (value <= 0) {
+    return 0;
+  }
+
+  const magnitude = 10 ** Math.floor(Math.log10(value));
+  const step = magnitude / 2;
+
+  return Math.ceil(value / step) * step;
+}
+
+/**
+ * @param {StatisticsRange} range
+ */
+function getYAxisOptions(range) {
+  const filteredSnapshots = getSnapshotsForRange(range);
+  const countMax = getRoundedAxisMax(
+    Math.max(
+      ...filteredSnapshots.flatMap((snapshot) =>
+        datasetDefinitions
+          .filter((definition) => definition.yAxis === "counts")
+          .map((definition) => Number(definition.getData(snapshot) ?? 0)),
+      ),
+    ),
+  );
+
+  return datasetDefinitions.map((definition, index) => {
+    const isCountsAxis = definition.yAxis === "counts";
+    const isFirstCountsAxis =
+      index ===
+      datasetDefinitions.findIndex((entry) => entry.yAxis === "counts");
+    const isFirstPercentAxis =
+      index ===
+      datasetDefinitions.findIndex((entry) => entry.yAxis === "percent");
+
+    return {
+      labels: {
+        show: isFirstCountsAxis || isFirstPercentAxis,
+        style: {
+          colors: colors.chartText,
+        },
+      },
+      max: isCountsAxis ? countMax : 100,
+      min: 0,
+      opposite: !isCountsAxis,
+      seriesName: definition.label,
+      show: isFirstCountsAxis || isFirstPercentAxis,
+      title: {
+        style: {
+          color: colors.chartText,
+        },
+        text:
+          isFirstCountsAxis
+            ? strings.chart.axes.counts
+            : isFirstPercentAxis
+              ? strings.chart.axes.percent
+              : undefined,
+      },
+    };
+  });
+}
+
+const chartContainer = /** @type {HTMLElement | null} */ (
   document.getElementById("statistics-chart")
 );
 
-if (!chartCanvas) {
-  throw new Error("Statistics chart canvas is missing.");
+if (!chartContainer) {
+  throw new Error("Statistics chart container is missing.");
 }
 
-const chart = new Chart(chartCanvas, {
-  type: "line",
-  data: getChartData("1m"),
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    interaction: {
-      mode: "index",
-      intersect: false,
-    },
-    plugins: {
-      legend: {
-        position: "top",
-        labels: {
-          boxHeight: 14,
-          boxWidth: 42,
-          color: colors.chartText,
-          font: {
-            size: 14,
-          },
-          padding: 16,
-          usePointStyle: true,
-        },
-      },
-      tooltip: {
-        callbacks: {
-          label(context) {
-            const suffix =
-              context.dataset.yAxisID === "percent"
-                ? strings.chart.percentSuffix
-                : "";
-            const value = context.parsed.y;
+if (!ApexCharts) {
+  throw new Error("ApexCharts is missing.");
+}
 
-            if (value === null) {
-              return `${context.dataset.label}: ${strings.chart.tooltipMissingValue}`;
-            }
-
-            return `${context.dataset.label}: ${value.toLocaleString("en-US")}${suffix}`;
-          },
-        },
+const chart = new ApexCharts(chartContainer, {
+  chart: {
+    animations: {
+      enabled: false,
+    },
+    height: "100%",
+    toolbar: {
+      show: false,
+    },
+    type: "line",
+    width: "100%",
+    zoom: {
+      enabled: false,
+    },
+  },
+  colors: datasetDefinitions.map((definition) => definition.color),
+  dataLabels: {
+    enabled: false,
+  },
+  grid: {
+    borderColor: colors.chartGrid,
+  },
+  legend: {
+    fontSize: "14px",
+    labels: {
+      colors: colors.chartText,
+    },
+    markers: {
+      shape: datasetDefinitions.map((definition) => definition.markerShape),
+      size: 7,
+    },
+    position: "top",
+  },
+  markers: {
+    colors: datasetDefinitions.map((definition) =>
+      transparent(definition.color),
+    ),
+    hover: {
+      sizeOffset: 4,
+    },
+    shape: datasetDefinitions.map((definition) => definition.markerShape),
+    showNullDataPoints: false,
+    size: datasetDefinitions.map((definition) => definition.markerSize),
+    strokeColors: datasetDefinitions.map((definition) => definition.color),
+    strokeWidth: 2,
+  },
+  series: getChartSeries("1m"),
+  stroke: {
+    curve: "straight",
+    width: datasetDefinitions.map((definition) => definition.strokeWidth),
+  },
+  tooltip: {
+    hideEmptySeries: false,
+    intersect: false,
+    shared: true,
+    x: {
+      formatter(value) {
+        return new Date(value).toISOString().slice(0, 10);
       },
     },
-    scales: {
-      counts: {
-        type: "linear",
-        position: "left",
-        ticks: {
-          color: colors.chartText,
-        },
-        title: {
-          display: true,
-          text: strings.chart.axes.counts,
-          color: colors.chartText,
-        },
-        grid: {
-          color: colors.chartGrid,
-        },
-      },
-      percent: {
-        type: "linear",
-        position: "right",
-        min: 0,
-        max: 100,
-        ticks: {
-          color: colors.chartText,
-        },
-        title: {
-          display: true,
-          text: strings.chart.axes.percent,
-          color: colors.chartText,
-        },
-        grid: {
-          drawOnChartArea: false,
-        },
-      },
-      x: {
-        ticks: {
-          color: colors.chartText,
-          maxRotation: 0,
-          autoSkipPadding: 24,
-        },
-        grid: {
-          color: colors.chartGrid,
-        },
+    y: {
+      formatter(value, options) {
+        if (value === null || typeof value === "undefined") {
+          return strings.chart.tooltipMissingValue;
+        }
+
+        const definition = datasetDefinitions[options.seriesIndex];
+        const suffix =
+          definition?.yAxis === "percent" ? strings.chart.percentSuffix : "";
+
+        return `${value.toLocaleString("en-US")}${suffix}`;
       },
     },
   },
+  xaxis: {
+    labels: {
+      datetimeUTC: false,
+      rotate: 0,
+      style: {
+        colors: colors.chartText,
+      },
+    },
+    ...getXAxisRange("1m"),
+    type: "datetime",
+  },
+  yaxis: getYAxisOptions("1m"),
 });
 
+chart.render();
 updateSummary(getSnapshotsForRange("1m"));
 
 const rangeControls = document.querySelector(".statistics-chart-controls");
@@ -432,7 +491,10 @@ rangeControls.addEventListener("click", (event) => {
   }
 
   updateSelectedRangeButton(button);
-  chart.data = getChartData(range);
+  chart.updateOptions({
+    series: getChartSeries(range),
+    xaxis: getXAxisRange(range),
+    yaxis: getYAxisOptions(range),
+  });
   updateSummary(getSnapshotsForRange(range));
-  chart.update();
 });
