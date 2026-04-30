@@ -1,0 +1,107 @@
+---
+title: Statistics
+layout: layout.njk
+stylesheet: /assets/statistics.css
+---
+
+<main class="statistics-page">
+  <h1>{{ title }}</h1>
+
+  <p>This page tracks how web-features coverage changes over time for browser-compat-data keys and caniuse IDs.</p>
+
+  <ul class="statistics-summary" aria-label="Latest statistics">
+    <li data-summary-card="features">
+      <span>Features</span>
+      <strong data-summary-value>{{ statistics.latest.features | formatNumber }}</strong>
+      <small data-summary-change></small>
+    </li>
+    <li data-summary-card="bcdKeysUnmapped">
+      <span>Unmapped BCD keys</span>
+      <strong data-summary-value>{{ statistics.latest.bcdKeysUnmapped | formatNumber }}</strong>
+      <small data-summary-change></small>
+    </li>
+    <li data-summary-card="bcdCoveragePercent">
+      <span>BCD coverage</span>
+      <strong data-summary-value>{{ statistics.latest.bcdCoveragePercent | formatPercent }}</strong>
+      <small data-summary-change></small>
+    </li>
+    <li data-summary-card="caniuseIdsUnmapped">
+      <span>Unmapped caniuse IDs</span>
+      <strong data-summary-value>{{ statistics.latest.caniuseIdsUnmapped | formatNumber }}</strong>
+      <small data-summary-change></small>
+    </li>
+    <li data-summary-card="caniuseCoveragePercent">
+      <span>caniuse coverage</span>
+      <strong data-summary-value>{{ statistics.latest.caniuseCoveragePercent | formatPercent }}</strong>
+      <small data-summary-change></small>
+    </li>
+  </ul>
+
+  <section>
+    <h2>Coverage trends</h2>
+
+    <div class="statistics-chart-controls" aria-label="Chart time range">
+      <button type="button" data-range="1m" aria-pressed="true">1 month</button>
+      <button type="button" data-range="3m" aria-pressed="false">3 months</button>
+      <button type="button" data-range="6m" aria-pressed="false">6 months</button>
+      <button type="button" data-range="1y" aria-pressed="false">1 year</button>
+      <button type="button" data-range="all" aria-pressed="false">All</button>
+    </div>
+
+    <div class="statistics-chart">
+      <canvas id="statistics-chart"></canvas>
+    </div>
+  </section>
+
+  <details class="statistics-table-details">
+    <summary>Data table</summary>
+
+    <section>
+      <h2>Data table</h2>
+
+      <div class="statistics-table-scroll">
+        <table class="statistics-table">
+          <caption>web-features coverage statistics over time</caption>
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Features</th>
+              <th scope="col">Mapped BCD keys</th>
+              <th scope="col">Unmapped BCD keys</th>
+              <th scope="col">BCD coverage</th>
+              <th scope="col">Mapped standard non-deprecated BCD keys</th>
+              <th scope="col">Unmapped standard non-deprecated BCD keys</th>
+              <th scope="col">Standard non-deprecated BCD coverage</th>
+              <th scope="col">Mapped caniuse IDs</th>
+              <th scope="col">Unmapped caniuse IDs</th>
+              <th scope="col">caniuse coverage</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for snapshot in statistics.snapshots %}
+              <tr>
+                <th scope="row">{{ snapshot.date }}</th>
+                <td>{{ snapshot.features | formatNumber }}</td>
+                <td>{{ snapshot.bcdKeysMapped | formatNumber }} of {{ snapshot.bcdKeysTotal | formatNumber }}</td>
+                <td>{{ snapshot.bcdKeysUnmapped | formatNumber }}</td>
+                <td>{{ snapshot.bcdCoveragePercent | formatPercent }}</td>
+                <td>{{ snapshot.standardNonDeprecatedBcdKeysMapped | formatNumber }}{% if snapshot.standardNonDeprecatedBcdKeysTotal %} of {{ snapshot.standardNonDeprecatedBcdKeysTotal | formatNumber }}{% endif %}</td>
+                <td>{{ snapshot.standardNonDeprecatedBcdKeysUnmapped | formatNumber }}</td>
+                <td>{{ snapshot.standardNonDeprecatedBcdCoveragePercent | formatPercent }}</td>
+                <td>{{ snapshot.caniuseIdsMapped | formatNumber }} of {{ snapshot.caniuseIdsTotal | formatNumber }}</td>
+                <td>{{ snapshot.caniuseIdsUnmapped | formatNumber }}</td>
+                <td>{{ snapshot.caniuseCoveragePercent | formatPercent }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </details>
+
+  <p class="statistics-source">The underlying data is available in <a href="/assets/statistics.json"><code>statistics.json</code></a>. Historical rows before this page was added were seeded from weekly report comments in <a href="https://github.com/web-platform-dx/web-features/issues/788">web-features issue #788</a>; new rows are generated from installed package data when the site rebuilds.</p>
+
+  <script id="statistics-data" type="application/json">{{ statistics | stringify | safe }}</script>
+  <script src="/assets/chart.js"></script>
+  <script src="/assets/statistics.js"></script>
+</main>

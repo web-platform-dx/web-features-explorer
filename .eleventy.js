@@ -1,5 +1,6 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import feedPlugin, { dateToRfc3339 } from "@11ty/eleventy-plugin-rss";
+import fs from "node:fs/promises";
 import YAML from 'yaml';
 import { browsers, features as initialFeatures, groups } from "web-features";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
@@ -109,6 +110,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/assets");
   eleventyConfig.addPassthroughCopy({ "node_modules/apexcharts/dist/apexcharts.css": "assets/apexcharts.css" });
   eleventyConfig.addPassthroughCopy({ "node_modules/apexcharts/dist/apexcharts.min.js": "assets/apexcharts.js" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/chart.js/dist/chart.umd.js": "assets/chart.js" });
 
   eleventyConfig.addDataExtension("yml,yaml", (contents, filePath) => {
     return YAML.parse(contents);
@@ -144,6 +146,18 @@ export default async function (eleventyConfig) {
     return JSON.stringify(data, null, " ", 2)
   })
 
+  eleventyConfig.addFilter("formatNumber", (value) => {
+    return value === null || value === undefined
+      ? "Not tracked"
+      : value.toLocaleString("en-US");
+  });
+
+  eleventyConfig.addFilter("formatPercent", (value) => {
+    return value === null || value === undefined
+      ? "Not tracked"
+      : `${value.toFixed(2)}%`;
+  });
+
   eleventyConfig.addGlobalData("versions", async () => {
     const { default: webFeaturesPackageJson } = await import(
       "./node_modules/web-features/package.json",
@@ -157,6 +171,12 @@ export default async function (eleventyConfig) {
       webFeatures: webFeaturesPackageJson.version,
       bcd: bcd.__meta.version,
     };
+  });
+
+  eleventyConfig.addGlobalData("statistics", async () => {
+    return JSON.parse(
+      await fs.readFile(new URL("./site/assets/statistics.json", import.meta.url)),
+    );
   });
 
   eleventyConfig.addGlobalData("browsers", () => {
