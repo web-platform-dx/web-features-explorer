@@ -21,9 +21,11 @@
   "api.Request",
   "api.Request.Request",
   "api.Request.Request.cross_origin_stripped",
-  "api.Request.Request.init_keepalive_parameter",
-  "api.Request.Request.init_referrer_parameter",
-  "api.Request.Request.request_body_readablestream",
+  "api.Request.Request.options_parameter",
+  "api.Request.Request.options_parameter.body",
+  "api.Request.Request.options_parameter.body.accepts_readablestream",
+  "api.Request.Request.options_parameter.keepalive",
+  "api.Request.Request.options_parameter.referrer",
   "api.Request.Request.response_body_readablestream",
   "api.Request.arrayBuffer",
   "api.Request.blob",
@@ -74,8 +76,10 @@
   "api.fetch",
   "api.fetch.authorization_removed_cross_origin",
   "api.fetch.blob_data_support",
-  "api.fetch.init_keepalive_parameter",
-  "api.fetch.init_referrerPolicy_parameter"
+  "api.fetch.options_parameter",
+  "api.fetch.options_parameter.body",
+  "api.fetch.options_parameter.keepalive",
+  "api.fetch.options_parameter.referrerPolicy"
  ],
  "description": "The fetch() method makes asynchronous HTTP requests.",
  "description_html": "The <code>fetch()</code> method makes asynchronous HTTP requests.",
@@ -344,7 +348,43 @@
      "safari_ios": "10.3"
     }
    },
-   "api.Request.Request.init_keepalive_parameter": {
+   "api.Request.Request.options_parameter": {
+    "baseline": "high",
+    "baseline_high_date": "2019-09-27",
+    "baseline_low_date": "2017-03-27",
+    "support": {
+     "chrome": "42",
+     "chrome_android": "42",
+     "edge": "14",
+     "firefox": "39",
+     "firefox_android": "39",
+     "safari": "10.1",
+     "safari_ios": "10.3"
+    }
+   },
+   "api.Request.Request.options_parameter.body": {
+    "baseline": "high",
+    "baseline_high_date": "2019-09-27",
+    "baseline_low_date": "2017-03-27",
+    "support": {
+     "chrome": "42",
+     "chrome_android": "42",
+     "edge": "14",
+     "firefox": "39",
+     "firefox_android": "39",
+     "safari": "10.1",
+     "safari_ios": "10.3"
+    }
+   },
+   "api.Request.Request.options_parameter.body.accepts_readablestream": {
+    "baseline": false,
+    "support": {
+     "chrome": "105",
+     "chrome_android": "105",
+     "edge": "105"
+    }
+   },
+   "api.Request.Request.options_parameter.keepalive": {
     "baseline": "low",
     "baseline_low_date": "2024-11-26",
     "support": {
@@ -357,7 +397,7 @@
      "safari_ios": "13"
     }
    },
-   "api.Request.Request.init_referrer_parameter": {
+   "api.Request.Request.options_parameter.referrer": {
     "baseline": "high",
     "baseline_high_date": "2019-10-05",
     "baseline_low_date": "2017-04-05",
@@ -369,14 +409,6 @@
      "firefox_android": "47",
      "safari": "10.1",
      "safari_ios": "10.3"
-    }
-   },
-   "api.Request.Request.request_body_readablestream": {
-    "baseline": false,
-    "support": {
-     "chrome": "105",
-     "chrome_android": "105",
-     "edge": "105"
     }
    },
    "api.Request.Request.response_body_readablestream": {
@@ -1048,7 +1080,35 @@
      "safari_ios": "10.3"
     }
    },
-   "api.fetch.init_keepalive_parameter": {
+   "api.fetch.options_parameter": {
+    "baseline": "high",
+    "baseline_high_date": "2019-09-27",
+    "baseline_low_date": "2017-03-27",
+    "support": {
+     "chrome": "42",
+     "chrome_android": "42",
+     "edge": "14",
+     "firefox": "39",
+     "firefox_android": "39",
+     "safari": "10.1",
+     "safari_ios": "10.3"
+    }
+   },
+   "api.fetch.options_parameter.body": {
+    "baseline": "high",
+    "baseline_high_date": "2019-09-27",
+    "baseline_low_date": "2017-03-27",
+    "support": {
+     "chrome": "42",
+     "chrome_android": "42",
+     "edge": "14",
+     "firefox": "39",
+     "firefox_android": "39",
+     "safari": "10.1",
+     "safari_ios": "10.3"
+    }
+   },
+   "api.fetch.options_parameter.keepalive": {
     "baseline": "low",
     "baseline_low_date": "2024-11-26",
     "support": {
@@ -1061,7 +1121,7 @@
      "safari_ios": "13"
     }
    },
-   "api.fetch.init_referrerPolicy_parameter": {
+   "api.fetch.options_parameter.referrerPolicy": {
     "baseline": false,
     "support": {
      "chrome": "52",
@@ -1154,9 +1214,11 @@
  "developerSignals": null,
  "bugs": {
   "firefox": [
+   "https://bugzil.la/1387483",
    "https://bugzil.la/1792434"
   ],
   "firefox_android": [
+   "https://bugzil.la/1387483",
    "https://bugzil.la/1792434"
   ],
   "safari": [
