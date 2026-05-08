@@ -4,26 +4,21 @@
   "api.ReportingObserver.ReportingObserver",
   "api.ReportingObserver.ReportingObserver.options_parameter",
   "api.ReportingObserver.ReportingObserver.options_parameter.types_property",
-  "api.ReportingObserver.ReportingObserver.options_parameter.types_property.coep",
-  "api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation",
-  "api.ReportingObserver.ReportingObserver.options_parameter.types_property.deprecation",
-  "api.ReportingObserver.ReportingObserver.options_parameter.types_property.integrity-violation",
-  "api.ReportingObserver.ReportingObserver.options_parameter.types_property.intervention",
   "api.ReportingObserver.disconnect",
   "api.ReportingObserver.observe",
   "api.ReportingObserver.takeRecords",
   "api.ReportingObserver.worker_support",
   "http.headers.Reporting-Endpoints"
  ],
- "description": "The Reporting-Endpoints HTTP header and ReportingObserver() API send reports of Content Security Policy (CSP) violations, Permissions-Policy violations, deprecated feature usage, browser interventions, and crashes to a nominated URL or callback function.",
- "description_html": "The <code>Reporting-Endpoints</code> HTTP header and <code>ReportingObserver()</code> API send reports of Content Security Policy (CSP) violations, Permissions-Policy violations, deprecated feature usage, browser interventions, and crashes to a nominated URL or callback function.",
+ "description": "The Reporting-Endpoints HTTP header and ReportingObserver() API send selected reports, such as Content Security Policy (CSP) violation reports or crash reports, to a nominated URL or callback function.",
+ "description_html": "The <code>Reporting-Endpoints</code> HTTP header and <code>ReportingObserver()</code> API send selected reports, such as Content Security Policy (CSP) violation reports or crash reports, to a nominated URL or callback function.",
+ "group": [
+  "reporting"
+ ],
  "kind": "feature",
  "name": "Reporting API",
  "spec": [
-  "https://w3c.github.io/reporting/",
-  "https://wicg.github.io/intervention-reporting/",
-  "https://wicg.github.io/deprecation-reporting/",
-  "https://w3c.github.io/webappsec-csp/#reporting"
+  "https://w3c.github.io/reporting/"
  ],
  "status": {
   "baseline": "low",
@@ -79,53 +74,6 @@
      "firefox_android": "149",
      "safari": "16.4",
      "safari_ios": "16.4"
-    }
-   },
-   "api.ReportingObserver.ReportingObserver.options_parameter.types_property.coep": {
-    "baseline": false,
-    "support": {
-     "chrome": "69",
-     "chrome_android": "69",
-     "edge": "79"
-    }
-   },
-   "api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation": {
-    "baseline": "low",
-    "baseline_low_date": "2026-03-24",
-    "support": {
-     "chrome": "74",
-     "chrome_android": "74",
-     "edge": "79",
-     "firefox": "149",
-     "firefox_android": "149",
-     "safari": "18.4",
-     "safari_ios": "18.4"
-    }
-   },
-   "api.ReportingObserver.ReportingObserver.options_parameter.types_property.deprecation": {
-    "baseline": false,
-    "support": {
-     "chrome": "69",
-     "chrome_android": "69",
-     "edge": "79"
-    }
-   },
-   "api.ReportingObserver.ReportingObserver.options_parameter.types_property.integrity-violation": {
-    "baseline": false,
-    "support": {
-     "chrome": "138",
-     "chrome_android": "138",
-     "edge": "138",
-     "firefox": "149",
-     "firefox_android": "149"
-    }
-   },
-   "api.ReportingObserver.ReportingObserver.options_parameter.types_property.intervention": {
-    "baseline": false,
-    "support": {
-     "chrome": "69",
-     "chrome_android": "69",
-     "edge": "79"
     }
    },
    "api.ReportingObserver.disconnect": {
@@ -202,7 +150,9 @@
   }
  },
  "id": "reporting",
- "groups": [],
+ "groups": [
+  "reporting"
+ ],
  "specs": [
   {
    "url": "https://w3c.github.io/reporting/",
@@ -251,139 +201,6 @@
     ]
    },
    "fragment": null
-  },
-  {
-   "url": "https://wicg.github.io/intervention-reporting/",
-   "seriesComposition": "full",
-   "shortname": "intervention-reporting",
-   "series": {
-    "shortname": "intervention-reporting",
-    "currentSpecification": "intervention-reporting",
-    "title": "Intervention Reporting",
-    "shortTitle": "Intervention Reporting",
-    "nightlyUrl": "https://wicg.github.io/intervention-reporting/"
-   },
-   "organization": "W3C",
-   "groups": [
-    {
-     "name": "Web Platform Incubator Community Group",
-     "url": "https://www.w3.org/community/wicg/"
-    }
-   ],
-   "nightly": {
-    "url": "https://wicg.github.io/intervention-reporting/",
-    "status": "Draft Community Group Report",
-    "alternateUrls": [],
-    "repository": "https://github.com/WICG/intervention-reporting",
-    "sourcePath": "index.bs",
-    "filename": "index.html"
-   },
-   "title": "Intervention Reporting",
-   "source": "spec",
-   "shortTitle": "Intervention Reporting",
-   "categories": [
-    "browser"
-   ],
-   "standing": "good",
-   "tests": {
-    "repository": "https://github.com/web-platform-tests/wpt",
-    "testPaths": [
-     "intervention-reporting"
-    ]
-   },
-   "fragment": null
-  },
-  {
-   "url": "https://wicg.github.io/deprecation-reporting/",
-   "seriesComposition": "full",
-   "shortname": "deprecation-reporting",
-   "series": {
-    "shortname": "deprecation-reporting",
-    "currentSpecification": "deprecation-reporting",
-    "title": "Deprecation Reporting",
-    "shortTitle": "Deprecation Reporting",
-    "nightlyUrl": "https://wicg.github.io/deprecation-reporting/"
-   },
-   "organization": "W3C",
-   "groups": [
-    {
-     "name": "Web Platform Incubator Community Group",
-     "url": "https://www.w3.org/community/wicg/"
-    }
-   ],
-   "nightly": {
-    "url": "https://wicg.github.io/deprecation-reporting/",
-    "status": "Draft Community Group Report",
-    "alternateUrls": [],
-    "repository": "https://github.com/WICG/deprecation-reporting",
-    "sourcePath": "index.bs",
-    "filename": "index.html"
-   },
-   "title": "Deprecation Reporting",
-   "source": "spec",
-   "shortTitle": "Deprecation Reporting",
-   "categories": [
-    "browser"
-   ],
-   "standing": "good",
-   "tests": {
-    "repository": "https://github.com/web-platform-tests/wpt",
-    "testPaths": [
-     "deprecation-reporting"
-    ]
-   },
-   "fragment": null
-  },
-  {
-   "url": "https://w3c.github.io/webappsec-csp/#reporting",
-   "seriesComposition": "full",
-   "shortname": "CSP3",
-   "series": {
-    "shortname": "CSP",
-    "currentSpecification": "CSP3",
-    "title": "Content Security Policy",
-    "shortTitle": "Content Security Policy",
-    "releaseUrl": "https://www.w3.org/TR/CSP/",
-    "nightlyUrl": "https://w3c.github.io/webappsec-csp/"
-   },
-   "seriesVersion": "3",
-   "organization": "W3C",
-   "groups": [
-    {
-     "name": "Web Application Security Working Group",
-     "url": "https://www.w3.org/groups/wg/webappsec/"
-    }
-   ],
-   "release": {
-    "url": "https://www.w3.org/TR/CSP3/",
-    "status": "Working Draft",
-    "filename": "Overview.html"
-   },
-   "nightly": {
-    "url": "https://w3c.github.io/webappsec-csp/",
-    "status": "Editor's Draft",
-    "alternateUrls": [],
-    "repository": "https://github.com/w3c/webappsec-csp",
-    "sourcePath": "index.bs",
-    "filename": "index.html"
-   },
-   "title": "Content Security Policy Level 3",
-   "source": "w3c",
-   "shortTitle": "Content Security Policy 3",
-   "categories": [
-    "browser"
-   ],
-   "standing": "good",
-   "tests": {
-    "repository": "https://github.com/web-platform-tests/wpt",
-    "testPaths": [
-     "content-security-policy"
-    ],
-    "excludePaths": [
-     "content-security-policy/embedded-enforcement"
-    ]
-   },
-   "fragment": "reporting"
   }
  ],
  "mdnUrls": [
@@ -405,7 +222,7 @@
  "hasNegativeStandardPosition": false,
  "stateOfSurveys": [],
  "chromeUseCounters": {
-  "percentageOfPageLoad": 0.25258995,
+  "percentageOfPageLoad": 0.25271716,
   "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/410"
  },
  "interop": [],

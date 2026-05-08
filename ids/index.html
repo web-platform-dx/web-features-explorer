@@ -6474,8 +6474,6 @@
               
                 <li>http.headers.Content-Security-Policy.report-sample</li>
               
-                <li>http.headers.Content-Security-Policy.report-to</li>
-              
                 <li>http.headers.Content-Security-Policy.sandbox</li>
               
                 <li>http.headers.Content-Security-Policy.script-src</li>
@@ -25331,7 +25329,7 @@
         <tr class="baseline-low">
           <td>reporting</td>
           <td>Reporting API</td>
-          <td>The Reporting-Endpoints HTTP header and ReportingObserver() API send reports of Content Security Policy (CSP) violations, Permissions-Policy violations, deprecated feature usage, browser interventions, and crashes to a nominated URL or callback function.</td>
+          <td>The Reporting-Endpoints HTTP header and ReportingObserver() API send selected reports, such as Content Security Policy (CSP) violation reports or crash reports, to a nominated URL or callback function.</td>
           <td>
             <ul>
               
@@ -25343,16 +25341,6 @@
               
                 <li>api.ReportingObserver.ReportingObserver.options_parameter.types_property</li>
               
-                <li>api.ReportingObserver.ReportingObserver.options_parameter.types_property.coep</li>
-              
-                <li>api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation</li>
-              
-                <li>api.ReportingObserver.ReportingObserver.options_parameter.types_property.deprecation</li>
-              
-                <li>api.ReportingObserver.ReportingObserver.options_parameter.types_property.integrity-violation</li>
-              
-                <li>api.ReportingObserver.ReportingObserver.options_parameter.types_property.intervention</li>
-              
                 <li>api.ReportingObserver.disconnect</li>
               
                 <li>api.ReportingObserver.observe</li>
@@ -25362,6 +25350,127 @@
                 <li>api.ReportingObserver.worker_support</li>
               
                 <li>http.headers.Reporting-Endpoints</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
+          <td>reporting-coep-violations</td>
+          <td>COEP violation reports</td>
+          <td>COEP violation reporting sends a report to a URL nominated by the Reporting-Endpoints header or the ReportingObserver API when a page violates its Cross-Origin-Embedder-Policy policy.</td>
+          <td>
+            <ul>
+              
+                <li>api.ReportingObserver.ReportingObserver.options_parameter.types_property.coep</li>
+              
+                <li>http.headers.Cross-Origin-Embedder-Policy.report-to_parameter</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
+          <td>reporting-crashes</td>
+          <td>Crash reporting</td>
+          <td>Crash reporting sends a report to a URL nominated by the Reporting-Endpoints header when a user is unable to continue using the page because the browser or tab crashed.</td>
+          <td>
+            <ul>
+              
+                <li>http.headers.Reporting-Endpoints.crash-reporting</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-low">
+          <td>reporting-csp-violations</td>
+          <td>CSP violation reports</td>
+          <td>CSP violation reporting sends a report to a URL nominated by the Reporting-Endpoints header or the ReportingObserver API when a page violates its content security policy.</td>
+          <td>
+            <ul>
+              
+                <li>api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation</li>
+              
+                <li>http.headers.Content-Security-Policy.report-to</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
+          <td>reporting-deprecation</td>
+          <td>Deprecation reports</td>
+          <td>Deprecation reporting sends a report to a URL nominated by the Reporting-Endpoints header or the ReportingObserver API when a page uses a deprecated API or other browser feature.</td>
+          <td>
+            <ul>
+              
+                <li>api.ReportingObserver.ReportingObserver.options_parameter.types_property.deprecation</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
+          <td>reporting-integrity-violations</td>
+          <td>Integrity violation reports</td>
+          <td>Subresource integrity violation reporting sends a report to a URL nominated by the Reporting-Endpoints header or the ReportingObserver API when a resource request violates an integrity check.</td>
+          <td>
+            <ul>
+              
+                <li>api.ReportingObserver.ReportingObserver.options_parameter.types_property.integrity-violation</li>
+              
+                <li>http.headers.Integrity-Policy</li>
+              
+                <li>http.headers.Integrity-Policy-Report-Only</li>
+              
+                <li>http.headers.Integrity-Policy-Report-Only.blocked-destinations_script</li>
+              
+                <li>http.headers.Integrity-Policy-Report-Only.blocked-destinations_style</li>
+              
+                <li>http.headers.Integrity-Policy.blocked-destinations_script</li>
+              
+                <li>http.headers.Integrity-Policy.blocked-destinations_style</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
+          <td>reporting-interventions</td>
+          <td>Intervention reports</td>
+          <td>Intervention reporting sends a report to a URL nominated by the Reporting-Endpoints header when the browser has not honored an application&#39;s request, contrary to specified behavior, such as for security or privacy reasons.</td>
+          <td>
+            <ul>
+              
+                <li>api.InterventionReportBody</li>
+              
+                <li>api.InterventionReportBody.columnNumber</li>
+              
+                <li>api.InterventionReportBody.id</li>
+              
+                <li>api.InterventionReportBody.lineNumber</li>
+              
+                <li>api.InterventionReportBody.message</li>
+              
+                <li>api.InterventionReportBody.sourceFile</li>
+              
+                <li>api.InterventionReportBody.toJSON</li>
+              
+                <li>api.ReportingObserver.ReportingObserver.options_parameter.types_property.intervention</li>
+              
+            </ul>
+          </td>
+        </tr>
+      
+        <tr class="baseline-false">
+          <td>reporting-permissions-policy-violations</td>
+          <td>Permissions policy violation reporting</td>
+          <td>Permissions policy violation reporting sends a report to a URL nominated by the Reporting-Endpoints header or the ReportingObserver API when a page violates a policy. You can also use the Permissions-Policy-Report-Only header to receive reports of what might break under a given policy.</td>
+          <td>
+            <ul>
+              
+                <li>api.ReportingObserver.ReportingObserver.options_parameter.types_property.permissions-policy-violation</li>
               
             </ul>
           </td>
