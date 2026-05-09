@@ -16,7 +16,7 @@
 
         <nav>
           <ul>
-            <li><a href="/web-features-explorer/release-notes/april-2026">Release notes</a></li>
+            <li><a href="/web-features-explorer/release-notes/may-2026">Release notes</a></li>
             <li><a href="/web-features-explorer/newly-available">Explore features</a></li>
             <li><a href="/web-features-explorer/about">About</a></li>
           </ul>
@@ -60,9 +60,9 @@
   <h1>Mapping of the BCD keys in web-features</h1>
 
   <ul>
-    <li>All BCD keys: 17584</li>
-    <li>Keys mapped in web-features: 14942</li>
-    <li>Percentage mapped: 85%</li>
+    <li>All BCD keys: 17714</li>
+    <li>Keys mapped in web-features: 14936</li>
+    <li>Percentage mapped: 84%</li>
   </ul>
 
   <h2>Unmapped BCD keys</h2>
@@ -679,6 +679,10 @@
     
       <li class="">api.GPUDevice.createPipelineLayout.descriptor_bindGroupLayouts_parameter_accepts_null_values</li>
     
+      <li class="">api.GPUDevice.createTexture.descriptor_usage_parameter</li>
+    
+      <li class="">api.GPUDevice.createTexture.descriptor_usage_parameter.accept_transient_attachment</li>
+    
       <li class="group-start">api.GPURenderPassEncoder.writeTimestamp</li>
     
       <li class="group-start">api.GPUSupportedFeatures.feature_core-features-and-limits</li>
@@ -709,11 +713,25 @@
     
       <li class="group-start">api.GPUTexture.createView.descriptor_swizzle_parameter</li>
     
+      <li class="">api.GPUTexture.createView.descriptor_usage_parameter.transient_attachment</li>
+    
       <li class="">api.GPUTexture.textureBindingViewDimension</li>
+    
+      <li class="">api.GPUTexture.usage.transient_attachment</li>
+    
+      <li class="deprecated group-start">api.Gamepad.secure_context_required</li>
+    
+      <li class="deprecated group-start">api.GamepadButton.secure_context_required</li>
+    
+      <li class="deprecated group-start">api.GamepadEvent.secure_context_required</li>
     
       <li class="deprecated group-start">api.GamepadHapticActuator.canPlayEffectType</li>
     
+      <li class="deprecated ">api.GamepadHapticActuator.secure_context_required</li>
+    
       <li class="deprecated ">api.GamepadHapticActuator.type</li>
+    
+      <li class="deprecated group-start">api.GamepadPose.secure_context_required</li>
     
       <li class="group-start">api.GestureEvent</li>
     
@@ -881,7 +899,7 @@
     
       <li class="deprecated group-start">api.HTMLHtmlElement.version</li>
     
-      <li class="group-start">api.HTMLIFrameElement.adAuctionHeaders</li>
+      <li class="deprecated group-start">api.HTMLIFrameElement.adAuctionHeaders</li>
     
       <li class="deprecated ">api.HTMLIFrameElement.align</li>
     
@@ -1203,6 +1221,8 @@
     
       <li class="group-start">api.LanguageModel.contextoverflow_event</li>
     
+      <li class="">api.LanguageModel.destroy</li>
+    
       <li class="group-start">api.LargestContentfulPaint.paintTime</li>
     
       <li class="">api.LargestContentfulPaint.presentationTime</li>
@@ -1395,25 +1415,27 @@
     
       <li class="">api.Navigator.buildID</li>
     
-      <li class="">api.Navigator.canLoadAdAuctionFencedFrame</li>
+      <li class="deprecated ">api.Navigator.canLoadAdAuctionFencedFrame</li>
     
-      <li class="">api.Navigator.clearOriginJoinedAdInterestGroups</li>
+      <li class="deprecated ">api.Navigator.clearOriginJoinedAdInterestGroups</li>
     
-      <li class="">api.Navigator.createAuctionNonce</li>
+      <li class="deprecated ">api.Navigator.createAuctionNonce</li>
     
-      <li class="">api.Navigator.deprecatedRunAdAuctionEnforcesKAnonymity</li>
+      <li class="deprecated ">api.Navigator.deprecatedRunAdAuctionEnforcesKAnonymity</li>
     
       <li class="deprecated ">api.Navigator.doNotTrack</li>
     
       <li class="">api.Navigator.getAutoplayPolicy</li>
     
-      <li class="">api.Navigator.getInterestGroupAdAuctionData</li>
+      <li class="deprecated ">api.Navigator.getGamepads.secure_context_required</li>
+    
+      <li class="deprecated ">api.Navigator.getInterestGroupAdAuctionData</li>
     
       <li class="deprecated ">api.Navigator.getUserMedia</li>
     
-      <li class="">api.Navigator.joinAdInterestGroup</li>
+      <li class="deprecated ">api.Navigator.joinAdInterestGroup</li>
     
-      <li class="">api.Navigator.leaveAdInterestGroup</li>
+      <li class="deprecated ">api.Navigator.leaveAdInterestGroup</li>
     
       <li class="">api.Navigator.login</li>
     
@@ -1427,7 +1449,7 @@
     
       <li class="">api.Navigator.preferences</li>
     
-      <li class="">api.Navigator.protectedAudience</li>
+      <li class="deprecated ">api.Navigator.protectedAudience</li>
     
       <li class="">api.Navigator.registerProtocolHandler.scheme_parameter_cabal</li>
     
@@ -1447,11 +1469,11 @@
     
       <li class="">api.Navigator.registerProtocolHandler.scheme_parameter_ssb</li>
     
-      <li class="">api.Navigator.runAdAuction</li>
+      <li class="deprecated ">api.Navigator.runAdAuction</li>
     
       <li class="">api.Navigator.taintEnabled</li>
     
-      <li class="">api.Navigator.updateAdInterestGroups</li>
+      <li class="deprecated ">api.Navigator.updateAdInterestGroups</li>
     
       <li class="">api.Navigator.vendorSub</li>
     
@@ -1623,9 +1645,9 @@
     
       <li class="">api.PromiseRejectionEvent.reason</li>
     
-      <li class="group-start">api.ProtectedAudience</li>
+      <li class="deprecated group-start">api.ProtectedAudience</li>
     
-      <li class="">api.ProtectedAudience.queryFeatureSupport</li>
+      <li class="deprecated ">api.ProtectedAudience.queryFeatureSupport</li>
     
       <li class="group-start">api.PushEvent.notification</li>
     
@@ -1856,6 +1878,10 @@
       <li class="">api.SVGPathElement.pathLength</li>
     
       <li class="">api.SVGPathElement.setPathData</li>
+    
+      <li class="group-start">api.Sanitizer.allowProcessingInstruction</li>
+    
+      <li class="">api.Sanitizer.removeProcessingInstruction</li>
     
       <li class="group-start">api.Screen.availLeft</li>
     
@@ -2638,6 +2664,42 @@
       <li class="">css.properties.column-height</li>
     
       <li class="">css.properties.column-height.auto</li>
+    
+      <li class="">css.properties.column-rule-break</li>
+    
+      <li class="">css.properties.column-rule-break.intersection</li>
+    
+      <li class="">css.properties.column-rule-break.none</li>
+    
+      <li class="">css.properties.column-rule-break.normal</li>
+    
+      <li class="">css.properties.column-rule-inset</li>
+    
+      <li class="">css.properties.column-rule-inset-cap</li>
+    
+      <li class="">css.properties.column-rule-inset-cap-end</li>
+    
+      <li class="">css.properties.column-rule-inset-cap-start</li>
+    
+      <li class="">css.properties.column-rule-inset-end</li>
+    
+      <li class="">css.properties.column-rule-inset-junction</li>
+    
+      <li class="">css.properties.column-rule-inset-junction-end</li>
+    
+      <li class="">css.properties.column-rule-inset-junction-start</li>
+    
+      <li class="">css.properties.column-rule-inset-start</li>
+    
+      <li class="">css.properties.column-rule-visibility-items</li>
+    
+      <li class="">css.properties.column-rule-visibility-items.all</li>
+    
+      <li class="">css.properties.column-rule-visibility-items.around</li>
+    
+      <li class="">css.properties.column-rule-visibility-items.between</li>
+    
+      <li class="">css.properties.column-rule-visibility-items.normal</li>
     
       <li class="">css.properties.column-wrap</li>
     
@@ -3510,6 +3572,212 @@
       <li class="">css.properties.resize.none</li>
     
       <li class="">css.properties.resize.vertical</li>
+    
+      <li class="">css.properties.row-rule</li>
+    
+      <li class="">css.properties.row-rule.currentColor</li>
+    
+      <li class="">css.properties.row-rule.dashed</li>
+    
+      <li class="">css.properties.row-rule.dotted</li>
+    
+      <li class="">css.properties.row-rule.double</li>
+    
+      <li class="">css.properties.row-rule.groove</li>
+    
+      <li class="">css.properties.row-rule.hidden</li>
+    
+      <li class="">css.properties.row-rule.inset</li>
+    
+      <li class="">css.properties.row-rule.medium</li>
+    
+      <li class="">css.properties.row-rule.none</li>
+    
+      <li class="">css.properties.row-rule.outset</li>
+    
+      <li class="">css.properties.row-rule.ridge</li>
+    
+      <li class="">css.properties.row-rule.solid</li>
+    
+      <li class="">css.properties.row-rule.thick</li>
+    
+      <li class="">css.properties.row-rule.thin</li>
+    
+      <li class="">css.properties.row-rule.transparent</li>
+    
+      <li class="">css.properties.row-rule-break</li>
+    
+      <li class="">css.properties.row-rule-break.intersection</li>
+    
+      <li class="">css.properties.row-rule-break.none</li>
+    
+      <li class="">css.properties.row-rule-break.normal</li>
+    
+      <li class="">css.properties.row-rule-color</li>
+    
+      <li class="">css.properties.row-rule-color.currentColor</li>
+    
+      <li class="">css.properties.row-rule-color.transparent</li>
+    
+      <li class="">css.properties.row-rule-inset</li>
+    
+      <li class="">css.properties.row-rule-inset-cap</li>
+    
+      <li class="">css.properties.row-rule-inset-cap-end</li>
+    
+      <li class="">css.properties.row-rule-inset-cap-start</li>
+    
+      <li class="">css.properties.row-rule-inset-end</li>
+    
+      <li class="">css.properties.row-rule-inset-junction</li>
+    
+      <li class="">css.properties.row-rule-inset-junction-end</li>
+    
+      <li class="">css.properties.row-rule-inset-junction-start</li>
+    
+      <li class="">css.properties.row-rule-inset-start</li>
+    
+      <li class="">css.properties.row-rule-style</li>
+    
+      <li class="">css.properties.row-rule-style.dashed</li>
+    
+      <li class="">css.properties.row-rule-style.dotted</li>
+    
+      <li class="">css.properties.row-rule-style.double</li>
+    
+      <li class="">css.properties.row-rule-style.groove</li>
+    
+      <li class="">css.properties.row-rule-style.hidden</li>
+    
+      <li class="">css.properties.row-rule-style.inset</li>
+    
+      <li class="">css.properties.row-rule-style.none</li>
+    
+      <li class="">css.properties.row-rule-style.outset</li>
+    
+      <li class="">css.properties.row-rule-style.ridge</li>
+    
+      <li class="">css.properties.row-rule-style.solid</li>
+    
+      <li class="">css.properties.row-rule-visibility-items</li>
+    
+      <li class="">css.properties.row-rule-visibility-items.all</li>
+    
+      <li class="">css.properties.row-rule-visibility-items.around</li>
+    
+      <li class="">css.properties.row-rule-visibility-items.between</li>
+    
+      <li class="">css.properties.row-rule-visibility-items.normal</li>
+    
+      <li class="">css.properties.row-rule-width</li>
+    
+      <li class="">css.properties.row-rule-width.medium</li>
+    
+      <li class="">css.properties.row-rule-width.thick</li>
+    
+      <li class="">css.properties.row-rule-width.thin</li>
+    
+      <li class="">css.properties.rule</li>
+    
+      <li class="">css.properties.rule.currentColor</li>
+    
+      <li class="">css.properties.rule.dashed</li>
+    
+      <li class="">css.properties.rule.dotted</li>
+    
+      <li class="">css.properties.rule.double</li>
+    
+      <li class="">css.properties.rule.groove</li>
+    
+      <li class="">css.properties.rule.hidden</li>
+    
+      <li class="">css.properties.rule.inset</li>
+    
+      <li class="">css.properties.rule.medium</li>
+    
+      <li class="">css.properties.rule.none</li>
+    
+      <li class="">css.properties.rule.outset</li>
+    
+      <li class="">css.properties.rule.ridge</li>
+    
+      <li class="">css.properties.rule.solid</li>
+    
+      <li class="">css.properties.rule.thick</li>
+    
+      <li class="">css.properties.rule.thin</li>
+    
+      <li class="">css.properties.rule.transparent</li>
+    
+      <li class="">css.properties.rule-break</li>
+    
+      <li class="">css.properties.rule-break.intersection</li>
+    
+      <li class="">css.properties.rule-break.none</li>
+    
+      <li class="">css.properties.rule-break.normal</li>
+    
+      <li class="">css.properties.rule-color</li>
+    
+      <li class="">css.properties.rule-color.currentColor</li>
+    
+      <li class="">css.properties.rule-color.transparent</li>
+    
+      <li class="">css.properties.rule-inset</li>
+    
+      <li class="">css.properties.rule-inset-cap</li>
+    
+      <li class="">css.properties.rule-inset-end</li>
+    
+      <li class="">css.properties.rule-inset-junction</li>
+    
+      <li class="">css.properties.rule-inset-start</li>
+    
+      <li class="">css.properties.rule-overlap</li>
+    
+      <li class="">css.properties.rule-overlap.column-over-row</li>
+    
+      <li class="">css.properties.rule-overlap.row-over-column</li>
+    
+      <li class="">css.properties.rule-style</li>
+    
+      <li class="">css.properties.rule-style.dashed</li>
+    
+      <li class="">css.properties.rule-style.dotted</li>
+    
+      <li class="">css.properties.rule-style.double</li>
+    
+      <li class="">css.properties.rule-style.groove</li>
+    
+      <li class="">css.properties.rule-style.hidden</li>
+    
+      <li class="">css.properties.rule-style.inset</li>
+    
+      <li class="">css.properties.rule-style.none</li>
+    
+      <li class="">css.properties.rule-style.outset</li>
+    
+      <li class="">css.properties.rule-style.ridge</li>
+    
+      <li class="">css.properties.rule-style.solid</li>
+    
+      <li class="">css.properties.rule-visibility-items</li>
+    
+      <li class="">css.properties.rule-visibility-items.all</li>
+    
+      <li class="">css.properties.rule-visibility-items.around</li>
+    
+      <li class="">css.properties.rule-visibility-items.between</li>
+    
+      <li class="">css.properties.rule-visibility-items.normal</li>
+    
+      <li class="">css.properties.rule-width</li>
+    
+      <li class="">css.properties.rule-width.medium</li>
+    
+      <li class="">css.properties.rule-width.thick</li>
+    
+      <li class="">css.properties.rule-width.thin</li>
     
       <li class="">css.properties.rx.auto</li>
     
@@ -4397,6 +4665,8 @@
     
       <li class="">http.headers.X-DNS-Prefetch-Control</li>
     
+      <li class="">http.headers.X-Frame-Options.DENY</li>
+    
       <li class="">http.headers.X-Frame-Options.SAMEORIGIN</li>
     
       <li class="">http.headers.X-Frame-Options</li>
@@ -4440,6 +4710,8 @@
       <li class="">javascript.builtins.InternalError.InternalError</li>
     
       <li class="">javascript.builtins.InternalError</li>
+    
+      <li class="">javascript.builtins.Intl.DateTimeFormat.DateTimeFormat.options_parameter.options_timeZone_parameter.utc_offset</li>
     
       <li class="deprecated ">javascript.builtins.Intl.Locale.getWeekInfo.returns_minimalDays_property</li>
     
