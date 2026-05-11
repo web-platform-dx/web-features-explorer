@@ -1,0 +1,111 @@
+---
+layout: layout.njk
+stylesheet: /assets/statistics.css
+eleventyComputed:
+  title: "{{ siteConfig.strings.statistics.title }}"
+---
+
+{% set statisticsStrings = siteConfig.strings.statistics %}
+
+<main class="statistics-page">
+  <h1>{{ statisticsStrings.title }}</h1>
+
+  <p>{{ statisticsStrings.intro }}</p>
+
+  <ul class="statistics-summary" aria-label="{{ statisticsStrings.summaryLabel }}">
+    <li data-summary-card="features">
+      <span>{{ statisticsStrings.summary.features.label }}</span>
+      <strong data-summary-value>{{ statistics.latest.features | formatNumber }}</strong>
+      <small data-summary-change></small>
+    </li>
+    <li data-summary-card="bcdKeysUnmapped">
+      <span>{{ statisticsStrings.summary.bcdKeysUnmapped.label }}</span>
+      <strong data-summary-value>{{ statistics.latest.bcdKeysUnmapped | formatNumber }}</strong>
+      <small data-summary-change></small>
+    </li>
+    <li data-summary-card="bcdCoveragePercent">
+      <span>{{ statisticsStrings.summary.bcdCoveragePercent.label }}</span>
+      <strong data-summary-value>{{ statistics.latest.bcdCoveragePercent | formatPercent }}</strong>
+      <small data-summary-change></small>
+    </li>
+    <li data-summary-card="caniuseIdsUnmapped">
+      <span>{{ statisticsStrings.summary.caniuseIdsUnmapped.label }}</span>
+      <strong data-summary-value>{{ statistics.latest.caniuseIdsUnmapped | formatNumber }}</strong>
+      <small data-summary-change></small>
+    </li>
+    <li data-summary-card="caniuseCoveragePercent">
+      <span>{{ statisticsStrings.summary.caniuseCoveragePercent.label }}</span>
+      <strong data-summary-value>{{ statistics.latest.caniuseCoveragePercent | formatPercent }}</strong>
+      <small data-summary-change></small>
+    </li>
+  </ul>
+
+  <section>
+    <h2>{{ statisticsStrings.chart.heading }}</h2>
+
+    <div class="statistics-chart-controls" aria-label="{{ statisticsStrings.ranges.label }}">
+      <button type="button" data-range="1m" aria-pressed="true">{{ statisticsStrings.ranges["1m"] }}</button>
+      <button type="button" data-range="3m" aria-pressed="false">{{ statisticsStrings.ranges["3m"] }}</button>
+      <button type="button" data-range="6m" aria-pressed="false">{{ statisticsStrings.ranges["6m"] }}</button>
+      <button type="button" data-range="1y" aria-pressed="false">{{ statisticsStrings.ranges["1y"] }}</button>
+      <button type="button" data-range="all" aria-pressed="false">{{ statisticsStrings.ranges.all }}</button>
+    </div>
+
+    <div class="statistics-chart">
+      <div id="statistics-chart"></div>
+    </div>
+  </section>
+
+  <details class="statistics-table-details">
+    <summary>{{ statisticsStrings.table.summary }}</summary>
+
+    <section>
+      <h2>{{ statisticsStrings.table.heading }}</h2>
+
+      <div class="statistics-table-scroll">
+        <table class="statistics-table">
+          <caption>{{ statisticsStrings.table.caption }}</caption>
+          <thead>
+            <tr>
+              <th scope="col">{{ statisticsStrings.table.columns.date }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.features }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.bcdKeysMapped }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.bcdKeysUnmapped }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.bcdCoveragePercent }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.standardNonDeprecatedBcdKeysMapped }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.standardNonDeprecatedBcdKeysUnmapped }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.standardNonDeprecatedBcdCoveragePercent }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.caniuseIdsMapped }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.caniuseIdsUnmapped }}</th>
+              <th scope="col">{{ statisticsStrings.table.columns.caniuseCoveragePercent }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for snapshot in statistics.snapshots %}
+              <tr>
+                <th scope="row">{{ snapshot.date }}</th>
+                <td>{{ snapshot.features | formatNumber }}</td>
+                <td>{{ snapshot.bcdKeysMapped | formatNumber }}{{ statisticsStrings.table.mappedCountSeparator }}{{ snapshot.bcdKeysTotal | formatNumber }}</td>
+                <td>{{ snapshot.bcdKeysUnmapped | formatNumber }}</td>
+                <td>{{ snapshot.bcdCoveragePercent | formatPercent }}</td>
+                <td>{{ snapshot.standardNonDeprecatedBcdKeysMapped | formatNumber }}{% if snapshot.standardNonDeprecatedBcdKeysTotal %}{{ statisticsStrings.table.mappedCountSeparator }}{{ snapshot.standardNonDeprecatedBcdKeysTotal | formatNumber }}{% endif %}</td>
+                <td>{{ snapshot.standardNonDeprecatedBcdKeysUnmapped | formatNumber }}</td>
+                <td>{{ snapshot.standardNonDeprecatedBcdCoveragePercent | formatPercent }}</td>
+                <td>{{ snapshot.caniuseIdsMapped | formatNumber }}{{ statisticsStrings.table.mappedCountSeparator }}{{ snapshot.caniuseIdsTotal | formatNumber }}</td>
+                <td>{{ snapshot.caniuseIdsUnmapped | formatNumber }}</td>
+                <td>{{ snapshot.caniuseCoveragePercent | formatPercent }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </details>
+
+  <p class="statistics-source">{{ statisticsStrings.source.beforeLink }}<a href="/assets/statistics.json"><code>{{ statisticsStrings.source.linkText }}</code></a>{{ statisticsStrings.source.betweenLinks }}<a href="https://github.com/web-platform-dx/web-features/issues/788">{{ statisticsStrings.source.issueLinkText }}</a>{{ statisticsStrings.source.afterIssueLink }}</p>
+
+  <script id="statistics-data" type="application/json">{{ statistics | stringify | safe }}</script>
+  <script id="statistics-config" type="application/json">{{ statisticsStrings | stringify | safe }}</script>
+  <script src="/assets/apexcharts.js"></script>
+  <script src="/assets/statistics.js"></script>
+</main>

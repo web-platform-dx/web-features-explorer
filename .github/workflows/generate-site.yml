@@ -34,6 +34,9 @@ jobs:
       - name: Update timeline stats
         run: node update-timeline-stats.js
 
+      - name: Update statistics
+        run: node update-statistics.js
+
       - name: Commit dependency changes
         if: ${{ github.event_name != 'push' }}
         run: |

@@ -1,11 +1,13 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import feedPlugin, { dateToRfc3339 } from "@11ty/eleventy-plugin-rss";
+import fs from "node:fs/promises";
 import YAML from 'yaml';
 import { browsers, features as initialFeatures, groups } from "web-features";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
 
 import { getAllBCDKeys, stripLessThan, getBrowserVersionReleaseDate, getAugmentedSpecData, getExpectedBaselineHighDate, nameAsHTML } from "./utils.js";
 import { BROWSERS_BY_ENGINE, WEB_FEATURES_MAPPINGS_URL } from "./consts.js";
+import siteConfig from "./site.config.js";
 
 function augmentFeatureData(feature, webFeaturesMappingsData) {
   // Rename group and spec to group*s* and spec*s*, since they're always arrays.
@@ -144,6 +146,20 @@ export default async function (eleventyConfig) {
     return JSON.stringify(data, null, " ", 2)
   })
 
+  eleventyConfig.addFilter("formatNumber", (value, fallback = siteConfig.strings.formatting.missingValue) => {
+    return value === null || value === undefined
+      ? fallback
+      : value.toLocaleString("en-US");
+  });
+
+  eleventyConfig.addFilter("formatPercent", (value, fallback = siteConfig.strings.formatting.missingValue) => {
+    return value === null || value === undefined
+      ? fallback
+      : `${value.toFixed(2)}%`;
+  });
+
+  eleventyConfig.addGlobalData("siteConfig", () => siteConfig);
+
   eleventyConfig.addGlobalData("versions", async () => {
     const { default: webFeaturesPackageJson } = await import(
       "./node_modules/web-features/package.json",
@@ -157,6 +173,12 @@ export default async function (eleventyConfig) {
       webFeatures: webFeaturesPackageJson.version,
       bcd: bcd.__meta.version,
     };
+  });
+
+  eleventyConfig.addGlobalData("statistics", async () => {
+    return JSON.parse(
+      await fs.readFile(new URL("./site/assets/statistics.json", import.meta.url)),
+    );
   });
 
   eleventyConfig.addGlobalData("browsers", () => {
