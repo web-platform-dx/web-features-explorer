@@ -10,6 +10,9 @@ const featuresDir = path.resolve("docs/features");
 const assetDir = path.resolve("site/assets");
 const ogAssetDir = path.join(assetDir, "og");
 const templateFile = path.join(ogAssetDir, "template.html");
+const bodyPlaceholder = "<!-- OG_CARD_BODY -->";
+const widthPlaceholder = "__OG_CARD_WIDTH__";
+const heightPlaceholder = "__OG_CARD_HEIGHT__";
 const defaultDescription =
   "Discover new features and APIs and stay up-to-date with changes across the web platform.";
 
@@ -205,9 +208,9 @@ async function renderDocument(body) {
   const template = await fs.readFile(templateFile, "utf8");
 
   return template
-    .replaceAll("{{ width }}", width)
-    .replaceAll("{{ height }}", height)
-    .replace("{{ body }}", body);
+    .replaceAll(widthPlaceholder, `${width}px`)
+    .replaceAll(heightPlaceholder, `${height}px`)
+    .replace(bodyPlaceholder, body);
 }
 
 async function getFeatureFiles() {

@@ -7,10 +7,15 @@
         box-sizing: border-box;
       }
 
+      :root {
+        --og-card-inline-size: __OG_CARD_WIDTH__;
+        --og-card-block-size: __OG_CARD_HEIGHT__;
+      }
+
       html,
       body {
-        width: {{ width }}px;
-        height: {{ height }}px;
+        inline-size: var(--og-card-inline-size);
+        block-size: var(--og-card-block-size);
         margin: 0;
       }
 
@@ -29,8 +34,8 @@
         display: grid;
         grid-template-rows: 1fr auto auto;
         gap: 22px;
-        width: {{ width }}px;
-        height: {{ height }}px;
+        inline-size: var(--og-card-inline-size);
+        block-size: var(--og-card-block-size);
         overflow: hidden;
         padding: 48px 72px 36px;
         background:
@@ -72,13 +77,13 @@
 
       .brand {
         display: block;
-        width: 88px;
-        height: auto;
+        inline-size: 88px;
+        block-size: auto;
         margin-block-end: 18px;
       }
 
       h1 {
-        max-width: 980px;
+        max-inline-size: 980px;
         margin: 0;
         font-size: 74px;
         font-weight: 750;
@@ -89,7 +94,7 @@
 
       .description {
         display: -webkit-box;
-        max-width: 1000px;
+        max-inline-size: 1000px;
         margin: 22px 0 0;
         overflow: hidden;
         color: #3c4043;
@@ -110,7 +115,7 @@
         display: inline-flex;
         flex-direction: column;
         gap: 10px;
-        max-width: 720px;
+        max-inline-size: 720px;
         padding: 18px 24px;
         background: var(--accent-bg);
         border: 2px solid var(--accent-border);
@@ -124,8 +129,8 @@
       }
 
       .status-icon {
-        width: 42px;
-        height: 42px;
+        inline-size: 42px;
+        block-size: 42px;
         object-fit: contain;
       }
 
@@ -166,7 +171,7 @@
         grid-template-rows: auto auto;
         column-gap: 14px;
         align-items: center;
-        min-width: 0;
+        min-inline-size: 0;
         padding: 16px 18px;
         background: #ffffff;
         border: 2px solid #dadce0;
@@ -179,8 +184,8 @@
 
       .browser img {
         grid-row: 1 / span 2;
-        width: 44px;
-        height: 44px;
+        inline-size: 44px;
+        block-size: 44px;
       }
 
       .browser-name {
@@ -206,5 +211,5 @@
       }
     </style>
   </head>
-  <body>{{ body }}</body>
+  <body><!-- OG_CARD_BODY --></body>
 </html>
