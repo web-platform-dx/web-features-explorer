@@ -1,4 +1,5 @@
 const siteConfig = {
+  url: "https://web-platform-dx.github.io/web-features-explorer/",
   strings: {
     formatting: {
       missingValue: "Not tracked",
