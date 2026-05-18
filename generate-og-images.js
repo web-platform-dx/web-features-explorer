@@ -9,6 +9,7 @@ const featureOutputDir = path.join(outputDir, "features");
 const featuresDir = path.resolve("docs/features");
 const assetDir = path.resolve("site/assets");
 const ogAssetDir = path.join(assetDir, "og");
+const templateFile = path.join(ogAssetDir, "template.html");
 const defaultDescription =
   "Discover new features and APIs and stay up-to-date with changes across the web platform.";
 
@@ -130,7 +131,7 @@ function renderBrowserSupport(feature, images) {
 function renderSignals(feature) {
   const votes = feature.developerSignals?.votes;
 
-  if (votes === undefined || votes === null) {
+  if (votes == null) {
     return "";
   }
 
@@ -153,17 +154,17 @@ function renderStatus(status, images) {
   `;
 }
 
-function renderFeatureCard(feature, images) {
+async function renderFeatureCard(feature, images) {
   const status = getStatus(feature);
   const description = feature.description || defaultDescription;
 
   return renderDocument(`
-    <main class="card feature-card status-${status.modifier}">
-      <section class="content">
+    <article class="card feature-card status-${status.modifier}">
+      <header class="content">
         <img class="brand" src="${images.brand}" alt="">
         <h1>${escapeHTML(feature.name)}</h1>
         <p class="description">${escapeHTML(description)}</p>
-      </section>
+      </header>
 
       <section class="summary">
         ${renderStatus(status, images)}
@@ -173,18 +174,18 @@ function renderFeatureCard(feature, images) {
       <ul class="support">
         ${renderBrowserSupport(feature, images)}
       </ul>
-    </main>
+    </article>
   `);
 }
 
-function renderDefaultCard(images) {
+async function renderDefaultCard(images) {
   return renderDocument(`
     <main class="card default-card status-high">
-      <section class="content">
+      <header class="content">
         <img class="brand" src="${images.brand}" alt="">
         <h1>Stay up-to-date with the web platform</h1>
         <p class="description">${defaultDescription}</p>
-      </section>
+      </header>
 
       <section class="summary">
         ${renderStatus(
@@ -200,217 +201,13 @@ function renderDefaultCard(images) {
   `);
 }
 
-function renderDocument(body) {
-  return `<!doctype html>
-    <html lang="en">
-      <head>
-        <meta charset="utf-8">
-        <style>
-          * {
-            box-sizing: border-box;
-          }
+async function renderDocument(body) {
+  const template = await fs.readFile(templateFile, "utf8");
 
-          html,
-          body {
-            width: ${width}px;
-            height: ${height}px;
-            margin: 0;
-          }
-
-          body {
-            display: grid;
-            place-items: center;
-            background: #ffffff;
-            color: #202124;
-            font-family:
-              Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-              "Segoe UI", sans-serif;
-          }
-
-          .card {
-            position: relative;
-            display: grid;
-            grid-template-rows: 1fr auto auto;
-            gap: 22px;
-            width: ${width}px;
-            height: ${height}px;
-            overflow: hidden;
-            padding: 48px 72px 36px;
-            background:
-              radial-gradient(circle at top right, rgba(66, 133, 244, 0.18), transparent 310px),
-              linear-gradient(135deg, #ffffff 0%, #f7f9fc 46%, #eef6f1 100%);
-            border-block-start: 18px solid var(--accent);
-          }
-
-          .status-high {
-            --accent: #34a853;
-            --accent-bg: #e6f4ea;
-            --accent-border: #b7dfc0;
-          }
-
-          .status-low {
-            --accent: #1a73e8;
-            --accent-bg: #e8f0fe;
-            --accent-border: #c8dafb;
-          }
-
-          .status-limited {
-            --accent: #5f6368;
-            --accent-bg: #f1f3f4;
-            --accent-border: #d9dde1;
-          }
-
-          .status-discouraged {
-            --accent: #c5221f;
-            --accent-bg: #fce8e6;
-            --accent-border: #f4c7c3;
-          }
-
-          .content,
-          .summary,
-          .support {
-            position: relative;
-            z-index: 1;
-          }
-
-          .brand {
-            display: block;
-            width: 88px;
-            height: auto;
-            margin-block-end: 18px;
-          }
-
-          h1 {
-            max-width: 980px;
-            margin: 0;
-            font-size: 74px;
-            font-weight: 750;
-            letter-spacing: 0;
-            line-height: 0.98;
-            overflow-wrap: anywhere;
-          }
-
-          .description {
-            display: -webkit-box;
-            max-width: 1000px;
-            margin: 22px 0 0;
-            overflow: hidden;
-            color: #3c4043;
-            font-size: 29px;
-            line-height: 1.28;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-          }
-
-          .summary {
-            display: flex;
-            align-items: end;
-            justify-content: space-between;
-            gap: 28px;
-          }
-
-          .status {
-            display: inline-flex;
-            flex-direction: column;
-            gap: 10px;
-            max-width: 720px;
-            padding: 18px 24px;
-            background: var(--accent-bg);
-            border: 2px solid var(--accent-border);
-            border-radius: 8px;
-          }
-
-          .status-heading {
-            display: inline-flex;
-            align-items: center;
-            gap: 14px;
-          }
-
-          .status-icon {
-            width: 42px;
-            height: 42px;
-            object-fit: contain;
-          }
-
-          .status-label {
-            color: var(--accent);
-            font-size: 32px;
-            font-weight: 760;
-            line-height: 1.1;
-          }
-
-          .status-detail,
-          .signal {
-            color: #3c4043;
-            font-size: 24px;
-            line-height: 1.25;
-          }
-
-          .signal {
-            flex: none;
-            padding: 14px 18px;
-            background: #ffffff;
-            border: 2px solid #dadce0;
-            border-radius: 8px;
-          }
-
-          .support {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 14px;
-            padding: 0;
-            margin: 0;
-            list-style: none;
-          }
-
-          .browser {
-            display: grid;
-            grid-template-columns: 44px 1fr;
-            grid-template-rows: auto auto;
-            column-gap: 14px;
-            align-items: center;
-            min-width: 0;
-            padding: 16px 18px;
-            background: #ffffff;
-            border: 2px solid #dadce0;
-            border-radius: 8px;
-          }
-
-          .browser.unsupported {
-            opacity: 0.58;
-          }
-
-          .browser img {
-            grid-row: 1 / span 2;
-            width: 44px;
-            height: 44px;
-          }
-
-          .browser-name {
-            overflow: hidden;
-            font-size: 23px;
-            font-weight: 720;
-            line-height: 1.1;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-
-          .browser-support {
-            overflow: hidden;
-            color: #5f6368;
-            font-size: 20px;
-            line-height: 1.2;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-
-          .default-card {
-            grid-template-rows: 1fr auto;
-          }
-        </style>
-      </head>
-      <body>${body}</body>
-    </html>`;
+  return template
+    .replaceAll("{{ width }}", width)
+    .replaceAll("{{ height }}", height)
+    .replace("{{ body }}", body);
 }
 
 async function getFeatureFiles() {
@@ -449,12 +246,16 @@ async function generate() {
     deviceScaleFactor: 1,
   });
 
-  await screenshot(page, renderDefaultCard(images), path.join(outputDir, "default.png"));
+  await screenshot(
+    page,
+    await renderDefaultCard(images),
+    path.join(outputDir, "default.png"),
+  );
 
   for (const feature of features) {
     await screenshot(
       page,
-      renderFeatureCard(feature, images),
+      await renderFeatureCard(feature, images),
       path.join(featureOutputDir, `${feature.id}.png`),
     );
   }
