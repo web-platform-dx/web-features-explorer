@@ -2,6 +2,9 @@
  "compat_features": [
   "api.AuthenticatorAttestationResponse.getAuthenticatorData",
   "api.AuthenticatorAttestationResponse.getPublicKey",
+  "api.AuthenticatorAttestationResponse.getPublicKey.algorithm_eddsa",
+  "api.AuthenticatorAttestationResponse.getPublicKey.algorithm_es256",
+  "api.AuthenticatorAttestationResponse.getPublicKey.algorithm_rs256",
   "api.AuthenticatorAttestationResponse.getPublicKeyAlgorithm"
  ],
  "description": "The getAuthenticatorData(), getPublicKey(), and getPublicKeyAlgorithm() methods of AuthenticatorAttestationResponse access credential data inside attestationObject without the need to parse it.",
@@ -33,6 +36,44 @@
     }
    },
    "api.AuthenticatorAttestationResponse.getPublicKey": {
+    "baseline": "high",
+    "baseline_high_date": "2026-04-24",
+    "baseline_low_date": "2023-10-24",
+    "support": {
+     "chrome": "85",
+     "chrome_android": "85",
+     "edge": "85",
+     "firefox": "119",
+     "firefox_android": "119",
+     "safari": "16",
+     "safari_ios": "16"
+    }
+   },
+   "api.AuthenticatorAttestationResponse.getPublicKey.algorithm_eddsa": {
+    "baseline": false,
+    "support": {
+     "chrome": "85",
+     "chrome_android": "85",
+     "edge": "85",
+     "firefox": "119",
+     "firefox_android": "119"
+    }
+   },
+   "api.AuthenticatorAttestationResponse.getPublicKey.algorithm_es256": {
+    "baseline": "high",
+    "baseline_high_date": "2026-04-24",
+    "baseline_low_date": "2023-10-24",
+    "support": {
+     "chrome": "85",
+     "chrome_android": "85",
+     "edge": "85",
+     "firefox": "119",
+     "firefox_android": "119",
+     "safari": "16",
+     "safari_ios": "16"
+    }
+   },
+   "api.AuthenticatorAttestationResponse.getPublicKey.algorithm_rs256": {
     "baseline": false,
     "support": {
      "chrome": "85",
@@ -133,7 +174,7 @@
  "hasNegativeStandardPosition": false,
  "stateOfSurveys": [],
  "chromeUseCounters": {
-  "percentageOfPageLoad": 0.00000423,
+  "percentageOfPageLoad": 0.00000427,
   "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/327"
  },
  "interop": [],
