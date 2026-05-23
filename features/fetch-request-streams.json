@@ -1,9 +1,11 @@
 {
  "compat_features": [
-  "api.Request.body"
+  "api.Request.Request.options_parameter.body.accepts_readablestream",
+  "api.Request.body",
+  "api.fetch.options_parameter.body.accepts_readablestream"
  ],
- "description": "A fetch() request uploads a stream of data to the server when a request's body property is a ReadableStream object.",
- "description_html": "A <code>fetch()</code> request uploads a stream of data to the server when a request's <code>body</code> property is a <code>ReadableStream</code> object.",
+ "description": "The fetch() method and Request() constructor accept a ReadableStream object as the request's body option, to stream upload data to the server.",
+ "description_html": "The <code>fetch()</code> method and <code>Request()</code> constructor accept a <code>ReadableStream</code> object as the request's <code>body</code> option, to stream upload data to the server.",
  "group": [
   "fetch"
  ],
@@ -15,6 +17,14 @@
  "status": {
   "baseline": false,
   "by_compat_key": {
+   "api.Request.Request.options_parameter.body.accepts_readablestream": {
+    "baseline": false,
+    "support": {
+     "chrome": "105",
+     "chrome_android": "105",
+     "edge": "105"
+    }
+   },
    "api.Request.body": {
     "baseline": false,
     "support": {
@@ -24,14 +34,20 @@
      "safari": "11.1",
      "safari_ios": "11.3"
     }
+   },
+   "api.fetch.options_parameter.body.accepts_readablestream": {
+    "baseline": false,
+    "support": {
+     "chrome": "105",
+     "chrome_android": "105",
+     "edge": "105"
+    }
    }
   },
   "support": {
    "chrome": "105",
    "chrome_android": "105",
-   "edge": "105",
-   "safari": "11.1",
-   "safari_ios": "11.3"
+   "edge": "105"
   }
  },
  "id": "fetch-request-streams",
@@ -98,7 +114,7 @@
  "hasNegativeStandardPosition": false,
  "stateOfSurveys": [],
  "chromeUseCounters": {
-  "percentageOfPageLoad": 0.0000232,
+  "percentageOfPageLoad": 0.0000253,
   "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/398"
  },
  "interop": [
@@ -123,14 +139,14 @@
    "https://bugs.chromium.org/p/chromium/issues/detail?id=688906",
    "https://crbug.com/40505032"
   ],
+  "firefox_android": [
+   "https://bugzil.la/1387483"
+  ],
   "chrome_android": [
    "https://crbug.com/40505032"
   ],
   "edge": [
    "https://crbug.com/40505032"
-  ],
-  "firefox_android": [
-   "https://bugzil.la/1387483"
   ],
   "oculus": [
    "https://crbug.com/40505032"
@@ -149,8 +165,5 @@
   ]
  },
  "baselineLowDateAsObject": null,
- "baselineHighDateAsObject": null,
- "blockedOn": "Firefox",
- "monthsBlocked": 44,
- "blockedSince": "September 2022"
+ "baselineHighDateAsObject": null
 }
