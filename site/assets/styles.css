@@ -525,14 +525,6 @@ main {
   }
 }
 
-@media (max-width: 48rem) {
-  .feed-subscriptions {
-    ul {
-      grid-template-columns: 1fr;
-    }
-  }
-}
-
 .release-notes {
   .feed-subscriptions {
     li {
@@ -543,16 +535,30 @@ main {
 }
 
 .feed-badge {
-  display: flex;
-  gap: 0.75rem;
   align-items: center;
-  min-block-size: 4rem;
-  padding: 0.75rem;
-  color: var(--text);
-  text-decoration: none;
   background: var(--bg, var(--background-alt));
   border: 0.125rem solid var(--border, var(--baseline-limited-border));
   border-radius: 0.5rem;
+  color: var(--text);
+  display: flex;
+  gap: 0.75rem;
+  min-block-size: 4rem;
+  padding: 0.75rem;
+  text-decoration: none;
+}
+
+@media (width < 48rem) {
+  .feed-subscriptions {
+    ul {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (width >= 48rem) {
+  .feed-badge {
+    block-size: 100%;
+  }
 }
 
 .feed-badge:hover strong {
