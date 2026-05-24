@@ -9,8 +9,8 @@ eleventyComputed:
   title: "{{ feature.name | safe }}"
   socialTitle: "{{ feature.name | safe }} - Web platform features explorer"
   socialDescription: "{{ feature.description | safe }}"
-  socialImage: "https://web-platform-dx.github.io/web-features-explorer/assets/og/features/{{ feature.id | slugify }}.png"
-  canonicalUrl: "https://web-platform-dx.github.io/web-features-explorer/features/{{ feature.id | slugify }}/"
+  socialImage: "{{ siteConfig.url }}assets/og/features/{{ feature.id | slugify }}.png"
+  canonicalUrl: "{{ siteConfig.url }}features/{{ feature.id | slugify }}/"
 ---
 
 <main class="feature-page">

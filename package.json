@@ -6,6 +6,7 @@
     "@11ty/eleventy": "^3.1.5",
     "@11ty/eleventy-plugin-rss": "^3.0.0",
     "@mdn/browser-compat-data": "^7.3.15",
+    "@schalkneethling/opengraph-cards-maker": "^0.1.1",
     "apexcharts": "^5.11.0",
     "browser-specs": "^4.76.0",
     "caniuse-lite": "^1.0.30001792",
@@ -17,6 +18,7 @@
   },
   "scripts": {
     "build": "npx rimraf docs && npx @11ty/eleventy && node generate-og-images.js",
+    "setup:playwright:ci": "npx playwright install --with-deps chromium",
     "serve": "npx @11ty/eleventy --serve",
     "pagefind": "npx pagefind --site docs --glob \"features/**/*.html\""
   }

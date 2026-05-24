@@ -37,6 +37,9 @@ jobs:
       - name: Update statistics
         run: node update-statistics.js
 
+      - name: Install Playwright Chromium
+        run: npm run setup:playwright:ci
+
       - name: Commit dependency changes
         if: ${{ github.event_name != 'push' }}
         run: |
