@@ -9,6 +9,75 @@ import { getAllBCDKeys, stripLessThan, getBrowserVersionReleaseDate, getAugmente
 import { BROWSERS_BY_ENGINE, WEB_FEATURES_MAPPINGS_URL } from "./consts.js";
 import siteConfig from "./site.config.js";
 
+const inlineSvgCache = new Map();
+
+function resolveSvgPath(src) {
+  if (src.startsWith("http://") || src.startsWith("https://")) {
+    return src;
+  }
+
+  if (src.startsWith("/")) {
+    return new URL(`./site${src}`, import.meta.url);
+  }
+
+  return new URL(src, import.meta.url);
+}
+
+async function fetchSvg(src) {
+  const response = await fetch(src);
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch SVG ${src}: ${response.status} ${response.statusText}`);
+  }
+
+  return response.text();
+}
+
+async function readSvg(src, svgPath) {
+  return typeof svgPath === "string"
+    ? fetchSvg(src)
+    : fs.readFile(svgPath, "utf8");
+}
+
+async function getSvgContent(src) {
+  const svgPath = resolveSvgPath(src);
+  const cacheKey = svgPath.toString();
+
+  if (!inlineSvgCache.has(cacheKey)) {
+    const svgContentPromise = (async () => {
+      try {
+        const svg = await readSvg(src, svgPath);
+
+        if (!svg.trimStart().startsWith("<svg")) {
+          throw new Error(`Expected ${src} to contain an SVG`);
+        }
+
+        return svg;
+      } catch (error) {
+        inlineSvgCache.delete(cacheKey);
+        throw error;
+      }
+    })();
+
+    inlineSvgCache.set(cacheKey, svgContentPromise);
+  }
+
+  return inlineSvgCache.get(cacheKey);
+}
+
+function addSvgAttributes(svg, attributes = {}) {
+  const renderedAttributes = Object.entries(attributes)
+    .filter(([, value]) => value != null && value !== "")
+    .map(([name, value]) => `${name}="${String(value).replaceAll('"', "&quot;")}"`)
+    .join(" ");
+
+  if (!renderedAttributes) {
+    return svg;
+  }
+
+  return svg.replace("<svg", `<svg ${renderedAttributes}`);
+}
+
 function augmentFeatureData(feature, webFeaturesMappingsData) {
   // Rename group and spec to group*s* and spec*s*, since they're always arrays.
   feature.groups = feature.group || [];
@@ -125,6 +194,16 @@ export default async function (eleventyConfig) {
   );
 
   eleventyConfig.addShortcode("nameAsHTML", nameAsHTML);
+
+  eleventyConfig.addNunjucksAsyncShortcode("inlineSvg", async function (src, className) {
+    const svg = await getSvgContent(src);
+
+    return addSvgAttributes(svg, {
+      class: className,
+      "aria-hidden": "true",
+      focusable: "false",
+    });
+  });
 
   eleventyConfig.addShortcode("escapeJSON", function (name) {
     return name.replace(/"/g, "\\\"");
