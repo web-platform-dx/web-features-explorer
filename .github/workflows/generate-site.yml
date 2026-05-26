@@ -37,8 +37,8 @@ jobs:
       - name: Update statistics
         run: node update-statistics.js
 
-      - name: Install Playwright Chromium
-        run: npm run setup:playwright:ci
+      - name: Install Open Graph image browser runtime
+        run: npm run setup:og-browser:ci
 
       - name: Commit dependency changes
         if: ${{ github.event_name != 'push' }}

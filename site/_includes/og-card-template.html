@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        inline-size: var(--card-width);
+        block-size: var(--card-height);
+        margin: 0;
+      }
+
+      body {
+        --card-width: 1200px;
+        --card-height: 630px;
+        --card-bg: #ffffff;
+        --card-text: #111827;
+        --card-muted-text: #3f4754;
+        --card-support-title: #202124;
+        --card-support-detail: #5f6368;
+        --card-support-bg: rgba(255, 255, 255, 0.72);
+        --card-support-border: #d9dde1;
+        --card-bg-gradient-end: #f8fbff;
+        --card-spotlight-blue: rgba(168, 199, 250, 0.46);
+        --card-spotlight-green: rgba(196, 238, 208, 0.42);
+        --accent: #34a853;
+        --accent-bg: #e6f4ea;
+        --accent-border: #b7dfc0;
+        display: grid;
+        place-items: center;
+        background: var(--card-bg);
+        color: var(--card-text);
+        font-family: Verdana, sans-serif;
+      }
+
+      .card {
+        position: relative;
+        display: grid;
+        grid-template-rows: 1fr auto auto;
+        gap: 22px;
+        inline-size: calc(100% - 16px);
+        block-size: calc(100% - 16px);
+        overflow: hidden;
+        padding: 70px 72px 40px;
+        background:
+          radial-gradient(circle at 82% 16%, var(--card-spotlight-blue), transparent 360px),
+          radial-gradient(circle at 76% 84%, var(--card-spotlight-green), transparent 360px),
+          linear-gradient(135deg, var(--card-bg) 0%, var(--card-bg-gradient-end) 100%);
+        border-radius: 8px;
+      }
+
+      .card::before {
+        position: absolute;
+        inset: 0 0 auto;
+        block-size: 18px;
+        background: var(--accent);
+        content: "";
+      }
+
+      .brand {
+        display: block;
+        inline-size: 88px;
+        block-size: auto;
+        margin-block-end: 28px;
+      }
+
+      h1 {
+        max-inline-size: 960px;
+        margin: 0;
+        font-size: 64px;
+        font-weight: 780;
+        letter-spacing: 0;
+        line-height: 0.98;
+        overflow-wrap: anywhere;
+      }
+
+      .description {
+        display: -webkit-box;
+        max-inline-size: 1060px;
+        margin: 24px 0 0;
+        overflow: hidden;
+        color: var(--card-muted-text);
+        font-size: 30px;
+        line-height: 1.28;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      .status {
+        display: inline-grid;
+        grid-template-columns: auto 1fr;
+        gap: 18px;
+        align-items: center;
+        justify-self: start;
+        min-inline-size: 480px;
+        max-inline-size: 520px;
+        padding: 20px 26px;
+        background: var(--accent-bg);
+        border: 2px solid var(--accent-border);
+        border-radius: 8px;
+      }
+
+      .status img {
+        inline-size: 42px;
+        block-size: 42px;
+        object-fit: contain;
+      }
+
+      .status-copy {
+        display: grid;
+        gap: 12px;
+      }
+
+      .status-copy strong {
+        color: var(--accent);
+        font-size: 32px;
+        font-weight: 780;
+        line-height: 1;
+      }
+
+      .status-copy span {
+        color: var(--card-muted-text);
+        font-size: 24px;
+        line-height: 1.1;
+      }
+
+      .support {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .support:empty {
+        display: none;
+      }
+
+      .support-item {
+        display: grid;
+        grid-template-columns: 52px 1fr;
+        gap: 18px;
+        align-items: center;
+        min-inline-size: 0;
+        padding: 18px 22px;
+        background: var(--card-support-bg);
+        border: 2px solid var(--card-support-border);
+        border-radius: 8px;
+      }
+
+      .support-item.is-muted {
+        opacity: 0.58;
+      }
+
+      .support-item img {
+        inline-size: 52px;
+        block-size: 52px;
+        object-fit: contain;
+      }
+
+      .support-copy {
+        display: grid;
+        gap: 4px;
+        min-inline-size: 0;
+      }
+
+      .support-copy strong {
+        overflow: hidden;
+        color: var(--card-support-title);
+        font-size: 24px;
+        font-weight: 760;
+        line-height: 1.1;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .support-copy span {
+        overflow: hidden;
+        color: var(--card-support-detail);
+        font-size: 20px;
+        line-height: 1.1;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <section>
+        <!-- BRAND_IMAGE -->
+        <h1><!-- CARD_TITLE --></h1>
+        <p class="description"><!-- CARD_DESCRIPTION --></p>
+      </section>
+      <!-- STATUS_HTML -->
+      <ul class="support"><!-- SUPPORT_HTML --></ul>
+    </main>
+  </body>
+</html>
