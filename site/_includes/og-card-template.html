@@ -30,6 +30,7 @@
         --accent: #34a853;
         --accent-bg: #e6f4ea;
         --accent-border: #b7dfc0;
+        /* FONT_SIZE_OVERRIDES */
         display: grid;
         place-items: center;
         background: var(--card-bg);
@@ -71,7 +72,7 @@
       h1 {
         max-inline-size: 960px;
         margin: 0;
-        font-size: 64px;
+        font-size: var(--font-size-title, 56px);
         font-weight: 780;
         letter-spacing: 0;
         line-height: 0.98;
@@ -84,7 +85,7 @@
         margin: 24px 0 0;
         overflow: hidden;
         color: var(--card-muted-text);
-        font-size: 30px;
+        font-size: var(--font-size-description, 26px);
         line-height: 1.28;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
@@ -112,19 +113,18 @@
 
       .status-copy {
         display: grid;
-        gap: 12px;
       }
 
       .status-copy strong {
         color: var(--accent);
-        font-size: 32px;
+        font-size: var(--font-size-status-label, 28px);
         font-weight: 780;
         line-height: 1;
       }
 
       .status-copy span {
         color: var(--card-muted-text);
-        font-size: 24px;
+        font-size: var(--font-size-status-detail, 21px);
         line-height: 1.1;
       }
 
@@ -172,7 +172,7 @@
       .support-copy strong {
         overflow: hidden;
         color: var(--card-support-title);
-        font-size: 24px;
+        font-size: var(--font-size-support-name, 21px);
         font-weight: 760;
         line-height: 1.1;
         text-overflow: ellipsis;
@@ -182,7 +182,7 @@
       .support-copy span {
         overflow: hidden;
         color: var(--card-support-detail);
-        font-size: 20px;
+        font-size: var(--font-size-support-detail, 18px);
         line-height: 1.1;
         text-overflow: ellipsis;
         white-space: nowrap;

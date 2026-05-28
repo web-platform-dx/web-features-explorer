@@ -10,6 +10,14 @@ const siteConfig = {
       firefox: "site/assets/firefox.svg",
       safari: "site/assets/safari.svg",
     },
+    fontSizes: {
+      title: 56,
+      description: 26,
+      statusLabel: 28,
+      statusDetail: 21,
+      supportName: 21,
+      supportDetail: 18,
+    },
     themes: {
       high: {
         accent: "#34a853",
@@ -59,6 +67,7 @@ const siteConfig = {
         },
         discouraged: {
           label: "Discouraged",
+          detail: "Avoid using in new code.",
           fallbackDetail: "This feature is discouraged.",
         },
       },

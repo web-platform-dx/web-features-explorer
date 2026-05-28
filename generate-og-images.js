@@ -13,6 +13,14 @@ const cardBrowsers = ["chrome", "edge", "firefox", "safari"].map((id) => ({
   name: browsers[id].name,
   icon: openGraph.browserIcons[id],
 }));
+const fontSizeVariables = {
+  title: "--font-size-title",
+  description: "--font-size-description",
+  statusLabel: "--font-size-status-label",
+  statusDetail: "--font-size-status-detail",
+  supportName: "--font-size-support-name",
+  supportDetail: "--font-size-support-detail",
+};
 let cardTemplate = "";
 
 function formatBaselineDate(date = "") {
@@ -25,7 +33,7 @@ function getStatus(feature) {
   if (feature.discouraged) {
     return {
       label: status.discouraged.label,
-      detail: feature.discouraged.reason || status.discouraged.fallbackDetail,
+      detail: status.discouraged.detail,
       icon: null,
       theme: openGraph.themes.discouraged,
     };
@@ -61,6 +69,20 @@ function replaceTemplateValue(template, key, value) {
   return template.replace(key, value);
 }
 
+function getFontSizeValue(value) {
+  return Number.isFinite(value) ? `${value}px` : value;
+}
+
+function getFontSizeStyles(fontSizes = {}) {
+  return Object.entries(fontSizes)
+    .filter(([key, value]) => fontSizeVariables[key] && value)
+    .map(
+      ([key, value]) =>
+        `${fontSizeVariables[key]}: ${getFontSizeValue(value)};`,
+    )
+    .join(" ");
+}
+
 function renderProjectCard({ card, images, size, escapeHTML }) {
   const fallbackTheme = openGraph.themes.high;
   const theme = {
@@ -91,7 +113,6 @@ function renderProjectCard({ card, images, size, escapeHTML }) {
         ${images.status ? `<img src="${images.status}" alt="">` : ""}
         <span class="status-copy">
           <strong>${escapeHTML(card.status.label)}</strong>
-          <span>${escapeHTML(card.status.detail)}</span>
         </span>
       </section>
     `
@@ -100,6 +121,13 @@ function renderProjectCard({ card, images, size, escapeHTML }) {
   return [
     ["--card-width: 1200px;", `--card-width: ${size.width}px;`],
     ["--card-height: 630px;", `--card-height: ${size.height}px;`],
+    [
+      "/* FONT_SIZE_OVERRIDES */",
+      getFontSizeStyles({
+        ...openGraph.fontSizes,
+        ...card.fontSizes,
+      }),
+    ],
     ["--accent: #34a853;", `--accent: ${theme.accent};`],
     ["--accent-bg: #e6f4ea;", `--accent-bg: ${theme.accentBackground};`],
     ["--accent-border: #b7dfc0;", `--accent-border: ${theme.accentBorder};`],
@@ -192,6 +220,7 @@ async function generate() {
     outputDir,
     cleanOutputDir: true,
     template: "web-features-explorer",
+    fontSizes: openGraph.fontSizes,
     templates: {
       "web-features-explorer": renderProjectCard,
     },
