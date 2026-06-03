@@ -38,7 +38,7 @@ jobs:
         run: node update-statistics.js
 
       - name: Install Open Graph image browser runtime
-        run: npm run setup:og-browser:ci
+        run: npx playwright install --with-deps chromium
 
       - name: Commit dependency changes
         if: ${{ github.event_name != 'push' }}

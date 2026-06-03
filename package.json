@@ -12,13 +12,11 @@
     "caniuse-lite": "^1.0.30001793",
     "glob": "^13.0.6",
     "pagefind": "^1.5.2",
-    "playwright": "^1.60.0",
     "web-features": "next",
     "yaml": "^2.9.0"
   },
   "scripts": {
     "build": "npx rimraf docs && npx @11ty/eleventy && node generate-og-images.js",
-    "setup:og-browser:ci": "npx playwright install --with-deps chromium",
     "serve": "npx @11ty/eleventy --serve",
     "pagefind": "npx pagefind --site docs --glob \"features/**/*.html\""
   }
