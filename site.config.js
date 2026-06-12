@@ -1,4 +1,82 @@
 const siteConfig = {
+  url: "https://web-platform-dx.github.io/web-features-explorer/",
+  openGraph: {
+    outputDir: "docs/assets/og",
+    featureOutputDir: "docs/assets/og/features",
+    brandSrc: "https://web-platform-dx.github.io/assets/img/webdx-notext.svg",
+    browserIcons: {
+      chrome: "site/assets/chrome.svg",
+      edge: "site/assets/edge.svg",
+      firefox: "site/assets/firefox.svg",
+      safari: "site/assets/safari.svg",
+    },
+    fontSizes: {
+      title: 56,
+      description: 26,
+      statusLabel: 28,
+      statusDetail: 21,
+      supportName: 21,
+      supportDetail: 18,
+    },
+    themes: {
+      high: {
+        accent: "#34a853",
+        accentBackground: "#e6f4ea",
+        accentBorder: "#b7dfc0",
+      },
+      low: {
+        accent: "#1a73e8",
+        accentBackground: "#e8f0fe",
+        accentBorder: "#c8dafb",
+      },
+      limited: {
+        accent: "#f09409",
+        accentBackground: "#fff4e0",
+        accentBorder: "#f6c982",
+      },
+      discouraged: {
+        accent: "#c5221f",
+        accentBackground: "#fce8e6",
+        accentBorder: "#f4c7c3",
+      },
+    },
+    strings: {
+      defaultTitle: "Stay up-to-date with the web platform",
+      defaultDescription:
+        "Discover new features and APIs and stay up-to-date with changes across the web platform.",
+      defaultStatus: {
+        label: "Web platform data",
+        detail: "Baseline status, browser support, specs, and developer signals.",
+        icon: "https://web-platform-dx.github.io/assets/img/baseline-widely-icon.svg",
+      },
+      status: {
+        high: {
+          label: "Baseline Widely Available",
+          detailPrefix: "Since ",
+          icon: "https://web-platform-dx.github.io/assets/img/baseline-widely-icon.svg",
+        },
+        low: {
+          label: "Baseline Newly Available",
+          detailPrefix: "Since ",
+          icon: "https://web-platform-dx.github.io/assets/img/baseline-newly-icon.svg",
+        },
+        limited: {
+          label: "Limited availability",
+          detail: "Not yet supported across all core browsers.",
+          icon: "https://web-platform-dx.github.io/assets/img/baseline-limited-icon.svg",
+        },
+        discouraged: {
+          label: "Discouraged",
+          detail: "Avoid using in new code.",
+          fallbackDetail: "This feature is discouraged.",
+        },
+      },
+      support: {
+        noSupport: "No support",
+        versionPrefix: "v",
+      },
+    },
+  },
   strings: {
     formatting: {
       missingValue: "Not tracked",

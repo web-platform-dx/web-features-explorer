@@ -6,17 +6,17 @@
     "@11ty/eleventy": "^3.1.6",
     "@11ty/eleventy-plugin-rss": "^3.0.0",
     "@mdn/browser-compat-data": "^8.0.2",
+    "@schalkneethling/opengraph-cards-maker": "^0.3.0",
     "apexcharts": "^5.15.0",
     "browser-specs": "^5.2.0",
     "caniuse-lite": "^1.0.30001799",
     "glob": "^13.0.6",
     "pagefind": "^1.5.2",
-    "playwright": "^1.60.0",
     "web-features": "next",
     "yaml": "^2.9.0"
   },
   "scripts": {
-    "build": "npx rimraf docs && npx @11ty/eleventy",
+    "build": "npx rimraf docs && npx @11ty/eleventy && node generate-og-images.js",
     "serve": "npx @11ty/eleventy --serve",
     "pagefind": "npx pagefind --site docs --glob \"features/**/*.html\""
   }
