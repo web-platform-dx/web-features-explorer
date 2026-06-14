@@ -180,6 +180,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/assets");
   eleventyConfig.addPassthroughCopy({ "node_modules/apexcharts/dist/apexcharts.css": "assets/apexcharts.css" });
   eleventyConfig.addPassthroughCopy({ "node_modules/apexcharts/dist/apexcharts.min.js": "assets/apexcharts.js" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/baseline-status/baseline-status.min.js": "assets/baseline-status.min.js" });
 
   eleventyConfig.addDataExtension("yml,yaml", (contents, filePath) => {
     return YAML.parse(contents);

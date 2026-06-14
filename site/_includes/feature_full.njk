@@ -20,22 +20,26 @@
     {{ feature.description_html | safe }}
   </p>
 
-  <div class="baseline feature-box">
-    <h3>Status</h3>
-    {% include "baseline.njk" %}
-    {% if feature.expectedBaselineHighDate %}
-      <p>This feature is expected to reach Baseline Widely Available status on: {{ feature.expectedBaselineHighDate }}
-    {% endif %}
-    {% if not feature.status.baseline and feature.hasNegativeStandardPosition %}
-      <p>This feature received a negative standards position from at least one browser vendor. It's very unlikely to ever become Baseline in this current form.</p>
-    {% endif %}
+  <div class="baseline-status-section">
+    <baseline-status feature-id="{{ feature.id }}">
+      {% include "baseline.njk" %}
+    </baseline-status>
+    <div class="baseline-status-notes">
+      {% if feature.expectedBaselineHighDate %}
+        <p>This feature is expected to reach Baseline Widely Available status on: {{ feature.expectedBaselineHighDate }}</p>
+      {% endif %}
+      {% if not feature.status.baseline and feature.hasNegativeStandardPosition %}
+        <p>This feature received a negative standards position from at least one browser vendor. It's very unlikely to ever become Baseline in this current form.</p>
+      {% endif %}
+    </div>
   </div>
 
   {% include "docs.njk" %}
 
   {% include "specs.njk" %}
-  
-  <div class="compat-table feature-box">
+
+  {# Hidden after the baseline-status custom element is defined; see layout.njk. #}
+  <div class="compat-table feature-box baseline-fallback-compat">
     <h3>Browser support{% if feature.caniuse %} <span class="subtext">(<a href="https://caniuse.com/{{ feature.caniuse }}">view on caniuse.com</a>)</span>{% endif %}</h3>
     {% include "compat_full.njk" %}
 
