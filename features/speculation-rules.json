@@ -496,6 +496,12 @@
    "https://webkit.org/b/295193"
   ]
  },
+ "useCases": [
+  {
+   "description": "My company has a web app in which users can create, edit, and save documents. The app's landing page is the documents list, from which users can open their documents in a proprietary editor in a new tab.\n\nThe editor has many features, so it loads and evaluates several megabytes of assets. Even with request & bytecode caching, loading and evaluating assets is pretty slow. \n\nWith the Speculation Rules API (specifically prerendering), I can start asset load and evaluation before a user opens their document, and then use the Broadcast Channel API to tell the prerendered page what document to open.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/186#issuecomment-4209725860"
+  }
+ ],
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null
 }

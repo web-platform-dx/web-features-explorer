@@ -27,7 +27,7 @@
     <meta name="twitter:image" content="https://web-platform-dx.github.io/web-features-explorer/assets/og/features/light-dark-image.png">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     
-    <link href="/web-features-explorer/assets/favicon.png" rel="icon" sizes="64x64" type="image/png">
+    <link href="https://web-platform-dx.github.io/assets/img/webdx-notext.svg" rel="icon" type="image/svg+xml">
     <link rel="alternate" type="application/atom+xml" title="Baseline newly available features" href="/web-features-explorer/newly-available.xml">
     <link rel="alternate" type="application/atom+xml" title="Baseline widely available features" href="/web-features-explorer/widely-available.xml">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
@@ -46,7 +46,7 @@
           </ul>
           <search>
             <form>
-              <input type="search" id="search" placeholder="Search">
+              <input type="search" id="search" placeholder="Search for features">
             </form>
           </search>
         </nav>
@@ -249,6 +249,113 @@
     </div>
     <p>Do you need this feature?<br>
        Let us know by leaving a 👍 reaction on <a href="https://github.com/web-platform-dx/developer-signals/issues/568">the feedback issue</a>. Don't forget to also leave a comment explaining your specific use case.</p>
+  </div>
+
+
+  
+  <div class="use-cases feature-box">
+    <h3>Developer use cases</h3>
+    <ul>
+    
+      <li>
+        <details class="string-revealer">
+          <summary>- Use different images/photos/illustrations that are tuned for the corresponding mode.
+- Use an alternative version of the logo, for example, Datadog logo has a strict guidelines where on dark backgrounds it must use a different shape: https://www.datadoghq.com/about/resources/
+- Adjusting icons/images to have a better contrast with the inverted background while keeping the same color (adding outlines, shadows, or something else that makes the image stand out against an otherwise similarly-bright background)
+
+While these could be adjusted with media queries, often a page could have sections that has inverted colors (navigation menus, sidebars, etc), and any image inside will need to be adjusted based on the `color-scheme` used on the container.
+
+&lt;details&gt;
+
+&lt;summary&gt;Aside from images, I also want to use it with any CSS properties and values.&lt;/summary&gt;
+
+(hiding in the details, as I originally misread the topic to consider all the `light-dark()` use cases and not just images, haha)
+
+Use cases that I saw in the wild:
+
+- Adjusting the `filter` property — making things ligher/darker, adjusting contrast and saturation, etc. Same for `mix-blend-mode`, `background-blend-mode` and other similar properties.
+- Optical adjustments via `transform` or adjusting the width of borders/shadows.
+- Changing the `opacity` of something (often, also for optical/brightness adjustments).
+- Adjusting the presence/size/spread of some box or text shadow.
+- `display` value, like when you need to show a specific image or element for the corresponding color scheme (we can do responsive images based on media queries, but not on a component-level `color-scheme`, and sometimes you want to change the copy or something else too).
+
+&lt;/details&gt;</summary>
+          - Use different images/photos/illustrations that are tuned for the corresponding mode.
+- Use an alternative version of the logo, for example, Datadog logo has a strict guidelines where on dark backgrounds it must use a different shape: https://www.datadoghq.com/about/resources/
+- Adjusting icons/images to have a better contrast with the inverted background while keeping the same color (adding outlines, shadows, or something else that makes the image stand out against an otherwise similarly-bright background)
+
+While these could be adjusted with media queries, often a page could have sections that has inverted colors (navigation menus, sidebars, etc), and any image inside will need to be adjusted based on the `color-scheme` used on the container.
+
+&lt;details&gt;
+
+&lt;summary&gt;Aside from images, I also want to use it with any CSS properties and values.&lt;/summary&gt;
+
+(hiding in the details, as I originally misread the topic to consider all the `light-dark()` use cases and not just images, haha)
+
+Use cases that I saw in the wild:
+
+- Adjusting the `filter` property — making things ligher/darker, adjusting contrast and saturation, etc. Same for `mix-blend-mode`, `background-blend-mode` and other similar properties.
+- Optical adjustments via `transform` or adjusting the width of borders/shadows.
+- Changing the `opacity` of something (often, also for optical/brightness adjustments).
+- Adjusting the presence/size/spread of some box or text shadow.
+- `display` value, like when you need to show a specific image or element for the corresponding color scheme (we can do responsive images based on media queries, but not on a component-level `color-scheme`, and sometimes you want to change the copy or something else too).
+
+&lt;/details&gt; [<a href="https://github.com/web-platform-dx/developer-signals/issues/568#issuecomment-4418675627">see original comment</a>]
+        </details>
+      </li>
+    
+      <li>
+        <details class="string-revealer">
+          <summary>Let&#39;s say I have image/ video cards, where the card&#39;s **hue** matches what&#39;s dominant in the `src` of the `img` element/ `poster` of the `video` element, while the saturation, lightness and alpha are user set.
+
+The page background and the card text depend on the theme via `light-dark()`.
+
+```
+:root { background: light-dark(#dedede, #212121) }
+
+.card { color: light-dark(#121212, #ededed) }
+```
+
+However, depending on the user set lightness and alpha for the card background, the text contrast may be less than ideal. We could have this situation:
+
+![in the dark theme case, when the card text is close to white, user set lightness and alpha are high, resulting in a pretty opaque bright card background, which means poor contrast](https://github.com/user-attachments/assets/f1db6dee-a2f7-4fcb-b230-07f7fa67a74f)
+
+Or this situation:
+
+![in the light theme case, when the card text is close to black, user set lightness is low and alpha is high, resulting in a pretty opaque dark card background, which means poor contrast](https://github.com/user-attachments/assets/cbaa5aba-d63b-4aa6-b928-bbb0fc2857d1)
+
+Since the user set brightness and alpha are stored as numeric values in custom properties, I could use them to compute the proper values inside the `light-dark()` for the card&#39;s text `color`... **if** I also have a custom property `--dark` that changes automatically with the theme. Something like this:
+
+```
+:root { --dark: light-dark(0, 1) }
+```</summary>
+          Let&#39;s say I have image/ video cards, where the card&#39;s **hue** matches what&#39;s dominant in the `src` of the `img` element/ `poster` of the `video` element, while the saturation, lightness and alpha are user set.
+
+The page background and the card text depend on the theme via `light-dark()`.
+
+```
+:root { background: light-dark(#dedede, #212121) }
+
+.card { color: light-dark(#121212, #ededed) }
+```
+
+However, depending on the user set lightness and alpha for the card background, the text contrast may be less than ideal. We could have this situation:
+
+![in the dark theme case, when the card text is close to white, user set lightness and alpha are high, resulting in a pretty opaque bright card background, which means poor contrast](https://github.com/user-attachments/assets/f1db6dee-a2f7-4fcb-b230-07f7fa67a74f)
+
+Or this situation:
+
+![in the light theme case, when the card text is close to black, user set lightness is low and alpha is high, resulting in a pretty opaque dark card background, which means poor contrast](https://github.com/user-attachments/assets/cbaa5aba-d63b-4aa6-b928-bbb0fc2857d1)
+
+Since the user set brightness and alpha are stored as numeric values in custom properties, I could use them to compute the proper values inside the `light-dark()` for the card&#39;s text `color`... **if** I also have a custom property `--dark` that changes automatically with the theme. Something like this:
+
+```
+:root { --dark: light-dark(0, 1) }
+``` [<a href="https://github.com/web-platform-dx/developer-signals/issues/568#issuecomment-4439039351">see original comment</a>]
+        </details>
+      </li>
+    
+    </ul>
   </div>
 
 

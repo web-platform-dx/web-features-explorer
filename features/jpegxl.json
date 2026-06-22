@@ -124,6 +124,44 @@
    "https://bugs.chromium.org/p/chromium/issues/detail?id=1109698"
   ]
  },
+ "useCases": [
+  {
+   "description": "1. My website generator automatically creates previews of photos and other images (with the help of ImageMagick). These previews are saved as JXL due to its high quality, low file size and acceptable encoding speed. I look forward to saving them progressively as well, which JXL can, but that doesn't work with ImageMagick yet. I want visitors of the webpage to be able to view these previews in their browsers.\n2. I also want to save full-size photos that get developed from my camera's raw files as JXL and link to them on my webpage. I want visitors of my webpage to be able to view these images in their browser.\n3. I'd like to convert old full-size JPEG files without any quality loss to smaller JXL files in order to reduce traffic and for quicker loading in the web browser. I want visitors of my webpage to be able to view these images.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/215#issuecomment-3607327783"
+  },
+  {
+   "description": "As a web developer, I need to deliver the best looking/smallest size for items like logos (that aren't in SVG) & screen shots. The extra savings from JXL would be significant, as we often have hundreds of those per site.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/215#issuecomment-3628264088"
+  },
+  {
+   "description": "### LSB encoding, there cannot be any data loss in RGBA\n\nI want JPEG XL because it provides loseless compression and its helpful for my [Steganography Online Codec](https://www.pelock.com/products/steganography-online-codec), it's widly used by journalists and in hostile environments (war) to transfer secret messages within images, the problem is its based on LSB coding and I cannot use error correction to store the secret and encrypted content in losssy, output images like JPG because the LSB coding would be damaged & lost. Right now I can only use PNG as the output format file because I can extract the data from LSB bits without any data loss. JPEG XL would provide me with an additional format and output images would take even less space,\n\n### Image optimization plugin for Yii2 framework\n\nI would love to add JPEG XL to my auto-image optimization plugin for Yii2 PHP framework [yii2-imgopt](https://www.yiiframework.com/extension/pelock/yii2-imgopt), currently I can only output WebP and AVIF and AVIF in 90% cases is not even installed within PHP GD library, so the only working option is WebP. JPEG XL would provide a vital alternative for WebP and AVIF with even more options like lossless compression and smaller sizes. Smaller sizes = faster websites.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/215#issuecomment-3633966568"
+  },
+  {
+   "description": "I work on a web framework, [Next.js](https://nextjs.org), that uses on-demand [image optimization](https://nextjs.org/docs/app/getting-started/images), so encoding speed is important on cache miss.\n\nBy default, we transform all images to WebP which is fast to encode (typically a source image is JPEG or PNG). We also allow transforming to AVIF via opt in config, however this is considerably slower to encode. So much so that we have not enabled AVIF by default. \n\nWe think that JPEG XL might be a nice middle ground to get some of the features of AVIF without the slow encoding speed (although it sounds like [decoding speed might be slower](https://bsky.app/profile/did:plc:vhz2zndxjzsl6mrkaimpmbi4/post/3m76v3x6ai22o) too).",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/215#issuecomment-3634106198"
+  },
+  {
+   "description": "In my free time, I work on a small website focused on sharing user-generated content. Users are able to attach screenshots, banner images and icons to their works. As the website is small and paid for out-of-pocket, I want JPEG XL in order to reduce my computation cost for image compression, networking and storage costs for serving and storing the images.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/215#issuecomment-3641637708"
+  },
+  {
+   "description": "I want to use JPEG XL on the web to deliver high-dynamic-range (HDR) images and to store and serve high-quality images in a truly lossless way.\nJPEG XL is especially important for workflows that require wide color gamuts, higher bit depths (10-bit / 12-bit), and accurate tone reproduction, which are not well supported by traditional web image formats.\n\n- My use case includes:\n- Preserving HDR content without tone-mapping it down to SDR\n- Archiving and publishing images with lossless compression while keeping file sizes reasonable\n- Avoiding quality loss from repeated re-encoding during editing and delivery\n- Using a single modern image format instead of maintaining multiple fallback formats\n\nFor content creators, photographers, and developers working with HDR displays and modern color pipelines, JPEG XL would significantly improve both image quality and efficiency on the web.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/215#issuecomment-3667076379"
+  },
+  {
+   "description": "I work developing a web-based markdown editor to make TTRPG books(https://homebrewery.naturalcrit.com/), meant for sharing and printing, some of which can get to well over 200 pages, therefore asset size is very important, support in this feature should reduce the overall size of our users documents noticeably.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/215#issuecomment-3679298308"
+  },
+  {
+   "description": "I want to use it in desktop Electron apps. Electron uses Chrome as its baseline, so the addition of this functionality directly flows forward. In particular, some Electron apps like Obsidian (https://obsidian.md) involve user-created content, and those could use JXL if it was available. My personal vault contains a lot of images, so JXL would provide decent space-savings.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/215#issuecomment-4060542088"
+  },
+  {
+   "description": "I want to store, and serve patent-unencumbered (no AVIF), lossless and lossy images in the web forum application I've written.\nAn example of a web forum using said application: https://www.sr20-forum.com",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/215#issuecomment-4623074966"
+  }
+ ],
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null
 }

@@ -298,6 +298,16 @@
    "https://issues.chromium.org/issues/40826514"
   ]
  },
+ "useCases": [
+  {
+   "description": "We're running a micro frontend architecture with parts of the page composed from different teams' apps at runtime. The parts are independently deployed, and isolated today using a declarative shadow DOM boundary.\n\nWe also have a shared design system with a web components base. Since every part of the micro frontend shares the global custom element registry, to update the design system when there are breaking changes requires a huge coordination effort that scoped custom element registries would solve.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/364#issuecomment-3646159954"
+  },
+  {
+   "description": "<!-- Add your specific use-cases, even if they seem obvious to you. -->\n\nI have the same use case as above at a cross organizational level at Adobe. It's a major headache not having Scoped Custom Element Registries.\n\nBut also another use case within a single application that can create dependencies in multiple different versions of a design system within the same app for reasons of reproducibility (consistent reproduction of an old ux even though a new version is available).",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/364#issuecomment-3952608107"
+  }
+ ],
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null,
  "blockedOn": "Firefox",

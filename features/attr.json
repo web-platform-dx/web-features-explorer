@@ -311,6 +311,16 @@
    "https://webkit.org/b/26609"
   ]
  },
+ "useCases": [
+  {
+   "description": "Style images based on their focal point for better UX when images resize to fit different viewport widths. The CMS that calculates focal points outputs data- attributes, then site themes can decide if they want to write the needed styles in their stylesheets. CSS could look like this, defined once for all images site-wide:\n\n```css\n[data-w-focus-x] {\n  object-fit: cover;\n  object-position: attr(data-w-focus-x) attr(data-w-focus-y);\n}\n```",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/293#issuecomment-3817053729"
+  },
+  {
+   "description": "<!-- Add your specific use-cases, even if they seem obvious to you. -->\n\nWe're building a set of UI components that users can assemble into web pages. We want to dynamically assign an anchor name via prop, so that any element can be anchored to another.\n\n```html\n<MyAnchorTarget data-anchor-name=\"--my-anchor-name\" id=\"my-anchor-target-component\" />\n\n<MyToBeAnchored data-anchor-name=\"--my-anchor-name\" id=\"my-to-be-anchored-component\" />\n\n<style>\n  #my-anchor-target-component {\n    anchor-name: attr(data-anchor-name)\n  }\n  \n  #my-to-be-anchored-component {\n    position-anchor: attr(data-anchor-name);\n  }\n  </style>\n```",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/293#issuecomment-3915950915"
+  }
+ ],
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null
 }

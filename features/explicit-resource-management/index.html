@@ -27,7 +27,7 @@
     <meta name="twitter:image" content="https://web-platform-dx.github.io/web-features-explorer/assets/og/features/explicit-resource-management.png">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     
-    <link href="/web-features-explorer/assets/favicon.png" rel="icon" sizes="64x64" type="image/png">
+    <link href="https://web-platform-dx.github.io/assets/img/webdx-notext.svg" rel="icon" type="image/svg+xml">
     <link rel="alternate" type="application/atom+xml" title="Baseline newly available features" href="/web-features-explorer/newly-available.xml">
     <link rel="alternate" type="application/atom+xml" title="Baseline widely available features" href="/web-features-explorer/widely-available.xml">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
@@ -46,7 +46,7 @@
           </ul>
           <search>
             <form>
-              <input type="search" id="search" placeholder="Search">
+              <input type="search" id="search" placeholder="Search for features">
             </form>
           </search>
         </nav>
@@ -221,6 +221,29 @@
     </div>
     <p>Do you need this feature?<br>
        Let us know by leaving a 👍 reaction on <a href="https://github.com/web-platform-dx/developer-signals/issues/366">the feedback issue</a>. Don't forget to also leave a comment explaining your specific use case.</p>
+  </div>
+
+
+  
+  <div class="use-cases feature-box">
+    <h3>Developer use cases</h3>
+    <ul>
+    
+      <li>
+        <details class="string-revealer">
+          <summary>Lots of resources on the web end up being stateful, from the DOM itself, to WebAudio components and WebGL components. It&#39;d make managing them much more developer-friendly</summary>
+          Lots of resources on the web end up being stateful, from the DOM itself, to WebAudio components and WebGL components. It&#39;d make managing them much more developer-friendly [<a href="https://github.com/web-platform-dx/developer-signals/issues/366#issuecomment-3649251946">see original comment</a>]
+        </details>
+      </li>
+    
+      <li>
+        <details class="string-revealer">
+          <summary>As part of development for the Satellite.js library, I&#39;m creating a WebAssembly option to propagate orbits of satellites, instead of just pure JS one. For this I make use of unmanaged memory in C++. I expose the results of propagation as views into WASM memory. To use orbit propagation in WASM, user needs to instantiate a class; in its constructor the class allocates unmanaged memory to work with it on hot path later. This memory needs to be `free`d when the user is done. In the future major version of the library, as part of the WASM API, the objects that work with unmanaged memory will use Explicit Resource Management to clean up the unmanaged memory after themselves when they leave the scope, and users will be encouraged to declare such objects with `using`.</summary>
+          As part of development for the Satellite.js library, I&#39;m creating a WebAssembly option to propagate orbits of satellites, instead of just pure JS one. For this I make use of unmanaged memory in C++. I expose the results of propagation as views into WASM memory. To use orbit propagation in WASM, user needs to instantiate a class; in its constructor the class allocates unmanaged memory to work with it on hot path later. This memory needs to be `free`d when the user is done. In the future major version of the library, as part of the WASM API, the objects that work with unmanaged memory will use Explicit Resource Management to clean up the unmanaged memory after themselves when they leave the scope, and users will be encouraged to declare such objects with `using`. [<a href="https://github.com/web-platform-dx/developer-signals/issues/366#issuecomment-3772981800">see original comment</a>]
+        </details>
+      </li>
+    
+    </ul>
   </div>
 
 

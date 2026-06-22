@@ -382,6 +382,16 @@
   "votes": 10
  },
  "bugs": {},
+ "useCases": [
+  {
+   "description": "Lots of resources on the web end up being stateful, from the DOM itself, to WebAudio components and WebGL components. It'd make managing them much more developer-friendly",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/366#issuecomment-3649251946"
+  },
+  {
+   "description": "As part of development for the Satellite.js library, I'm creating a WebAssembly option to propagate orbits of satellites, instead of just pure JS one. For this I make use of unmanaged memory in C++. I expose the results of propagation as views into WASM memory. To use orbit propagation in WASM, user needs to instantiate a class; in its constructor the class allocates unmanaged memory to work with it on hot path later. This memory needs to be `free`d when the user is done. In the future major version of the library, as part of the WASM API, the objects that work with unmanaged memory will use Explicit Resource Management to clean up the unmanaged memory after themselves when they leave the scope, and users will be encouraged to declare such objects with `using`.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/366#issuecomment-3772981800"
+  }
+ ],
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null,
  "blockedOn": "Safari",

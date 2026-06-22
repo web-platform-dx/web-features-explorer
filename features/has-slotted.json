@@ -145,6 +145,20 @@
    "https://issues.chromium.org/issues/369883705"
   ]
  },
+ "useCases": [
+  {
+   "description": "Styling on slotted content is a major facet of the composition story in custom elements leveraging shadow DOM. Sometimes it's just a matter of a little bit of extra spacing you'd like to included when there's additional content (like in a button with text _and_ an icon, instead of just text), but other times it's lighting up whole other features due to the slotted contents on the element and being able to do all of these things without JS would be amazing",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/276#issuecomment-3589597575"
+  },
+  {
+   "description": "I maintain the Lit SSR library. When our users need to style an element based on whether certain slots are filled, they have to use JavaScript to do it. We don't support the slot API in Lit SSR - we just emit declarative shadow DOM with whatever `<slot>`s they have, emit the light DOM, and let the browser do projection. Supporting slots would be very complicated and hurt performance. It would involve parsing HTML, changing our streaming approach (we'd have to delay emitting shadow roots), and performing slot assignment ourselves.\n\nInstead we just don't support these use cases. These types of components just don't style correctly until JS loads and the components hydrate.\n\n`:has-slotted` would let our users eliminate this JS and SSR'ed components to style correctly when they have slotted content, before JS loads.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/276#issuecomment-3590246620"
+  },
+  {
+   "description": "At red hat, we maintain a web components design system, in which we have elements like\n\n```\n<rh-card>\n  <h2 slot=header>...</h2>\n  <p>...<p>\n  <rh-button slot=footer>...</rh-button>\n</rh-card>\n```\nNot every card instance has content in the named slots, so we need to hide those slots in the case that they're empty:\n\n```css\n#footer :has-slotted(*) {\n  display: none;\n}\n```",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/276#issuecomment-3591757791"
+  }
+ ],
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null
 }

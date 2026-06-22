@@ -27,7 +27,7 @@
     <meta name="twitter:image" content="https://web-platform-dx.github.io/web-features-explorer/assets/og/features/attr.png">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     
-    <link href="/web-features-explorer/assets/favicon.png" rel="icon" sizes="64x64" type="image/png">
+    <link href="https://web-platform-dx.github.io/assets/img/webdx-notext.svg" rel="icon" type="image/svg+xml">
     <link rel="alternate" type="application/atom+xml" title="Baseline newly available features" href="/web-features-explorer/newly-available.xml">
     <link rel="alternate" type="application/atom+xml" title="Baseline widely available features" href="/web-features-explorer/widely-available.xml">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
@@ -46,7 +46,7 @@
           </ul>
           <search>
             <form>
-              <input type="search" id="search" placeholder="Search">
+              <input type="search" id="search" placeholder="Search for features">
             </form>
           </search>
         </nav>
@@ -341,6 +341,79 @@
     </div>
     <p>Do you need this feature?<br>
        Let us know by leaving a 👍 reaction on <a href="https://github.com/web-platform-dx/developer-signals/issues/293">the feedback issue</a>. Don't forget to also leave a comment explaining your specific use case.</p>
+  </div>
+
+
+  
+  <div class="use-cases feature-box">
+    <h3>Developer use cases</h3>
+    <ul>
+    
+      <li>
+        <details class="string-revealer">
+          <summary>Style images based on their focal point for better UX when images resize to fit different viewport widths. The CMS that calculates focal points outputs data- attributes, then site themes can decide if they want to write the needed styles in their stylesheets. CSS could look like this, defined once for all images site-wide:
+
+```css
+[data-w-focus-x] {
+  object-fit: cover;
+  object-position: attr(data-w-focus-x) attr(data-w-focus-y);
+}
+```</summary>
+          Style images based on their focal point for better UX when images resize to fit different viewport widths. The CMS that calculates focal points outputs data- attributes, then site themes can decide if they want to write the needed styles in their stylesheets. CSS could look like this, defined once for all images site-wide:
+
+```css
+[data-w-focus-x] {
+  object-fit: cover;
+  object-position: attr(data-w-focus-x) attr(data-w-focus-y);
+}
+``` [<a href="https://github.com/web-platform-dx/developer-signals/issues/293#issuecomment-3817053729">see original comment</a>]
+        </details>
+      </li>
+    
+      <li>
+        <details class="string-revealer">
+          <summary>&lt;!-- Add your specific use-cases, even if they seem obvious to you. --&gt;
+
+We&#39;re building a set of UI components that users can assemble into web pages. We want to dynamically assign an anchor name via prop, so that any element can be anchored to another.
+
+```html
+&lt;MyAnchorTarget data-anchor-name=&quot;--my-anchor-name&quot; id=&quot;my-anchor-target-component&quot; /&gt;
+
+&lt;MyToBeAnchored data-anchor-name=&quot;--my-anchor-name&quot; id=&quot;my-to-be-anchored-component&quot; /&gt;
+
+&lt;style&gt;
+  #my-anchor-target-component {
+    anchor-name: attr(data-anchor-name)
+  }
+  
+  #my-to-be-anchored-component {
+    position-anchor: attr(data-anchor-name);
+  }
+  &lt;/style&gt;
+```</summary>
+          &lt;!-- Add your specific use-cases, even if they seem obvious to you. --&gt;
+
+We&#39;re building a set of UI components that users can assemble into web pages. We want to dynamically assign an anchor name via prop, so that any element can be anchored to another.
+
+```html
+&lt;MyAnchorTarget data-anchor-name=&quot;--my-anchor-name&quot; id=&quot;my-anchor-target-component&quot; /&gt;
+
+&lt;MyToBeAnchored data-anchor-name=&quot;--my-anchor-name&quot; id=&quot;my-to-be-anchored-component&quot; /&gt;
+
+&lt;style&gt;
+  #my-anchor-target-component {
+    anchor-name: attr(data-anchor-name)
+  }
+  
+  #my-to-be-anchored-component {
+    position-anchor: attr(data-anchor-name);
+  }
+  &lt;/style&gt;
+``` [<a href="https://github.com/web-platform-dx/developer-signals/issues/293#issuecomment-3915950915">see original comment</a>]
+        </details>
+      </li>
+    
+    </ul>
   </div>
 
 

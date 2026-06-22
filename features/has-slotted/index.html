@@ -27,7 +27,7 @@
     <meta name="twitter:image" content="https://web-platform-dx.github.io/web-features-explorer/assets/og/features/has-slotted.png">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     
-    <link href="/web-features-explorer/assets/favicon.png" rel="icon" sizes="64x64" type="image/png">
+    <link href="https://web-platform-dx.github.io/assets/img/webdx-notext.svg" rel="icon" type="image/svg+xml">
     <link rel="alternate" type="application/atom+xml" title="Baseline newly available features" href="/web-features-explorer/newly-available.xml">
     <link rel="alternate" type="application/atom+xml" title="Baseline widely available features" href="/web-features-explorer/widely-available.xml">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
@@ -46,7 +46,7 @@
           </ul>
           <search>
             <form>
-              <input type="search" id="search" placeholder="Search">
+              <input type="search" id="search" placeholder="Search for features">
             </form>
           </search>
         </nav>
@@ -319,6 +319,74 @@
     </div>
     <p>Do you need this feature?<br>
        Let us know by leaving a 👍 reaction on <a href="https://github.com/web-platform-dx/developer-signals/issues/276">the feedback issue</a>. Don't forget to also leave a comment explaining your specific use case.</p>
+  </div>
+
+
+  
+  <div class="use-cases feature-box">
+    <h3>Developer use cases</h3>
+    <ul>
+    
+      <li>
+        <details class="string-revealer">
+          <summary>Styling on slotted content is a major facet of the composition story in custom elements leveraging shadow DOM. Sometimes it&#39;s just a matter of a little bit of extra spacing you&#39;d like to included when there&#39;s additional content (like in a button with text _and_ an icon, instead of just text), but other times it&#39;s lighting up whole other features due to the slotted contents on the element and being able to do all of these things without JS would be amazing</summary>
+          Styling on slotted content is a major facet of the composition story in custom elements leveraging shadow DOM. Sometimes it&#39;s just a matter of a little bit of extra spacing you&#39;d like to included when there&#39;s additional content (like in a button with text _and_ an icon, instead of just text), but other times it&#39;s lighting up whole other features due to the slotted contents on the element and being able to do all of these things without JS would be amazing [<a href="https://github.com/web-platform-dx/developer-signals/issues/276#issuecomment-3589597575">see original comment</a>]
+        </details>
+      </li>
+    
+      <li>
+        <details class="string-revealer">
+          <summary>I maintain the Lit SSR library. When our users need to style an element based on whether certain slots are filled, they have to use JavaScript to do it. We don&#39;t support the slot API in Lit SSR - we just emit declarative shadow DOM with whatever `&lt;slot&gt;`s they have, emit the light DOM, and let the browser do projection. Supporting slots would be very complicated and hurt performance. It would involve parsing HTML, changing our streaming approach (we&#39;d have to delay emitting shadow roots), and performing slot assignment ourselves.
+
+Instead we just don&#39;t support these use cases. These types of components just don&#39;t style correctly until JS loads and the components hydrate.
+
+`:has-slotted` would let our users eliminate this JS and SSR&#39;ed components to style correctly when they have slotted content, before JS loads.</summary>
+          I maintain the Lit SSR library. When our users need to style an element based on whether certain slots are filled, they have to use JavaScript to do it. We don&#39;t support the slot API in Lit SSR - we just emit declarative shadow DOM with whatever `&lt;slot&gt;`s they have, emit the light DOM, and let the browser do projection. Supporting slots would be very complicated and hurt performance. It would involve parsing HTML, changing our streaming approach (we&#39;d have to delay emitting shadow roots), and performing slot assignment ourselves.
+
+Instead we just don&#39;t support these use cases. These types of components just don&#39;t style correctly until JS loads and the components hydrate.
+
+`:has-slotted` would let our users eliminate this JS and SSR&#39;ed components to style correctly when they have slotted content, before JS loads. [<a href="https://github.com/web-platform-dx/developer-signals/issues/276#issuecomment-3590246620">see original comment</a>]
+        </details>
+      </li>
+    
+      <li>
+        <details class="string-revealer">
+          <summary>At red hat, we maintain a web components design system, in which we have elements like
+
+```
+&lt;rh-card&gt;
+  &lt;h2 slot=header&gt;...&lt;/h2&gt;
+  &lt;p&gt;...&lt;p&gt;
+  &lt;rh-button slot=footer&gt;...&lt;/rh-button&gt;
+&lt;/rh-card&gt;
+```
+Not every card instance has content in the named slots, so we need to hide those slots in the case that they&#39;re empty:
+
+```css
+#footer :has-slotted(*) {
+  display: none;
+}
+```</summary>
+          At red hat, we maintain a web components design system, in which we have elements like
+
+```
+&lt;rh-card&gt;
+  &lt;h2 slot=header&gt;...&lt;/h2&gt;
+  &lt;p&gt;...&lt;p&gt;
+  &lt;rh-button slot=footer&gt;...&lt;/rh-button&gt;
+&lt;/rh-card&gt;
+```
+Not every card instance has content in the named slots, so we need to hide those slots in the case that they&#39;re empty:
+
+```css
+#footer :has-slotted(*) {
+  display: none;
+}
+``` [<a href="https://github.com/web-platform-dx/developer-signals/issues/276#issuecomment-3591757791">see original comment</a>]
+        </details>
+      </li>
+    
+    </ul>
   </div>
 
 
