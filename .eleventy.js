@@ -99,6 +99,7 @@ function augmentFeatureData(feature, webFeaturesMappingsData) {
   feature.wpt = featureMappings["wpt"] || null;
   feature.developerSignals = featureMappings["developer-signals"] || null;
   feature.bugs = featureMappings["bugs"] || {};
+  feature.useCases = featureMappings["use-cases"] || null;
 
   // Add the baseline low and high dates as JS objects, so that templates
   // can format them as needed.

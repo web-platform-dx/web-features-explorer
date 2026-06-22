@@ -1,0 +1,11 @@
+{% if feature.useCases %}
+  <div class="use-cases feature-box">
+    <h3>Developer use cases</h3>
+    {% for useCase in feature.useCases %}
+      <details class="string-revealer">
+        <summary>{{ useCase.description }}</summary>
+        {{ useCase.description }} (<a href="{{ useCase.url }}">Go to original comment</a>)
+      </details>
+    {% endfor %}
+  </div>
+{% endif %}
