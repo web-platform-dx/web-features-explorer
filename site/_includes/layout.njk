@@ -29,9 +29,11 @@ siteTitle: Web platform features explorer
     <meta name="twitter:description" content="{{ socialDescriptionText }}">
     <meta name="twitter:image" content="{{ socialImageUrl }}">
     <link rel="stylesheet" type="text/css" href="/assets/styles.css">
+
     {% if stylesheet %}
       <link rel="stylesheet" type="text/css" href="{{ stylesheet }}">
     {% endif %}
+
     {% if baselineStatusScript %}
       <script src="/assets/baseline-status.min.js" type="module"></script>
       {# Toggle fallback browser-support visibility after baseline-status loads. #}
@@ -43,7 +45,8 @@ siteTitle: Web platform features explorer
         }
       </script>
     {% endif %}
-    <link href="/assets/favicon.png" rel="icon" sizes="64x64" type="image/png">
+
+    <link href="https://web-platform-dx.github.io/assets/img/webdx-notext.svg" rel="icon" type="image/svg+xml">
     <link rel="alternate" type="application/atom+xml" title="Baseline newly available features" href="/newly-available.xml">
     <link rel="alternate" type="application/atom+xml" title="Baseline widely available features" href="/widely-available.xml">
     <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/release-notes.xml">
@@ -62,7 +65,7 @@ siteTitle: Web platform features explorer
           </ul>
           <search>
             <form>
-              <input type="search" id="search" placeholder="Search">
+              <input type="search" id="search" placeholder="Search for features">
             </form>
           </search>
         </nav>
