@@ -29,9 +29,23 @@ siteTitle: Web platform features explorer
     <meta name="twitter:description" content="{{ socialDescriptionText }}">
     <meta name="twitter:image" content="{{ socialImageUrl }}">
     <link rel="stylesheet" type="text/css" href="/assets/styles.css">
+
     {% if stylesheet %}
       <link rel="stylesheet" type="text/css" href="{{ stylesheet }}">
     {% endif %}
+
+    {% if baselineStatusScript %}
+      <script src="/assets/baseline-status.min.js" type="module"></script>
+      {# Toggle fallback browser-support visibility after baseline-status loads. #}
+      <script type="module">
+        if ("customElements" in window) {
+          customElements.whenDefined("baseline-status").then(() => {
+            document.documentElement.classList.add("baseline-status-defined");
+          });
+        }
+      </script>
+    {% endif %}
+
     <link href="https://web-platform-dx.github.io/assets/img/webdx-notext.svg" rel="icon" type="image/svg+xml">
     <link rel="alternate" type="application/atom+xml" title="Baseline newly available features" href="/newly-available.xml">
     <link rel="alternate" type="application/atom+xml" title="Baseline widely available features" href="/widely-available.xml">
