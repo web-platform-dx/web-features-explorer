@@ -1,6 +1,10 @@
 <div id="{{ feature.id }}" class="feature full baseline-{{ feature.status.baseline }}{% if feature.discouraged %} discouraged{% endif %}">
   <div class="header">
     <h1 data-pagefind-body>{% nameAsHTML feature.name %}</h1>
+    {% include "baseline.njk" %}
+    {% if feature.expectedBaselineHighDate %}
+      <div class="baseline-hight-countdown">Expected to be Widely Available on {{ feature.expectedBaselineHighDate }}</div>
+    {% endif %}
     <span class="feature-copyable-id"><input id="feature-id" type="text" value="{{ feature.id }}" data-len="{{ feature.id | length }}"><button id="copy-feature-id">Copy ID</button></span>
     <script>
       (function() {
@@ -15,46 +19,32 @@
   </div>
 
   {% include "discouraged.njk" %}
+  {% include "opposed.njk" %}
 
   <p class="description" data-pagefind-body>
     {{ feature.description_html | safe }}
   </p>
 
-  <div class="baseline feature-box">
-    <h3>Status</h3>
-    {% include "baseline.njk" %}
-    {% if feature.expectedBaselineHighDate %}
-      <p>This feature is expected to reach Baseline Widely Available status on: {{ feature.expectedBaselineHighDate }}
-    {% endif %}
-    {% if not feature.status.baseline and feature.hasNegativeStandardPosition %}
-      <p>This feature received a negative standards position from at least one browser vendor. It's very unlikely to ever become Baseline in this current form.</p>
-    {% endif %}
-  </div>
-
-  {% include "docs.njk" %}
-
-  {% include "specs.njk" %}
-  
   <div class="compat-table feature-box">
     <h3>Browser support{% if feature.caniuse %} <span class="subtext">(<a href="https://caniuse.com/{{ feature.caniuse }}">view on caniuse.com</a>)</span>{% endif %}</h3>
     {% include "compat_full.njk" %}
 
     {%- if feature.blockedOn %}
-      <p>Baseline availability blocked since {{ feature.blockedSince }} by {{ feature.blockedOn }} ({{ feature.monthsBlocked }} months)</p>
+      <p class="baseline-blocked-since">Baseline availability blocked since {{ feature.blockedSince }} by {{ feature.blockedOn }} ({{ feature.monthsBlocked }} months)</p>
     {%- endif %}
   </div>
 
-  {% include "surveys.njk" %}
-
-  {% include "use_counters.njk" %}
-
-  {% include "interop.njk" %}
-
-  {% include "wpt.njk" %}
-
   {% include "developer_signals.njk" %}
 
-  {% include "use_cases.njk" %}
+  <div class="additional-feature-data">
+    {% include "docs.njk" %}
+    {% include "specs.njk" %}
+    {% include "use_counters.njk" %}
+    {% include "wpt.njk" %}
+    {% include "interop.njk" %}
+    {% include "surveys.njk" %}
+    {% include "use_cases.njk" %}
+  </div>
 
   <p class="edit-links">
     <a href="../{{ feature.id | slugify }}.json">View as JSON</a>

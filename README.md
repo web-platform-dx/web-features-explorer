@@ -42,6 +42,10 @@ To build the site:
 
 1. Run `npm run build` to generate the site
 
+1. Run `npm run pagefind` to generate the local search index used by the nav search box.
+
+	You can also run `npm run build:search` to run both steps.
+
 1. Check the `docs` folder for the resulting build files.
 
 The source template files used to build the site are in the `site` folder.
@@ -55,6 +59,8 @@ To run the website on a local development server:
 1. Open a web browser and go to `http://localhost:8080`.
 
 1. Modify a source file, wait for the build to run automatically, and for the changes to appear in the browser.
+
+1. If you changed feature pages and need search results to reflect those updates, re-run `npm run pagefind`.
 
 ## Production environment
 

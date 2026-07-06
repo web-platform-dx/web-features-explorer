@@ -1,5 +1,5 @@
 {% if feature.discouraged %}
-  <div class="discouraged-info">
+  <div class="warning-banner">
     <p>
       <strong>This feature is discouraged</strong>
       {% if feature.discouraged.reason %}
@@ -18,7 +18,7 @@
     {% endif %}
     <p>For more information, see:
       {% for rationale in feature.discouraged.according_to %}
-        <a href="{{ rationale }}">{{ rationale | prettyUrlForAdditionalDiscouragedInfo }}</a>
+        <a href="{{ rationale }}" class="break-all">{{ rationale | prettyUrlForAdditionalDiscouragedInfo }}</a>
         {% if not loop.last %}, {% endif %}
       {% endfor %}
     </p>

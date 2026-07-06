@@ -1,13 +1,8 @@
 {% if position and position.url %}
   <span class="position{% if position.position %} position-{{ position.position }}{% endif %}">
-    <a href="{{ position.url }}">Vendor position</a>
-    {% if position.position %}
-      <span>: {{ position.position }}</span>
-    {% else %}
-      <span>: unknown</span>
-    {% endif %}
-    {% if position.concerns.length > 0 %}
-      <span>(concerns: {{ position.concerns | join(", ") }})</span>
+    <a href="{{ position.url }}">Position</a>{% if position.position %}<span>: {{ position.position }}</span>{% endif %}
+    {% if positionFormat !== "short" and position.concerns.length > 0 %}
+      <span class="concerns">(concerns: {{ position.concerns | join(", ") }})</span>
     {% endif %}
   </span>
 {% endif %}

@@ -77,6 +77,9 @@ const siteConfig = {
       },
     },
   },
+  mostWantedFeatures: {
+    minimumVotes: 5
+  },
   strings: {
     formatting: {
       missingValue: "Not tracked",

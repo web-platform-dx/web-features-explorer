@@ -117,6 +117,121 @@ function augmentFeatureData(feature, webFeaturesMappingsData) {
   }
 }
 
+function addBlockedByEngineMetadata(feature) {
+  // Baseline features are not blocked by definition.
+  if (feature.status.baseline) {
+    return;
+  }
+
+  const missingEngines = [];
+  for (const engineData of BROWSERS_BY_ENGINE) {
+    const hasFullSupportInEngine = engineData.browers.every((browserId) => {
+      return !!feature.status.support[browserId];
+    });
+
+    if (!hasFullSupportInEngine) {
+      missingEngines.push(engineData.name);
+    }
+  }
+
+  // Keep only features that are missing in exactly one engine.
+  if (missingEngines.length !== 1) {
+    return;
+  }
+
+  let mostRecent = null;
+  for (const browserId in feature.status.support) {
+    let versionSupported = feature.status.support[browserId];
+    if (!versionSupported) {
+      continue;
+    }
+
+    versionSupported = stripLessThan(versionSupported);
+    const releaseDateStr = bcd.browsers[browserId]?.releases[versionSupported]?.release_date;
+    if (!releaseDateStr) {
+      continue;
+    }
+
+    const releaseDate = new Date(releaseDateStr);
+    if (!mostRecent || releaseDate > mostRecent) {
+      mostRecent = releaseDate;
+    }
+  }
+
+  if (!mostRecent) {
+    return;
+  }
+
+  const today = new Date();
+  const formatter = new Intl.DateTimeFormat("en", {
+    year: "numeric",
+    month: "long",
+  });
+
+  feature.blockedOn = missingEngines[0];
+  feature.blockedSince = formatter.format(mostRecent);
+  feature.monthsBlocked =
+    (today.getFullYear() - mostRecent.getFullYear()) * 12 +
+    (today.getMonth() - mostRecent.getMonth());
+}
+
+function getMissingOnlyInOneEngineData(features, browsers) {
+  const missingOnlyInOneEngine = Object.fromEntries(
+    BROWSERS_BY_ENGINE.map((engineData) => [engineData.name, []])
+  );
+
+  for (const id in features) {
+    const feature = features[id];
+    const support = feature.status.support;
+    const missingEngines = [];
+
+    for (const engineData of BROWSERS_BY_ENGINE) {
+      const hasFullSupportInEngine = engineData.browers.every((browserId) => {
+        return !!support[browserId];
+      });
+
+      if (!hasFullSupportInEngine) {
+        missingEngines.push(engineData.name);
+      }
+    }
+
+    // Keep only features that are missing in exactly one engine.
+    if (missingEngines.length === 1) {
+      missingOnlyInOneEngine[missingEngines[0]].push(feature);
+    }
+  }
+
+  return missingOnlyInOneEngine;
+}
+
+function getOnlyInOneEngineData(features) {
+  const onlyInOneEngine = Object.fromEntries(
+    BROWSERS_BY_ENGINE.map((engineData) => [engineData.name, []])
+  );
+
+  for (const id in features) {
+    const feature = features[id];
+    const support = feature.status.support;
+
+    const enginesWithSupport = [];
+    for (const engineData of BROWSERS_BY_ENGINE) {
+      const hasSupportInEngine = engineData.browers.some((browserId) => {
+        return !!support[browserId];
+      });
+
+      if (hasSupportInEngine) {
+        enginesWithSupport.push(engineData.name);
+      }
+    }
+
+    if (enginesWithSupport.length === 1) {
+      onlyInOneEngine[enginesWithSupport[0]].push(feature);
+    }
+  }
+
+  return onlyInOneEngine;
+}
+
 export default async function (eleventyConfig) {
   // Retrieve the web-features-mappings data.
   const response = await fetch(WEB_FEATURES_MAPPINGS_URL);
@@ -139,6 +254,7 @@ export default async function (eleventyConfig) {
     // Only add our custom data to each feature for ordinary features.
     if (feature.kind === "feature") {
       await augmentFeatureData(feature, webFeaturesMappingsData);
+      addBlockedByEngineMetadata(feature);
 
       // Store the newly augmented feature data.
       features[id] = feature;
@@ -181,6 +297,10 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/assets");
   eleventyConfig.addPassthroughCopy({ "node_modules/apexcharts/dist/apexcharts.css": "assets/apexcharts.css" });
   eleventyConfig.addPassthroughCopy({ "node_modules/apexcharts/dist/apexcharts.min.js": "assets/apexcharts.js" });
+  eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+
+  // CSS files are served as static assets; avoid full template rebuilds on every style tweak.
+  eleventyConfig.watchIgnores.add("./site/assets/**/*.css");
 
   eleventyConfig.addDataExtension("yml,yaml", (contents, filePath) => {
     return YAML.parse(contents);
@@ -225,6 +345,15 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter("stringify", (data) => {
     return JSON.stringify(data, null, " ", 2)
   })
+
+  eleventyConfig.addFilter("extractBugNumber", bugUrl => {
+    if (!bugUrl) {
+      return "";
+    }
+
+    const match = bugUrl.match(/\/(\d+)$/);
+    return match ? match[1] : "";
+  });
 
   eleventyConfig.addFilter("formatNumber", (value, fallback = siteConfig.strings.formatting.missingValue) => {
     return value === null || value === undefined
@@ -518,6 +647,30 @@ export default async function (eleventyConfig) {
     });
   });
 
+  eleventyConfig.addGlobalData("mostWantedFeatures", () => {
+    const mostWanted = [];
+
+    for (const id in features) {
+      const feature = features[id];
+
+      // Only features that are not baseline low/high.
+      if (feature.status.baseline) {
+        continue;
+      }
+
+      const votes = Number(feature.developerSignals?.votes || 0);
+      if (votes < siteConfig.mostWantedFeatures.minimumVotes) {
+        continue;
+      }
+
+      mostWanted.push(feature);
+    }
+
+    return mostWanted.sort((a, b) => {
+      return Number(b.developerSignals?.votes || 0) - Number(a.developerSignals?.votes || 0);
+    });
+  });
+
   eleventyConfig.addGlobalData("newlyAvailableFeatures", () => {
     const newlyAvailable = [];
 
@@ -566,135 +719,31 @@ export default async function (eleventyConfig) {
     };
   });
 
-  eleventyConfig.addGlobalData("onlyOneBrowserFeatures", () => {
-    const onlyOne = {};
+  eleventyConfig.addGlobalData("onlyInOneEngine", () => {
+    return getOnlyInOneEngineData(features);
+  });
 
-    for (const id in features) {
-      const feature = features[id];
-      const support = feature.status.support;
-
-      const browsersWithSupport = Object.keys(support).filter((browserId) => {
-        return !!support[browserId];
-      });
-
-      const byEngines = browsersWithSupport.reduce((acc, browserId) => {
-        // Group by browser engine instead.
-        // We don't want lists of features that are only in Chrome, and not in Chrome for Android for example.
-        for (const engineData of BROWSERS_BY_ENGINE) {
-          if (engineData.browers.includes(browserId)) {
-            if (!acc.includes(engineData.name)) {
-              acc.push(engineData.name);
-            }
-            break;
-          }
-        }
-        return acc;
-      }, []);
-
-      if (byEngines.length === 1) {
-        const engineName = byEngines[0];
-        if (!onlyOne[engineName]) {
-          onlyOne[engineName] = [];
-        }
-
-        onlyOne[engineName].push(feature);
-      }
-    }
-
-    return Object.keys(onlyOne).map(engineName => {
+  eleventyConfig.addGlobalData("onlyInOneEngineList", () => {
+    const perEngine = getOnlyInOneEngineData(features);
+    return Object.keys(perEngine).map((engineName) => {
       return {
         name: engineName,
-        features: onlyOne[engineName]
+        features: perEngine[engineName],
       };
     });
   });
 
-  eleventyConfig.addGlobalData("missingOneBrowserFeatures", () => {
-    const missingOne = [];
+  eleventyConfig.addGlobalData("missingOnlyInOneEngine", () => {
+    return getMissingOnlyInOneEngineData(features, browsers);
+  });
 
-    for (const id in features) {
-      const feature = features[id];
-
-      // Only non-baseline features.
-      if (feature.status.baseline) {
-        continue;
-      }
-
-      // And, out of those, only those that are missing support in just one browser (engine).
-      const noSupport = [];
-      for (const browserId in browsers) {
-        if (!feature.status.support[browserId]) {
-          noSupport.push(browserId);
-        }
-      }
-
-      if (noSupport.length === 1) {
-        feature.blockedOn = browsers[noSupport[0]].name;
-        missingOne.push(feature);
-      }
-
-      if (noSupport.length === 2) {
-        // If one of the two values is a substring of the other, then these are the same engine.
-        const [first, second] = noSupport;
-        if (first.includes(second) || second.includes(first)) {
-          feature.blockedOn = browsers[noSupport[0]].name;
-          missingOne.push(feature);
-        }
-      }
-    }
-
-    // Go over the features we found and add some information about the last browser
-    // that doesn't yet support the feature.
-    missingOne.forEach((feature) => {
-      let mostRecent = null;
-
-      const support = feature.status.support;
-      for (const browserId in support) {
-        let versionSupported = support[browserId];
-        if (versionSupported.startsWith("≤")) {
-          versionSupported = versionSupported.substring(1);
-        }
-
-        // Grab release date string from BCD as it has a more complete list of
-        // browser releases than the web features data.
-        const releaseDateStr =
-          bcd.browsers[browserId]?.releases[versionSupported]?.release_date;
-
-        // Some are missing
-        if (!releaseDateStr) {
-          continue;
-        }
-
-        const releaseDate = new Date(releaseDateStr);
-        if (!mostRecent) {
-          mostRecent = releaseDate;
-        } else {
-          if (releaseDate > mostRecent) {
-            mostRecent = releaseDate;
-          }
-        }
-      }
-      const today = new Date();
-      const formatter = new Intl.DateTimeFormat("en", {
-        year: "numeric",
-        month: "long",
-      });
-      const monthDiff = (older, newer) => {
-        return (
-          (newer.getFullYear() - older.getFullYear()) * 12 +
-          (newer.getMonth() - older.getMonth())
-        );
+  eleventyConfig.addGlobalData("missingOnlyInOneEngineList", () => {
+    const perEngine = getMissingOnlyInOneEngineData(features, browsers);
+    return Object.keys(perEngine).map((engineName) => {
+      return {
+        name: engineName,
+        features: perEngine[engineName],
       };
-
-      feature.monthsBlocked = monthDiff(mostRecent, today);
-      feature.blockedSince = formatter.format(mostRecent);
-    });
-
-    // Sort the features by monthsBlocked, with the most recently
-    // updated feature first. Most recently updated means the
-    // shortest blocked time.
-    return missingOne.sort((a, b) => {
-      return a.monthsBlocked - b.monthsBlocked;
     });
   });
 

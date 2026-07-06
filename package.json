@@ -12,11 +12,13 @@
     "caniuse-lite": "^1.0.30001800",
     "glob": "^13.0.6",
     "pagefind": "^1.5.2",
+    "rimraf": "^6.1.3",
     "web-features": "next",
     "yaml": "^2.9.0"
   },
   "scripts": {
     "build": "npx rimraf docs && npx @11ty/eleventy && node generate-og-images.js",
+    "build:search": "npm run build && npm run pagefind",
     "serve": "npx @11ty/eleventy --serve",
     "pagefind": "npx pagefind --site docs --glob \"features/**/*.html\""
   }

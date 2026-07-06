@@ -5,10 +5,10 @@ layout: layout.njk
 
 <main class="home release-notes">
   <h1>Stay up-to-date with the web platform</h1>
-  <p>Use the Web platform features explorer to discover new features and APIs and stay up-to-date with changes.</p>
+  <p>Use the web features explorer to discover new features and APIs and stay up-to-date with changes.</p>
 
-  <section class="feed-subscriptions" aria-labelledby="feed-subscriptions-heading">
-    <h2 id="feed-subscriptions-heading">Subscribe to RSS feeds</h2>
+  <div class="feed-subscriptions" aria-labelledby="feed-subscriptions-heading">
+    <h2 id="feed-subscriptions-heading">Subscribe to our RSS feeds</h2>
     <ul>
       <li>
         <a class="feed-badge baseline-low" href="./newly-available.xml">
@@ -30,18 +30,7 @@ layout: layout.njk
       </li>
       <li>
         <a class="feed-badge release-feed" href="./release-notes.xml">
-          <svg class="feed-badge-icon" aria-hidden="true" focusable="false" viewBox="0 0 628 332" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="feed-badge-logo-gradient" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,328.4,-265.388,0,360.04,1)">
-                <stop stop-color="#95e3ab"/>
-                <stop offset="1" stop-color="#0e6528"/>
-              </linearGradient>
-            </defs>
-            <path d="m279.6 330.3h-103.3c-2.6 0-5-1.6-6-3.2l-168.9-260.6c-1.5-2.4 0.2-5.1 2.7-5.1h96.6c3-0.1 5.3 0.9 6.7 3.1l118.6 183.1z" fill="black"/>
-            <path d="m360 206.2l-53.6-82.7 38.5-59.4c0.9-1.2 3.4-2.7 5.6-2.7h99.2c2.7 0 2.9 2 2 3.3z" fill="black"/>
-            <path d="m625 4l-209.7 323.7c-1 1.2-2.6 2.6-5.8 2.6h-103.1l-132.1-203.7c-1-1.6-0.3-3.5 1.8-3.5h98.9c2.3 0 5.2 1.3 6.3 3.1l78.7 121.4 158-243.8c0.9-1.4 3.2-2.8 6.1-2.8h98.7c2.7 0 3 2 2.2 3z" fill="#1EA446"/>
-            <path d="m625 4l-209.7 323.7c-0.5 0.6-1.1 1.2-2 1.7l-53.3-81.9 158-243.7c0.9-1.4 3.2-2.8 6.1-2.8h98.7c2.7 0 3 2 2.2 3z" fill="url(#feed-badge-logo-gradient)"/>
-          </svg>
+          📅
           <span>
             <strong>Monthly updates</strong>
             <span>Get monthly Baseline and browser updates via RSS</span>
@@ -49,10 +38,10 @@ layout: layout.njk
         </a>
       </li>
     </ul>
-  </section>
+  </div>
 
   <section class="baseline-low">
-    <h2>Newly available across browsers</h2>
+    <h2>Most recent Baseline newly available features</h2>
     <ul>
       {% for feature in latest.latestBaselineLow %}
         <li>
@@ -61,10 +50,11 @@ layout: layout.njk
         </li>
       {% endfor %}
     </ul>
+    <a href="/newly-available" class="view-all">View all</a>
   </section>
 
   <section class="baseline-high">
-    <h2>Now widely available across browsers</h2>
+    <h2>Most recent Baseline widely available features</h2>
     <ul>
       {% for feature in latest.latestBaselineHigh %}
         <li>
@@ -73,5 +63,6 @@ layout: layout.njk
         </li>
       {% endfor %}
     </ul>
+    <a href="/widely-available" class="view-all">View all</a>
   </section>
 </main>

@@ -1,0 +1,29 @@
+---
+title: Features missing only in one browser engine
+layout: layout.njk
+pagination:
+  data: missingOnlyInOneEngineList
+  size: 1
+  alias: perEngine
+permalink: "missing-only-in/{{ perEngine.name | slugify }}/"
+eleventyComputed:
+  title: "Features missing only in {{ perEngine.name }}"
+---
+
+<main class="explore-features">
+  <h1>{{ title }}</h1>
+
+  <p>The following features are implemented in all other browser engines, but not in {{ perEngine.name }}.</p>
+
+  {% if perEngine.features.length %}
+    <ul class="features">
+      {% for feature in perEngine.features %}
+        <li>
+          {% include "feature_short.njk" %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no missing features in {{ perEngine.name }}.</p>
+  {% endif %}
+</main>
