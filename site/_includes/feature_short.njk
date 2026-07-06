@@ -6,11 +6,11 @@
 
   <p>{{ feature.description_html | safe }}</p>
 
-  {%- if feature.blockedOn %}
-    <p>Baseline availability blocked since {{ feature.blockedSince }} by {{ feature.blockedOn }} ({{ feature.monthsBlocked }} months)</p>
-  {%- endif %}
-
   <p><strong><a href="/features/{{ feature.id | slugify }}/">Learn more</a></strong></p>
 
   {% include "compat_short.njk" %}
+
+  {%- if feature.blockedOn %}
+    <p class="baseline-blocked-since">Baseline availability blocked since {{ feature.blockedSince }} by {{ feature.blockedOn }} ({{ feature.monthsBlocked }} months)</p>
+  {%- endif %}
 </div>

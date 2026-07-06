@@ -1,22 +1,31 @@
 ---
-title: About this website
+title: About the web features explorer website
 layout: layout.njk
 ---
 
 <main>
   <h1>{{ title }}</h1>
 
-  <p>The Web platform features explorer website is a project from the <a href="https://www.w3.org/community/webdx/">W3C WebDX Community Group</a> (WebDX CG). Its goal is to visualize the data that's in the <a href="https://github.com/web-platform-dx/web-features">web-features</a> and <a href="https://github.com/web-platform-dx/web-features-mappings">web-features-mappings</a> repositories, which the WebDX CG maintains.</p>
+  <p>The goal of the Web platform features explorer website is to visualize the data that's in the <a href="https://github.com/web-platform-dx/web-features">web-features</a> and <a href="https://github.com/web-platform-dx/web-features-mappings">web-features-mappings</a> repositories.</p>
 
-  <p>This means that, on this website, you will find information about web features such as their names, descriptions, which browsers they're supported on, Baseline statuses, links to MDN documentation, specifications, vendor positions, vendor bugs, web platform tests, user surveys, browser usage counters, and more.</p>
+  <p>This is a project from the <a href="https://www.w3.org/community/webdx/">W3C WebDX Community Group</a> (WebDX CG). The source code is available on the <a href="https://github.com/web-platform-dx/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
 
-  <p>To learn more about Baseline, see <a href="https://web-platform-dx.github.io/web-features/">What is Baseline?</a>.</p>
+  <img src="https://web-platform-dx.github.io/assets/img/webdx.svg" alt="WebDX logo" class="about-logo">
 
-  <p>The website's content was last generated on {{ versions.date }} using <a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>{{ versions.webFeatures }}</code> and <a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>{{ versions.bcd }}</code>. The source code of the website is at <a href="https://github.com/web-platform-dx/web-features-explorer">web-features-explorer GitHub repo</a>.</p>
+  <p>On this site, you'll find information about features of the web platform, such as their names, descriptions, which browsers they're supported on, their <a href="https://web-platform-dx.github.io/baseline/">Baseline</a> statuses, links to MDN documentation, specifications, vendor positions, vendor bugs, web platform tests, user surveys, browser usage counters, and more.</p>
+
+  <h2>Data sources</h2>
+
+  <p>The website's content was last generated on {{ versions.date }} using:</p>
+  <ul>
+    <li><a href="https://github.com/web-platform-dx/web-features/">web-features</a> <code>{{ versions.webFeatures }}</code></li>
+    <li><a href="https://github.com/mdn/browser-compat-data/">browser-compat-data</a> <code>{{ versions.bcd }}</code></li>
+    <li><a href="https://github.com/web-platform-dx/web-features-mappings/blob/main/mappings/combined-data.json">web-features-mappings</a> (latest data)</li>
+  </ul>
 
   <h2>Other pages</h2>
 
-  <p>Following are a few pages on this website that might be useful. These pages are not in the top-level navigation menu because they are either work in progress or experiments.</p>
+  <p>Here are a few other pages that might be useful. These pages are not in the top-level navigation menu because they are either work-in-progress or experiments.</p>
 
   <ul>
     <li><a href="/bcd-mapping">bcd-mapping</a>: the list of unmapped BCD keys, and % of completion.</li>

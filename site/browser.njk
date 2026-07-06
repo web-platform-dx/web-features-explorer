@@ -10,8 +10,6 @@ eleventyComputed:
 ---
 
 <main class="explore-features">
-  {% include "feature_list_views.njk" %}
-
   {% for release in browser.releases %}
     {% if release.status == "current" %}
       <h1>New features in {{ browser.name }} {{ release.version }} (released on {{ release.date }})</h1>

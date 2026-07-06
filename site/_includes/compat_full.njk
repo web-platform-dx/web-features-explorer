@@ -4,19 +4,22 @@
       <span class="name">{{ browser.name }}</span>
       {% set version = feature.status.support[browser.id] %}
       {% if version %}
-        <span class="version">{{ version }}</span>
+        <span class="version supported">{{ version }}</span>
         <span class="date">{% browserVersionRelease browser, version %}</span>
       {% else %}
-        <span class="version">❌</span>
-        {% if feature.bugs[browser.id] and feature.bugs[browser.id].length %}
-          <span class="bug">
-            See
-            {% for bug in feature.bugs[browser.id] %}
-              <a href="{{ bug }}">{{ bug | replace("https://", "") }}</a>
-            {% endfor %}
-          </span>
-        {% endif %}
-        {% include "position_per_browser.njk" %}
+        <span class="version unsupported">
+          Not supported
+          {% include "position_per_browser.njk" %}
+          {% if feature.bugs[browser.id] and feature.bugs[browser.id].length %}
+            <span class="bug">
+              Bugs:
+              {% for bug in feature.bugs[browser.id] %}
+                <a href="{{ bug }}">{{ bug | extractBugNumber }}</a>
+              {% endfor %}
+            </span>
+          {% endif %}
+        </span>
+        <span class="date"></span>
       {% endif %}
     </li>
   {% endfor %}

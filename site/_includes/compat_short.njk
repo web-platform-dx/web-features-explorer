@@ -4,11 +4,15 @@
       <span class="name">{{ browser.name }}</span>
       {% set version = feature.status.support[browser.id] %}
       {% if version %}
-        <span class="version">{{ version }}</span>
+        <span class="version supported">{{ version }}</span>
         <span class="date">{% browserVersionRelease browser, version %}</span>
       {% else %}
-        <span class="version">❌</span>
-        {% include "position_per_browser.njk" %}
+        <span class="version unsupported">
+          Not supported
+          {% set positionFormat = "short" %}
+          {% include "position_per_browser.njk" %}
+        </span>
+        <span class="date"></span>
       {% endif %}
     </li>
   {% endfor %}
