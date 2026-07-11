@@ -1866,7 +1866,7 @@
         <strong>
           👍
           <br>
-          77
+          79
         </strong>
       </a>
     </div>
@@ -2003,6 +2003,33 @@ This would be the single biggest impact CSS feature in my decade as a developer.
         <details class="string-revealer">
           <summary>Like others, I want to use functions to abstract out the more tedious, verbose and illegible design patterns that I regularly use in my design systems. The most basic example being derived colors, such that I can pass something like `--clr-shift(var(--clr-primary), 10)` to in/decrease chroma and lightness by 10%</summary>
           Like others, I want to use functions to abstract out the more tedious, verbose and illegible design patterns that I regularly use in my design systems. The most basic example being derived colors, such that I can pass something like `--clr-shift(var(--clr-primary), 10)` to in/decrease chroma and lightness by 10% [<a href="https://github.com/web-platform-dx/developer-signals/issues/300#issuecomment-4898297254">see original comment</a>]
+        </details>
+      </li>
+    
+      <li>
+        <details class="string-revealer">
+          <summary>Using rem units in css has a major advantage of scaling down the webpage by equal proportional in media query by reducing the root font size and thus reducing the overwriting code.
+
+We have an architecture in css files while developing a webpage, 
+1. We have a common css that holds the styling for common elements (global header-footer, etc.).
+2. We have a template css that holds the styling for webpages that comes under a particular template.
+3. We then have a product css that contains the styling of product level elements or components (product header-footer, etc).
+4. Page level css that contains the styling for that particular webpage (part that lies in between the header and footer).
+
+Now, with this architecture, it is difficult for me to use rem units in css as changing the root font size in any css file under a media query would affect every other components differently and thus resulting in the decision of not changing the root font size at all.  So, in order to achieve this advantage I could use a scoped custom property called &quot;--page-zoom : 1&quot; and a custom function called &quot;--rem&quot; which when passed a number as parameter results the value multiplied with the &quot;--page-zoom&quot; value. 
+
+I could now use --rem(5) instead of 5rem. This doesn&#39;t increase the verbosity and in media query, I could just change the value to &quot;--page-zoom: 0.85&quot; and this would scale the webpage proportionally as it would work when root font size is reduced but with the advantage of having this scaling applied only for that component.</summary>
+          Using rem units in css has a major advantage of scaling down the webpage by equal proportional in media query by reducing the root font size and thus reducing the overwriting code.
+
+We have an architecture in css files while developing a webpage, 
+1. We have a common css that holds the styling for common elements (global header-footer, etc.).
+2. We have a template css that holds the styling for webpages that comes under a particular template.
+3. We then have a product css that contains the styling of product level elements or components (product header-footer, etc).
+4. Page level css that contains the styling for that particular webpage (part that lies in between the header and footer).
+
+Now, with this architecture, it is difficult for me to use rem units in css as changing the root font size in any css file under a media query would affect every other components differently and thus resulting in the decision of not changing the root font size at all.  So, in order to achieve this advantage I could use a scoped custom property called &quot;--page-zoom : 1&quot; and a custom function called &quot;--rem&quot; which when passed a number as parameter results the value multiplied with the &quot;--page-zoom&quot; value. 
+
+I could now use --rem(5) instead of 5rem. This doesn&#39;t increase the verbosity and in media query, I could just change the value to &quot;--page-zoom: 0.85&quot; and this would scale the webpage proportionally as it would work when root font size is reduced but with the advantage of having this scaling applied only for that component. [<a href="https://github.com/web-platform-dx/developer-signals/issues/300#issuecomment-4924493137">see original comment</a>]
         </details>
       </li>
     
