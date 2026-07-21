@@ -320,7 +320,7 @@
  },
  "developerSignals": {
   "url": "https://github.com/web-platform-dx/developer-signals/issues/93",
-  "votes": 6
+  "votes": 7
  },
  "bugs": {
   "chrome": [
@@ -333,7 +333,12 @@
    "http://crbug.com/728276"
   ]
  },
- "useCases": null,
+ "useCases": [
+  {
+   "description": "I want to be able to support an accessible video-watching experience with my own custom video player implementations. Currently, the iOS `<video />` element experience is all or nothing:\n\n1. Omit `playsinline` and have iOS inject its own behaviour, which results in duplicate video players (iOS's on top of mine, or mine on top of iOS, hard to tell)\n2. Include `playsinline` and then not being able to use the fullscreen video experience\n3. Most designers do not like the appearance of the default closed captions experience, which have very limited CSS support, requiring developers to implement custom ones\n\nThe defaults that all browsers provide is not consistent, and designers want full control. Allowing us to request fullscreen on a `<div />` will give us the power we need to design consistent fullscreen experiences cross-platform.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/93#issuecomment-5028379796"
+  }
+ ],
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null,
  "blockedOn": "Safari",
