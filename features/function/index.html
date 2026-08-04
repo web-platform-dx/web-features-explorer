@@ -385,7 +385,9 @@
                     
                   
                     
-                      150
+                  
+                    
+                      151
                     
                   
                 </a>
@@ -646,7 +648,9 @@
                     
                   
                     
-                      150
+                  
+                    
+                      151
                     
                   
                 </a>
@@ -811,7 +815,9 @@
                     
                   
                     
-                      150
+                  
+                    
+                      151
                     
                   
                 </a>
@@ -1542,7 +1548,9 @@
                     
                   
                     
-                      26.5
+                  
+                    
+                      26.6
                     
                   
                 </a>
@@ -1663,7 +1671,9 @@
                     
                   
                     
-                      26.5
+                  
+                    
+                      26.6
                     
                   
                 </a>
@@ -1870,7 +1880,7 @@
         <strong>
           👍
           <br>
-          81
+          82
         </strong>
       </a>
     </div>
@@ -1920,7 +1930,7 @@
     
   <div class="use-counters feature-box">
     <h3>Usage <span class="subtext">(according to <a href="https://chromestatus.com/metrics/webfeature/popularity">Chrome Platform Status</a>)</span></h3>
-    ~0.001% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/310">More data at chromestatus.com</a>.
+    ~0.002% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/310">More data at chromestatus.com</a>.
   </div>
 
     
@@ -1934,6 +1944,76 @@
   <div class="surveys feature-box">
     <h3>Surveys</h3>
     <ul>
+      
+        <li>
+          <a href="https://2026.stateofcss.com/en-US/usage/#css_interoperability_features">
+            State of CSS 2026
+            &gt;
+            usage
+            &gt;
+            css interoperability features
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://2026.stateofcss.com/en-US/usage/#css_general_pain_points_features">
+            State of CSS 2026
+            &gt;
+            usage
+            &gt;
+            css general pain points features
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://2026.stateofcss.com/en-US/usage/#css_general_pain_points">
+            State of CSS 2026
+            &gt;
+            usage
+            &gt;
+            css general pain points
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://2026.stateofcss.com/en-US/features/#reading_list">
+            State of CSS 2026
+            &gt;
+            reading list
+            &gt;
+            reading list
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://2026.stateofcss.com/en-US/other_features/#other_features_pain_points_features">
+            State of CSS 2026
+            &gt;
+            other features
+            &gt;
+            other features pain points features
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://2026.stateofcss.com/en-US/other_features/#other_features_pain_points">
+            State of CSS 2026
+            &gt;
+            other features
+            &gt;
+            other features pain points
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://2026.stateofcss.com/en-US/_all_features/#all_features">
+            State of CSS 2026
+            &gt;
+             all features
+            &gt;
+            all features
+          </a>
+        </li>
       
         <li>
           <a href="https://2025.stateofcss.com/en-US/features/#reading_list">
@@ -2034,6 +2114,67 @@ We have an architecture in css files while developing a webpage,
 Now, with this architecture, it is difficult for me to use rem units in css as changing the root font size in any css file under a media query would affect every other components differently and thus resulting in the decision of not changing the root font size at all.  So, in order to achieve this advantage I could use a scoped custom property called &quot;--page-zoom : 1&quot; and a custom function called &quot;--rem&quot; which when passed a number as parameter results the value multiplied with the &quot;--page-zoom&quot; value. 
 
 I could now use --rem(5) instead of 5rem. This doesn&#39;t increase the verbosity and in media query, I could just change the value to &quot;--page-zoom: 0.85&quot; and this would scale the webpage proportionally as it would work when root font size is reduced but with the advantage of having this scaling applied only for that component. [<a href="https://github.com/web-platform-dx/developer-signals/issues/300#issuecomment-4924493137">see original comment</a>]
+        </details>
+      </li>
+    
+      <li>
+        <details class="string-revealer">
+          <summary>1. The most obvious advantage is reusability. I want to interpolate between two values; with `@function`, all I have to do is write this:
+```
+@function --lerp(--start, --end, --t) {
+	result: calc(var(--start) + var(--t) * (var(--end) - var(--start)));
+}
+```
+and use `--lerp()` wherever I want to interpolate between two values.
+
+2. I want to write cross-browser fallbacks with the at-rule. Let&#39;s take the `abs()` CSS function, it&#39;s newly available in all major browsers and if I want to write a fallback for older browsers using the `max(var(--num), -1 * var(--num))` trick, I can declare:
+```
+@function --abs(--num) {
+	result: abs(var(--num));
+	@supports not (opacity: abs(-0.5)) {
+		result: max(var(--num), -1 * var(--num));
+	}
+}
+```
+and use `--abs()` rather than the actual function until it&#39;s baseline. It would also be super easy to replace `--abs()` with `abs()` when it becomes baseline. Of course, `abs()` will be baseline before `@function` but the point is that writing fallbacks in general becomes much less of headache.
+
+3. With `@function`, I can write a function like the following:
+```
+@function --alpha(--color, --a) {
+	result: oklch(from var(--color) l c h / var(--a));
+}
+```
+and use it as `--alpha(var(--custom-color), 0.5)` rather than `oklch(from var(--custom-color) l c h / var(--a))` which hides the lightness, chroma, and saturation parameters and makes it clear that only the alpha value is meant to be modified. It gives us better encapsulation, reduces the possiblity of mistakes from new developers, and is more in line with the principle of least privilege.
+
+4. In general, `@function` gives me more creative control. I can write new functionalities without waiting for CSS to roll them out and provide cleaner fallbacks for them. I can write my own polyfills. It gives me more incentive to use CSS.</summary>
+          1. The most obvious advantage is reusability. I want to interpolate between two values; with `@function`, all I have to do is write this:
+```
+@function --lerp(--start, --end, --t) {
+	result: calc(var(--start) + var(--t) * (var(--end) - var(--start)));
+}
+```
+and use `--lerp()` wherever I want to interpolate between two values.
+
+2. I want to write cross-browser fallbacks with the at-rule. Let&#39;s take the `abs()` CSS function, it&#39;s newly available in all major browsers and if I want to write a fallback for older browsers using the `max(var(--num), -1 * var(--num))` trick, I can declare:
+```
+@function --abs(--num) {
+	result: abs(var(--num));
+	@supports not (opacity: abs(-0.5)) {
+		result: max(var(--num), -1 * var(--num));
+	}
+}
+```
+and use `--abs()` rather than the actual function until it&#39;s baseline. It would also be super easy to replace `--abs()` with `abs()` when it becomes baseline. Of course, `abs()` will be baseline before `@function` but the point is that writing fallbacks in general becomes much less of headache.
+
+3. With `@function`, I can write a function like the following:
+```
+@function --alpha(--color, --a) {
+	result: oklch(from var(--color) l c h / var(--a));
+}
+```
+and use it as `--alpha(var(--custom-color), 0.5)` rather than `oklch(from var(--custom-color) l c h / var(--a))` which hides the lightness, chroma, and saturation parameters and makes it clear that only the alpha value is meant to be modified. It gives us better encapsulation, reduces the possiblity of mistakes from new developers, and is more in line with the principle of least privilege.
+
+4. In general, `@function` gives me more creative control. I can write new functionalities without waiting for CSS to roll them out and provide cleaner fallbacks for them. I can write my own polyfills. It gives me more incentive to use CSS. [<a href="https://github.com/web-platform-dx/developer-signals/issues/300#issuecomment-5173877714">see original comment</a>]
         </details>
       </li>
     
