@@ -9,22 +9,22 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Web features explorer - July 2026 release notes</title>
+    <title>Web features explorer - Scroll method promises</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Use the web features explorer to discover new features and APIs and stay up-to-date with changes.">
-    <link rel="canonical" href="https://web-platform-dx.github.io/web-features-explorer/">
+    <meta name="description" content="The scroll(), scrollBy(), scrollTo(), and scrollIntoView() methods on the Element and Window interfaces return Promises that resolve when scrolling completes.">
+    <link rel="canonical" href="https://web-platform-dx.github.io/web-features-explorer/features/scroll-promises/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Web features explorer">
-    <meta property="og:title" content="Web features explorer - July 2026 release notes">
-    <meta property="og:description" content="Use the web features explorer to discover new features and APIs and stay up-to-date with changes.">
-    <meta property="og:image" content="https://web-platform-dx.github.io/web-features-explorer/assets/og/default.png">
+    <meta property="og:title" content="Scroll method promises - Web platform features explorer">
+    <meta property="og:description" content="The scroll(), scrollBy(), scrollTo(), and scrollIntoView() methods on the Element and Window interfaces return Promises that resolve when scrolling completes.">
+    <meta property="og:image" content="https://web-platform-dx.github.io/web-features-explorer/assets/og/features/scroll-promises.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://web-platform-dx.github.io/web-features-explorer/">
+    <meta property="og:url" content="https://web-platform-dx.github.io/web-features-explorer/features/scroll-promises/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Web features explorer - July 2026 release notes">
-    <meta name="twitter:description" content="Use the web features explorer to discover new features and APIs and stay up-to-date with changes.">
-    <meta name="twitter:image" content="https://web-platform-dx.github.io/web-features-explorer/assets/og/default.png">
+    <meta name="twitter:title" content="Scroll method promises - Web platform features explorer">
+    <meta name="twitter:description" content="The scroll(), scrollBy(), scrollTo(), and scrollIntoView() methods on the Element and Window interfaces return Promises that resolve when scrolling completes.">
+    <meta name="twitter:image" content="https://web-platform-dx.github.io/web-features-explorer/assets/og/features/scroll-promises.png">
     <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
     
     <link href="https://web-platform-dx.github.io/assets/img/webdx-notext.svg" rel="icon" type="image/svg+xml">
@@ -1696,695 +1696,176 @@
     
 
     
-<main class="release-notes">
-  <h1>📅 July 2026 release notes</h1>
-
-  <div>
+<main class="feature-page">
+  <div id="scroll-promises" class="feature full baseline-false">
+  <div class="header">
+    <h1 data-pagefind-body="">Scroll method promises</h1>
     
-      <section class="baseline-low">
-        <h2>Newly available</h2>
-        <p>The following features are newly available:</p>
-        <ul>
-          
-            <li>
-              <strong><a href="/web-features-explorer/features/intl-locale-info/">Intl.Locale info</a></strong>:
-              The getter methods of the <code>Intl.Locale</code> API provide supplemental information about a Unicode locale, such as the locale's calendar (for example, the first day in a week or the weekend start day), writing direction, 12- or 24-hour cycles, and numbering system.
-            </li>
-          
-        </ul>
-      </section>
+  <div class="availability">
+    Limited availability
     
-
-    
-      <section class="baseline-high">
-        <h2>Widely available</h2>
-        <p>The following features are now widely available:</p>
-        <ul>
-          
-            <li>
-              <strong><a href="/web-features-explorer/features/array-fromasync/">Array.fromAsync()</a></strong>:
-              The <code>Array.fromAsync()</code> static method copies items from an async iterable object to make a new array.
-            </li>
-          
-            <li>
-              <strong><a href="/web-features-explorer/features/avif/">AVIF</a></strong>:
-              AVIF (AV1 Image File Format) is an image format based on the AV1 video format.
-            </li>
-          
-            <li>
-              <strong><a href="/web-features-explorer/features/rect-xywh/">rect() and xywh()</a></strong>:
-              The <code>rect()</code> CSS function creates a rectangle shape with insets from the edges of an element. The <code>xywh()</code> CSS function creates a rectangle shifted by an <code>x</code> and <code>y</code> distance. They can be used with <code>clip-path</code> and <code>shape-outside</code>.
-            </li>
-          
-        </ul>
-      </section>
-    
-
-    
-      
-        <section class="baseline-false chrome">
-          <h2>New in Chrome</h2>
-          <p>The following features are now available in Chrome:</p>
-          <ul>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/popover-hint/">popover="hint"</a></strong>:
-                The <code>popover="hint"</code> global HTML attribute creates a popover that is subordinate to popovers with a <code>popover="auto"</code> attribute. You can use this to create tooltips that don't dismiss <code>auto</code> popovers.
-              </li>
-            
-          </ul>
-        </section>
-      
-    
-      
-        <section class="baseline-false chrome_android">
-          <h2>New in Chrome Android</h2>
-          <p>The following features are now available in Chrome Android:</p>
-          <ul>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/popover-hint/">popover="hint"</a></strong>:
-                The <code>popover="hint"</code> global HTML attribute creates a popover that is subordinate to popovers with a <code>popover="auto"</code> attribute. You can use this to create tooltips that don't dismiss <code>auto</code> popovers.
-              </li>
-            
-          </ul>
-        </section>
-      
-    
-      
-        <section class="baseline-false edge">
-          <h2>New in Edge</h2>
-          <p>The following features are now available in Edge:</p>
-          <ul>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/background-clip-border-area/">background-clip: border-area</a></strong>:
-                The <code>background-clip: border-area</code> CSS declaration draws the background underneath only the border of an element.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/light-dark-image/">light-dark() image values</a></strong>:
-                The <code>light-dark()</code> CSS function accepts, in addition to colors, two <code>&#x3C;image></code> values, such as a gradient or URL, and uses one depending on the current color scheme.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/loading-lazy-media/">Lazy-loading media</a></strong>:
-                The <code>loading="lazy"</code> attribute for <code>&#x3C;video></code> and <code>&#x3C;audio></code> elements defers loading the media resource until the element is near the viewport. This matches the lazy-loading behavior for <code>&#x3C;img></code> and <code>&#x3C;iframe></code> elements.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/popover-hint/">popover="hint"</a></strong>:
-                The <code>popover="hint"</code> global HTML attribute creates a popover that is subordinate to popovers with a <code>popover="auto"</code> attribute. You can use this to create tooltips that don't dismiss <code>auto</code> popovers.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/scroll-promises/">Scroll method promises</a></strong>:
-                The <code>scroll()</code>, <code>scrollBy()</code>, <code>scrollTo()</code>, and <code>scrollIntoView()</code> methods on the <code>Element</code> and <code>Window</code> interfaces return Promises that resolve when scrolling completes.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/text-fit/">text-fit</a></strong>:
-                The <code>text-fit</code> CSS property scales text to fill the inline size of its container. You can use this to grow or shrink headlines, captions, or pull quotes to fit a container.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/url-cross-origin/">cross-origin() for url()</a></strong>:
-                The <code>url()</code> CSS function accepts a <code>cross-origin()</code> modifier to control cross-origin resource sharing (CORS) when requesting the URL. For example, <code>url("https://example.com" cross-origin(anonymous))</code>) does not send credentials to the URL.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/url-integrity/">integrity() for url()</a></strong>:
-                The <code>url()</code> CSS function accepts an <code>integrity()</code> modifier to use subresource integrity to verify the response from the requested URL.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/url-referrer-policy/">referrer-policy() for url()</a></strong>:
-                The <code>url()</code> CSS function accepts a <code>referrer-policy()</code> modifier to choose which referrer to send when requesting the URL.  For example, `url("https://example.com" referrer-policy(no-referrer)) does not send a referrer to the URL.
-              </li>
-            
-          </ul>
-        </section>
-      
-    
-      
-        <section class="baseline-false firefox">
-          <h2>New in Firefox</h2>
-          <p>The following features are now available in Firefox:</p>
-          <ul>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/getallrecords/">IndexedDB getAllRecords()</a></strong>:
-                The <code>getAllRecords()</code> method of <code>IDBObjectStore</code> and <code>IDBIndex</code> return records and their primary keys from an IndexedDB store or index. The records can be read in batches and in reverse order. The <code>getAllRecords()</code> methods speed up read operations on large datasets.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/picture-in-picture/">Picture-in-picture (video)</a></strong>:
-                The picture-in-picture API allow websites to create a floating, always-on-top video window. Also known as PiP or pop-out video.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/popover-hint/">popover="hint"</a></strong>:
-                The <code>popover="hint"</code> global HTML attribute creates a popover that is subordinate to popovers with a <code>popover="auto"</code> attribute. You can use this to create tooltips that don't dismiss <code>auto</code> popovers.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/text-modules/">Text import attributes</a></strong>:
-                Module <code>import … with { type: "text" }</code> statements load text data as a string value.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/wasm-jspi/">JavaScript promise integration (WebAssembly)</a></strong>:
-                The JavaScript promise integration (JSPI) suspends a WebAssembly module when it calls a JavaScript method that returns a promise. The module resumes when the promise is resolved. You can use this to call asynchronous Web APIs from synchronous WebAssembly.
-              </li>
-            
-          </ul>
-        </section>
-      
-    
-      
-        <section class="baseline-false firefox_android">
-          <h2>New in Firefox for Android</h2>
-          <p>The following features are now available in Firefox for Android:</p>
-          <ul>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/getallrecords/">IndexedDB getAllRecords()</a></strong>:
-                The <code>getAllRecords()</code> method of <code>IDBObjectStore</code> and <code>IDBIndex</code> return records and their primary keys from an IndexedDB store or index. The records can be read in batches and in reverse order. The <code>getAllRecords()</code> methods speed up read operations on large datasets.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/popover-hint/">popover="hint"</a></strong>:
-                The <code>popover="hint"</code> global HTML attribute creates a popover that is subordinate to popovers with a <code>popover="auto"</code> attribute. You can use this to create tooltips that don't dismiss <code>auto</code> popovers.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/text-modules/">Text import attributes</a></strong>:
-                Module <code>import … with { type: "text" }</code> statements load text data as a string value.
-              </li>
-            
-              <li>
-                <strong><a href="/web-features-explorer/features/wasm-jspi/">JavaScript promise integration (WebAssembly)</a></strong>:
-                The JavaScript promise integration (JSPI) suspends a WebAssembly module when it calls a JavaScript method that returns a promise. The module resumes when the promise is resolved. You can use this to call asynchronous Web APIs from synchronous WebAssembly.
-              </li>
-            
-          </ul>
-        </section>
-      
-    
-      
-    
-      
     
   </div>
 
-  <aside>
-    <h2>Other release notes</h2>
-    <ul>
-      
-        
-          <li class="month-entry">
-            <a href="../july-2026">July 2026</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../june-2026">June 2026</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../may-2026">May 2026</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../april-2026">April 2026</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../march-2026">March 2026</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../february-2026">February 2026</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../january-2026">January 2026</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../december-2025">December 2025</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../november-2025">November 2025</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../october-2025">October 2025</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../september-2025">September 2025</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../august-2025">August 2025</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../july-2025">July 2025</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../june-2025">June 2025</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../may-2025">May 2025</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../april-2025">April 2025</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../march-2025">March 2025</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../february-2025">February 2025</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../january-2025">January 2025</a>
-          </li>
-        
-      
-        
-          <li class="month-entry">
-            <a href="../december-2024">December 2024</a>
-          </li>
-        
-      
-        
-          <li><a href="../">See all</a></li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
+    
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="scroll-promises" data-len="15"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
+  </div>
+
+  
+  
+
+  <p class="description" data-pagefind-body="">
+    The <code>scroll()</code>, <code>scrollBy()</code>, <code>scrollTo()</code>, and <code>scrollIntoView()</code> methods on the <code>Element</code> and <code>Window</code> interfaces return Promises that resolve when scrolling completes.
+  </p>
+
+  <div class="compat-table feature-box">
+    <h3>Browser support</h3>
+    <ul class="compat compat-full">
+  
+    <li class="browser browser-chrome supported">
+      <span class="name">Chrome</span>
+      
+      
+        <span class="version supported">150</span>
+        <span class="date">Released on 2026-06-30</span>
+      
+    </li>
+  
+    <li class="browser browser-chrome_android supported">
+      <span class="name">Chrome Android</span>
+      
+      
+        <span class="version supported">150</span>
+        <span class="date">Released on 2026-06-30</span>
+      
+    </li>
+  
+    <li class="browser browser-edge supported">
+      <span class="name">Edge</span>
+      
+      
+        <span class="version supported">150</span>
+        <span class="date">Released on 2026-07-02</span>
+      
+    </li>
+  
+    <li class="browser browser-firefox">
+      <span class="name">Firefox</span>
+      
+      
+        <span class="version unsupported">
+          Not supported
+          
+
+          
+        </span>
+        <span class="date"></span>
+      
+    </li>
+  
+    <li class="browser browser-firefox_android">
+      <span class="name">Firefox for Android</span>
+      
+      
+        <span class="version unsupported">
+          Not supported
+          
+
+          
+        </span>
+        <span class="date"></span>
+      
+    </li>
+  
+    <li class="browser browser-safari">
+      <span class="name">Safari</span>
+      
+      
+        <span class="version unsupported">
+          Not supported
+          
+
+          
+        </span>
+        <span class="date"></span>
+      
+    </li>
+  
+    <li class="browser browser-safari_ios">
+      <span class="name">Safari on iOS</span>
+      
+      
+        <span class="version unsupported">
+          Not supported
+          
+
+          
+        </span>
+        <span class="date"></span>
+      
+    </li>
+  
+</ul>
+  </div>
+
+  
+
+  <div class="additional-feature-data">
+    <div class="docs feature-box">
+  <h3>MDN documentation</h3>
+  
+    <strong>No MDN documentation found.</strong>
+    
+      You can <a href="https://developer.mozilla.org/search?q=Scroll method promises">search for the feature on MDN</a>. If you believe that MDN has no documentation about this feature, you can <a href="https://github.com/mdn/mdn/issues/new?template=content-or-feature-suggestion.yml">open an issue on MDN's GitHub repository</a>.
+    
+  
+</div>
+
+    
+  <div class="specs feature-box" data-pagefind-body="">
+    <h3>Specifications</h3>
+    <ul data-pagefind-body="">
+      
+        <li>
+          
+            <a href="https://drafts.csswg.org/cssom-view-1/">CSSOM View Module</a>,
+            from <a href="https://www.w3.org/groups/wg/css/">Cascading Style Sheets (CSS) Working Group</a> (W3C).
+          
+        </li>
       
     </ul>
-  </aside>
+  </div>
+
+    
+    
+    
+    
+    
+  </div>
+
+  <p class="edit-links">
+    <a href="../scroll-promises.json">View as JSON</a>
+    |
+    <a href="https://github.com/web-platform-dx/web-features/edit/main/features/scroll-promises.yml">Edit this feature</a>
+    |
+    <a href="https://github.com/web-platform-dx/web-features/issues/new?title=[scroll-promises] Issue title&body=Please describe the issue here...">Report an issue</a>
+    |    
+    Web-features entry:
+    <a href="https://github.com/web-platform-dx/web-features/blob/main/features/scroll-promises.yml">source</a>,
+    <a href="https://github.com/web-platform-dx/web-features/blob/main/features/scroll-promises.yml.dist">dist</a>
+  </p>
+</div>
+
 </main>
 
 
