@@ -1,0 +1,1899 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Web features explorer - Responsive iframes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The frame-sizing CSS property sets the size of an &lt;iframe&gt; element to that of it contents, to avoid scrolling in the iframe. Embedded documents allow this with the &lt;meta name=&quot;responsive-embedded-sizing&quot;&gt; element and request resizing in the embedding page by calling window.requestResize().">
+    <link rel="canonical" href="https://web-platform-dx.github.io/web-features-explorer/features/frame-sizing/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Web features explorer">
+    <meta property="og:title" content="Responsive iframes - Web platform features explorer">
+    <meta property="og:description" content="The frame-sizing CSS property sets the size of an &lt;iframe&gt; element to that of it contents, to avoid scrolling in the iframe. Embedded documents allow this with the &lt;meta name=&quot;responsive-embedded-sizing&quot;&gt; element and request resizing in the embedding page by calling window.requestResize().">
+    <meta property="og:image" content="https://web-platform-dx.github.io/web-features-explorer/assets/og/features/frame-sizing.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://web-platform-dx.github.io/web-features-explorer/features/frame-sizing/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Responsive iframes - Web platform features explorer">
+    <meta name="twitter:description" content="The frame-sizing CSS property sets the size of an &lt;iframe&gt; element to that of it contents, to avoid scrolling in the iframe. Embedded documents allow this with the &lt;meta name=&quot;responsive-embedded-sizing&quot;&gt; element and request resizing in the embedding page by calling window.requestResize().">
+    <meta name="twitter:image" content="https://web-platform-dx.github.io/web-features-explorer/assets/og/features/frame-sizing.png">
+    <link rel="stylesheet" type="text/css" href="/web-features-explorer/assets/styles.css">
+    
+    <link href="https://web-platform-dx.github.io/assets/img/webdx-notext.svg" rel="icon" type="image/svg+xml">
+    <link rel="alternate" type="application/atom+xml" title="Baseline newly available features" href="/web-features-explorer/newly-available.xml">
+    <link rel="alternate" type="application/atom+xml" title="Baseline widely available features" href="/web-features-explorer/widely-available.xml">
+    <link rel="alternate" type="application/atom+xml" title="Web platform release notes" href="/web-features-explorer/release-notes.xml">
+  </head>
+  <body>
+
+    
+      <header>
+        <a href="/web-features-explorer/" class="logo-text">Web features <span>explorer</span></a>
+
+        <search>
+          <form>
+            <input type="search" id="search" placeholder="Search for features">
+          </form>
+        </search>
+        <output for="search"></output>
+
+        <nav>
+          <ul>
+            <li><a href="/web-features-explorer/">Home</a></li>
+            <li><a href="/web-features-explorer/release-notes/august-2026">Release notes</a></li>
+            <li><a href="/web-features-explorer/about">About</a></li>
+
+            <li class="section-header">Features</li>
+            
+            <li><a href="/web-features-explorer/newly-available">Newly available</a></li>
+            <li><a href="/web-features-explorer/widely-available">Widely available</a></li>
+            <li><a href="/web-features-explorer/limited-availability">Limited availability</a></li>
+            <li><a href="/web-features-explorer/discouraged">Discouraged</a></li>
+            <li><a href="/web-features-explorer/opposed">Opposed</a></li>
+            <li><a href="/web-features-explorer/most-wanted">Most wanted</a></li>
+            <li><a href="/web-features-explorer/features">All features</a></li>
+
+            <li class="section-header">Missing only in</li>
+            
+            
+              <li><a href="/web-features-explorer/missing-only-in/chromium/">Chromium</a></li>
+            
+              <li><a href="/web-features-explorer/missing-only-in/firefox/">Firefox</a></li>
+            
+              <li><a href="/web-features-explorer/missing-only-in/safari/">Safari</a></li>
+            
+
+            <li class="section-header">Implemented only in</li>
+
+            
+              <li><a href="/web-features-explorer/only-in/chromium/">Chromium</a></li>
+            
+              <li><a href="/web-features-explorer/only-in/firefox/">Firefox</a></li>
+            
+              <li><a href="/web-features-explorer/only-in/safari/">Safari</a></li>
+            
+
+            <li class="section-header">Features in latest releases</li>
+  
+            
+              <li>
+                <a href="/web-features-explorer/browsers/chrome/">
+                  Chrome
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                      152
+                    
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/web-features-explorer/browsers/chrome-android/">
+                  Chrome Android
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                      152
+                    
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/web-features-explorer/browsers/edge/">
+                  Edge
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                      151
+                    
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/web-features-explorer/browsers/firefox/">
+                  Firefox
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                      154
+                    
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/web-features-explorer/browsers/firefox-android/">
+                  Firefox for Android
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                      154
+                    
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/web-features-explorer/browsers/safari/">
+                  Safari
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                      26.6
+                    
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/web-features-explorer/browsers/safari-ios/">
+                  Safari on iOS
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                      26.6
+                    
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </nav>
+      </header>
+
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span class="logo-text">Web features <span>explorer</span>
+      </span></button>
+      <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const header = document.querySelector("header");
+        menuToggle.addEventListener("click", () => {
+          header.classList.toggle("open");
+        });
+      </script>
+    
+
+    
+<main class="feature-page">
+  <div id="frame-sizing" class="feature full baseline-false">
+  <div class="header">
+    <h1 data-pagefind-body="">Responsive iframes</h1>
+    
+  <div class="availability">
+    Limited availability
+    
+    
+  </div>
+
+    
+    <span class="feature-copyable-id"><input id="feature-id" type="text" value="frame-sizing" data-len="12"><button id="copy-feature-id">Copy ID</button></span>
+    <script>
+      (function() {
+        const button = document.querySelector("#copy-feature-id");
+        const field = document.querySelector("#feature-id");
+        button.addEventListener("click", async () => {
+          await navigator.clipboard.writeText(field.value);
+          button.textContent = "Copied!";
+        });
+      })();
+    </script>
+  </div>
+
+  
+  
+
+  <p class="description" data-pagefind-body="">
+    The <code>frame-sizing</code> CSS property sets the size of an <code>&#x3C;iframe></code> element to that of it contents, to avoid scrolling in the iframe. Embedded documents allow this with the <code>&#x3C;meta name="responsive-embedded-sizing"></code> element and request resizing in the embedding page by calling <code>window.requestResize()</code>.
+  </p>
+
+  <div class="compat-table feature-box">
+    <h3>Browser support</h3>
+    <ul class="compat compat-full">
+  
+    <li class="browser browser-chrome">
+      <span class="name">Chrome</span>
+      
+      
+        <span class="version unsupported">
+          Not supported
+          
+
+          
+        </span>
+        <span class="date"></span>
+      
+    </li>
+  
+    <li class="browser browser-chrome_android">
+      <span class="name">Chrome Android</span>
+      
+      
+        <span class="version unsupported">
+          Not supported
+          
+
+          
+        </span>
+        <span class="date"></span>
+      
+    </li>
+  
+    <li class="browser browser-edge">
+      <span class="name">Edge</span>
+      
+      
+        <span class="version unsupported">
+          Not supported
+          
+
+          
+        </span>
+        <span class="date"></span>
+      
+    </li>
+  
+    <li class="browser browser-firefox">
+      <span class="name">Firefox</span>
+      
+      
+        <span class="version unsupported">
+          Not supported
+          
+
+          
+        </span>
+        <span class="date"></span>
+      
+    </li>
+  
+    <li class="browser browser-firefox_android">
+      <span class="name">Firefox for Android</span>
+      
+      
+        <span class="version unsupported">
+          Not supported
+          
+
+          
+        </span>
+        <span class="date"></span>
+      
+    </li>
+  
+    <li class="browser browser-safari">
+      <span class="name">Safari</span>
+      
+      
+        <span class="version unsupported">
+          Not supported
+          
+
+          
+        </span>
+        <span class="date"></span>
+      
+    </li>
+  
+    <li class="browser browser-safari_ios">
+      <span class="name">Safari on iOS</span>
+      
+      
+        <span class="version unsupported">
+          Not supported
+          
+
+          
+        </span>
+        <span class="date"></span>
+      
+    </li>
+  
+</ul>
+  </div>
+
+  
+
+  <div class="additional-feature-data">
+    <div class="docs feature-box">
+  <h3>MDN documentation</h3>
+  
+    <strong>No MDN documentation found.</strong>
+    
+      You can <a href="https://developer.mozilla.org/search?q=Responsive iframes">search for the feature on MDN</a>. If you believe that MDN has no documentation about this feature, you can <a href="https://github.com/mdn/mdn/issues/new?template=content-or-feature-suggestion.yml">open an issue on MDN's GitHub repository</a>.
+    
+  
+</div>
+
+    
+  <div class="specs feature-box" data-pagefind-body="">
+    <h3>Specifications</h3>
+    <ul data-pagefind-body="">
+      
+        <li>
+          
+            <a href="https://drafts.csswg.org/css-sizing-4/#propdef-frame-sizing">CSS Box Sizing Module Level 4 (#propdef-frame-sizing)</a>,
+            from <a href="https://www.w3.org/groups/wg/css/">Cascading Style Sheets (CSS) Working Group</a> (W3C).
+          
+        </li>
+      
+    </ul>
+  </div>
+
+    
+    
+    
+    
+    
+  </div>
+
+  <p class="edit-links">
+    <a href="../frame-sizing.json">View as JSON</a>
+    |
+    <a href="https://github.com/web-platform-dx/web-features/edit/main/features/frame-sizing.yml">Edit this feature</a>
+    |
+    <a href="https://github.com/web-platform-dx/web-features/issues/new?title=[frame-sizing] Issue title&body=Please describe the issue here...">Report an issue</a>
+    |    
+    Web-features entry:
+    <a href="https://github.com/web-platform-dx/web-features/blob/main/features/frame-sizing.yml">source</a>,
+    <a href="https://github.com/web-platform-dx/web-features/blob/main/features/frame-sizing.yml.dist">dist</a>
+  </p>
+</div>
+
+</main>
+
+
+        
+      <script src="/web-features-explorer/assets/search.js" defer=""></script>
+    
+  </body>
+</html>

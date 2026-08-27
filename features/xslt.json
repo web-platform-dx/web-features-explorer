@@ -13,6 +13,14 @@
  ],
  "description": "The XSLTProcessor API transforms XML documents into new XML or HTML documents, using XSLT stylesheets. You can use XSLT to convert data between different XML schemas or to convert XML data into web pages or PDF documents. Also known as Extensible Stylesheet Language Transformations.",
  "description_html": "The <code>XSLTProcessor</code> API transforms XML documents into new XML or HTML documents, using XSLT stylesheets. You can use XSLT to convert data between different XML schemas or to convert XML data into web pages or PDF documents. Also known as Extensible Stylesheet Language Transformations.",
+ "discouraged": {
+  "according_to": [
+   "https://html.spec.whatwg.org/#interactions-with-xpath-and-xslt",
+   "https://dom.spec.whatwg.org/#xslt"
+  ],
+  "reason": "XSLT is a candidate for removal from browsers because browser implementations are highly susceptible to memory safety vulnerabilities.",
+  "reason_html": "XSLT is a candidate for removal from browsers because browser implementations are highly susceptible to memory safety vulnerabilities."
+ },
  "group": [
   "xml"
  ],
@@ -22,14 +30,10 @@
   "https://dom.spec.whatwg.org/#xslt"
  ],
  "status": {
-  "baseline": "high",
-  "baseline_high_date": "2018-01-29",
-  "baseline_low_date": "2015-07-29",
+  "baseline": false,
   "by_compat_key": {
    "api.XSLTProcessor": {
-    "baseline": "high",
-    "baseline_high_date": "2018-01-29",
-    "baseline_low_date": "2015-07-29",
+    "baseline": false,
     "support": {
      "chrome": "1",
      "chrome_android": "18",
@@ -41,9 +45,7 @@
     }
    },
    "api.XSLTProcessor.XSLTProcessor": {
-    "baseline": "high",
-    "baseline_high_date": "2018-01-29",
-    "baseline_low_date": "2015-07-29",
+    "baseline": false,
     "support": {
      "chrome": "1",
      "chrome_android": "18",
@@ -55,9 +57,7 @@
     }
    },
    "api.XSLTProcessor.clearParameters": {
-    "baseline": "high",
-    "baseline_high_date": "2018-01-29",
-    "baseline_low_date": "2015-07-29",
+    "baseline": false,
     "support": {
      "chrome": "1",
      "chrome_android": "18",
@@ -69,9 +69,7 @@
     }
    },
    "api.XSLTProcessor.getParameter": {
-    "baseline": "high",
-    "baseline_high_date": "2018-01-29",
-    "baseline_low_date": "2015-07-29",
+    "baseline": false,
     "support": {
      "chrome": "1",
      "chrome_android": "18",
@@ -83,9 +81,7 @@
     }
    },
    "api.XSLTProcessor.importStylesheet": {
-    "baseline": "high",
-    "baseline_high_date": "2018-01-29",
-    "baseline_low_date": "2015-07-29",
+    "baseline": false,
     "support": {
      "chrome": "1",
      "chrome_android": "18",
@@ -97,9 +93,7 @@
     }
    },
    "api.XSLTProcessor.removeParameter": {
-    "baseline": "high",
-    "baseline_high_date": "2018-01-29",
-    "baseline_low_date": "2015-07-29",
+    "baseline": false,
     "support": {
      "chrome": "1",
      "chrome_android": "18",
@@ -111,9 +105,7 @@
     }
    },
    "api.XSLTProcessor.reset": {
-    "baseline": "high",
-    "baseline_high_date": "2018-01-29",
-    "baseline_low_date": "2015-07-29",
+    "baseline": false,
     "support": {
      "chrome": "1",
      "chrome_android": "18",
@@ -125,9 +117,7 @@
     }
    },
    "api.XSLTProcessor.setParameter": {
-    "baseline": "high",
-    "baseline_high_date": "2018-01-29",
-    "baseline_low_date": "2015-07-29",
+    "baseline": false,
     "support": {
      "chrome": "1",
      "chrome_android": "18",
@@ -139,9 +129,7 @@
     }
    },
    "api.XSLTProcessor.transformToDocument": {
-    "baseline": "high",
-    "baseline_high_date": "2018-01-29",
-    "baseline_low_date": "2015-07-29",
+    "baseline": false,
     "support": {
      "chrome": "1",
      "chrome_android": "18",
@@ -153,9 +141,7 @@
     }
    },
    "api.XSLTProcessor.transformToFragment": {
-    "baseline": "high",
-    "baseline_high_date": "2018-01-29",
-    "baseline_low_date": "2015-07-29",
+    "baseline": false,
     "support": {
      "chrome": "1",
      "chrome_android": "18",
@@ -248,6 +234,6 @@
   ]
  },
  "useCases": null,
- "baselineLowDateAsObject": "2015-07-29T00:00:00.000Z",
- "baselineHighDateAsObject": "2018-01-29T00:00:00.000Z"
+ "baselineLowDateAsObject": null,
+ "baselineHighDateAsObject": null
 }
