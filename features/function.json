@@ -275,7 +275,7 @@
   }
  ],
  "chromeUseCounters": {
-  "percentageOfPageLoad": 0.00001355,
+  "percentageOfPageLoad": 0.00001426,
   "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/310"
  },
  "interop": [],
@@ -284,7 +284,7 @@
  },
  "developerSignals": {
   "url": "https://github.com/web-platform-dx/developer-signals/issues/300",
-  "votes": 94
+  "votes": 95
  },
  "bugs": {
   "firefox": [
@@ -322,6 +322,10 @@
   {
    "description": "1. The most obvious advantage is reusability. I want to interpolate between two values; with `@function`, all I have to do is write this:\n```\n@function --lerp(--start, --end, --t) {\n\tresult: calc(var(--start) + var(--t) * (var(--end) - var(--start)));\n}\n```\nand use `--lerp()` wherever I want to interpolate between two values.\n\n2. I want to write cross-browser fallbacks with the at-rule. Let's take the `abs()` CSS function, it's newly available in all major browsers and if I want to write a fallback for older browsers using the `max(var(--num), -1 * var(--num))` trick, I can declare:\n```\n@function --abs(--num) {\n\tresult: abs(var(--num));\n\t@supports not (opacity: abs(-0.5)) {\n\t\tresult: max(var(--num), -1 * var(--num));\n\t}\n}\n```\nand use `--abs()` rather than the actual function until it's baseline. It would also be super easy to replace `--abs()` with `abs()` when it becomes baseline. Of course, `abs()` will be baseline before `@function` but the point is that writing fallbacks in general becomes much less of headache.\n\n3. With `@function`, I can write a function like the following:\n```\n@function --alpha(--color, --a) {\n\tresult: oklch(from var(--color) l c h / var(--a));\n}\n```\nand use it as `--alpha(var(--custom-color), 0.5)` rather than `oklch(from var(--custom-color) l c h / var(--a))` which hides the lightness, chroma, and saturation parameters and makes it clear that only the alpha value is meant to be modified. It gives us better encapsulation, reduces the possiblity of mistakes from new developers, and is more in line with the principle of least privilege.\n\n4. In general, `@function` gives me more creative control. I can write new functionalities without waiting for CSS to roll them out and provide cleaner fallbacks for them. I can write my own polyfills. It gives me more incentive to use CSS.",
    "url": "https://github.com/web-platform-dx/developer-signals/issues/300#issuecomment-5173877714"
+  },
+  {
+   "description": "Like others, my immediate need is to replace tedious boilerplate with a single function. This will reduce the amount of code I ship over the wire and simplify my CSS.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/300#issuecomment-5605114146"
   }
  ],
  "baselineLowDateAsObject": null,
