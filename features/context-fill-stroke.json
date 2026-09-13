@@ -267,7 +267,7 @@
  "hasNegativeStandardPosition": false,
  "stateOfSurveys": [],
  "chromeUseCounters": {
-  "percentageOfPageLoad": 0.00005855,
+  "percentageOfPageLoad": 0.00005956,
   "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/155"
  },
  "interop": [],
@@ -276,10 +276,15 @@
  },
  "developerSignals": {
   "url": "https://github.com/web-platform-dx/developer-signals/issues/199",
-  "votes": 9
+  "votes": 10
  },
  "bugs": {},
- "useCases": null,
+ "useCases": [
+  {
+   "description": "I use arrows on a lot of my visualizations. The arrow is made up of an arrow head and an arrow tail. What I’d like to do is specify the color once, and have the arrow head and tail both the same color. Unfortunately in SVG 1, the arrow tail is the stroke color in a <use> element, and the arrow head is the fill color inside the marker defined in <defs>, and I need to make up a page-unique id to link the two.\n\nDo an image search for \"vector field\" to see the types of data visualizations that use hundreds or thousands of arrows. (For example: https://en.wikipedia.org/wiki/Phase_portrait#/media/File:Van_der_pols_equation_phase_portrait.svg)\n\nI've been wanting `context-stroke` feature for over a decade. And it's not just me. See https://stackoverflow.com/questions/16664584/changing-an-svg-markers-color-css and https://stackoverflow.com/questions/32964457/match-arrowhead-color-to-line-color-in-d3 as examples of people wanting this.\n\nIt looks like marking markers match the path is the exact use case mentioned in the specification https://w3c.github.io/svgwg/svg2-draft/painting.html#SpecifyingPaint",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/199#issuecomment-5642071082"
+  }
+ ],
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null,
  "blockedOn": "Safari",
