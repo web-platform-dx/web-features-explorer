@@ -1,15 +1,13 @@
 {
  "compat_features": [
-  "api.Document.parseHTMLUnsafe_static",
-  "api.Element.setHTMLUnsafe",
-  "api.ShadowRoot.setHTMLUnsafe"
+  "api.Document.parseHTMLUnsafe_static"
  ],
- "description": "The Document.parseHTMLUnsafe() static method parses HTML into a DOM tree, while the setHTMLUnsafe() method of Element and ShadowRoot parses and inserts HTML into an existing tree. No sanitization applies to these methods, so never call them with user-provided HTML strings.",
- "description_html": "The <code>Document.parseHTMLUnsafe()</code> static method parses HTML into a DOM tree, while the <code>setHTMLUnsafe()</code> method of <code>Element</code> and <code>ShadowRoot</code> parses and inserts HTML into an existing tree. No sanitization applies to these methods, so never call them with user-provided HTML strings.",
+ "description": "The Document.parseHTMLUnsafe() static method parses HTML into a DOM tree, much like the setHTMLUnsafe() DOM method inserts HTML into an existing tree. No sanitization applies, so never call it with user-provided strings.",
+ "description_html": "The <code>Document.parseHTMLUnsafe()</code> static method parses HTML into a DOM tree, much like the <code>setHTMLUnsafe()</code> DOM method inserts HTML into an existing tree. No sanitization applies, so never call it with user-provided strings.",
  "kind": "feature",
- "name": "Unsanitized HTML parsing methods",
+ "name": "Unsanitized HTML parsing",
  "spec": [
-  "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#unsafe-html-parsing-methods"
+  "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization"
  ],
  "status": {
   "baseline": "low",
@@ -24,32 +22,6 @@
      "edge": "124",
      "firefox": "128",
      "firefox_android": "128",
-     "safari": "26",
-     "safari_ios": "26"
-    }
-   },
-   "api.Element.setHTMLUnsafe": {
-    "baseline": "low",
-    "baseline_low_date": "2025-09-15",
-    "support": {
-     "chrome": "124",
-     "chrome_android": "124",
-     "edge": "124",
-     "firefox": "123",
-     "firefox_android": "123",
-     "safari": "26",
-     "safari_ios": "26"
-    }
-   },
-   "api.ShadowRoot.setHTMLUnsafe": {
-    "baseline": "low",
-    "baseline_low_date": "2025-09-15",
-    "support": {
-     "chrome": "124",
-     "chrome_android": "124",
-     "edge": "124",
-     "firefox": "123",
-     "firefox_android": "123",
      "safari": "26",
      "safari_ios": "26"
     }
@@ -69,7 +41,7 @@
  "groups": [],
  "specs": [
   {
-   "url": "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#unsafe-html-parsing-methods",
+   "url": "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization",
    "seriesComposition": "full",
    "shortname": "html",
    "series": {
@@ -185,7 +157,7 @@
      "html/cross-origin-embedder-policy/credentialless"
     ]
    },
-   "fragment": "unsafe-html-parsing-methods"
+   "fragment": "dom-parsing-and-serialization"
   }
  ],
  "mdnUrls": [
@@ -222,7 +194,7 @@
   }
  ],
  "chromeUseCounters": {
-  "percentageOfPageLoad": 0.00115893,
+  "percentageOfPageLoad": 0.00129395,
   "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/122"
  },
  "interop": [],
