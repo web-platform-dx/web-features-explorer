@@ -6,9 +6,7 @@
   "css.properties.text-autospace.ideograph-numeric",
   "css.properties.text-autospace.insert",
   "css.properties.text-autospace.no-autospace",
-  "css.properties.text-autospace.normal",
-  "css.properties.text-autospace.punctuation",
-  "css.properties.text-autospace.replace"
+  "css.properties.text-autospace.normal"
  ],
  "description": "The text-autospace CSS property sets whether and how to insert spaces in inter-script text (such as when mixing Latin and Chinese characters) and around punctuation.",
  "description_html": "The <code>text-autospace</code> CSS property sets whether and how to insert spaces in inter-script text (such as when mixing Latin and Chinese characters) and around punctuation.",
@@ -64,7 +62,9 @@
     "baseline": false,
     "support": {
      "firefox": "145",
-     "firefox_android": "145"
+     "firefox_android": "145",
+     "safari": "27",
+     "safari_ios": "27"
     }
    },
    "css.properties.text-autospace.no-autospace": {
@@ -92,17 +92,14 @@
      "safari": "18.4",
      "safari_ios": "18.4"
     }
-   },
-   "css.properties.text-autospace.punctuation": {
-    "baseline": false,
-    "support": {}
-   },
-   "css.properties.text-autospace.replace": {
-    "baseline": false,
-    "support": {}
    }
   },
-  "support": {}
+  "support": {
+   "firefox": "145",
+   "firefox_android": "145",
+   "safari": "27",
+   "safari_ios": "27"
+  }
  },
  "id": "text-autospace",
  "groups": [],
@@ -182,18 +179,14 @@
  },
  "bugs": {
   "firefox": [
-   "https://bugzil.la/1869577",
-   "https://bugzil.la/1986500",
-   "https://bugzil.la/1980111"
+   "https://bugzil.la/1869577"
   ],
   "chrome": [
    "https://bugs.chromium.org/p/chromium/issues/detail?id=1463890",
    "https://crbug.com/429178779"
   ],
   "firefox_android": [
-   "https://bugzil.la/1869577",
-   "https://bugzil.la/1986500",
-   "https://bugzil.la/1980111"
+   "https://bugzil.la/1869577"
   ],
   "chrome_android": [
    "https://crbug.com/429178779"
@@ -219,5 +212,8 @@
  },
  "useCases": null,
  "baselineLowDateAsObject": null,
- "baselineHighDateAsObject": null
+ "baselineHighDateAsObject": null,
+ "blockedOn": "Chromium",
+ "blockedSince": "September 2026",
+ "monthsBlocked": 0
 }

@@ -10,19 +10,23 @@
  "kind": "feature",
  "name": "JavaScript promise integration (WebAssembly)",
  "spec": [
-  "https://github.com/WebAssembly/js-promise-integration/blob/main/proposals/js-promise-integration/Overview.md"
+  "https://webassembly.github.io/js-promise-integration/js-api/"
  ],
  "status": {
-  "baseline": false,
+  "baseline": "low",
+  "baseline_low_date": "2026-09-14",
   "by_compat_key": {
    "webassembly.jspi": {
-    "baseline": false,
+    "baseline": "low",
+    "baseline_low_date": "2026-09-14",
     "support": {
      "chrome": "137",
      "chrome_android": "137",
      "edge": "137",
      "firefox": "153",
-     "firefox_android": "153"
+     "firefox_android": "153",
+     "safari": "27",
+     "safari_ios": "27"
     }
    }
   },
@@ -31,7 +35,9 @@
    "chrome_android": "137",
    "edge": "137",
    "firefox": "153",
-   "firefox_android": "153"
+   "firefox_android": "153",
+   "safari": "27",
+   "safari_ios": "27"
   }
  },
  "id": "wasm-jspi",
@@ -40,7 +46,42 @@
  ],
  "specs": [
   {
-   "url": "https://github.com/WebAssembly/js-promise-integration/blob/main/proposals/js-promise-integration/Overview.md"
+   "url": "https://webassembly.github.io/js-promise-integration/js-api/",
+   "seriesComposition": "fork",
+   "shortname": "wasm-js-api-2-fork-js-promise-integration",
+   "series": {
+    "shortname": "wasm-js-api",
+    "currentSpecification": "wasm-js-api-2",
+    "title": "WebAssembly JavaScript Interface",
+    "shortTitle": "WebAssembly JavaScript Interface",
+    "releaseUrl": "https://www.w3.org/TR/wasm-js-api/",
+    "nightlyUrl": "https://webassembly.github.io/spec/js-api/"
+   },
+   "seriesVersion": "2",
+   "forkOf": "wasm-js-api-2",
+   "title": "WebAssembly JavaScript Interface: Promise Integration",
+   "organization": "W3C",
+   "groups": [
+    {
+     "name": "WebAssembly Community Group",
+     "url": "https://www.w3.org/community/webassembly/"
+    }
+   ],
+   "nightly": {
+    "url": "https://webassembly.github.io/js-promise-integration/js-api/",
+    "status": "Editor's Draft",
+    "alternateUrls": [],
+    "repository": "https://github.com/WebAssembly/js-promise-integration",
+    "sourcePath": "document/js-api/index.bs",
+    "filename": "index.html"
+   },
+   "source": "spec",
+   "shortTitle": "WebAssembly JavaScript Interface: Promise Integration",
+   "categories": [
+    "browser"
+   ],
+   "standing": "good",
+   "fragment": null
   }
  ],
  "mdnUrls": [],
@@ -66,9 +107,7 @@
   ]
  },
  "useCases": null,
- "baselineLowDateAsObject": null,
+ "baselineLowDateAsObject": "2026-09-14T00:00:00.000Z",
  "baselineHighDateAsObject": null,
- "blockedOn": "Safari",
- "blockedSince": "July 2026",
- "monthsBlocked": 2
+ "expectedBaselineHighDate": "2029-03-14"
 }
