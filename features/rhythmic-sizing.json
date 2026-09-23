@@ -95,7 +95,12 @@
    "http://crbug.com/586413"
   ]
  },
- "useCases": null,
+ "useCases": [
+  {
+   "description": "My main use case is a grid of product cards. The card titles differ in height and are never a multiple of `rlh`, because they have a line height of their own and the text varies in length, wrapping to a different number of lines. As a result, the product descriptions and specs end up shifted off the baseline grid of the body text by a different distance in every card. In other words, plain text in neighbouring cards is misaligned. Designers and project managers often ask to do something about it, but nothing can be done about it without JS, which makes the interface janky and sluggish (and because of that the rhythm has to be given up).\n\nBut cards are not the only use case. Here are a few more:\n\n- multi-column layout (rarely, but I do have to resort to it);\n- long-form text simply always looks better when the text itself, the headings, images, quotes, lists and everything else follow the same rhythm;\n- for Japanese and Chinese typography, rhythm is not mere decoration;\n- EPUB with two pages displayed side by side badly needs these properties too.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/315#issuecomment-5763132909"
+  }
+ ],
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null
 }
