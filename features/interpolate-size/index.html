@@ -1983,7 +1983,7 @@
     
   <div class="use-counters feature-box">
     <h3>Usage <span class="subtext">(according to <a href="https://chromestatus.com/metrics/webfeature/popularity">Chrome Platform Status</a>)</span></h3>
-    ~10.119% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/235">More data at chromestatus.com</a>.
+    ~10.937% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/235">More data at chromestatus.com</a>.
   </div>
 
     
@@ -2040,6 +2040,35 @@
         <details class="string-revealer">
           <summary>The ability to animate size from 0 to &quot;auto&quot; in CSS has been sorely missing pretty much since transition existed. I could immediately use it in several types of menus/navigations and other open/closable modules. Probably most notably &quot;interpolate-size: allow-keywords&quot; is the last feature missing from completely JS-free animated Accordions (with details+summary). I seriously can&#39;t wait to use it and throw out lots of legacy tricks and javascript, but unanimated modules in some bosses iPhones prevent it.</summary>
           The ability to animate size from 0 to &quot;auto&quot; in CSS has been sorely missing pretty much since transition existed. I could immediately use it in several types of menus/navigations and other open/closable modules. Probably most notably &quot;interpolate-size: allow-keywords&quot; is the last feature missing from completely JS-free animated Accordions (with details+summary). I seriously can&#39;t wait to use it and throw out lots of legacy tricks and javascript, but unanimated modules in some bosses iPhones prevent it. [<a href="https://github.com/web-platform-dx/developer-signals/issues/253#issuecomment-3660444907">see original comment</a>]
+        </details>
+      </li>
+    
+      <li>
+        <details class="string-revealer">
+          <summary>```CSS
+INPUT[type=&quot;checkbox&quot;]         + :is(FIELDSET,FIGURE,ASIDE,DIV) {
+             height: 0;
+         transition: height 0.8s ease-out;
+/* interpolate-size: allow-keywords; (&quot;on&quot; by default... to save Stack Overflow 
+    from the thousand student questions about this every single semester.) */
+}
+
+INPUT[type=&quot;checkbox&quot;]:checked + :is(FIELDSET,FIGURE,ASIDE,DIV) {
+             height: auto;
+}
+```</summary>
+          ```CSS
+INPUT[type=&quot;checkbox&quot;]         + :is(FIELDSET,FIGURE,ASIDE,DIV) {
+             height: 0;
+         transition: height 0.8s ease-out;
+/* interpolate-size: allow-keywords; (&quot;on&quot; by default... to save Stack Overflow 
+    from the thousand student questions about this every single semester.) */
+}
+
+INPUT[type=&quot;checkbox&quot;]:checked + :is(FIELDSET,FIGURE,ASIDE,DIV) {
+             height: auto;
+}
+``` [<a href="https://github.com/web-platform-dx/developer-signals/issues/253#issuecomment-5896806759">see original comment</a>]
         </details>
       </li>
     
