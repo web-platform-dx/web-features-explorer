@@ -130,7 +130,7 @@
  "hasNegativeStandardPosition": false,
  "stateOfSurveys": [],
  "chromeUseCounters": {
-  "percentageOfPageLoad": 0.00139671,
+  "percentageOfPageLoad": 0.00140778,
   "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/134"
  },
  "interop": [],
@@ -139,7 +139,7 @@
  },
  "developerSignals": {
   "url": "https://github.com/web-platform-dx/developer-signals/issues/211",
-  "votes": 20
+  "votes": 21
  },
  "bugs": {
   "chrome": [
@@ -152,7 +152,12 @@
    "https://bugzil.la/1841456"
   ]
  },
- "useCases": null,
+ "useCases": [
+  {
+   "description": "While the overlay property is almost useless because developers can't change the open state for dialogs and popovers from their code editors. The property itself combined with animating display none and content-visibility hidden for popovers, dialogs and other popup elements with the @starting-style rule will be useful to developers can use to have a smooth transition within the top layer from the ::backdrop pseudo element.  Thus animating display animating display none and content-visibility hidden for popovers, dialogs and other popup elements will feel incomplete without the overlay property that developers use in transitions.\n\nAll of the browsers have support for the transition-behavior property for discrete animations and the @starting-style rule to apply styles before rendering the page.\n\nChromium Browsers with Safari have full support animating display none and content-visibility hidden for popovers, dialogs and other popup elements, but Firefox does not (though their developers have been working on it and are prototyping it which it can be enable by this flag layout.css.display-animations.enabled \n\nChromium Browsers are the only browsers that support the full set of animating display none and content-visibility hidden with the overlay property for dialogs. As of the moment developers are happy that we can animate display and discrete animations on the web. It would be nice if we can animate the backdrop and top layer over the content of the web.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/211#issuecomment-5932793270"
+  }
+ ],
  "baselineLowDateAsObject": null,
  "baselineHighDateAsObject": null
 }
