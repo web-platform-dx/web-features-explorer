@@ -1931,7 +1931,7 @@
         <strong>
           👍
           <br>
-          1
+          2
         </strong>
       </a>
     </div>
@@ -1981,6 +1981,36 @@
     
     
     
+  <div class="use-cases feature-box">
+    <h3>Developer use cases</h3>
+    <ul>
+    
+      <li>
+        <details class="string-revealer">
+          <summary>I use a `TransformStream` for encrypting large amounts of data in a streaming fashion. Because I need to support funky ECC curves (Brainpool) and authenticated encryption (AES-GCM) to adhere to regulatory guidelines, the encryption is performed using OpenSSL via WASM. To encrypt data, the `start` method of the transformer instantiates a new instance of the encryptor class implemented in C++ using Emscriptens Javascript glue code. Without a `cancel` callback method, the encryptor instance leaves behind a memory leak filling up the WASM heap until no more memory can be allocated. The encryption is only one step of a whole pipeline:
+
+* Compression using zip.js (readable stream)
+* SHA512 hashing of the unencrypted ZIP using hash-wasm (transform stream)
+* encryption using OpenSSL over WASM (transform stream)
+* SHA512 hashing of the encrypted ZIP using hash-wasm (transform stream)
+* writing to OPFS (writable stream)
+
+Since this process can be aborted by the user to make changes to the input files and the encryption transformer passes whole chunks to WASM, cancelling the stream pipeline multiple times in a row can leak a lot of memory pretty fast.</summary>
+          I use a `TransformStream` for encrypting large amounts of data in a streaming fashion. Because I need to support funky ECC curves (Brainpool) and authenticated encryption (AES-GCM) to adhere to regulatory guidelines, the encryption is performed using OpenSSL via WASM. To encrypt data, the `start` method of the transformer instantiates a new instance of the encryptor class implemented in C++ using Emscriptens Javascript glue code. Without a `cancel` callback method, the encryptor instance leaves behind a memory leak filling up the WASM heap until no more memory can be allocated. The encryption is only one step of a whole pipeline:
+
+* Compression using zip.js (readable stream)
+* SHA512 hashing of the unencrypted ZIP using hash-wasm (transform stream)
+* encryption using OpenSSL over WASM (transform stream)
+* SHA512 hashing of the encrypted ZIP using hash-wasm (transform stream)
+* writing to OPFS (writable stream)
+
+Since this process can be aborted by the user to make changes to the input files and the encryption transformer passes whole chunks to WASM, cancelling the stream pipeline multiple times in a row can leak a lot of memory pretty fast. [<a href="https://github.com/web-platform-dx/developer-signals/issues/321#issuecomment-6047671165">see original comment</a>]
+        </details>
+      </li>
+    
+    </ul>
+  </div>
+
   </div>
 
   <p class="edit-links">
