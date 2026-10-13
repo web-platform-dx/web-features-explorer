@@ -3,9 +3,16 @@
   "api.ML",
   "api.ML.createContext",
   "api.MLContext",
+  "api.MLContext.createConstantTensor",
+  "api.MLContext.createTensor",
+  "api.MLContext.destroy",
   "api.MLContext.dispatch",
+  "api.MLContext.lost",
   "api.MLContext.opSupportLimits",
+  "api.MLContext.readTensor",
+  "api.MLContext.writeTensor",
   "api.MLGraph",
+  "api.MLGraph.destroy",
   "api.MLGraphBuilder",
   "api.MLGraphBuilder.MLGraphBuilder",
   "api.MLGraphBuilder.abs",
@@ -35,6 +42,7 @@
   "api.MLGraphBuilder.gather",
   "api.MLGraphBuilder.gatherElements",
   "api.MLGraphBuilder.gatherND",
+  "api.MLGraphBuilder.gelu",
   "api.MLGraphBuilder.gemm",
   "api.MLGraphBuilder.greater",
   "api.MLGraphBuilder.greaterOrEqual",
@@ -45,6 +53,8 @@
   "api.MLGraphBuilder.identity",
   "api.MLGraphBuilder.input",
   "api.MLGraphBuilder.instanceNormalization",
+  "api.MLGraphBuilder.isInfinite",
+  "api.MLGraphBuilder.isNaN",
   "api.MLGraphBuilder.l2Pool2d",
   "api.MLGraphBuilder.layerNormalization",
   "api.MLGraphBuilder.leakyRelu",
@@ -64,6 +74,7 @@
   "api.MLGraphBuilder.min",
   "api.MLGraphBuilder.mul",
   "api.MLGraphBuilder.neg",
+  "api.MLGraphBuilder.notEqual",
   "api.MLGraphBuilder.pad",
   "api.MLGraphBuilder.pow",
   "api.MLGraphBuilder.prelu",
@@ -82,6 +93,8 @@
   "api.MLGraphBuilder.relu",
   "api.MLGraphBuilder.resample2d",
   "api.MLGraphBuilder.reshape",
+  "api.MLGraphBuilder.reverse",
+  "api.MLGraphBuilder.roundEven",
   "api.MLGraphBuilder.scatterElements",
   "api.MLGraphBuilder.scatterND",
   "api.MLGraphBuilder.sigmoid",
@@ -101,6 +114,15 @@
   "api.MLGraphBuilder.triangular",
   "api.MLGraphBuilder.where",
   "api.MLOperand",
+  "api.MLOperand.dataType",
+  "api.MLOperand.shape",
+  "api.MLTensor",
+  "api.MLTensor.constant",
+  "api.MLTensor.dataType",
+  "api.MLTensor.destroy",
+  "api.MLTensor.readable",
+  "api.MLTensor.shape",
+  "api.MLTensor.writable",
   "api.Navigator.ml",
   "api.WorkerNavigator.ml"
  ],
@@ -126,7 +148,23 @@
     "baseline": false,
     "support": {}
    },
+   "api.MLContext.createConstantTensor": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLContext.createTensor": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLContext.destroy": {
+    "baseline": false,
+    "support": {}
+   },
    "api.MLContext.dispatch": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLContext.lost": {
     "baseline": false,
     "support": {}
    },
@@ -134,7 +172,19 @@
     "baseline": false,
     "support": {}
    },
+   "api.MLContext.readTensor": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLContext.writeTensor": {
+    "baseline": false,
+    "support": {}
+   },
    "api.MLGraph": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLGraph.destroy": {
     "baseline": false,
     "support": {}
    },
@@ -254,6 +304,10 @@
     "baseline": false,
     "support": {}
    },
+   "api.MLGraphBuilder.gelu": {
+    "baseline": false,
+    "support": {}
+   },
    "api.MLGraphBuilder.gemm": {
     "baseline": false,
     "support": {}
@@ -291,6 +345,14 @@
     "support": {}
    },
    "api.MLGraphBuilder.instanceNormalization": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLGraphBuilder.isInfinite": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLGraphBuilder.isNaN": {
     "baseline": false,
     "support": {}
    },
@@ -370,6 +432,10 @@
     "baseline": false,
     "support": {}
    },
+   "api.MLGraphBuilder.notEqual": {
+    "baseline": false,
+    "support": {}
+   },
    "api.MLGraphBuilder.pad": {
     "baseline": false,
     "support": {}
@@ -439,6 +505,14 @@
     "support": {}
    },
    "api.MLGraphBuilder.reshape": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLGraphBuilder.reverse": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLGraphBuilder.roundEven": {
     "baseline": false,
     "support": {}
    },
@@ -515,6 +589,42 @@
     "support": {}
    },
    "api.MLOperand": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLOperand.dataType": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLOperand.shape": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLTensor": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLTensor.constant": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLTensor.dataType": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLTensor.destroy": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLTensor.readable": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLTensor.shape": {
+    "baseline": false,
+    "support": {}
+   },
+   "api.MLTensor.writable": {
     "baseline": false,
     "support": {}
    },
