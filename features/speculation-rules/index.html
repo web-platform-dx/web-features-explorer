@@ -839,7 +839,9 @@
                     
                   
                     
-                      154
+                  
+                    
+                      155
                     
                   
                 </a>
@@ -1168,7 +1170,9 @@
                     
                   
                     
-                      157
+                  
+                    
+                      158
                     
                   
                 </a>
@@ -1459,7 +1463,9 @@
                     
                   
                     
-                      157
+                  
+                    
+                      158
                     
                   
                 </a>
@@ -1927,7 +1933,7 @@
         <strong>
           👍
           <br>
-          33
+          35
         </strong>
       </a>
     </div>
@@ -1984,7 +1990,7 @@
     
   <div class="use-counters feature-box">
     <h3>Usage <span class="subtext">(according to <a href="https://chromestatus.com/metrics/webfeature/popularity">Chrome Platform Status</a>)</span></h3>
-    ~11.852% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/317">More data at chromestatus.com</a>.
+    ~11.381% of page loads. <a href="https://chromestatus.com/metrics/webfeature/timeline/popularity/317">More data at chromestatus.com</a>.
   </div>
 
     
@@ -2083,6 +2089,29 @@ With the Speculation Rules API (specifically prerendering), I can start asset lo
         <details class="string-revealer">
           <summary>Improve performance for my web apps without resorting to SPA frameworks. Service Workers and Cache API have come a long way towards making MPA apps comparable to SPAs. Speculation rules will close the gap further while providing an ergonomical API.</summary>
           Improve performance for my web apps without resorting to SPA frameworks. Service Workers and Cache API have come a long way towards making MPA apps comparable to SPAs. Speculation rules will close the gap further while providing an ergonomical API. [<a href="https://github.com/web-platform-dx/developer-signals/issues/186#issuecomment-5536607047">see original comment</a>]
+        </details>
+      </li>
+    
+      <li>
+        <details class="string-revealer">
+          <summary>My company&#39;s website Imagine.art is made up of several independently deployed Next.js apps served from one origin using Next.js Multi-Zones: a host app rewrites routes for each zone. Inside a zone/Next.js app, `&lt;Link&gt;` prefetches the next page&#39;s RSC payload, so navigation is instant. Between zones that isn&#39;t possible. Every switch is a full document navigation that goes through the host proxy, the target zone&#39;s middleware and a server render.
+
+We use the Speculation Rules API to close that gap:
+
+- **Document rules with `href_matches`** prefetch each zone&#39;s root page as soon as a page links to it (`immediate`), and deeper zone pages on hover (`moderate`).
+- **Dynamically inserted list rules** cover platform switchers that navigate with `window.location.assign`, where there&#39;s no `&lt;a&gt;` to match.
+- **`Sec-Purpose: prefetch`** lets our middleware refuse prefetches that would refresh a session or rotate a single-use refresh token, so prefetching has no side effects on an authenticated app.
+
+In Chromium the difference is dramatic. In our dev environment, a cross-zone navigation served from the prefetch gets its first byte in a few milliseconds and reaches DOMContentLoaded in about 60 ms, versus 2–4 s for the same navigation without it.</summary>
+          My company&#39;s website Imagine.art is made up of several independently deployed Next.js apps served from one origin using Next.js Multi-Zones: a host app rewrites routes for each zone. Inside a zone/Next.js app, `&lt;Link&gt;` prefetches the next page&#39;s RSC payload, so navigation is instant. Between zones that isn&#39;t possible. Every switch is a full document navigation that goes through the host proxy, the target zone&#39;s middleware and a server render.
+
+We use the Speculation Rules API to close that gap:
+
+- **Document rules with `href_matches`** prefetch each zone&#39;s root page as soon as a page links to it (`immediate`), and deeper zone pages on hover (`moderate`).
+- **Dynamically inserted list rules** cover platform switchers that navigate with `window.location.assign`, where there&#39;s no `&lt;a&gt;` to match.
+- **`Sec-Purpose: prefetch`** lets our middleware refuse prefetches that would refresh a session or rotate a single-use refresh token, so prefetching has no side effects on an authenticated app.
+
+In Chromium the difference is dramatic. In our dev environment, a cross-zone navigation served from the prefetch gets its first byte in a few milliseconds and reaches DOMContentLoaded in about 60 ms, versus 2–4 s for the same navigation without it. [<a href="https://github.com/web-platform-dx/developer-signals/issues/186#issuecomment-6169341695">see original comment</a>]
         </details>
       </li>
     

@@ -53,7 +53,8 @@
      "chrome": "72",
      "edge": "79",
      "firefox": "33",
-     "safari": "13"
+     "safari": "13",
+     "safari_ios": "27"
     }
    },
    "api.MediaDevices.getDisplayMedia.audio_capture_support": {
@@ -146,7 +147,8 @@
    "chrome": "72",
    "edge": "79",
    "firefox": "33",
-   "safari": "13"
+   "safari": "13",
+   "safari_ios": "27"
   }
  },
  "id": "screen-capture",
@@ -218,7 +220,7 @@
  },
  "developerSignals": {
   "url": "https://github.com/web-platform-dx/developer-signals/issues/47",
-  "votes": 7
+  "votes": 8
  },
  "bugs": {
   "chrome": [
@@ -243,6 +245,10 @@
   {
    "description": "On Android XR devices, inside of our webxr call application, there is no way to capture a portion of your screen to share with users. This is particularly an issue on Galaxy XR (Android XR). \n\nIt would be great if the user demonstrating something in the session were able to just share an open window (or their entire view) using the browser alone.",
    "url": "https://github.com/web-platform-dx/developer-signals/issues/47#issuecomment-6131907145"
+  },
+  {
+   "description": "Users of our web app want to export a data table as a presentation-ready image they can drop into a slide or an email. Basically a screenshot of the table.\n\n`getDisplayMedia()` is the one browser-native route I can see. You grab a frame from the stream, draw it to a canvas and save it. The browser captures the real rendered page, so fonts, badges and colours come out as users see them. As far as I can tell, `preferCurrentTab` (the option that offers \"This Tab\" up front) is only in Chromium browsers right now, so I'd like to see it work in Firefox and Safari too.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/47#issuecomment-6176990144"
   }
  ],
  "baselineLowDateAsObject": null,

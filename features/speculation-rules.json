@@ -7,13 +7,14 @@
   "html.elements.script.type.speculationrules",
   "html.elements.script.type.speculationrules.eagerness",
   "html.elements.script.type.speculationrules.expects_no_vary_search",
+  "html.elements.script.type.speculationrules.form_submission",
   "html.elements.script.type.speculationrules.prefetch",
   "html.elements.script.type.speculationrules.prerender",
   "html.elements.script.type.speculationrules.referrer_policy",
   "html.elements.script.type.speculationrules.relative_to",
   "html.elements.script.type.speculationrules.requires",
   "html.elements.script.type.speculationrules.requires.anonymous-client-ip-when-cross-origin",
-  "html.elements.script.type.speculationrules.source_optional",
+  "html.elements.script.type.speculationrules.source",
   "html.elements.script.type.speculationrules.tag",
   "html.elements.script.type.speculationrules.target_hint",
   "html.elements.script.type.speculationrules.urls",
@@ -93,6 +94,14 @@
      "edge": "127"
     }
    },
+   "html.elements.script.type.speculationrules.form_submission": {
+    "baseline": false,
+    "support": {
+     "chrome": "151",
+     "chrome_android": "151",
+     "edge": "151"
+    }
+   },
    "html.elements.script.type.speculationrules.prefetch": {
     "baseline": false,
     "support": {
@@ -140,12 +149,12 @@
      "chrome_android": "109"
     }
    },
-   "html.elements.script.type.speculationrules.source_optional": {
+   "html.elements.script.type.speculationrules.source": {
     "baseline": false,
     "support": {
-     "chrome": "122",
-     "chrome_android": "122",
-     "edge": "122"
+     "chrome": "109",
+     "chrome_android": "109",
+     "edge": "109"
     }
    },
    "html.elements.script.type.speculationrules.tag": {
@@ -454,7 +463,7 @@
   }
  ],
  "chromeUseCounters": {
-  "percentageOfPageLoad": 0.1185237,
+  "percentageOfPageLoad": 0.11380893,
   "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/317"
  },
  "interop": [],
@@ -463,7 +472,7 @@
  },
  "developerSignals": {
   "url": "https://github.com/web-platform-dx/developer-signals/issues/186",
-  "votes": 33
+  "votes": 35
  },
  "bugs": {
   "chrome": [
@@ -471,6 +480,7 @@
    "https://issues.chromium.org/issues/40170951",
    "https://g-issues.chromium.org/issues/510022186",
    "https://issues.chromium.org/u/1/issues/428500219",
+   "https://issues.chromium.org/issues/440387014",
    "https://crbug.com/40287486",
    "https://issues.chromium.org/issues/372053392",
    "https://issues.chromium.org/issues/381687257",
@@ -508,6 +518,10 @@
   {
    "description": "Improve performance for my web apps without resorting to SPA frameworks. Service Workers and Cache API have come a long way towards making MPA apps comparable to SPAs. Speculation rules will close the gap further while providing an ergonomical API.",
    "url": "https://github.com/web-platform-dx/developer-signals/issues/186#issuecomment-5536607047"
+  },
+  {
+   "description": "My company's website Imagine.art is made up of several independently deployed Next.js apps served from one origin using Next.js Multi-Zones: a host app rewrites routes for each zone. Inside a zone/Next.js app, `<Link>` prefetches the next page's RSC payload, so navigation is instant. Between zones that isn't possible. Every switch is a full document navigation that goes through the host proxy, the target zone's middleware and a server render.\n\nWe use the Speculation Rules API to close that gap:\n\n- **Document rules with `href_matches`** prefetch each zone's root page as soon as a page links to it (`immediate`), and deeper zone pages on hover (`moderate`).\n- **Dynamically inserted list rules** cover platform switchers that navigate with `window.location.assign`, where there's no `<a>` to match.\n- **`Sec-Purpose: prefetch`** lets our middleware refuse prefetches that would refresh a session or rotate a single-use refresh token, so prefetching has no side effects on an authenticated app.\n\nIn Chromium the difference is dramatic. In our dev environment, a cross-zone navigation served from the prefetch gets its first byte in a few milliseconds and reaches DOMContentLoaded in about 60 ms, versus 2–4 s for the same navigation without it.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/186#issuecomment-6169341695"
   }
  ],
  "baselineLowDateAsObject": null,
