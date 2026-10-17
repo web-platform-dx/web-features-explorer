@@ -1,6 +1,11 @@
 {
  "compat_features": [
-  "api.Request.targetAddressSpace"
+  "api.Permissions.permission_local-network",
+  "api.Permissions.permission_local-network-access",
+  "api.Request.Request.options_parameter.targetAddressSpace",
+  "api.fetch.options_parameter.targetAddressSpace",
+  "http.headers.Permissions-Policy.local-network",
+  "http.headers.Permissions-Policy.local-network-access"
  ],
  "description": "The \"local-network-access\" user permission (and certain actions that imply this permission, such as a fetch() request with { targetAddressSpace: \"local\" }) allows a site to send requests to servers on a user's local network.",
  "description_html": "The <code>\"local-network-access\"</code> user permission (and certain actions that imply this permission, such as a <code>fetch()</code> request with <code>{ targetAddressSpace: \"local\" }</code>) allows a site to send requests to servers on a user's local network.",
@@ -12,7 +17,49 @@
  "status": {
   "baseline": false,
   "by_compat_key": {
-   "api.Request.targetAddressSpace": {
+   "api.Permissions.permission_local-network": {
+    "baseline": false,
+    "support": {
+     "chrome": "145",
+     "chrome_android": "145",
+     "edge": "145",
+     "firefox": "153",
+     "firefox_android": "153"
+    }
+   },
+   "api.Permissions.permission_local-network-access": {
+    "baseline": false,
+    "support": {
+     "chrome": "142",
+     "chrome_android": "142",
+     "edge": "142"
+    }
+   },
+   "api.Request.Request.options_parameter.targetAddressSpace": {
+    "baseline": false,
+    "support": {
+     "chrome": "142",
+     "chrome_android": "142",
+     "edge": "142"
+    }
+   },
+   "api.fetch.options_parameter.targetAddressSpace": {
+    "baseline": false,
+    "support": {
+     "chrome": "142",
+     "chrome_android": "142",
+     "edge": "142"
+    }
+   },
+   "http.headers.Permissions-Policy.local-network": {
+    "baseline": false,
+    "support": {
+     "chrome": "145",
+     "chrome_android": "145",
+     "edge": "145"
+    }
+   },
+   "http.headers.Permissions-Policy.local-network-access": {
     "baseline": false,
     "support": {
      "chrome": "142",
@@ -22,9 +69,9 @@
    }
   },
   "support": {
-   "chrome": "142",
-   "chrome_android": "142",
-   "edge": "142"
+   "chrome": "145",
+   "chrome_android": "145",
+   "edge": "145"
   }
  },
  "id": "local-network-access",
