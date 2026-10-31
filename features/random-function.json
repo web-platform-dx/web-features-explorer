@@ -1,6 +1,12 @@
 {
  "compat_features": [
-  "css.types.random"
+  "css.types.random",
+  "css.types.random.auto",
+  "css.types.random.dashed-ident",
+  "css.types.random.element-scoped",
+  "css.types.random.fixed",
+  "css.types.random.property-index-scoped",
+  "css.types.random.property-scoped"
  ],
  "description": "The random() CSS function chooses a random numeric value within a specified range. This allows for dynamic, randomized styling using CSS.",
  "description_html": "The <code>random()</code> CSS function chooses a random numeric value within a specified range. This allows for dynamic, randomized styling using CSS.",
@@ -23,14 +29,47 @@
      "safari": "26.2",
      "safari_ios": "26.2"
     }
+   },
+   "css.types.random.auto": {
+    "baseline": false,
+    "support": {
+     "safari": "26.2",
+     "safari_ios": "26.2"
+    }
+   },
+   "css.types.random.dashed-ident": {
+    "baseline": false,
+    "support": {
+     "chrome": "156",
+     "chrome_android": "156",
+     "safari": "26.2",
+     "safari_ios": "26.2"
+    }
+   },
+   "css.types.random.element-scoped": {
+    "baseline": false,
+    "support": {
+     "safari": "26.2",
+     "safari_ios": "26.2"
+    }
+   },
+   "css.types.random.fixed": {
+    "baseline": false,
+    "support": {
+     "safari": "26.2",
+     "safari_ios": "26.2"
+    }
+   },
+   "css.types.random.property-index-scoped": {
+    "baseline": false,
+    "support": {}
+   },
+   "css.types.random.property-scoped": {
+    "baseline": false,
+    "support": {}
    }
   },
-  "support": {
-   "chrome": "156",
-   "chrome_android": "156",
-   "safari": "26.2",
-   "safari_ios": "26.2"
-  }
+  "support": {}
  },
  "id": "random-function",
  "groups": [
@@ -107,7 +146,7 @@
  },
  "developerSignals": {
   "url": "https://github.com/web-platform-dx/developer-signals/issues/514",
-  "votes": 25
+  "votes": 26
  },
  "bugs": {
   "chrome": [
@@ -125,6 +164,10 @@
   {
    "description": "For improving the visual design of web pages by making slight adjustments like choosing a random one to show, or transforming some elements to look more natural and less uniform.",
    "url": "https://github.com/web-platform-dx/developer-signals/issues/514#issuecomment-6286074725"
+  },
+  {
+   "description": "A zero-JS \"slot machine\" animation effect on my homepage at [lucascantor.com](https://lucascantor.com): a reel of facts about me spins and lands on a random one, and a dice button spins again. Radio inputs, `:has()` and `@keyframes` already do everything except the actual randomness.",
+   "url": "https://github.com/web-platform-dx/developer-signals/issues/514#issuecomment-6502804414"
   }
  ],
  "baselineLowDateAsObject": null,
