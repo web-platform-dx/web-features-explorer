@@ -21,6 +21,7 @@
   "api.SpeechRecognition.speechend_event",
   "api.SpeechRecognition.speechstart_event",
   "api.SpeechRecognition.start",
+  "api.SpeechRecognition.start.audioTrack",
   "api.SpeechRecognition.start_event",
   "api.SpeechRecognition.stop",
   "api.SpeechRecognitionAlternative",
@@ -34,13 +35,18 @@
   "api.SpeechRecognitionEvent.SpeechRecognitionEvent",
   "api.SpeechRecognitionEvent.resultIndex",
   "api.SpeechRecognitionEvent.results",
+  "api.SpeechRecognitionPhrase",
+  "api.SpeechRecognitionPhrase.SpeechRecognitionPhrase",
+  "api.SpeechRecognitionPhrase.boost",
+  "api.SpeechRecognitionPhrase.phrase",
   "api.SpeechRecognitionResult",
   "api.SpeechRecognitionResult.isFinal",
   "api.SpeechRecognitionResult.item",
   "api.SpeechRecognitionResult.length",
   "api.SpeechRecognitionResultList",
   "api.SpeechRecognitionResultList.item",
-  "api.SpeechRecognitionResultList.length"
+  "api.SpeechRecognitionResultList.length",
+  "http.headers.Permissions-Policy.on-device-speech-recognition"
  ],
  "description": "The SpeechRecognition API converts audio into text using the device's speech recognition service.",
  "description_html": "The <code>SpeechRecognition</code> API converts audio into text using the device's speech recognition service.",
@@ -198,6 +204,13 @@
      "edge": "139"
     }
    },
+   "api.SpeechRecognition.start.audioTrack": {
+    "baseline": false,
+    "support": {
+     "chrome": "139",
+     "edge": "139"
+    }
+   },
    "api.SpeechRecognition.start_event": {
     "baseline": false,
     "support": {
@@ -324,6 +337,34 @@
      "safari_ios": "14.5"
     }
    },
+   "api.SpeechRecognitionPhrase": {
+    "baseline": false,
+    "support": {
+     "chrome": "142",
+     "edge": "142"
+    }
+   },
+   "api.SpeechRecognitionPhrase.SpeechRecognitionPhrase": {
+    "baseline": false,
+    "support": {
+     "chrome": "142",
+     "edge": "142"
+    }
+   },
+   "api.SpeechRecognitionPhrase.boost": {
+    "baseline": false,
+    "support": {
+     "chrome": "142",
+     "edge": "142"
+    }
+   },
+   "api.SpeechRecognitionPhrase.phrase": {
+    "baseline": false,
+    "support": {
+     "chrome": "142",
+     "edge": "142"
+    }
+   },
    "api.SpeechRecognitionResult": {
     "baseline": false,
     "support": {
@@ -392,6 +433,13 @@
      "edge": "79",
      "safari": "14.1",
      "safari_ios": "14.5"
+    }
+   },
+   "http.headers.Permissions-Policy.on-device-speech-recognition": {
+    "baseline": false,
+    "support": {
+     "chrome": "142",
+     "edge": "142"
     }
    }
   },
@@ -490,7 +538,7 @@
   }
  ],
  "chromeUseCounters": {
-  "percentageOfPageLoad": 0.00020242,
+  "percentageOfPageLoad": 0.00019593,
   "url": "https://chromestatus.com/metrics/webfeature/timeline/popularity/63"
  },
  "interop": [],
