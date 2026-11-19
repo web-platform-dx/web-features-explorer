@@ -109,27 +109,16 @@ header {
   translate: 0 0;
 }
 
-header .logo-text {
+header .logo {
   display: block;
-  font-size: 1.7rem;
-  text-decoration: none;
-  color: var(--text);
-  padding-block-start: 3rem;
-  background-image: url(https://web-platform-dx.github.io/assets/img/webdx-notext.svg);
-  background-repeat: no-repeat;
-  background-size: 5rem;
-  background-position: top center;
-  text-align: center;
-  text-transform: lowercase;
-  line-height: 1;
   margin-block-end: var(--margin);
 
-  span {
+  img {
     display: block;
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
+    inline-size: 11rem;
+    max-inline-size: 100%;
+    block-size: auto;
+    margin-inline: auto;
   }
 }
 
@@ -161,14 +150,9 @@ body:has(header.open) .menu-toggle::after {
   content: "hide menu";
 }
 
-.menu-toggle .logo-text {
-	padding-inline-start: 2.8rem;
-	background-image: url(https://web-platform-dx.github.io/assets/img/webdx-notext.svg);
-	background-repeat: no-repeat;
-	background-size: 2.5rem;
-	background-position: 0 center;
-	text-transform: uppercase;
-	font-weight: bold;
+.menu-toggle img {
+  block-size: 2.5rem;
+  inline-size: 12.5rem;
 }
 
 /* Main */
@@ -193,7 +177,7 @@ main {
     padding-block-start: calc(var(--margin) * 2);
   }
 
-  header.open .logo-text {
+  header.open .logo {
     display: none;
   }
 
@@ -1194,6 +1178,6 @@ details.string-revealer {
 /* About page */
 
 .about-logo {
-  inline-size: 10rem;
+  inline-size: 11rem;
   max-inline-size: 100%;
 }
