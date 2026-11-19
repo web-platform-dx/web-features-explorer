@@ -6,9 +6,9 @@
         <li>
           <a href="{{ url.url }}">
             {% if url.anchor %}
-              {{ url.anchor | replace("_", " ") | capitalize }}, in <em>{{ url.title }}</em>
+              {{ url.anchor | replace("_", " ") | capitalize }}, in <em>{% nameAsHTML url.title %}</em>
             {% else %}
-              {{ url.title }}
+              {% nameAsHTML url.title %}
             {% endif %}
           </a>
         </li>
